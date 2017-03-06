@@ -1,0 +1,1734 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Pseudowire Name Spaces (PWE3)</title>
+  </head>
+  <body>
+    <h1>Pseudowire Name Spaces (PWE3)</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2005-12-12</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-02-03</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pwe3-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="pwe3-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="pwe3-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#pwe3-parameters-2">MPLS Pseudowire Types Registry</a>
+      </li>
+      <li>
+        <a href="#pwe3-parameters-4">Pseudowire Interface Parameters Sub-TLV type Registry</a>
+      </li>
+      <li>
+        <a href="#pwe3-parameters-6">Attachment Individual Identifier Type Registry</a>
+      </li>
+      <li>
+        <a href="#pwe3-parameters-8">Attachment Group Identifier (AGI) Type Registry</a>
+      </li>
+      <li>
+        <a href="#pwe3-parameters-9">Pseudowire Status Codes Registry</a>
+      </li>
+      <li>
+        <a href="#pwe3-parameters-11">Pseudowire Associated Channel Types</a>
+      </li>
+      <li>
+        <a href="#pwe3-parameters-12">Associated Channel Header TLV Registry (DELETED)</a>
+      </li>
+      <li>
+        <a href="#pwe3-parameters-13">Header Compression Over MPLS PW Control Word Packet Type</a>
+      </li>
+      <li>
+        <a href="#pwe3-parameters-14">MPLS VCCV Control Channel (CC) Types</a>
+      </li>
+      <li>
+        <a href="#pwe3-parameters-15">MPLS VCCV Connectivity Verification (CV) Types</a>
+      </li>
+      <li>
+        <a href="#pwe3-parameters-17">Pseudowire Switching Point PE sub-TLV Type</a>
+      </li>
+      <li>
+        <a href="#cc-cv-mep-id">CC/CV MEP-ID TLV Registry</a>
+      </li>
+      <li>
+        <a href="#generic-protocol-flags">PW Generic Protocol Flags</a>
+      </li>
+      <li>
+        <a href="#l2vpn-pe-stack">L2VPN PE Stack Capabilities</a>
+      </li>
+      <li>
+        <a href="#gach-application">G-ACh Advertisement Protocol Application Registry</a>
+      </li>
+      <li>
+        <a href="#gach-tlv">G-ACh Advertisement Protocol TLV Registry</a>
+      </li>
+      <li>
+        <a href="#gach-ethernet">G-ACh Advertisement Protocol: Ethernet Interface Parameters</a>
+      </li>
+      <li>
+        <a href="#vccv-extended-cv">VCCV Extended CV Types</a>
+      </li>
+      <li>
+        <a href="#icc-rg">ICC RG Parameter Types</a>
+      </li>
+      <li>
+        <a href="#psn-tunnel-sub-tlv">PSN Tunnel Sub-TLV Name Space</a>
+      </li>
+    </ul>
+    <h2><a name="pwe3-parameters-2" id="pwe3-parameters-2"></a>MPLS Pseudowire Types Registry</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Stewart Bryant, Danny McPherson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pwe3-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-pwe3-parameters-2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">31-1024</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1025-4096</td>
+          <td>IETF Consensus</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4097-32766</td>
+          <td>First Come First Served</td>
+          <td>reserved for vendor proprietary extensions</td>
+        </tr>
+        <tr>
+          <td align="center">32767</td>
+          <td>IETF Consensus</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-pwe3-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>PW Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0001</td>
+          <td>Frame Relay DLCI ( Martini Mode )</td>
+          <td>[<a href="http://www.iana.org/go/rfc4619">RFC4619</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0002</td>
+          <td>ATM AAL5 SDU VCC transport</td>
+          <td>[[ATM]]</td>
+        </tr>
+        <tr>
+          <td>0x0003</td>
+          <td>ATM transparent cell transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc4717">RFC4717</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0004</td>
+          <td>Ethernet Tagged Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc4448">RFC4448</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0005</td>
+          <td>Ethernet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4448">RFC4448</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0006</td>
+          <td>HDLC</td>
+          <td>[<a href="http://www.iana.org/go/rfc4618">RFC4618</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0007</td>
+          <td>PPP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4618">RFC4618</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0008</td>
+          <td>SONET/SDH Circuit Emulation Service Over MPLS Encapsulation</td>
+          <td>[<a href="http://www.iana.org/go/rfc5143">RFC5143</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0009</td>
+          <td>ATM n-to-one VCC cell transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc4717">RFC4717</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000A</td>
+          <td>ATM n-to-one VPC cell transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc4717">RFC4717</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000B</td>
+          <td>IP Layer2 Transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc3032">RFC3032</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000C</td>
+          <td>ATM one-to-one VCC Cell Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc4717">RFC4717</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000D</td>
+          <td>ATM one-to-one VPC Cell Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc4717">RFC4717</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000E</td>
+          <td>ATM AAL5 PDU VCC transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc4717">RFC4717</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000F</td>
+          <td>Frame-Relay Port mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc4619">RFC4619</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0010</td>
+          <td>SONET/SDH Circuit Emulation over Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4842">RFC4842</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0011</td>
+          <td>Structure-agnostic E1 over Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4553">RFC4553</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0012</td>
+          <td>Structure-agnostic T1 (DS1) over Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4553">RFC4553</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0013</td>
+          <td>Structure-agnostic E3 over Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4553">RFC4553</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0014</td>
+          <td>Structure-agnostic T3 (DS3) over Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4553">RFC4553</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0015</td>
+          <td>CESoPSN basic mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc5086">RFC5086</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0016</td>
+          <td>TDMoIP AAL1 Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc5087">RFC5087</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0017</td>
+          <td>CESoPSN TDM with CAS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5086">RFC5086</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0018</td>
+          <td>TDMoIP AAL2 Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc5087">RFC5087</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0019</td>
+          <td>Frame Relay DLCI</td>
+          <td>[<a href="http://www.iana.org/go/rfc4619">RFC4619</a>]</td>
+        </tr>
+        <tr>
+          <td>0x001A</td>
+          <td>ROHC Transport Header-compressed Packets</td>
+          <td>[<a href="http://www.iana.org/go/rfc5795">RFC5795</a>][<a href="http://www.iana.org/go/rfc4901">RFC4901</a>]</td>
+        </tr>
+        <tr>
+          <td>0x001B</td>
+          <td>ECRTP Transport Header-compressed Packets</td>
+          <td>[<a href="http://www.iana.org/go/rfc3545">RFC3545</a>][<a href="http://www.iana.org/go/rfc4901">RFC4901</a>]</td>
+        </tr>
+        <tr>
+          <td>0x001C</td>
+          <td>IPHC Transport Header-compressed Packets</td>
+          <td>[<a href="http://www.iana.org/go/rfc2507">RFC2507</a>][<a href="http://www.iana.org/go/rfc4901">RFC4901</a>]</td>
+        </tr>
+        <tr>
+          <td>0x001D</td>
+          <td>cRTP Transport Header-compressed Packets</td>
+          <td>[<a href="http://www.iana.org/go/rfc2508">RFC2508</a>][<a href="http://www.iana.org/go/rfc4901">RFC4901</a>]</td>
+        </tr>
+        <tr>
+          <td>0x001E</td>
+          <td>ATM VP Virtual Trunk</td>
+          <td>["The Use of Virtual Trunks for ATM/MPLS Control Plane Interworking
+Specification", MFA Forum 9.0.0, MFA Forum, February 2006.]</td>
+        </tr>
+        <tr>
+          <td>0x001F</td>
+          <td>FC Port Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc6307">RFC6307</a>]</td>
+        </tr>
+        <tr>
+          <td>0x7FFF</td>
+          <td>Wildcard</td>
+          <td>[<a href="http://www.iana.org/go/rfc4863">RFC4863</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pwe3-parameters-4" id="pwe3-parameters-4"></a>Pseudowire Interface Parameters Sub-TLV type Registry</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Stewart Bryant, Danny McPherson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pwe3-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-pwe3-parameters-4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">2-64</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65-127</td>
+          <td>IETF Consensus</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-254</td>
+          <td>First Come First Served</td>
+          <td>reserved for vendor proprietary extensions</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>IETF Consensus</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-pwe3-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>ID Length</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x01</td>
+          <td>4</td>
+          <td>Interface MTU in octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+        </tr>
+        <tr>
+          <td>0x02</td>
+          <td>4</td>
+          <td>Maximum Number of concatenated ATM cells</td>
+          <td>[<a href="http://www.iana.org/go/rfc4717">RFC4717</a>]</td>
+        </tr>
+        <tr>
+          <td>0x03</td>
+          <td>up to 82</td>
+          <td>Optional Interface Description string</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04</td>
+          <td>4</td>
+          <td>CEP/TDM Payload Bytes</td>
+          <td>[<a href="http://www.iana.org/go/rfc4842">RFC4842</a>]</td>
+        </tr>
+        <tr>
+          <td>0x05</td>
+          <td>4</td>
+          <td>CEP options</td>
+          <td>[<a href="http://www.iana.org/go/rfc4842">RFC4842</a>]</td>
+        </tr>
+        <tr>
+          <td>0x06</td>
+          <td>4</td>
+          <td>Requested VLAN ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4448">RFC4448</a>]</td>
+        </tr>
+        <tr>
+          <td>0x07</td>
+          <td>6</td>
+          <td>CEP/TDM bit-rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc4842">RFC4842</a>]</td>
+        </tr>
+        <tr>
+          <td>0x08</td>
+          <td>4</td>
+          <td>Frame-Relay DLCI Length</td>
+          <td>[<a href="http://www.iana.org/go/rfc4619">RFC4619</a>]</td>
+        </tr>
+        <tr>
+          <td>0x09</td>
+          <td>4</td>
+          <td>Fragmentation indicator</td>
+          <td>[<a href="http://www.iana.org/go/rfc4623">RFC4623</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0A</td>
+          <td>4</td>
+          <td>FCS retention indicator</td>
+          <td>[<a href="http://www.iana.org/go/rfc4720">RFC4720</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0B</td>
+          <td>4/8/12</td>
+          <td>TDM options</td>
+          <td>[<a href="http://www.iana.org/go/rfc5287">RFC5287</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0C</td>
+          <td>4</td>
+          <td>VCCV parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0D</td>
+          <td>up to 256</td>
+          <td>bytes ROHC over MPLS configuration [<a href="http://www.iana.org/go/rfc3241">RFC3241</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc4901">RFC4901</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0E</td>
+          <td>4</td>
+          <td>Number of TDMoIP AAL1 cells per packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc5287">RFC5287</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0F</td>
+          <td>up to 256</td>
+          <td>bytes CRTP/ECRTP/IPHC HC over MPLS configuration [<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc4901">RFC4901</a>]</td>
+        </tr>
+        <tr>
+          <td>0x10</td>
+          <td>4</td>
+          <td>TDMoIP AAL1 mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc5287">RFC5287</a>]</td>
+        </tr>
+        <tr>
+          <td>0x11</td>
+          <td>8 or more</td>
+          <td>TDMoIP AAL2 Options</td>
+          <td>[<a href="http://www.iana.org/go/rfc5287">RFC5287</a>]</td>
+        </tr>
+        <tr>
+          <td>0x12</td>
+          <td></td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6307">RFC6307</a>]</td>
+        </tr>
+        <tr>
+          <td>0x13</td>
+          <td></td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6307">RFC6307</a>]</td>
+        </tr>
+        <tr>
+          <td>0x14</td>
+          <td></td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6307">RFC6307</a>]</td>
+        </tr>
+        <tr>
+          <td>0x15</td>
+          <td></td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6307">RFC6307</a>]</td>
+        </tr>
+        <tr>
+          <td>0x16</td>
+          <td>4</td>
+          <td>Stack capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc6575">RFC6575</a>]</td>
+        </tr>
+        <tr>
+          <td>0x17</td>
+          <td>4</td>
+          <td>Flow Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc6391">RFC6391</a>]</td>
+        </tr>
+        <tr>
+          <td>0x18</td>
+          <td>4</td>
+          <td>PW Generic Protocol Flags</td>
+          <td>[<a href="http://www.iana.org/go/rfc6478">RFC6478</a>]</td>
+        </tr>
+        <tr>
+          <td>0x19</td>
+          <td>variable</td>
+          <td>VCCV Extended CV Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc7189">RFC7189</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1A</td>
+          <td>8</td>
+          <td>E-Tree</td>
+          <td>[<a href="http://www.iana.org/go/rfc7796">RFC7796</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1B-0xFC</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0xFD</td>
+          <td>up to 8</td>
+          <td>Zte optional Supplier private interface parameters</td>
+          <td>[<a href="#Zhu_Wei">Zhu_Wei</a>]</td>
+        </tr>
+        <tr>
+          <td>0xFE-0xFF</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pwe3-parameters-6" id="pwe3-parameters-6"></a>Attachment Individual Identifier Type Registry</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Stewart Bryant, Danny McPherson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pwe3-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-pwe3-parameters-6-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">2-64</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65-127</td>
+          <td>IETF Consensus</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-254</td>
+          <td>First Come First Served</td>
+          <td>reserved for vendor proprietary extensions</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>IETF Consensus</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-pwe3-parameters-6" class="sortable">
+      <thead>
+        <tr>
+          <th>AII Type</th>
+          <th>Length</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x01</td>
+          <td>4</td>
+          <td>A 32 bit unsigned number local identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc6074">RFC6074</a>]</td>
+        </tr>
+        <tr>
+          <td>0x02</td>
+          <td>variable   
+8 or 12</td>
+          <td>Aggregate Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc5003">RFC5003</a>]</td>
+        </tr>
+        <tr>
+          <td>0x03</td>
+          <td>variable   
+1 to 33</td>
+          <td>ATM/FR Control Channel</td>
+          <td>["ATM and Frame Relay to MPLS Control Plane Interworking: Client-Server",
+MFA Forum 10.0.0, MFA Forum, September 2006.]</td>
+        </tr>
+        <tr>
+          <td>0x04</td>
+          <td>variable   
+3 to 35</td>
+          <td>ATM/FR Signaling Call Reference</td>
+          <td>["ATM and Frame Relay to MPLS Control Plane Interworking: Client-Server",
+MFA Forum 10.0.0, MFA Forum, September 2006.]</td>
+        </tr>
+        <tr>
+          <td>0x05</td>
+          <td>variable   
+2 to 30</td>
+          <td>Frame Relay Port and Connection Identifier</td>
+          <td>[Soft Permanent Virtual Circuit Interworking between MPLS Pseudowires and
+ATM, MFA Forum, work in progress (this specification is at the baseline
+text stage).]</td>
+        </tr>
+        <tr>
+          <td>0x06</td>
+          <td>variable   
+2 to 30</td>
+          <td>ATM Port and Connection Identifier</td>
+          <td>[Soft Permanent Virtual Circuit Interworking between MPLS Pseudowires and
+ATM, MFA Forum, work in progress (this specification is at the baseline
+text stage).]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pwe3-parameters-8" id="pwe3-parameters-8"></a>Attachment Group Identifier (AGI) Type Registry</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Stewart Bryant, Danny McPherson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pwe3-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-pwe3-parameters-8-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">2-64</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65-127</td>
+          <td>IETF Consensus</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-254</td>
+          <td>First Come First Served</td>
+          <td>reserved for vendor proprietary extensions</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>IETF Consensus</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-pwe3-parameters-8" class="sortable">
+      <thead>
+        <tr>
+          <th>AGI Type</th>
+          <th>Length</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x01</td>
+          <td>8</td>
+          <td>Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/rfc6074">RFC6074</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pwe3-parameters-9" id="pwe3-parameters-9"></a>Pseudowire Status Codes Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Stewart Bryant, Danny McPherson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pwe3-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pwe3-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Mask</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x00000000</td>
+          <td>Pseudowire forwarding (clear all failures)</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>][<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000001</td>
+          <td>Pseudowire Not Forwarding</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>][<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000002</td>
+          <td>Local Attachment Circuit (ingress) Receive Fault</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>][<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000004</td>
+          <td>Local Attachment Circuit (egress) Transmit Fault</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>][<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000008</td>
+          <td>Local PSN-facing PW (ingress) Receive Fault</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>][<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000010</td>
+          <td>Local PSN-facing PW (egress) Transmit Fault</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>][<a href="http://www.iana.org/go/rfc4446">RFC4446</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000020</td>
+          <td>PW Preferential Forwarding Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc6870">RFC6870</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000040</td>
+          <td>PW Request Switchover Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc6870">RFC6870</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pwe3-parameters-11" id="pwe3-parameters-11"></a>Pseudowire Associated Channel Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4385">RFC4385</a>][<a href="http://www.iana.org/go/rfc5586">RFC5586</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=1940">RFC Errata 
+          1940</a>][<a href="http://www.iana.org/go/rfc7026">RFC7026</a>][<a href="http://www.iana.org/go/rfc7214">RFC7214</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Renamed "MPLS Generalized Associated Channel (G-ACh) Types (including Pseudowire 
+Associated Channel Types)" and moved to [<a href="http://www.iana.org/assignments/g-ach-parameters">http://www.iana.org/assignments/g-ach-parameters</a>]  
+per [<a href="http://www.iana.org/go/rfc7214">RFC7214</a>].
+    </pre>
+      </dd>
+    </dl>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pwe3-parameters-12" id="pwe3-parameters-12"></a>Associated Channel Header TLV Registry (DELETED)</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5586">RFC5586</a>][<a href="http://www.iana.org/go/rfc7026">RFC7026</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Registry deleted per [<a href="http://www.iana.org/go/rfc7026">RFC7026</a>].
+    </pre>
+      </dd>
+    </dl>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pwe3-parameters-13" id="pwe3-parameters-13"></a>Header Compression Over MPLS PW Control Word Packet Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4901">RFC4901</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pwe3-parameters-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pwe3-parameters-13" class="sortable">
+      <thead>
+        <tr>
+          <th>Packet Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>ROHC Small-CIDs</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ROHC Large-CIDs</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>FULL_HEADER</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>COMPRESSED_TCP</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>COMPRESSED_TCP_NODELTA</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>COMPRESSED_NON_TCP</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>COMPRESSED_RTP_8</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>COMPRESSED_RTP_16</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>COMPRESSED_UDP_8</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>COMPRESSED_UDP_16</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>CONTEXT_STATE</td>
+        </tr>
+        <tr>
+          <td>11-15</td>
+          <td>Unassigned</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pwe3-parameters-14" id="pwe3-parameters-14"></a>MPLS VCCV Control Channel (CC) Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bit numbering: In this sub-registry, the most significant (high order) bit
+is labeled Bit 7, and the least significant (low order) bit is labeled Bit 0,
+see parenthetical "Value".</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pwe3-parameters-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pwe3-parameters-14" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit (Value)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0
+          (0x01)
+        </td>
+          <td>Type 1: PWE3 Control Word with 0001b as first nibble (PW-ACH, see [<a href="http://www.iana.org/go/rfc4385">RFC4385</a>])</td>
+          <td>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</td>
+        </tr>
+        <tr>
+          <td>1
+          (0x02)
+        </td>
+          <td>Type 2: MPLS Router Alert Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</td>
+        </tr>
+        <tr>
+          <td>2
+          (0x04)
+        </td>
+          <td>Type 3: MPLS PW Label with TTL == 1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</td>
+        </tr>
+        <tr>
+          <td>3
+          (0x08)
+        </td>
+          <td>Type 4: GAL</td>
+          <td>[<a href="http://www.iana.org/go/rfc7708">RFC7708</a>]</td>
+        </tr>
+        <tr>
+          <td>4
+          (0x10)
+        </td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</td>
+        </tr>
+        <tr>
+          <td>5
+          (0x20)
+        </td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</td>
+        </tr>
+        <tr>
+          <td>6
+          (0x40)
+        </td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</td>
+        </tr>
+        <tr>
+          <td>7
+          (0x80)
+        </td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pwe3-parameters-15" id="pwe3-parameters-15"></a>MPLS VCCV Connectivity Verification (CV) Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bit numbering: In this sub-registry, the most significant (high order) bit
+is labeled Bit 7, and the least significant (low order) bit is labeled Bit 0,
+see parenthetical "Value".</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pwe3-parameters-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pwe3-parameters-15" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit (Value)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0
+          (0x01)
+        </td>
+          <td>ICMP Ping</td>
+          <td>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</td>
+        </tr>
+        <tr>
+          <td>1
+          (0x02)
+        </td>
+          <td>LSP Ping</td>
+          <td>[<a href="http://www.iana.org/go/rfc5085">RFC5085</a>]</td>
+        </tr>
+        <tr>
+          <td>2
+          (0x04)
+        </td>
+          <td>BFD IP/UDP-encapsulated, for PW Fault Detection only</td>
+          <td>[<a href="http://www.iana.org/go/rfc5885">RFC5885</a>]</td>
+        </tr>
+        <tr>
+          <td>3
+          (0x08)
+        </td>
+          <td>BFD IP/UDP-encapsulated, for PW Fault Detection and   
+AC/PW Fault Status Signaling</td>
+          <td>[<a href="http://www.iana.org/go/rfc5885">RFC5885</a>]</td>
+        </tr>
+        <tr>
+          <td>4
+          (0x10)
+        </td>
+          <td>BFD PW-ACH-encapsulated, for PW Fault Detection only</td>
+          <td>[<a href="http://www.iana.org/go/rfc5885">RFC5885</a>]</td>
+        </tr>
+        <tr>
+          <td>5
+          (0x20)
+        </td>
+          <td>BFD PW-ACH-encapsulated, for PW Fault Detection and   
+AC/PW Fault Status Signaling</td>
+          <td>[<a href="http://www.iana.org/go/rfc5885">RFC5885</a>]</td>
+        </tr>
+        <tr>
+          <td>6
+          (0x40)
+        </td>
+          <td>S-BFD IP/UDP-encapsulated, for PW Fault Detection only</td>
+          <td>[<a href="http://www.iana.org/go/rfc7885">RFC7885</a>]</td>
+        </tr>
+        <tr>
+          <td>7
+          (0x80)
+        </td>
+          <td>S-BFD PW-ACH-encapsulated, for PW Fault Detection only</td>
+          <td>[<a href="http://www.iana.org/go/rfc7885">RFC7885</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pwe3-parameters-17" id="pwe3-parameters-17"></a>Pseudowire Switching Point PE sub-TLV Type</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Primary: Stewart Bryant; secondary: Matthew Bocci</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6073">RFC6073</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pwe3-parameters-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-pwe3-parameters-17-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>IETF Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1-64</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65-127</td>
+          <td>IETF Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-254</td>
+          <td>First Come First Served</td>
+          <td>reserved for vendor proprietary extensions</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>IETF Review</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-pwe3-parameters-17" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Length</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x00</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x01</td>
+          <td>4</td>
+          <td>PWid of last PW segment traversed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6073">RFC6073</a>]</td>
+        </tr>
+        <tr>
+          <td>0x02</td>
+          <td>variable</td>
+          <td>PW Switching Point description string</td>
+          <td>[<a href="http://www.iana.org/go/rfc6073">RFC6073</a>]</td>
+        </tr>
+        <tr>
+          <td>0x03</td>
+          <td>4/16</td>
+          <td>Local IP address of PW Switching Point</td>
+          <td>[<a href="http://www.iana.org/go/rfc6073">RFC6073</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04</td>
+          <td>4/16</td>
+          <td>Remote IP address of last PW Switching Point   
+traversed or of the T-PE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6073">RFC6073</a>]</td>
+        </tr>
+        <tr>
+          <td>0x05</td>
+          <td>variable</td>
+          <td>FEC Element of last PW segment traversed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6073">RFC6073</a>]</td>
+        </tr>
+        <tr>
+          <td>0x06</td>
+          <td>14</td>
+          <td>L2 PW address of PW Switching Point</td>
+          <td>[<a href="http://www.iana.org/go/rfc6073">RFC6073</a>][<a href="http://www.iana.org/go/rfc7267">RFC7267</a>]</td>
+        </tr>
+        <tr>
+          <td>0x07</td>
+          <td>24</td>
+          <td>Static PW/MPLS-TP PW segment ID of last PW segment traversed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6478">RFC6478</a>]</td>
+        </tr>
+        <tr>
+          <td>0x08-0xFF</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="cc-cv-mep-id" id="cc-cv-mep-id"></a>CC/CV MEP-ID TLV Registry</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6428">RFC6428</a>][<a href="http://www.iana.org/go/rfc7214">RFC7214</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Moved to [<a href="http://www.iana.org/assignments/g-ach-parameters">http://www.iana.org/assignments/g-ach-parameters</a>]  
+per [<a href="http://www.iana.org/go/rfc7214">RFC7214</a>].
+    </pre>
+      </dd>
+    </dl>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="generic-protocol-flags" id="generic-protocol-flags"></a>PW Generic Protocol Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6478">RFC6478</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="generic-protocol-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-generic-protocol-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit (Value)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0 (0x0001)</td>
+          <td>S-PE bypass mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc6478">RFC6478</a>]</td>
+        </tr>
+        <tr>
+          <td>1-15 (0x0002-0x8000)</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="l2vpn-pe-stack" id="l2vpn-pe-stack"></a>L2VPN PE Stack Capabilities</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6575">RFC6575</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="l2vpn-pe-stack.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-l2vpn-pe-stack" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit (Value)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0 (0x0001)</td>
+          <td>IPv6 stack capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc6575">RFC6575</a>]</td>
+        </tr>
+        <tr>
+          <td>1-15 (0x0002-0x8000)</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="gach-application" id="gach-application"></a>G-ACh Advertisement Protocol Application Registry</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7212">RFC7212</a>][<a href="http://www.iana.org/go/rfc7214">RFC7214</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Moved to [<a href="http://www.iana.org/assignments/g-ach-parameters">http://www.iana.org/assignments/g-ach-parameters</a>]  
+per [<a href="http://www.iana.org/go/rfc7214">RFC7214</a>].
+    </pre>
+      </dd>
+    </dl>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="gach-tlv" id="gach-tlv"></a>G-ACh Advertisement Protocol TLV Registry</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7212">RFC7212</a>][<a href="http://www.iana.org/go/rfc7214">RFC7214</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Moved to [<a href="http://www.iana.org/assignments/g-ach-parameters">http://www.iana.org/assignments/g-ach-parameters</a>]  
+per [<a href="http://www.iana.org/go/rfc7214">RFC7214</a>].
+    </pre>
+      </dd>
+    </dl>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="gach-ethernet" id="gach-ethernet"></a>G-ACh Advertisement Protocol: Ethernet Interface Parameters</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7213">RFC7213</a>][<a href="http://www.iana.org/go/rfc7214">RFC7214</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Moved to [<a href="http://www.iana.org/assignments/g-ach-parameters">http://www.iana.org/assignments/g-ach-parameters</a>]  
+per [<a href="http://www.iana.org/go/rfc7214">RFC7214</a>].
+    </pre>
+      </dd>
+    </dl>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="vccv-extended-cv" id="vccv-extended-cv"></a>VCCV Extended CV Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7189">RFC7189</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="vccv-extended-cv.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-vccv-extended-cv" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit (Value)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bit 0 (0x01)</td>
+          <td>Independent mode for PW Fault Detection only</td>
+          <td>[<a href="http://www.iana.org/go/rfc7189">RFC7189</a>]</td>
+        </tr>
+        <tr>
+          <td>Bit 1 (0x02)</td>
+          <td>Independent mode for PW Fault Detection and AC/PW Fault Status Signaling</td>
+          <td>[<a href="http://www.iana.org/go/rfc7189">RFC7189</a>]</td>
+        </tr>
+        <tr>
+          <td>Bit 2 (0x04)</td>
+          <td>Coordinated mode for PW Fault Detection only</td>
+          <td>[<a href="http://www.iana.org/go/rfc7189">RFC7189</a>]</td>
+        </tr>
+        <tr>
+          <td>Bit 3 (0x08)</td>
+          <td>Coordinated mode for PW Fault Detection and AC/PW Fault Status Signaling</td>
+          <td>[<a href="http://www.iana.org/go/rfc7189">RFC7189</a>]</td>
+        </tr>
+        <tr>
+          <td>Bit 4-7 (0x10-0x80)</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icc-rg" id="icc-rg"></a>ICC RG Parameter Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Stewart Bryant, Matthew Bocci</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icc-rg.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-icc-rg-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0000</td>
+          <td>IETF Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x003B-0x1FFF</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x2000-0x2FFF</td>
+          <td>IETF Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x3000-0x3FFE</td>
+          <td>First Come First Served</td>
+          <td>Vendor Proprietary Extensions</td>
+        </tr>
+        <tr>
+          <td align="center">0x3FFF</td>
+          <td>IETF Review</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-icc-rg" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0000</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0001</td>
+          <td>ICC Sender Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0002</td>
+          <td>NAK TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0003</td>
+          <td>Requested Protocol Version TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0004</td>
+          <td>Disconnect Code TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0005</td>
+          <td>ICC RG ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0006-0x000F</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0010</td>
+          <td>PW-RED Connect TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0011</td>
+          <td>PW-RED Disconnect TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0012</td>
+          <td>PW-RED Config TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0013</td>
+          <td>Service Name TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0014</td>
+          <td>PW ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0015</td>
+          <td>Generalized PW ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0016</td>
+          <td>PW-RED State TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0017</td>
+          <td>PW-RED Synchronization Request TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0018</td>
+          <td>PW-RED Synchronization Data TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0019</td>
+          <td>PW-RED Disconnect Cause TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x001A-0x002F</td>
+          <td>Resrved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0030</td>
+          <td>mLACP Connect TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0031</td>
+          <td>mLACP Disconnect TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0032</td>
+          <td>mLACP System Config TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0033</td>
+          <td>mLACP Port Config TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0034</td>
+          <td>mLACP Port Priority TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0035</td>
+          <td>mLACP Port State TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0036</td>
+          <td>mLACP Aggregator Config TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0037</td>
+          <td>mLACP Aggregator State TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0038</td>
+          <td>mLACP Synchronization Request TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0039</td>
+          <td>mLACP Synchronization Data TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x003A</td>
+          <td>mLACP Disconnect Cause TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x003B-0x1FFF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x2000</td>
+          <td>STP Connect TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2001</td>
+          <td>STP Disconnect TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2002</td>
+          <td>STP System Config TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2003</td>
+          <td>STP Region Name TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2004</td>
+          <td>STP Revision Level TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2005</td>
+          <td>STP Instance Priority TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2006</td>
+          <td>STP Configuration Digest TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2007</td>
+          <td>STP Topology Changed Instances TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2008</td>
+          <td>STP CIST Root Time TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2009</td>
+          <td>STP MSTI Root Time TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x200A</td>
+          <td>STP Synchronization Request TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x200B</td>
+          <td>STP Synchronization Data TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x200C</td>
+          <td>STP Disconnect Cause TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7727">RFC7727</a>]</td>
+        </tr>
+        <tr>
+          <td>0x200D</td>
+          <td>PON Connect TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc8024">RFC8024</a>]</td>
+        </tr>
+        <tr>
+          <td>0x200E</td>
+          <td>PON Disconnect TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc8024">RFC8024</a>]</td>
+        </tr>
+        <tr>
+          <td>0x200F</td>
+          <td>PON Configuration TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc8024">RFC8024</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2010</td>
+          <td>PON State TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc8024">RFC8024</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2011-0x3FFF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="psn-tunnel-sub-tlv" id="psn-tunnel-sub-tlv"></a>PSN Tunnel Sub-TLV Name Space</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7965">RFC7965</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="psn-tunnel-sub-tlv.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-psn-tunnel-sub-tlv" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7965">RFC7965</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>IPv4 PSN Tunnel sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7965">RFC7965</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>IPv6 PSN Tunnel sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7965">RFC7965</a>]</td>
+        </tr>
+        <tr>
+          <td>3-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7965">RFC7965</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Zhu_Wei" id="Zhu_Wei">[Zhu_Wei]</a>
+          </td>
+          <td>Zhu Wei</td>
+          <td>
+            <a href="mailto:zhu.wei120&amp;zte.com.cn">mailto:zhu.wei120&amp;zte.com.cn</a>
+          </td>
+          <td>2016-05-09</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

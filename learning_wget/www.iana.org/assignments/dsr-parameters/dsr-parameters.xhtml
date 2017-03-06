@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Dynamic Source Routing (DSR) Protocol Parameters</title>
+  </head>
+  <body>
+    <h1>Dynamic Source Routing (DSR) Protocol Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2006-10-03</dd>
+      <dt>Last Updated</dt>
+      <dd>2007-02-21</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dsr-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="dsr-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="dsr-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#dsr-parameters-1">Dynamic Source Routing (DSR) Protocol Options</a>
+      </li>
+      <li>
+        <a href="#dsr-parameters-2">Dynamic Source Routing (DSR) Protocol Route Error Types</a>
+      </li>
+    </ul>
+    <h2><a name="dsr-parameters-1" id="dsr-parameters-1"></a>Dynamic Source Routing (DSR) Protocol Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>David B. Johnson, David A. Maltz and Yih-Chun Hu</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>DSR Option Types are 8-bit values, structured as three subfields:
+
+ Unk: If set, SHOULD respond to such a DSR option with a Route Error
+      of type OPTION_NOT_SUPPORTED
+
+ Act: a two-bit field indicating how such a node that does not
+      support this Option Type MUST process the packet:
+
+          00 = Ignore Option
+          01 = Remove Option
+          10 = Mark Option
+          11 = Drop Packet</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dsr-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dsr-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Unk</th>
+          <th>Act</th>
+          <th>Number</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">00</td>
+          <td align="center">0</td>
+          <td>PadN option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">00</td>
+          <td align="center">1</td>
+          <td>Route Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td align="center">0</td>
+          <td align="center">00</td>
+          <td align="center">2</td>
+          <td>Route Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td align="center">0</td>
+          <td align="center">00</td>
+          <td align="center">3</td>
+          <td>Route Error option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-31</td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td align="center">0</td>
+          <td align="center">01</td>
+          <td align="center">0</td>
+          <td>Acknowledgement option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33-95</td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">96</td>
+          <td align="center">0</td>
+          <td align="center">11</td>
+          <td align="center">0</td>
+          <td>DSR Source Route option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">97-127</td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td align="center">1</td>
+          <td align="center">00</td>
+          <td align="center">0</td>
+          <td>Timeout option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td align="center">1</td>
+          <td align="center">00</td>
+          <td align="center">1</td>
+          <td>Destination and Flow ID option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130-159</td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">160</td>
+          <td align="center">1</td>
+          <td align="center">01</td>
+          <td align="center">0</td>
+          <td>Acknowledgement Request option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">161-223</td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224</td>
+          <td align="center">1</td>
+          <td align="center">11</td>
+          <td align="center">0</td>
+          <td>Pad1 option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dsr-parameters-2" id="dsr-parameters-2"></a>Dynamic Source Routing (DSR) Protocol Route Error Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>David B. Johnson, David A. Maltz and Yih-Chun Hu</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dsr-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dsr-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>NODE_UNREACHABLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>FLOW_STATE_NOT_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>OPTION_NOT_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-128</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>UNKNOWN_FLOW</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>DEFAULT_FLOW_UNKNOWN</td>
+          <td>[<a href="http://www.iana.org/go/rfc4728">RFC4728</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

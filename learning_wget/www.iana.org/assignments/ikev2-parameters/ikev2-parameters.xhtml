@@ -1,0 +1,2855 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Internet Key Exchange Version 2 (IKEv2) Parameters</title>
+  </head>
+  <body>
+    <h1>Internet Key Exchange Version 2 (IKEv2) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2005-01-18</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-02-03</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ikev2-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ikev2-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ikev2-parameters-1">IKEv2 Exchange Types</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-2">IKEv2 Payload Types</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-3">Transform Type Values</a>
+        <ul>
+          <li>
+            <a href="#ikev2-parameters-4">IKEv2 Transform Attribute Types</a>
+          </li>
+          <li>
+            <a href="#ikev2-parameters-5">Transform Type 1 - Encryption Algorithm Transform IDs</a>
+          </li>
+          <li>
+            <a href="#ikev2-parameters-6">Transform Type 2 - Pseudorandom Function Transform IDs</a>
+          </li>
+          <li>
+            <a href="#ikev2-parameters-7">Transform Type 3 - Integrity Algorithm Transform IDs</a>
+          </li>
+          <li>
+            <a href="#ikev2-parameters-8">Transform Type 4 - Diffie-Hellman Group Transform IDs</a>
+          </li>
+          <li>
+            <a href="#ikev2-parameters-9">Transform Type 5 - Extended Sequence Numbers Transform IDs</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-10">IKEv2 Identification Payload ID Types</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-11">IKEv2 Certificate Encodings</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-12">IKEv2 Authentication Method</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-14">IKEv2 Notify Message Types - Error Types</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-16">IKEv2 Notify Message Types - Status Types</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-17">IKEv2 Notification IPCOMP Transform IDs (Value 16387)</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-18">IKEv2 Security Protocol Identifiers</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-19">IKEv2 Traffic Selector Types</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-20">IKEv2 Configuration Payload CFG Types</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-21">IKEv2 Configuration Payload Attribute Types</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-22">IKEv2 Gateway Identity Types</a>
+      </li>
+      <li>
+        <a href="#ikev2-parameters-23">ROHC Attribute Types</a>
+      </li>
+      <li>
+        <a href="#secure-password-methods">IKEv2 Secure Password Methods</a>
+      </li>
+      <li>
+        <a href="#hash-algorithms">IKEv2 Hash Algorithms</a>
+      </li>
+    </ul>
+    <h2><a name="ikev2-parameters-1" id="ikev2-parameters-1"></a>IKEv2 Exchange Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Exchange Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-33</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>IKE_SA_INIT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>IKE_AUTH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36</td>
+          <td>CREATE_CHILD_SA</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">37</td>
+          <td>INFORMATIONAL</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">38</td>
+          <td>IKE_SESSION_RESUME</td>
+          <td>[<a href="http://www.iana.org/go/rfc5723">RFC5723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">39</td>
+          <td>GSA_AUTH</td>
+          <td>[<a href="http://www.iana.org/go/draft-yeung-g-ikev2">draft-yeung-g-ikev2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">40</td>
+          <td>GSA_REGISTRATION</td>
+          <td>[<a href="http://www.iana.org/go/draft-yeung-g-ikev2">draft-yeung-g-ikev2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>GSA_REKEY</td>
+          <td>[<a href="http://www.iana.org/go/draft-yeung-g-ikev2">draft-yeung-g-ikev2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">42-239</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">240-255</td>
+          <td>Private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-2" id="ikev2-parameters-2"></a>IKEv2 Payload Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Next Payload Type</th>
+          <th>Notation</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>No Next Payload</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-32</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>Security Association</td>
+          <td>SA</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>Key Exchange</td>
+          <td>KE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>Identification - Initiator</td>
+          <td>IDi</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36</td>
+          <td>Identification - Responder</td>
+          <td>IDr</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">37</td>
+          <td>Certificate</td>
+          <td>CERT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">38</td>
+          <td>Certificate Request</td>
+          <td>CERTREQ</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">39</td>
+          <td>Authentication</td>
+          <td>AUTH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">40</td>
+          <td>Nonce</td>
+          <td>Ni, Nr</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>Notify</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">42</td>
+          <td>Delete</td>
+          <td>D</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">43</td>
+          <td>Vendor ID</td>
+          <td>V</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">44</td>
+          <td>Traffic Selector - Initiator</td>
+          <td>TSi</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">45</td>
+          <td>Traffic Selector - Responder</td>
+          <td>TSr</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">46</td>
+          <td>Encrypted and Authenticated</td>
+          <td>SK</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">47</td>
+          <td>Configuration</td>
+          <td>CP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">48</td>
+          <td>Extensible Authentication</td>
+          <td>EAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">49</td>
+          <td>Generic Secure Password Method</td>
+          <td>GSPM</td>
+          <td>[<a href="http://www.iana.org/go/rfc6467">RFC6467</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">50</td>
+          <td>Group Identification</td>
+          <td>IDg</td>
+          <td>[<a href="http://www.iana.org/go/draft-yeung-g-ikev2">draft-yeung-g-ikev2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">51</td>
+          <td>Group Security Association</td>
+          <td>GSA</td>
+          <td>[<a href="http://www.iana.org/go/draft-yeung-g-ikev2">draft-yeung-g-ikev2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">52</td>
+          <td>Key Download</td>
+          <td>KD</td>
+          <td>[<a href="http://www.iana.org/go/draft-yeung-g-ikev2">draft-yeung-g-ikev2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">53</td>
+          <td>Encrypted and Authenticated Fragment</td>
+          <td>SKF</td>
+          <td>[<a href="http://www.iana.org/go/rfc7383">RFC7383</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">54</td>
+          <td>Puzzle Solution</td>
+          <td>PS</td>
+          <td>[<a href="http://www.iana.org/go/rfc8019">RFC8019</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">55-127</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Private use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-3" id="ikev2-parameters-3"></a>Transform Type Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Used In</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Encryption Algorithm (ENCR)</td>
+          <td>(IKE and ESP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Pseudo-random Function (PRF)</td>
+          <td>(IKE)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Integrity Algorithm (INTEG)</td>
+          <td>(IKE, AH, optional in ESP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Diffie-Hellman Group (D-H)</td>
+          <td>(IKE, optional in AH &amp; ESP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Extended Sequence Numbers (ESN)</td>
+          <td>(AH and ESP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-240</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Private use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="ikev2-parameters-4" id="ikev2-parameters-4"></a>IKEv2 Transform Attribute Types</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Tero Kivinen</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ikev2-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ikev2-parameters-4" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Attribute Type</th>
+            <th>Format</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0-13</td>
+            <td>Reserved</td>
+            <td></td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">14</td>
+            <td>Key Length (in bits)</td>
+            <td>TV</td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">15-17</td>
+            <td>Reserved</td>
+            <td></td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">18-16383</td>
+            <td>Unassigned</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">16384-32767</td>
+            <td>Private use</td>
+            <td></td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="ikev2-parameters-5" id="ikev2-parameters-5"></a>Transform Type 1 - Encryption Algorithm Transform IDs</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Tero Kivinen</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ikev2-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ikev2-parameters-5" class="sortable">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>ESP Reference</th>
+            <th>IKEv2 Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>ENCR_DES_IV64</td>
+            <td>UNSPECIFIED</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>ENCR_DES</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc2405">RFC2405</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>ENCR_3DES</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc2451">RFC2451</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>ENCR_RC5</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc2451">RFC2451</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>ENCR_IDEA</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc2451">RFC2451</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>ENCR_CAST</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc2451">RFC2451</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td>ENCR_BLOWFISH</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc2451">RFC2451</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">8</td>
+            <td>ENCR_3IDEA</td>
+            <td>UNSPECIFIED</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">9</td>
+            <td>ENCR_DES_IV32</td>
+            <td>UNSPECIFIED</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td align="center">10</td>
+            <td>Reserved</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td align="center">11</td>
+            <td>ENCR_NULL</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc2410">RFC2410</a>]
+        </td>
+            <td>Not allowed</td>
+          </tr>
+          <tr>
+            <td align="center">12</td>
+            <td>ENCR_AES_CBC</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc3602">RFC3602</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">13</td>
+            <td>ENCR_AES_CTR</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc3686">RFC3686</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5930">RFC5930</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">14</td>
+            <td>ENCR_AES_CCM_8</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc4309">RFC4309</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5282">RFC5282</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">15</td>
+            <td>ENCR_AES_CCM_12</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc4309">RFC4309</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5282">RFC5282</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">16</td>
+            <td>ENCR_AES_CCM_16</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc4309">RFC4309</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5282">RFC5282</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">17</td>
+            <td>Unassigned</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">18</td>
+            <td>AES-GCM with a 8 octet ICV</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc4106">RFC4106</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5282">RFC5282</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">19</td>
+            <td>AES-GCM with a 12 octet ICV</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc4106">RFC4106</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5282">RFC5282</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">20</td>
+            <td>AES-GCM with a 16 octet ICV</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc4106">RFC4106</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5282">RFC5282</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">21</td>
+            <td>ENCR_NULL_AUTH_AES_GMAC</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc4543">RFC4543</a>]
+        </td>
+            <td>Not allowed</td>
+          </tr>
+          <tr>
+            <td align="center">22</td>
+            <td>Reserved for IEEE P1619 XTS-AES</td>
+            <td>
+          [<a href="#Matt_Ball">Matt_Ball</a>]
+        </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td align="center">23</td>
+            <td>ENCR_CAMELLIA_CBC</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5529">RFC5529</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">24</td>
+            <td>ENCR_CAMELLIA_CTR</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5529">RFC5529</a>]
+        </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td align="center">25</td>
+            <td>ENCR_CAMELLIA_CCM with an 8-octet ICV</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5529">RFC5529</a>]
+        </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td align="center">26</td>
+            <td>ENCR_CAMELLIA_CCM with a 12-octet ICV</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5529">RFC5529</a>]
+        </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td align="center">27</td>
+            <td>ENCR_CAMELLIA_CCM with a 16-octet ICV</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc5529">RFC5529</a>]
+        </td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td align="center">28</td>
+            <td>ENCR_CHACHA20_POLY1305</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7634">RFC7634</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7634">RFC7634</a>]
+        </td>
+          </tr>
+          <tr>
+            <td align="center">29-1023</td>
+            <td>Unassigned</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1024-65535</td>
+            <td>Private use</td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+            <td>
+          [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]
+        </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="ikev2-parameters-6" id="ikev2-parameters-6"></a>Transform Type 2 - Pseudorandom Function Transform IDs</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Tero Kivinen</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ikev2-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ikev2-parameters-6" class="sortable">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>PRF_HMAC_MD5</td>
+            <td>[<a href="http://www.iana.org/go/rfc2104">RFC2104</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>PRF_HMAC_SHA1</td>
+            <td>[<a href="http://www.iana.org/go/rfc2104">RFC2104</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>PRF_HMAC_TIGER</td>
+            <td>[UNSPECIFIED]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>PRF_AES128_XCBC</td>
+            <td>[<a href="http://www.iana.org/go/rfc4434">RFC4434</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>PRF_HMAC_SHA2_256</td>
+            <td>[<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>PRF_HMAC_SHA2_384</td>
+            <td>[<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td>PRF_HMAC_SHA2_512</td>
+            <td>[<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">8</td>
+            <td>PRF_AES128_CMAC</td>
+            <td>[<a href="http://www.iana.org/go/rfc4615">RFC4615</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">9-1023</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1024-65535</td>
+            <td>Private use</td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="ikev2-parameters-7" id="ikev2-parameters-7"></a>Transform Type 3 - Integrity Algorithm Transform IDs</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Tero Kivinen</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ikev2-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ikev2-parameters-7" class="sortable">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>NONE</td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>AUTH_HMAC_MD5_96</td>
+            <td>[<a href="http://www.iana.org/go/rfc2403">RFC2403</a>][<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>AUTH_HMAC_SHA1_96</td>
+            <td>[<a href="http://www.iana.org/go/rfc2404">RFC2404</a>][<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>AUTH_DES_MAC</td>
+            <td>[UNSPECIFIED]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>AUTH_KPDK_MD5</td>
+            <td>[UNSPECIFIED]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>AUTH_AES_XCBC_96</td>
+            <td>[<a href="http://www.iana.org/go/rfc3566">RFC3566</a>][<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>AUTH_HMAC_MD5_128</td>
+            <td>[<a href="http://www.iana.org/go/rfc4595">RFC4595</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td>AUTH_HMAC_SHA1_160</td>
+            <td>[<a href="http://www.iana.org/go/rfc4595">RFC4595</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">8</td>
+            <td>AUTH_AES_CMAC_96</td>
+            <td>[<a href="http://www.iana.org/go/rfc4494">RFC4494</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">9</td>
+            <td>AUTH_AES_128_GMAC</td>
+            <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">10</td>
+            <td>AUTH_AES_192_GMAC</td>
+            <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">11</td>
+            <td>AUTH_AES_256_GMAC</td>
+            <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">12</td>
+            <td>AUTH_HMAC_SHA2_256_128</td>
+            <td>[<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">13</td>
+            <td>AUTH_HMAC_SHA2_384_192</td>
+            <td>[<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">14</td>
+            <td>AUTH_HMAC_SHA2_512_256</td>
+            <td>[<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">15-1023</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1024-65535</td>
+            <td>Private use</td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="ikev2-parameters-8" id="ikev2-parameters-8"></a>Transform Type 4 - Diffie-Hellman Group Transform IDs</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Tero Kivinen</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>][<a href="http://www.iana.org/go/rfc6989">RFC6989</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ikev2-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ikev2-parameters-8" class="sortable">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Recipient Tests</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>NONE</td>
+            <td></td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>768-bit MODP Group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.1</td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>1024-bit MODP Group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.1</td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3-4</td>
+            <td>Reserved</td>
+            <td></td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>1536-bit MODP Group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.1</td>
+            <td>[<a href="http://www.iana.org/go/rfc3526">RFC3526</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6-13</td>
+            <td>Unassigned</td>
+            <td></td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">14</td>
+            <td>2048-bit MODP Group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.1</td>
+            <td>[<a href="http://www.iana.org/go/rfc3526">RFC3526</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">15</td>
+            <td>3072-bit MODP Group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.1</td>
+            <td>[<a href="http://www.iana.org/go/rfc3526">RFC3526</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">16</td>
+            <td>4096-bit MODP Group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.1</td>
+            <td>[<a href="http://www.iana.org/go/rfc3526">RFC3526</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">17</td>
+            <td>6144-bit MODP Group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.1</td>
+            <td>[<a href="http://www.iana.org/go/rfc3526">RFC3526</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">18</td>
+            <td>8192-bit MODP Group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.1</td>
+            <td>[<a href="http://www.iana.org/go/rfc3526">RFC3526</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">19</td>
+            <td>256-bit random ECP group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.3</td>
+            <td>[<a href="http://www.iana.org/go/rfc5903">RFC5903</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">20</td>
+            <td>384-bit random ECP group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.3</td>
+            <td>[<a href="http://www.iana.org/go/rfc5903">RFC5903</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">21</td>
+            <td>521-bit random ECP group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.3</td>
+            <td>[<a href="http://www.iana.org/go/rfc5903">RFC5903</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">22</td>
+            <td>1024-bit MODP Group with 160-bit Prime Order Subgroup</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.2</td>
+            <td>[<a href="http://www.iana.org/go/rfc5114">RFC5114</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">23</td>
+            <td>2048-bit MODP Group with 224-bit Prime Order Subgroup</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.2</td>
+            <td>[<a href="http://www.iana.org/go/rfc5114">RFC5114</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">24</td>
+            <td>2048-bit MODP Group with 256-bit Prime Order Subgroup</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.2</td>
+            <td>[<a href="http://www.iana.org/go/rfc5114">RFC5114</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">25</td>
+            <td>192-bit Random ECP Group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.3</td>
+            <td>[<a href="http://www.iana.org/go/rfc5114">RFC5114</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">26</td>
+            <td>224-bit Random ECP Group</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.3</td>
+            <td>[<a href="http://www.iana.org/go/rfc5114">RFC5114</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">27</td>
+            <td>brainpoolP224r1</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.3</td>
+            <td>[<a href="http://www.iana.org/go/rfc6954">RFC6954</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">28</td>
+            <td>brainpoolP256r1</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.3</td>
+            <td>[<a href="http://www.iana.org/go/rfc6954">RFC6954</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">29</td>
+            <td>brainpoolP384r1</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.3</td>
+            <td>[<a href="http://www.iana.org/go/rfc6954">RFC6954</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">30</td>
+            <td>brainpoolP512r1</td>
+            <td>[<a href="http://www.iana.org/go/rfc6989">RFC6989</a>], Sec. 2.3</td>
+            <td>[<a href="http://www.iana.org/go/rfc6954">RFC6954</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">31</td>
+            <td>Curve25519</td>
+            <td>[<a href="http://www.iana.org/go/rfc8031">RFC8031</a>], Sec. 3.2</td>
+            <td>[<a href="http://www.iana.org/go/rfc8031">RFC8031</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">32</td>
+            <td>Curve448</td>
+            <td>[<a href="http://www.iana.org/go/rfc8031">RFC8031</a>], Sec. 3.2</td>
+            <td>[<a href="http://www.iana.org/go/rfc8031">RFC8031</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">33-1023</td>
+            <td>Unassigned</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1024-65535</td>
+            <td>Reserved for Private Use</td>
+            <td></td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="ikev2-parameters-9" id="ikev2-parameters-9"></a>Transform Type 5 - Extended Sequence Numbers Transform IDs</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Tero Kivinen</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ikev2-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ikev2-parameters-9" class="sortable">
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Extended Sequence Numbers</td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Extended Sequence Numbers</td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2-65535</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="ikev2-parameters-10" id="ikev2-parameters-10"></a>IKEv2 Identification Payload ID Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-10" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>ID Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>ID_IPV4_ADDR</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ID_FQDN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>ID_RFC822_ADDR</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>ID_IPV6_ADDR</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-8</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>ID_DER_ASN1_DN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>ID_DER_ASN1_GN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>ID_KEY_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>ID_FC_NAME</td>
+          <td>[<a href="http://www.iana.org/go/rfc4595">RFC4595</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>ID_NULL</td>
+          <td>[<a href="http://www.iana.org/go/rfc7619">RFC7619</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-255</td>
+          <td>Private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-11" id="ikev2-parameters-11"></a>IKEv2 Certificate Encodings</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Certificate Encoding</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PKCS #7 wrapped X.509 certificate</td>
+          <td>[UNSPECIFIED]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>PGP Certificate</td>
+          <td>[UNSPECIFIED]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>DNS Signed Key</td>
+          <td>[UNSPECIFIED]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>X.509 Certificate - Signature</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Kerberos Token</td>
+          <td>[UNSPECIFIED]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Certificate Revocation List (CRL)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Authority Revocation List (ARL)</td>
+          <td>[UNSPECIFIED]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>SPKI Certificate</td>
+          <td>[UNSPECIFIED]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>X.509 Certificate - Attribute</td>
+          <td>[UNSPECIFIED]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Raw RSA Key (DEPRECATED)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Hash and URL of X.509 certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Hash and URL of X.509 bundle</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>OCSP Content</td>
+          <td>[<a href="http://www.iana.org/go/rfc4806">RFC4806</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Raw Public Key</td>
+          <td>[<a href="http://www.iana.org/go/rfc7670">RFC7670</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-255</td>
+          <td>Private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-12" id="ikev2-parameters-12"></a>IKEv2 Authentication Method</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-12" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Authentication Method</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>RSA Digital Signature</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Shared Key Message Integrity Code</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>DSS Digital Signature</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-8</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>ECDSA with SHA-256 on the P-256 curve</td>
+          <td>[<a href="http://www.iana.org/go/rfc4754">RFC4754</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>ECDSA with SHA-384 on the P-384 curve</td>
+          <td>[<a href="http://www.iana.org/go/rfc4754">RFC4754</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>ECDSA with SHA-512 on the P-521 curve</td>
+          <td>[<a href="http://www.iana.org/go/rfc4754">RFC4754</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Generic Secure Password Authentication Method</td>
+          <td>[<a href="http://www.iana.org/go/rfc6467">RFC6467</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>NULL Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc7619">RFC7619</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Digital Signature</td>
+          <td>[<a href="http://www.iana.org/go/rfc7427">RFC7427</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-255</td>
+          <td>Private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-14" id="ikev2-parameters-14"></a>IKEv2 Notify Message Types - Error Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-ikev2-parameters-14-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-8191</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">8192-16383</td>
+          <td>Private use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-ikev2-parameters-14" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>NOTIFY MESSAGES - ERROR TYPES</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>UNSUPPORTED_CRITICAL_PAYLOAD</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-3</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>INVALID_IKE_SPI</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>INVALID_MAJOR_VERSION</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>INVALID_SYNTAX</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>INVALID_MESSAGE_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>INVALID_SPI</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12-13</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>NO_PROPOSAL_CHOSEN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15-16</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>INVALID_KE_PAYLOAD</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18-23</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>AUTHENTICATION_FAILED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25-33</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>SINGLE_PAIR_REQUIRED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>NO_ADDITIONAL_SAS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36</td>
+          <td>INTERNAL_ADDRESS_FAILURE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">37</td>
+          <td>FAILED_CP_REQUIRED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">38</td>
+          <td>TS_UNACCEPTABLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">39</td>
+          <td>INVALID_SELECTORS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">40</td>
+          <td>UNACCEPTABLE_ADDRESSES</td>
+          <td>[<a href="http://www.iana.org/go/rfc4555">RFC4555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>UNEXPECTED_NAT_DETECTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc4555">RFC4555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">42</td>
+          <td>USE_ASSIGNED_HoA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5026">RFC5026</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">43</td>
+          <td>TEMPORARY_FAILURE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">44</td>
+          <td>CHILD_SA_NOT_FOUND</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">45</td>
+          <td>INVALID_GROUP_ID</td>
+          <td>[<a href="http://www.iana.org/go/draft-yeung-g-ikev2">draft-yeung-g-ikev2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">46</td>
+          <td>AUTHORIZATION_FAILED</td>
+          <td>[<a href="http://www.iana.org/go/draft-yeung-g-ikev2">draft-yeung-g-ikev2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">47-8191</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8192-16383</td>
+          <td>Private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-16" id="ikev2-parameters-16"></a>IKEv2 Notify Message Types - Status Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-16.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-ikev2-parameters-16-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">16384-40959</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">40960-65535</td>
+          <td>Private use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-ikev2-parameters-16" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>NOTIFY MESSAGES - STATUS TYPES</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">16384</td>
+          <td>INITIAL_CONTACT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16385</td>
+          <td>SET_WINDOW_SIZE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16386</td>
+          <td>ADDITIONAL_TS_POSSIBLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16387</td>
+          <td>IPCOMP_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16388</td>
+          <td>NAT_DETECTION_SOURCE_IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16389</td>
+          <td>NAT_DETECTION_DESTINATION_IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16390</td>
+          <td>COOKIE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16391</td>
+          <td>USE_TRANSPORT_MODE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16392</td>
+          <td>HTTP_CERT_LOOKUP_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16393</td>
+          <td>REKEY_SA</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16394</td>
+          <td>ESP_TFC_PADDING_NOT_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16395</td>
+          <td>NON_FIRST_FRAGMENTS_ALSO</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16396</td>
+          <td>MOBIKE_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc4555">RFC4555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16397</td>
+          <td>ADDITIONAL_IP4_ADDRESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc4555">RFC4555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16398</td>
+          <td>ADDITIONAL_IP6_ADDRESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc4555">RFC4555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16399</td>
+          <td>NO_ADDITIONAL_ADDRESSES</td>
+          <td>[<a href="http://www.iana.org/go/rfc4555">RFC4555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16400</td>
+          <td>UPDATE_SA_ADDRESSES</td>
+          <td>[<a href="http://www.iana.org/go/rfc4555">RFC4555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16401</td>
+          <td>COOKIE2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4555">RFC4555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16402</td>
+          <td>NO_NATS_ALLOWED</td>
+          <td>[<a href="http://www.iana.org/go/rfc4555">RFC4555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16403</td>
+          <td>AUTH_LIFETIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc4478">RFC4478</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16404</td>
+          <td>MULTIPLE_AUTH_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc4739">RFC4739</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16405</td>
+          <td>ANOTHER_AUTH_FOLLOWS</td>
+          <td>[<a href="http://www.iana.org/go/rfc4739">RFC4739</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16406</td>
+          <td>REDIRECT_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5685">RFC5685</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16407</td>
+          <td>REDIRECT</td>
+          <td>[<a href="http://www.iana.org/go/rfc5685">RFC5685</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16408</td>
+          <td>REDIRECTED_FROM</td>
+          <td>[<a href="http://www.iana.org/go/rfc5685">RFC5685</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16409</td>
+          <td>TICKET_LT_OPAQUE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5723">RFC5723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16410</td>
+          <td>TICKET_REQUEST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5723">RFC5723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16411</td>
+          <td>TICKET_ACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc5723">RFC5723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16412</td>
+          <td>TICKET_NACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc5723">RFC5723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16413</td>
+          <td>TICKET_OPAQUE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5723">RFC5723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16414</td>
+          <td>LINK_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5739">RFC5739</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16415</td>
+          <td>USE_WESP_MODE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5840">RFC5840</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16416</td>
+          <td>ROHC_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5857">RFC5857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16417</td>
+          <td>EAP_ONLY_AUTHENTICATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc5998">RFC5998</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16418</td>
+          <td>CHILDLESS_IKEV2_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6023">RFC6023</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16419</td>
+          <td>QUICK_CRASH_DETECTION</td>
+          <td>[<a href="http://www.iana.org/go/rfc6290">RFC6290</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16420</td>
+          <td>IKEV2_MESSAGE_ID_SYNC_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6311">RFC6311</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16421</td>
+          <td>IPSEC_REPLAY_COUNTER_SYNC_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6311">RFC6311</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16422</td>
+          <td>IKEV2_MESSAGE_ID_SYNC</td>
+          <td>[<a href="http://www.iana.org/go/rfc6311">RFC6311</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16423</td>
+          <td>IPSEC_REPLAY_COUNTER_SYNC</td>
+          <td>[<a href="http://www.iana.org/go/rfc6311">RFC6311</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16424</td>
+          <td>SECURE_PASSWORD_METHODS</td>
+          <td>[<a href="http://www.iana.org/go/rfc6467">RFC6467</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16425</td>
+          <td>PSK_PERSIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc6631">RFC6631</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16426</td>
+          <td>PSK_CONFIRM</td>
+          <td>[<a href="http://www.iana.org/go/rfc6631">RFC6631</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16427</td>
+          <td>ERX_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6867">RFC6867</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16428</td>
+          <td>IFOM_CAPABILITY</td>
+          <td>[<a href="#Frederic_Firmin">Frederic_Firmin</a>][<a href="http://www.3gpp.org/ftp/Specs/html-info/24303.htm">3GPP TS 24.303 v10.6.0 annex B.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16429</td>
+          <td>SENDER_REQUEST_ID</td>
+          <td>[<a href="http://www.iana.org/go/draft-yeung-g-ikev2">draft-yeung-g-ikev2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16430</td>
+          <td>IKEV2_FRAGMENTATION_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7383">RFC7383</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16431</td>
+          <td>SIGNATURE_HASH_ALGORITHMS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7427">RFC7427</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16432</td>
+          <td>CLONE_IKE_SA_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7791">RFC7791</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16433</td>
+          <td>CLONE_IKE_SA</td>
+          <td>[<a href="http://www.iana.org/go/rfc7791">RFC7791</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16434</td>
+          <td>PUZZLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc8019">RFC8019</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16435-40959</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">40960-65535</td>
+          <td>Private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-17" id="ikev2-parameters-17"></a>IKEv2 Notification IPCOMP Transform IDs (Value 16387)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-17" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Compression Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IPCOMP_OUI</td>
+          <td>[UNSPECIFIED]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPCOMP_DEFLATE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2394">RFC2394</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IPCOMP_LZS</td>
+          <td>[<a href="http://www.iana.org/go/rfc2395">RFC2395</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>IPCOMP_LZJH</td>
+          <td>[<a href="http://www.iana.org/go/rfc3051">RFC3051</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-240</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-18" id="ikev2-parameters-18"></a>IKEv2 Security Protocol Identifiers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-18.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-18" class="sortable">
+      <thead>
+        <tr>
+          <th>Protocol ID</th>
+          <th>Protocol</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IKE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>AH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>ESP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>FC_ESP_HEADER</td>
+          <td>[<a href="http://www.iana.org/go/rfc4595">RFC4595</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>FC_CT_AUTHENTICATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc4595">RFC4595</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-255</td>
+          <td>Private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-19" id="ikev2-parameters-19"></a>IKEv2 Traffic Selector Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-19.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-19" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>TS Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-6</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>TS_IPV4_ADDR_RANGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>TS_IPV6_ADDR_RANGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>TS_FC_ADDR_RANGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4595">RFC4595</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10-240</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-20" id="ikev2-parameters-20"></a>IKEv2 Configuration Payload CFG Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-20.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-20" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>CFG Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>CFG_REQUEST</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>CFG_REPLY</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>CFG_SET</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>CFG_ACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-21" id="ikev2-parameters-21"></a>IKEv2 Configuration Payload Attribute Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Attribute Types with an "*" may be multi-valued on return only if
+multiple values were requested.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-21.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-21" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Attribute Type</th>
+          <th>Multi-Valued</th>
+          <th>Length</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>INTERNAL_IP4_ADDRESS</td>
+          <td>YES*</td>
+          <td>0 or 4 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>INTERNAL_IP4_NETMASK</td>
+          <td>NO</td>
+          <td>0 or 4 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>INTERNAL_IP4_DNS</td>
+          <td>YES</td>
+          <td>0 or 4 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>INTERNAL_IP4_NBNS</td>
+          <td>YES</td>
+          <td>0 or 4 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>INTERNAL_IP4_DHCP</td>
+          <td>YES</td>
+          <td>0 or 4 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>APPLICATION_VERSION</td>
+          <td>NO</td>
+          <td>0 or more</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>INTERNAL_IP6_ADDRESS</td>
+          <td>YES*</td>
+          <td>0 or 17 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>INTERNAL_IP6_DNS</td>
+          <td>YES</td>
+          <td>0 or 16 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>INTERNAL_IP6_DHCP</td>
+          <td>YES</td>
+          <td>0 or 16 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>INTERNAL_IP4_SUBNET</td>
+          <td>YES</td>
+          <td>0 or 8 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>SUPPORTED_ATTRIBUTES</td>
+          <td>NO</td>
+          <td>Multiple of 2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>INTERNAL_IP6_SUBNET</td>
+          <td>YES</td>
+          <td>17 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>MIP6_HOME_PREFIX</td>
+          <td>YES</td>
+          <td>0 or 21 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc5026">RFC5026</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>INTERNAL_IP6_LINK</td>
+          <td>NO</td>
+          <td>8 or more</td>
+          <td>[<a href="http://www.iana.org/go/rfc5739">RFC5739</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>INTERNAL_IP6_PREFIX</td>
+          <td>YES</td>
+          <td>17 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc5739">RFC5739</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>HOME_AGENT_ADDRESS</td>
+          <td>NO</td>
+          <td>16 or 20</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/html-info/24302.htm">http://www.3gpp.org/ftp/Specs/html-info/24302.htm</a>][<a href="#John_Meredith">John_Meredith</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>P_CSCF_IP4_ADDRESS</td>
+          <td>YES</td>
+          <td>0 or 4 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7651">RFC7651</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>P_CSCF_IP6_ADDRESS</td>
+          <td>YES</td>
+          <td>0 or 16 octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7651">RFC7651</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>FTT_KAT</td>
+          <td>NO</td>
+          <td>2 octets</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/24302.htm">TS 24.302 12.6.0</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>EXTERNAL_SOURCE_IP4_NAT_INFO</td>
+          <td>NO</td>
+          <td>0 or 6</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/29139.htm">TS 29.139</a>][<a href="#Kimmo_Kymalainen">Kimmo_Kymalainen</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>TIMEOUT_PERIOD_FOR_LIVENESS_CHECK</td>
+          <td>NO</td>
+          <td>0 or 4 octets</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/html-info/24302.htm">TS 24.302 13.4.0</a>][<a href="#Frederic_Firmin">Frederic_Firmin</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>INTERNAL_DNS_DOMAIN</td>
+          <td>YES</td>
+          <td>0 or more</td>
+          <td>[<a href="http://www.iana.org/go/draft-pauly-ipsecme-split-dns">draft-pauly-ipsecme-split-dns</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26-16383</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16384-32767</td>
+          <td>Private Use</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7296">RFC7296</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-22" id="ikev2-parameters-22"></a>IKEv2 Gateway Identity Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5685">RFC5685</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-22.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-22" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5685">RFC5685</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IPv4 address of the VPN gateway</td>
+          <td>[<a href="http://www.iana.org/go/rfc5685">RFC5685</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPv6 address of the VPN gateway</td>
+          <td>[<a href="http://www.iana.org/go/rfc5685">RFC5685</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>FQDN of the VPN gateway</td>
+          <td>[<a href="http://www.iana.org/go/rfc5685">RFC5685</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-240</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5685">RFC5685</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ikev2-parameters-23" id="ikev2-parameters-23"></a>ROHC Attribute Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5857">RFC5857</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ikev2-parameters-23.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ikev2-parameters-23" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>ROHC Attribute Type</th>
+          <th>Format</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5857">RFC5857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Maximum Context Identifier (MAX_CID)</td>
+          <td>TV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5857">RFC5857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ROHC Profile (ROHC_PROFILE)</td>
+          <td>TV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5857">RFC5857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>ROHC Integrity Algorithm (ROHC_INTEG)</td>
+          <td>TV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5857">RFC5857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>ROHC ICV Length in bytes (ROHC_ICV_LEN)</td>
+          <td>TV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5857">RFC5857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Maximum Reconstructed Reception Unit (MRRU)</td>
+          <td>TV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5857">RFC5857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-16383</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16384-32767</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5857">RFC5857</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="secure-password-methods" id="secure-password-methods"></a>IKEv2 Secure Password Methods</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6467">RFC6467</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="secure-password-methods.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-secure-password-methods" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6467">RFC6467</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PACE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6631">RFC6631</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>AugPAKE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6628">RFC6628</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Secure PSK Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6617">RFC6617</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-1023</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1024-65535</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6467">RFC6467</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hash-algorithms" id="hash-algorithms"></a>IKEv2 Hash Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tero Kivinen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7427">RFC7427</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hash-algorithms.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hash-algorithms" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Hash Algorithm</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7427">RFC7427</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>SHA1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7427">RFC7427</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>SHA2-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc7427">RFC7427</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>SHA2-384</td>
+          <td>[<a href="http://www.iana.org/go/rfc7427">RFC7427</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>SHA2-512</td>
+          <td>[<a href="http://www.iana.org/go/rfc7427">RFC7427</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-1023</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1024-65535</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7427">RFC7427</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Frederic_Firmin" id="Frederic_Firmin">[Frederic_Firmin]</a>
+          </td>
+          <td>Frederic Firmin</td>
+          <td>
+            <a href="mailto:frederic.firmin&amp;etsi.org">mailto:frederic.firmin&amp;etsi.org</a>
+          </td>
+          <td>2016-03-08</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="John_Meredith" id="John_Meredith">[John_Meredith]</a>
+          </td>
+          <td>John Meredith</td>
+          <td>
+            <a href="mailto:john.meredith&amp;etsi.org">mailto:john.meredith&amp;etsi.org</a>
+          </td>
+          <td>2010-05-17</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Kimmo_Kymalainen" id="Kimmo_Kymalainen">[Kimmo_Kymalainen]</a>
+          </td>
+          <td>Kimmo Kymalainen</td>
+          <td>
+            <a href="mailto:kimmo.kymalainen&amp;etsi.org">mailto:kimmo.kymalainen&amp;etsi.org</a>
+          </td>
+          <td>2015-12-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Matt_Ball" id="Matt_Ball">[Matt_Ball]</a>
+          </td>
+          <td>Matt Ball</td>
+          <td>
+            <a href="mailto:matt.ball&amp;ieee.org">mailto:matt.ball&amp;ieee.org</a>
+          </td>
+          <td>2007-10-11</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

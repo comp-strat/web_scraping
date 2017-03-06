@@ -1,0 +1,372 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Delegating or redelegating a country-code top-level domain (ccTLD)</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+			<div id="main_right">
+
+
+<h1>Delegating or redelegating a country-code top-level domain (ccTLD)</h1>
+
+<p>This document provides an overall guide to the country-code top-level domain (ccTLD) delegation and redelegation
+    process, and is designed to assist requestors in determining their eligibility, and in preparing formal
+    requests.</p>
+
+<h2>Background on the process</h2>
+
+<p>The delegation and redelegation process is designed to assign or re-assign a ccTLD to a manager, taking into account
+    a number of technical and public interest criteria. These criteria relate to the basic principles that the manager
+    be a responsible and technically competent trustee of the domain on behalf of the national and global Internet
+    communities.</p>
+<p>The process is initiated when a formal request is submitted to our Root Zone Management staff. The
+    request and all required documentation is then reviewed and verified by our team. After the review
+    and authorisations are completed, the request is implemented as a change to the Root Zone and Root Zone
+    Database.</p>
+<p>Upon successful completion of the process, the new country-code domain is established, or a transfer takes place in
+    the case of redelegation of an existing ccTLD.</p>
+
+<h2>Who is involved?</h2>
+
+<p>The delegation and redelegation process involves a number of different organisations and individuals. For
+    example:</p>
+<ul>
+    <li>The <b>requestor</b>, usually the proposed manager, initiates the process by submitting a formal delegation or
+        redelegation request. The requestor is the main party we interact with throughout the request, and is
+        responsible for collecting much of the materials required to process the request.
+    </li>
+    <li>The <b>proposed manager</b> is an organisation to which delegated responsibility for the ccTLD is sought. This
+        organisation must demonstrate it understands and can meet its obligations as a trustee for the domain on behalf
+        of the national and global Internet communities. The term manager is synonymous with other terms, such as
+        Sponsoring Organization and operator, which have been used in other documentation. In this document, we have
+        standardized on manager.
+    </li>
+    <li><b>Significant stakeholders</b> are those parties that benefit from the operation of the ccTLD, and their
+        opinions are important in assessing the public interest aspects of a request.
+    </li>
+    <li>The <b>respective government</b> is consulted to indicate either support or non-objection for the delegation or
+        redelegation request. As a country-code represents the name of either a country or territory, the government is
+        an important stakeholder in how the domain should be managed.
+    </li>
+    <li>We, <b>Public Technical Identifiers</b>, as the IANA naming functions operator, are responsible for the
+        receipt, verification and processing of the request. Our Root Zone Management staff performs these activities.
+    </li>
+    <li><b>Verisign</b>, as the Root Zone Maintainer, is responsible for receiving requests that we have processed
+        and implementing those changes in the root zone, and
+        distributing the revised root zone to the root name servers.
+    </li>
+</ul>
+<p>While many parties are involved in processing a delegation or redelegation, our staff are the primary interface for
+    those requesting a delegation or a redelegation of a ccTLD.</p>
+
+<h2>Preparing a request</h2>
+
+<p>A delegation or redelegation request involves the development and submission of documentation that describes the
+    nature of the request, and how the proposed new manager satisfies the criteria used to assess the request.</p>
+
+<h3>Completing a delegation request form</h3>
+
+<p>The <a href="/domains/root/tld-change-template.txt">delegation request form</a> which describes the basic details of
+    the request, must be completed. The details include the identity of the proposed manager, the contact persons to be
+    listed in the Root Zone Database, the technical delegation details for the domain, and a checklist relating to the
+    assessment criteria for the delegation or redelegation request.</p>
+<p>Please see <a href="/help/nameserver-requirements">Technical requirements for authoritative name servers</a> for more
+    information about the technical delegation details for the domain.</p>
+
+<h3>Demonstrating string eligibility</h3>
+
+<p>To delegate or redelegate a ccTLD, it must be shown that the string is eligible to be delegated.</p>
+<p>The primary method of eligibility for country-code top-level domains is its listing as an “alpha-2” (two-letter
+    ASCII) code listed in the ISO 3166-1 standard. Another method of eligibility is the string may have been deemed
+    eligible as a country-code through the IDN Fast Track process.</p>
+<p>Complete details on which country-codes are considered eligible are available in <a href="/help/eligible-tlds">Qualifying
+    top-level domain strings</a>.</p>
+
+<h3>Demonstrating technical and administrative competency</h3>
+
+<p>The delegation request must include documentation that demonstrates the technical and administrative ability of the
+    proposed manager to operate the domain competently and that they will not jeopardize nor compromise the stability
+    and security of the DNS.</p>
+<p>The proposed manager decides whom to list as the administrative and technical contacts. Both the administrative
+    contact and the technical contact must cross-verify all root zone changes and be responsive to communications about
+    root zone changes.</p>
+<p>For more information on preparing documentation to demonstrate technical and administrative ability, please go to
+    <a href="/help/operational-plans">Preparing an Operational and Technical Plan</a>.</p>
+
+<h3>Providing information on the Proposed Manager</h3>
+
+<p>It is a requirement that the requestor provides the legal name of the organisation (as officially registered in its
+    principal place of business), along with its physical address, telephone and fax numbers. In support of this, the
+    requestor must provide a certified copy or extract of the business registration, certification, or law that
+    demonstrates the organisation’s legal status.</p>
+
+<h3>Providing geographical location</h3>
+
+<p>As country-codes represent specific countries or territories, the proposed manager will be resident or incorporated
+    in, the territory and/or jurisdiction of the relevant government or public authority of the country associated with
+    the ccTLD, unless formally decided otherwise by the relevant government or public authority.</p>
+<p>It is a requirement that the requestor indicate the geographic locations of the proposed manager, the administrative
+    contact person for the domain, and the location(s) where the principal operations will be conducted.</p>
+
+<h3>Demonstrating consent</h3>
+
+<p>It is a requirement that the requestor provides documentation that shows that directly involved parties consent to
+    the request to delegate or redelegate. For a new delegation, this includes the proposed new organisation and contact
+    persons. For an existing delegation, this also includes documented consent from the existing management of the
+    domain.</p>
+
+<h3>Demonstrating that the request serves the local Internet community’s interest</h3>
+
+<p>The delegation or redelegation request must demonstrate that the proposed manager recognises its responsibility to
+    fairly and equitably serve the local Internet community’s interests with respect to management of the domain. In
+    support of this, it is a requirement that the requestor document the mechanisms that will be utilised to inform and
+    seek input from the local community on ccTLD management issues.</p>
+<p>It is a requirement that the requestor provide documentation indicating local Internet community support for the
+    proposed manager in operating the ccTLD, such as letters of support from interested and/or impacted parties, and the
+    results of public consultations that led to the request.</p>
+
+<h3>Demonstrating government review and consideration</h3>
+
+<p>It is a requirement that the requestor provide documentation indicating the relevant governments have been informed
+    about the request. It is a requirement that the documentation includes a statement of support or non-objection from
+    an authorised representative of the government.</p>
+
+<h3>Demonstrating a stable transfer plan</h3>
+
+<p>For the redelegation of an existing operational ccTLD, it is a requirement that the requestor provide information on
+    how existing operations will be transferred to the proposed new manager in a safe manner. It must explain how the
+    stability of the domain will be preserved and how existing registrants will be impacted by the change. If the
+    request is in relation to a transfer from a retired ccTLD to another ccTLD, it must also describe the
+    decommissioning process for the retired domain.</p>
+
+<h2>Submitting the request</h2>
+
+<p>Once the request has been prepared, submit it to our Root Zone Management staff to commence processing.</p>
+
+<h3>Initial email submission</h3>
+
+<p>To start the request, send an email with the delegation/redelegation form attached to
+    <span class="email-address">root-mgmt@iana.org</span>.</p>
+<p>Supporting documentation must be provided with the Delegation Request Form. Files should be in PDF format where
+    possible.</p>
+<p>Once the email is sent to root-mgmt@iana.org, our ticketing system will reply automatically with a confirmation
+    of receipt and a unique reference number within 1 day. This number will be used to track progress and correspondence
+    relating to the request. Please ensure the number, just as it appears in the confirmation receipt, is included in
+    the subject of all future communications related to the request.</p>
+
+<h3>Original documentation</h3>
+
+<p>In addition to the electronic submissions, it is a requirement that the requester submit originals, or certified
+    copies, of all official documents and testimony used in the request for which its authenticity is material to the
+    evaluation. This includes the following:</p>
+<ul>
+    <li>Registration certifications</li>
+    <li>Letters of support or consent</li>
+    <li>Legal documents that are a basis of the application</li>
+</ul>
+<p>The documents should be couriered or posted to ICANN’s Root Zone Management staff at the following address. It is
+    important that the documents cite the reference number that appeared in the email confirmation receipt.</p>
+<blockquote>Root Zone Management<br/>12025 Waterfront Drive #300</br>Los Angeles CA 90094<br/>USA
+</blockquote>
+<p>Please submit all requests, templates, and documentation in English. Where accuracy is essential, English
+    documentation and/or English translations of key documents (such as governmental decrees relating to the request)
+    must be notarised or certified official translations.</p>
+
+<h2>After the request is received</h2>
+
+<p>Once we receive the request and issue a confirmation receipt, a process of analysis and verification begins. The
+    amount of time this process takes varies depending upon the information provided in the supporting documentation,
+    and the complexity of the individual case.</p>
+<p>In the event that further documentation or clarification is needed, we will contact the requestor. The delegation or
+    redelegation request will not proceed until we have received satisfactory documentation and information.</p>
+<p>If we are unable to process the request due to significant lack of detail, the inability to confirm information,
+    and/or unresponsiveness by the requestor, we will administratively close the request. In such cases, the requestor
+    is welcome to resubmit the request at a later date to restart the review process once the additional material is
+    available.</p>
+
+<h3>Requesting confirmation from contacts</h3>
+
+<p>In addition to verification and analysis of the material supplied in the request, for redelegation requests, we will
+    ask the current administrative and technical contacts, and the current ccTLD manager, whether they agree to the
+    request.</p>
+<p>In the case of a delegation, we confirm with the proposed contacts as listed in the request, to ensure they
+    consent to the responsibilities of being listed as a contact for the domain.</p>
+<p>In those cases where confirmation is not received from one or more parties, further consultation will be necessary.
+    This may delay processing of the request. Please see <a href="/help/obtaining-consent">Obtaining consent for a root
+    zone change</a>.</p>
+
+<h3>Posting the status of the pending request</h3>
+
+<p>We will publicly post requests for delegations and redelegations. This public disclosure will at a minimum include
+    the domain name being requested, the party that will manage the domain, and the current status of the request.</p>
+<p>If there are specific stability or security reasons why information should not be disclosed, the requestor should
+    explain that in the Delegation Request Form.</p>
+
+<h3>Analysing the request</h3>
+
+<p>After all materials are received, and the positions of the contacts have been ascertained, our staff performs an
+    analysis of the request. If the result of the analysis is the request accords with all appropriate policies and
+    procedures, it will be approved for implementation. If there are defects in the request, it will be referred back
+    to the requester for further work or clarification.</p>
+
+<h3>Implementing the request</h3>
+
+<p>Upon referral for implementation, the Root Zone Maintainer will implement the changes to the DNS root zone. We will
+    implement the data changes in the WHOIS database.</p>
+<p>After the request has been implemented, we will notify the requestor, and the requestor will verify that the changes
+    were made correctly. In the event any problems arise, immediately notify us at root-mgmt@iana.org and include the
+    reference number of the change request.</p>
+
+
+			</div>
+			
+			<div id="sidebar_left">
+				<div class="navigation_box">
+				<h2>Domain Names</h2>
+				<ul>
+					<li id="nav_dom_top"><a href="/domains">Overview</a></li>
+					<li id="nav_dom_root"><a href="/domains/root">Root Zone Management</a></li>
+					<ul id="nav_dom_root_sub">
+						<li id="nav_dom_root_top"><a href="/domains/root">Overview</a></li>
+						<li id="nav_dom_root_db"><a href="/domains/root/db">Root Database</a></li>
+						<li id="nav_dom_root_files"><a href="/domains/root/files">Hint and Zone Files</a></li>
+						<li id="nav_dom_root_manage"><a href="/domains/root/manage">Change Requests</a></li>
+						<li id="nav_dom_root_procedures"><a href="/domains/root/help">Instructions &amp; Guides</a></li>
+						<li id="nav_dom_root_servers"><a href="/domains/root/servers">Root Servers</a></li>
+					</ul>
+					<li id="nav_dom_int"><a href="/domains/int">.INT Registry</a></li>
+					<ul id="nav_dom_int_sub">
+						<li id="nav_dom_int_top"><a href="/domains/int">Overview</a></li>
+						<li id="nav_dom_int_manage"><a href="/domains/int/manage">Register/modify an .INT domain</a></li>
+						<li id="nav_dom_int_policy"><a href="/domains/int/policy">Eligibility</a></li>
+					</ul>
+					<li id="nav_dom_arpa"><a href="/domains/arpa">.ARPA Registry</a></li>
+					<li id="nav_dom_idn"><a href="/domains/idn-tables">IDN Practices Repository</a></li>
+					<ul id="nav_dom_idn_sub">
+						<li id="nav_dom_idn_top"><a href="/domains/idn-tables">Overview</a></li>
+						<!-- <li id="nav_dom_idn_tables"><a href="/domains/idn-tables/db">Tables</a></li> -->
+						<li id="nav_dom_idn_submit"><a href="/procedures/idn-repository.html">Submit a table</a></li>
+					</ul>
+					<li id="nav_dom_dnssec"><a href="/dnssec">Root Key Signing Key (DNSSEC)</a></li>
+					<ul id="nav_dom_dnssec_sub">
+						<li id="nav_dom_dnssec_top"><a href="/dnssec">Overview</a></li>
+						<li id="nav_dom_dnssec_ksk"><a href="/dnssec/files">Trusts Anchors and Keys</a></li>
+						<li id="nav_dom_dnssec_ceremonies"><a href="/dnssec/ceremonies">Root KSK Ceremonies</a></li>
+						<li id="nav_dom_dnssec_dps"><a href="/dnssec/dps">Practice Statement</a></li>
+                        <li id="nav_dom_dnssec_tcrs"><a href="/dnssec/tcrs">Community Representatives</a></li>
+					</ul>
+					<li id="nav_dom_special"><a href="/domains/reserved">Reserved Domains</a></li>
+				</ul>
+				</div>
+			</div>
+			
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script>
+$(document).ready(function() {
+	$("#nav_dom_int_sub").hide()
+	$("#nav_dom_idn_sub").hide()
+	$("#nav_dom_dnssec_sub").hide()
+	$("#nav_dom_tools_sub").hide()
+	$("#nav_dom_root").addClass("selected")
+	$("#nav_dom_root_procedures").addClass("selected")
+});
+</script>
+
+	
+</body>
+
+</html>

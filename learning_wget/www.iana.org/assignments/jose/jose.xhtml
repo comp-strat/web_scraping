@@ -1,0 +1,1392 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>JSON Object Signing and Encryption (JOSE)</title>
+  </head>
+  <body>
+    <h1>JSON Object Signing and Encryption (JOSE)</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2015-01-23</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-02-23</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="jose.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="jose.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="jose.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#web-signature-encryption-header-parameters">JSON Web Signature and Encryption Header Parameters</a>
+      </li>
+      <li>
+        <a href="#web-signature-encryption-algorithms">JSON Web Signature and Encryption Algorithms</a>
+      </li>
+      <li>
+        <a href="#web-encryption-compression-algorithms">JSON Web Encryption Compression Algorithms</a>
+      </li>
+      <li>
+        <a href="#web-key-types">JSON Web Key Types</a>
+      </li>
+      <li>
+        <a href="#web-key-elliptic-curve">JSON Web Key Elliptic Curve</a>
+      </li>
+      <li>
+        <a href="#web-key-parameters">JSON Web Key Parameters</a>
+      </li>
+      <li>
+        <a href="#web-key-use">JSON Web Key Use</a>
+      </li>
+      <li>
+        <a href="#web-key-operations">JSON Web Key Operations</a>
+      </li>
+      <li>
+        <a href="#web-key-set-parameters">JSON Web Key Set Parameters</a>
+      </li>
+    </ul>
+    <h2><a name="web-signature-encryption-header-parameters" id="web-signature-encryption-header-parameters"></a>JSON Web Signature and Encryption Header Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7515">RFC7515</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="web-signature-encryption-header-parameters.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-web-signature-encryption-header-parameters" class="sortable">
+      <thead>
+        <tr>
+          <th>Header Parameter Name</th>
+          <th>Header Parameter Description</th>
+          <th>Header Parameter Usage Location(s)</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>alg</td>
+          <td>Algorithm</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>jku</td>
+          <td>JWK Set URL</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.2</a>]</td>
+        </tr>
+        <tr>
+          <td>jwk</td>
+          <td>JSON Web Key</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.3</a>]</td>
+        </tr>
+        <tr>
+          <td>kid</td>
+          <td>Key ID</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.4</a>]</td>
+        </tr>
+        <tr>
+          <td>x5u</td>
+          <td>X.509 URL</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.5</a>]</td>
+        </tr>
+        <tr>
+          <td>x5c</td>
+          <td>X.509 Certificate Chain</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.6</a>]</td>
+        </tr>
+        <tr>
+          <td>x5t</td>
+          <td>X.509 Certificate SHA-1 Thumbprint</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.7</a>]</td>
+        </tr>
+        <tr>
+          <td>x5t#S256</td>
+          <td>X.509 Certificate SHA-256 Thumbprint</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.8</a>]</td>
+        </tr>
+        <tr>
+          <td>typ</td>
+          <td>Type</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.9</a>]</td>
+        </tr>
+        <tr>
+          <td>cty</td>
+          <td>Content Type</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.10</a>]</td>
+        </tr>
+        <tr>
+          <td>crit</td>
+          <td>Critical</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7515">RFC7515, Section 4.1.11</a>]</td>
+        </tr>
+        <tr>
+          <td>alg</td>
+          <td>Algorithm</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>enc</td>
+          <td>Encryption Algorithm</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.2</a>]</td>
+        </tr>
+        <tr>
+          <td>zip</td>
+          <td>Compression Algorithm</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.3</a>]</td>
+        </tr>
+        <tr>
+          <td>jku</td>
+          <td>JWK Set URL</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.4</a>]</td>
+        </tr>
+        <tr>
+          <td>jwk</td>
+          <td>JSON Web Key</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.5</a>]</td>
+        </tr>
+        <tr>
+          <td>kid</td>
+          <td>Key ID</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.6</a>]</td>
+        </tr>
+        <tr>
+          <td>x5u</td>
+          <td>X.509 URL</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.7</a>]</td>
+        </tr>
+        <tr>
+          <td>x5c</td>
+          <td>X.509 Certificate Chain</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.8</a>]</td>
+        </tr>
+        <tr>
+          <td>x5t</td>
+          <td>X.509 Certificate SHA-1 Thumbprint</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.9</a>]</td>
+        </tr>
+        <tr>
+          <td>x5t#S256</td>
+          <td>X.509 Certificate SHA-256 Thumbprint</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.10</a>]</td>
+        </tr>
+        <tr>
+          <td>typ</td>
+          <td>Type</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.11</a>]</td>
+        </tr>
+        <tr>
+          <td>cty</td>
+          <td>Content Type</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.12</a>]</td>
+        </tr>
+        <tr>
+          <td>crit</td>
+          <td>Critical</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516, Section 4.1.13</a>]</td>
+        </tr>
+        <tr>
+          <td>epk</td>
+          <td>Ephemeral Public Key</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.6.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>apu</td>
+          <td>Agreement PartyUInfo</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.6.1.2</a>]</td>
+        </tr>
+        <tr>
+          <td>apv</td>
+          <td>Agreement PartyVInfo</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.6.1.3</a>]</td>
+        </tr>
+        <tr>
+          <td>iv</td>
+          <td>Initialization Vector</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.7.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>tag</td>
+          <td>Authentication Tag</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.7.1.2</a>]</td>
+        </tr>
+        <tr>
+          <td>p2s</td>
+          <td>PBES2 Salt Input</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.8.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>p2c</td>
+          <td>PBES2 Count</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.8.1.2</a>]</td>
+        </tr>
+        <tr>
+          <td>iss</td>
+          <td>Issuer</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7519">RFC7519, Section 4.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>sub</td>
+          <td>Subject</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7519">RFC7519, Section 4.1.2</a>]</td>
+        </tr>
+        <tr>
+          <td>aud</td>
+          <td>Audience</td>
+          <td>JWE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7519">RFC7519, Section 4.1.3</a>]</td>
+        </tr>
+        <tr>
+          <td>b64</td>
+          <td>Base64url-Encode Payload</td>
+          <td>JWS</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7797">RFC7797, Section 3</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="web-signature-encryption-algorithms" id="web-signature-encryption-algorithms"></a>JSON Web Signature and Encryption Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7518">RFC7518</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="web-signature-encryption-algorithms.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-web-signature-encryption-algorithms" class="sortable">
+      <thead>
+        <tr>
+          <th>Algorithm Name</th>
+          <th>Algorithm Description</th>
+          <th>Algorithm Usage Location(s)</th>
+          <th>JOSE Implementation Requirements</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+          <th>Algorithm Analysis Document(s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HS256</td>
+          <td>HMAC using SHA-256</td>
+          <td>alg</td>
+          <td>Required</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.2</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>HS384</td>
+          <td>HMAC using SHA-384</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.2</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>HS512</td>
+          <td>HMAC using SHA-512</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.2</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>RS256</td>
+          <td>RSASSA-PKCS1-v1_5 using SHA-256</td>
+          <td>alg</td>
+          <td>Recommended</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.3</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>RS384</td>
+          <td>RSASSA-PKCS1-v1_5 using SHA-384</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.3</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>RS512</td>
+          <td>RSASSA-PKCS1-v1_5 using SHA-512</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.3</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>ES256</td>
+          <td>ECDSA using P-256 and SHA-256</td>
+          <td>alg</td>
+          <td>Recommended+</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.4</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>ES384</td>
+          <td>ECDSA using P-384 and SHA-384</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.4</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>ES512</td>
+          <td>ECDSA using P-521 and SHA-512</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.4</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>PS256</td>
+          <td>RSASSA-PSS using SHA-256 and MGF1 with SHA-256</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.5</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>PS384</td>
+          <td>RSASSA-PSS using SHA-384 and MGF1 with SHA-384</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.5</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>PS512</td>
+          <td>RSASSA-PSS using SHA-512 and MGF1 with SHA-512</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.5</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>No digital signature or MAC performed</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 3.6</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>RSA1_5</td>
+          <td>RSAES-PKCS1-v1_5</td>
+          <td>alg</td>
+          <td>Recommended-</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.2</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>RSA-OAEP</td>
+          <td>RSAES OAEP using default parameters</td>
+          <td>alg</td>
+          <td>Recommended+</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.3</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>RSA-OAEP-256</td>
+          <td>RSAES OAEP using SHA-256 and MGF1 with SHA-256</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.3</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A128KW</td>
+          <td>AES Key Wrap using 128-bit key</td>
+          <td>alg</td>
+          <td>Recommended</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.4</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A192KW</td>
+          <td>AES Key Wrap using 192-bit key</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.4</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A256KW</td>
+          <td>AES Key Wrap using 256-bit key</td>
+          <td>alg</td>
+          <td>Recommended</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.4</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>dir</td>
+          <td>Direct use of a shared symmetric key</td>
+          <td>alg</td>
+          <td>Recommended</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.5</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>ECDH-ES</td>
+          <td>ECDH-ES using Concat KDF</td>
+          <td>alg</td>
+          <td>Recommended+</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.6</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>ECDH-ES+A128KW</td>
+          <td>ECDH-ES using Concat KDF and "A128KW" wrapping</td>
+          <td>alg</td>
+          <td>Recommended</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.6</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>ECDH-ES+A192KW</td>
+          <td>ECDH-ES using Concat KDF and "A192KW" wrapping</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.6</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>ECDH-ES+A256KW</td>
+          <td>ECDH-ES using Concat KDF and "A256KW" wrapping</td>
+          <td>alg</td>
+          <td>Recommended</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.6</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A128GCMKW</td>
+          <td>Key wrapping with AES GCM using 128-bit key</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.7</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A192GCMKW</td>
+          <td>Key wrapping with AES GCM using 192-bit key</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.7</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A256GCMKW</td>
+          <td>Key wrapping with AES GCM using 256-bit key</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.7</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>PBES2-HS256+A128KW</td>
+          <td>PBES2 with HMAC SHA-256 and "A128KW" wrapping</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.8</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>PBES2-HS384+A192KW</td>
+          <td>PBES2 with HMAC SHA-384 and "A192KW" wrapping</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.8</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>PBES2-HS512+A256KW</td>
+          <td>PBES2 with HMAC SHA-512 and "A256KW" wrapping</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 4.8</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A128CBC-HS256</td>
+          <td>AES_128_CBC_HMAC_SHA_256 authenticated encryption algorithm</td>
+          <td>enc</td>
+          <td>Required</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 5.2.3</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A192CBC-HS384</td>
+          <td>AES_192_CBC_HMAC_SHA_384 authenticated encryption algorithm</td>
+          <td>enc</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 5.2.4</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A256CBC-HS512</td>
+          <td>AES_256_CBC_HMAC_SHA_512 authenticated encryption algorithm</td>
+          <td>enc</td>
+          <td>Required</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 5.2.5</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A128GCM</td>
+          <td>AES GCM using 128-bit key</td>
+          <td>enc</td>
+          <td>Recommended</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 5.3</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A192GCM</td>
+          <td>AES GCM using 192-bit key</td>
+          <td>enc</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 5.3</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A256GCM</td>
+          <td>AES GCM using 256-bit key</td>
+          <td>enc</td>
+          <td>Recommended</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 5.3</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>EdDSA</td>
+          <td>EdDSA signature algorithms</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8037">RFC8037, Section 3.1</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8032">RFC8032</a>]</td>
+        </tr>
+        <tr>
+          <td>RS1</td>
+          <td>RSASSA-PKCS1-v1_5 with SHA-1</td>
+          <td>JWK</td>
+          <td>Prohibited</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-irtf-cfrg-webcrypto-algorithms">draft-irtf-cfrg-webcrypto-algorithms</a>]</td>
+        </tr>
+        <tr>
+          <td>RSA-OAEP-384</td>
+          <td>RSA-OAEP using SHA-384 and MGF1 with SHA-384</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>RSA-OAEP-512</td>
+          <td>RSA-OAEP using SHA-512 and MGF1 with SHA-512</td>
+          <td>alg</td>
+          <td>Optional</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+          <td>n/a</td>
+        </tr>
+        <tr>
+          <td>A128CBC</td>
+          <td>AES CBC using 128 bit key</td>
+          <td>JWK</td>
+          <td>Prohibited</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-irtf-cfrg-webcrypto-algorithms">draft-irtf-cfrg-webcrypto-algorithms</a>]</td>
+        </tr>
+        <tr>
+          <td>A192CBC</td>
+          <td>AES CBC using 192 bit key</td>
+          <td>JWK</td>
+          <td>Prohibited</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-irtf-cfrg-webcrypto-algorithms">draft-irtf-cfrg-webcrypto-algorithms</a>]</td>
+        </tr>
+        <tr>
+          <td>A256CBC</td>
+          <td>AES CBC using 256 bit key</td>
+          <td>JWK</td>
+          <td>Prohibited</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-irtf-cfrg-webcrypto-algorithms">draft-irtf-cfrg-webcrypto-algorithms</a>]</td>
+        </tr>
+        <tr>
+          <td>A128CTR</td>
+          <td>AES CTR using 128 bit key</td>
+          <td>JWK</td>
+          <td>Prohibited</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-irtf-cfrg-webcrypto-algorithms">draft-irtf-cfrg-webcrypto-algorithms</a>]</td>
+        </tr>
+        <tr>
+          <td>A192CTR</td>
+          <td>AES CTR using 192 bit key</td>
+          <td>JWK</td>
+          <td>Prohibited</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-irtf-cfrg-webcrypto-algorithms">draft-irtf-cfrg-webcrypto-algorithms</a>]</td>
+        </tr>
+        <tr>
+          <td>A256CTR</td>
+          <td>AES CTR using 256 bit key</td>
+          <td>JWK</td>
+          <td>Prohibited</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-irtf-cfrg-webcrypto-algorithms">draft-irtf-cfrg-webcrypto-algorithms</a>]</td>
+        </tr>
+        <tr>
+          <td>HS1</td>
+          <td>HMAC using SHA-1</td>
+          <td>JWK</td>
+          <td>Prohibited</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-irtf-cfrg-webcrypto-algorithms">draft-irtf-cfrg-webcrypto-algorithms</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="web-encryption-compression-algorithms" id="web-encryption-compression-algorithms"></a>JSON Web Encryption Compression Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7518">RFC7518</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="web-encryption-compression-algorithms.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-web-encryption-compression-algorithms" class="sortable">
+      <thead>
+        <tr>
+          <th>Compression Algorithm Value</th>
+          <th>Compression Algorithm Description</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">DEF</td>
+          <td>DEFLATE</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7516">RFC7516</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="web-key-types" id="web-key-types"></a>JSON Web Key Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7518">RFC7518</a>][<a href="http://www.iana.org/go/rfc7638">RFC7638</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="web-key-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-web-key-types" class="sortable">
+      <thead>
+        <tr>
+          <th>"kty" Parameter Value</th>
+          <th>Key Type Description</th>
+          <th>JOSE Implementation Requirements</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>EC</td>
+          <td>Elliptic Curve</td>
+          <td>Recommended+</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.2</a>]</td>
+        </tr>
+        <tr>
+          <td>RSA</td>
+          <td>RSA</td>
+          <td>Required</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.3</a>]</td>
+        </tr>
+        <tr>
+          <td>oct</td>
+          <td>Octet sequence</td>
+          <td>Required</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.4</a>]</td>
+        </tr>
+        <tr>
+          <td>OKP</td>
+          <td>Octet string key pairs</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8037">RFC8037, Section 2</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="web-key-elliptic-curve" id="web-key-elliptic-curve"></a>JSON Web Key Elliptic Curve</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7518">RFC7518</a>][<a href="http://www.iana.org/go/rfc7638">RFC7638</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="web-key-elliptic-curve.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-web-key-elliptic-curve" class="sortable">
+      <thead>
+        <tr>
+          <th>Curve Name</th>
+          <th>Curve Description</th>
+          <th>JOSE Implementation Requirements</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>P-256</td>
+          <td>P-256 Curve</td>
+          <td>Recommended+</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.2.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>P-384</td>
+          <td>P-384 Curve</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.2.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>P-521</td>
+          <td>P-521 Curve</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.2.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>Ed25519</td>
+          <td>Ed25519 signature algorithm key pairs</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8037">RFC8037, Section 3.1</a>]</td>
+        </tr>
+        <tr>
+          <td>Ed448</td>
+          <td>Ed448 signature algorithm key pairs</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8037">RFC8037, Section 3.1</a>]</td>
+        </tr>
+        <tr>
+          <td>X25519</td>
+          <td>X25519 function key pairs</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8037">RFC8037, Section 3.2</a>]</td>
+        </tr>
+        <tr>
+          <td>X448</td>
+          <td>X448 function key pairs</td>
+          <td>Optional</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8037">RFC8037, Section 3.2</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="web-key-parameters" id="web-key-parameters"></a>JSON Web Key Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7517">RFC7517</a>][<a href="http://www.iana.org/go/rfc7638">RFC7638</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="web-key-parameters.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-web-key-parameters" class="sortable">
+      <thead>
+        <tr>
+          <th>Parameter Name</th>
+          <th>Parameter Description</th>
+          <th>Used with "kty" Value(s)</th>
+          <th>Parameter Information Class</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>kty</td>
+          <td>Key Type</td>
+          <td>*</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.1</a>]</td>
+        </tr>
+        <tr>
+          <td>use</td>
+          <td>Public Key Use</td>
+          <td>*</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.2</a>]</td>
+        </tr>
+        <tr>
+          <td>key_ops</td>
+          <td>Key Operations</td>
+          <td>*</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.3</a>]</td>
+        </tr>
+        <tr>
+          <td>alg</td>
+          <td>Algorithm</td>
+          <td>*</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.4</a>]</td>
+        </tr>
+        <tr>
+          <td>kid</td>
+          <td>Key ID</td>
+          <td>*</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.5</a>]</td>
+        </tr>
+        <tr>
+          <td>x5u</td>
+          <td>X.509 URL</td>
+          <td>*</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.6</a>]</td>
+        </tr>
+        <tr>
+          <td>x5c</td>
+          <td>X.509 Certificate Chain</td>
+          <td>*</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.7</a>]</td>
+        </tr>
+        <tr>
+          <td>x5t</td>
+          <td>X.509 Certificate SHA-1 Thumbprint</td>
+          <td>*</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.8</a>]</td>
+        </tr>
+        <tr>
+          <td>x5t#S256</td>
+          <td>X.509 Certificate SHA-256 Thumbprint</td>
+          <td>*</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.9</a>]</td>
+        </tr>
+        <tr>
+          <td>crv</td>
+          <td>Curve</td>
+          <td>EC</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.2.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>x</td>
+          <td>X Coordinate</td>
+          <td>EC</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.2.1.2</a>]</td>
+        </tr>
+        <tr>
+          <td>y</td>
+          <td>Y Coordinate</td>
+          <td>EC</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.2.1.3</a>]</td>
+        </tr>
+        <tr>
+          <td>d</td>
+          <td>ECC Private Key</td>
+          <td>EC</td>
+          <td>Private</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.2.2.1</a>]</td>
+        </tr>
+        <tr>
+          <td>n</td>
+          <td>Modulus</td>
+          <td>RSA</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.3.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>e</td>
+          <td>Exponent</td>
+          <td>RSA</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.3.1.2</a>]</td>
+        </tr>
+        <tr>
+          <td>d</td>
+          <td>Private Exponent</td>
+          <td>RSA</td>
+          <td>Private</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.3.2.1</a>]</td>
+        </tr>
+        <tr>
+          <td>p</td>
+          <td>First Prime Factor</td>
+          <td>RSA</td>
+          <td>Private</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.3.2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>q</td>
+          <td>Second Prime Factor</td>
+          <td>RSA</td>
+          <td>Private</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.3.2.3</a>]</td>
+        </tr>
+        <tr>
+          <td>dp</td>
+          <td>First Factor CRT Exponent</td>
+          <td>RSA</td>
+          <td>Private</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.3.2.4</a>]</td>
+        </tr>
+        <tr>
+          <td>dq</td>
+          <td>Second Factor CRT Exponent</td>
+          <td>RSA</td>
+          <td>Private</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.3.2.5</a>]</td>
+        </tr>
+        <tr>
+          <td>qi</td>
+          <td>First CRT Coefficient</td>
+          <td>RSA</td>
+          <td>Private</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.3.2.6</a>]</td>
+        </tr>
+        <tr>
+          <td>oth</td>
+          <td>Other Primes Info</td>
+          <td>RSA</td>
+          <td>Private</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.3.2.7</a>]</td>
+        </tr>
+        <tr>
+          <td>k</td>
+          <td>Key Value</td>
+          <td>oct</td>
+          <td>Private</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7518">RFC7518, Section 6.4.1</a>]</td>
+        </tr>
+        <tr>
+          <td>crv</td>
+          <td>The subtype of key pair</td>
+          <td>OKP</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8037">RFC8037, Section 2</a>]</td>
+        </tr>
+        <tr>
+          <td>d</td>
+          <td>The private key</td>
+          <td>OKP</td>
+          <td>Private</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8037">RFC8037, Section 2</a>]</td>
+        </tr>
+        <tr>
+          <td>x</td>
+          <td>The public key</td>
+          <td>OKP</td>
+          <td>Public</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8037">RFC8037, Section 2</a>]</td>
+        </tr>
+        <tr>
+          <td>ext</td>
+          <td>Extractable</td>
+          <td>*</td>
+          <td>Public</td>
+          <td>[<a href="#W3C_Web_Cryptography_Working_Group">W3C_Web_Cryptography_Working_Group</a>]</td>
+          <td>[<a href="https://www.w3.org/TR/WebCryptoAPI">https://www.w3.org/TR/WebCryptoAPI</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="web-key-use" id="web-key-use"></a>JSON Web Key Use</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7517">RFC7517</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="web-key-use.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-web-key-use" class="sortable">
+      <thead>
+        <tr>
+          <th>Use Member Value</th>
+          <th>Use Description</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">sig</td>
+          <td>Digital Signature or MAC</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">enc</td>
+          <td>Encryption</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.2</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="web-key-operations" id="web-key-operations"></a>JSON Web Key Operations</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7517">RFC7517</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="web-key-operations.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-web-key-operations" class="sortable">
+      <thead>
+        <tr>
+          <th>Key Operation Value</th>
+          <th>Key Operation Description</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">sign</td>
+          <td>Compute digital signature or MAC</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">verify</td>
+          <td>Verify digital signature or MAC</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">encrypt</td>
+          <td>Encrypt content</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">decrypt</td>
+          <td>Decrypt content and validate decryption, if applicable</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">wrapKey</td>
+          <td>Encrypt key</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">unwrapKey</td>
+          <td>Decrypt key and validate decryption, if applicable</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">deriveKey</td>
+          <td>Derive key</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">deriveBits</td>
+          <td>Derive bits not to be used as a key</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 4.3</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="web-key-set-parameters" id="web-key-set-parameters"></a>JSON Web Key Set Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, Jeff Hodges, Joe Hildebrand, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7517">RFC7517</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="web-key-set-parameters.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-web-key-set-parameters" class="sortable">
+      <thead>
+        <tr>
+          <th>Parameter Name</th>
+          <th>Parameter Description</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">keys</td>
+          <td>Array of JWK Values</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7517">RFC7517, Section 5.1</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="IESG" id="IESG">[IESG]</a>
+          </td>
+          <td>IESG</td>
+          <td>
+            <a href="mailto:iesg&amp;ietf.org">mailto:iesg&amp;ietf.org</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="W3C_Web_Cryptography_Working_Group" id="W3C_Web_Cryptography_Working_Group">[W3C_Web_Cryptography_Working_Group]</a>
+          </td>
+          <td>W3C Web Cryptography Working Group</td>
+          <td>
+            <a href="http://www.w3.org">http://www.w3.org</a>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

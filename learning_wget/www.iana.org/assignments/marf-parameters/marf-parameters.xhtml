@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Messaging Abuse Reporting Format (MARF) Parameters</title>
+  </head>
+  <body>
+    <h1>Messaging Abuse Reporting Format (MARF) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2010-05-26</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-03-24</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="marf-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="marf-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="marf-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#marf-parameters-1">Feedback Report Header Fields</a>
+      </li>
+      <li>
+        <a href="#marf-parameters-2">Feedback Report Type Values</a>
+      </li>
+    </ul>
+    <h2><a name="marf-parameters-1" id="marf-parameters-1"></a>Feedback Report Header Fields</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Scott Kitterman, Murray Kucherawy</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="marf-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-marf-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Field Name</th>
+          <th>Description</th>
+          <th>Multiple Appearances</th>
+          <th>Related "Feedback-Type"</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Arrival-Date</td>
+          <td>date/time the original message was received</td>
+          <td>No</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Auth-Failure</td>
+          <td>Type of email authentication method failure</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Authentication-Results</td>
+          <td>results of authentication check(s)</td>
+          <td>Yes</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Delivery-Result</td>
+          <td>Final disposition of the subject message</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>DKIM-ADSP-DNS</td>
+          <td>Retrieved DKIM ADSP record</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>DKIM-Canonicalized-Body</td>
+          <td>Canonicalized body, per DKIM</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>DKIM-Canonicalized-Header</td>
+          <td>Canonicalized header, per DKIM</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>DKIM-Domain</td>
+          <td>DKIM signing domain from "d=" tag</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>DKIM-Identity</td>
+          <td>Identity from DKIM signature</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>DKIM-Selector</td>
+          <td>Selector from DKIM signature</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>DKIM-Selector-DNS</td>
+          <td>Retrieved DKIM key record</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Feedback-Type</td>
+          <td>registered feedback report type</td>
+          <td>No</td>
+          <td>N/A</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Incidents</td>
+          <td>expression of how many similar incidents are represented by this report</td>
+          <td>No</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Original-Mail-From</td>
+          <td>email address used in the MAIL FROM portion of the original SMTP transaction
+      </td>
+          <td>No</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Original-Rcpt-To</td>
+          <td>email address used in the RCPT TO portion of the original SMTP transaction
+      </td>
+          <td>Yes</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Received-Date</td>
+          <td>date/time the original message was received (replaced by "Arrival-Date")</td>
+          <td>No</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>historic</td>
+        </tr>
+        <tr>
+          <td>Reported-Domain</td>
+          <td>a domain name the report generator considers to be key to the 
+        message about which a report is being generated</td>
+          <td>Yes</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Reported-URI</td>
+          <td>a URI the report generator considers to be key
+        to the message about which a report is being
+        generated
+      </td>
+          <td>Yes</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Reporting-MTA</td>
+          <td>MTA generating this report</td>
+          <td>No</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Source-IP</td>
+          <td>IPv4 or IPv6 address from which the original message
+        was received
+      </td>
+          <td>No</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>SPF-DNS</td>
+          <td>Retrieved SPF record</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>User-Agent</td>
+          <td>name and version of the program generating the report</td>
+          <td>No</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Version</td>
+          <td>version of specification used</td>
+          <td>No</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Source-Port</td>
+          <td>TCP source port from which the original message was received</td>
+          <td>No</td>
+          <td>any</td>
+          <td>[<a href="http://www.iana.org/go/rfc6692">RFC6692</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>Identity-Alignment</td>
+          <td>indicates whether the message about which a report is
+      being generated had any identifiers in alignment as defined in 
+        [<a href="http://www.iana.org/go/rfc7489">RFC7489</a>]</td>
+          <td>No</td>
+          <td>auth-failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc7489">RFC7489</a>]</td>
+          <td>current</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="marf-parameters-2" id="marf-parameters-2"></a>Feedback Report Type Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Scott Kitterman, Murray Kucherawy</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="marf-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-marf-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Feedback Type Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>abuse</td>
+          <td>unsolicited email or some other kind of email abuse</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>auth-failure</td>
+          <td>email authentication failure report</td>
+          <td>[<a href="http://www.iana.org/go/rfc6591">RFC6591</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>fraud</td>
+          <td>indicates some kind of fraud or phishing activity</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>not-spam</td>
+          <td>Indicates that the entity providing the report does not
+        consider the message to be spam.  This may be used to correct a
+        message that was incorrectly tagged or categorized as spam.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6430">RFC6430</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>other</td>
+          <td>any other feedback that does not fit into other registered types</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td>virus</td>
+          <td>report of a virus found in the originating message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5965">RFC5965</a>]</td>
+          <td>current</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

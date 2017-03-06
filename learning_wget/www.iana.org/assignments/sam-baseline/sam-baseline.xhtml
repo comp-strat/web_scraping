@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Scalable Adaptive Multicast (SAM) Baseline</title>
+  </head>
+  <body>
+    <h1>Scalable Adaptive Multicast (SAM) Baseline</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2013-08-01</dd>
+      <dt>Last Updated</dt>
+      <dd>2013-10-01</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sam-baseline.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="sam-baseline.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="sam-baseline.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#alm-alg-ids">SAM ALM Algorithm IDs</a>
+      </li>
+      <li>
+        <a href="#alm-message-codes">SAM ALM Message Codes</a>
+      </li>
+      <li>
+        <a href="#alm-error-codes">SAM ALM Error Codes</a>
+      </li>
+    </ul>
+    <h2><a name="alm-alg-ids" id="alm-alg-ids"></a>SAM ALM Algorithm IDs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Marc Petit-Huguenin (primary), Thomas Schmidt, John Buford</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="alm-alg-ids.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-alm-alg-ids" class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Algorithm Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0000</td>
+          <td>INVALID-ALG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0001</td>
+          <td>SCRIBE-SAM</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0002</td>
+          <td>P2PCAST-SAM</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0003-0x7FFF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x8000-0xFFFF</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="alm-message-codes" id="alm-message-codes"></a>SAM ALM Message Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Marc Petit-Huguenin (primary), Thomas Schmidt, John Buford</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="alm-message-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-alm-message-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Code Value</th>
+          <th>Message Code Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0000</td>
+          <td>InvalidMessageCode</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0001</td>
+          <td>CreateALMTree</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0002</td>
+          <td>CreateALMTreeResponse</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0003</td>
+          <td>Join</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0004</td>
+          <td>JoinAccept</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0005</td>
+          <td>JoinReject</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0006</td>
+          <td>JoinConfirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0007</td>
+          <td>JoinConfirmResponse</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0008</td>
+          <td>JoinDecline</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0009</td>
+          <td>JoinDeclineResponse</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000A</td>
+          <td>Leave</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000B</td>
+          <td>LeaveResponse</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000C</td>
+          <td>Reform</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000D</td>
+          <td>ReformResponse</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000E</td>
+          <td>Heartbeat</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000F</td>
+          <td>HeartbeatResponse</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0010</td>
+          <td>NodeQuery</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0011</td>
+          <td>NodeQueryResponse</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0012</td>
+          <td>Push</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0013</td>
+          <td>PushResponse</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0014-0x7FFF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x8000-0xFFFF</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="alm-error-codes" id="alm-error-codes"></a>SAM ALM Error Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Marc Petit-Huguenin (primary), Thomas Schmidt, John Buford</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="alm-error-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-alm-error-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Code Value</th>
+          <th>Error Code Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0000</td>
+          <td>InvalidErrorCode</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0001</td>
+          <td>Error_Unknown_Algorithm</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0002</td>
+          <td>Error_Child_Limit_Reached</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0003</td>
+          <td>Error_Node_Bandwidth_Reached</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0004</td>
+          <td>Error_Node_Conn_Limit_Reached</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0005</td>
+          <td>Error_Link_Cap_Limit_Reached</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0006</td>
+          <td>Error_Node_Mem_Limit_Reached</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0007</td>
+          <td>Error_Node_CPU_Cap_Limit_Reached</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0008</td>
+          <td>Error_Path_Limit_Reached</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0009</td>
+          <td>Error_Path_Delay_Limit_Reached</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000A</td>
+          <td>Error_Tree_Fanout_Limit_Reached</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000B</td>
+          <td>Error_Tree_Depth_Limit_Reached</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000C</td>
+          <td>Error_Other</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000D-0x7FFF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x8000-0xFFFF</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7019">RFC7019</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

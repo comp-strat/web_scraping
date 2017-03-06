@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Root KSK Ceremonies</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+			<div id="main_right">
+
+
+	<h1>Root KSK Ceremonies</h1>
+
+    <p>Ceremonies are usually conducted four times a year to perform operations using the Root
+    Key Signing Key, and involving <a href="/dnssec/tcrs">Trusted Community Representatives</a>.
+    In a typical ceremony, the KSK is used to sign a set of operational ZSKs that
+    will be used for a three month period to sign the DNS root zone. Other operations that may
+    occur during ceremonies include installing new cryptographic officers, replacing hardware,
+    or generating or replacing a KSK.</p>
+
+    <h2>Ceremonies</h2>
+
+        <table class="iana-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Ceremony</th>
+                    <th>Agenda</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>2017-04-27</td>
+                <td><a href="/dnssec/ceremonies/29">KSK Ceremony 29</a></td>
+                <td>Sign 2017Q3 ZSKs</td>
+            </tr>
+            <tr>
+                <td>2017-02-02</td>
+                <td><a href="/dnssec/ceremonies/28">KSK Ceremony 28</a></td>
+                <td>Sign 2017Q2 ZSKs; Import new KSK</td>
+            </tr>
+            <tr>
+                <td>2016-10-27</td>
+                <td><a href="/dnssec/ceremonies/27">KSK Ceremony 27</a></td>
+                <td>Sign 2017Q1 ZSKs; Generate KSK</td>
+            </tr>
+            <tr>
+                <td>2016-08-11</td>
+                <td><a href="/dnssec/ceremonies/26">KSK Ceremony 26</a></td>
+                <td>Sign 2016Q4 ZSKs</td>
+            </tr>
+            <tr>
+                <td>2016-05-12</td>
+                <td><a href="/dnssec/ceremonies/25">KSK Ceremony 25</a></td>
+                <td>Sign 2016Q3 ZSKs</td>
+            </tr>
+            <tr>
+                <td>2016-02-11</td>
+                <td><a href="/dnssec/ceremonies/24">KSK Ceremony 24</a></td>
+                <td>Sign 2016Q2 ZSKs; Replace CO</td>
+            </tr>
+            <tr>
+                <td>2015-11-12</td>
+                <td><a href="/dnssec/ceremonies/23">KSK Ceremony 23</a></td>
+                <td>Sign 2016Q1 ZSKs</td>
+            </tr>
+            <tr>
+                <td>2015-08-13</td>
+                <td><a href="/dnssec/ceremonies/22">KSK Ceremony 22</a></td>
+                <td>Sign 2015Q4 ZSKs; Replace HSM</td>
+            </tr>
+            <tr>
+                <td>2015-04-09</td>
+                <td><a href="/dnssec/ceremonies/21">KSK Ceremony 21</a></td>
+                <td>Sign 2015Q3 ZSKs; Replace HSM</td>
+            </tr>
+            <tr>
+                <td>2015-01-22</td>
+                <td><a href="/dnssec/ceremonies/20">KSK Ceremony 20</a></td>
+                <td>Sign 2015Q2 ZSKs</td>
+            </tr>
+            <tr>
+                <td class="avoid-break">2014-11-20</td>
+                <td class="avoid-break"><a href="/dnssec/ceremonies/19">KSK Ceremony 19</a></td>
+                <td>Sign 2015Q1 ZSKs</td>
+            </tr>
+            <tr>
+                <td>2014-08-14</td>
+                <td><a href="/dnssec/ceremonies/18">KSK Ceremony 18</a></td>
+                <td>Sign 2014Q4 ZSKs; Replace CO</a></td>
+            </tr>
+            <tr>
+                <td>2014-04-17</td>
+                <td><a href="/dnssec/ceremonies/17">KSK Ceremony 17</a></td>
+                <td>Sign 2014Q3 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2014-02-13</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/16/">KSK Ceremony 16</a></td>
+                <td>Sign 2014Q2 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2013-10-24</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/15/">KSK Ceremony 15</a></td>
+                <td>Sign 2014Q1 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2013-08-07</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/14/">KSK Ceremony 14</a></td>
+                <td>Sign 2013Q4 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2013-05-02</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/13/">KSK Ceremony 13</a></td>
+                <td>Sign 2013Q3 ZSKs; Replace CO</a></td>
+            </tr>
+            <tr>
+                <td>2013-02-12</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/12/">KSK Ceremony 12</a></td>
+                <td>Sign 2013Q2 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2012-11-12</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/11/">KSK Ceremony 11</a></td>
+                <td>Sign 2013Q1 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2012-07-26</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/10/">KSK Ceremony 10</a></td>
+                <td>Sign 2012Q4 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2012-05-22</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/9/">KSK Ceremony 9</a></td>
+                <td>Sign 2012Q3 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2012-02-02</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/8/">KSK Ceremony 8</a></td>
+                <td>Sign 2012Q2 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2011-09-30</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/7/">KSK Ceremony 7</a></td>
+                <td>Sign 2012Q1 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2011-07-20</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/6/">KSK Ceremony 6</a></td>
+                <td>Sign 2011Q4 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2011-05-11</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/5/">KSK Ceremony 5</a></td>
+                <td>Sign 2011Q3 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2011-02-07</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/4/">KSK Ceremony 4</a></td>
+                <td>Sign 2011Q2 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2010-11-01</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/3/">KSK Ceremony 3</a></td>
+                <td>Sign 2011Q1 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2010-07-12</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/2/">KSK Ceremony 2</a></td>
+                <td>Instantiate El Segundo KMF; Signed 2010Q4 ZSKs</a></td>
+            </tr>
+            <tr>
+                <td>2010-06-16</td>
+                <td><a href="http://data.iana.org/ksk-ceremony/1/">KSK Ceremony 1</a></td>
+                <td>Instantiate Culpeper KMF; Generate KSK; Sign 2010Q3 ZSKs</a></td>
+            </tr>
+
+        </table>
+
+
+			</div>
+			
+			<div id="sidebar_left">
+				<div class="navigation_box">
+				<h2>Domain Names</h2>
+				<ul>
+					<li id="nav_dom_top"><a href="/domains">Overview</a></li>
+					<li id="nav_dom_root"><a href="/domains/root">Root Zone Management</a></li>
+					<ul id="nav_dom_root_sub">
+						<li id="nav_dom_root_top"><a href="/domains/root">Overview</a></li>
+						<li id="nav_dom_root_db"><a href="/domains/root/db">Root Database</a></li>
+						<li id="nav_dom_root_files"><a href="/domains/root/files">Hint and Zone Files</a></li>
+						<li id="nav_dom_root_manage"><a href="/domains/root/manage">Change Requests</a></li>
+						<li id="nav_dom_root_procedures"><a href="/domains/root/help">Instructions &amp; Guides</a></li>
+						<li id="nav_dom_root_servers"><a href="/domains/root/servers">Root Servers</a></li>
+					</ul>
+					<li id="nav_dom_int"><a href="/domains/int">.INT Registry</a></li>
+					<ul id="nav_dom_int_sub">
+						<li id="nav_dom_int_top"><a href="/domains/int">Overview</a></li>
+						<li id="nav_dom_int_manage"><a href="/domains/int/manage">Register/modify an .INT domain</a></li>
+						<li id="nav_dom_int_policy"><a href="/domains/int/policy">Eligibility</a></li>
+					</ul>
+					<li id="nav_dom_arpa"><a href="/domains/arpa">.ARPA Registry</a></li>
+					<li id="nav_dom_idn"><a href="/domains/idn-tables">IDN Practices Repository</a></li>
+					<ul id="nav_dom_idn_sub">
+						<li id="nav_dom_idn_top"><a href="/domains/idn-tables">Overview</a></li>
+						<!-- <li id="nav_dom_idn_tables"><a href="/domains/idn-tables/db">Tables</a></li> -->
+						<li id="nav_dom_idn_submit"><a href="/procedures/idn-repository.html">Submit a table</a></li>
+					</ul>
+					<li id="nav_dom_dnssec"><a href="/dnssec">Root Key Signing Key (DNSSEC)</a></li>
+					<ul id="nav_dom_dnssec_sub">
+						<li id="nav_dom_dnssec_top"><a href="/dnssec">Overview</a></li>
+						<li id="nav_dom_dnssec_ksk"><a href="/dnssec/files">Trusts Anchors and Keys</a></li>
+						<li id="nav_dom_dnssec_ceremonies"><a href="/dnssec/ceremonies">Root KSK Ceremonies</a></li>
+						<li id="nav_dom_dnssec_dps"><a href="/dnssec/dps">Practice Statement</a></li>
+                        <li id="nav_dom_dnssec_tcrs"><a href="/dnssec/tcrs">Community Representatives</a></li>
+					</ul>
+					<li id="nav_dom_special"><a href="/domains/reserved">Reserved Domains</a></li>
+				</ul>
+				</div>
+			</div>
+			
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script>
+$(document).ready(function() {
+	$("#nav_dom_idn_sub").hide()
+	$("#nav_dom_root_sub").hide()
+	$("#nav_dom_int_sub").hide()
+	$("#nav_dom_tools_sub").hide()
+	$("#nav_dom_dnssec").addClass("selected")
+	$("#nav_dom_dnssec_ceremonies").addClass("selected")
+});
+</script>
+
+	
+</body>
+
+</html>

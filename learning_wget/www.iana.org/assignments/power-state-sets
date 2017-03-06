@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Power State Sets</title>
+  </head>
+  <body>
+    <h1>Power State Sets</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2014-05-28</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-09-05</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="power-state-sets.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="power-state-sets.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="power-state-sets.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ieee1621">IEEE1621 Power State Set</a>
+      </li>
+      <li>
+        <a href="#dmtf">DMTF Power State Set</a>
+      </li>
+      <li>
+        <a href="#eman">EMAN Power State Set</a>
+      </li>
+    </ul>
+    <h2><a name="ieee1621" id="ieee1621"></a>IEEE1621 Power State Set</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ieee1621.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ieee1621" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>off</td>
+          <td>[<a href="text">IEEE1621</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>sleep</td>
+          <td>[<a href="text">IEEE1621</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>on</td>
+          <td>[<a href="text">IEEE1621</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dmtf" id="dmtf"></a>DMTF Power State Set</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dmtf.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dmtf" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>ACPI</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ON</td>
+          <td>G0-S0</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Sleep-Light</td>
+          <td>G1-S1 G1-S2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Sleep-Deep</td>
+          <td>G1-S3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Power Cycle (Off-Soft)</td>
+          <td>G2-S5</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Off-Hard</td>
+          <td>G3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Hibernate (Off-Soft)</td>
+          <td>G1-S4</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Off-Soft</td>
+          <td>G2-S5</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Power Cycle (Off-Hard)</td>
+          <td>G3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Master Bus Reset</td>
+          <td>G2-S5</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Diagnostic Interrupt</td>
+          <td>G2-S5</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Off-Soft Graceful</td>
+          <td>G2-S5</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Off-Hard Graceful</td>
+          <td>G3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>MasterBus Reset Graceful</td>
+          <td>G2-S5</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Power Cycle Off-Soft Graceful</td>
+          <td>G2-S5</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Power Cycle Off-Hard Graceful</td>
+          <td>G3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17-255</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eman" id="eman"></a>EMAN Power State Set</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eman.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eman" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>mechoff</td>
+          <td>An off state where no Energy Object features 
+        are available. The Energy Object is unavailable. No energy is being 
+        consumed, and the power connector can be removed.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>softoff</td>
+          <td>Similar to mechoff(0), but some components remain powered or 
+        receive trace power so that the Energy Object can be awakened from its 
+        off state. In softoff(1), no context is saved, and the device typically 
+        requires a complete boot when awakened.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>hibernate</td>
+          <td>No Energy Object features are available. The Energy Object 
+        may be awakened without requiring a complete boot, but the time for 
+        availability is longer than sleep(3). An example for state hibernate(2) 
+        is a save-to-disk state where DRAM context is not maintained. Typically, 
+        energy consumption is zero or close to zero.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>sleep</td>
+          <td>No Energy Object features are available, except for 
+        out-of-band management, such as wake-up mechanisms. The time for 
+        availability is longer than standby(4). An example for state sleep(3) 
+        is a save-to-RAM state, where DRAM context is maintained. Typically, 
+        energy consumption is close to zero.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>standby</td>
+          <td>No Energy Object features are available, except for 
+        out-of-band management, such as wake-up mechanisms. This mode is 
+        analogous to cold-standby. The time for availability is longer than 
+        ready(5). For example, processor context may not be maintained. 
+        Typically, energy consumption is close to zero.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>ready</td>
+          <td>No Energy Object features are available, except for 
+        out-of-band management, such as wake-up mechanisms. This mode is 
+        analogous to hot-standby. The Energy Object can be quickly transitioned 
+        into an operational state. For example, processors are not executing, 
+        but processor context is maintained.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>lowMinus</td>
+          <td>Indicates that some Energy Object features may not be 
+        available and the Energy Object has taken measures or selected options 
+        to use less energy than low(7).</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>low</td>
+          <td>Indicates that some Energy Object features may not be 
+        available and the Energy Object has taken measures or selected options 
+        to use less energy than mediumMinus(8).</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>mediumMinus</td>
+          <td>Indicates that all Energy Object features are available but 
+        the Energy Object has taken measures or selected options to use less 
+        energy than medium(9).</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>medium</td>
+          <td>Indicates that all Energy Object features are available but 
+        the Energy Object has taken measures or selected options to use less 
+        energy than highMinus(10).</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>highMinus</td>
+          <td>Indicates that all Energy Object features are available and 
+        the Energy Object has taken measures or selected options to use less 
+        energy than high(11).</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>high</td>
+          <td>Indicates that all Energy Object features are available and 
+        the Energy Object may use the maximum energy as indicated by the 
+        Nameplate Power.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7326">RFC7326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12-255</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Kerberos V GSS-API Mechanism Parameters</title>
+  </head>
+  <body>
+    <h1>Kerberos V GSS-API Mechanism Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2012-01-06</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-03-03</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="kerberos-v-gss-api.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="kerberos-v-gss-api.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="kerberos-v-gss-api.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#extension-types">Kerberos V GSS-API Mechanism Extension Types</a>
+      </li>
+      <li>
+        <a href="#token-types">Kerberos V GSS-API Token Type Identifiers</a>
+      </li>
+    </ul>
+    <h2><a name="extension-types" id="extension-types"></a>Kerberos V GSS-API Mechanism Extension Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6542">RFC6542</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="extension-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-extension-types-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00000000 - 0x000003FF</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000400 - 0xFFFFF3FF</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-extension-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Number</th>
+          <th>Type Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00000000</td>
+          <td>Channel Binding MIC</td>
+          <td>Extension for the verifier of the channel bindings</td>
+          <td>[<a href="http://www.iana.org/go/rfc6542">RFC6542</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000001 - 0xFFFFF3FF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFFF400 - 0xFFFFFFFF</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6542">RFC6542</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="token-types" id="token-types"></a>Kerberos V GSS-API Token Type Identifiers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Sam Hartman</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4121">RFC4121</a>][<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="token-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-token-types" class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>00 00 - 00 FF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>01 00</td>
+          <td>KRB_AP_REQ</td>
+          <td>[<a href="http://www.iana.org/go/rfc4121">RFC4121, Section 4.1</a>]</td>
+        </tr>
+        <tr>
+          <td>01 01</td>
+          <td>MIC</td>
+          <td>[<a href="http://www.iana.org/go/rfc1964">RFC1964</a>]</td>
+        </tr>
+        <tr>
+          <td>01 02</td>
+          <td>Context deletion</td>
+          <td>[<a href="http://www.iana.org/go/rfc1964">RFC1964</a>]</td>
+        </tr>
+        <tr>
+          <td>01 03 - 01 FF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>02 00</td>
+          <td>KRB_AP_REP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4121">RFC4121, Section 4.1</a>]</td>
+        </tr>
+        <tr>
+          <td>02 01</td>
+          <td>Wrap</td>
+          <td>[<a href="http://www.iana.org/go/rfc1964">RFC1964</a>]</td>
+        </tr>
+        <tr>
+          <td>02 02 - 02 FF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>03 00</td>
+          <td>KRB_ERROR</td>
+          <td>[<a href="http://www.iana.org/go/rfc4121">RFC4121, Section 4.1</a>]</td>
+        </tr>
+        <tr>
+          <td>03 01 - 04 00</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>04 01</td>
+          <td>exported name tokens</td>
+          <td>[<a href="http://www.iana.org/go/rfc2743">RFC2743</a>]</td>
+        </tr>
+        <tr>
+          <td>04 02</td>
+          <td>exported composite name tokens</td>
+          <td>[<a href="http://www.iana.org/go/rfc6680">RFC6680</a>]</td>
+        </tr>
+        <tr>
+          <td>04 03</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>04 04</td>
+          <td>MIC tokens</td>
+          <td>[<a href="http://www.iana.org/go/rfc4121">RFC4121, Section 4.2.6.1</a>]</td>
+        </tr>
+        <tr>
+          <td>04 05 - 05 03</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>05 04</td>
+          <td>wrap tokens</td>
+          <td>[<a href="http://www.iana.org/go/rfc4121">RFC4121, Section 4.2.6.2</a>]</td>
+        </tr>
+        <tr>
+          <td>05 05 - 06 00</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>06 01</td>
+          <td>GSS-EAP initiator context token</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5</a>]</td>
+        </tr>
+        <tr>
+          <td>06 02</td>
+          <td>GSS-EAP acceptor context token</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5</a>]</td>
+        </tr>
+        <tr>
+          <td>06 03 - 5F FF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>60 00 - 60 FF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4121">RFC4121</a>]</td>
+        </tr>
+        <tr>
+          <td>61 00 - FF FF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

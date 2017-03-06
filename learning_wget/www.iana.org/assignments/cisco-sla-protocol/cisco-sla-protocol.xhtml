@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Cisco Service Level Assurance Protocol</title>
+  </head>
+  <body>
+    <h1>Cisco Service Level Assurance Protocol</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2012-10-19</dd>
+      <dt>Last Updated</dt>
+      <dd>2013-01-18</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cisco-sla-protocol.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="cisco-sla-protocol.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="cisco-sla-protocol.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#version-numbers">Cisco SLA Protocol Version Number Registry</a>
+      </li>
+      <li>
+        <a href="#csld">Cisco SLA Protocol CSLD Command Registry</a>
+      </li>
+      <li>
+        <a href="#authenticator-modes">Cisco SLA Protocol Authenticator Modes Registry</a>
+      </li>
+      <li>
+        <a href="#roles">Cisco SLA Protocol Roles Registry</a>
+      </li>
+      <li>
+        <a href="#measurement">Cisco SLA Protocol Measurement-Type Registry</a>
+      </li>
+      <li>
+        <a href="#status">Cisco SLA Protocol Status Types Registry</a>
+      </li>
+      <li>
+        <a href="#address-family">Cisco SLA Protocol Address Family Registry</a>
+      </li>
+    </ul>
+    <h2><a name="version-numbers" id="version-numbers"></a>Cisco SLA Protocol Version Number Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="version-numbers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-version-numbers" class="sortable">
+      <thead>
+        <tr>
+          <th>Version</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Version 2</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-225</td>
+          <td>Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">226-255</td>
+          <td>Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="csld" id="csld"></a>Cisco SLA Protocol CSLD Command Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="csld.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-csld" class="sortable">
+      <thead>
+        <tr>
+          <th>CSLD Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Authentication CSLD</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>UDP-Measurement</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-52</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">53-10239</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">10240-20479</td>
+          <td>Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20480-65535</td>
+          <td>Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="authenticator-modes" id="authenticator-modes"></a>Cisco SLA Protocol Authenticator Modes Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="authenticator-modes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-authenticator-modes" class="sortable">
+      <thead>
+        <tr>
+          <th>Mode</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>No Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>SHA256</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>HMAC-SHA-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-225</td>
+          <td>Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">226-255</td>
+          <td>Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="roles" id="roles"></a>Cisco SLA Protocol Roles Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="roles.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-roles" class="sortable">
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Sender</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Responder</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-225</td>
+          <td>Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">226-255</td>
+          <td>Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="measurement" id="measurement"></a>Cisco SLA Protocol Measurement-Type Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="measurement.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-measurement" class="sortable">
+      <thead>
+        <tr>
+          <th>Measurement Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>UDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-52</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">53-10239</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">10240-20479</td>
+          <td>Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20480-65535</td>
+          <td>Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="status" id="status"></a>Cisco SLA Protocol Status Types Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="status.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-status" class="sortable">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Fail - catch all</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Authentication failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Format error - sent when any CSLD type is not recognized or any part of a CSLD has a value that is not recognized</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Port in use - the UDP/TCP port is already being used by some other application and cannot be reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-40959</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">40960-65535</td>
+          <td>Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="address-family" id="address-family"></a>Cisco SLA Protocol Address Family Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="address-family.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-address-family" class="sortable">
+      <thead>
+        <tr>
+          <th>Address Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPv4</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IPv6</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-225</td>
+          <td>Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">226-255</td>
+          <td>Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6812">RFC6812</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

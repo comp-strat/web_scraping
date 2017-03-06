@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>DNS-Based Authentication of Named Entities (DANE) Parameters</title>
+  </head>
+  <body>
+    <h1>DNS-Based Authentication of Named Entities (DANE) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2012-06-28</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-04-23</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dane-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="dane-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="dane-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#certificate-usages">TLSA Certificate Usages</a>
+      </li>
+      <li>
+        <a href="#selectors">TLSA Selectors</a>
+      </li>
+      <li>
+        <a href="#matching-types">TLSA Matching Types</a>
+      </li>
+    </ul>
+    <h2><a name="certificate-usages" id="certificate-usages"></a>TLSA Certificate Usages</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>][<a href="http://www.iana.org/go/rfc7218">RFC7218</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="certificate-usages.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-certificate-usages" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Acronym</th>
+          <th>Short Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>PKIX-TA</td>
+          <td>CA constraint</td>
+          <td>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>PKIX-EE</td>
+          <td>Service certificate constraint</td>
+          <td>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>DANE-TA</td>
+          <td>Trust anchor assertion</td>
+          <td>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>DANE-EE</td>
+          <td>Domain-issued certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>]</td>
+        </tr>
+        <tr>
+          <td>4-254</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>PrivCert</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="selectors" id="selectors"></a>TLSA Selectors</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>][<a href="http://www.iana.org/go/rfc7218">RFC7218</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="selectors.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-selectors" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Acronym</th>
+          <th>Short Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Cert</td>
+          <td>Full certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>SPKI</td>
+          <td>SubjectPublicKeyInfo</td>
+          <td>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>]</td>
+        </tr>
+        <tr>
+          <td>2-254</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>PrivSel</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="matching-types" id="matching-types"></a>TLSA Matching Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>][<a href="http://www.iana.org/go/rfc7218">RFC7218</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="matching-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-matching-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Acronym</th>
+          <th>Short Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Full</td>
+          <td>No hash used</td>
+          <td>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>SHA2-256</td>
+          <td>256 bit hash by SHA2</td>
+          <td>[<a href="http://www.iana.org/go/rfc6234">RFC6234</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>SHA2-512</td>
+          <td>512 bit hash by SHA2</td>
+          <td>[<a href="http://www.iana.org/go/rfc6234">RFC6234</a>]</td>
+        </tr>
+        <tr>
+          <td>3-254</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>PrivMatch</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6698">RFC6698</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

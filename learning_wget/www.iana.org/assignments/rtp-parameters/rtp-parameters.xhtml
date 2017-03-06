@@ -1,0 +1,2741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Real-Time Transport Protocol (RTP) Parameters</title>
+  </head>
+  <body>
+    <h1>Real-Time Transport Protocol (RTP) Parameters</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2017-02-15</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="rtp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="rtp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#rtp-parameters-1">RTP Payload types (PT) for standard audio and video encodings - Closed</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-2">RTP Payload Format media types</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-4">RTCP Control Packet types (PT)</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-5">RTP SDES item types</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-6">SMT Values for TOKEN Packet Type Registry</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-7">RTP Profile Names</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-8">FMT Values for RTPFB Payload Types</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-9">FMT Values for PSFB Payload Types</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-10">RTP Compact Header Extensions</a>
+      </li>
+      <li>
+        <a href="#sdes-compact-header-extensions">RTP SDES Compact Header Extensions</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-11">Sub-Report Block Type (SRBT) Values for the RSI Packet</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-12">SFMT Values for RAMS Messages</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-13">RAMS TLV Space Registry</a>
+      </li>
+      <li>
+        <a href="#rtp-parameters-15">RAMS Response Code Space Registry</a>
+      </li>
+    </ul>
+    <h2><a name="rtp-parameters-1" id="rtp-parameters-1"></a>RTP Payload types (PT) for standard audio and video encodings - Closed</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Registry closed; see [<a href="http://www.iana.org/go/rfc3551">RFC3551</a>], Section 3</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The RFC "RTP Profile for Audio and Video Conferences with Minimal
+Control" [<a href="http://www.iana.org/go/rfc3551">RFC3551</a>] specifies an initial set "payload types".  This
+list maintains and extends that list.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>PT</th>
+          <th>Encoding Name</th>
+          <th>Audio/Video (A/V)</th>
+          <th>Clock Rate (Hz)</th>
+          <th>Channels</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>PCMU</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>GSM</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>G723</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="#Vineet_Kumar">Vineet_Kumar</a>][<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>DVI4</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>DVI4</td>
+          <td>A</td>
+          <td>16000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>LPC</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>PCMA</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>G722</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>L16</td>
+          <td>A</td>
+          <td>44100</td>
+          <td>2</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>L16</td>
+          <td>A</td>
+          <td>44100</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>QCELP</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>CN</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3389">RFC3389</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>MPA</td>
+          <td>A</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>][<a href="http://www.iana.org/go/rfc2250">RFC2250</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>G728</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>DVI4</td>
+          <td>A</td>
+          <td>11025</td>
+          <td>1</td>
+          <td>[<a href="#Joseph_Di_Pol">Joseph_Di_Pol</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>DVI4</td>
+          <td>A</td>
+          <td>22050</td>
+          <td>1</td>
+          <td>[<a href="#Joseph_Di_Pol">Joseph_Di_Pol</a>]</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>G729</td>
+          <td>A</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>Reserved</td>
+          <td>A</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>Unassigned</td>
+          <td>A</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>Unassigned</td>
+          <td>A</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>Unassigned</td>
+          <td>A</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>Unassigned</td>
+          <td>A</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>Unassigned</td>
+          <td>V</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>CelB</td>
+          <td>V</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2029">RFC2029</a>]</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>JPEG</td>
+          <td>V</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2435">RFC2435</a>]</td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td>Unassigned</td>
+          <td>V</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>nv</td>
+          <td>V</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>Unassigned</td>
+          <td>V</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>Unassigned</td>
+          <td>V</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>H261</td>
+          <td>V</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4587">RFC4587</a>]</td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>MPV</td>
+          <td>V</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2250">RFC2250</a>]</td>
+        </tr>
+        <tr>
+          <td>33</td>
+          <td>MP2T</td>
+          <td>AV</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2250">RFC2250</a>]</td>
+        </tr>
+        <tr>
+          <td>34</td>
+          <td>H263</td>
+          <td>V</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="#Chunrong_Zhu">Chunrong_Zhu</a>]</td>
+        </tr>
+        <tr>
+          <td>35-71</td>
+          <td>Unassigned</td>
+          <td>?</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>72-76</td>
+          <td>Reserved for RTCP conflict avoidance</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+        <tr>
+          <td>77-95</td>
+          <td>Unassigned</td>
+          <td>?</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>96-127</td>
+          <td>dynamic</td>
+          <td>?</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-2" id="rtp-parameters-2"></a>RTP Payload Format media types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action Process or expert approval</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Steve Casner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4855">RFC4855</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>In addition to the RTP payload formats (encodings) listed in the RTP
+Payload Types table, there are additional payload formats that do not
+have static RTP payload types assigned but instead use dynamic payload
+type number assignment. Each payload format is named by a registered
+media subtype as listed in the following table. As new payload formats
+are specified, their registered media subtypes should be added to this
+table. In addition, for the payload formats listed in the RTP Payload
+Types table above, the "encoding name" is also registered as a media
+subtype under the media type "audio" or "video". The clock rate and
+number of channels shown here are the normal values for those payload
+formats that have a normal value.  Both type and subtype names are 
+case-insensitive as defined in RFC4288.
+
+Registration procedures and a registration template can be found in
+[<a href="http://www.iana.org/go/rfc4855">RFC4855</a>]</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Media Type</th>
+          <th>Subtype</th>
+          <th>Clock Rate (Hz)</th>
+          <th>Channels (audio)</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>application</td>
+          <td>1d-interleaved-parityfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6015">RFC6015</a>]</td>
+        </tr>
+        <tr>
+          <td>application</td>
+          <td>h224</td>
+          <td>4800</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4573">RFC4573</a>]</td>
+        </tr>
+        <tr>
+          <td>application</td>
+          <td>parityfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3009">RFC3009</a>]</td>
+        </tr>
+        <tr>
+          <td>application</td>
+          <td>raptorfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6682">RFC6682</a>]</td>
+        </tr>
+        <tr>
+          <td>application</td>
+          <td>rtx</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4588">RFC4588</a>]</td>
+        </tr>
+        <tr>
+          <td>application</td>
+          <td>smpte336m</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6597">RFC6597</a>]</td>
+        </tr>
+        <tr>
+          <td>application</td>
+          <td>ulpfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5109">RFC5109</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>1d-interleaved-parityfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6015">RFC6015</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>32kadpcm</td>
+          <td>8000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3802">RFC3802</a>][<a href="http://www.iana.org/go/rfc2421">RFC2421</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>ac3</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4184">RFC4184</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>AMR</td>
+          <td>8000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4867">RFC4867</a>][<a href="http://www.iana.org/go/rfc3267">RFC3267</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>AMR-WB</td>
+          <td>16000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4867">RFC4867</a>][<a href="http://www.iana.org/go/rfc3267">RFC3267</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>amr-wb+</td>
+          <td>72000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4352">RFC4352</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>ATRAC-ADVANCED-LOSSLESS</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5584">RFC5584</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>atrac-x</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5584">RFC5584</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>atrac3</td>
+          <td>44100</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5584">RFC5584</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>BV16</td>
+          <td>8000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4298">RFC4298</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>BV32</td>
+          <td>16000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4298">RFC4298</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>clearmode</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4040">RFC4040</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>CN</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3389">RFC3389</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>DAT12</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3190">RFC3190</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>dsr-es201108</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3557">RFC3557</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>dsr-es202050</td>
+          <td>8000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4060">RFC4060</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>dsr-es202211</td>
+          <td>8000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4060">RFC4060</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>dsr-es202212</td>
+          <td>8000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4060">RFC4060</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>DV</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6469">RFC6469</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>DVI4</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>eac3</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4598">RFC4598</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>EVRC</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4788">RFC4788</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>EVRC0</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4788">RFC4788</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>EVRC1</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4788">RFC4788</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>EVRCB</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4788">RFC4788</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>EVRCB0</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4788">RFC4788</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>EVRCB1</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4788">RFC4788</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>EVRCWB</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5188">RFC5188</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>EVRCWB0</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5188">RFC5188</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>EVRCWB1</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5188">RFC5188</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>fwdred</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6354">RFC6354</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>g719</td>
+          <td>48000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5404">RFC5404</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G722</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G7221</td>
+          <td>16000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5577">RFC5577</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G723</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G726-16</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>][<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G726-24</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>][<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G726-32</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>][<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G726-40</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>][<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G728</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G729</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G7291</td>
+          <td>16000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4749">RFC4749</a>][<a href="http://www.iana.org/go/rfc5459">RFC5459</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G729D</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>][<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>G729E</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>][<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>GSM</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>GSM-EFR</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>][<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>GSM-HR-08</td>
+          <td>8000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5993">RFC5993</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>iLBC</td>
+          <td>8000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3952">RFC3952</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>ip-mr_v2.5</td>
+          <td>16000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6262">RFC6262</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>L8</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>][<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>L16</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>L20</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3190">RFC3190</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>L24</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3190">RFC3190</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>LPC</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>MELP</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-payload-melpe-06">RFC-ietf-payload-melpe-06</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>MELP600</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-payload-melpe-06">RFC-ietf-payload-melpe-06</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>MELP1200</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-payload-melpe-06">RFC-ietf-payload-melpe-06</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>MELP2400</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-payload-melpe-06">RFC-ietf-payload-melpe-06</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>MP4A-LATM</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3016">RFC3016</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>MPA</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>mpa-robust</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5219">RFC5219</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>mpeg4-generic</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3640">RFC3640</a>][<a href="http://www.iana.org/go/rfc5691">RFC5691</a>][<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>parityfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5109">RFC5109</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>PCMA</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>PCMA-WB</td>
+          <td>16000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5391">RFC5391</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>PCMU</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>PCMU-WB</td>
+          <td>16000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5391">RFC5391</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>QCELP</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>raptorfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6682">RFC6682</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>RED</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2198">RFC2198</a>][<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>rtp-midi</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>rtx</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4588">RFC4588</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>SMV</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3558">RFC3558</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>SMV0</td>
+          <td>8000</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3558">RFC3558</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>speex</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5574">RFC5574</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>t140c</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4351">RFC4351</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>t38</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4612">RFC4612</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>telephone-event</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4733">RFC4733</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>tone</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4733">RFC4733</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>uemclip</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5686">RFC5686</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>ulpfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5109">RFC5109</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>VDVI</td>
+          <td></td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3551">RFC3551</a>][<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>VMR-WB</td>
+          <td>16000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4348">RFC4348</a>][<a href="http://www.iana.org/go/rfc4424">RFC4424</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>vorbis</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5215">RFC5215</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>vorbis-config</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5215">RFC5215</a>]</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>1d-interleaved-parityfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6015">RFC6015</a>]</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>fwdred</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6354">RFC6354</a>]</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>parityfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3009">RFC3009</a>]</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>raptorfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6682">RFC6682</a>]</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>red</td>
+          <td>1000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4102">RFC4102</a>]</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>rtx</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4588">RFC4588</a>]</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>t140</td>
+          <td>1000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4103">RFC4103</a>]</td>
+        </tr>
+        <tr>
+          <td>text</td>
+          <td>ulpfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5109">RFC5109</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>BMPEG</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2343">RFC2343</a>][<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>1d-interleaved-parityfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6015">RFC6015</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>3gpp-tt</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4396">RFC4396</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>BT656</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2431">RFC2431</a>][<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>celB</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>DV</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6469">RFC6469</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>H261</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4587">RFC4587</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>H263</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4628">RFC4628</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>H263-1998</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4629">RFC4629</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>H263-2000</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4629">RFC4629</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>H264</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6184">RFC6184</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>H264-RCDO</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6185">RFC6185</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>H264-SVC</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6190">RFC6190</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>JPEG</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>JPEG2000</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5371">RFC5371</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>MP1S</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2250">RFC2250</a>][<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>MP2P</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2250">RFC2250</a>][<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>MP2T</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>MP4V-ES</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3016">RFC3016</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>mpeg4-generic</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3640">RFC3640</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>MPV</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3555">RFC3555</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>nv</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4856">RFC4856</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>parityfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5109">RFC5109</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>pointer</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2862">RFC2862</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>raptorfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6682">RFC6682</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>raw</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>rtx</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4588">RFC4588</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>SMPTE292M</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3497">RFC3497</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>ulpfec</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5109">RFC5109</a>]</td>
+        </tr>
+        <tr>
+          <td>video</td>
+          <td>vc1</td>
+          <td>90000</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4425">RFC4425</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-4" id="rtp-parameters-4"></a>RTCP Control Packet types (PT)</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Steve Casner, Magnus Westerlund</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5761">RFC5761</a>][<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The RFC "RTP: A Transport Protocol for Real-Time Applications"
+[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>] specifies an initial set of "control packet types" for
+RTCP.  This list maintains and extends that list.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-rtp-parameters-4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-191</td>
+          <td>Specification required or expert review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">194-199</td>
+          <td>Specification required or expert review</td>
+          <td>If 200-223 is fully occupied</td>
+        </tr>
+        <tr>
+          <td align="center">200-223</td>
+          <td>Specification required or expert review</td>
+          <td>Primary Assignments range</td>
+        </tr>
+        <tr>
+          <td align="center">224-254</td>
+          <td>Specification required or expert review</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-rtp-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Abbrev.</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td></td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1-191</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>192</td>
+          <td></td>
+          <td>Reserved (Historic-FIR)</td>
+          <td>[<a href="http://www.iana.org/go/rfc2032">RFC2032</a>]</td>
+        </tr>
+        <tr>
+          <td>193</td>
+          <td></td>
+          <td>Reserved (Historic-NACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc2032">RFC2032</a>]</td>
+        </tr>
+        <tr>
+          <td>194</td>
+          <td>SMPTETC</td>
+          <td>SMPTE time-code mapping</td>
+          <td>[<a href="http://www.iana.org/go/rfc5484">RFC5484</a>]</td>
+        </tr>
+        <tr>
+          <td>195</td>
+          <td>IJ</td>
+          <td>Extended inter-arrival jitter report</td>
+          <td>[<a href="http://www.iana.org/go/rfc5450">RFC5450</a>]</td>
+        </tr>
+        <tr>
+          <td>196-199</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>200</td>
+          <td>SR</td>
+          <td>sender report</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>201</td>
+          <td>RR</td>
+          <td>receiver report</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>202</td>
+          <td>SDES</td>
+          <td>source description</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>203</td>
+          <td>BYE</td>
+          <td>goodbye</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>204</td>
+          <td>APP</td>
+          <td>application-defined</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>205</td>
+          <td>RTPFB</td>
+          <td>Generic RTP Feedback</td>
+          <td>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</td>
+        </tr>
+        <tr>
+          <td>206</td>
+          <td>PSFB</td>
+          <td>Payload-specific</td>
+          <td>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</td>
+        </tr>
+        <tr>
+          <td>207</td>
+          <td>XR</td>
+          <td>extended report</td>
+          <td>[<a href="http://www.iana.org/go/rfc3611">RFC3611</a>]</td>
+        </tr>
+        <tr>
+          <td>208</td>
+          <td>AVB</td>
+          <td>AVB RTCP packet</td>
+          <td>[<a href="http://grouper.ieee.org/groups/1733">"Standard for Layer 3 Transport Protocol for Time Sensitive
+Applications in Local Area Networks." Work in progress.</a>]</td>
+        </tr>
+        <tr>
+          <td>209</td>
+          <td>RSI</td>
+          <td>Receiver Summary Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>210</td>
+          <td>TOKEN</td>
+          <td>Port Mapping</td>
+          <td>[<a href="http://www.iana.org/go/rfc6284">RFC6284</a>]</td>
+        </tr>
+        <tr>
+          <td>211</td>
+          <td>IDMS</td>
+          <td>IDMS Settings</td>
+          <td>[<a href="http://www.iana.org/go/rfc7272">RFC7272</a>]</td>
+        </tr>
+        <tr>
+          <td>212</td>
+          <td>RGRS</td>
+          <td>Reporting Group Reporting Sources</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-avtcore-rtp-multi-stream-optimisation-12">RFC-ietf-avtcore-rtp-multi-stream-optimisation-12</a>]</td>
+        </tr>
+        <tr>
+          <td>213</td>
+          <td>SNM</td>
+          <td>Splicing Notification Message</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ietf-avtext-splicing-notification-09">RFC-ietf-ietf-avtext-splicing-notification-09</a>]</td>
+        </tr>
+        <tr>
+          <td>214-254</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td></td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-5" id="rtp-parameters-5"></a>RTP SDES item types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required or Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Rachel Huang, Magnus Westerlund</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The RFC "RTP: A Transport Protocol for Real-Time Applications"
+[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>] specifies an initial set of "item types" for the RTCP
+SDES control packet.  This list maintains and extends that list.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Abbrev.</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>END</td>
+          <td>end of SDES list</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>CNAME</td>
+          <td>canonical name</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>NAME</td>
+          <td>user name</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>EMAIL</td>
+          <td>user's electronic mail address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>PHONE</td>
+          <td>user's phone number</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>LOC</td>
+          <td>geographic user location</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>TOOL</td>
+          <td>name of application or tool</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>NOTE</td>
+          <td>notice about the source</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>PRIV</td>
+          <td>private extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>H323-CADDR</td>
+          <td>H.323 callable address</td>
+          <td>[<a href="#Vineet_Kumar">Vineet_Kumar</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>APSI</td>
+          <td>Application Specific Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc6776">RFC6776</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>RGRP</td>
+          <td>Reporting Group Identifier</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-avtcore-rtp-multi-stream-optimisation-12">RFC-ietf-avtcore-rtp-multi-stream-optimisation-12</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>RtpStreamId</td>
+          <td>RTP Stream Identifier</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-avtext-rid-09">RFC-ietf-avtext-rid-09</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>RepairedRtpStreamId</td>
+          <td>Repaired RTP Stream Identifier</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-avtext-rid-09">RFC-ietf-avtext-rid-09</a>]</td>
+        </tr>
+        <tr>
+          <td>14-255</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-6" id="rtp-parameters-6"></a>SMT Values for TOKEN Packet Type Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6284">RFC6284</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6284">RFC6284</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Port Mapping Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6284">RFC6284</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Port Mapping Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc6284">RFC6284</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Token Verification Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6284">RFC6284</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Token Verification Failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6284">RFC6284</a>]</td>
+        </tr>
+        <tr>
+          <td>5-30</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6284">RFC6284</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-7" id="rtp-parameters-7"></a>RTP Profile Names</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action Process or expert approval</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Steve Casner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Profile Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>RTP/AVP</td>
+          <td>[<a href="http://www.iana.org/go/rfc3550">RFC3550</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/SAVP</td>
+          <td>[<a href="http://www.iana.org/go/rfc3711">RFC3711</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/AVPF</td>
+          <td>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/SAVPF</td>
+          <td>[<a href="http://www.iana.org/go/rfc5124">RFC5124</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-8" id="rtp-parameters-8"></a>FMT Values for RTPFB Payload Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Magnus Westerlund, Roni Even</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Long Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Generic NACK</td>
+          <td>Generic negative acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td></td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5104">RFC5104</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>TMMBR</td>
+          <td>Temporary Maximum Media Stream Bit Rate Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5104">RFC5104</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>TMMBN</td>
+          <td>Temporary Maximum Media Stream Bit Rate Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc5104">RFC5104</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>RTCP-SR-REQ</td>
+          <td>RTCP Rapid Resynchronisation Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6051">RFC6051</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>RAMS</td>
+          <td>Rapid Acquisition of Multicast Sessions</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>TLLEI</td>
+          <td>Transport-Layer Third-Party Loss Early Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6642">RFC6642</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>RTCP-ECN-FB</td>
+          <td>RTCP ECN Feedback</td>
+          <td>[<a href="http://www.iana.org/go/rfc6679">RFC6679</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>PAUSE-RESUME</td>
+          <td>Media Pause/Resume</td>
+          <td>[<a href="http://www.iana.org/go/rfc7728">RFC7728</a>]</td>
+        </tr>
+        <tr>
+          <td>10-30</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>Extension</td>
+          <td>Reserved for future extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-9" id="rtp-parameters-9"></a>FMT Values for PSFB Payload Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Magnus Westerlund, Roni Even</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Long Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>PLI</td>
+          <td>Picture Loss Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>SLI</td>
+          <td>Slice Loss Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>RPSI</td>
+          <td>Reference Picture Selection Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>FIR</td>
+          <td>Full Intra Request Command</td>
+          <td>[<a href="http://www.iana.org/go/rfc5104">RFC5104</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>TSTR</td>
+          <td>Temporal-Spatial Trade-off Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5104">RFC5104</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>TSTN</td>
+          <td>Temporal-Spatial Trade-off Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc5104">RFC5104</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>VBCM</td>
+          <td>Video Back Channel Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5104">RFC5104</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>PSLEI</td>
+          <td>Payload-Specific Third-Party Loss Early Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6642">RFC6642</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>ROI</td>
+          <td>Video region-of-interest (ROI)</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26114.htm">3GPP TS 26.114 v13.1.0</a>][<a href="#Ozgur_Oyman">Ozgur_Oyman</a>]</td>
+        </tr>
+        <tr>
+          <td>10-14</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>AFB</td>
+          <td>Application Layer Feedback</td>
+          <td>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</td>
+        </tr>
+        <tr>
+          <td>16-30</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>Extension</td>
+          <td>Reserved for future extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc4585">RFC4585</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-10" id="rtp-parameters-10"></a>RTP Compact Header Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Magnus Westerlund, Stephen Casner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5285">RFC5285</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>For extensions defined in RFCs, the URI is recommended to be of the
+form urn:ietf:params:rtp-hdrext:, and the formal reference is the RFC
+number of the RFC documenting the extension.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-10" class="sortable">
+      <thead>
+        <tr>
+          <th>Extension URI</th>
+          <th>Description</th>
+          <th>Contact</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:toffset</td>
+          <td>Transmission Time offsets</td>
+          <td>[<a href="#Singer">Singer</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc5450">RFC5450</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:smpte-tc</td>
+          <td>SMPTE time-code mapping</td>
+          <td>[<a href="#Singer">Singer</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc5484">RFC5484</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:ntp-64</td>
+          <td>Synchronisation metadata: 64-bit timestamp format</td>
+          <td>[<a href="#Thomas_Schierl">Thomas_Schierl</a>]</td>
+          <td>[<a href="http://www.ietf.org/wg/concluded/avt.html">IETF Audio/Video Transport Working Group</a>][<a href="http://www.iana.org/go/rfc6051">RFC6051</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:ntp-56</td>
+          <td>Synchronisation metadata: 56-bit timestamp format</td>
+          <td>[<a href="#Thomas_Schierl">Thomas_Schierl</a>]</td>
+          <td>[<a href="http://www.ietf.org/wg/concluded/avt.html">IETF Audio/Video Transport Working Group</a>][<a href="http://www.iana.org/go/rfc6051">RFC6051</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:ssrc-audio-level</td>
+          <td>Audio Level</td>
+          <td>[<a href="#Jonathan_Lennox">Jonathan_Lennox</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6464">RFC6464</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:csrc-audio-level</td>
+          <td>Mixer-to-client audio level indicators</td>
+          <td>[<a href="#Emil_Ivov">Emil_Ivov</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6465">RFC6465</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:encrypt</td>
+          <td>Encrypted extension header element</td>
+          <td>[<a href="#Jonathan_Lennox">Jonathan_Lennox</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6904">RFC6904</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:3gpp:video-orientation</td>
+          <td>Coordination of video orientation (CVO) feature, see clause 6.2.3</td>
+          <td>[<a href="#Specifications_Manager_3GPP">Specifications_Manager_3GPP</a>]</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26114.htm">3GPP TS 26.114, version 12.5.0</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:3gpp:video-orientation:6</td>
+          <td>Higher granularity (6-bit) coordination of video orientation (CVO) feature, see clause 6.2.3</td>
+          <td>[<a href="#Specifications_Manager_3GPP">Specifications_Manager_3GPP</a>]</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26114.htm">3GPP TS 26.114, version 12.5.0</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:3gpp:roi-sent</td>
+          <td>Signalling of the arbitrary region-of-interest (ROI) information
+for the sent video, see clause 6.2.3.4</td>
+          <td>[<a href="#Specifications_Manager_3GPP">Specifications_Manager_3GPP</a>]</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26114.htm">3GPP TS 26.114, version 13.1.0</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:3gpp:predefined-roi-sent</td>
+          <td>Signalling of the predefined region-of-interest (ROI) information
+for the sent video, see clause 6.2.3.4</td>
+          <td>[<a href="#Specifications_Manager_3GPP">Specifications_Manager_3GPP</a>]</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26114.htm">3GPP TS 26.114, version 13.1.0</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:sdes</td>
+          <td>Reserved as base URN for RTCP SDES items that are also 
+        defined as RTP compact header extensions.</td>
+          <td>Authors of [<a href="http://www.iana.org/go/rfc7941">RFC7941</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7941">RFC7941</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:splicing-interval</td>
+          <td>Splicing Interval</td>
+          <td>[<a href="#Jinwei_Xia">Jinwei_Xia</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-avtext-splicing-notification-09">RFC-ietf-avtext-splicing-notification-09</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sdes-compact-header-extensions" id="sdes-compact-header-extensions"></a>RTP SDES Compact Header Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Magnus Westerlund, Stephen Casner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7941">RFC7941</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sdes-compact-header-extensions.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sdes-compact-header-extensions" class="sortable">
+      <thead>
+        <tr>
+          <th>Extension URI</th>
+          <th>Description</th>
+          <th>Contact</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:sdes:cname</td>
+          <td>Source Description: Canonical End-Point Identifier (SDES CNAME)</td>
+          <td>Authors of [<a href="http://www.iana.org/go/rfc7941">RFC7941</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7941">RFC7941</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:sdes:rtp-stream-id</td>
+          <td>RTP Stream Identifier</td>
+          <td>[<a href="#Adam_Roach">Adam_Roach</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-avtext-rid-09">RFC-ietf-avtext-rid-09</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:rtp-hdrext:sdes:repaired-rtp-stream-id</td>
+          <td>RTP Repaired Stream Identifier</td>
+          <td>[<a href="#Adam_Roach">Adam_Roach</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-avtext-rid-09">RFC-ietf-avtext-rid-09</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-11" id="rtp-parameters-11"></a>Sub-Report Block Type (SRBT) Values for the RSI Packet</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Long Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>IPv4 Address</td>
+          <td>IPv4 Feedback Target Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>IPv6 Address</td>
+          <td>IPv6 Feedback Target Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>DNS Name</td>
+          <td>DNS Name indicating Feedback Target Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Reserved</td>
+          <td>Reserved for Assignment by Standards Action</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Loss</td>
+          <td>Loss distribution</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Jitter</td>
+          <td>Jitter distribution</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>RTT</td>
+          <td>Round-trip time distribution</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Cumulative loss</td>
+          <td>Cumulative loss distribution</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Collisions</td>
+          <td>SSRC Collision list</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Reserved</td>
+          <td>Reserved for Assignment by Standards Action</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Stats</td>
+          <td>General statistics</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>RTCP BW</td>
+          <td>RTCP Bandwidth indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Group Info</td>
+          <td>RTCP Group and Average Packet size</td>
+          <td>[<a href="http://www.iana.org/go/rfc5760">RFC5760</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-12" id="rtp-parameters-12"></a>SFMT Values for RAMS Messages</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-12" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>RAMS Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>RAMS Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>RAMS Termination</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>4-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-13" id="rtp-parameters-13"></a>RAMS TLV Space Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-parameters-13" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Requested Media Sender SSRC(s)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Min RAMS Buffer Fill Requirement</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Max RAMS Buffer Fill Requirement</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Max Receive Bitrate</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Request for Preamble Only</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Supported Enterprise Number(s)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>7-30</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>Media Sender SSRC</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>RTP Seqnum of the First Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>33</td>
+          <td>Earliest Multicast Join Time</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>34</td>
+          <td>Burst Duration</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>35</td>
+          <td>Max Transmit Bitrate</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>36-60</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>61</td>
+          <td>Extended RTP Seqnum of First Multicast Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>62-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-254</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-parameters-15" id="rtp-parameters-15"></a>RAMS Response Code Space Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>New response codes should be classified following the guidelines below:</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-parameters-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-rtp-parameters-15-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1xx</td>
+          <td>Informational</td>
+        </tr>
+        <tr>
+          <td align="center">2xx</td>
+          <td>Success</td>
+        </tr>
+        <tr>
+          <td align="center">3xx</td>
+          <td>Redirection</td>
+        </tr>
+        <tr>
+          <td align="center">4xx</td>
+          <td>RTP Receiver (RTP_Rx) Error</td>
+        </tr>
+        <tr>
+          <td align="center">5xx</td>
+          <td>Burst/Retransmission Source (BRS) Error</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-rtp-parameters-15" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>A private response code is included in the message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>Parameter update for RAMS session</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>200</td>
+          <td>RAMS request has been accepted</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>201</td>
+          <td>Unicast burst has been completed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>400</td>
+          <td>Invalid RAMS-R message syntax</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>401</td>
+          <td>Invalid min buffer requirement in RAMS-R message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>402</td>
+          <td>Invalid max buffer requirement in RAMS-R message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>403</td>
+          <td>Insufficient max bitrate requirement in RAMS-R
+message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>404</td>
+          <td>Invalid RAMS-T message syntax</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>405</td>
+          <td>Invalid Token</td>
+          <td>[<a href="http://www.iana.org/go/rfc6284">RFC6284</a>]</td>
+        </tr>
+        <tr>
+          <td>500</td>
+          <td>An unspecified BRS internal error has occurred</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>501</td>
+          <td>BRS has insufficient bandwidth to start RAMS
+session</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>502</td>
+          <td>Burst is terminated due to network congestion</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>503</td>
+          <td>BRS has insufficient CPU cycles to start RAMS
+session</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>504</td>
+          <td>RAMS functionality is not available on BRS</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>505</td>
+          <td>RAMS functionality is not available for RTP_Rx</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>506</td>
+          <td>RAMS functionality is not available for
+the requested multicast stream</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>507</td>
+          <td>BRS has no valid starting point available for
+the requested multicast stream</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>508</td>
+          <td>BRS has no reference information available for
+the requested multicast stream</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>509</td>
+          <td>BRS has no RTP stream matching the requested SSRC</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>510</td>
+          <td>RAMS request to acquire the entire session
+has been denied</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>511</td>
+          <td>Only the preamble information is sent</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+        <tr>
+          <td>512</td>
+          <td>RAMS request has been denied due to a policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc6285">RFC6285</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Adam_Roach" id="Adam_Roach">[Adam_Roach]</a>
+          </td>
+          <td>Adam Roach</td>
+          <td>
+            <a href="mailto:adam&amp;nostrum.com">mailto:adam&amp;nostrum.com</a>
+          </td>
+          <td>2016-10-20</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Chunrong_Zhu" id="Chunrong_Zhu">[Chunrong_Zhu]</a>
+          </td>
+          <td>Chunrong Zhu</td>
+          <td>
+            <a href="mailto:Chunrong_Zhu&amp;ccm.jf.intel.com">mailto:Chunrong_Zhu&amp;ccm.jf.intel.com</a>
+          </td>
+          <td>1996-06</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Emil_Ivov" id="Emil_Ivov">[Emil_Ivov]</a>
+          </td>
+          <td>Emil Ivov</td>
+          <td>
+            <a href="mailto:emcho&amp;jitsi.org">mailto:emcho&amp;jitsi.org</a>
+          </td>
+          <td>2011-12</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jinwei_Xia" id="Jinwei_Xia">[Jinwei_Xia]</a>
+          </td>
+          <td>Jinwei Xia</td>
+          <td>
+            <a href="mailto:xiajinwei&amp;huawei.com">mailto:xiajinwei&amp;huawei.com</a>
+          </td>
+          <td>2016-08-09</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jonathan_Lennox" id="Jonathan_Lennox">[Jonathan_Lennox]</a>
+          </td>
+          <td>Jonathan Lennox</td>
+          <td>
+            <a href="mailto:jonathan&amp;vidyo.com">mailto:jonathan&amp;vidyo.com</a>
+          </td>
+          <td>2013-02-12</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Joseph_Di_Pol" id="Joseph_Di_Pol">[Joseph_Di_Pol]</a>
+          </td>
+          <td>Joseph Di Pol</td>
+          <td>
+            <a href="mailto:Joe.Dipol&amp;eng.sun.com">mailto:Joe.Dipol&amp;eng.sun.com</a>
+          </td>
+          <td>1996-05</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Ozgur_Oyman" id="Ozgur_Oyman">[Ozgur_Oyman]</a>
+          </td>
+          <td>Ozgur Oyman</td>
+          <td>
+            <a href="mailto:ozgur.oyman&amp;intel.com">mailto:ozgur.oyman&amp;intel.com</a>
+          </td>
+          <td>2015-10-19</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Singer" id="Singer">[Singer]</a>
+          </td>
+          <td>Unkown</td>
+          <td>
+            <a href="mailto:singer&amp;apple.com">mailto:singer&amp;apple.com</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Specifications_Manager_3GPP" id="Specifications_Manager_3GPP">[Specifications_Manager_3GPP]</a>
+          </td>
+          <td>3GPP Specifications Manager</td>
+          <td>
+            <a href="mailto:3gppContact&amp;etsi.org">mailto:3gppContact&amp;etsi.org</a>
+          </td>
+          <td>2015-09-16</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Thomas_Schierl" id="Thomas_Schierl">[Thomas_Schierl]</a>
+          </td>
+          <td>Thomas Schierl</td>
+          <td>
+            <a href="mailto:ts&amp;thomas-schierl.de">mailto:ts&amp;thomas-schierl.de</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Vineet_Kumar" id="Vineet_Kumar">[Vineet_Kumar]</a>
+          </td>
+          <td>Vineet Kumar</td>
+          <td>
+            <a href="mailto:Vineet_Kumar&amp;ccm.jf.intel.com">mailto:Vineet_Kumar&amp;ccm.jf.intel.com</a>
+          </td>
+          <td>1997-01</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

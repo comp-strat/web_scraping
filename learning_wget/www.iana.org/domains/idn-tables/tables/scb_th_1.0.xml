@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<idntable xmlns="http://www.iana.org/idn-tables/0.1">
+  <meta>
+    <language>th</language>
+    <domain>scb</domain>
+    <date>2014-07-14</date>
+    <version>1.0</version>
+    <description type="text/html">&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;
+TLD: SCB&lt;br/&gt;
+Script Identifier: TH&lt;br/&gt;
+Script Description: Thai&lt;br/&gt;
+Version: 1.0&lt;br/&gt;
+Effective Date: 14 July 2014&lt;br/&gt;
+&lt;/td&gt;
+&lt;td width="30"&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td width="30"&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;
+Registry: The Siam Commercial Bank PCL.&lt;br&gt;
+Contact: &lt;a href="mailto:tldregistry@scb.co.th"&gt;tldregistry@scb.co.th&lt;/a&gt;&lt;br&gt;
+Address: Siam Commercial Bank, 20th Floor Zone B, 9 Ratchadapisek Rd., Jatujak, Bangkok, 10900, Thailand&lt;br/&gt;
+Telephone: +662 544 1427&lt;br/&gt;
+Website: &lt;a href="http://scb.dotarai.com"&gt;http://scb.dotarai.com&lt;/a&gt;&lt;br&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Relevant Policy Document URL: &lt;a href="http://web.thains.co.th/docs/scb/SCB_IDN_Policy.pdf"&gt;http://web.thains.co.th/docs/scb/SCB_IDN_Policy.pdf&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This document contains the Thai character table used by .scb (The Siam Commercial Bank PCL.) This table is in compliance with the ICANN Guidelines for the Implementation of Internationalised Domain Names and is intended for publication in the IANA IDN Character Table Registry.&lt;/p&gt;</description>
+  </meta>
+  <data>
+    <char cp="002D" />
+    <range first-cp="0030" last-cp="0039" />
+    <range first-cp="0E01" last-cp="0E32" />
+    <range first-cp="0E34" last-cp="0E3A" />
+    <range first-cp="0E40" last-cp="0E4D" />
+    <range first-cp="0E50" last-cp="0E59" />
+  </data>
+</idntable>

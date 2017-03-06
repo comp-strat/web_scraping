@@ -1,0 +1,920 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>MIME Media Type Sub-Parameter Registries</title>
+  </head>
+  <body>
+    <h1>MIME Media Type Sub-Parameter Registries</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2003-10-31</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-02-18</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="media-type-sub-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="media-type-sub-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="media-type-sub-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#media-type-sub-parameters-1">Sub-Parameter Registry video/mpeg4-generic, audio/mpeg4-generic and application/mpeg4-generic</a>
+      </li>
+      <li>
+        <a href="#media-type-sub-parameters-2">Sub-Parameter Registry for mode=rtp-midi of audio/mpeg4-generic</a>
+        <ul>
+          <li>
+            <a href="#media-type-sub-parameters-3">j_sec Values</a>
+          </li>
+          <li>
+            <a href="#media-type-sub-parameters-4">j_update Values</a>
+          </li>
+          <li>
+            <a href="#media-type-sub-parameters-5">render Values</a>
+          </li>
+          <li>
+            <a href="#media-type-sub-parameters-6">subrender Values</a>
+          </li>
+          <li>
+            <a href="#media-type-sub-parameters-7">smf_info Values</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#media-type-sub-parameters-8">Sub-Parameter Registry for audio/rtp-midi</a>
+        <ul>
+          <li>
+            <a href="#media-type-sub-parameters-9">j_sec Values</a>
+          </li>
+          <li>
+            <a href="#media-type-sub-parameters-10">j_update Values</a>
+          </li>
+          <li>
+            <a href="#media-type-sub-parameters-11">render Values</a>
+          </li>
+          <li>
+            <a href="#media-type-sub-parameters-12">subrender Values</a>
+          </li>
+          <li>
+            <a href="#media-type-sub-parameters-13">smf_info Value</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#media-type-sub-parameters-14">Sub-Parameter Registry for video/raw</a>
+        <ul>
+          <li>
+            <a href="#media-type-sub-parameters-15">Color (sub-)sampling</a>
+          </li>
+          <li>
+            <a href="#media-type-sub-parameters-16">Colorimetry</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#media-type-sub-parameters-17">Sub-parameter Registry for application/mbox</a>
+      </li>
+      <li>
+        <a href="#smime">Parameter Values for the smime-type Parameter</a>
+      </li>
+      <li>
+        <a href="#cms-encapsulating">CMS Encapsulating Content Types</a>
+      </li>
+      <li>
+        <a href="#cms-inner">CMS Inner Content Types</a>
+      </li>
+    </ul>
+    <h2><a name="media-type-sub-parameters-1" id="media-type-sub-parameters-1"></a>Sub-Parameter Registry video/mpeg4-generic, audio/mpeg4-generic and application/mpeg4-generic</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3640">RFC3640</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="media-type-sub-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-media-type-sub-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Modes</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>mode=generic</td>
+          <td>[<a href="http://www.iana.org/go/rfc3640">RFC3640</a>]</td>
+        </tr>
+        <tr>
+          <td>mode=CELP-cbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc3640">RFC3640</a>]</td>
+        </tr>
+        <tr>
+          <td>mode=CELP-vbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc3640">RFC3640</a>]</td>
+        </tr>
+        <tr>
+          <td>mode=AAC-lbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc3640">RFC3640</a>]</td>
+        </tr>
+        <tr>
+          <td>mode=AAC-hbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc3640">RFC3640</a>]</td>
+        </tr>
+        <tr>
+          <td>mode=rtp-midi</td>
+          <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="media-type-sub-parameters-2" id="media-type-sub-parameters-2"></a>Sub-Parameter Registry for mode=rtp-midi of audio/mpeg4-generic</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>See sub-registries below</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="media-type-sub-parameters-3" id="media-type-sub-parameters-3"></a>j_sec Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF standards-track document</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-3" class="sortable">
+        <thead>
+          <tr>
+            <th>j_sec Value</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>j_sec=none</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>j_sec=recj</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="media-type-sub-parameters-4" id="media-type-sub-parameters-4"></a>j_update Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF standards-track document</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-4" class="sortable">
+        <thead>
+          <tr>
+            <th>j_update Value</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>j_update=anchor</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>j_update=open-loop</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>j_update=closed-loop</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="media-type-sub-parameters-5" id="media-type-sub-parameters-5"></a>render Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-5" class="sortable">
+        <thead>
+          <tr>
+            <th>render Value</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>render=unknown</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>render=synthetic</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>render=null</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="media-type-sub-parameters-6" id="media-type-sub-parameters-6"></a>subrender Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-6" class="sortable">
+        <thead>
+          <tr>
+            <th>subrender Value</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>subrender=default</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="media-type-sub-parameters-7" id="media-type-sub-parameters-7"></a>smf_info Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-7" class="sortable">
+        <thead>
+          <tr>
+            <th>smf_info Value</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>smf_info=ignore</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>smf_info=sdp_start</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>smf_info=identity</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="media-type-sub-parameters-8" id="media-type-sub-parameters-8"></a>Sub-Parameter Registry for audio/rtp-midi</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>See sub-registries below</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="media-type-sub-parameters-9" id="media-type-sub-parameters-9"></a>j_sec Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF Standards-track document</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-9" class="sortable">
+        <thead>
+          <tr>
+            <th>j_sec Value</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>j_sec=none</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>j_sec=recj</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="media-type-sub-parameters-10" id="media-type-sub-parameters-10"></a>j_update Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF Standards-track document</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-10" class="sortable">
+        <thead>
+          <tr>
+            <th>j_update Value</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>j_update=anchor</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>j_update=open-loop</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>j_update=closed-loop</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="media-type-sub-parameters-11" id="media-type-sub-parameters-11"></a>render Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-11" class="sortable">
+        <thead>
+          <tr>
+            <th>render Value</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>render=unknown</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>render=synthetic</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>render=api</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>render=null</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="media-type-sub-parameters-12" id="media-type-sub-parameters-12"></a>subrender Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-12" class="sortable">
+        <thead>
+          <tr>
+            <th>subrender Value</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>subrender=default</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="media-type-sub-parameters-13" id="media-type-sub-parameters-13"></a>smf_info Value</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-13" class="sortable">
+        <thead>
+          <tr>
+            <th>smf_info Value</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>smf_info=ignore</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>smf_info=sdp_start</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+          <tr>
+            <td>smf_info=identity</td>
+            <td>[<a href="http://www.iana.org/go/rfc6295">RFC6295</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="media-type-sub-parameters-14" id="media-type-sub-parameters-14"></a>Sub-Parameter Registry for video/raw</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>See sub-registries below</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="media-type-sub-parameters-15" id="media-type-sub-parameters-15"></a>Color (sub-)sampling</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-15" class="sortable">
+        <thead>
+          <tr>
+            <th>Color (sub-)sampling</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>sampling=RGB</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=RGBA</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=BGR</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=BGRA</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=YCbCr-4:4:4</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=YCbCr-4:2:2</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=YCbCr-4:2:0</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=YCbCr-4:1:1</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=RGB+</td>
+            <td>[<a href="http://www.iana.org/go/rfc4421">RFC4421</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=RG+B</td>
+            <td>[<a href="http://www.iana.org/go/rfc4421">RFC4421</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=R+GB</td>
+            <td>[<a href="http://www.iana.org/go/rfc4421">RFC4421</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=BGR+</td>
+            <td>[<a href="http://www.iana.org/go/rfc4421">RFC4421</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=BG+R</td>
+            <td>[<a href="http://www.iana.org/go/rfc4421">RFC4421</a>]</td>
+          </tr>
+          <tr>
+            <td>sampling=B+GR</td>
+            <td>[<a href="http://www.iana.org/go/rfc4421">RFC4421</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="media-type-sub-parameters-16" id="media-type-sub-parameters-16"></a>Colorimetry</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="media-type-sub-parameters-16.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-media-type-sub-parameters-16" class="sortable">
+        <thead>
+          <tr>
+            <th>Colorimetry</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>colorimetry=BT601-5</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+          <tr>
+            <td>colorimetry=BT709-2</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+          <tr>
+            <td>colorimetry=SMPTE240M</td>
+            <td>[<a href="http://www.iana.org/go/rfc4175">RFC4175</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="media-type-sub-parameters-17" id="media-type-sub-parameters-17"></a>Sub-parameter Registry for application/mbox</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4155">RFC4155</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="media-type-sub-parameters-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-media-type-sub-parameters-17" class="sortable">
+      <thead>
+        <tr>
+          <th>Format Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>format=default</td>
+          <td>[<a href="http://www.iana.org/go/rfc4155">RFC4155</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="smime" id="smime"></a>Parameter Values for the smime-type Parameter</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Russ Housley, Jim Schaad</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7114">RFC7114</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="smime.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-smime" class="sortable">
+      <thead>
+        <tr>
+          <th>smime-type Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>certs-only</td>
+          <td>[<a href="http://www.iana.org/go/rfc5751">RFC5751, Section 3.2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>CMC-Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5273">RFC5273, Section 3</a>]</td>
+        </tr>
+        <tr>
+          <td>CMC-Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc5273">RFC5273, Section 3</a>]</td>
+        </tr>
+        <tr>
+          <td>compressed-data</td>
+          <td>[<a href="http://www.iana.org/go/rfc5751">RFC5751, Section 3.2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>enveloped-data</td>
+          <td>[<a href="http://www.iana.org/go/rfc5751">RFC5751, Section 3.2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>enveloped-x400</td>
+          <td>[<a href="http://www.iana.org/go/rfc3854">RFC3854, Section 3.3.1</a>]</td>
+        </tr>
+        <tr>
+          <td>server-generated-key</td>
+          <td>[<a href="http://www.iana.org/go/rfc7030">RFC7030, Section 4.4.2</a>]</td>
+        </tr>
+        <tr>
+          <td>signed-data</td>
+          <td>[<a href="http://www.iana.org/go/rfc5751">RFC5751, Section 3.2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>signed-receipt</td>
+          <td>[<a href="http://www.iana.org/go/rfc2634">RFC2634, Section 2.4</a>]</td>
+        </tr>
+        <tr>
+          <td>signed-x400</td>
+          <td>[<a href="http://www.iana.org/go/rfc3854">RFC3854, Section 3.2.1</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="cms-encapsulating" id="cms-encapsulating"></a>CMS Encapsulating Content Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7193">RFC7193</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cms-encapsulating.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-cms-encapsulating" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Object Identifier</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>authData</td>
+          <td>1.2.840.113549.1.9.16.1.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc5652">RFC5652</a>]</td>
+        </tr>
+        <tr>
+          <td>compressedData</td>
+          <td>1.2.840.113549.1.9.16.1.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc3274">RFC3274</a>]</td>
+        </tr>
+        <tr>
+          <td>contentCollection</td>
+          <td>1.2.840.113549.1.9.16.1.19</td>
+          <td>[<a href="http://www.iana.org/go/rfc4073">RFC4073</a>]</td>
+        </tr>
+        <tr>
+          <td>contentInfo</td>
+          <td>1.2.840.113549.1.9.16.1.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc5652">RFC5652</a>]</td>
+        </tr>
+        <tr>
+          <td>contentWithAttrs</td>
+          <td>1.2.840.113549.1.9.16.1.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc4073">RFC4073</a>]</td>
+        </tr>
+        <tr>
+          <td>authEnvelopedData</td>
+          <td>1.2.840.113549.1.9.16.1.23</td>
+          <td>[<a href="http://www.iana.org/go/rfc5083">RFC5083</a>]</td>
+        </tr>
+        <tr>
+          <td>encryptedKeyPkg</td>
+          <td>2.16.840.1.101.2.1.2.78.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc6032">RFC6032</a>]</td>
+        </tr>
+        <tr>
+          <td>digestData</td>
+          <td>1.2.840.113549.1.9.16.1.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc5652">RFC5652</a>]</td>
+        </tr>
+        <tr>
+          <td>encryptedData</td>
+          <td>1.2.840.113549.1.9.16.1.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc5652">RFC5652</a>]</td>
+        </tr>
+        <tr>
+          <td>envelopedData</td>
+          <td>1.2.840.113549.1.9.16.1.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc5652">RFC5652</a>]</td>
+        </tr>
+        <tr>
+          <td>signedData</td>
+          <td>1.2.840.113549.1.9.16.1.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc5652">RFC5652</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="cms-inner" id="cms-inner"></a>CMS Inner Content Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7193">RFC7193</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cms-inner.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-cms-inner" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Object Identifier</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>firmwarePackage</td>
+          <td>1.2.840.113549.1.9.16.1.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4108">RFC4108</a>]</td>
+        </tr>
+        <tr>
+          <td>firmwareLoadReceipt</td>
+          <td>1.2.840.113549.1.9.16.1.17</td>
+          <td>[<a href="http://www.iana.org/go/rfc4108">RFC4108</a>]</td>
+        </tr>
+        <tr>
+          <td>firmwareLoadError</td>
+          <td>1.2.840.113549.1.9.16.1.18</td>
+          <td>[<a href="http://www.iana.org/go/rfc4108">RFC4108</a>]</td>
+        </tr>
+        <tr>
+          <td>aKeyPackage</td>
+          <td>2.16.840.1.101.2.1.2.78.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc5958">RFC5958</a>]</td>
+        </tr>
+        <tr>
+          <td>sKeyPackage</td>
+          <td>1.2.840.113549.1.9.16.1.25</td>
+          <td>[<a href="http://www.iana.org/go/rfc6031">RFC6031</a>]</td>
+        </tr>
+        <tr>
+          <td>trustAnchorList</td>
+          <td>1.2.840.113549.1.9.16.1.34</td>
+          <td>[<a href="http://www.iana.org/go/rfc5914">RFC5914</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-statusQuery</td>
+          <td>2.16.840.1.101.2.1.2.77.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-statusResponse</td>
+          <td>2.16.840.1.101.2.1.2.77.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-update</td>
+          <td>2.16.840.1.101.2.1.2.77.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-updateConfirm</td>
+          <td>2.16.840.1.101.2.1.2.77.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-apexUpdate</td>
+          <td>2.16.840.1.101.2.1.2.77.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-apexUpdateConfirm</td>
+          <td>2.16.840.1.101.2.1.2.77.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-communityUpdate</td>
+          <td>2.16.840.1.101.2.1.2.77.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-communityUpdateConfirm</td>
+          <td>2.16.840.1.101.2.1.2.77.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-seqNumAdjust</td>
+          <td>2.16.840.1.101.2.1.2.77.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-seqNumAdjustConfirm</td>
+          <td>2.16.840.1.101.2.1.2.77.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>TAMP-error</td>
+          <td>2.16.840.1.101.2.1.2.77.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc5934">RFC5934</a>]</td>
+        </tr>
+        <tr>
+          <td>keyPackageReceipt</td>
+          <td>2.16.840.1.101.2.1.2.78.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7191">RFC7191</a>]</td>
+        </tr>
+        <tr>
+          <td>keyPackageError</td>
+          <td>2.16.840.1.101.2.1.2.78.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc7191">RFC7191</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

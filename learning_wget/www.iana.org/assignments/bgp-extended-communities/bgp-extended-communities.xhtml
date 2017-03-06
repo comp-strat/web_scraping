@@ -1,0 +1,1777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Border Gateway Protocol (BGP) Extended Communities</title>
+  </head>
+  <body>
+    <h1>Border Gateway Protocol (BGP) Extended Communities</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2005-08-15</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-01-11</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="bgp-extended-communities.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="bgp-extended-communities.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="bgp-extended-communities.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#transitive">BGP Transitive Extended Community Types</a>
+      </li>
+      <li>
+        <a href="#non-transitive">BGP Non-Transitive Extended Community Types</a>
+      </li>
+      <li>
+        <a href="#evpn">EVPN Extended Community Sub-Types</a>
+      </li>
+      <li>
+        <a href="#trans-two-octet-as">Transitive Two-Octet AS-Specific Extended Community Sub-Types</a>
+      </li>
+      <li>
+        <a href="#non-trans-two-octet-as">Non-Transitive Two-Octet AS-Specific Extended Community Sub-Types</a>
+      </li>
+      <li>
+        <a href="#trans-four-octet-as">Transitive Four-Octet AS-Specific Extended Community Sub-Types</a>
+      </li>
+      <li>
+        <a href="#non-trans-four-octet-as">Non-Transitive Four-Octet AS-Specific Extended Community Sub-Types</a>
+      </li>
+      <li>
+        <a href="#trans-ipv4">Transitive IPv4-Address-Specific Extended Community Sub-Types</a>
+      </li>
+      <li>
+        <a href="#non-trans-ipv4">Non-Transitive IPv4-Address-Specific Extended Community Sub-Types</a>
+      </li>
+      <li>
+        <a href="#trans-opaque">Transitive Opaque Extended Community Sub-Types</a>
+      </li>
+      <li>
+        <a href="#non-trans-opaque">Non-Transitive Opaque Extended Community Sub-Types</a>
+      </li>
+      <li>
+        <a href="#bgp-extended-communities-10">Generic Transitive Experimental Use Extended Community Sub-Types</a>
+      </li>
+      <li>
+        <a href="#generic-transitive-experimental-part2">Generic Transitive Experimental Use Extended Community Part 2 Sub-Types</a>
+      </li>
+      <li>
+        <a href="#generic-transitive-experimental-part3">Generic Transitive Experimental Use Extended Community Part 3 Sub-Types</a>
+      </li>
+      <li>
+        <a href="#traffic-action-fields">Traffic Action Fields</a>
+      </li>
+      <li>
+        <a href="#trans-ipv6">Transitive IPv6-Address-Specific Extended Community Types</a>
+      </li>
+      <li>
+        <a href="#non-trans-ipv6">Non-Transitive IPv6-Address-Specific Extended Community Types</a>
+      </li>
+      <li>
+        <a href="#additional-pmsi-tunnel-attribute-flags">Additional PMSI Tunnel Attribute Flags</a>
+      </li>
+    </ul>
+    <h2><a name="transitive" id="transitive"></a>BGP Transitive Extended Community Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the high-order octet (the "Type" 
+field) of a Transitive Extended Community.
+</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="transitive.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-transitive-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0x3f</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0x8f</td>
+          <td>Reserved for Experimental Use (see [<a href="http://www.iana.org/go/rfc3692">RFC3692</a>])</td>
+        </tr>
+        <tr>
+          <td align="center">0x90-0xbf</td>
+          <td>Standards Action</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-transitive" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Transitive Two-Octet AS-Specific Extended Community 
+(Sub-Types are defined in the "Transitive Two-octet AS-Specific Extended 
+Community Sub-Types" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Transitive IPv4-Address-Specific Extended Community 
+(Sub-Types are defined in the "Transitive IPv4-Address-Specific Extended 
+Community Sub-Types" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Transitive Four-Octet AS-Specific Extended Community 
+(Sub-Types are defined in the "Transitive Four-octet AS-Specific Extended 
+Community Sub-Types" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>Transitive Opaque Extended Community 
+(Sub-Types are defined in the "Transitive Opaque Extended 
+Community Sub-Types" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>QoS Marking</td>
+          <td>[<a href="#Thomas_Martin_Knoll">Thomas_Martin_Knoll</a>]</td>
+          <td>2008-12-30</td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>CoS Capability</td>
+          <td>[<a href="#Thomas_Martin_Knoll">Thomas_Martin_Knoll</a>]</td>
+          <td>2009-05-18</td>
+        </tr>
+        <tr>
+          <td align="center">0x06</td>
+          <td>EVPN (Sub-Types are defined in the "EVPN Extended 
+Community Sub-Types" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x07</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>Flow spec redirect/mirror to IP next-hop</td>
+          <td>[<a href="http://www.iana.org/go/draft-simpson-idr-flowspec-redirect">draft-simpson-idr-flowspec-redirect</a>]</td>
+          <td>2012-09-28</td>
+        </tr>
+        <tr>
+          <td align="center">0x09-0x7f</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80</td>
+          <td>Generic Transitive Experimental Use Extended Community       
+(Sub-Types are defined in the "Generic Transitive Experimental Use Extended 
+Community Sub-Types" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x81</td>
+          <td>Generic Transitive Experimental Use Extended Community       
+        Part 2 (Sub-Types are defined in the "Generic Transitive Experimental Use Extended 
+        Community Part 2 Sub-Types" Registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7674">RFC7674</a>]</td>
+          <td>2015-08-28</td>
+        </tr>
+        <tr>
+          <td align="center">0x82</td>
+          <td>Generic Transitive Experimental Use Extended Community       
+        Part 3 (Sub-Types are defined in the "Generic Transitive Experimental Use Extended 
+        Community Part 3 Sub-Types" Registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7674">RFC7674</a>]</td>
+          <td>2015-08-28</td>
+        </tr>
+        <tr>
+          <td align="center">0x83-0x8f</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td>2012-09-28</td>
+        </tr>
+        <tr>
+          <td align="center">0x90-0xbf</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="non-transitive" id="non-transitive"></a>BGP Non-Transitive Extended Community Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the high-order octet (the "Type" 
+field) of a Non-transitive Extended Community.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="non-transitive.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-non-transitive-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x40-0x7f</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xcf</td>
+          <td>Reserved for Experimental Use (see [<a href="http://www.iana.org/go/rfc3692">RFC3692</a>])</td>
+        </tr>
+        <tr>
+          <td align="center">0xd0-0xff</td>
+          <td>Standards Action</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-non-transitive" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x40</td>
+          <td>Non-Transitive Two-Octet AS-Specific Extended Community 
+(Sub-Types are defined in the "Non-Transitive Two-octet AS-Specific Extended 
+Community Sub-Types" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x41</td>
+          <td>Non-Transitive IPv4-Address-Specific Extended Community 
+(Sub-Types are defined in the "Non-Transitive IPv4-Address-Specific Extended 
+Community Sub-Types" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x42</td>
+          <td>Non-Transitive Four-Octet AS-Specific Extended Community 
+(Sub-Types are defined in the "Non-Transitive Four-octet AS-Specific Extended 
+Community Sub-Types" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x43</td>
+          <td>Non-Transitive Opaque Extended Community 
+(Sub-Types are defined in the "Non-Transitive Opaque Extended 
+Community Sub-Types" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x44</td>
+          <td>QoS Marking</td>
+          <td>[<a href="#Thomas_Martin_Knoll">Thomas_Martin_Knoll</a>]</td>
+          <td>2008-12-30</td>
+        </tr>
+        <tr>
+          <td align="center">0x45-0x7f</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xcf</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</td>
+          <td>2012-09-28</td>
+        </tr>
+        <tr>
+          <td align="center">0xd0-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="evpn" id="evpn"></a>EVPN Extended Community Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type"
+field) of an extended community when the value of the first
+octet (the "Type" field) is 0x06.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="evpn.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-evpn-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-evpn" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>MAC Mobility</td>
+          <td>[<a href="http://www.iana.org/go/rfc7432">RFC7432</a>]</td>
+          <td>2012-07-11</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>ESI Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc7432">RFC7432</a>]</td>
+          <td>2012-07-11</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>ES-Import Route Target</td>
+          <td>[<a href="http://www.iana.org/go/rfc7432">RFC7432</a>]</td>
+          <td>2012-07-11</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>EVPN Router&#8217;s MAC Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-sajassi-l2vpn-evpn-inter-subnet-forwarding">draft-sajassi-l2vpn-evpn-inter-subnet-forwarding</a>]</td>
+          <td>2014-09-23</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Layer 2 Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-bess-evpn-vpws">draft-ietf-bess-evpn-vpws</a>]</td>
+          <td>2016-05-11</td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>E-TREE Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-bess-evpn-etree">draft-ietf-bess-evpn-etree</a>]</td>
+          <td>2016-05-11</td>
+        </tr>
+        <tr>
+          <td align="center">0x06</td>
+          <td>DF Election Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-bess-evpn-df-election">draft-ietf-bess-evpn-df-election</a>]</td>
+          <td>2016-05-11</td>
+        </tr>
+        <tr>
+          <td align="center">0x07</td>
+          <td>I-SID Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-sajassi-bess-evpn-virtual-eth-segment">draft-sajassi-bess-evpn-virtual-eth-segment</a>]</td>
+          <td>2016-05-11</td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>ND Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-snr-bess-evpn-na-flags">draft-snr-bess-evpn-na-flags</a>]</td>
+          <td>2017-01-10</td>
+        </tr>
+        <tr>
+          <td align="center">0x09-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="trans-two-octet-as" id="trans-two-octet-as"></a>Transitive Two-Octet AS-Specific Extended Community Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x00.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="trans-two-octet-as.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-trans-two-octet-as-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-trans-two-octet-as" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0x01</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Route Target</td>
+          <td>[<a href="http://www.iana.org/go/rfc4360">RFC4360</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>Route Origin</td>
+          <td>[<a href="http://www.iana.org/go/rfc4360">RFC4360</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>OSPF Domain Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc4577">RFC4577</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x06-0x07</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>BGP Data Collection</td>
+          <td>[<a href="http://www.iana.org/go/rfc4384">RFC4384</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x09</td>
+          <td>Source AS</td>
+          <td>[<a href="http://www.iana.org/go/rfc6514">RFC6514</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0a</td>
+          <td>L2VPN Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc6074">RFC6074</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0b-0x0f</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x10</td>
+          <td>Cisco VPN-Distinguisher</td>
+          <td>[<a href="#Eric_Rosen">Eric_Rosen</a>]</td>
+          <td>2012-04-10</td>
+        </tr>
+        <tr>
+          <td align="center">0x11-0x12</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x13</td>
+          <td>Route-Target Record</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-bess-service-chaining">draft-ietf-bess-service-chaining</a>]</td>
+          <td>2016-08-29</td>
+        </tr>
+        <tr>
+          <td align="center">0x14-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="non-trans-two-octet-as" id="non-trans-two-octet-as"></a>Non-Transitive Two-Octet AS-Specific Extended Community Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x40.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="non-trans-two-octet-as.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-non-trans-two-octet-as-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-non-trans-two-octet-as" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0x03</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Link Bandwidth Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-idr-link-bandwidth-00">draft-ietf-idr-link-bandwidth-00</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x05-0x7f</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80</td>
+          <td>Virtual-Network Identifier Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-drao-bgp-l3vpn-virtual-network-overlays">draft-drao-bgp-l3vpn-virtual-network-overlays</a>]</td>
+          <td>2015-09-29</td>
+        </tr>
+        <tr>
+          <td align="center">0x81-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="trans-four-octet-as" id="trans-four-octet-as"></a>Transitive Four-Octet AS-Specific Extended Community Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x02.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="trans-four-octet-as.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-trans-four-octet-as-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-trans-four-octet-as" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0x01</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Route Target</td>
+          <td>[<a href="http://www.iana.org/go/rfc5668">RFC5668</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>Route Origin</td>
+          <td>[<a href="http://www.iana.org/go/rfc5668">RFC5668</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Generic (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-idr-as4octet-extcomm-generic-subtype">draft-ietf-idr-as4octet-extcomm-generic-subtype</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>OSPF Domain Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc4577">RFC4577</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x06-0x07</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>BGP Data Collection</td>
+          <td>[<a href="http://www.iana.org/go/rfc4384">RFC4384</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x09</td>
+          <td>Source AS</td>
+          <td>[<a href="http://www.iana.org/go/rfc6514">RFC6514</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0a-0x0f</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x10</td>
+          <td>Cisco VPN Identifier</td>
+          <td>[<a href="#Eric_Rosen">Eric_Rosen</a>]</td>
+          <td>2012-04-10</td>
+        </tr>
+        <tr>
+          <td align="center">0x11-0x12</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x13</td>
+          <td>Route-Target Record</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-bess-service-chaining">draft-ietf-bess-service-chaining</a>]</td>
+          <td>2016-08-29</td>
+        </tr>
+        <tr>
+          <td align="center">0x14-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="non-trans-four-octet-as" id="non-trans-four-octet-as"></a>Non-Transitive Four-Octet AS-Specific Extended Community Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x42.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="non-trans-four-octet-as.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-non-trans-four-octet-as-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-non-trans-four-octet-as" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0x03</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Generic (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-idr-as4octet-extcomm-generic-subtype">draft-ietf-idr-as4octet-extcomm-generic-subtype</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x05-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="trans-ipv4" id="trans-ipv4"></a>Transitive IPv4-Address-Specific Extended Community Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x01.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="trans-ipv4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-trans-ipv4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-trans-ipv4" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Unassigned (deprecated)</td>
+          <td></td>
+          <td>2014-01-08</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Route Target</td>
+          <td>[<a href="http://www.iana.org/go/rfc4360">RFC4360</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>Route Origin</td>
+          <td>[<a href="http://www.iana.org/go/rfc4360">RFC4360</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>OSPF Domain Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc4577">RFC4577</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x06</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x07</td>
+          <td>OSPF Route ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4577">RFC4577</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x08-0x09</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0a</td>
+          <td>L2VPN Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc6074">RFC6074</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0b</td>
+          <td>VRF Route Import</td>
+          <td>[<a href="http://www.iana.org/go/rfc6514">RFC6514</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0c</td>
+          <td>Flow-spec Redirect to IPv4</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-idr-flowspec-redirect">draft-ietf-idr-flowspec-redirect</a>]</td>
+          <td>2016-03-22</td>
+        </tr>
+        <tr>
+          <td align="center">0x0d-0x0f</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x10</td>
+          <td>Cisco VPN-Distinguisher</td>
+          <td>[<a href="#Eric_Rosen">Eric_Rosen</a>]</td>
+          <td>2012-04-10</td>
+        </tr>
+        <tr>
+          <td align="center">0x11</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x12</td>
+          <td>Inter-Area P2MP Segmented Next-Hop</td>
+          <td>[<a href="http://www.iana.org/go/rfc7524">RFC7524</a>]</td>
+          <td>2014-01-08</td>
+        </tr>
+        <tr>
+          <td align="center">0x13</td>
+          <td>Route-Target Record</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-bess-service-chaining">draft-ietf-bess-service-chaining</a>]</td>
+          <td>2016-08-29</td>
+        </tr>
+        <tr>
+          <td align="center">0x14-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="non-trans-ipv4" id="non-trans-ipv4"></a>Non-Transitive IPv4-Address-Specific Extended Community Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x41.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="non-trans-ipv4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-non-trans-ipv4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-non-trans-ipv4" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="trans-opaque" id="trans-opaque"></a>Transitive Opaque Extended Community Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x03.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="trans-opaque.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-trans-opaque-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-trans-opaque" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Unassigned (deprecated)</td>
+          <td></td>
+          <td>2007-02-20</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Cost Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-idr-custom-decision">draft-ietf-idr-custom-decision</a>]</td>
+          <td>2014-07-15</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Unassigned (deprecated)</td>
+          <td></td>
+          <td>2007-02-20</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>CP-ORF</td>
+          <td>[<a href="http://www.iana.org/go/rfc7543">RFC7543</a>]</td>
+          <td>2014-09-24</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Extranet Source Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/rfc7900">RFC7900</a>]</td>
+          <td>2016-04-28</td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>Extranet Separation Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/rfc7900">RFC7900</a>]</td>
+          <td>2016-04-28</td>
+        </tr>
+        <tr>
+          <td align="center">0x06</td>
+          <td>OSPF Route Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc4577">RFC4577</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x07</td>
+          <td>Additional PMSI Tunnel Attribute Flags</td>
+          <td>[<a href="http://www.iana.org/go/rfc7902">RFC7902</a>]</td>
+          <td>2016-05-12</td>
+        </tr>
+        <tr>
+          <td align="center">0x08-0x0a</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0b</td>
+          <td>Color Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/rfc5512">RFC5512</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0c</td>
+          <td>Encapsulation Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/rfc5512">RFC5512</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0d</td>
+          <td>Default Gateway</td>
+          <td>[<a href="#Yakov_Rekhter">Yakov_Rekhter</a>]</td>
+          <td>2012-07-10</td>
+        </tr>
+        <tr>
+          <td align="center">0x0e</td>
+          <td>Point-to-Point-to-Multipoint (PPMP) Label</td>
+          <td>[<a href="#Rishabh_Parekh">Rishabh_Parekh</a>]</td>
+          <td>2016-01-19</td>
+        </tr>
+        <tr>
+          <td align="center">0x0f-0x13</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x14</td>
+          <td>Consistent Hash Sort Order</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-bess-service-chaining">draft-ietf-bess-service-chaining</a>]</td>
+          <td>2016-05-11</td>
+        </tr>
+        <tr>
+          <td align="center">0x15-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="non-trans-opaque" id="non-trans-opaque"></a>Non-Transitive Opaque Extended Community Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x43.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="non-trans-opaque.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-non-trans-opaque-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-non-trans-opaque" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>BGP Origin Validation State Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-sidr-origin-validation-signaling-11">RFC-ietf-sidr-origin-validation-signaling-11</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Cost Community</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-idr-custom-decision">draft-ietf-idr-custom-decision</a>]</td>
+          <td>2014-07-15</td>
+        </tr>
+        <tr>
+          <td align="center">0x02-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="bgp-extended-communities-10" id="bgp-extended-communities-10"></a>Generic Transitive Experimental Use Extended Community Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x80.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="bgp-extended-communities-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-bgp-extended-communities-10-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-bgp-extended-communities-10" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>OSPF Route Type (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4577">RFC4577</a>]</td>
+          <td>2014-08-01</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>OSPF Router ID (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4577">RFC4577</a>]</td>
+          <td>2014-08-01</td>
+        </tr>
+        <tr>
+          <td align="center">0x02-0x04</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>OSPF Domain Identifier (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4577">RFC4577</a>]</td>
+          <td>2014-08-01</td>
+        </tr>
+        <tr>
+          <td align="center">0x06</td>
+          <td>Flow spec traffic-rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc5575">RFC5575</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x07</td>
+          <td>Flow spec traffic-action (Use of the "Value" field is defined in the "Traffic Action Fields" registry)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5575">RFC5575</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>Flow spec redirect AS-2byte format</td>
+          <td>[<a href="http://www.iana.org/go/rfc5575">RFC5575</a>][<a href="http://www.iana.org/go/rfc7674">RFC7674</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x09</td>
+          <td>Flow spec traffic-remarking</td>
+          <td>[<a href="http://www.iana.org/go/rfc5575">RFC5575</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0a</td>
+          <td>Layer2 Info Extended Community</td>
+          <td>[<a href="http://www.iana.org/go/rfc4761">RFC4761</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0b</td>
+          <td>E-Tree Info</td>
+          <td>[<a href="http://www.iana.org/go/rfc7796">RFC7796</a>]</td>
+          <td>2014-11-24</td>
+        </tr>
+        <tr>
+          <td align="center">0x0c-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="generic-transitive-experimental-part2" id="generic-transitive-experimental-part2"></a>Generic Transitive Experimental Use Extended Community Part 2 Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7674">RFC7674</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x81.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="generic-transitive-experimental-part2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-generic-transitive-experimental-part2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-generic-transitive-experimental-part2" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0x07</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>Flow spec redirect IPv4 format</td>
+          <td>[<a href="http://www.iana.org/go/rfc7674">RFC7674</a>]</td>
+          <td>2015-08-28</td>
+        </tr>
+        <tr>
+          <td align="center">0x09-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="generic-transitive-experimental-part3" id="generic-transitive-experimental-part3"></a>Generic Transitive Experimental Use Extended Community Part 3 Sub-Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7674">RFC7674</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the second octet (the "Sub-Type" 
+field) of an extended community when the value of the first 
+octet (the "Type" field) is 0x82.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="generic-transitive-experimental-part3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-generic-transitive-experimental-part3-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0xbf</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0-0xff</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-generic-transitive-experimental-part3" class="sortable">
+      <thead>
+        <tr>
+          <th>Sub-Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0x07</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>Flow spec redirect AS-4byte format</td>
+          <td>[<a href="http://www.iana.org/go/rfc7674">RFC7674</a>]</td>
+          <td>2015-08-28</td>
+        </tr>
+        <tr>
+          <td align="center">0x09-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="traffic-action-fields" id="traffic-action-fields"></a>Traffic Action Fields</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5575">RFC5575</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bit 0 is the most significant, or leftmost bit of the six-byte
+field; bit 47 is the least significant, or rightmost bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="traffic-action-fields.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-traffic-action-fields" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">47</td>
+          <td>Terminal Action</td>
+          <td>[<a href="http://www.iana.org/go/rfc5575">RFC5575</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">46</td>
+          <td>Sample</td>
+          <td>[<a href="http://www.iana.org/go/rfc5575">RFC5575</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0-45</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="trans-ipv6" id="trans-ipv6"></a>Transitive IPv6-Address-Specific Extended Community Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the two high-order octets of an 
+IPv6-Address-Specific Extended Community.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="trans-ipv6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-trans-ipv6" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0000-0x0001</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0002</td>
+          <td>Route Target</td>
+          <td>[<a href="http://www.iana.org/go/rfc5701">RFC5701</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0003</td>
+          <td>Route Origin</td>
+          <td>[<a href="http://www.iana.org/go/rfc5701">RFC5701</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0004</td>
+          <td>OSPFv3 Route Attributes (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6565">RFC6565</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0005-0x000a</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x000b</td>
+          <td>VRF Route Import</td>
+          <td>[<a href="http://www.iana.org/go/rfc6515">RFC6515</a>][<a href="http://www.iana.org/go/rfc6514">RFC6514</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x000c</td>
+          <td>Flow-spec Redirect to IPv6</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-idr-flowspec-redirect-ip">draft-ietf-idr-flowspec-redirect-ip</a>]</td>
+          <td>2016-03-22</td>
+        </tr>
+        <tr>
+          <td align="center">0x000d-0x000f</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0010</td>
+          <td>Cisco VPN-Distinguisher</td>
+          <td>[<a href="#Eric_Rosen">Eric_Rosen</a>]</td>
+          <td>2012-04-10</td>
+        </tr>
+        <tr>
+          <td align="center">0x0011</td>
+          <td>UUID-based Route Target</td>
+          <td>[<a href="#Dhananjaya_Rao">Dhananjaya_Rao</a>]</td>
+          <td>2013-04-30</td>
+        </tr>
+        <tr>
+          <td align="center">0x0012</td>
+          <td>Inter-Area P2MP Segmented Next-Hop</td>
+          <td>[<a href="http://www.iana.org/go/rfc7524">RFC7524</a>]</td>
+          <td>2014-01-08</td>
+        </tr>
+        <tr>
+          <td align="center">0x0013-0x00ff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="non-trans-ipv6" id="non-trans-ipv6"></a>Non-Transitive IPv6-Address-Specific Extended Community Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7153">RFC7153</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This registry contains values of the two high-order octets of an 
+IPv6-Address-Specific Extended Community.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="non-trans-ipv6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-non-trans-ipv6" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x4000-0x40ff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="additional-pmsi-tunnel-attribute-flags" id="additional-pmsi-tunnel-attribute-flags"></a>Additional PMSI Tunnel Attribute Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7902">RFC7902</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="additional-pmsi-tunnel-attribute-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-additional-pmsi-tunnel-attribute-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Flag</th>
+          <th>Name</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-47</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Dhananjaya_Rao" id="Dhananjaya_Rao">[Dhananjaya_Rao]</a>
+          </td>
+          <td>Dhananjaya Rao</td>
+          <td>
+            <a href="mailto:dhrao&amp;cisco.com">mailto:dhrao&amp;cisco.com</a>
+          </td>
+          <td>2013-04-30</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Eric_Rosen" id="Eric_Rosen">[Eric_Rosen]</a>
+          </td>
+          <td>Eric Rosen</td>
+          <td>
+            <a href="mailto:erosen&amp;cisco.com">mailto:erosen&amp;cisco.com</a>
+          </td>
+          <td>2012-04-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Rishabh_Parekh" id="Rishabh_Parekh">[Rishabh_Parekh]</a>
+          </td>
+          <td>Rishabh Parekh</td>
+          <td>
+            <a href="mailto:rishabhp&amp;gmail.com">mailto:rishabhp&amp;gmail.com</a>
+          </td>
+          <td>2016-01-19</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Thomas_Martin_Knoll" id="Thomas_Martin_Knoll">[Thomas_Martin_Knoll]</a>
+          </td>
+          <td>Thomas Martin Knoll</td>
+          <td>
+            <a href="mailto:thomas.m.knoll&amp;gmail.com">mailto:thomas.m.knoll&amp;gmail.com</a>
+          </td>
+          <td>2015-01-25</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Yakov_Rekhter" id="Yakov_Rekhter">[Yakov_Rekhter]</a>
+          </td>
+          <td>Yakov Rekhter</td>
+          <td>
+            <a href="mailto:yakov&amp;juniper.net">mailto:yakov&amp;juniper.net</a>
+          </td>
+          <td>2012-07-10</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

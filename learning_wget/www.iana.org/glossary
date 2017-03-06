@@ -1,0 +1,670 @@
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Glossary</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+<div id="main_right">
+
+
+<h1>Glossary of terms</h1>
+
+	<p>
+<dl class="glossary">
+
+	<dt>A record</dt>
+	<dd>The representation of an IPv4 address in the DNS system.</dd>
+	
+	<dt>AAAA record</dt>
+	<dd>The representation of an IPv6 address in the DNS system.</dd>
+</dl>
+	
+	<p> 
+		<dt>ACE</dt>
+		<dd>see A-label.</dd>
+
+		<dt>A-label</dt>
+		<dd>The ASCII-compatible encoded (ACE) representation of an internationalised domain name, i.e. how it is transmitted internally within the DNS protocol. A-labels always commence the with the prefix “xn--”. Contrast with U-label.</dd>
+
+		<dt>APIPA</dt>
+		<dd>A subcategory of private IP address. See Private IP Addresses.</dd>
+
+		<dt>AREG</dt>
+		<dd>A subset of IRIS for performing registration lookups on IP addresses.</dd>
+
+		<dt>.ARPA</dt>
+		<dd>Originally a reference to the US Government agency that managed some of the Internet’s initial development, now a top-level domain used solely for machine-readable use by computers for certain protocols — such as for reverse IP address lookups, and ENUM. The domain is not designed for general registrations. We manage .ARPA in conjunction with the Internet Architecture Board.</dd>
+
+		<dt>ASCII (American Standard Code for Information Interchange)</dt>
+		<dd>The standard for transmitting English (or “Latin”) letters over the Internet. DNS was originally limited to only Latin characters because it uses ASCII as its encoding format, although this has been expanded using Internationalised Domain Names for Applications. </dd>
+
+		<dt>ASCII-compatible encoding</dt>
+		<dd>see A-label.</dd>
+
+		<dt>ASN, AS number</dt>
+		<dd>see Autonomous System Number.</dd>
+
+		<dt>authoritative name server</dt>
+		<dd>a domain name server configured to host the official record of the contents of a DNS zone. Each domain name must have a set of these so computers on the Internet can find out the contents of that domain. The set of authoritative name servers for any given domain must be configured as NS records in the parent domain.</dd>
+
+		<dt>authority</dt>
+		<dd>see authoritative name server.</dd>
+
+		<dt>Automatic Private IP Addresses (APIPA)</dt>
+		<dd>A subcategory of private IP address that is automatically assigned, as per RFC 3927. See also Private IP addresses.</dd>
+
+		<dt>autonomous system number (AS number, ASN)</dt>
+		<dd>A number used by Internet routing protocols to uniquely identify the routing policy of a particular network operator. They can be considered to be similar to a ‘postcode’ used for physical mail. They are allocated to network operators via regional Internet registries.</dd>
+
+		<dt>bundle</dt>
+		<dd>see variant bundle.</dd>
+
+		<dt>caching name server</dt>
+		<dd>a domain name server that remembers the results of previous lookups in a cache to speed future lookups. Usually in combination with recursive name server functionality.</dd>
+
+		<dt>caching resolver</dt>
+		<dd>the combination of a recursive name server and a caching name server.</dd>
+
+		<dt>ccNSO</dt>
+		<dd>see Country-code Name Supporting Organisation.</dd>
+
+		<dt>ccTLD</dt>
+		<dd>see country-code top-level domain.</dd>
+
+		<dt>chain of trust</dt>
+		<dd>A property of an Internet resource where the delegation of responsibility from one party to another can be verified because there is a chain of custody that can be cryptographically verified using electronic certificates. To verify this chain of trust, the chain must be valid and unbroken all the way from a known trust anchor to the resource in question.</dd>
+
+		<dt>clandestine redelegation</dt>
+		<dd>The act of performing a redelegation by changing the practical details (i.e. the contact details and/or name server records) of a top-level domain subversively, rather than applying for a redelegation using proper procedure.</dd>
+
+		<dt>Country-code top-level domain (ccTLD)</dt>
+		<dd>A class of top-level domains only assignable to represent countries listed in the ISO 3166-1 standard. At present these are two-letter codes like “.UK”, “.DE” etc., however in the future it is expected there will be non-Latin equivalents also available. Much of the policy-making for individual country-code top-level domains is vested with a local sponsoring organisation, as opposed to other top-level domains where ICANN sets the policy. It is a requirement that ccTLDs are operated within the country they are designated so appropriate local laws, governments etc. have a say in how the domain is run.</dd>
+
+		<dt>Country-code Name Supporting Organisation (ccNSO)</dt>
+		<dd>A component of ICANN’s policy development forums (a “constituency”) that is responsible for discussing and developing policy relating to how ccTLDs are delegated.</dd>
+
+		<dt>CRISP</dt>
+		<dd>see Cross-Registry Information Service Protocol.</dd>
+
+		<dt>Cross-Registry Information Service Protocol (CRISP)</dt>
+		<dd>The name of the working group at the IETF that developed the Internet Registry Information Service (IRIS), a next-generation WHOIS protocol replacement.</dd>
+
+		<dt>DCHK</dt>
+		<dd>A subset of IRIS for performing checks on whether a domain name is available to register. It is more lightweight, and has less privacy implications, than DREG as it does not transmit registration data other than simple availability.</dd>
+
+		<dt>delegation</dt>
+		<dd>Any transfer of responsibility to another entity. In the domain name system, one name server can provide pointers to more useful name servers for a given request by returning NS records. On an administrative level, sub-domains are delegated to other entities. We also delegates IP address blocks to regional Internet registries.</dd>
+
+		<dt>DNS</dt>
+		<dd>See Domain Name System.</dd>
+
+		<dt>DNSSEC</dt>
+		<dd>A technology that can be added to the Domain Name System to verify the authenticity of its data. The works by adding verifiable chains of trust that can be validated to the domain name system.</dd>
+
+		<dt>DNS zone</dt>
+		<dd>a section of the Domain Name System name space. By default, the Root Zone contains all domain names, however in practice sections of this are delegated into smaller zones in a hierarchical fashion. For example, the “.COM” zone would refer to the portion of the DNS delegated that ends in “.COM”.</dd>
+
+		<dt>domain name</dt>
+		<dd>A unique identifier with a set of properties attached to it so that computers can perform conversions. A typical domain name is “icann.org”. Most commonly the property attached is an IP address, like “208.77.188.103”, so that computers can convert the domain name into an IP address. However the DNS is used for many other purposes. The domain name may also be a delegation, which transfers responsibility of all sub-domains within that domain to another entity.</dd>
+
+		<dt>domain name label</dt>
+		<dd>a constituent part of a domain name. The labels of domain names are connected by dots. For example, “www.iana.org" contains three labels — “www”, “iana” and “org”. For internationalised domain names, the labels may be referred to as A-labels and U-labels.</dd>
+
+		<dt>domain name registrar</dt>
+		<dd>An entity offering domain name registration services, as an agent between registrants and registries. Usually multiple registrars exist who compete with each other, and are accredited. For most generic top-level domains, domain name registrars are accredited by ICANN.</dd>
+
+		<dt>domain name registry</dt>
+		<dd>A registry tasked with managing the contents of a DNS zone, by giving registrations of sub-domains to registrants.</dd>
+
+		<dt>domain name server</dt>
+		<dd>A general term for a system on the Internet that answers requests to convert domain names into something else. These can be subdivided into authoritative name servers, which store the database for a particular DNS zone; as well as recursive name servers and caching name servers.</dd>
+
+		<dt>Domain Name System (DNS)</dt>
+		<dd>The global hierarchical system of domain names. A global distributed database contains the information to perform the domain name conversations, and the most central part of that database, known as the root zone is coordinated by us. </dd>
+
+		<dt>Domain Name System Root</dt>
+		<dd>see Root Zone.</dd>
+
+		<dt>dot [string]</dt>
+		<dd>common way of referring to a specific top-level domain. For example “dot info” refers to the “INFO” top-level domain. Written in text as “.INFO”.</dd>
+
+		<dt>DREG</dt>
+		<dd>A subset of IRIS for performing registration lookups on domain names.</dd>
+
+		<dt>eIANA</dt>
+		<dd>see RZM Automation.</dd>
+
+		<dt>E.164</dt>
+		<dd>see ENUM.</dd>
+
+		<dt>ENUM</dt>
+		<dd>A system of mapping telephone numbers (formally known as E.164 numbers after the telephone numbering standard) to Internet resources. </dd>
+
+		<dt>EPP</dt>
+		<dd>see Extensible Provisioning Protocol.</dd>
+
+		<dt>Extensible Markup Language</dt>
+		<dd>see XML.</dd>
+
+		<dt>Extensible Provisioning Protocol (EPP)</dt>
+		<dd>A protocol used for electronic communication between a registrar and a registry for provisioning domain names.</dd>
+
+		<dt>first come, first served (FCFS)</dt>
+		<dd>The principle of allocation of most Internet resources. It means that that assuming you meet any relevant qualifying criteria (such as meeting policy requirements, including possibly demonstrating need, and paying any relevant fees), you are allowed to register a given resource if you are the first one to lay claim to it. Most IANA registries are administered on a “first come, first served” basis.</dd>
+
+		<dt>fully-qualified domain name (FQDN)</dt>
+		<dd>A complete domain name including all its components, i.e. “www.icann.org" as opposed to “www”.</dd>
+
+		<dt>GAC Principles</dt>
+		<dd>A document, formally known as the Principles for the Delegation and Administration of ccTLDs. This document was developed by the ICANN Governmental Advisory Committee and documents a set of principles agreed by governments on how ccTLDs should be delegated and run. It is one of a number of documents considered when ICANN evaluates a ccTLD delegation request.</dd>
+
+		<dt>generic top-level domains (gTLDs)</dt>
+		<dd>A class of top-level domains that are used for general purposes, where ICANN has a strong role in coordination (as opposed to country-code top-level domains, which are managed locally). For policy reasons, these are usually subdivided into sponsored top-level domains and unsponsored top-level domains.</dd>
+
+		<dt>glue record</dt>
+		<dd>An explicit notation of the IP address of a name server, placed in a zone outside of the zone that would ordinarily contain that information. This is required because in some circumstances it would be impossible to find the name server otherwise, such as when the name server is in-bailiwick. All name servers are in-bailiwick of the Root Zone, therefore glue records is required for all name servers listed there. Also referred to as just “glue”.</dd>
+
+		<dt>hints file</dt>
+		<dd>A file stored in DNS software (i.e. recursive name servers) that tells it where the DNS root servers are located. Because the DNS is used to self-discover where its servers are located, this file is used to boot-strap the process when the DNS software knows nothing.</dd>
+
+		<dt>hostname</dt>
+		<dd>The name of a computer. Typically the left-most part of a fully-qualified domain name. The rules for what is a valid hostname are more strict than for domain names, and this can impact registration policy in some circumstances. The application of hostname rules is sometimes called “STD3” rules. Defined in technical standard RFC 1123.</dd>
+
+		<dt>IAB</dt>
+		<dd>See Internet Architecture Board.</dd>
+
+		<dt>IANA</dt>
+		<dd>See Internet Assigned Numbers Authority.</dd>
+
+		<dt>IANA Considerations</dt>
+		<dd>A component of RFCs that refer to any work required by us to maintain registries for a specific protocol.</dd>
+
+		<dt>IANA Staff</dt>
+		<dd>see Internet Assigned Numbers Authority.</dd>
+
+		<dt>ICANN</dt>
+		<dd>See Internet Corporation for Assigned Names and Numbers.</dd>
+
+		<dt>ICP-1</dt>
+		<dd>A document written by our staff in 1999 describing how they manage top-level domains. Compare RFC 1591.</dd>
+
+		<dt>ICP-2</dt>
+		<dd>A document describing how new regional Internet registries may be created.</dd>
+
+		<dt>ICP-3</dt>
+		<dd>A document describing the requirement for a unique, authoritative DNS root zone. See also RFC 2826.</dd>
+
+		<dt>IDN</dt>
+		<dd>See Internationalised Domain Name.</dd>
+
+		<dt>IDNA</dt>
+		<dd>See Internationalised Domain Name.</dd>
+
+		<dt>IDN Table</dt>
+		<dd>A list of permissible Unicode code points allowed for registration in domain names by a registry. Usually, these are applied on a language or script basis.</dd>
+
+		<dt>IDN Practices Repository</dt>
+		<dd>A repository on our website where top-level domain registries contribute the IDN tables they use. This allows other registries to re-use the tables if they wish.</dd>
+
+		<dt>IESG</dt>
+		<dd>See Internet Engineering Steering Group.</dd>
+
+		<dt>IETF</dt>
+		<dd>See Internet Engineering Task Force.</dd>
+
+		<dt>in-bailiwick</dt>
+		<dd>when a domain name is a sub-domain of another, used for identifying whether a glue record is required. For example, “iana.org” is in the bailiwick of “org”. All domains are considered in-bailiwick of the DNS Root Zone.</dd>
+
+		<dt>infrastructure domain, infrastructure top-level domain</dt>
+		<dd>A term sometime used for “.ARPA” and its sub-domains, as it does not fit into the other categorisations of top-level domains.</dd>
+
+		<dt>internationalised domain name (IDN)</dt>
+		<dd>A domain name that uses characters outside the 37 characters allowed by the “LDH rule”, using a system known as IDNA. This allows for domain names in non-Latin scripts, such as Arabic, Japanese or Cyrillic.</dd>
+
+		<dt>Internationalised Domain Names in Applications (IDNA)</dt>
+		<dd>The Internet standard defining the encoding of internationalised domain names. The “in Applications” is in reference to the way the standard works, as the conversion happens in application software rather than in the network, and therefore does not affect the wire format of the DNS. The domains are internally coded in a special representation using the prefix “xn--”, known as an A-label. Described in Internet Standard RFC 3490.</dd>
+
+		<dt>Internet Architecture Board (IAB)</dt>
+		<dd>The oversight body of the IETF, responsible for overall strategic direction of Internet standardisation efforts. The IAB works with us on how the protocol parameter registries should be managed. The IAB is an activity of the Internet Society, a non-profit organisation.</dd>
+
+		<dt>Internet Assigned Numbers Authority (IANA)</dt>
+		<dd>A suite of various Internet coordination functions, relating to ensuring globally-unique protocol parameter assignment, including management of the root of the Domain Name System and IP Address Space.</dd>
+
+		<dt>Internet Coordination Policy (ICP)</dt>
+		<dd>A series of documents created by ICANN between 1999 and 2000 describing management procedures. Three such documents were published before the numbering system stopped being used. Subsequent ICANN publications have not been given ICP numbers.</dd>
+
+		<dt>Internet Engineering Steering Group (IESG)</dt>
+		<dd>The committee of area experts of the IETF’s areas of work, that acts as its board of management.</dd>
+
+		<dt>Internet Engineering Task Force (IETF)</dt>
+		<dd>The key Internet standardisation forum. The standards developed within the IETF are published as RFCs. Our protocol parameter registries are closely aligned with the work of the IETF.</dd>
+
+		<dt>.INT</dt>
+		<dd>A top-level domain devoted solely to international treaty organisations that have independent legal personality. Such organisations are not governed by the laws of any specific country, rather by mutual agreement between multiple countries. We maintain the domain registry for this domain.</dd>
+
+		<dt>Internet Protocol (IP)</dt>
+		<dd>The fundamental protocol that is used to transmit information over the Internet. Data transmitted over the Internet is transmitted using the Internet Protocol, usually in conjunction with a more specialised protocol. Computers are uniquely identified on the Internet using an IP Address.</dd>
+
+		<dt>Internet Protocol address</dt>
+		<dd>see IP Address. </dd>
+
+		<dt>Internet Registry Information Service (IRIS)</dt>
+		<dd>A sophisticated protocol for looking up registration data. It is designed to supplant the WHOIS protocol, by offering many technological improvements such as internationalisation, access control, automatic server discovery and structured formatting; however to date has not been adopted in any significant way. Documented in technical standard RFC 3981 and others.</dd>
+
+		<dt>Internet Telephony Administrative Domain (ITAD)</dt>
+		<dd>A unique numbering system used by Telephone Routing over Internet Protocol (TRIP) to label phone services within an organisation. A company may apply for an ITAD number to use in numbering systems without conflicting with other companies and users. See RFC 3219.</dd>
+
+		<dt>Interim Trust Anchor Repository (ITAR)</dt>
+		<dd>A former service whereby the trust anchors for top-level domains can be listed separately from the DNS root zone. This was a temporary measure due to the inability to use DNSSEC to sign the root zone.</dd>
+
+		<dt>Internet standard</dt>
+		<dd>see protocol.</dd>
+
+		<dt>IP</dt>
+		<dd>see Internet Protocol.</dd>
+
+		<dt>IP address</dt>
+		<dd>A unique identifier for a device on the Internet. The identifier is used to accurately route Internet traffic to that device. IP addresses must be unique on the global Internet, although some are re-used within private networks using a system of private IP addresses and network address translation.</dd>
+
+		<dt>IP address block</dt>
+		<dd>A range of IP addresses that is assigned in a contiguous block. Usually the size of the range is described as the number of binary “bits” masked by the allocation. For example a “slash 24” or “/24” refers to a block of 256 IP addresses in IPv4.</dd>
+
+		<dt>IP address Space</dt>
+		<dd>The entire range of conceivable IP addresses. Managed by us, and generally delegated in blocks to Regional Internet Registries.</dd>
+
+		<dt>IPv4</dt>
+		<dd>Internet Protocol version 4. Refers to the version of Internet protocol that supports 32-bit IP addresses. This allows for approximately 4 billion unique IP addresses, which is not enough to cope with projected Internet demand in the next 5-10 years. Therefore, a new protocol called IPv6 has been developed that increases the number of possible IP addresses substantially.</dd>
+
+		<dt>IPv6</dt>
+		<dd>Internet Protocol version 6. Refers to the version of Internet protocol that supports 128-bit IP addresses. This protocol is not yet widely deployed, but allows for orders-of-magnitude more IP addresses than the more common IPv4 protocol.</dd>
+
+		<dt>IRIS</dt>
+		<dd>See Internet Registry Information Service</dd>
+
+		<dt>ISO</dt>
+		<dd>International Organisation for Standardisation. An international organisation comprised mostly of national standardisation agencies. </dd>
+
+		<dt>ISO 3166</dt>
+		<dd>A suite of international standards for labelling countries, territories, sub-national entities and former countries. Most notable, Part 1 of ISO 3166 (aka ISO 3166-1) is used to determine country-codes for top-level domains.</dd>
+
+		<dt>ISO 3166-1</dt>
+		<dd>A part of the ISO 3166 suite of standards describing two and three letters codes that represent countries. The two letter codes in ISO 3166-1 are used to determine the domains used for country-code top-level domains.</dd>
+
+		<dt>ISO 3166 Maintenance Agency (ISO 3166/MA)</dt>
+		<dd>The agency of ISO tasked with maintaining the ISO 3166 standard. It is responsible for any updates, for example, when a country is created or ceases to exist.</dd>
+
+		<dt>ITAD</dt>
+		<dd>See Internet Telephony Administrative Domain.</dd>
+
+		<dt>ITAR</dt>
+		<dd>See Interim Trust Anchor Repository.</dd>
+
+		<dt>Jon Postel</dt>
+		<dd>see Postel, Jon.</dd>
+
+		<dt>label</dt>
+		<dd>see domain name label.</dd>
+
+		<dt>language table</dt>
+		<dd>see IDN table.</dd>
+
+		<dt>Letters-Digits-Hyphen (LDH)</dt>
+		<dd>The set of permissable characters in a domain label, when applying hostname rules.</dd>
+
+		<dt>local Internet community</dt>
+		<dd>The community of Internet users within a country who benefit from the country’s top-level domain. Country-code top-level domains are delegated to sponsoring organisations to operate domains in the best interests of this community, particularly by implementing policies the community has developed.</dd>
+
+		<dt>MIME type</dt>
+		<dd>A formalised text string that identifies the type of a file that is included in the headers of an email or web transmission. We maintain the registry of MIME types.</dd>
+
+		<dt>name server</dt>
+		<dd>See domain name server.</dd>
+
+		<dt>NAT</dt>
+		<dd>see Network Address Translation.</dd>
+
+		<dt>network address translation (NAT)</dt>
+		<dd>A system of using private IP addresses within an internal network (such as within a home, and office, or even within an ISP), and then having those numbers converted into a real IP address when Internet traffic leaves that network using a specialised router. This is commonly used within homes, for example, so that users do not have to apply for an extra IP address each time they connect a device to the network. It is very similar to using “extension numbers” within an office telephone system.</dd>
+
+		<dt>NS record</dt>
+		<dd>a type of record in a DNS zone that signifies part of that zone is delegated to a different set of authoritative name servers. Operators of domain names must have their authoritative name servers correctly listed in the parent domain.</dd>
+
+		<dt>number resources</dt>
+		<dd>Used to describe the hierarchically assigned number resources used for Internet routing, namely IP addresses and autonomous system numbers. These are usually distributed through regional Internet registries.</dd>
+
+		<dt>object identifier </dt>
+		<dd>see Private Enterprise Number.</dd>
+
+		<dt>OID</dt>
+		<dd>object identifier. See Private Enterprise Number.</dd>
+
+		<dt>parent domain</dt>
+		<dd>the domain above a domain in the DNS hierarchy. For all top-level domains, the Root Zone is the parent domain. The Root Zone has no parent domain as it is as the top of the hierarchy. Opposite of sub-domain.</dd>
+
+		<dt>PDP</dt>
+		<dd>See Policy Development Process.</dd>
+
+		<dt>PEN</dt>
+		<dd>see Private Enterprise Number. </dd>
+
+		<dt>Policy Development Process (PDP)</dt>
+		<dd>The formal policy creation process employed by ICANN by a number of its constituencies.</dd>
+
+		<dt>port number</dt>
+		<dd>A number used for identifying the type of Internet traffic being transmitted between two computers over the Internet. For example, the web uses port 80, DNS uses port 53, and email uses port 25. We assigns these numbers, and it is one of the more high profile protocol registries we maintain.</dd>
+
+		<dt>Postel, Jon</dt>
+		<dd>The progenitor of the IANA functions. A computer scientist responsible for our operations until 1998, initially individually and later with other staff within the University of Southern California. He was also responsible for the RFC Editor.</dd>
+
+		<dt>Principles for the Delegation and Administration of ccTLDs</dt>
+		<dd>See GAC Principles.</dd>
+
+		<dt>private enterprise numbers (PENs)</dt>
+		<dd>A unique numbering system used by several different Internet protocols (such as SNMP and LDAP) that use Abstract Notation Syntax One (ASN.1). It can be used to label services within an organisation. A company may apply for a private enterprise number to use these numbering systems without conflicting with other companies and users. A subset of numbers known as an Object Identifiers, or OIDs.</dd>
+
+		<dt>private IP addresses</dt>
+		<dd>A set of IP addresses only used within private networks, and therefore not reachable from the global Internet. Commonly used within home or office networks in conjuction with network address translation, which converts private IP addresses into a valid IP address when data leaves the local network. We maintain some special ranges of IP addresses solely for use as private IP addresses, as described in technical standards RFC 1918 and 3927.</dd>
+
+		<dt>protocol</dt>
+		<dd>Any form of inter-computer communication that has been standardised to ensure computers can communicate to one another. Internet protocols are usually standardised in RFCs.</dd>
+
+		<dt>protocol assignments</dt>
+		<dd>The assignment of protocol parameters by us.</dd>
+
+		<dt>protocol parameters</dt>
+		<dd> Unique systems of numbering or encoding used by a protocols that must be consistently applied for the protocols to be interoperable. The global unique assignment of protocol parameters is a service we provide.</dd>
+
+		<dt>protocol registry</dt>
+		<dd>An individual protocol parameter registry managed by us, usually tied to a specific Internet standard.</dd>
+
+		<dt>PTR record</dt>
+		<dd>The representation of a IP address to domain name mapping in the DNS system.</dd>
+
+		<dt>recursive name server</dt>
+		<dd>A domain name server configured to perform DNS lookups on behalf of other computers. This is often configured at corporate network boundaries and ISPs for their network customers to use. As an individual domain name lookup can often involve multiple queries to different servers, these name servers do these iterative lookups and only provide back to the computer the final answer. They are often combined with the functions of a caching name server to improve network performance, and therefore are also known as caching resolvers.</dd>
+
+		<dt>redelegation</dt>
+		<dd>The transfer of a delegation from one entity to another. Most commonly used to refer to the redelegation process used for top-level domains.</dd>
+
+		<dt>Redelegation process</dt>
+		<dd>A special type of root zone change where there is a significant change involving the transfer of operations of a top-level domain to a new entity. Such a change must be evaluated by ICANN staff to ensure that the new entity meets a number of criteria, and must be voted on and agreed by the ICANN Board of Directors. </dd>
+
+		<dt>Regional Internet Registry (RIR)</dt>
+		<dd>A registry responsible for allocation of IP address resources within a particular region. There are five RIRs, and within each region network operators apply to their RIR to get IP address blocks allocated.</dd>
+
+		<dt>registrant</dt>
+		<dd>The entity that has acquired the right to use an Internet resource. Usually this is via some form of revocable grant given by a registrar to list their registration in a registry.</dd>
+
+		<dt>registrar</dt>
+		<dd>An entity that can act on requests from a registrant in making changes in a registry. Usually the registrar is the same entity that operates a registry, although for domain names this role is often split to allow for competition between multiple registrars who offer different levels of support. See also domain name registrar.</dd>
+
+		<dt>registry</dt>
+		<dd>1. The authoritative record of registrations for a particular set of data. Most often used to refer to domain name registry, but all protocol parameters that we maintain are also registries. 2. registry operator.</dd>
+
+		<dt>registry operator</dt>
+		<dd>The entity that runs a registry. </dd>
+
+		<dt>Request for Comments (RFC)</dt>
+		<dd>see RFCs.</dd>
+
+		<dt>reverse IP</dt>
+		<dd>A method of translating an IP address into a domain name, so-called as it is the opposite of a typical lookup that converts a domain name to an IP address. Utilises PTR records in the IN-ADDR.ARPA zone for IPv4, and IP6.ARPA for IPv6.</dd>
+
+		<dt>RFCs</dt>
+		<dd>A series of Internet engineering documents describing Internet standards, as well as discussion papers, informational memorandums and best practices. Internet standards that are published in an RFC originate from the IETF. The RFC series is published by the RFC Editor.</dd>
+
+		<dt>RFC 812</dt>
+		<dd>See WHOIS.</dd>
+
+		<dt>RFC 954</dt>
+		<dd>See WHOIS.</dd>
+
+		<dt>RFC 1123</dt>
+		<dd>see hostname.</dd>
+
+		<dt>RFC 1591</dt>
+		<dd>A document written by our staff in 1994 describing how they manage top-level domains. The document is well-referenced as it describes some of the key principles that govern the appointment of country-code top-level domains. Compare ICP-1.</dd>
+
+		<dt>RFC 1918</dt>
+		<dd>See Private IP Addresses.</dd>
+
+		<dt>RFC 3912</dt>
+		<dd>See WHOIS.</dd>
+
+		<dt>RFC 3927</dt>
+		<dd>See Private IP Addresses.</dd>
+
+		<dt>RIR</dt>
+		<dd>see Regional Internet Registry.</dd>
+
+		<dt>root</dt>
+		<dd>the most central (or all-encompassing) authority of any naming or numbering system. Usually used to refer to the domain name system root (see Root Zone). However, we are also the root for IP addresses, and other systems.</dd>
+
+		<dt>Root Servers</dt>
+		<dd>the authoritative name servers for the Root Zone. These are considered unlike regular name servers in part because they are generally the most critical and heavily-used name servers. They are also special as they are not easily replaced, as changes to them needs to be stored in every name server worldwide in a hints file.</dd>
+
+		<dt>Root Zone</dt>
+		<dd>The top of the domain name system hierarchy. The root zone contains all of the delegations for top-level domains, as well as the list of root servers, and is managed by us.</dd>
+
+		<dt>Root Zone Management</dt>
+		<dd>The management of the DNS Root Zone by us.</dd>
+
+		<dt>RZM</dt>
+		<dd>see Root Zone Management.</dd>
+
+		<dt>RZM Automation</dt>
+		<dd>A project to automate many aspects of the Root Zone Management function.</dd>
+
+		<dt>script table</dt>
+		<dd>see IDN table.</dd>
+
+		<dt>secure entry point (SEP)</dt>
+		<dd>synonym for trust anchor.</dd>
+
+		<dt>slash [number]</dt>
+		<dd>(e.g. /24) See IP address block.</dd>
+
+		<dt>sponsored top-level domain</dt>
+		<dd>a sub-classification of generic top-level domain, where there is a formal community of interest to domain is dedicated to serve.</dd>
+
+		<dt>sponsoring organisation</dt>
+		<dd>The entity acting as the trustee of a top-level domain on behalf of its designated community. Sponsoring organisations are not assigned ownership of a domain, rather, are custodians appointed by their local Internet community to act as proper stewards in that community’s best interests. The Sponsoring Organisation can generally be re-assigned if the local Internet community wishes using the redelegation process.</dd>
+
+		<dt>STD 3</dt>
+		<dd>see hostname.</dd>
+
+		<dt>sub-domain</dt>
+		<dd>A domain that resides within another domain. For example, “www.icann.org" is a sub-domain of “icann.org”, and “icann.org” is a sub-domain of “org”. Sub-domains are entrusted to other entities through a process of delegation.</dd>
+
+		<dt>TLD</dt>
+		<dd>see top-level domain.</dd>
+
+		<dt>top-level domain (TLD)</dt>
+		<dd>The highest level of subdivisions with the domain name system. These domains, such as “.COM” and “.UK” are delegated from the DNS Root zone. They are generally divided into two distinct categories, generic top-level domains and country-code top-level domains.</dd>
+
+		<dt>TRIP number</dt>
+		<dd>see Internet Telephony Administrative Domain (ITAD).</dd>
+
+		<dt>trust anchor</dt>
+		<dd>A known good cryptographic certificate that can be used to validate a chain of trust.</dd>
+
+		<dt>trust anchor repository (TAR)</dt>
+		<dd>Any repository of public keys that can be used as trust anchors for validating chains of trust. See Interim Trust Anchor Repository (ITAR) for one such repository for top-level domain operators using DNSSEC.</dd>
+
+		<dt>trustee</dt>
+		<dd>An entity entrusted with the operations of an Internet resource for the benefit of the wider community. In root zone management, usually in reference to the sponsoring organisation of a top-level domain.</dd>
+
+		<dt>U-label</dt>
+		<dd>The Unicode representation of an internationalised domain name, i.e. how it is shown to the end-user. Contrast with A-label.</dd>
+
+		<dt>Unicode</dt>
+		<dd>A standard describing a repertoire of characters used to represent most of the worlds languages in written form. The collection of scripts used to do this is maintained by the Unicode Consortium and is constantly growing. Unicode is the basis for internationalised domain names.</dd>
+
+		<dt>unsponsored top-level domain</dt>
+		<dd>a sub-classification of generic top-level domain, where there is no formal community of interest.</dd>
+
+		<dt>UTF-8</dt>
+		<dd>A standard used for transmitting Unicode characters.</dd>
+
+		<dt>variant</dt>
+		<dd>In the context of internationalised domain names, an alternative domain name that can be registered, or mean the same thing, because some of its characters can be registered in multiple different ways due to the way the language works. Depending on registry policy, variants may be registered together in one block called a variant bundle. For example, “internationalise” and “internationalize” may be considered variants in English.</dd>
+
+		<dt>variant bundle</dt>
+		<dd>A collection of multiple domain names that are grouped together because some of the characters are considered variants of the others.</dd>
+
+		<dt>variant table</dt>
+		<dd>A type of IDN table that describes the variants for a particular language or script. For example, a variant table may map Simplified Chinese characters to Traditional Chinese characters for the purpose of constructing a variant bundle.</dd>
+
+		<dt>WHOIS</dt>
+		<dd>A simple plain text-based protocol for looking up registration data within a registry. Typically used for domain name registries and IP address registries to find out who has registered a particular resource. May also be used informally to refer to the database of registrants that a registry publishes over WHOIS, see WHOIS Database. Described in technical standard RFC 3912, formerly in RFCs 812 and 954. (Usage note: not “Whois” or “whois”)</dd>
+
+		<dt>WHOIS database</dt>
+		<dd>Used to refer to parts of a registry’s database that are made public using the WHOIS protocol, or via similar mechanisms using other protocols (such as web pages, or IRIS). Most commonly used to refer to a domain name registry’s public database. </dd>
+
+		<dt>WHOIS gateway</dt>
+		<dd>An interface, usually a web-based form, that will perform a look-up to a WHOIS server. This allows one to find WHOIS information without needing a specialised computer program that speaks the WHOIS protocol.</dd>
+
+		<dt>WHOIS protocol</dt>
+		<dd>see WHOIS.</dd>
+
+		<dt>WHOIS server</dt>
+		<dd>A system running on port number 43 that accepts queries using the WHOIS protocol.</dd>
+
+		<dt>wire format</dt>
+		<dd>The format of data when it is transmitted over the Internet (i.e. “over the wire”). For example, an A-label is the wire format of an internationalised domain name; and UTF-8 is a possible wire format of Unicode.</dd>
+
+		<dt>xn--</dt>
+		<dd>see A-label.</dd>
+
+		<dt>XML</dt>
+		<dd>A machine-readable file format for storing structured data. Used to represent web pages (in a subset called HTML) etc. We use this for publishing protocol parameter registries.</dd>
+
+	</dl>
+	</p>
+
+
+</div>
+
+<div id="sidebar_left">
+    <div class="navigation_box">
+        <h2>About us</h2>
+        <ul>
+            <li id="nav_about_top"><a href="/about">Introduction</a></li>
+            <li id="nav_about_performance"><a href="/performance">Performance Reporting</a></li>
+            <li id="nav_about_procedures"><a href="/procedures">Procedures</a></li>
+            <li id="nav_about_presentations"><a href="/about/presentations">Presentations</a></li>
+            <li id="nav_about_reports"><a href="/reports">Public Reports</a></li>
+            <li id="nav_about_framework"><a href="/about/framework">Framework Documents</a></li>
+            <li id="nav_about_reviews"><a href="/reviews">Reviews</a></li>
+            <li id="nav_about_audits"><a href="/about/audits">Audits</a></li>
+            <li id="nav_about_excellence"><a href="/about/excellence">Excellence &amp; Quality</a></li>
+            <li id="nav_about_glossary"><a href="/glossary">Glossary of terms</a></li>
+            <li id="nav_about_contact"><a href="/contact">Contact us</a></li>
+        </ul>
+    </div>
+</div>
+
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script>
+$(document).ready(function() {
+	$("#nav_about_glossary").addClass("selected")	
+});
+</script>
+
+	
+</body>
+
+</html>

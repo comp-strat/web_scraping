@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Protocol for Carrying Authentication for Network Access (PANA) Parameters</title>
+  </head>
+  <body>
+    <h1>Protocol for Carrying Authentication for Network Access (PANA) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2007-10-08</dd>
+      <dt>Last Updated</dt>
+      <dd>2012-11-15</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pana-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="pana-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="pana-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#pana-parameters-2">Message Types</a>
+      </li>
+      <li>
+        <a href="#pana-parameters-3">Message Flags</a>
+      </li>
+      <li>
+        <a href="#pana-parameters-4">AVP Codes</a>
+        <ul>
+          <li>
+            <a href="#pana-parameters-5">Result-Code (AVP Code 7) AVP Values</a>
+          </li>
+          <li>
+            <a href="#pana-parameters-6">Termination-Cause (AVP Code 9) AVP Values</a>
+          </li>
+          <li>
+            <a href="#result-code-13">Encryption-Algorithm (AVP Code 13) AVP Values</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#pana-parameters-7">AVP Flags</a>
+      </li>
+    </ul>
+    <h2><a name="pana-parameters-2" id="pana-parameters-2"></a>Message Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc5872">RFC5872</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pana-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-pana-parameters-2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-65519</td>
+          <td>IETF Review or IESG Approval</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65520-65535</td>
+          <td>IANA does not assign</td>
+          <td>Outlined in [RFC3692]</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-pana-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>R flag</th>
+          <th>Abbrev</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">PCI</td>
+          <td>PANA-Client-Initiation</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td align="center">1</td>
+          <td align="center">PAR</td>
+          <td>PANA-Auth-Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td align="center">0</td>
+          <td align="center">PAN</td>
+          <td>PANA-Auth-Answer</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td align="center">1</td>
+          <td align="center">PTR</td>
+          <td>PANA-Termination-Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td align="center">0</td>
+          <td align="center">PTA</td>
+          <td>PANA-Termination-Answer</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td align="center">1</td>
+          <td align="center">PNR</td>
+          <td>PANA-Notification-Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td align="center">0</td>
+          <td align="center">PNA</td>
+          <td>PANA-Notification-Answer</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td align="center">0</td>
+          <td align="center">PRY</td>
+          <td>PANA-Relay</td>
+          <td>[<a href="http://www.iana.org/go/rfc6345">RFC6345</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-65519</td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65520-65535</td>
+          <td align="center"></td>
+          <td align="center"></td>
+          <td>Reserved (Experimental)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pana-parameters-3" id="pana-parameters-3"></a>Message Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc5872">RFC5872</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pana-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pana-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">R</td>
+          <td>Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">S</td>
+          <td>Start</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td align="center">C</td>
+          <td>Complete</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td align="center">A</td>
+          <td>re-Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td align="center">P</td>
+          <td>Ping</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td align="center">I</td>
+          <td>IP Reconfiguration</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td align="center">E</td>
+          <td>prE-authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc5873">RFC5873</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-15</td>
+          <td align="center"></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pana-parameters-4" id="pana-parameters-4"></a>AVP Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review with Specification Required, or Standards Action</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Alper Yegin</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pana-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pana-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Attribute Name</th>
+          <th>Enc</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>AUTH</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>EAP-Payload</td>
+          <td>X</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Integrity-Algorithm</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Key-Id</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Nonce</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>PRF-Algorithm</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Result-Code</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Session-Lifetime</td>
+          <td>X</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Termination-Cause</td>
+          <td>X</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>PaC-Information</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc6345">RFC6345</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Relayed-Message</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc6345">RFC6345</a>][<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Encryption-Encap</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Encryption-Algorithm</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="pana-parameters-5" id="pana-parameters-5"></a>Result-Code (AVP Code 7) AVP Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF Review or IESG Approval</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc5872">RFC5872</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="pana-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-pana-parameters-5" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Meaning</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>PANA_SUCCESS</td>
+            <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>PANA_AUTHENTICATION_REJECTED</td>
+            <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>PANA_AUTHORIZATION_REJECTED</td>
+            <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3-4294967295</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="pana-parameters-6" id="pana-parameters-6"></a>Termination-Cause (AVP Code 9) AVP Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF Review or IESG Approval</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc5872">RFC5872</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="pana-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-pana-parameters-6" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Meaning</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>LOGOUT</td>
+            <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2-3</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>ADMINISTRATIVE</td>
+            <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5-7</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">8</td>
+            <td>SESSION_TIMEOUT</td>
+            <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">9-4294967295</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="result-code-13" id="result-code-13"></a>Encryption-Algorithm (AVP Code 13) AVP Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF Review or IESG Approval</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="result-code-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-result-code-13" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Meaning</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>AES128_CTR</td>
+            <td>[<a href="http://www.iana.org/go/rfc6786">RFC6786</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2-4294967295</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="pana-parameters-7" id="pana-parameters-7"></a>AVP Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc5872">RFC5872</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pana-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pana-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">V</td>
+          <td>Vendor</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-15</td>
+          <td align="center"></td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

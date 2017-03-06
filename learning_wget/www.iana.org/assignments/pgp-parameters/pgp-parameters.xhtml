@@ -1,0 +1,1200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Pretty Good Privacy (PGP)</title>
+  </head>
+  <body>
+    <h1>Pretty Good Privacy (PGP)</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2007-07-31</dd>
+      <dt>Last Updated</dt>
+      <dd>2012-06-12</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="pgp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="pgp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#pgp-parameters-1">PGP String-to-Key (S2K)</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-2">PGP Packet Types/Tags</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-3">PGP User Attribute Types</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-4">Image Format Subpacket Types</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-5">Signature Subpacket Types</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-6">Signature Notation Data Subpacket Types</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-7">Key Server Preference Extensions</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-8">Reason for Revocation Extensions</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-9">Implementation Features</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-10">New Packet Versions</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-11">Key Flags Extensions</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-12">Public Key Algorithms</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-13">Symmetric Key Algorithms</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-14">Hash Algorithms</a>
+      </li>
+      <li>
+        <a href="#pgp-parameters-15">Compression Algorithms</a>
+      </li>
+    </ul>
+    <h2><a name="pgp-parameters-1" id="pgp-parameters-1"></a>PGP String-to-Key (S2K)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>S2K Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Simple S2K</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Salted S2K</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Reserved value</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Iterated and Salted S2K</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-99</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">100-110</td>
+          <td>Private/Experimental S2K</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">111-255</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-2" id="pgp-parameters-2"></a>PGP Packet Types/Tags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Attribute</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved - a packet tag MUST NOT have this value</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Public-Key Encrypted Session Key Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Signature Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Symmetric-Key Encrypted Session Key Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>One-Pass Signature Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Secret Key Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Public Key Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Secret Subkey Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Compressed Data Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Symmetrically Encrypted Data Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Marker Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Literal Data Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Trust Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>User ID Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Public Subkey Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15-16</td>
+          <td>Unknown</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>User Attribute Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Sym. Encrypted and Integrity Protected Data Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Modification Detection Code Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20-59</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">60-63</td>
+          <td>Private or Experimental Values</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-3" id="pgp-parameters-3"></a>PGP User Attribute Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Attribute</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>image</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-99</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">100-110</td>
+          <td>Experimental or private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">111-255</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-4" id="pgp-parameters-4"></a>Image Format Subpacket Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Attribute</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>JPEG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-99</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">100-110</td>
+          <td>Experimental or private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">111-255</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-5" id="pgp-parameters-5"></a>Signature Subpacket Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Attribute</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>signature creation time</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>signature expiration time</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>exportable certification</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>trust signature</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>regular expression</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>revocable</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>key expiration time</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>placeholder for backward compatibility</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>preferred symmetric algorithms</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>revocation key</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13-15</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>issuer key ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17-19</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>notation data</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>preferred hash algorithms</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>preferred compression algorithms</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>key server preferences</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>preferred key server</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>primary User ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>policy URI</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>key flags</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>signer's User ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>reason for revocation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>features</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>signature target</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>embedded signature</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33-99</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">100-110</td>
+          <td>Private or experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">111-127</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-6" id="pgp-parameters-6"></a>Signature Notation Data Subpacket Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Notation names are arbitrary strings encoded in
+UTF-8. They reside two name spaces: The IETF name
+space and the user name space.
+
+The IETF name space is registered with IANA. These
+names MUST NOT contain the "@" character (0x40).
+This is a tag for the user name space.</pre>
+      </dd>
+    </dl>
+    <table>
+      <thead>
+        <tr>
+          <th>Allowed values</th>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-7" id="pgp-parameters-7"></a>Key Server Preference Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This is a variable length bit field.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>First octet</th>
+          <th>Extension</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0x07</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x80</td>
+          <td>No-modify</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-8" id="pgp-parameters-8"></a>Reason for Revocation Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Flag</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>No reason specified (key revocations or cert revocations)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Key is superseded (key revocations)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Key material has been compromised (key revocations)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Key is retired and no longer used (key revocations)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-31</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>User ID information is no longer valid (cert revocations)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33-99</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">100-110</td>
+          <td>Private Use</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">111-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-9" id="pgp-parameters-9"></a>Implementation Features</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>First octet</th>
+          <th>Feature</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Modification Detection (packets 18 and 19)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02-0x80</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-10" id="pgp-parameters-10"></a>New Packet Versions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+    </dl>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Allowed Values</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-11" id="pgp-parameters-11"></a>Key Flags Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The flags in this packet may appear in self-signatures or in
+certification signatures. They mean different things depending on
+who is making the statement -- for example, a certification
+signature that has the "sign data" flag is stating that the
+certification is for that use. On the other hand, the
+"communications encryption" flag in a self-signature is stating a
+preference that a given key be used for communications. Note
+however, that it is a thorny issue to determine what is
+"communications" and what is "storage." This decision is left wholly
+up to the implementation; the authors of this document do not claim
+any special wisdom on the issue, and realize that accepted opinion
+may change.
+
+The "split key" (0x10) and "group key" (0x80) flags are placed on a
+self-signature only; they are meaningless on a certification
+signature. They SHOULD be placed only on a direct-key signature
+(type 0x1f) or a subkey signature (type 0x18), one that refers to
+the key the flag applies to.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-11" class="sortable">
+      <thead>
+        <tr>
+          <th>First octet</th>
+          <th>Extension</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x01</td>
+          <td>This key may be used to certify other keys.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>This key may be used to sign data.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>This key may be used to encrypt communications.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>This key may be used to encrypt storage.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x10</td>
+          <td>The private component of this key may have been    
+split by a secret-sharing mechanism.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x20</td>
+          <td>This key may be used for authentication.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x80</td>
+          <td>The private component of this key may be in the    
+possession of more than one person.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-12" id="pgp-parameters-12"></a>Public Key Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-12" class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Algorithm</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>RSA (Encrypt or Sign)</td>
+          <td>[<a href="http://www.cacr.math.uwaterloo.ca/hac/">Alfred Menezes, Paul van Oorschot, and Scott Vanstone,
+"Handbook of Applied Cryptography," CRC Press, 1996.</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>RSA Encrypt-Only</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>RSA Sign-Only</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4-15</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Elgamal (Encrypt-Only)</td>
+          <td>[T. Elgamal, "A Public-Key Cryptosystem and a
+Signature Scheme Based on Discrete Logarithms,"
+IEEE Transactions on Information Theory, v. IT-31,
+n. 4, 1985, pp. 469-472.][<a href="http://www.cacr.math.uwaterloo.ca/hac/">Alfred Menezes, Paul van Oorschot, and Scott Vanstone,
+"Handbook of Applied Cryptography," CRC Press, 1996.</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>DSA (Digital Signature Algorithm)</td>
+          <td>[<a href="http://csrc.nist.gov/publications/fips/fips186-2/fips186-2-change1.pdf">Digital
+    Signature Standard (DSS) (FIPS PUB 186-2).</a>][<a href="http://csrc.nist.gov/publications/drafts/fips_186-3/Draft-FIPS-186-3%20_March2006.pdf">FIPS
+    186-3 describes keys greater than 1024 bits.</a>][<a href="http://www.cacr.math.uwaterloo.ca/hac/">Alfred Menezes, Paul van Oorschot, and Scott Vanstone,
+"Handbook of Applied Cryptography," CRC Press, 1996.</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>ECDH public key algorithm</td>
+          <td>[<a href="http://www.iana.org/go/rfc6637">RFC6637</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>ECDSA public key algorithm</td>
+          <td>[<a href="http://www.iana.org/go/rfc6637">RFC6637</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Reserved (formerly Elgamal Encrypt or Sign)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>Reserved for Diffie-Hellman (X9.42, as defined for IETF-S/MIME)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">22-99</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">100-110</td>
+          <td>Private/Experimental algorithm</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">111-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-13" id="pgp-parameters-13"></a>Symmetric Key Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-13" class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Algorithm</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Plaintext or unencrypted data</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IDEA</td>
+          <td>[Lai, X., "On the design and security of block
+ciphers", ETH Series in Information Processing,
+J.L. Massey (editor), Vol. 1, Hartung-Gorre Verlag
+Knostanz, Technische Hochschule (Zurich), 1992]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>TripleDES (DES-EDE, [SCHNEIER] [HAC] 168 bit
+key derived from 192)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>CAST5 (128 bit key, as per RFC 2144)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Blowfish (128 bit key, 16 rounds)</td>
+          <td>[<a href="http://www.counterpane.com/bfsverlag.html">Schneier, B. "Description of a New Variable-Length
+Key, 64-Bit Block Cipher (Blowfish)"
+Fast Software Encryption, Cambridge Security Workshop
+Proceedings (December 1993), Springer-Verlag, 1994,
+pp191-204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>AES with 128-bit key</td>
+          <td>[<a href="http://csrc.nist.gov/encryption/aes/round2/aesfact.html">http://csrc.nist.gov/encryption/aes/round2/aesfact.html</a>][<a href="http://csrc.nist.gov/encryption/aes/round2/r2algs.html#Rijndael">http://csrc.nist.gov/encryption/aes/round2/r2algs.html#Rijndael</a>][Advanced Encryption Standards Questions and Answers]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>AES with 192-bit key</td>
+          <td>[<a href="http://csrc.nist.gov/encryption/aes/round2/aesfact.html">http://csrc.nist.gov/encryption/aes/round2/aesfact.html</a>][<a href="http://csrc.nist.gov/encryption/aes/round2/r2algs.html#Rijndael">http://csrc.nist.gov/encryption/aes/round2/r2algs.html#Rijndael</a>][Advanced Encryption Standards Questions and Answers]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>AES with 256-bit key</td>
+          <td>[<a href="http://csrc.nist.gov/encryption/aes/round2/aesfact.html">http://csrc.nist.gov/encryption/aes/round2/aesfact.html</a>][<a href="http://csrc.nist.gov/encryption/aes/round2/r2algs.html#Rijndael">http://csrc.nist.gov/encryption/aes/round2/r2algs.html#Rijndael</a>][Advanced Encryption Standards Questions and Answers]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Twofish with 256-bit key</td>
+          <td>[B. Schneier, J. Kelsey, D. Whiting, D. Wagner, C.
+Hall, and N. Ferguson, "The Twofish Encryption
+Algorithm", John Wiley &amp; Sons, 1999.]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Camellia with 128 bit key</td>
+          <td>[<a href="http://www.iana.org/go/rfc5581">RFC5581</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Camellia with 192 bit key</td>
+          <td>[<a href="http://www.iana.org/go/rfc5581">RFC5581</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Camellia with 256 bit key</td>
+          <td>[<a href="http://www.iana.org/go/rfc5581">RFC5581</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14-99</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">100-110</td>
+          <td>Private/Experimental algorithm</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">111-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-14" id="pgp-parameters-14"></a>Hash Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-14" class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Algorithm</th>
+          <th>Text Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>MD5 (deprecated)</td>
+          <td>"MD5"</td>
+          <td>[<a href="http://www.cacr.math.uwaterloo.ca/hac/">Alfred Menezes, Paul van Oorschot, and Scott Vanstone,
+"Handbook of Applied Cryptography," CRC Press, 1996.</a>][<a href="http://www.iana.org/go/rfc1321">RFC1321</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>SHA-1</td>
+          <td>"SHA1"</td>
+          <td>[[FIPS180]]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>RIPE-MD/160</td>
+          <td>"RIPEMD160"</td>
+          <td>[<a href="http://www.cacr.math.uwaterloo.ca/hac/">Alfred Menezes, Paul van Oorschot, and Scott Vanstone,
+"Handbook of Applied Cryptography," CRC Press, 1996.</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-7</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>SHA256</td>
+          <td>"SHA256"</td>
+          <td>[[FIPS180]]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>SHA384</td>
+          <td>"SHA384"</td>
+          <td>[[FIPS180]]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>SHA512</td>
+          <td>"SHA512"</td>
+          <td>[[FIPS180]]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>SHA224</td>
+          <td>"SHA224"</td>
+          <td>[[FIPS180]]</td>
+        </tr>
+        <tr>
+          <td align="center">12-99</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">100-110</td>
+          <td>Private/Experimental algorithm</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">111-255</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pgp-parameters-15" id="pgp-parameters-15"></a>Compression Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pgp-parameters-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pgp-parameters-15" class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Algorithm</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Uncompressed</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>ZIP</td>
+          <td>[<a href="http://www.iana.org/go/rfc1951">RFC1951</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ZLIB</td>
+          <td>[<a href="http://www.iana.org/go/rfc1950">RFC1950</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>BZip2</td>
+          <td>[<a href="http://www.bzip.org/">J. Seward, jseward&amp;acm.org, "The Bzip2 and libbzip2
+home page"</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-99</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">100-110</td>
+          <td>Private/Experimental algorithm</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">111-255</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4880">RFC4880</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

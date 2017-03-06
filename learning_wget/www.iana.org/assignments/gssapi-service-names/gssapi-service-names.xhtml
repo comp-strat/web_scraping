@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Generic Security Service Application Program Interface (GSSAPI)/Kerberos/Simple Authentication and Security Layer (SASL) Service Names</title>
+  </head>
+  <body>
+    <h1>Generic Security Service Application Program Interface (GSSAPI)/Kerberos/Simple Authentication and Security Layer (SASL) Service Names</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2015-03-30</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="gssapi-service-names.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="gssapi-service-names.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="gssapi-service-names.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registry included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#gssapi-service-names-1">GSSAPI/Kerberos/SASL Service names</a>
+      </li>
+    </ul>
+    <h2><a name="gssapi-service-names-1" id="gssapi-service-names-1"></a>GSSAPI/Kerberos/SASL Service names</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2743">RFC2743</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>A service is a resource provided to network clients; often provided by
+more than one server and potentially by more than one protocol.
+Service names are short alphanumeric textual strings.  Service names
+are used in the GSSAPI [<a href="http://www.iana.org/go/rfc2743">RFC2743</a>] host-service name form, are specified
+as part of a SASL profile [<a href="http://www.iana.org/go/rfc4422">RFC4422</a>] and are used by Kerberos
+service-based tickets [<a href="http://www.iana.org/go/rfc1510">RFC1510</a>]. Registrations are restricted to
+alphanumeric characters and the characters '+', '-' and '.'</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="gssapi-service-names-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-gssapi-service-names-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Service Name</th>
+          <th>Usage</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">rcmd</td>
+          <td>remote command/rlogin/telnet</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">host</td>
+          <td>generic host-based service</td>
+          <td>[<a href="http://www.iana.org/go/rfc2743">RFC2743</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">imap</td>
+          <td>mailstore access/IMAP4</td>
+          <td>[<a href="http://www.iana.org/go/rfc3501">RFC3501</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">pop</td>
+          <td>maildrop access/POP3</td>
+          <td>[<a href="http://www.iana.org/go/rfc5034">RFC5034</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">acap</td>
+          <td>remote configuration access/ACAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc2244">RFC2244</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">nfs</td>
+          <td>distributed file system protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc2623">RFC2623</a>][<a href="http://www.iana.org/go/rfc7530">RFC7530</a>][<a href="http://www.iana.org/go/rfc5661">RFC5661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">ftp</td>
+          <td>file transfer/FTP/TFTP</td>
+          <td>[<a href="http://www.iana.org/go/rfc2228">RFC2228</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">ldap</td>
+          <td>Lightweight Directory Access Protocol (LDAP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4510">RFC4510</a>][<a href="http://www.iana.org/go/rfc4513">RFC4513</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">smtp</td>
+          <td>message transfer/SMTP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">beep</td>
+          <td>Blocks Extensible Exchange Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3080">RFC3080</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">mupdate</td>
+          <td>Mailbox Update (MUPDATE) Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3656">RFC3656</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">sacred</td>
+          <td>Secure Available Credentials (SACRED) Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3767">RFC3767</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">sieve</td>
+          <td>ManageSieve Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">xmpp</td>
+          <td>Extensible Messaging and Presence Protocol (XMPP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6120">RFC6120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">nntp</td>
+          <td>Network News Transfer Protocol (NNTP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4643">RFC4643</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

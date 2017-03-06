@@ -1,0 +1,1409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Telnet Options</title>
+  </head>
+  <body>
+    <h1>Telnet Options</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2011-12-01</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="telnet-options.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="telnet-options.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#telnet-options-1">Telnet Options</a>
+      </li>
+      <li>
+        <a href="#telnet-options-2">Telnet Authentication Types (Option 37)</a>
+        <ul>
+          <li>
+            <a href="#telnet-options-3">Command</a>
+          </li>
+          <li>
+            <a href="#telnet-options-4">Types</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#telnet-options-5">KERBEROS_V4 Telnet Authentication Type (Type 1)</a>
+      </li>
+      <li>
+        <a href="#telnet-options-6">KERBEROS_V5 Telnet Authentication Type (Type 2)</a>
+      </li>
+      <li>
+        <a href="#telnet-options-7">SRP Telnet Authentication Type (Type 5)</a>
+      </li>
+      <li>
+        <a href="#telnet-options-8">KEA_SJ (Type 12) and KEA_SJ_INTEG (Type 13) Authentication Types</a>
+      </li>
+      <li>
+        <a href="#telnet-options-9">DSS Authentication Type (Type 14)</a>
+      </li>
+      <li>
+        <a href="#telnet-options-10">Telnet Encryption Types (Option 38)</a>
+        <ul>
+          <li>
+            <a href="#telnet-options-11">Command</a>
+          </li>
+          <li>
+            <a href="#telnet-options-12">Types</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#telnet-options-13">DES_CFB64 Telnet Encryption Type (Type 1)</a>
+      </li>
+      <li>
+        <a href="#telnet-options-14">DES_OFB64 Telnet Encryption Type (Type 2)</a>
+      </li>
+      <li>
+        <a href="#telnet-options-15">DES3_CFB64 Telnet Encryption Type (Type 3)</a>
+      </li>
+      <li>
+        <a href="#telnet-options-16">DES3_OFB64 Telnet Encryption Type (Type 4)</a>
+      </li>
+      <li>
+        <a href="#telnet-options-17">CAST5_40_CFB64 (Type 8) and  CAST128_CFB64 (Type 10) Telnet Encryption Types</a>
+      </li>
+      <li>
+        <a href="#telnet-options-18">CAST5_40_OFB64 (Type 9) and CAST128_OFB64 (Type 11) Telnet Encryption Types</a>
+      </li>
+    </ul>
+    <h2><a name="telnet-options-1" id="telnet-options-1"></a>Telnet Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc855">RFC855</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Telnet Protocol has a number of options that may be negotiated.
+These options are listed here.  "Internet Official Protocol Standards"
+(STD 1) provides more detailed information.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Options</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Binary Transmission</td>
+          <td>[<a href="http://www.iana.org/go/rfc856">RFC856</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Echo</td>
+          <td>[<a href="http://www.iana.org/go/rfc857">RFC857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Reconnection</td>
+          <td>[DDN Protocol Handbook, "Telnet Reconnection Option",
+"Telnet Output Line Width Option", "Telnet Output Page Size
+Option", NIC 50005, December 1985.]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Suppress Go Ahead</td>
+          <td>[<a href="http://www.iana.org/go/rfc858">RFC858</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Approx Message Size Negotiation</td>
+          <td>["The Ethernet, A Local Area Network: Data Link Layer and
+Physical Layer Specification", AA-K759B-TK, Digital
+Equipment Corporation, Maynard, MA.  Also as: "The
+Ethernet - A Local Area Network", Version 1.0, Digital
+Equipment Corporation, Intel Corporation, Xerox
+Corporation, September 1980.  And: "The Ethernet, A Local
+Area Network: Data Link Layer and Physical Layer
+Specifications", Digital, Intel and Xerox, November 1982.
+And: XEROX, "The Ethernet, A Local Area Network: Data Link
+Layer and Physical Layer Specification", X3T51/80-50, Xerox
+Corporation, Stamford, CT., October 1980.]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc859">RFC859</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Timing Mark</td>
+          <td>[<a href="http://www.iana.org/go/rfc860">RFC860</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Remote Controlled Trans and Echo</td>
+          <td>[<a href="http://www.iana.org/go/rfc726">RFC726</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Output Line Width</td>
+          <td>[DDN Protocol Handbook, "Telnet Reconnection Option",
+"Telnet Output Line Width Option", "Telnet Output Page Size
+Option", NIC 50005, December 1985.]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Output Page Size</td>
+          <td>[DDN Protocol Handbook, "Telnet Reconnection Option",
+"Telnet Output Line Width Option", "Telnet Output Page Size
+Option", NIC 50005, December 1985.]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Output Carriage-Return Disposition</td>
+          <td>[<a href="http://www.iana.org/go/rfc652">RFC652</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Output Horizontal Tab Stops</td>
+          <td>[<a href="http://www.iana.org/go/rfc653">RFC653</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Output Horizontal Tab Disposition</td>
+          <td>[<a href="http://www.iana.org/go/rfc654">RFC654</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Output Formfeed Disposition</td>
+          <td>[<a href="http://www.iana.org/go/rfc655">RFC655</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Output Vertical Tabstops</td>
+          <td>[<a href="http://www.iana.org/go/rfc656">RFC656</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Output Vertical Tab Disposition</td>
+          <td>[<a href="http://www.iana.org/go/rfc657">RFC657</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Output Linefeed Disposition</td>
+          <td>[<a href="http://www.iana.org/go/rfc658">RFC658</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Extended ASCII</td>
+          <td>[<a href="http://www.iana.org/go/rfc698">RFC698</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Logout</td>
+          <td>[<a href="http://www.iana.org/go/rfc727">RFC727</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Byte Macro</td>
+          <td>[<a href="http://www.iana.org/go/rfc735">RFC735</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Data Entry Terminal</td>
+          <td>[<a href="http://www.iana.org/go/rfc1043">RFC1043</a>][<a href="http://www.iana.org/go/rfc732">RFC732</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>SUPDUP</td>
+          <td>[<a href="http://www.iana.org/go/rfc736">RFC736</a>][<a href="http://www.iana.org/go/rfc734">RFC734</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>SUPDUP Output</td>
+          <td>[<a href="http://www.iana.org/go/rfc749">RFC749</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Send Location</td>
+          <td>[<a href="http://www.iana.org/go/rfc779">RFC779</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>Terminal Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc1091">RFC1091</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>End of Record</td>
+          <td>[<a href="http://www.iana.org/go/rfc885">RFC885</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>TACACS User Identification</td>
+          <td>[<a href="http://www.iana.org/go/rfc927">RFC927</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>Output Marking</td>
+          <td>[<a href="http://www.iana.org/go/rfc933">RFC933</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>Terminal Location Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc946">RFC946</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>Telnet 3270 Regime</td>
+          <td>[<a href="http://www.iana.org/go/rfc1041">RFC1041</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>X.3 PAD</td>
+          <td>[<a href="http://www.iana.org/go/rfc1053">RFC1053</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>Negotiate About Window Size</td>
+          <td>[<a href="http://www.iana.org/go/rfc1073">RFC1073</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>Terminal Speed</td>
+          <td>[<a href="http://www.iana.org/go/rfc1079">RFC1079</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>Remote Flow Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc1372">RFC1372</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>Linemode</td>
+          <td>[<a href="http://www.iana.org/go/rfc1184">RFC1184</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>X Display Location</td>
+          <td>[<a href="http://www.iana.org/go/rfc1096">RFC1096</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36</td>
+          <td>Environment Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc1408">RFC1408</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">37</td>
+          <td>Authentication Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">38</td>
+          <td>Encryption Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">39</td>
+          <td>New Environment Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc1572">RFC1572</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">40</td>
+          <td>TN3270E</td>
+          <td>[<a href="http://www.iana.org/go/rfc2355">RFC2355</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>XAUTH</td>
+          <td>[<a href="#Rob_Earhart">Rob_Earhart</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">42</td>
+          <td>CHARSET</td>
+          <td>[<a href="http://www.iana.org/go/rfc2066">RFC2066</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">43</td>
+          <td>Telnet Remote Serial Port (RSP)</td>
+          <td>[<a href="#Robert_Barnes">Robert_Barnes</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">44</td>
+          <td>Com Port Control Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc2217">RFC2217</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">45</td>
+          <td>Telnet Suppress Local Echo</td>
+          <td>[<a href="#Wirt_Atmar">Wirt_Atmar</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">46</td>
+          <td>Telnet Start TLS</td>
+          <td>[<a href="#Michael_Boe">Michael_Boe</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">47</td>
+          <td>KERMIT</td>
+          <td>[<a href="http://www.iana.org/go/rfc2840">RFC2840</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">48</td>
+          <td>SEND-URL</td>
+          <td>[<a href="#David_Croft">David_Croft</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">49</td>
+          <td>FORWARD_X</td>
+          <td>[<a href="#Jeffrey_Altman">Jeffrey_Altman</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">50-137</td>
+          <td>Unassigned</td>
+          <td>[<a href="#IANA">IANA</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">138</td>
+          <td>TELOPT PRAGMA LOGON</td>
+          <td>[<a href="#Steve_McGregory">Steve_McGregory</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">139</td>
+          <td>TELOPT SSPI LOGON</td>
+          <td>[<a href="#Steve_McGregory">Steve_McGregory</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">140</td>
+          <td>TELOPT PRAGMA HEARTBEAT</td>
+          <td>[<a href="#Steve_McGregory">Steve_McGregory</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">141-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Extended-Options-List</td>
+          <td>[<a href="http://www.iana.org/go/rfc861">RFC861</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-2" id="telnet-options-2"></a>Telnet Authentication Types (Option 37)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First come first served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="telnet-options-3" id="telnet-options-3"></a>Command</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>First come first served</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="telnet-options-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-telnet-options-3" class="sortable">
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>IS</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>SEND</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>REPLY</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>NAME</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="telnet-options-4" id="telnet-options-4"></a>Types</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>First come first served</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="telnet-options-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-telnet-options-4" class="sortable">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>NULL</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>KERBEROS_V4</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>KERBEROS_V5</td>
+            <td>[<a href="http://www.iana.org/go/rfc2942">RFC2942</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>SPX</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>][<a href="#note1">1</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>MINK</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>][<a href="#note1">1</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>SRP</td>
+            <td>[<a href="http://www.iana.org/go/rfc2944">RFC2944</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>RSA (also used by SRA)</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td>SSL</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">8-9</td>
+            <td>Unassigned</td>
+            <td>[<a href="#IANA">IANA</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">10</td>
+            <td>LOKI</td>
+            <td>[<a href="http://www.iana.org/go/rfc2941">RFC2941</a>][<a href="#note1">1</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">11</td>
+            <td>SSA</td>
+            <td>[<a href="#Steven_Schoch">Steven_Schoch</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">12</td>
+            <td>KEA_SJ</td>
+            <td>[<a href="http://www.iana.org/go/rfc2951">RFC2951</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">13</td>
+            <td>KEA_SJ_INTEG</td>
+            <td>[<a href="http://www.iana.org/go/rfc2951">RFC2951</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">14</td>
+            <td>DSS</td>
+            <td>[<a href="http://www.iana.org/go/rfc2943">RFC2943</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">15</td>
+            <td>NTLM</td>
+            <td>[<a href="#Louis_Kahn">Louis_Kahn</a>][<a href="#note1">1</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="telnet-options-5" id="telnet-options-5"></a>KERBEROS_V4 Telnet Authentication Type (Type 1)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First come first served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1411">RFC1411</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>AUTH</td>
+          <td>[<a href="http://www.iana.org/go/rfc1411">RFC1411</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>REJECT</td>
+          <td>[<a href="http://www.iana.org/go/rfc1411">RFC1411</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ACCEPT</td>
+          <td>[<a href="http://www.iana.org/go/rfc1411">RFC1411</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>CHALLENGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc1411">RFC1411</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc1411">RFC1411</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>FORWARD</td>
+          <td>[<a href="#Derrick_Brashear">Derrick_Brashear</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>FORWARD-ACCEPT</td>
+          <td>[<a href="#Derrick_Brashear">Derrick_Brashear</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>FORWARD-REJECT</td>
+          <td>[<a href="#Derrick_Brashear">Derrick_Brashear</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>EXP</td>
+          <td>[<a href="#Thomas_Wu">Thomas_Wu</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>PARAMS</td>
+          <td>[<a href="#Thomas_Wu">Thomas_Wu</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-6" id="telnet-options-6"></a>KERBEROS_V5 Telnet Authentication Type (Type 2)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2942">RFC2942</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>AUTH</td>
+          <td>[<a href="http://www.iana.org/go/rfc2942">RFC2942</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>REJECT</td>
+          <td>[<a href="http://www.iana.org/go/rfc2942">RFC2942</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ACCEPT</td>
+          <td>[<a href="http://www.iana.org/go/rfc2942">RFC2942</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2942">RFC2942</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>FORWARD</td>
+          <td>[<a href="http://www.iana.org/go/rfc2942">RFC2942</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>FORWARD_ACCEPT</td>
+          <td>[<a href="http://www.iana.org/go/rfc2942">RFC2942</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>FORWARD-REJECT</td>
+          <td>[<a href="http://www.iana.org/go/rfc2942">RFC2942</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-7" id="telnet-options-7"></a>SRP Telnet Authentication Type (Type 5)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2944">RFC2944</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>AUTH</td>
+          <td>[<a href="http://www.iana.org/go/rfc2944">RFC2944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>REJECT</td>
+          <td>[<a href="http://www.iana.org/go/rfc2944">RFC2944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ACCEPT</td>
+          <td>[<a href="http://www.iana.org/go/rfc2944">RFC2944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>CHALLENGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2944">RFC2944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2944">RFC2944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-7</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc2944">RFC2944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>EXP</td>
+          <td>[<a href="http://www.iana.org/go/rfc2944">RFC2944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>PARAMS</td>
+          <td>[<a href="http://www.iana.org/go/rfc2944">RFC2944</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-8" id="telnet-options-8"></a>KEA_SJ (Type 12) and KEA_SJ_INTEG (Type 13) Authentication Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2951">RFC2951</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>KEA_CERTA_RA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2951">RFC2951</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>KEA_CERTB_RB_IVB_NONCEB</td>
+          <td>[<a href="http://www.iana.org/go/rfc2951">RFC2951</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>KEA_IVA_RESPONSEB_NONCEA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2951">RFC2951</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>KEA_RESPONSEA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2951">RFC2951</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-9" id="telnet-options-9"></a>DSS Authentication Type (Type 14)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2943">RFC2943</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>DSS_INITIALIZE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2943">RFC2943</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>DSS_TOKENBA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2943">RFC2943</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>DSS_CERTA_TOKENAB</td>
+          <td>[<a href="http://www.iana.org/go/rfc2943">RFC2943</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>DSS_CERTB_TOKENBA2</td>
+          <td>[<a href="http://www.iana.org/go/rfc2943">RFC2943</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-10" id="telnet-options-10"></a>Telnet Encryption Types (Option 38)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First come first served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>In the Telnet Encryption commands and types [<a href="http://www.iana.org/go/rfc2946">RFC2946</a>] there have been
+various implementations in several widely distributed versions of
+Telnet (e.g., at MIT, Stanford, and Columbia).  Originally, only two
+encryption types were specified.  Additional encryption types have
+been defined and are listed below.  Additions to the list are
+registered by the IANA and documented here.</pre>
+      </dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="telnet-options-11" id="telnet-options-11"></a>Command</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>First come first served</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="telnet-options-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-telnet-options-11" class="sortable">
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>IS</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>SUPPORT</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>REPLY</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>START</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>END</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>REQUEST-START</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>REQUEST-END</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td>ENC_KEYID</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">8</td>
+            <td>DEC_KEYID</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="telnet-options-12" id="telnet-options-12"></a>Types</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>First come first served</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="telnet-options-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-telnet-options-12" class="sortable">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>NULL</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>DES_CFB64</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>DES_OFB64</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>DES3_CFB64</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>DES3_OFB64</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5-7</td>
+            <td>Unassigned</td>
+            <td>[<a href="#IANA">IANA</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">8</td>
+            <td>CAST5_40_CFB64</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">9</td>
+            <td>CAST5_40_OFB64</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">10</td>
+            <td>CAST128_CFB64</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">11</td>
+            <td>CAST128_OFB64</td>
+            <td>[<a href="http://www.iana.org/go/rfc2946">RFC2946</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">12</td>
+            <td>AES_CCM</td>
+            <td>[<a href="#S_Josefsson">S_Josefsson</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="telnet-options-13" id="telnet-options-13"></a>DES_CFB64 Telnet Encryption Type (Type 1)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First come first served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2952">RFC2952</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-13" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>CFB64_IV</td>
+          <td>[<a href="http://www.iana.org/go/rfc2952">RFC2952</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>CFB64_IV_OK</td>
+          <td>[<a href="http://www.iana.org/go/rfc2952">RFC2952</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>CFB64_IV_BAD</td>
+          <td>[<a href="http://www.iana.org/go/rfc2952">RFC2952</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-14" id="telnet-options-14"></a>DES_OFB64 Telnet Encryption Type (Type 2)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First come first served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2953">RFC2953</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-14" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>OFB64_IV</td>
+          <td>[<a href="http://www.iana.org/go/rfc2953">RFC2953</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>OFB64_IV_OK</td>
+          <td>[<a href="http://www.iana.org/go/rfc2953">RFC2953</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>OFB64_IV_BAD</td>
+          <td>[<a href="http://www.iana.org/go/rfc2953">RFC2953</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-15" id="telnet-options-15"></a>DES3_CFB64 Telnet Encryption Type (Type 3)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First come first served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2947">RFC2947</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-15" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>CFB64_IV</td>
+          <td>[<a href="http://www.iana.org/go/rfc2947">RFC2947</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>CFB64_IV_OK</td>
+          <td>[<a href="http://www.iana.org/go/rfc2947">RFC2947</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>CFB64_IV_BAD</td>
+          <td>[<a href="http://www.iana.org/go/rfc2947">RFC2947</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-16" id="telnet-options-16"></a>DES3_OFB64 Telnet Encryption Type (Type 4)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First come first served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2948">RFC2948</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-16.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-16" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>OFB64_IV</td>
+          <td>[<a href="http://www.iana.org/go/rfc2948">RFC2948</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>OFB64_IV_OK</td>
+          <td>[<a href="http://www.iana.org/go/rfc2948">RFC2948</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>OFB64_IV_BAD</td>
+          <td>[<a href="http://www.iana.org/go/rfc2948">RFC2948</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-17" id="telnet-options-17"></a>CAST5_40_CFB64 (Type 8) and  CAST128_CFB64 (Type 10) Telnet Encryption Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First come first served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2950">RFC2950</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-17" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>CFB64_IV</td>
+          <td>[<a href="http://www.iana.org/go/rfc2950">RFC2950</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>CFB64_IV_OK</td>
+          <td>[<a href="http://www.iana.org/go/rfc2950">RFC2950</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>CFB64_IV_BAD</td>
+          <td>[<a href="http://www.iana.org/go/rfc2950">RFC2950</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="telnet-options-18" id="telnet-options-18"></a>CAST5_40_OFB64 (Type 9) and CAST128_OFB64 (Type 11) Telnet Encryption Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First come first served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2949">RFC2949</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="telnet-options-18.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-telnet-options-18" class="sortable">
+      <thead>
+        <tr>
+          <th>Suboption</th>
+          <th>Command</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>OFB64_IV</td>
+          <td>[<a href="http://www.iana.org/go/rfc2949">RFC2949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>OFB64_IV_OK</td>
+          <td>[<a href="http://www.iana.org/go/rfc2949">RFC2949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>OFB64_IV_BAD</td>
+          <td>[<a href="http://www.iana.org/go/rfc2949">RFC2949</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="David_Croft" id="David_Croft">[David_Croft]</a>
+          </td>
+          <td>David Croft</td>
+          <td>
+            <a href="mailto:david&amp;infotrek.co.uk">mailto:david&amp;infotrek.co.uk</a>
+          </td>
+          <td>1998-09</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Derrick_Brashear" id="Derrick_Brashear">[Derrick_Brashear]</a>
+          </td>
+          <td>Derrick Brashear</td>
+          <td>
+            <a href="mailto:shadow&amp;dementia.org">mailto:shadow&amp;dementia.org</a>
+          </td>
+          <td>1995-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="IANA" id="IANA">[IANA]</a>
+          </td>
+          <td>Internet Assigned Numbers Authority</td>
+          <td>
+            <a href="mailto:iana&amp;iana.org">mailto:iana&amp;iana.org</a>
+          </td>
+          <td>2012-08</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jeffrey_Altman" id="Jeffrey_Altman">[Jeffrey_Altman]</a>
+          </td>
+          <td>Jeffrey Altman</td>
+          <td>
+            <a href="mailto:jaltman&amp;watsun.cc.columbia.edu">mailto:jaltman&amp;watsun.cc.columbia.edu</a>
+          </td>
+          <td>2000-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Louis_Kahn" id="Louis_Kahn">[Louis_Kahn]</a>
+          </td>
+          <td>Louis Kahn</td>
+          <td>
+            <a href="mailto:louisk&amp;microsoft.com">mailto:louisk&amp;microsoft.com</a>
+          </td>
+          <td>1998-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Michael_Boe" id="Michael_Boe">[Michael_Boe]</a>
+          </td>
+          <td>Michael Boe</td>
+          <td>
+            <a href="mailto:mboe&amp;cisco.com">mailto:mboe&amp;cisco.com</a>
+          </td>
+          <td>1998-06</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Rob_Earhart" id="Rob_Earhart">[Rob_Earhart]</a>
+          </td>
+          <td>Rob Earhart</td>
+          <td>
+            <a href="mailto:earhart+&amp;cmu.edu">mailto:earhart+&amp;cmu.edu</a>
+          </td>
+          <td>1995-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Robert_Barnes" id="Robert_Barnes">[Robert_Barnes]</a>
+          </td>
+          <td>Robert Barnes</td>
+          <td>
+            <a href="mailto:rab&amp;stallion.oz.au">mailto:rab&amp;stallion.oz.au</a>
+          </td>
+          <td>1997-07</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="S_Josefsson" id="S_Josefsson">[S_Josefsson]</a>
+          </td>
+          <td>S. Josefsson</td>
+          <td>
+            <a href="mailto:jas&amp;extundo.com">mailto:jas&amp;extundo.com</a>
+            <br />
+            <a href="http://josefsson.org/shishi/shishi.html#Telnet%20encryption%20with%20AES-CCM">http://josefsson.org/shishi/shishi.html#Telnet%20encryption%20with%20AES-CCM</a>
+          </td>
+          <td>2003-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Steve_McGregory" id="Steve_McGregory">[Steve_McGregory]</a>
+          </td>
+          <td>Steve McGregory</td>
+          <td>
+            <a href="mailto:stevemc&amp;pragmasys.com">mailto:stevemc&amp;pragmasys.com</a>
+          </td>
+          <td>1998-12</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Steven_Schoch" id="Steven_Schoch">[Steven_Schoch]</a>
+          </td>
+          <td>Steven Schoch</td>
+          <td>
+            <a href="mailto:schoch&amp;sheba.arc.nasa.gov">mailto:schoch&amp;sheba.arc.nasa.gov</a>
+          </td>
+          <td>1995-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Thomas_Wu" id="Thomas_Wu">[Thomas_Wu]</a>
+          </td>
+          <td>Thomas Wu</td>
+          <td>
+            <a href="mailto:tjw&amp;stanford.edu">mailto:tjw&amp;stanford.edu</a>
+          </td>
+          <td>1998-09</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Wirt_Atmar" id="Wirt_Atmar">[Wirt_Atmar]</a>
+          </td>
+          <td>Wirt Atmar</td>
+          <td>
+            <a href="mailto:atmar&amp;aics-research.com">mailto:atmar&amp;aics-research.com</a>
+          </td>
+          <td>1998-06</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Footnote</h1>
+    <table class="fn">
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note1" id="note1">[1]</a>
+        </td>
+        <td class="fn">
+          <pre>Authentication types never submitted to the IETF for consideration as an Internet standard.</pre>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

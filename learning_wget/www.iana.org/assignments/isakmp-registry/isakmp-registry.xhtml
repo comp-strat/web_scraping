@@ -1,0 +1,1800 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>"Magic Numbers" for ISAKMP Protocol</title>
+  </head>
+  <body>
+    <h1>"Magic Numbers" for ISAKMP Protocol</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2012-07-19</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isakmp-registry.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="isakmp-registry.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="isakmp-registry.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#isakmp-registry-1">IPSEC Situation Definition</a>
+      </li>
+      <li>
+        <a href="#isakmp-registry-3">IPSEC Security Protocol Identifiers</a>
+      </li>
+      <li>
+        <a href="#isakmp-registry-5">IPSEC ISAKMP Transform Identifiers</a>
+      </li>
+      <li>
+        <a href="#isakmp-registry-7">IPSEC AH Transform Identifiers</a>
+      </li>
+      <li>
+        <a href="#isakmp-registry-9">IPSEC ESP Transform Identifiers</a>
+      </li>
+      <li>
+        <a href="#isakmp-registry-11">IPSEC IPCOMP Transform Identifiers</a>
+      </li>
+      <li>
+        <a href="#isakmp-registry-13">IPSEC Security Association Attributes</a>
+        <ul>
+          <li>
+            <a href="#isakmp-registry-15">SA Life Type Values (Value 1)</a>
+          </li>
+          <li>
+            <a href="#isakmp-registry-16">Group Description (Value 3)</a>
+          </li>
+          <li>
+            <a href="#isakmp-registry-18">Encapsulation Mode (Value 4)</a>
+          </li>
+          <li>
+            <a href="#isakmp-registry-20">Authentication Algorithm (Value 5)</a>
+          </li>
+          <li>
+            <a href="#isakmp-registry-21">Compression Private Algorithm (Value 9)</a>
+          </li>
+          <li>
+            <a href="#isakmp-registry-23">ECN Tunnel (Value 10)</a>
+          </li>
+          <li>
+            <a href="#isakmp-registry-24">Extended (64-bit) Sequence Number (Value 11)</a>
+          </li>
+          <li>
+            <a href="#isakmp-registry-26">Signature Encoding Algorithm Values (Value 13)</a>
+          </li>
+          <li>
+            <a href="#isakmp-registry-27">Address Preservation (Value 14)</a>
+          </li>
+          <li>
+            <a href="#isakmp-registry-28">SA Direction (Value 15)</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#isakmp-registry-29">IPSEC Labeled Domain Identifiers</a>
+      </li>
+      <li>
+        <a href="#isakmp-registry-31">IPSEC Identification Type</a>
+      </li>
+      <li>
+        <a href="#isakmp-registry-32">IPSEC Notify Message Types</a>
+        <ul>
+          <li>
+            <a href="#isakmp-registry-34">Notify Messages - Error Types (8192-16383)</a>
+          </li>
+          <li>
+            <a href="#isakmp-registry-36">Notify Messages - Status Types (24576-32767)</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2><a name="isakmp-registry-1" id="isakmp-registry-1"></a>IPSEC Situation Definition</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Track RFC</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Situation Definition is a 32-bit bitmask which represents the
+environment under which the IPSEC SA proposal and negotiation is
+carried out.  Requests for assignments of new situations must be
+accompanied by an RFC which describes the interpretation for the
+associated bit.
+
+If the RFC is not on the standards-track (i.e., it is an informational
+or experimental RFC), it must be explicitly reviewed and approved by
+the IESG before the RFC is published and the transform identifier is
+assigned.
+
+The upper two bits are reserved for private use amongst cooperating
+systems.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isakmp-registry-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-isakmp-registry-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Situation</th>
+          <th>References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x01</td>
+          <td>SIT_IDENTITY_ONLY</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>0x02</td>
+          <td>SIT_SECRECY</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04</td>
+          <td>SIT_INTEGRITY</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="isakmp-registry-3" id="isakmp-registry-3"></a>IPSEC Security Protocol Identifiers</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Security Protocol Identifier is an 8-bit value which identifies a
+security protocol suite being negotiated.  Requests for assignments of
+new security protocol identifiers must be accompanied by an RFC which
+describes the requested security protocol.  [AH] and [ESP] are
+examples of security protocol documents.
+
+If the RFC is not on the standards-track (i.e., it is an informational
+or experimental RFC), it must be explicitly reviewed and approved by
+the IESG before the RFC is published and the transform identifier is
+assigned.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isakmp-registry-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-isakmp-registry-3-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-248</td>
+          <td>Standards Track RFC</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">249-255</td>
+          <td>Reserved for private use</td>
+          <td>Amongst cooperating systems.</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-isakmp-registry-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Protocol ID</th>
+          <th>References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>PROTO_ISAKMP</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>PROTO_IPSEC_AH</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>PROTO_IPSEC_ESP</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>PROTO_IPCOMP</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>PROTO_GIGABEAM_RADIO</td>
+          <td>[<a href="http://www.iana.org/go/rfc4705">RFC4705</a>]</td>
+        </tr>
+        <tr>
+          <td>6-248</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>249-255</td>
+          <td>Reserved for private use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="isakmp-registry-5" id="isakmp-registry-5"></a>IPSEC ISAKMP Transform Identifiers</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The IPSEC ISAKMP Transform Identifier is an 8-bit value which
+identifies a key exchange protocol to be used for the negotiation.
+Requests for assignments of new ISAKMP transform identifiers must be
+accompanied by an RFC which describes the requested key exchange
+protocol.  [IKE] is an example of one such document.
+
+If the RFC is not on the standards-track (i.e., it is an informational
+or experimental RFC), it must be explicitly reviewed and approved by
+the IESG before the RFC is published and the transform identifier is
+assigned.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isakmp-registry-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-isakmp-registry-5-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-248</td>
+          <td>Standards Track RFC</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">249-255</td>
+          <td>Reserved for private use</td>
+          <td>Amongst cooperating systems.</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-isakmp-registry-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Transform</th>
+          <th>References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>KEY_IKE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>2-248</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>249-255</td>
+          <td>Reserved for private use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="isakmp-registry-7" id="isakmp-registry-7"></a>IPSEC AH Transform Identifiers</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The IPSEC AH Transform Identifier is an 8-bit value which identifies a
+particular algorithm to be used to provide integrity protection for
+AH.  Requests for assignments of new AH transform identifiers must be
+accompanied by an RFC which describes how to use the algorithm within
+the AH framework ([AH]).
+
+If the RFC is not on the standards-track (i.e., it is an informational
+or experimental RFC), it must be explicitly reviewed and approved by
+the IESG before the RFC is published and the transform identifier is
+assigned.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isakmp-registry-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-isakmp-registry-7-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-248</td>
+          <td>Standards Track RFC</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">249-255</td>
+          <td>Reserved for private use</td>
+          <td>Amongst cooperating systems.</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-isakmp-registry-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Transform ID</th>
+          <th>References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0-1</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>AH_MD5</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>AH_SHA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>AH_DES</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>AH_SHA2-256</td>
+          <td>[<a href="#Marcus_Leech">Marcus_Leech</a>][<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>AH_SHA2-384</td>
+          <td>[<a href="#Marcus_Leech">Marcus_Leech</a>][<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>AH_SHA2-512</td>
+          <td>[<a href="#Marcus_Leech">Marcus_Leech</a>][<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>AH_RIPEMD</td>
+          <td>[<a href="http://www.iana.org/go/rfc2857">RFC2857</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>AH_AES-XCBC-MAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc3566">RFC3566</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>AH_RSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc4359">RFC4359</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>AH_AES-128-GMAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=1821">RFC Errata 
+          1821</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>AH_AES-192-GMAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=1821">RFC Errata 
+          1821</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>AH_AES-256-GMAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=1821">RFC Errata 
+          1821</a>]</td>
+        </tr>
+        <tr>
+          <td>14-248</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>249-255</td>
+          <td>Reserved for private use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="isakmp-registry-9" id="isakmp-registry-9"></a>IPSEC ESP Transform Identifiers</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The IPSEC ESP Transform Identifier is an 8-bit value which identifies
+a particular algorithm to be used to provide secrecy protection for
+ESP.  Requests for assignments of new ESP transform identifiers must
+be accompanied by an RFC which describes how to use the algorithm
+within the ESP framework ([ESP]).
+
+If the RFC is not on the standards-track (i.e., it is an informational
+or experimental RFC), it must be explicitly reviewed and approved by
+the IESG before the RFC is published and the transform identifier is
+assigned.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isakmp-registry-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-isakmp-registry-9-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-248</td>
+          <td>Standards Track RFC</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">249-255</td>
+          <td>Reserved for private use</td>
+          <td>Amongst cooperating systems.</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-isakmp-registry-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Transform ID</th>
+          <th>References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ESP_DES_IV64</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>ESP_DES</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ESP_3DES</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ESP_RC5</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ESP_IDEA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ESP_CAST</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>ESP_BLOWFISH</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>ESP_3IDEA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>ESP_DES_IV32</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>ESP_RC4</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>ESP_NULL</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>ESP_AES-CBC</td>
+          <td>[<a href="http://www.iana.org/go/rfc3602">RFC3602</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>ESP_AES-CTR</td>
+          <td>[<a href="http://www.iana.org/go/rfc3686">RFC3686</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>ESP_AES-CCM_8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4309">RFC4309</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>ESP_AES-CCM_12</td>
+          <td>[<a href="http://www.iana.org/go/rfc4309">RFC4309</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>ESP_AES-CCM_16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4309">RFC4309</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>ESP_AES-GCM_8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4106">RFC4106</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>ESP_AES-GCM_12</td>
+          <td>[<a href="http://www.iana.org/go/rfc4106">RFC4106</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>ESP_AES-GCM_16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4106">RFC4106</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>ESP_SEED_CBC</td>
+          <td>[<a href="http://www.iana.org/go/rfc4196">RFC4196</a>]</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>ESP_CAMELLIA</td>
+          <td>[<a href="http://www.iana.org/go/rfc4312">RFC4312</a>]</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>ESP_NULL_AUTH_AES-GMAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=1821">RFC Errata 
+          1821</a>]</td>
+        </tr>
+        <tr>
+          <td>24-248</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>249-255</td>
+          <td>Reserved for private use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="isakmp-registry-11" id="isakmp-registry-11"></a>IPSEC IPCOMP Transform Identifiers</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The IPSEC IPCOMP Transform Identifier is an 8-bit value which
+identifier a particular algorithm to be used to provide IP-level
+compression before ESP.  Requests for assignments of new IPCOMP
+transform identifiers must be accompanied by an RFC which describes
+how to use the algorithm within the IPCOMP framework ([IPCOMP]).  In
+addition, the requested algorithm must be published and in the public
+domain.
+
+If the RFC is not on the standards-track (i.e., it is an informational
+or experimental RFC), it must be explicitly reviewed and approved by
+the IESG before the RFC is published and the transform identifier is
+assigned.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isakmp-registry-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-isakmp-registry-11-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-47</td>
+          <td>Reserved for approved algorithms</td>
+          <td>RFC has been approved for publication.</td>
+        </tr>
+        <tr>
+          <td align="center">48-63</td>
+          <td>Reserved for private use</td>
+          <td>Amongst cooperating systems.</td>
+        </tr>
+        <tr>
+          <td align="center">64-255</td>
+          <td>Standards Track RFC</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-isakmp-registry-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Transform ID</th>
+          <th>References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>IPCOMP_OUI</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>IPCOMP_DEFLATE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>IPCOMP_LZS</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>IPCOMP_LZJH</td>
+          <td>[<a href="http://www.iana.org/go/rfc3051">RFC3051</a>]</td>
+        </tr>
+        <tr>
+          <td>5-47</td>
+          <td>Reserved for approved algorithms</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>48-63</td>
+          <td>Reserved for private use</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>64-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="isakmp-registry-13" id="isakmp-registry-13"></a>IPSEC Security Association Attributes</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The IPSEC Security Association Attribute consists of a 16-bit type and
+its associated value.  IPSEC SA attributes are used to pass
+miscellaneous values between ISAKMP peers.  Requests for assignments
+of new IPSEC SA attributes must be accompanied by an Internet Draft
+which describes the attribute encoding (Basic/Variable-Length) and its
+legal values.  Section 4.5 of this document provides an example of
+such a description.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isakmp-registry-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-isakmp-registry-13-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-32000</td>
+          <td>Specification Required</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32001-32767</td>
+          <td>Reserved for private use</td>
+          <td>Amongst cooperating systems.</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-isakmp-registry-13" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Type</th>
+          <th>Class</th>
+          <th>References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>B</td>
+          <td>SA Life Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>V</td>
+          <td>SA Life Duration</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>B</td>
+          <td>Group Description</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>B</td>
+          <td>Encapsulation Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>B</td>
+          <td>Authentication Algorithm</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>B</td>
+          <td>Key Length</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>B</td>
+          <td>Key Rounds</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>B</td>
+          <td>Compress Dictionary Size</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>V</td>
+          <td>Compress Private Algorithm</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>B</td>
+          <td>ECN Tunnel</td>
+          <td>[<a href="http://www.iana.org/go/rfc3168">RFC3168</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>B</td>
+          <td>Extended (64-bit) Sequence Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc4304">RFC4304</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>V</td>
+          <td>Authentication Key Length</td>
+          <td>[<a href="http://www.iana.org/go/rfc4359">RFC4359</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>B</td>
+          <td>Signature Encoding Algorithm</td>
+          <td>[<a href="http://www.iana.org/go/rfc4359">RFC4359</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>B</td>
+          <td>Address Preservation</td>
+          <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>B</td>
+          <td>SA Direction</td>
+          <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+        </tr>
+        <tr>
+          <td>16-32000</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>32001-32767</td>
+          <td></td>
+          <td>Reserved for private use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="isakmp-registry-15" id="isakmp-registry-15"></a>SA Life Type Values (Value 1)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="isakmp-registry-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table class="sortable" id="table-isakmp-registry-15-range">
+        <thead>
+          <tr>
+            <th>Range</th>
+            <th>Registration Procedures</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">1-61439</td>
+            <td>Specification Required</td>
+          </tr>
+          <tr>
+            <td align="center">61440-65535</td>
+            <td>Reserved for private use</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="table-isakmp-registry-15" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>seconds</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>kilobytes</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>3-61439</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>61440-65535</td>
+            <td>Reserved for private use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="isakmp-registry-16" id="isakmp-registry-16"></a>Group Description (Value 3)</h3>
+      <dl>
+        <dt>Note</dt>
+        <dd>
+          <pre>Please refer to the registry Group Description (Value 4) at [<a href="http://www.iana.org/assignments/ipsec-registry">IANA registry <i>ipsec-registry</i></a>]</pre>
+        </dd>
+      </dl>
+      <h3><a name="isakmp-registry-18" id="isakmp-registry-18"></a>Encapsulation Mode (Value 4)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="isakmp-registry-18.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table class="sortable" id="table-isakmp-registry-18-range">
+        <thead>
+          <tr>
+            <th>Range</th>
+            <th>Registration Procedures</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0-61439</td>
+            <td>Specification Required</td>
+          </tr>
+          <tr>
+            <td align="center">61440-65535</td>
+            <td>Reserved for private use</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="table-isakmp-registry-18" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Tunnel</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Transport</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>UDP-Encapsulated-Tunnel</td>
+            <td>[<a href="http://www.iana.org/go/rfc3947">RFC3947</a>]</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>UDP-Encapsulated-Transport</td>
+            <td>[<a href="http://www.iana.org/go/rfc3947">RFC3947</a>]</td>
+          </tr>
+          <tr>
+            <td>5-61439</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>61440-65535</td>
+            <td>Reserved for private use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="isakmp-registry-20" id="isakmp-registry-20"></a>Authentication Algorithm (Value 5)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="isakmp-registry-20.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table class="sortable" id="table-isakmp-registry-20-range">
+        <thead>
+          <tr>
+            <th>Range</th>
+            <th>Registration Procedures</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">3-61439</td>
+            <td>Specification Required</td>
+          </tr>
+          <tr>
+            <td align="center">61440-65535</td>
+            <td>Reserved for private use</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="table-isakmp-registry-20" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>HMAC-MD5</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>HMAC-SHA</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>DES-MAC</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>KPDK</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>HMAC-SHA2-256</td>
+            <td>[<a href="#Marcus_Leech">Marcus_Leech</a>]</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>HMAC-SHA2-384</td>
+            <td>[<a href="#Marcus_Leech">Marcus_Leech</a>]</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>HMAC-SHA2-512</td>
+            <td>[<a href="#Marcus_Leech">Marcus_Leech</a>]</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>HMAC-RIPEMD</td>
+            <td>[<a href="http://www.iana.org/go/rfc2857">RFC2857</a>]</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>AES-XCBC-MAC</td>
+            <td>[<a href="http://www.iana.org/go/rfc3566">RFC3566</a>]</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>SIG-RSA</td>
+            <td>[<a href="http://www.iana.org/go/rfc4359">RFC4359</a>]</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>AES-128-GMAC</td>
+            <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=1821">RFC Errata 
+          1821</a>]</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>AES-192-GMAC</td>
+            <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=1821">RFC Errata 
+          1821</a>]</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>AES-256-GMAC</td>
+            <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=1821">RFC Errata 
+          1821</a>]</td>
+          </tr>
+          <tr>
+            <td>14-61439</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>61440-65535</td>
+            <td>Reserved for private use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="isakmp-registry-21" id="isakmp-registry-21"></a>Compression Private Algorithm (Value 9)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IANA does not assign</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+        <dt>Note</dt>
+        <dd>
+          <pre>Specifies a private vendor compression algorithm.  The first
+three (3) octets must be an IEEE assigned company_id (OUI).
+The next octet may be a vendor specific compression subtype,
+followed by zero or more octets of vendor data.</pre>
+        </dd>
+      </dl>
+      <table>
+        <tr>
+          <td colspan="0">
+            <i>Registry is empty.</i>
+          </td>
+        </tr>
+      </table>
+      <h3><a name="isakmp-registry-23" id="isakmp-registry-23"></a>ECN Tunnel (Value 10)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3168">RFC3168</a>]</dd>
+        <dt>Note</dt>
+        <dd>
+          <pre>If unspecified, the default shall be assumed to be Forbidden.</pre>
+        </dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="isakmp-registry-23.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table class="sortable" id="table-isakmp-registry-23-range">
+        <thead>
+          <tr>
+            <th>Range</th>
+            <th>Registration Procedures</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0-61439</td>
+            <td>Specification Required</td>
+          </tr>
+          <tr>
+            <td align="center">61440-65535</td>
+            <td>Reserved for private use</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="table-isakmp-registry-23" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc3168">RFC3168</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Allowed</td>
+            <td>[<a href="http://www.iana.org/go/rfc3168">RFC3168</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Forbidden</td>
+            <td>[<a href="http://www.iana.org/go/rfc3168">RFC3168</a>]</td>
+          </tr>
+          <tr>
+            <td>3-61439</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>61440-65535</td>
+            <td>Reserved for private use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="isakmp-registry-24" id="isakmp-registry-24"></a>Extended (64-bit) Sequence Number (Value 11)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>No additional class values will be assigned for this attribute.</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4304">RFC4304</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="isakmp-registry-24.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-isakmp-registry-24" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>RESERVED</td>
+            <td>[<a href="http://www.iana.org/go/rfc4304">RFC4304</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>64-bit Sequence Number</td>
+            <td>[<a href="http://www.iana.org/go/rfc4304">RFC4304</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="isakmp-registry-26" id="isakmp-registry-26"></a>Signature Encoding Algorithm Values (Value 13)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4359">RFC4359</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="isakmp-registry-26.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table class="sortable" id="table-isakmp-registry-26-range">
+        <thead>
+          <tr>
+            <th>Range</th>
+            <th>Registration Procedures</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0-61439</td>
+            <td>Standards Action</td>
+          </tr>
+          <tr>
+            <td align="center">61440-65535</td>
+            <td>Reserved for private use</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="table-isakmp-registry-26" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc4359">RFC4359</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>RSASSA-PKCS1-v1_5</td>
+            <td>[<a href="http://www.iana.org/go/rfc4359">RFC4359</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>RSASSA-PSS</td>
+            <td>[<a href="http://www.iana.org/go/rfc4359">RFC4359</a>]</td>
+          </tr>
+          <tr>
+            <td>3-61439</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>61440-65535</td>
+            <td>Reserved for private use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="isakmp-registry-27" id="isakmp-registry-27"></a>Address Preservation (Value 14)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Standards Action</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="isakmp-registry-27.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-isakmp-registry-27" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>None</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Source-Only</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Destination-Only</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Source-and-Destination</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+          <tr>
+            <td>5-61439</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>61440-65535</td>
+            <td>Private Use</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="isakmp-registry-28" id="isakmp-registry-28"></a>SA Direction (Value 15)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Standards Action</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="isakmp-registry-28.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-isakmp-registry-28" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Sender-Only</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Receiver-Only</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Symmetric</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+          <tr>
+            <td>4-61439</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+          <tr>
+            <td>61440-65535</td>
+            <td>Private Use</td>
+            <td>[<a href="http://www.iana.org/go/rfc6407">RFC6407</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="isakmp-registry-29" id="isakmp-registry-29"></a>IPSEC Labeled Domain Identifiers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First come first serve</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The IPSEC Labeled Domain Identifier is a 32-bit value which identifies
+a namespace in which the Secrecy and Integrity levels and categories
+values are said to exist.  Requests for assignments of new IPSEC
+Labeled Domain Identifiers should be granted on demand.  No
+accompanying documentation is required, though Internet Drafts are
+encouraged when appropriate.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isakmp-registry-29.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-isakmp-registry-29" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Domain</th>
+          <th>References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>0x80000000-0xffffffff</td>
+          <td>Reserved for private use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="isakmp-registry-31" id="isakmp-registry-31"></a>IPSEC Identification Type</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The IPSEC Identification Type is an 8-bit value which is used as a
+discriminant for interpretation of the variable-length Identification
+Payload.  Requests for assignments of new IPSEC Identification Types
+must be accompanied by an RFC which describes how to use the
+identification type within IPSEC.
+
+If the RFC is not on the standards-track (i.e., it is an informational
+or experimental RFC), it must be explicitly reviewed and approved by
+the IESG before the RFC is published and the transform identifier is
+assigned.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isakmp-registry-31.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-isakmp-registry-31-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-248</td>
+          <td>RFC</td>
+        </tr>
+        <tr>
+          <td align="center">249-255</td>
+          <td>Reserved for private use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-isakmp-registry-31" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>ID Type</th>
+          <th>References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ID_IPV4_ADDR</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>ID_FQDN</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ID_USER_FQDN</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ID_IPV4_ADDR_SUBNET</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ID_IPV6_ADDR</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ID_IPV6_ADDR_SUBNET</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>ID_IPV4_ADDR_RANGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>ID_IPV6_ADDR_RANGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>ID_DER_ASN1_DN</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>ID_DER_ASN1_GN</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>ID_KEY_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>ID_LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc3554">RFC3554</a>]</td>
+        </tr>
+        <tr>
+          <td>13-248</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>249-255</td>
+          <td>Reserved for private use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="isakmp-registry-32" id="isakmp-registry-32"></a>IPSEC Notify Message Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The IPSEC Notify Message Type is a 16-bit value taken from the range
+of values reserved by ISAKMP for each DOI.  There is one range for
+error messages (8192-16383) and a different range for status messages
+(24576-32767).  Requests for assignments of new Notify Message Types
+must be accompanied by an Internet Draft which describes how to use
+the identification type within IPSEC.</pre>
+      </dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="isakmp-registry-34" id="isakmp-registry-34"></a>Notify Messages - Error Types (8192-16383)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="isakmp-registry-34.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table class="sortable" id="table-isakmp-registry-34-range">
+        <thead>
+          <tr>
+            <th>Range</th>
+            <th>Registration Procedures</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">8192-16000</td>
+            <td>Specification Required</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">16001-16383</td>
+            <td>Reserved for private use</td>
+            <td>Amongst cooperating systems.</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="table-isakmp-registry-34" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Notify Messages - Error Types</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>8192</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>8193-16000</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>16001-16383</td>
+            <td>Reserved for private use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="isakmp-registry-36" id="isakmp-registry-36"></a>Notify Messages - Status Types (24576-32767)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="isakmp-registry-36.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table class="sortable" id="table-isakmp-registry-36-range">
+        <thead>
+          <tr>
+            <th>Range</th>
+            <th>Registration Procedures</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">24576-32000</td>
+            <td>Specification Required</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">32001-32767</td>
+            <td>Reserved for private use</td>
+            <td>Amongst cooperating systems.</td>
+          </tr>
+        </tbody>
+      </table>
+      <table id="table-isakmp-registry-36" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Notify Messages - Status Types</th>
+            <th>References</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>24576</td>
+            <td>RESPONDER-LIFETIME</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>24577</td>
+            <td>REPLAY-STATUS</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>24578</td>
+            <td>INITIAL-CONTACT</td>
+            <td>[<a href="http://www.iana.org/go/rfc2407">RFC2407</a>]</td>
+          </tr>
+          <tr>
+            <td>24579-32000</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>32001-32767</td>
+            <td>Reserved for private use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Marcus_Leech" id="Marcus_Leech">[Marcus_Leech]</a>
+          </td>
+          <td>Marcus Leech</td>
+          <td>
+            <a href="mailto:mleech&amp;nortelnetworks.com">mailto:mleech&amp;nortelnetworks.com</a>
+          </td>
+          <td>2000-10</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Footnote</h1>
+    <table class="fn">
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note1" id="note1">[1]</a>
+        </td>
+        <td class="fn">
+          <pre>This is combined mode cipher, but combined mode algorithms are not
+a ature of IPsec-v2. Although some IKEv1/IPsec-v2 implementations 
+inude this capability (see [<a href="http://www.iana.org/go/rfc6071">RFC6071</a>] Section 5.4), it is not part of 
+thprotocol.
+    </pre>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

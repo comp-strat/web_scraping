@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Hypertext Transfer Protocol (HTTP) Parameters</title>
+  </head>
+  <body>
+    <h1>Hypertext Transfer Protocol (HTTP) Parameters</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2017-02-03</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="http-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="http-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="http-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#content-coding">HTTP Content Coding Registry</a>
+      </li>
+      <li>
+        <a href="#transfer-coding">HTTP Transfer Coding Registry</a>
+      </li>
+      <li>
+        <a href="#forwarded">HTTP Forwarded Parameters</a>
+      </li>
+      <li>
+        <a href="#preferences">HTTP Preferences</a>
+      </li>
+      <li>
+        <a href="#range-units">HTTP Range Unit Registry</a>
+      </li>
+    </ul>
+    <h2><a name="content-coding" id="content-coding"></a>HTTP Content Coding Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7231">RFC7231</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="content-coding.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-content-coding" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>br</td>
+          <td>Brotli Compressed Data Format</td>
+          <td>[<a href="http://www.iana.org/go/rfc7932">RFC7932</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>compress</td>
+          <td>UNIX "compress" data format [Welch, T., "A Technique 
+        for High Performance Data Compression", IEEE Computer 17(6), June 1984.]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.2.1</td>
+        </tr>
+        <tr>
+          <td>deflate</td>
+          <td>"deflate" compressed data ([<a href="http://www.iana.org/go/rfc1951">RFC1951</a>]) 
+        inside the "zlib" data format ([<a href="http://www.iana.org/go/rfc1950">RFC1950</a>]) </td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.2.2</td>
+        </tr>
+        <tr>
+          <td>exi</td>
+          <td>W3C Efficient XML Interchange</td>
+          <td>[<a href="http://www.w3.org/TR/exi/">W3C Recommendation: Efficient XML 
+        Interchange (EXI) Format</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>gzip</td>
+          <td>GZIP file format [<a href="http://www.iana.org/go/rfc1952">RFC1952</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.2.3</td>
+        </tr>
+        <tr>
+          <td>identity</td>
+          <td>Reserved (synonym for "no encoding" in Accept-Encoding)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7231">RFC7231</a>]</td>
+          <td>Section 5.3.4</td>
+        </tr>
+        <tr>
+          <td>pack200-gzip</td>
+          <td>Network Transfer Format for Java Archives</td>
+          <td>[<a href="http://www.jcp.org/en/jsr/detail?id=200">JSR 200: Network Transfer Format for Java</a>][<a href="#Kumar_Srinivasan">Kumar_Srinivasan</a>][<a href="#John_Rose">John_Rose</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>x-compress</td>
+          <td>Deprecated (alias for compress)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.2.1</td>
+        </tr>
+        <tr>
+          <td>x-gzip</td>
+          <td>Deprecated (alias for gzip)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.2.3</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="transfer-coding" id="transfer-coding"></a>HTTP Transfer Coding Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="transfer-coding.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-transfer-coding" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>chunked</td>
+          <td>Transfer in a series of chunks</td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.1</td>
+        </tr>
+        <tr>
+          <td>compress</td>
+          <td>UNIX "compress" data format [Welch, T., "A Technique 
+        for High Performance Data Compression", IEEE Computer 17(6), June 1984.]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.2.1</td>
+        </tr>
+        <tr>
+          <td>deflate</td>
+          <td>"deflate" compressed data ([<a href="http://www.iana.org/go/rfc1951">RFC1951</a>]) 
+        inside the "zlib" data format ([<a href="http://www.iana.org/go/rfc1950">RFC1950</a>]) </td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.2.2</td>
+        </tr>
+        <tr>
+          <td>gzip</td>
+          <td>GZIP file format [<a href="http://www.iana.org/go/rfc1952">RFC1952</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.2.3</td>
+        </tr>
+        <tr>
+          <td>identity</td>
+          <td>(withdrawn in errata to [<a href="http://www.iana.org/go/rfc2616">RFC2616</a>])</td>
+          <td>[<a href="http://www.iana.org/go/rfc2616">RFC2616</a>]</td>
+          <td>Section 3.6</td>
+        </tr>
+        <tr>
+          <td>x-compress</td>
+          <td>Deprecated (alias for compress)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.2.1</td>
+        </tr>
+        <tr>
+          <td>x-gzip</td>
+          <td>Deprecated (alias for gzip)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7230">RFC7230</a>]</td>
+          <td>Section 4.2.3</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="forwarded" id="forwarded"></a>HTTP Forwarded Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7239">RFC7239</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="forwarded.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-forwarded" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>by</td>
+          <td>IP-address of incoming interface of a proxy</td>
+          <td>[<a href="http://www.iana.org/go/rfc7239">RFC7239</a>]</td>
+          <td>Section 5.1</td>
+        </tr>
+        <tr>
+          <td>for</td>
+          <td>IP-address of client making a request through a proxy</td>
+          <td>[<a href="http://www.iana.org/go/rfc7239">RFC7239</a>]</td>
+          <td>Section 5.2</td>
+        </tr>
+        <tr>
+          <td>host</td>
+          <td>Host header field of the incoming request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7239">RFC7239</a>]</td>
+          <td>Section 5.3</td>
+        </tr>
+        <tr>
+          <td>proto</td>
+          <td>Application protocol used for incoming request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7239">RFC7239</a>]</td>
+          <td>Section 5.4</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="preferences" id="preferences"></a>HTTP Preferences</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James M Snell, Julian Reschke</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7240">RFC7240</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="preferences.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-preferences" class="sortable">
+      <thead>
+        <tr>
+          <th>Preference</th>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>respond-async</td>
+          <td></td>
+          <td>Indicates that the client prefers that the server respond asynchronously to a request.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7240">RFC7240</a>], Section 4.1</td>
+        </tr>
+        <tr>
+          <td>return</td>
+          <td>One of either "minimal" or "representation"</td>
+          <td>When the value is "minimal", it indicates that the
+client prefers that the server return a minimal response to a
+request. When the value is "representation", it indicates that
+the client prefers that the server include a representation of the
+current state of the resource in response to a request.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7240">RFC7240</a>], Section 4.2</td>
+        </tr>
+        <tr>
+          <td>wait</td>
+          <td></td>
+          <td>Indicates an upper bound to the length of time the
+      client expects it will take the server to process the request once
+      it has been received.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7240">RFC7240</a>], Section 4.3</td>
+        </tr>
+        <tr>
+          <td>handling</td>
+          <td>One of either "strict" or "lenient"</td>
+          <td>When value is "strict", it indicates that the client
+wishes the server to apply strict validation and error handling to
+the processing of a request. When the value is "lenient", it
+indicates that the client wishes the server to apply lenient
+validation and error handling to the processing of the request.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7240">RFC7240</a>], Section 4.4</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="range-units" id="range-units"></a>HTTP Range Unit Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7233">RFC7233</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="range-units.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-range-units" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bytes</td>
+          <td>a range of octets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7233">RFC7233</a>]</td>
+          <td>Section 2.1</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>reserved as keyword, indicating no ranges are supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc7233">RFC7233</a>]</td>
+          <td>Section 2.3</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Kumar_Srinivasan" id="Kumar_Srinivasan">[Kumar_Srinivasan]</a>
+          </td>
+          <td>Kumar Srinivasan</td>
+          <td>
+            <a href="mailto:Kumar.Srinivasan&amp;Sun.COM">mailto:Kumar.Srinivasan&amp;Sun.COM</a>
+          </td>
+          <td>2006-10-27</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="John_Rose" id="John_Rose">[John_Rose]</a>
+          </td>
+          <td>John Rose</td>
+          <td>
+            <a href="mailto:John.Rose&amp;Sun.COM">mailto:John.Rose&amp;Sun.COM</a>
+          </td>
+          <td>2006-10-27</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

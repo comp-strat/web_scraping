@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>IPv6 Global Unicast Address Assignments</title>
+  </head>
+  <body>
+    <h1>IPv6 Global Unicast Address Assignments</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2017-01-04</dd>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Allocations to RIRs are made in line with the Global Policy published at 
+[<a href="http://www.icann.org/en/resources/policy/global-addressing">http://www.icann.org/en/resources/policy/global-addressing</a>]. 
+All other assignments require IETF Review.</pre>
+      </dd>
+      <dt>Description</dt>
+      <dd>
+        <pre>The allocation of Internet Protocol version 6 (IPv6) unicast address space is listed
+here. References to the various other registries detailing the use of the IPv6 address
+space can be found in the [<a href="http://www.iana.org/assignments/ipv6-address-space">IPv6 Address Space registry</a>].</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7249">RFC7249</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The assignable Global Unicast Address space is defined in [<a href="http://www.iana.org/go/rfc4291">RFC4291</a>] as being the address 
+block defined by the prefix 2000::/3. All address space in this block not listed in the 
+table below is reserved by IANA for future allocation.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ipv6-unicast-address-assignments.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        <a class="altformat" href="ipv6-unicast-address-assignments.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ipv6-unicast-address-assignments.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ipv6-unicast-address-assignments.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <table id="table-ipv6-unicast-address-assignments" class="sortable">
+      <thead>
+        <tr>
+          <th class="sortIPv6">Prefix</th>
+          <th>Designation</th>
+          <th>Date</th>
+          <th>WHOIS</th>
+          <th>RDAP</th>
+          <th>Status</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2001:0000::/23</td>
+          <td>IANA</td>
+          <td>1999-07-01</td>
+          <td>whois.iana.org</td>
+          <td style="white-space: pre"></td>
+          <td>ALLOCATED</td>
+          <td>2001:0000::/23 is reserved for IETF Protocol Assignments [<a href="http://www.iana.org/go/rfc2928">RFC2928</a>].
+2001:0000::/32 is reserved for TEREDO [<a href="http://www.iana.org/go/rfc4380">RFC4380</a>].
+      2001:1::1/128 is reserved for Port Control Protocol Anycast [<a href="http://www.iana.org/go/rfc7723">RFC7723</a>].
+2001:2::/48 is reserved for Benchmarking [<a href="http://www.iana.org/go/rfc5180">RFC5180</a>].
+2001:3::/32 is reserved for AMT [<a href="http://www.iana.org/go/rfc7450">RFC7450</a>].
+2001:4:112::/48 is reserved for AS112-v6 [<a href="http://www.iana.org/go/rfc7535">RFC7535</a>].
+2001:5::/32 is reserved for EID Space for LISP [<a href="http://www.iana.org/go/rfc7954">RFC7954</a>].
+2001:10::/28 is deprecated (previously ORCHID) [<a href="http://www.iana.org/go/rfc4843">RFC4843</a>]. 
+2001:20::/28 is reserved for ORCHIDv2 [<a href="http://www.iana.org/go/rfc7343">RFC7343</a>].
+2001:db8::/32 is reserved for Documentation [<a href="http://www.iana.org/go/rfc3849">RFC3849</a>].
+For complete registration details, see [<a href="http://www.iana.org/assignments/iana-ipv6-special-registry">IANA registry <i>iana-ipv6-special-registry</i></a>].</td>
+        </tr>
+        <tr>
+          <td>2001:0200::/23</td>
+          <td>APNIC</td>
+          <td>1999-07-01</td>
+          <td>whois.apnic.net</td>
+          <td style="white-space: pre">https://rdap.apnic.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:0400::/23</td>
+          <td>ARIN</td>
+          <td>1999-07-01</td>
+          <td>whois.arin.net</td>
+          <td style="white-space: pre">https://rdap.arin.net/registry<br />http://rdap.arin.net/registry</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:0600::/23</td>
+          <td>RIPE NCC</td>
+          <td>1999-07-01</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:0800::/23</td>
+          <td>RIPE NCC</td>
+          <td>2002-05-02</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:0a00::/23</td>
+          <td>RIPE NCC</td>
+          <td>2002-11-02</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:0c00::/23</td>
+          <td>APNIC</td>
+          <td>2002-05-02</td>
+          <td>whois.apnic.net</td>
+          <td style="white-space: pre">https://rdap.apnic.net/</td>
+          <td>ALLOCATED</td>
+          <td>2001:db8::/32 reserved for Documentation [<a href="http://www.iana.org/go/rfc3849">RFC3849</a>]. 
+For complete registration details, see [<a href="http://www.iana.org/assignments/iana-ipv6-special-registry">IANA registry <i>iana-ipv6-special-registry</i></a>].</td>
+        </tr>
+        <tr>
+          <td>2001:0e00::/23</td>
+          <td>APNIC</td>
+          <td>2003-01-01</td>
+          <td>whois.apnic.net</td>
+          <td style="white-space: pre">https://rdap.apnic.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:1200::/23</td>
+          <td>LACNIC</td>
+          <td>2002-11-01</td>
+          <td>whois.lacnic.net</td>
+          <td style="white-space: pre">https://rdap.lacnic.net/rdap/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:1400::/23</td>
+          <td>RIPE NCC</td>
+          <td>2003-02-01</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:1600::/23</td>
+          <td>RIPE NCC</td>
+          <td>2003-07-01</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:1800::/23</td>
+          <td>ARIN</td>
+          <td>2003-04-01</td>
+          <td>whois.arin.net</td>
+          <td style="white-space: pre">https://rdap.arin.net/registry<br />http://rdap.arin.net/registry</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:1a00::/23</td>
+          <td>RIPE NCC</td>
+          <td>2004-01-01</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:1c00::/22</td>
+          <td>RIPE NCC</td>
+          <td>2004-05-04</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:2000::/20</td>
+          <td>RIPE NCC</td>
+          <td>2004-05-04</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:3000::/21</td>
+          <td>RIPE NCC</td>
+          <td>2004-05-04</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:3800::/22</td>
+          <td>RIPE NCC</td>
+          <td>2004-05-04</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:3c00::/22</td>
+          <td>IANA</td>
+          <td></td>
+          <td></td>
+          <td style="white-space: pre"></td>
+          <td>RESERVED</td>
+          <td>2001:3c00::/22 is reserved for possible future allocation to the RIPE NCC.</td>
+        </tr>
+        <tr>
+          <td>2001:4000::/23</td>
+          <td>RIPE NCC</td>
+          <td>2004-06-11</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:4200::/23</td>
+          <td>AFRINIC</td>
+          <td>2004-06-01</td>
+          <td>whois.afrinic.net</td>
+          <td style="white-space: pre">https://rdap.afrinic.net/rdap/<br />http://rdap.afrinic.net/rdap/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:4400::/23</td>
+          <td>APNIC</td>
+          <td>2004-06-11</td>
+          <td>whois.apnic.net</td>
+          <td style="white-space: pre">https://rdap.apnic.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:4600::/23</td>
+          <td>RIPE NCC</td>
+          <td>2004-08-17</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:4800::/23</td>
+          <td>ARIN</td>
+          <td>2004-08-24</td>
+          <td>whois.arin.net</td>
+          <td style="white-space: pre">https://rdap.arin.net/registry<br />http://rdap.arin.net/registry</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:4a00::/23</td>
+          <td>RIPE NCC</td>
+          <td>2004-10-15</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:4c00::/23</td>
+          <td>RIPE NCC</td>
+          <td>2004-12-17</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:5000::/20</td>
+          <td>RIPE NCC</td>
+          <td>2004-09-10</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:8000::/19</td>
+          <td>APNIC</td>
+          <td>2004-11-30</td>
+          <td>whois.apnic.net</td>
+          <td style="white-space: pre">https://rdap.apnic.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:a000::/20</td>
+          <td>APNIC</td>
+          <td>2004-11-30</td>
+          <td>whois.apnic.net</td>
+          <td style="white-space: pre">https://rdap.apnic.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2001:b000::/20</td>
+          <td>APNIC</td>
+          <td>2006-03-08</td>
+          <td>whois.apnic.net</td>
+          <td style="white-space: pre">https://rdap.apnic.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2002:0000::/16</td>
+          <td>6to4</td>
+          <td>2001-02-01</td>
+          <td></td>
+          <td style="white-space: pre"></td>
+          <td>ALLOCATED</td>
+          <td>2002::/16 is reserved for 6to4 [<a href="http://www.iana.org/go/rfc3056">RFC3056</a>]. 
+For complete registration details, see [<a href="http://www.iana.org/assignments/iana-ipv6-special-registry">IANA registry <i>iana-ipv6-special-registry</i></a>].</td>
+        </tr>
+        <tr>
+          <td>2003:0000::/18</td>
+          <td>RIPE NCC</td>
+          <td>2005-01-12</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2400:0000::/12</td>
+          <td>APNIC</td>
+          <td>2006-10-03</td>
+          <td>whois.apnic.net</td>
+          <td style="white-space: pre">https://rdap.apnic.net/</td>
+          <td>ALLOCATED</td>
+          <td>2400:0000::/19 was allocated on 2005-05-20. 2400:2000::/19 was allocated on 2005-07-08. 2400:4000::/21 was 
+allocated on 2005-08-08.  2404:0000::/23 was allocated on 2006-01-19. The more recent allocation (2006-10-03) 
+incorporates all these previous allocations.</td>
+        </tr>
+        <tr>
+          <td>2600:0000::/12</td>
+          <td>ARIN</td>
+          <td>2006-10-03</td>
+          <td>whois.arin.net</td>
+          <td style="white-space: pre">https://rdap.arin.net/registry<br />http://rdap.arin.net/registry</td>
+          <td>ALLOCATED</td>
+          <td>2600:0000::/22, 2604:0000::/22, 2608:0000::/22 and 260c:0000::/22 were allocated on 2005-04-19. The more 
+recent allocation (2006-10-03) incorporates all these previous allocations.</td>
+        </tr>
+        <tr>
+          <td>2610:0000::/23</td>
+          <td>ARIN</td>
+          <td>2005-11-17</td>
+          <td>whois.arin.net</td>
+          <td style="white-space: pre">https://rdap.arin.net/registry<br />http://rdap.arin.net/registry</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2620:0000::/23</td>
+          <td>ARIN</td>
+          <td>2006-09-12</td>
+          <td>whois.arin.net</td>
+          <td style="white-space: pre">https://rdap.arin.net/registry<br />http://rdap.arin.net/registry</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2800:0000::/12</td>
+          <td>LACNIC</td>
+          <td>2006-10-03</td>
+          <td>whois.lacnic.net</td>
+          <td style="white-space: pre">https://rdap.lacnic.net/rdap/</td>
+          <td>ALLOCATED</td>
+          <td>2800:0000::/23 was allocated on 2005-11-17. The more recent allocation (2006-10-03) incorporates the 
+previous allocation.</td>
+        </tr>
+        <tr>
+          <td>2a00:0000::/12</td>
+          <td>RIPE NCC</td>
+          <td>2006-10-03</td>
+          <td>whois.ripe.net</td>
+          <td style="white-space: pre">https://rdap.db.ripe.net/</td>
+          <td>ALLOCATED</td>
+          <td>2a00:0000::/21 was originally allocated on 2005-04-19. 2a01:0000::/23 was allocated on 2005-07-14. 
+2a01:0000::/16 (incorporating the 2a01:0000::/23) was allocated on 2005-12-15. The more recent allocation 
+(2006-10-03) incorporates these previous allocations.</td>
+        </tr>
+        <tr>
+          <td>2c00:0000::/12</td>
+          <td>AFRINIC</td>
+          <td>2006-10-03</td>
+          <td>whois.afrinic.net</td>
+          <td style="white-space: pre">https://rdap.afrinic.net/rdap/<br />http://rdap.afrinic.net/rdap/</td>
+          <td>ALLOCATED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2d00:0000::/8</td>
+          <td>IANA</td>
+          <td>1999-07-01</td>
+          <td></td>
+          <td style="white-space: pre"></td>
+          <td>RESERVED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2e00:0000::/7</td>
+          <td>IANA</td>
+          <td>1999-07-01</td>
+          <td></td>
+          <td style="white-space: pre"></td>
+          <td>RESERVED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3000:0000::/4</td>
+          <td>IANA</td>
+          <td>1999-07-01</td>
+          <td></td>
+          <td style="white-space: pre"></td>
+          <td>RESERVED</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3ffe::/16</td>
+          <td>IANA</td>
+          <td>2008-04</td>
+          <td></td>
+          <td style="white-space: pre"></td>
+          <td>RESERVED</td>
+          <td>3ffe:831f::/32 was used for Teredo in some old but widely distributed networking stacks. This usage is 
+deprecated in favor of 2001::/32, which was allocated for the purpose in [<a href="http://www.iana.org/go/rfc4380">RFC4380</a>].
+3ffe::/16 and 5f00::/8 were used for the 6bone but were returned. [<a href="http://www.iana.org/go/rfc5156">RFC5156</a>]</td>
+        </tr>
+        <tr>
+          <td>5f00::/8</td>
+          <td>IANA</td>
+          <td>2008-04</td>
+          <td></td>
+          <td style="white-space: pre"></td>
+          <td>RESERVED</td>
+          <td>3ffe::/16 and 5f00::/8 were used for the 6bone but were returned. [<a href="http://www.iana.org/go/rfc5156">RFC5156</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

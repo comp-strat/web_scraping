@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Open Shortest Path First (OSPF) Traffic Engineering TLVs</title>
+  </head>
+  <body>
+    <h1>Open Shortest Path First (OSPF) Traffic Engineering TLVs</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2003-08-29</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-02-24</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ospf-traffic-eng-tlvs.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ospf-traffic-eng-tlvs.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ospf-traffic-eng-tlvs.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#top-level">Top Level Types in TE LSAs</a>
+      </li>
+      <li>
+        <a href="#subtlv1">Types for sub-TLVs of Router Address TLV (Value 1)</a>
+      </li>
+      <li>
+        <a href="#subtlv2">Types for sub-TLVs of TE Link TLV (Value 2)</a>
+      </li>
+      <li>
+        <a href="#subtlv5">Types for sub-TLVs of TE Node Attribute TLV (Value 5)</a>
+      </li>
+      <li>
+        <a href="#subtlv6">Types for sub-TLVs of Optical Node Property (Value 6)</a>
+      </li>
+      <li>
+        <a href="#otn-tdm-scsi">Types for sub-TLVs of OTN-TDM SCSI (Switching Capability Specific Information)</a>
+      </li>
+      <li>
+        <a href="#wson-lsc-scsi-sub-tlv">Types for sub-TLVs of WSON-LSC SCSI (Switching Capability Specific Information)</a>
+      </li>
+      <li>
+        <a href="#flexi-grid-lsc-scsi-sub-tlv">Types for sub-TLVs of Flexi-Grid-LSC SCSI (Switch Capability-Specific Information)</a>
+      </li>
+    </ul>
+    <h2><a name="top-level" id="top-level"></a>Top Level Types in TE LSAs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="top-level.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-top-level" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Top Level Types</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Router Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Link</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Router IPv6 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5329">RFC5329</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Link Local</td>
+          <td>[<a href="http://www.iana.org/go/rfc4203">RFC4203</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Node Attribute</td>
+          <td>[<a href="http://www.iana.org/go/rfc5786">RFC5786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Optical Node Property</td>
+          <td>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32768-32777</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32778-65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="subtlv1" id="subtlv1"></a>Types for sub-TLVs of Router Address TLV (Value 1)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="subtlv1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-subtlv1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Sub-TLV</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-11</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Inter-RA Export Upward sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Inter-RA Export Downward sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32768-32777</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32778-65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="subtlv2" id="subtlv2"></a>Types for sub-TLVs of TE Link TLV (Value 2)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="subtlv2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-subtlv2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Sub-TLV</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Link type (1 octet)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Link ID (4 octets)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Local interface IP address (4 octets)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Remote interface IP address (4 octets)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Traffic engineering metric (4 octets)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Maximum bandwidth (4 octets)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Maximum reservable bandwidth (4 octets)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Unreserved bandwidth (32 octets)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Administrative group (4 octets)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Local and Remote TE Router ID sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Link Local/Remote Identifiers (8 octets)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4203">RFC4203</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Inter-RA Export Upward sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Inter-RA Export Downward sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Link Protection Type (4 octets)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4203">RFC4203</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Interface Switching Capability Descriptor (variable)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4203">RFC4203</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Shared Risk Link Group (variable)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4203">RFC4203</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Bandwidth Constraints</td>
+          <td>[<a href="http://www.iana.org/go/rfc4124">RFC4124</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Neighbor ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5329">RFC5329</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Local Interface IPv6 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5329">RFC5329</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Remote Interface IPv6 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5329">RFC5329</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>Remote AS Number sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5392">RFC5392</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>IPv4 Remote ASBR ID sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5392">RFC5392</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Unconstrained TE LSP Count (sub-)TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5330">RFC5330</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>IPv6 Remote ASBR ID sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5392">RFC5392</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>Interface Adjustment Capability Descriptor (IACD)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6001">RFC6001</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>Extended Administrative Group</td>
+          <td>[<a href="http://www.iana.org/go/rfc7308">RFC7308</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>Unidirectional Link Delay</td>
+          <td>[<a href="http://www.iana.org/go/rfc7471">RFC7471</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>Min/Max Unidirectional Link Delay</td>
+          <td>[<a href="http://www.iana.org/go/rfc7471">RFC7471</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>Unidirectional Delay Variation</td>
+          <td>[<a href="http://www.iana.org/go/rfc7471">RFC7471</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>Unidirectional Link Loss</td>
+          <td>[<a href="http://www.iana.org/go/rfc7471">RFC7471</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>Unidirectional Residual Bandwidth</td>
+          <td>[<a href="http://www.iana.org/go/rfc7471">RFC7471</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>Unidirectional Available Bandwidth</td>
+          <td>[<a href="http://www.iana.org/go/rfc7471">RFC7471</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>Unidirectional Utilized Bandwidth</td>
+          <td>[<a href="http://www.iana.org/go/rfc7471">RFC7471</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>Port Label Restrictions</td>
+          <td>[<a href="http://www.iana.org/go/rfc7580">RFC7580</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>Network-to-Router TE Metric Sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc8042">RFC8042</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32768-32777</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32778-65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3630">RFC3630</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="subtlv5" id="subtlv5"></a>Types for sub-TLVs of TE Node Attribute TLV (Value 5)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5786">RFC5786</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="subtlv5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-subtlv5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Sub-TLV</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5786">RFC5786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Node IPv4 Local Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5786">RFC5786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Node IPv6 Local Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5786">RFC5786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-4</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Local TE Router ID sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-11</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Inter-RA Export Upward sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Inter-RA Export Downward sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6827">RFC6827</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Connectivity Matrix</td>
+          <td>[<a href="http://www.iana.org/go/rfc7580">RFC7580</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32768-32777</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5786">RFC5786</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32778-65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5786">RFC5786</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="subtlv6" id="subtlv6"></a>Types for sub-TLVs of Optical Node Property (Value 6)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="subtlv6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-subtlv6" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Length</th>
+          <th>Sub-TLV</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td></td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>variable</td>
+          <td>Resource Block Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>variable</td>
+          <td>Resource Accessibility</td>
+          <td>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>variable</td>
+          <td>Resource Wavelength Constraints</td>
+          <td>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>variable</td>
+          <td>Resource Block Pool State</td>
+          <td>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>variable</td>
+          <td>Resource Block Shared Access Wavelength Availability</td>
+          <td>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-65535</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="otn-tdm-scsi" id="otn-tdm-scsi"></a>Types for sub-TLVs of OTN-TDM SCSI (Switching Capability Specific Information)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7138">RFC7138</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="otn-tdm-scsi.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-otn-tdm-scsi" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Sub-TLV</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7138">RFC7138</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Unreserved Bandwidth for fixed containers</td>
+          <td>[<a href="http://www.iana.org/go/rfc7138">RFC7138</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Unreserved/MAX Bandwidth for flexible containers</td>
+          <td>[<a href="http://www.iana.org/go/rfc7138">RFC7138</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="wson-lsc-scsi-sub-tlv" id="wson-lsc-scsi-sub-tlv"></a>Types for sub-TLVs of WSON-LSC SCSI (Switching Capability Specific Information)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="wson-lsc-scsi-sub-tlv.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-wson-lsc-scsi-sub-tlv" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Sub-TLV</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Available Labels</td>
+          <td>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Shared Backup Labels</td>
+          <td>[<a href="http://www.iana.org/go/rfc7688">RFC7688</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="flexi-grid-lsc-scsi-sub-tlv" id="flexi-grid-lsc-scsi-sub-tlv"></a>Types for sub-TLVs of Flexi-Grid-LSC SCSI (Switch Capability-Specific Information)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-ccamp-flexible-grid-ospf-ext-09">RFC-ietf-ccamp-flexible-grid-ospf-ext-09</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="flexi-grid-lsc-scsi-sub-tlv.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-flexi-grid-lsc-scsi-sub-tlv" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Sub-TLV</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ccamp-flexible-grid-ospf-ext-09">RFC-ietf-ccamp-flexible-grid-ospf-ext-09</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Frequency availability bitmap</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ccamp-flexible-grid-ospf-ext-09">RFC-ietf-ccamp-flexible-grid-ospf-ext-09</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,1774 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Enumservice Registrations</title>
+  </head>
+  <body>
+    <h1>Enumservice Registrations</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2004-03-12</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-06-26</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="enum-services.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="enum-services.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="enum-services.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registry included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#enum-services-1">Enumservice Registrations</a>
+      </li>
+    </ul>
+    <h2><a name="enum-services-1" id="enum-services-1"></a>Enumservice Registrations</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Bernie Hoeneisen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6117">RFC6117</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="enum-services-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-enum-services-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Type</th>
+          <th>Subtype</th>
+          <th>URI Scheme(s)</th>
+          <th>Functional Specification</th>
+          <th>Security Considerations</th>
+          <th>Intended Usage</th>
+          <th>Enumservice Specification(s)</th>
+          <th>Requester(s)</th>
+          <th>Further Information</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Application-Based, Ancillary</td>
+          <td>acct</td>
+          <td>N/A</td>
+          <td>acct</td>
+          <td>
+	    <p>
+	      This Enumservice indicates that the resource
+	      can be identified by the associated 'acct' URI [<a href="http://www.iana.org/go/rfc7565">RFC7565</a>].
+	    </p>
+	  </td>
+          <td>
+	    For DNS considerations in avoiding loops when
+	    searching for "acct" NAPTRs,
+	    see [<a href="http://www.iana.org/go/rfc7566">RFC7566</a>], Section 6.
+	    For security considerations,
+	    see [<a href="http://www.iana.org/go/rfc7566">RFC7566</a>], Section 7.
+	  </td>
+          <td>COMMON</td>
+          <td>
+	    [<a href="http://www.iana.org/go/rfc7566">RFC7566</a>]
+	  </td>
+          <td>
+	    [<a href="#Laurent_Walter_Goix">Laurent_Walter_Goix</a>]
+	  </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>email</td>
+          <td>mailto</td>
+          <td>mailto</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource can be
+           addressed by the associated URI in order to send an
+           email.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>], Section 6.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>ems</td>
+          <td>mailto</td>
+          <td>mailto</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified by the associated URI is capable
+           of receiving a message using an email protocol.
+         </p>
+        <p>
+           EMS content is sent over SMTP using the format
+           specified by TS 23.140 [15] Section 8.4.4 and TS
+           26.140 [16] Section 4, as an MMS message.  Within
+           such a message, EMS content is carried as either a
+           text or application/octet-stream MIME sub-part (see
+           TS 26.140 [16], Section 4.1).
+         </p>
+        <p>
+           For references see [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>].
+         </p>
+      </td>
+          <td>
+        <p>
+           There are no specific security issues with this
+           Enumservice. However, the general considerations of
+           Section 6 of [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>] apply.
+         </p>
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>ems</td>
+          <td>tel</td>
+          <td>tel</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified by the associated URI is capable
+           of receiving a message using the Enhanced Message
+           Service (EMS) [14] (For reference see
+           [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>]).
+         </p>
+      </td>
+          <td>
+        <p>
+           There are no specific security issues with this
+           Enumservice. However, the general considerations of
+           Section 6 of [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>] apply.
+         </p>
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td>
+        <p>
+           Note that an indication of EMS can be taken as
+           implying that the recipient is capable of receiving
+           SMS messages at this address as well.
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Subset</td>
+          <td>fax</td>
+          <td>tel</td>
+          <td>tel</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified by the associated URI is capable
+           of being contacted to provide a communication
+           session during which facsimile documents can be
+           sent.
+         </p>
+        <p>
+           A client selecting this NAPTR will have support
+           for generating and sending facsimile documents to
+           the recipient using the PSTN session and transfer
+           protocols specified in [12] and [13] in
+           [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>] -
+           in short, they will have a fax program with a local
+           or shared PSTN access over which they can send
+           faxes.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>], Section 6.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Subset</td>
+          <td>ft</td>
+          <td>ftp</td>
+          <td>ftp</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified by the associated URI is a file
+           service from which a file or file listing can be
+           retrieved.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4002">RFC4002</a>], Section 5.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4002">RFC4002</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Protocol-Based</td>
+          <td>h323</td>
+          <td>N/A</td>
+          <td>h323</td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc3762">RFC3762</a>], Section 3.
+       </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc3762">RFC3762</a>], Section 5.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc3762">RFC3762</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Orit_Levin">Orit_Levin</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Protocol-Based</td>
+          <td>iax</td>
+          <td>N/A</td>
+          <td>iax</td>
+          <td>
+        <p>
+          The 'iax' Enumservice is used to map E.164 numbers to
+          IAX URIs. Such URIs identify resources capable of being
+          contacted to provide a communication session using the
+          IAX protocol [<a href="http://www.iana.org/go/rfc5456">RFC5456</a>].
+        </p>
+        <p>
+          A client selecting this NAPTR needs to be able to support
+          communication utilizing the IAX protocol.
+        </p>
+      </td>
+          <td>
+        See [<a href="http://www.iana.org/go/rfc6315">RFC6315</a>], Section 4.
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc6315">RFC6315</a>]
+      </td>
+          <td>
+        [<a href="#Ed_Guy">Ed_Guy</a>]
+        [<a href="#Klaus_Darilion">Klaus_Darilion</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>ical-access</td>
+          <td>http</td>
+          <td>http</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified
+           can be addressed by the associated URI in order to access
+           a user's calendar (for example free/busy status) using
+           the CalDAV [7] protocol for Internet calendaring.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc5333">RFC5333</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5333">RFC5333</a>], Section 4.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5333">RFC5333</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rohan_Mahy">Rohan_Mahy</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>ical-access</td>
+          <td>https</td>
+          <td>https</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified
+           can be addressed by the associated URI in order to access
+           a user's calendar (for example free/busy status) using
+           the CalDAV [7] protocol for Internet calendaring.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc5333">RFC5333</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5333">RFC5333</a>], Section 4.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5333">RFC5333</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rohan_Mahy">Rohan_Mahy</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>ical-sched</td>
+          <td>mailto</td>
+          <td>mailto</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified
+           can be addressed by the associated URI used for
+           scheduling using Internet calendaring via Internet mail
+           with the iMIP [6] protocol.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc5333">RFC5333</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5333">RFC5333</a>], Section 4.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5333">RFC5333</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rohan_Mahy">Rohan_Mahy</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Subset</td>
+          <td>ifax</td>
+          <td>mailto</td>
+          <td>mailto</td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4143">RFC4143</a>], Section 1.
+       </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4143">RFC4143</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4143">RFC4143</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Kiyoshi_Toyoda">Kiyoshi_Toyoda</a>]
+        [<a href="#Dave_Crocker">Dave_Crocker</a>]
+      </td>
+          <td>
+        <p>
+           The URI Scheme is 'mailto' because facsimile is a
+           profile of standard Internet mail and uses standard
+           Internet mail addressing.
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>im</td>
+          <td>N/A</td>
+          <td>im</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified is an 'im:' URI. The 'im:' URI scheme
+           does not identify any particular protocol that will
+           be used to handle instant messaging receipt or
+           delivery, rather the mechanism in RFC3861 [4] is
+           used to discover whether an IM protocol supported by
+           the party querying ENUM is also supported by the
+           target resource.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc5028">RFC5028</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5028">RFC5028</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5028">RFC5028</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rohan_Mahy">Rohan_Mahy</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>mms</td>
+          <td>mailto</td>
+          <td>mailto</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified by the associated URI is capable
+           of receiving a message using an email protocol.
+         </p>
+        <p>
+           MMS messages are sent over SMTP using the format
+           specified by TS 23.140 [15] Section 8.4.4 and TS
+           26.140 [16] Section 4.
+         </p>
+        <p>
+           Within and between MMS Environments (MMSE,
+           network infrastructures that support the MultiMedia
+           Service), other pieces of state data (for example,
+           charging-significant information) are exchanged
+           between MMS Relay Servers.  Thus, although these
+           servers use SMTP as the "bearer" for their
+           application exchanges, they map their internal state
+           to specialized header fields carried in the SMTP message
+           exchanges.  The header fields used in such MMSE are
+           described in detail in [17].
+         </p>
+        <p>
+           For references see [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>].
+         </p>
+      </td>
+          <td>
+        <p>
+           There are no specific security issues with this
+           Enumservice. However, the general considerations of
+           Section 6 of [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>] apply.
+         </p>
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td>
+        <p>
+           The MMS Architecture describes an interface
+           between the MMSE and "legacy messaging systems"
+           (labelled as MM3) which accepts "standard" SMTP
+           messages.  Thus although the MMS Relay Server that
+           supports this interface appears as a standard SMTP
+           server from the perspective of an Internet-based
+           mail server, it acts as a gateway and translator,
+           adding the internal state data that is used within
+           and between the MMS Environments.  This mechanism is
+           described in [17], which also includes references to
+           the specifications agreed by those bodies
+           responsible for the design of the MMS.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>].
+        </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>mms</td>
+          <td>tel</td>
+          <td>tel</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified by the associated URI is capable
+           of receiving a message using the Multimedia
+           Messaging Service (MMS) [15].
+         </p>
+        <p>
+           For references see [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>].
+         </p>
+      </td>
+          <td>
+        <p>
+           There are no specific security issues with this
+           Enumservice. However, the general considerations of
+           Section 6 of [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>] apply.
+         </p>
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td>
+        <p>
+           Note that MMS can be used as an alternative to
+           deliver an SMS RP-DATA RPDU if, for example, the
+           SMS bearer is not supported.  If an entry includes
+           this Enumservice, then in effect this can be taken
+           as implying that the recipient is capable of
+           receiving EMS or SMS messages at this address.  Such
+           choices on the end system de do have two small
+           caveats; whilst in practice all terminals supporting
+           MMS today support SMS as well, it might not
+           necessarily be the case in the future, and there may
+           be tariff differences in using the MMS rather than
+           using the SMS or EMS.
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>pres</td>
+          <td>N/A</td>
+          <td>pres</td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc3953">RFC3953</a>], Section 4.
+       </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc3953">RFC3953</a>], Section 6.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc3953">RFC3953</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jon_Peterson">Jon_Peterson</a>]
+      </td>
+          <td>
+        <p>
+           See [<a href="http://www.iana.org/go/rfc3953">RFC3953</a>], Section 3.
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>pstn</td>
+          <td>sip</td>
+          <td>sip</td>
+          <td>
+        <p>
+           These Enumservices indicate that the
+           resource identified can be addressed by the
+           associated URI in order to initiate a
+           telecommunication session, which may include two-way
+           voice or other communications, to the PSTN.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4769">RFC4769</a>], Section 7.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4769">RFC4769</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Richard_Shockey">Richard_Shockey</a>]
+      </td>
+          <td>
+        <p>
+           A Number Portability Dip Indicator (npdi) should
+           be used in practice
+           (see [<a href="http://www.iana.org/go/rfc4769">RFC4769</a>], Section 4).
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Ancillary</td>
+          <td>pstn</td>
+          <td>tel</td>
+          <td>tel</td>
+          <td>
+        <p>
+           These Enumservices indicate that the
+           resource identified can be addressed by the
+           associated URI in order to initiate a
+           telecommunication session, which may include two-way
+           voice or other communications, to the PSTN. These
+           URIs may contain number portability data as
+           specified in RFC4694 [10].
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc4769">RFC4769</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4769">RFC4769</a>], Section 7.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4769">RFC4769</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Richard_Shockey">Richard_Shockey</a>]
+      </td>
+          <td>
+        <p>
+           A Number Portability Dip Indicator (npdi) should
+           be used in practice
+           (see [<a href="http://www.iana.org/go/rfc4769">RFC4769</a>], Section 4).
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Protocol-Based</td>
+          <td>sip</td>
+          <td>N/A</td>
+          <td>sip, sips</td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc3764">RFC3764</a>], Section 4.
+       </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc3764">RFC3764</a>], Section 6.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc3764">RFC3764</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jon_Peterson">Jon_Peterson</a>]
+      </td>
+          <td>
+        <p>
+           See [<a href="http://www.iana.org/go/rfc3764">RFC3764</a>], Section 3.
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>sms</td>
+          <td>mailto</td>
+          <td>mailto</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified by the associated URI is capable
+           of receiving a message using an email protocol.
+         </p>
+        <p>
+           SMS content is sent over SMTP using the format
+           specified by TS 23.140 [15] Section 8.4.4 and TS
+           26.140 [16] Section 4, as an MMS message.  Within
+           such a message, SMS content is carried as either a
+           text or application/octet-stream MIME sub-part (see
+           TS 26.140 [16], Section 4.1)
+         </p>
+        <p>
+           For references see [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>]
+         </p>
+      </td>
+          <td>
+        <p>
+           There are no specific security issues with this
+           Enumservice. However, the general considerations of
+           Section 6 of [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>] apply.
+         </p>
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>sms</td>
+          <td>tel</td>
+          <td>tel</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified by the associated URI is capable
+           of receiving a message using the Short Message
+           Service (SMS) [14] in [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>].
+         </p>
+      </td>
+          <td>
+        <p>
+           There are no specific security issues with this
+           Enumservice. However, the general considerations of
+           Section 6 of [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>] apply.
+         </p>
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4355">RFC4355</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>unifmsg</td>
+          <td>http</td>
+          <td>http</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified by
+           the associated URI scheme is capable of being a source of
+           information.
+         </p>
+        <p>
+           Note that the kind of information retrieved can be manifold.
+           Usually, contacting a resource by an 'http:' [11] URI
+           provides a document. This document can contain references
+           that will trigger the download of many different kinds of
+           information, such as text, audio, video, executable code, or
+           even video message files. Thus, one cannot be more specific
+           about the kind of information expected when contacting the
+           resource.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>unifmsg</td>
+          <td>https</td>
+          <td>https</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified by
+           the associated URI scheme is capable of being a source of
+           information, which can be contacted using TLS or the Secure
+           Socket Layer protocol.
+         </p>
+        <p>
+           Note that the kind of information retrieved can be manifold.
+           Usually, contacting a resource by an 'https:' [12] URI
+           provides a document. This document can contain references
+           that will trigger the download of many different kinds of
+           information, such as text, audio, video, executable code, or
+           even video message files. Thus, one cannot be more specific
+           about the kind of information expected when contacting the
+           resource.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>unifmsg</td>
+          <td>sip</td>
+          <td>sip</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified can
+           be addressed by the associated URI scheme in order to
+           initiate a unified communication session to a unified
+           messaging system.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>unifmsg</td>
+          <td>sips</td>
+          <td>sips</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified can
+           be addressed by the associated URI scheme in order to
+           initiate a unified communication session to a unified
+           messaging system.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Data Type-Based</td>
+          <td>vcard</td>
+          <td>N/A</td>
+          <td>http, https</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified is a plain vCard, according to RFC2426,
+           which may be accessed using HTTP / HTTPS [7].
+         </p>
+        <p>
+           Clients fetching the vCard from the resource
+           indicated should expect access to be
+           restricted. Additionally, the comprehension of the
+           data provided may vary depending on the client's
+           identity.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc4969">RFC4969</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4969">RFC4969</a>], Section 5.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4969">RFC4969</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Alexander_Mayrhofer">Alexander_Mayrhofer</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>videomsg</td>
+          <td>http</td>
+          <td>http</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified by
+           the associated URI scheme is capable of being a source of
+           information.
+         </p>
+        <p>
+           Note that the kind of information retrieved can be manifold.
+           Usually, contacting a resource by an 'http:' [11] URI
+           provides a document. This document can contain references
+           that will trigger the download of many different kinds of
+           information, such as text, audio, video, executable code, or
+           even video message files. Thus, one cannot be more specific
+           about the kind of information expected when contacting the
+           resource.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>videomsg</td>
+          <td>https</td>
+          <td>https</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified by
+           the associated URI scheme is capable of being a source of
+           information, which can be contacted using TLS or the Secure
+           Socket Layer protocol.
+         </p>
+        <p>
+           Note that the kind of information retrieved can be manifold.
+           Usually, contacting a resource by an 'https:' [12] URI
+           provides a document. This document can contain references
+           that will trigger the download of many different kinds of
+           information, such as text, audio, video, executable code, or
+           even video message files. Thus, one cannot be more specific
+           about the kind of information expected when contacting the
+           resource.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>videomsg</td>
+          <td>sip</td>
+          <td>sip</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified can
+           be addressed by the associated URI scheme in order to
+           initiate a video communication session to a video messaging
+           system.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>videomsg</td>
+          <td>sips</td>
+          <td>sips</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified can
+           be addressed by the associated URI scheme in order to
+           initiate a video communication session to a video messaging
+           system.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>voice</td>
+          <td>tel</td>
+          <td>tel</td>
+          <td>
+        <p>
+           The kind of communication indicated by this
+           Enumservice is "Interactive Voice".  From a protocol
+           perspective, this communication is expected to
+           involve bidirectional media streams carrying audio
+           data.
+         </p>
+        <p>
+           A client may imply that the person controlling
+           population of a NAPTR holding this Enumservice
+           indicates their capability to engage in an
+           interactive voice session when contacted using the
+           URI generated by this NAPTR.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4415">RFC4415</a>], Section 5.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4415">RFC4415</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td>
+        <p>
+           This Enumservice indicates that the person
+           responsible for the NAPTR is accessible via the PSTN
+           (Public Switched Telephone Network) or PLMN (Public
+           Land Mobile Network) using the value of the
+           generated URI.
+         </p>
+        <p>The kind of subsystem required to initiate a
+           Voice Enumservice with this Subtype is a "Dialler".
+           This is a subsystem that either provides a local
+           connection to the PSTN or PLMN, or that provides an
+           indirect connection to those networks.  The
+           subsystem will use the telephone number held in the
+           generated URI to place a voice call.  The voice call
+           is placed to a network that uses E.164 numbers to
+           route calls to an appropriate destination.
+         </p>
+        <p>
+           Note that the PSTN/PLMN connection may be
+           indirect.  The end user receiving this NAPTR may
+           have a relationship with a Communications Service
+           Provider that accepts call initiation requests from
+           that subsystem using an IP-based protocol such as
+           SIP or H.323, and places the call to the PSTN using
+           a remote gateway service.  In this case the Provider
+           may either accept requests using "tel:" URIs or has
+           a defined mechanism to convert "tel:" URI values
+           into a "protocol-native" form.
+         </p>
+        <p>
+           The "tel:" URI value SHOULD be fully qualified
+           (using the "global phone number" form of RFC3966
+           [10]).  A "local phone number" as defined in that
+           document SHOULD NOT be used unless the controller of
+           the zone in which the NAPTR appears is sure that it
+           can be distinguished unambiguously by all clients
+           that can access the resource record and that a call
+           from their network access points can be routed to
+           that destination.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc4415">RFC4415</a>].
+        </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>voicemsg</td>
+          <td>http</td>
+          <td>http</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified by
+           the associated URI scheme is capable of being a source of
+           information.
+         </p>
+        <p>
+           Note that the kind of information retrieved can be manifold.
+           Usually, contacting a resource by an 'http:' [11] URI
+           provides a document. This document can contain references
+           that will trigger the download of many different kinds of
+           information, such as text, audio, video, executable code, or
+           even voice message files. Thus, one cannot be more specific
+           about the kind of information expected when contacting the
+           resource.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>voicemsg</td>
+          <td>https</td>
+          <td>https</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified by
+           the associated URI scheme is capable of being a source of
+           information, which can be contacted using TLS or the Secure
+           Socket Layer protocol.
+         </p>
+        <p>
+           Note that the kind of information retrieved can be manifold.
+           Usually, contacting a resource by an 'https:' [12] URI
+           provides a document. This document can contain references
+           that will trigger the download of many different kinds of
+           information, such as text, audio, video, executable code, or
+           even voice message files. Thus, one cannot be more specific
+           about the kind of information expected when contacting the
+           resource.
+        </p>
+        <p>
+          References are contained in [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+        </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>voicemsg</td>
+          <td>sip</td>
+          <td>sip</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified can
+           be addressed by the associated URI scheme in order to
+           initiate a voice communication session to a voice messaging
+           system.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>voicemsg</td>
+          <td>sips</td>
+          <td>sips</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified can
+           be addressed by the associated URI scheme in order to
+           initiate a voice communication session to a voice messaging
+           system.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>voicemsg</td>
+          <td>tel</td>
+          <td>tel</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource identified can
+           be addressed by the associated URI scheme in order to
+           initiate a voice communication session to a voice messaging
+           system.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>], Section 3.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Jason_Livingood">Jason_Livingood</a>]
+        [<a href="#Don_Troshynski">Don_Troshynski</a>]
+      </td>
+          <td>
+        <p>
+           Implementers should review a non-exclusive list of examples
+           in Section 7 of [<a href="http://www.iana.org/go/rfc5278">RFC5278</a>].
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Data Type-Based</td>
+          <td>vpim</td>
+          <td>ldap</td>
+          <td>ldap</td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4238">RFC4238</a>], Section 3.2 - 3.3.
+       </td>
+          <td>
+        <p>
+           Malicious Redirection:
+           One of the fundamental dangers related to any
+           service such as this is that a malicious entry in a
+           resolver's database will cause clients to resolve
+           the E.164 into the wrong LDAP URI. The possible
+           intent may be to cause the client to connect to a
+           rogue LDAP server and retrieve (or fail to retrieve)
+           a resource containing fraudulent or damaging
+           information.
+         </p>
+        <p>
+           Denial of Service:
+           By removing the URI to which the E.164 maps, a
+           malicious intruder may remove the client's ability
+           to access the LDAP directory server.
+         </p>
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4238">RFC4238</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Greg_Vaudreuil">Greg_Vaudreuil</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Data Type-Based</td>
+          <td>vpim</td>
+          <td>mailto</td>
+          <td>mailto</td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4238">RFC4238</a>], Section 4.2 - 4.4.
+       </td>
+          <td>
+        <p>
+           Malicious Redirection:
+           One of the fundamental dangers related to any
+           service such as this is that a malicious entry in a
+           resolver's database will cause clients to resolve
+           the E.164 into the wrong email URI. The possible
+           intent may be to cause the client to send the
+           information to an incorrect destination.
+         </p>
+        <p>
+           Denial of Service:
+           By removing the URI to which the E.164 maps, a
+           malicious intruder may remove the client's ability
+           to access the resource.
+         </p>
+        <p>
+           Unsolicited Bulk Email:
+           The exposure of email addresses through the ENUM
+           service provides a bulk mailer access to large
+           numbers of email addresses where only the telephone
+           number was previously known.
+         </p>
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4238">RFC4238</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Greg_Vaudreuil">Greg_Vaudreuil</a>]
+      </td>
+          <td>
+        <p>
+           Error Conditions:
+         </p>
+        <p>
+           E.164 number not in the numbering plan
+         </p>
+        <p>
+           E.164 number in the numbering plan, but no
+           URIs exist for that number
+         </p>
+        <p>
+           E2U+vpim:mailto Service unavailable of email
+           addresses where only the telephone number was
+           previously known.
+         </p>
+      </td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>web</td>
+          <td>http</td>
+          <td>http</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified by the associated URI is capable
+           of being a source of information.  It has to be
+           noted that the kind of information retrieved can be
+           manifold. Usually, contacting a resource by an
+           "http:" URI provides a document. This document can
+           contain references that will trigger download of
+           many different kinds of information, like audio or
+           video or executable code. Thus, one can not be more
+           specific about the kind of information that can be
+           expected when contacting the resource.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4002">RFC4002</a>], Section 5.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4002">RFC4002</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Application-Based, Common</td>
+          <td>web</td>
+          <td>https</td>
+          <td>https</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified by the associated URI is capable
+           of being a source of information, which can be
+           contacted by using TLS or Secure Socket Layer
+           protocol.  It has to be noted that the kind of
+           information retrieved can be manifold. Usually,
+           contacting a resource by an "https:" URI provides a
+           document. This document can contain all different
+           kind of information, like audio or video or
+           executable code. Thus, one can not be more specific
+           what information to expect when contacting the
+           resource.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4002">RFC4002</a>], Section 5.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4002">RFC4002</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Rudolf_Brandner">Rudolf_Brandner</a>]
+        [<a href="#Lawrence_Conroy">Lawrence_Conroy</a>]
+        [<a href="#Richard_Stastny">Richard_Stastny</a>]
+      </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Protocol-Based</td>
+          <td>xmpp</td>
+          <td>N/A</td>
+          <td>xmpp</td>
+          <td>
+        <p>
+           This Enumservice indicates that the resource
+           identified is an XMPP entity.
+         </p>
+      </td>
+          <td>
+         See [<a href="http://www.iana.org/go/rfc4979">RFC4979</a>], Section 6.
+       </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc4979">RFC4979</a>]
+        [<a href="http://www.iana.org/go/rfc6118">RFC6118</a>]
+      </td>
+          <td>
+        [<a href="#Alexander_Mayrhofer">Alexander_Mayrhofer</a>]
+      </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Organization</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Alexander_Mayrhofer" id="Alexander_Mayrhofer">[Alexander_Mayrhofer]</a>
+          </td>
+          <td>Alexander Mayrhofer</td>
+          <td>enum.at GmbH</td>
+          <td>
+            <a href="mailto:alexander.mayrhofer&amp;enum.at">mailto:alexander.mayrhofer&amp;enum.at</a>
+          </td>
+          <td>2010-06-30</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Dave_Crocker" id="Dave_Crocker">[Dave_Crocker]</a>
+          </td>
+          <td>Dave Crocker</td>
+          <td>Brandenburg InternetWorking</td>
+          <td>
+            <a href="mailto:dcrocker&amp;bbiw.net">mailto:dcrocker&amp;bbiw.net</a>
+          </td>
+          <td>2005-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Don_Troshynski" id="Don_Troshynski">[Don_Troshynski]</a>
+          </td>
+          <td>Don Troshynski</td>
+          <td>Acme Packet</td>
+          <td>
+            <a href="mailto:dtroshynski&amp;acmepacket.com">mailto:dtroshynski&amp;acmepacket.com</a>
+          </td>
+          <td>2008-07</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Ed_Guy" id="Ed_Guy">[Ed_Guy]</a>
+          </td>
+          <td>Ed Guy</td>
+          <td>CleverSpoke, Inc</td>
+          <td>
+            <a href="mailto:edguy&amp;CleverSpoke.com">mailto:edguy&amp;CleverSpoke.com</a>
+          </td>
+          <td>2011-05-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Greg_Vaudreuil" id="Greg_Vaudreuil">[Greg_Vaudreuil]</a>
+          </td>
+          <td>Greg Vaudreuil</td>
+          <td>Lucent Technologies</td>
+          <td>
+            <a href="mailto:GregV&amp;ieee.org">mailto:GregV&amp;ieee.org</a>
+          </td>
+          <td>2005-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jason_Livingood" id="Jason_Livingood">[Jason_Livingood]</a>
+          </td>
+          <td>Jason Livingood</td>
+          <td>Comcast Cable Communications</td>
+          <td>
+            <a href="mailto:jason_livingood&amp;cable.comcast.com">mailto:jason_livingood&amp;cable.comcast.com</a>
+          </td>
+          <td>2008-07</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jon_Peterson" id="Jon_Peterson">[Jon_Peterson]</a>
+          </td>
+          <td>Jon Peterson</td>
+          <td>NeuStar</td>
+          <td>
+            <a href="mailto:jon.peterson&amp;neustar.biz">mailto:jon.peterson&amp;neustar.biz</a>
+          </td>
+          <td>2005-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Kiyoshi_Toyoda" id="Kiyoshi_Toyoda">[Kiyoshi_Toyoda]</a>
+          </td>
+          <td>Kiyoshi Toyoda</td>
+          <td>Panasonic Communications Co., Ltd.</td>
+          <td>
+            <a href="mailto:toyoda.kiyoshi&amp;jp.panasonic.com">mailto:toyoda.kiyoshi&amp;jp.panasonic.com</a>
+          </td>
+          <td>2005-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Klaus_Darilion" id="Klaus_Darilion">[Klaus_Darilion]</a>
+          </td>
+          <td>Klaus Darilion</td>
+          <td>nic.at</td>
+          <td>
+            <a href="mailto:klaus.darilion&amp;nic.at">mailto:klaus.darilion&amp;nic.at</a>
+          </td>
+          <td>2011-05-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Laurent_Walter_Goix" id="Laurent_Walter_Goix">[Laurent_Walter_Goix]</a>
+          </td>
+          <td>Laurent-Walter Goix</td>
+          <td>Telecom Italia</td>
+          <td>
+            <a href="mailto:laurentwalter.goix&amp;telecomitalia.it">mailto:laurentwalter.goix&amp;telecomitalia.it</a>
+          </td>
+          <td>2014-06-18</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Lawrence_Conroy" id="Lawrence_Conroy">[Lawrence_Conroy]</a>
+          </td>
+          <td>Lawrence Conroy</td>
+          <td>Siemens Roke Manor Research</td>
+          <td>
+            <a href="mailto:lwc&amp;roke.co.uk">mailto:lwc&amp;roke.co.uk</a>
+          </td>
+          <td>2006-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Orit_Levin" id="Orit_Levin">[Orit_Levin]</a>
+          </td>
+          <td>Orit Levin</td>
+          <td>Microsoft Corporation</td>
+          <td>
+            <a href="mailto:oritl&amp;microsoft.com">mailto:oritl&amp;microsoft.com</a>
+          </td>
+          <td>2004-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Richard_Shockey" id="Richard_Shockey">[Richard_Shockey]</a>
+          </td>
+          <td>Richard Shockey</td>
+          <td>NeuStar</td>
+          <td>
+            <a href="mailto:richard.shockey&amp;neustar.biz">mailto:richard.shockey&amp;neustar.biz</a>
+          </td>
+          <td>2006-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Richard_Stastny" id="Richard_Stastny">[Richard_Stastny]</a>
+          </td>
+          <td>Richard Stastny</td>
+          <td>Oefeg</td>
+          <td>
+            <a href="mailto:richard.stastny&amp;oefeg.at">mailto:richard.stastny&amp;oefeg.at</a>
+          </td>
+          <td>2006-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Rohan_Mahy" id="Rohan_Mahy">[Rohan_Mahy]</a>
+          </td>
+          <td>Rohan Mahy</td>
+          <td>Plantronics</td>
+          <td>
+            <a href="mailto:rohan&amp;ekabal.com">mailto:rohan&amp;ekabal.com</a>
+          </td>
+          <td>2007-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Rudolf_Brandner" id="Rudolf_Brandner">[Rudolf_Brandner]</a>
+          </td>
+          <td>Rudolf Brandner</td>
+          <td>Siemens AG</td>
+          <td>
+            <a href="mailto:rudolf.brandner&amp;siemens.com">mailto:rudolf.brandner&amp;siemens.com</a>
+          </td>
+          <td>2006-01</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

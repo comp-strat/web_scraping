@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Probabilistic Routing Protocol using History of Encounters and Transitivity (PRoPHET)</title>
+  </head>
+  <body>
+    <h1>Probabilistic Routing Protocol using History of Encounters and Transitivity (PRoPHET)</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2012-06-04</dd>
+      <dt>Last Updated</dt>
+      <dd>2012-09-11</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="prophet.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="prophet.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="prophet.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#dtn-routing-protocol-number">DTN Routing Protocol Number</a>
+      </li>
+      <li>
+        <a href="#protocol-version">PRoPHET Protocol Version</a>
+      </li>
+      <li>
+        <a href="#header-flags">PRoPHET Header Flags</a>
+      </li>
+      <li>
+        <a href="#result-field">PRoPHET Result Field</a>
+      </li>
+      <li>
+        <a href="#codes-for-success">PRoPHET Codes for Success</a>
+      </li>
+      <li>
+        <a href="#codes-for-failure">PRoPHET Codes for Failure</a>
+      </li>
+      <li>
+        <a href="#tlv-type">PRoPHET TLV Type</a>
+      </li>
+      <li>
+        <a href="#hello-tlv-flags-0-2">Hello TLV Flags 0, 1, 2</a>
+      </li>
+      <li>
+        <a href="#hello-tlv-flags-3-7">Hello TLV Flags 3-7</a>
+      </li>
+      <li>
+        <a href="#error-tlv-flags">Error TLV Flags</a>
+      </li>
+      <li>
+        <a href="#rib-dictionary-tlv-flags">RIB Dictionary TLV Flags</a>
+      </li>
+      <li>
+        <a href="#rib-tlv-flags">RIB TLV Flags</a>
+      </li>
+      <li>
+        <a href="#rib-flags">RIB Flags</a>
+      </li>
+      <li>
+        <a href="#bundle-offer-response-tlv-flags">Bundle Offer and Response TLV Flags</a>
+      </li>
+      <li>
+        <a href="#bundle-offer-response-b-flags">Bundle Offer and Response B Flags</a>
+      </li>
+    </ul>
+    <h2><a name="dtn-routing-protocol-number" id="dtn-routing-protocol-number"></a>DTN Routing Protocol Number</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dtn-routing-protocol-number.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dtn-routing-protocol-number" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Protocol</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>PRoPHET Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01-0xEF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xF0-0xFF</td>
+          <td>Reserved for Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="protocol-version" id="protocol-version"></a>PRoPHET Protocol Version</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="protocol-version.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-protocol-version" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Version</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>PRoPHET v1</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>PRoPHET v2</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03-0xEF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xF0-0xFE</td>
+          <td>Reserved for Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="header-flags" id="header-flags"></a>PRoPHET Header Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="header-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-header-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Position</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-3</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="result-field" id="result-field"></a>PRoPHET Result Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="result-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-result-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Result Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>NoSuccessAck</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>AckAll</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>ReturnReceipt</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x06-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0xFF</td>
+          <td>Reserved for Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="codes-for-success" id="codes-for-success"></a>PRoPHET Codes for Success</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="codes-for-success.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-codes-for-success" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Code Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Generic Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Submessage Received</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0xFF</td>
+          <td>Reserved for Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="codes-for-failure" id="codes-for-failure"></a>PRoPHET Codes for Failure</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="codes-for-failure.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-codes-for-failure" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Code Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00-0x01</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Unspecified Failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0xFE</td>
+          <td>Reserved for Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFF</td>
+          <td>Error TLV in Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="tlv-type" id="tlv-type"></a>PRoPHET TLV Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="tlv-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-tlv-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Hello TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Error TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03-0x9F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xA0</td>
+          <td>RIB dictionary TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xA1</td>
+          <td>RIB TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xA2</td>
+          <td>Bundle Offer (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xA3</td>
+          <td>Bundle Response (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xA4</td>
+          <td>Bundle Offer (v2)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xA5</td>
+          <td>Bundle Response (v2)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xA6-0xCF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xD0-0xFF</td>
+          <td>Reserved for Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hello-tlv-flags-0-2" id="hello-tlv-flags-0-2"></a>Hello TLV Flags 0, 1, 2</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Flag numbers 0, 1 and 2 are treated as a three bit
+unsigned integer with five of the eight possible values allocated and
+the other three reserved.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hello-tlv-flags-0-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hello-tlv-flags-0-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0b000</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0b001</td>
+          <td>SYN</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0b010</td>
+          <td>SYNACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0b011</td>
+          <td>ACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0b100</td>
+          <td>RSTACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0b101-0b111</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hello-tlv-flags-3-7" id="hello-tlv-flags-3-7"></a>Hello TLV Flags 3-7</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hello-tlv-flags-3-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hello-tlv-flags-3-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Position</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">3-6</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>L Flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="error-tlv-flags" id="error-tlv-flags"></a>Error TLV Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="error-tlv-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-error-tlv-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Error TLV Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Dictionary Conflict</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Bad String ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x080-0xFF</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rib-dictionary-tlv-flags" id="rib-dictionary-tlv-flags"></a>RIB Dictionary TLV Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rib-dictionary-tlv-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rib-dictionary-tlv-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Position</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Sent by Listener</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-2</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rib-tlv-flags" id="rib-tlv-flags"></a>RIB TLV Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rib-tlv-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rib-tlv-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Position</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>More RIB TLVs</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-2</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rib-flags" id="rib-flags"></a>RIB Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rib-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rib-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Position</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="bundle-offer-response-tlv-flags" id="bundle-offer-response-tlv-flags"></a>Bundle Offer and Response TLV Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="bundle-offer-response-tlv-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-bundle-offer-response-tlv-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Position</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>More Offer/Response TLVs Following</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="bundle-offer-response-b-flags" id="bundle-offer-response-b-flags"></a>Bundle Offer and Response B Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="bundle-offer-response-b-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-bundle-offer-response-b-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Position</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Bundle Accepted</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Bundle is a Fragment</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Bundle Payload Length Included in TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-6</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>PRoPHET ACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc6693">RFC6693</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

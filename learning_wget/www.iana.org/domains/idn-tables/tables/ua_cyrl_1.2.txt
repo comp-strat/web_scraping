@@ -1,0 +1,83 @@
+TLD: UA
+Script Identifier: Cyrl
+Script Description: Cyrillic
+Version: 1.2
+Effective Date: 1 June 2012
+
+Registry: Communication Systems Ltd
+Contact: Dmitry Kohmanyuk dk@cctld.ua
+Address: P.O.Box 96, Kyiv 04053, Ukraine
+Telephone: +380-50-3814604
+Website: http://www.hostmaster.ua/
+
+Relevant Policy Document URL: http://www.hostmaster.ua/idn/
+
+This document presents a character table used by Hostmaster Ltd for IDN registrations in Cyrillic script.
+It also applies to delegations for subdomains of .UA ccTLD where IDN registrations are permitted.
+
+The following characters are given in their Unicode code points in format U+XXXX, where X is a hexadecimal digit. 
+
+I would like to express gratitude to NASK (.PL ccTLD registry) and Andrzej Bartosiewicz for their IDN work,
+which was instrumental in this implementation, as well as to participants from local internet community.
+
+Addition of Modifier Letter Apostrophe (U+02BC) is based on work of ICANN Variant IDN Project (cyrillic-vip) members,
+including Nicholas Ostler, Alexey Mykhaylov, Vladimir Shadrunov, Oleksiy Ptashniy, Yuriy Kargapolov, and others.
+See also: http://archive.icann.org/en/topics/new-gtlds/cyrillic-vip-issues-report-06oct11-en.pdf
+
+U+0430 а Cyrillic Small Letter A 
+U+0431 б Cyrillic Small Letter BE 
+U+0432 в Cyrillic Small Letter VE 
+U+0433 г Cyrillic Small Letter GHE 
+U+0434 д Cyrillic Small Letter DE ***
+U+0435 е Cyrillic Small Letter IE 
+U+0436 ж Cyrillic Small Letter ZHE ***
+U+0437 з Cyrillic Small Letter ZE 
+U+0438 и Cyrillic Small Letter I ***
+U+0439 й Cyrillic Small Letter SHORT I ***
+U+043A к Cyrillic Small Letter KA 
+U+043B л Cyrillic Small Letter EL ***
+U+043C м Cyrillic Small Letter EM 
+U+043D н Cyrillic Small Letter EN 
+U+043E о Cyrillic Small Letter O 
+U+043F п Cyrillic Small Letter PE ***
+U+0440 р Cyrillic Small Letter ER 
+U+0441 с Cyrillic Small Letter ES 
+U+0442 т Cyrillic Small Letter TE 
+U+0443 у Cyrillic Small Letter U 
+U+0444 ф Cyrillic Small Letter EF ***
+U+0445 х Cyrillic Small Letter HA 
+U+0446 ц Cyrillic Small Letter TSE ***
+U+0447 ч Cyrillic Small Letter CHE ***
+U+0448 ш Cyrillic Small Letter SHA ***
+U+0449 щ Cyrillic Small Letter SHCHA ***
+U+044A ъ Cyrillic Small Letter HARD SIGN ***
+U+044B ы Cyrillic Small Letter YERU ***
+U+044C ь Cyrillic Small Letter SOFT SIGN 
+U+044D э Cyrillic Small Letter E ***
+U+044E ю Cyrillic Small Letter YU ***
+U+044F я Cyrillic Small Letter YA ***
+U+0450 ѐ Cyrillic Small Letter IE WITH GRAVE 
+U+0451 ё Cyrillic Small Letter IO ***
+U+0452 ђ Cyrillic Small Letter DJE ***
+U+0453 ѓ Cyrillic Small Letter GJE ***
+U+0454 є Cyrillic Small Letter UKRAINIAN IE ***
+U+0455 ѕ Cyrillic Small Letter DZE 
+U+0456 і Cyrillic Small Letter BYELORUSSIAN-UKRAINIAN I 
+U+0457 ї Cyrillic Small Letter YI ***
+U+0458 ј Cyrillic Small Letter JE 
+U+0459 љ Cyrillic Small Letter LJE ***
+U+045A њ Cyrillic Small Letter NJE ***
+U+045B ћ Cyrillic Small Letter TSHE ***
+U+045C ќ Cyrillic Small Letter KJE 
+U+045D ѝ Cyrillic Small Letter I WITH GRAVE 
+U+045E ў Cyrillic Small Letter SHORT U ***
+U+045F џ Cyrillic Small Letter DZHE ***
+U+0491 ґ Cyrillic Small Letter GHE WITH UPTURN 
+U+04C2 ӂ Cyrillic Small Letter ZHE WITH BREVE ***
+U+02BC ʼ Modifier Letter Apostrophe
+
+*** Characters marked with three stars are considered unique to Cyrillic script. 
+At least one instance of them MUST be present in delegated subdomain string 
+for the name to be visually distinguishable.
+
+This document supersedes version 1.1, which was effective October 1st, 2010.

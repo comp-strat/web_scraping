@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Remote Framebuffer (RFB)</title>
+  </head>
+  <body>
+    <h1>Remote Framebuffer (RFB)</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2010-12-08</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-12-13</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rfb.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="rfb.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="rfb.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#rfb-1">Remote Framebuffer Security Types</a>
+      </li>
+      <li>
+        <a href="#rfb-2">Remote Framebuffer Client-to-Server Message Types</a>
+      </li>
+      <li>
+        <a href="#rfb-3">Remote Framebuffer Server-to-Client Message Types</a>
+      </li>
+      <li>
+        <a href="#rfb-4">Remote Framebuffer Encoding Types</a>
+      </li>
+    </ul>
+    <h2><a name="rfb-1" id="rfb-1"></a>Remote Framebuffer Security Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tristan Richardson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rfb-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rfb-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Invalid</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>None</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>VNC Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-15</td>
+          <td>RealVNC</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Tight</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Ultra</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>TLS</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>VeNCrypt</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>GTK-VNC SASL</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>MD5 hash authentication</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>Colin Dean xvp</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Secure Tunnel</td>
+          <td>[<a href="http://www.iana.org/go/rfc7869">RFC7869</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>Integrated SSH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7869">RFC7869</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25-29</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">30-35</td>
+          <td>Apple Inc.</td>
+          <td>[<a href="#Michael_Stein">Michael_Stein</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>RealVNC</td>
+          <td>historic assignment</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rfb-2" id="rfb-2"></a>Remote Framebuffer Client-to-Server Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tristan Richardson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rfb-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rfb-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>SetPixelFormat</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>SetEncodings</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>FramebufferUpdateRequest</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>KeyEvent</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>PointerEvent</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>ClientCutText</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-21</td>
+          <td>Possibly used in UltraVNC</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">22-79</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">80</td>
+          <td>Possibly used in UltraVNC</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">81-126</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">127</td>
+          <td>VMWare</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Car Connectivity</td>
+          <td>[<a href="#J&#xF6;rg_Brakensiek">J&#246;rg_Brakensiek</a>]
+        [<a href="http://www.terminalmode.org/en/developer/Downloads/">Terminal Mode v1.0</a>]
+      </td>
+        </tr>
+        <tr>
+          <td align="center">129-149</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>TightVNC EnableContinuousUpdates</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">151-247</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">248</td>
+          <td>ClientFence</td>
+          <td>TigerVNC</td>
+        </tr>
+        <tr>
+          <td align="center">249</td>
+          <td>OLIVE Call Control</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">250</td>
+          <td>Colin Dean xvp</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">251</td>
+          <td>Pierre Ossman SetDesktopSize</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">252</td>
+          <td>tight</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">253</td>
+          <td>gii</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">254</td>
+          <td>VMWare</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Anthony Liguori</td>
+          <td>historic assignment</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rfb-3" id="rfb-3"></a>Remote Framebuffer Server-to-Client Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tristan Richardson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rfb-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rfb-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>FramebufferUpdate</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>SetColourMapEntries</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Bell</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>ServerCutText</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-15</td>
+          <td>Possibly used in UltraVNC</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">16-126</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">127</td>
+          <td>VMWare</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Car Connectivity</td>
+          <td>[<a href="#J&#xF6;rg_Brakensiek">J&#246;rg_Brakensiek</a>]
+        [<a href="http://www.terminalmode.org/en/developer/Downloads/">Terminal Mode v1.0</a>]
+      </td>
+        </tr>
+        <tr>
+          <td align="center">129-149</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>TightVNC EndOfContinuousUpdates</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">151-172</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">173</td>
+          <td>ServerState</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">174-247</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">248</td>
+          <td>ServerFence</td>
+          <td>TigerVNC</td>
+        </tr>
+        <tr>
+          <td align="center">249</td>
+          <td>OLIVE Call Control</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">250</td>
+          <td>Colin Dean xvp</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">251</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">252</td>
+          <td>tight</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">253</td>
+          <td>gii</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">254</td>
+          <td>VMWare</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Anthony Liguori</td>
+          <td>historic assignment</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rfb-4" id="rfb-4"></a>Remote Framebuffer Encoding Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Tristan Richardson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rfb-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rfb-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Raw</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>CopyRect</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>RRE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Hextile</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-10</td>
+          <td>Possibly used in UltraVNC</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>ZRLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">-239</td>
+          <td>Cursor pseudo-encoding</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">-223</td>
+          <td>DesktopSize pseudo-encoding</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>CoRRE</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>zlib</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>tight</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>zlibhex</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>TRLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6143">RFC6143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Hitachi ZYWRLE</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>H.264</td>
+          <td>[<a href="#Tristan_Richardson">Tristan_Richardson</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>JPEG</td>
+          <td>historic assignment 
+        [<a href="#Tristan_Richardson">Tristan_Richardson</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>JRLE</td>
+          <td>historic assignment 
+        [<a href="#Tristan_Richardson">Tristan_Richardson</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1000-1002</td>
+          <td>Apple Inc.</td>
+          <td>[<a href="#Michael_Stein">Michael_Stein</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1011</td>
+          <td>Apple Inc.</td>
+          <td>[<a href="#Michael_Stein">Michael_Stein</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1024 to 1099</td>
+          <td>RealVNC</td>
+          <td>historic assignment 
+        [<a href="#Tristan_Richardson">Tristan_Richardson</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1100-1105</td>
+          <td>Apple Inc.</td>
+          <td>[<a href="#Michael_Stein">Michael_Stein</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">-1 to -222</td>
+          <td>tight options</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-224 to -238</td>
+          <td>tight options</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-240 to -256</td>
+          <td>tight options</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-257 to -272</td>
+          <td>Anthony Liguori</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-273 to -304</td>
+          <td>VMWare</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-305</td>
+          <td>gii</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-306</td>
+          <td>popa</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-307</td>
+          <td>Peter Astrand DesktopName</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-308</td>
+          <td>Pierre Ossman ExtendedDesktopSize</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-309</td>
+          <td>Colin Dean xvp</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-310</td>
+          <td>OLIVE Call Control</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-311</td>
+          <td>ClientRedirect</td>
+          <td>[<a href="#Brian_Hinz">Brian_Hinz</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">-312</td>
+          <td>Fence</td>
+          <td>TigerVNC</td>
+        </tr>
+        <tr>
+          <td align="center">-313</td>
+          <td>ContinuousUpdates</td>
+          <td>TigerVNC</td>
+        </tr>
+        <tr>
+          <td align="center">-314</td>
+          <td>CursorWithAlpha</td>
+          <td>[<a href="#Tristan_Richardson">Tristan_Richardson</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">-412 to -512</td>
+          <td>TurboVNC fine-grained quality level</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">-523 to -528</td>
+          <td>Car Connectivity</td>
+          <td>[<a href="#J&#xF6;rg_Brakensiek">J&#246;rg_Brakensiek</a>]
+        [<a href="http://www.terminalmode.org/en/developer/Downloads/">Terminal Mode v1.0</a>]
+      </td>
+        </tr>
+        <tr>
+          <td align="center">-763 to -768</td>
+          <td>TurboVNC subsampling level</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">0x48323634</td>
+          <td>VA H.264</td>
+          <td>[<a href="#David_Verbeiren">David_Verbeiren</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x574d5600 to 0x574d56ff</td>
+          <td>VMWare</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">0xc0a1e5ce to 0xc0a1e5cf</td>
+          <td>Possibly used in UltraVNC</td>
+          <td>historic assignment</td>
+        </tr>
+        <tr>
+          <td align="center">0xfffe0000 to 0xfffe00ff</td>
+          <td>Used in LibVNCServer</td>
+          <td>LibVNCServer</td>
+        </tr>
+        <tr>
+          <td align="center">0xffff0000 to 0xffff8003</td>
+          <td>Possibly used in UltraVNC</td>
+          <td>historic assignment</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Brian_Hinz" id="Brian_Hinz">[Brian_Hinz]</a>
+          </td>
+          <td>Brian Hinz</td>
+          <td>
+            <a href="mailto:bphinz&amp;users.sourceforge.net">mailto:bphinz&amp;users.sourceforge.net</a>
+          </td>
+          <td>2011-06-09</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="David_Verbeiren" id="David_Verbeiren">[David_Verbeiren]</a>
+          </td>
+          <td>David Verbeiren</td>
+          <td>
+            <a href="mailto:david.verbeiren&amp;intel.com">mailto:david.verbeiren&amp;intel.com</a>
+          </td>
+          <td>2013-02-08</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="David_Warden" id="David_Warden">[David_Warden]</a>
+          </td>
+          <td>David Warden</td>
+          <td>
+            <a href="mailto:David_Warden&amp;dell.com">mailto:David_Warden&amp;dell.com</a>
+          </td>
+          <td>2014-10-27</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="J&#xF6;rg_Brakensiek" id="J&#xF6;rg_Brakensiek">[J&#246;rg_Brakensiek]</a>
+          </td>
+          <td>J&#246;rg Brakensiek</td>
+          <td>
+            <a href="mailto:jorg.brakensiek&amp;nokia.com">mailto:jorg.brakensiek&amp;nokia.com</a>
+          </td>
+          <td>2011-05-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Michael_Stein" id="Michael_Stein">[Michael_Stein]</a>
+          </td>
+          <td>Michael Stein</td>
+          <td>
+            <a href="mailto:mvs&amp;apple.com">mailto:mvs&amp;apple.com</a>
+          </td>
+          <td>2011-11-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Tristan_Richardson" id="Tristan_Richardson">[Tristan_Richardson]</a>
+          </td>
+          <td>Tristan Richardson</td>
+          <td>
+            <a href="mailto:standards&amp;realvnc.com">mailto:standards&amp;realvnc.com</a>
+          </td>
+          <td>2015-05-13</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

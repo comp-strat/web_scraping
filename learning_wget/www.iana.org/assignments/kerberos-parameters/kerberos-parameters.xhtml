@@ -1,0 +1,1050 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Kerberos Parameters</title>
+  </head>
+  <body>
+    <h1>Kerberos Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2004-06-29</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-02-16</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="kerberos-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="kerberos-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="kerberos-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#kerberos-parameters-1">Kerberos Encryption Type Numbers</a>
+      </li>
+      <li>
+        <a href="#kerberos-parameters-2">Kerberos Checksum Type Numbers</a>
+      </li>
+      <li>
+        <a href="#kerberos-parameters-4">Kerberos TCP Extensions</a>
+      </li>
+      <li>
+        <a href="#pre-authentication">Pre-authentication and Typed Data</a>
+      </li>
+      <li>
+        <a href="#fast-armor">FAST Armor Types</a>
+      </li>
+      <li>
+        <a href="#fast-options">FAST Options</a>
+      </li>
+      <li>
+        <a href="#principal-names">Well-Known Kerberos Principal Names</a>
+      </li>
+      <li>
+        <a href="#realm-names">Well-Known Kerberos Realm Names</a>
+      </li>
+      <li>
+        <a href="#transport-type">Kerberos Message Transport Types</a>
+      </li>
+    </ul>
+    <h2><a name="kerberos-parameters-1" id="kerberos-parameters-1"></a>Kerberos Encryption Type Numbers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action for standards-track RFCs; non-standards-track 
+RFCs must be reviewed by an expert.</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Ken Raeburn</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>These are signed values ranging from -2147483648 to 2147483647.  Positive
+values should be assigned only for algorithms specified in accordance
+with this specification for use with Kerberos or related protocols.
+Negative values are for private use; local and experimental algorithms
+should use these values.  Zero is reserved and may not be assigned.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="kerberos-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-kerberos-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>etype</th>
+          <th>encryption type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6448">RFC6448</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>des-cbc-crc</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>des-cbc-md4</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>des-cbc-md5</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>des3-cbc-md5</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>des3-cbc-sha1</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>dsaWithSHA1-CmsOID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>md5WithRSAEncryption-CmsOID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>sha1WithRSAEncryption-CmsOID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>rc2CBC-EnvOID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>rsaEncryption-EnvOID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>][from PKCS#1 v1.5]]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>rsaES-OAEP-ENV-OID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>][from PKCS#1 v2.0]]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>des-ede3-cbc-Env-OID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>des3-cbc-sha1-kd</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>aes128-cts-hmac-sha1-96</td>
+          <td>[<a href="http://www.iana.org/go/rfc3962">RFC3962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>aes256-cts-hmac-sha1-96</td>
+          <td>[<a href="http://www.iana.org/go/rfc3962">RFC3962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>aes128-cts-hmac-sha256-128</td>
+          <td>[<a href="http://www.iana.org/go/rfc8009">RFC8009</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>aes256-cts-hmac-sha384-192</td>
+          <td>[<a href="http://www.iana.org/go/rfc8009">RFC8009</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21-22</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>rc4-hmac</td>
+          <td>[<a href="http://www.iana.org/go/rfc4757">RFC4757</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>rc4-hmac-exp</td>
+          <td>[<a href="http://www.iana.org/go/rfc4757">RFC4757</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>camellia128-cts-cmac</td>
+          <td>[<a href="http://www.iana.org/go/rfc6803">RFC6803</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>camellia256-cts-cmac</td>
+          <td>[<a href="http://www.iana.org/go/rfc6803">RFC6803</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27-64</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65</td>
+          <td>subkey-keymaterial</td>
+          <td>[(opaque; PacketCable)]</td>
+        </tr>
+        <tr>
+          <td align="center">66-2147483647</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="kerberos-parameters-2" id="kerberos-parameters-2"></a>Kerberos Checksum Type Numbers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action for standards-track RFCs; non-standards-track 
+RFCs must be reviewed by an expert.</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Ken Raeburn</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>These are signed values ranging from -2147483648 to 2147483647.  Positive
+values should be assigned only for algorithms specified in accordance
+with this specification for use with Kerberos or related protocols.
+Negative values are for private use; local and experimental algorithms
+should use these values.  Zero is reserved and may not be assigned.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="kerberos-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-kerberos-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>sumtype value</th>
+          <th>Checksum type</th>
+          <th>checksum size</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>CRC32</td>
+          <td>4</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>rsa-md4</td>
+          <td>16</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>rsa-md4-des</td>
+          <td>24</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>des-mac</td>
+          <td>16</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>des-mac-k</td>
+          <td>8</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>rsa-md4-des-k</td>
+          <td>16</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>rsa-md5</td>
+          <td>16</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>rsa-md5-des</td>
+          <td>24</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>rsa-md5-des3</td>
+          <td>24</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>sha1 (unkeyed)</td>
+          <td>20</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>hmac-sha1-des3-kd</td>
+          <td>20</td>
+          <td>[<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>hmac-sha1-des3</td>
+          <td>20</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>sha1 (unkeyed)</td>
+          <td>20</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>hmac-sha1-96-aes128</td>
+          <td>20</td>
+          <td>[<a href="http://www.iana.org/go/rfc3962">RFC3962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>hmac-sha1-96-aes256</td>
+          <td>20</td>
+          <td>[<a href="http://www.iana.org/go/rfc3962">RFC3962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>cmac-camellia128</td>
+          <td>16</td>
+          <td>[<a href="http://www.iana.org/go/rfc6803">RFC6803</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>cmac-camellia256</td>
+          <td>16</td>
+          <td>[<a href="http://www.iana.org/go/rfc6803">RFC6803</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>hmac-sha256-128-aes128</td>
+          <td>16</td>
+          <td>[<a href="http://www.iana.org/go/rfc8009">RFC8009</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>hmac-sha384-192-aes256</td>
+          <td>24</td>
+          <td>[<a href="http://www.iana.org/go/rfc8009">RFC8009</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21-32770</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32771</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc1964">RFC1964</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32772-2147483647</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="kerberos-parameters-4" id="kerberos-parameters-4"></a>Kerberos TCP Extensions</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5021">RFC5021</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="kerberos-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-kerberos-parameters-4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-29</td>
+          <td>IESG Approval or Standards Action</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>Reserved</td>
+          <td>Standards Action to updates or obsoletes [RFC5021]</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-kerberos-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Krb5 over TLS</td>
+          <td>[<a href="http://www.iana.org/go/rfc6251">RFC6251</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-29</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5021">RFC5021</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pre-authentication" id="pre-authentication"></a>Pre-authentication and Typed Data</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Sam Hartman - primary, Larry Zhu - secondary</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The designated expert may find that IETF Review is required. See 
+[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>] for more information.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pre-authentication.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pre-authentication" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>PA-TGS-REQ</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>PA-ENC-TIMESTAMP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>PA-PW-SALT</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>PA-ENC-UNIX-TIME (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>PA-SANDIA-SECUREID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>PA-SESAME</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>PA-OSF-DCE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>PA-CYBERSAFE-SECUREID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>PA-AFS3-SALT</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>][<a href="http://www.iana.org/go/rfc3961">RFC3961</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>PA-ETYPE-INFO</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>PA-SAM-CHALLENGE</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cat-kerberos-passwords-04">draft-ietf-cat-kerberos-passwords-04</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>PA-SAM-RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cat-kerberos-passwords-04">draft-ietf-cat-kerberos-passwords-04</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>PA-PK-AS-REQ_OLD</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cat-kerberos-pk-init-09">draft-ietf-cat-kerberos-pk-init-09</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>PA-PK-AS-REP_OLD</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cat-kerberos-pk-init-09">draft-ietf-cat-kerberos-pk-init-09</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>PA-PK-AS-REQ</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>PA-PK-AS-REP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>PA-PK-OCSP-RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4557">RFC4557</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>PA-ETYPE-INFO2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>PA-USE-SPECIFIED-KVNO</td>
+          <td>[<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>PA-SVR-REFERRAL-INFO</td>
+          <td>[<a href="http://www.iana.org/go/rfc6806">RFC6806</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>PA-SAM-REDIRECT</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-krb-wg-kerberos-sam-03">draft-ietf-krb-wg-kerberos-sam-03</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>PA-GET-FROM-TYPED-DATA</td>
+          <td>[(embedded in typed data)][<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>TD-PADATA</td>
+          <td>[(embeds padata)][<a href="http://www.iana.org/go/rfc4120">RFC4120</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>PA-SAM-ETYPE-INFO</td>
+          <td>[(sam/otp)][<a href="http://www.iana.org/go/draft-ietf-krb-wg-kerberos-sam-03">draft-ietf-krb-wg-kerberos-sam-03</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>PA-ALT-PRINC</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-krb-wg-hw-auth-04">draft-ietf-krb-wg-hw-auth-04</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>PA-SERVER-REFERRAL</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-krb-wg-kerberos-referrals-11">draft-ietf-krb-wg-kerberos-referrals-11</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26-29</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>PA-SAM-CHALLENGE2</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-krb-wg-kerberos-sam-03">draft-ietf-krb-wg-kerberos-sam-03</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>PA-SAM-RESPONSE2</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-krb-wg-kerberos-sam-03">draft-ietf-krb-wg-kerberos-sam-03</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32-40</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>PA-EXTRA-TGT</td>
+          <td>[Reserved extra TGT][<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">42-100</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">101</td>
+          <td>TD-PKINIT-CMS-CERTIFICATES</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">102</td>
+          <td>TD-KRB-PRINCIPAL</td>
+          <td>[PrincipalName][<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">103</td>
+          <td>TD-KRB-REALM</td>
+          <td>[Realm][<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">104</td>
+          <td>TD-TRUSTED-CERTIFIERS</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">105</td>
+          <td>TD-CERTIFICATE-INDEX</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">106</td>
+          <td>TD-APP-DEFINED-ERROR</td>
+          <td>[Application specific][<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">107</td>
+          <td>TD-REQ-NONCE</td>
+          <td>[INTEGER][<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">108</td>
+          <td>TD-REQ-SEQ</td>
+          <td>[INTEGER][<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">109</td>
+          <td>TD_DH_PARAMETERS</td>
+          <td>[<a href="http://www.iana.org/go/rfc4556">RFC4556</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">110</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">111</td>
+          <td>TD-CMS-DIGEST-ALGORITHMS</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-krb-wg-pkinit-alg-agility">draft-ietf-krb-wg-pkinit-alg-agility</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">112</td>
+          <td>TD-CERT-DIGEST-ALGORITHMS</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-krb-wg-pkinit-alg-agility">draft-ietf-krb-wg-pkinit-alg-agility</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">113-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>PA-PAC-REQUEST</td>
+          <td>[MSKILE][<a href="http://msdn2.microsoft.com/en-us/library/cc206927.aspx">http://msdn2.microsoft.com/en-us/library/cc206927.aspx</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>PA-FOR_USER</td>
+          <td>[MSKILE][<a href="http://msdn2.microsoft.com/en-us/library/cc206927.aspx">http://msdn2.microsoft.com/en-us/library/cc206927.aspx</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>PA-FOR-X509-USER</td>
+          <td>[MSKILE][<a href="http://msdn2.microsoft.com/en-us/library/cc206927.aspx">http://msdn2.microsoft.com/en-us/library/cc206927.aspx</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>PA-FOR-CHECK_DUPS</td>
+          <td>[MSKILE][<a href="http://msdn2.microsoft.com/en-us/library/cc206927.aspx">http://msdn2.microsoft.com/en-us/library/cc206927.aspx</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>PA-AS-CHECKSUM</td>
+          <td>[MSKILE][<a href="http://msdn2.microsoft.com/en-us/library/cc206927.aspx">http://msdn2.microsoft.com/en-us/library/cc206927.aspx</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133</td>
+          <td>PA-FX-COOKIE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">134</td>
+          <td>PA-AUTHENTICATION-SET</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">135</td>
+          <td>PA-AUTH-SET-SELECTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">136</td>
+          <td>PA-FX-FAST</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">137</td>
+          <td>PA-FX-ERROR</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">138</td>
+          <td>PA-ENCRYPTED-CHALLENGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">139-140</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">141</td>
+          <td>PA-OTP-CHALLENGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6560">RFC6560</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">142</td>
+          <td>PA-OTP-REQUEST</td>
+          <td>[<a href="http://www.iana.org/go/rfc6560">RFC6560</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">143</td>
+          <td>PA-OTP-CONFIRM (OBSOLETED)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6560">RFC6560</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">144</td>
+          <td>PA-OTP-PIN-CHANGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6560">RFC6560</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">145</td>
+          <td>PA-EPAK-AS-REQ</td>
+          <td>[(sshock@gmail.com)][<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">146</td>
+          <td>PA-EPAK-AS-REP</td>
+          <td>[(sshock@gmail.com)][<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">147</td>
+          <td>PA_PKINIT_KX</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-kitten-rfc6112bis-03">RFC-ietf-kitten-rfc6112bis-03</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">148</td>
+          <td>PA_PKU2U_NAME</td>
+          <td>[<a href="http://www.iana.org/go/draft-zhu-pku2u">draft-zhu-pku2u</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">149</td>
+          <td>PA-REQ-ENC-PA-REP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6806">RFC6806</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>PA_AS_FRESHNESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc8070">RFC8070</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">151-164</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">165</td>
+          <td>PA-SUPPORTED-ETYPES</td>
+          <td>[MSKILE][<a href="http://msdn2.microsoft.com/en-us/library/cc206927.aspx">http://msdn2.microsoft.com/en-us/library/cc206927.aspx</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">166</td>
+          <td>PA-EXTENDED_ERROR</td>
+          <td>[MSKILE][<a href="http://msdn2.microsoft.com/en-us/library/cc206927.aspx">http://msdn2.microsoft.com/en-us/library/cc206927.aspx</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="fast-armor" id="fast-armor"></a>FAST Armor Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="fast-armor.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-fast-armor" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>FX_FAST_ARMOR_AP_REQUEST</td>
+          <td>Ticket armor using an ap-req.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="fast-options" id="fast-options"></a>FAST Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="fast-options.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-fast-options" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>RESERVED</td>
+          <td>Reserved for future expansion of this field.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>hide-client-names</td>
+          <td>Requesting the KDC to hide client names in the KDC response</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>kdc-follow-referrals</td>
+          <td>reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6113">RFC6113</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="principal-names" id="principal-names"></a>Well-Known Kerberos Principal Names</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6111">RFC6111</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="principal-names.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-principal-names" class="sortable">
+      <thead>
+        <tr>
+          <th>Well-Known Kerberos Principal Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>anonymous</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-kitten-rfc6112bis-03">RFC-ietf-kitten-rfc6112bis-03</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="realm-names" id="realm-names"></a>Well-Known Kerberos Realm Names</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6111">RFC6111</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="realm-names.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-realm-names" class="sortable">
+      <thead>
+        <tr>
+          <th>Well-Known Kerberos Realm Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>anonymous</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-kitten-rfc6112bis-03">RFC-ietf-kitten-rfc6112bis-03</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="transport-type" id="transport-type"></a>Kerberos Message Transport Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6784">RFC6784</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="transport-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-transport-type" class="sortable">
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6784">RFC6784</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>UDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6784">RFC6784</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>TCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6784">RFC6784</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>TLS</td>
+          <td>[<a href="http://www.iana.org/go/rfc6784">RFC6784</a>]</td>
+        </tr>
+        <tr>
+          <td>4-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6784">RFC6784</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

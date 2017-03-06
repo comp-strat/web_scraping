@@ -1,0 +1,358 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Technical requirements for authoritative name servers</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+			<div id="main_right">
+
+
+
+	<h1>Technical requirements for authoritative name servers</h1>
+		<p>This article describes the baseline technical conformance criteria for authoritative name servers. These are evaluated by us for changes to delegations in zones we manage such as the DNS root zone and .INT zone.</p>
+
+        <h2>Definitions</h2>
+        <p>For purposes of this document, an authoritative name server is a DNS server that has been designated to answer authoritatively for the designated zone, and is being requested to be listed in the delegation. It is recorded by its fully-qualified domain name, potentially along with its IP addresses.</p>
+        <p>Name server tests are completed against each unique tuple of a hostname, an IP address, and a protocol. If a hostname has multiple IP addresses, for example, the tests will be conducted against each IP address.</p>
+
+        <h2>Detailed requirements</h2>
+
+        <h3>Minimum number of name servers</h3>
+        <p>There must be at least two NS records listed in a delegation, and the hosts must not resolve to the same IP address.</p>
+
+        <h3>Valid hostnames</h3>
+        <p>The hostnames used for the name servers must comply with the requirements for valid hostnames described in RFC 1123, section 2.1.</p>
+
+        <h3>Name server reachability</h3>
+        <p>The name servers must answer DNS queries over both the UDP and TCP protocols on port 53. Tests will be conducted from multiple network locations to verify the name server is responding.</p>
+
+        <h3>Answer authoritatively</h3>
+        <p>The name servers must answer authoritatively for the designated zone. Responses to queries to the name servers for the designated zone must have the “AA”-bit set.</p>
+        <p>This will be tested by querying for the SOA record of the designated zone with no “RD”-bit set.</p>
+
+        <h3>Network diversity</h3>
+        <p>The name servers must be in at least two topologically separate networks. A network is defined as an origin autonomous system in the BGP routing table. The requirement is assessed through inspection of views of the BGP routing table.</p>
+
+        <h3>Consistency between glue and authoritative data</h3>
+        <p>For name servers that have IP addresses listed as glue, the IP addresses must match the authoritative A and AAAA records for that host.</p>
+
+        <h3>Consistency between delegation and zone</h3>
+        <p>The set of NS records served by the authoritative name servers must match those proposed for the delegation in the parent zone.</p>
+
+        <h3>Consistency between authoritative name servers</h3>
+        <p>The data served by the authoritative name servers for the designated zone must be consistent.</p>
+        <p>All authoritative name servers must serve the same NS record set for the designated domain.</p>
+        <p>All authoritative name servers must serve the same SOA record for the designated domain.</p>
+        <p>If for operational reasons the zone content fluctuates rapidly, the serial numbers need only be loosely coherent.</p>
+
+        <h3>No truncation of referrals</h3>
+        <p>Referrals from the parent zone's name servers must fit into a non-EDNS0 UDP DNS packet and therefore the DNS payload must not exceed 512 octets.</p>
+        <p>The required delegation information in the referral is a complete set of NS records, and the minimal set of requisite glue records. The response size is assessed as a response to a query with a maximum-sized QNAME.</p>
+        <p>The minimal set of requisite glue records is considered to be:</p>
+        <ul>
+            <li>One A record, if all authoritative name servers are in-bailiwick of the parent zone; and,</li>
+            <li>One AAAA record, if there are any IPv6-capable authoritative name servers and all IPv6- capable authoritative name servers are in-bailiwick of the parent zone.</li>
+        </ul>
+
+        <h3>Prohibited networks</h3>
+        <p>The authoritative name server IP addresses must not be in specially designated networks that are either not globally routable, or are otherwise unsuited for authoritative name service.</p>
+
+        <p>
+        <table>
+            <tr>
+                <td>0.0.0.0/8</td>
+                <td>Not globally routable</td>
+                <td>RFC 5735</td>
+            </tr>
+            <tr>
+                <td>10.0.0.0/8</td>
+                <td>Not globally routable</td>
+                <td>RFC 5735</td>
+            </tr>
+            <tr>
+                <td>100.64.0.0/10</td>
+                <td>Not globally routable</td>
+                <td>RFC 6598</td>
+            </tr>
+            <tr>
+                <td>127.0.0.0/8</td>
+                <td>Not globally routable</td>
+                <td>RFC 5735</td>
+            </tr>
+            <tr>
+                <td>169.254.0.0/16</td>
+                <td>Not globally routable</td>
+                <td>RFC 5735</td>
+            </tr>
+            <tr>
+                <td>172.16.0.0/12</td>
+                <td>Not globally routable</td>
+                <td>RFC 5735</td>
+            </tr>
+            <tr>
+                <td>192.0.2.0/24</td>
+                <td>Not globally routable</td>
+                <td>RFC 5735</td>
+            </tr>
+            <tr>
+                <td>192.88.99.0/24</td>
+                <td>6to4</td>
+                <td>RFC 3068</td>
+            </tr>
+            <tr>
+                <td>192.168.0.0/16</td>
+                <td>Not globally routable</td>
+                <td>RFC 5735</td>
+            </tr>
+            <tr>
+                <td>198.18.0.0/15</td>
+                <td>Not globally routable</td>
+                <td>RFC 5735</td>
+            </tr>
+            <tr>
+                <td>198.51.100.0/24</td>
+                <td>Not globally routable</td>
+                <td>RFC 5737</td>
+            </tr>
+            <tr>
+                <td>203.0.113.0/24</td>
+                <td>Not globally routable</td>
+                <td>RFC 5737</td>
+            </tr>
+            <tr>
+                <td>224.0.0.0/3</td>
+                <td>Not globally routable</td>
+                <td>RFC 5735</td>
+            </tr>
+            <tr>
+                <td>::/128</td>
+                <td>Not globally routable</td>
+                <td>RFC 5156</td>
+            </tr>
+            <tr>
+                <td>::1/128</td>
+                <td>Not globally routable</td>
+                <td>RFC 5156</td>
+            </tr>
+            <tr>
+                <td>::FFFF:0:0/96</td>
+                <td>IPv4 mapped addresses</td>
+                <td>RFC 4291</td>
+            </tr>
+            <tr>
+                <td>2001:2::/48</td>
+                <td>Not globally routable</td>
+                <td>RFC 5156</td>
+            </tr>
+            <tr>
+                <td>2001::/32</td>
+                <td>Teredo</td>
+                <td>RFC 4380</td>
+            </tr>
+            <tr>
+                <td>2001:10::/28</td>
+                <td>Not globally routable</td>
+                <td>RFC 5156</td>
+            </tr>
+            <tr>
+                <td>2001:DB8::/32</td>
+                <td>Not globally routable</td>
+                <td>RFC 5156</td>
+            </tr>
+            <tr>
+                <td>2002::/16</td>
+                <td>6to4</td>
+                <td>RFC 3056</td>
+            </tr>
+            <tr>
+                <td>FC00::/7</td>
+                <td>Not globally routable</td>
+                <td>RFC 5156</td>
+            </tr>
+            <tr>
+                <td>FE80::/10</td>
+                <td>Not globally routable</td>
+                <td>RFC 5156</td>
+            </tr>
+        </table>
+        </p>
+
+        <h3>No open recursive name service</h3>
+        <p>The authoritative name servers must not provide recursive name service. This requirement is tested by sending a query outside the jurisdiction of the authority with the “RD”-bit set.</p>
+        <h3>Same source address</h3>
+        <p>Responses from the authoritative name servers must contain the same source IP address as the destination IP address of the initial query.</p>
+        <h3>DS record format</h3>
+        <p>Trust anchors must be provided each with the four attributes of a DS record — the key tag, the key algorithm, the digest hash type, and the digest hash. They must be provided with legal values for each of the DS record fields. For the hash digest, we support two types — SHA1 (value 1), and SHA256 (value 2).</p>
+        <h3>Matching DNSKEY</h3>
+        <p>At the time of the listing request, there must be a DNSKEY that matches the DS record present in the child zone. This will be tested for as part of the implementation of the record. As with most technical conformance criteria for the root zone, if a top-level domain operator has a situation where this is not the case, but this is by design and can be demonstrated not to affect the stability of the TLD or the root zone, it is possible to request that the DS records be listed regardless.</p>
+        <h3>Validation of RRSIG</h3>
+        <p>We must be able to validate the RRSIG records returned for the zone based upon the DS record set that has been provided for the root zone. We test this by querying the apex SOA for the top-level domain with the DO bit set, and validating the SOA record against the proposed DS resource set.</p>
+
+        <h2>Useful References</h2>
+        <p>For more information on some of the key DNS technical concepts referenced by these technical tests, please look at the following references:</p>
+        <ul>
+            <li><a href="/go/rfc1034">Domain Names — Concepts and Facilities</a> (RFC 1034)</li>
+            <li><a href="/go/rfc1035">Domain Names — Implementation and Specification</a> (RFC 1035)</li>
+            <li><a href="/go/rfc5358">Preventing Use of Recursive Nameservers in Reflector Attacks</a> (RFC 5358)</li>
+            <li><a href="/go/rfc4472">Operational Considerations and Issues with IPv6 DNS</a> (RFC 4472)</li>
+            <li><a href="/go/rfc2671">Extension Mechanisms for DNS (EDNS0)</a> (RFC 2671)</li>
+            <li><a href="/go/draft-ietf-dnsop-respsize">DNS Referral Response Size Issues</a></li>
+            <li><a href="/go/rfc5966">DNS Transport over TCP - Implementation Requirements</a> (RFC 5966)</li>
+            <li><a href="/assignments/iana-ipv6-special-registry">IANA IPv6 Special Purpose Address Registry</a></li>
+            <li><a href="/go/rfc5156">Special-use IPv6 Addresses</a> (RFC 5156)</li>
+            <li><a href="/go/rfc3735">Special-use IPv4 Addresses</a> (RFC 5735)</li>
+        </ul>
+
+
+			</div>
+			
+			<div id="sidebar_left">
+				<div class="navigation_box">
+				<h2>Domain Names</h2>
+				<ul>
+					<li id="nav_dom_top"><a href="/domains">Overview</a></li>
+					<li id="nav_dom_root"><a href="/domains/root">Root Zone Management</a></li>
+					<ul id="nav_dom_root_sub">
+						<li id="nav_dom_root_top"><a href="/domains/root">Overview</a></li>
+						<li id="nav_dom_root_db"><a href="/domains/root/db">Root Database</a></li>
+						<li id="nav_dom_root_files"><a href="/domains/root/files">Hint and Zone Files</a></li>
+						<li id="nav_dom_root_manage"><a href="/domains/root/manage">Change Requests</a></li>
+						<li id="nav_dom_root_procedures"><a href="/domains/root/help">Instructions &amp; Guides</a></li>
+						<li id="nav_dom_root_servers"><a href="/domains/root/servers">Root Servers</a></li>
+					</ul>
+					<li id="nav_dom_int"><a href="/domains/int">.INT Registry</a></li>
+					<ul id="nav_dom_int_sub">
+						<li id="nav_dom_int_top"><a href="/domains/int">Overview</a></li>
+						<li id="nav_dom_int_manage"><a href="/domains/int/manage">Register/modify an .INT domain</a></li>
+						<li id="nav_dom_int_policy"><a href="/domains/int/policy">Eligibility</a></li>
+					</ul>
+					<li id="nav_dom_arpa"><a href="/domains/arpa">.ARPA Registry</a></li>
+					<li id="nav_dom_idn"><a href="/domains/idn-tables">IDN Practices Repository</a></li>
+					<ul id="nav_dom_idn_sub">
+						<li id="nav_dom_idn_top"><a href="/domains/idn-tables">Overview</a></li>
+						<!-- <li id="nav_dom_idn_tables"><a href="/domains/idn-tables/db">Tables</a></li> -->
+						<li id="nav_dom_idn_submit"><a href="/procedures/idn-repository.html">Submit a table</a></li>
+					</ul>
+					<li id="nav_dom_dnssec"><a href="/dnssec">Root Key Signing Key (DNSSEC)</a></li>
+					<ul id="nav_dom_dnssec_sub">
+						<li id="nav_dom_dnssec_top"><a href="/dnssec">Overview</a></li>
+						<li id="nav_dom_dnssec_ksk"><a href="/dnssec/files">Trusts Anchors and Keys</a></li>
+						<li id="nav_dom_dnssec_ceremonies"><a href="/dnssec/ceremonies">Root KSK Ceremonies</a></li>
+						<li id="nav_dom_dnssec_dps"><a href="/dnssec/dps">Practice Statement</a></li>
+                        <li id="nav_dom_dnssec_tcrs"><a href="/dnssec/tcrs">Community Representatives</a></li>
+					</ul>
+					<li id="nav_dom_special"><a href="/domains/reserved">Reserved Domains</a></li>
+				</ul>
+				</div>
+			</div>
+			
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script>
+$(document).ready(function() {
+	$("#nav_dom_int_sub").hide()
+	$("#nav_dom_idn_sub").hide()
+	$("#nav_dom_dnssec_sub").hide()
+	$("#nav_dom_tools_sub").hide()
+	$("#nav_dom_root").addClass("selected")
+	$("#nav_dom_root_procedures").addClass("selected")
+});
+</script>
+
+	
+</body>
+
+</html>

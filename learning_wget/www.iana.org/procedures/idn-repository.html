@@ -1,0 +1,200 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>IANA — IDN Repository Procedures</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+			<div id="main_right">
+
+
+	<h1>Repository of IDN Practices &mdash; Procedures</h1>
+
+<h2>Overview</h2>
+
+<p>The Repository of TLD IDN Practices, also known as the &rdquo;IDN Language Table Registry&ldquo;, was created to support the development of the IDN technology.</p>
+
+<p>Specifically, as described in the <a href="http://www.icann.org/en/topics/idn/idn-guidelines-02sep11-en.htm">Guidelines for the Implementation of Internationalized Domain Names (IDNs)</a>:</p>
+<blockquote>A registry will publish one or several lists of Unicode code points that are permitted for registration and will not accept the registration of any name containing an unlisted code point. Each such list will indicate the script or language(s) it is intended to support. If registry policy treats any code point in a list as a variant of any other code point, the nature of that variance and the policies attached to it will be clearly articulated. All such code point listings will be placed in the IANA Repository for IDN TLD Practices in tabular format together with any rules applied to the registration of names containing those code points, before any such registration may be accepted.</blockquote>
+<p>In addition to making the IDN Tables publicly available on TLD registry websites, the top-level domain reigstries may register IDN Tables with us, and we will display them online for public access.</p>
+<p>We do not maintain the content of the IDN Tables and hence we are not responsible for their accuracy. The sole purpose of the repository is to enable registrations of IDN Tables, and to subsequently make these available to the general public. In essence, if a TLD registry believes that a IDN Table is useful and should be registered, then it may be registered with us through the procedures described herein.</p>
+
+<h2>IDN Table Requirements</h2>
+<p>An IDN Table must contain the following elements:</p>
+<ul>
+<li>The name of the top-level domain (TLD) it is used for</li>
+<li>Script or Language Designator (Language Designators are defined in <a href="/go/bcp47">BCP 47</a>)</li>
+<li>Revision Control (table version number) supplied by the Registry</li>
+<li>Effective Date</li>
+<li>Registry Contact Details (contact name, email address, and/or phone number)</li>
+</ul>
+<p>IDN Tables should be listed in one of the following formats:</p>
+<ul>
+    <li>Label Generation Ruleset format (recommended). See <a href="/go/rfc7940">Representing Label Generation Rulesets using XML</a> (RFC 7940).
+    <li>ASCII or UTF-8 encoded text file, adhering to common conventions such as those
+    documented in <a href="/go/rfc3743">RFC 3743</a> and <a href="/go/rfc4290">RFC 4290</a>.</li>
+</ul>
+<p>Bear in mind the main purpose of this repository is to encourage re-use and analysis. As
+such, we recommend against other formats unless it is not possible to represent the table
+in these available standards.</p>
+
+<h2>Registration Process</h2>
+<p>All TLD registries can apply for registration of an IDN Table.</p>
+<p><b>Submission Authority.</b> Anyone may submit a request to list or update an IDN table, but it must be approved by the current administrative contact for the domain in the <a href="/domains/root/db">Root Zone Database</a>. Therefore, prior to submitting any change request, ensure the administrative contact is aware of the change and is ready to consent to its publication.</p>
+<p><b>Submission Process.</b> Language Table registration requests must include all necessary elements and be submitted to IANA at the email address idn-tables@iana.org. A confirmation email will be returned to the Administrative Contact with a ticket number confirming the receipt of the email.</p>
+<p>After a maximum of five (5) business days the Administrative Contact will receive either: (i) a confirmation email for the IDN Table, or (ii) if the IDN Table does not contain all of the elements necessary for registration the Administrative Contact will receive an email with a description of why the application was denied and what additional elements are required.</p>
+<p>An IDN table can be replaced by the registry that initially submitted the registration, either to reflect improved understanding or to deprecate various characteristics.</p>
+<p><b>Revision Process:</b> New versions of existing IDN Tables can only be requested by the authority that initially submitted the application for that existing IDN Table. A request for a new version of an IDN Table must include an explanation of why the request is being made. This explanation, together with a date and identity of the applicant, will be added to the language for the deprecated language table, after which it will be moved to the archive mentioned below.</p>
+<p>After a maximum of five (5) business days the Administrative Contact will receive either: (i) a confirmation email for the revision request for the IDN Table, or (ii) if the revised IDN Table does not contain all of the elements necessary for registration the Administrative Contact will receive an email with a description of why the revision application was denied and what additional elements are required.</p>
+
+			</div>
+			
+			<div id="sidebar_left">
+				<div class="navigation_box">
+				<h2>Domain Names</h2>
+				<ul>
+					<li id="nav_dom_top"><a href="/domains">Overview</a></li>
+					<li id="nav_dom_root"><a href="/domains/root">Root Zone Management</a></li>
+					<ul id="nav_dom_root_sub">
+						<li id="nav_dom_root_top"><a href="/domains/root">Overview</a></li>
+						<li id="nav_dom_root_db"><a href="/domains/root/db">Root Database</a></li>
+						<li id="nav_dom_root_files"><a href="/domains/root/files">Hint and Zone Files</a></li>
+						<li id="nav_dom_root_manage"><a href="/domains/root/manage">Change Requests</a></li>
+						<li id="nav_dom_root_procedures"><a href="/domains/root/help">Instructions &amp; Guides</a></li>
+						<li id="nav_dom_root_servers"><a href="/domains/root/servers">Root Servers</a></li>
+					</ul>
+					<li id="nav_dom_int"><a href="/domains/int">.INT Registry</a></li>
+					<ul id="nav_dom_int_sub">
+						<li id="nav_dom_int_top"><a href="/domains/int">Overview</a></li>
+						<li id="nav_dom_int_manage"><a href="/domains/int/manage">Register/modify an .INT domain</a></li>
+						<li id="nav_dom_int_policy"><a href="/domains/int/policy">Eligibility</a></li>
+					</ul>
+					<li id="nav_dom_arpa"><a href="/domains/arpa">.ARPA Registry</a></li>
+					<li id="nav_dom_idn"><a href="/domains/idn-tables">IDN Practices Repository</a></li>
+					<ul id="nav_dom_idn_sub">
+						<li id="nav_dom_idn_top"><a href="/domains/idn-tables">Overview</a></li>
+						<!-- <li id="nav_dom_idn_tables"><a href="/domains/idn-tables/db">Tables</a></li> -->
+						<li id="nav_dom_idn_submit"><a href="/procedures/idn-repository.html">Submit a table</a></li>
+					</ul>
+					<li id="nav_dom_dnssec"><a href="/dnssec">Root Key Signing Key (DNSSEC)</a></li>
+					<ul id="nav_dom_dnssec_sub">
+						<li id="nav_dom_dnssec_top"><a href="/dnssec">Overview</a></li>
+						<li id="nav_dom_dnssec_ksk"><a href="/dnssec/files">Trusts Anchors and Keys</a></li>
+						<li id="nav_dom_dnssec_ceremonies"><a href="/dnssec/ceremonies">Root KSK Ceremonies</a></li>
+						<li id="nav_dom_dnssec_dps"><a href="/dnssec/dps">Practice Statement</a></li>
+                        <li id="nav_dom_dnssec_tcrs"><a href="/dnssec/tcrs">Community Representatives</a></li>
+					</ul>
+					<li id="nav_dom_special"><a href="/domains/reserved">Reserved Domains</a></li>
+				</ul>
+				</div>
+			</div>
+			
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script>
+$(document).ready(function() {
+	$("#nav_dom_int_sub").hide()
+	$("#nav_dom_root_sub").hide()
+	$("#nav_dom_dnssec_sub").hide()
+	$("#nav_dom_tools_sub").hide()
+	$("#nav_dom_idn").addClass("selected")
+	$("#nav_dom_idn_submit").addClass("selected")
+});
+</script>
+
+	
+</body>
+
+</html>

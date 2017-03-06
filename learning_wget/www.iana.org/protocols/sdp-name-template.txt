@@ -1,0 +1,27 @@
+SDP Names Template - RFC 2327
+
+Registration Procedure
+
+To register a name the guidelines of RFC 2327 should be followed
+regarding the required level of documentation that is required.  The
+registration itself should be sent to IANA.  Attribute registrations
+should include the information given above.  Other registrations
+should include the following additional information:
+ 
+   o contact name, email address and telephone number
+ 
+   o name being registered (as it will appear in SDP)
+ 
+   o long-form name in English
+ 
+   o type of name ("media", "proto", "fmt", "bwtype", "nettype", or
+     "addrtype")
+ 
+   o a one paragraph explanation of the purpose of the registered name.
+ 
+   o a reference to the specification (eg RFC number) of the registered
+     name.
+ 
+IANA may refer any registration to the IESG or to any appropriate
+IETF working group for review, and may request revisions to be made
+before a registration will be made.

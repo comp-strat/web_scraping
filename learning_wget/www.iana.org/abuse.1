@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Abuse Issues</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+			<div id="main_right">
+
+
+	<h1>Does it look like we’re attacking you?</h1>
+
+	<p>Some of the most common things we hear are “My network is under attack by IANA!”
+	and “IANA is spamming me!” If you think this is the case, please take a few moments to read this page.</p>
+
+	<p>The Internet Assigned Numbers Authority, or IANA, is responsible for the global
+	coordination of IP addresses. Most of the used numbers are allocated via a regional
+	allocation system to your ISP, which then automatically assigns one or more to you.</p>
+
+	<p>There are, however, special sets of numbers that are designed not to be assigned to
+	any particular person. Instead, they are general allocations that are either used in
+	special ways, or designed for people to use internally within local networks. 
+
+	<p>These numbers are primarily in the following ranges:</p>
+
+	<ul>
+	<li>Begins with <strong>10.</strong> (i.e. 10.0.0.0 through to 10.255.255.255)</li>
+	<li>Begins with <strong>127.</strong></li>
+	<li>Begins with <strong>169.254.</strong></li>
+	<li>Begins with <strong>172.16.</strong> through <strong>172.31.</strong></li>
+	<li>Begins with <strong>192.168.</strong></li>
+	<li>Shows up in your logs with a name like <strong>blackhole-1.iana.org</strong></li>
+	</ul>
+
+	<p>There are additional ranges of numbers that are also marked as &ldquo;IANA Reserved&rdquo;
+	and similarly are not operated by IANA, although these are the most common ones we receive
+	abuse reports concerning.</p>
+
+	<p>If you are seeing unexplained Internet traffic to your computer from these numbers,
+	it is important to remember the following things:</p>
+
+	<ul>
+	<li>The traffic <b>does not come from IANA</b>. As the authority for IP addresses, we
+	have simply reserved these numbers in our databases, but we do not use or operate them,
+	and we are not the source of the traffic.</li><br/>
+
+	<li>As use of these numbers is untracked and unrestricted, we <b>can not tell you who
+	is using these numbers</b>.</li><br/>
+
+	<li>It is <b>perfectly normal</b> to see traffic from these numbers if you have a small
+	home or office network. By default, most routers and access points use these numbers
+	to assign to your local computers. <b>It is most likely these numbers represent computers on
+	your own internal network.</b></li><br/>
+
+	<li>If you see these numbers in the headers of an unsolicited email, they usually indicate transit between servers within a corporate network or ISP. They are <b>not useful in identifying the origin of an email</b>. In such cases you can usually <b>find the true origin by looking for the earliest “Received” mail header</b> that is not an IANA Reserved address.</li><br/>
+
+	</ul>
+
+	<p>For more information on this topic, please read our more detailed <a href="/help/abuse-answers">Abuse Questions and Answers</a>.</p>
+
+
+			</div>
+			
+			<div id="sidebar_left">
+				<div class="navigation_box">
+				<h2>Number Resources</h2>
+				<ul>
+					<li id="nav_num_top"><a href="/numbers">Overview</a></li>
+					<li id="nav_num_abuse"><a href="/abuse">Abuse Issues</a></li>
+					<ul id="nav_num_abuse_sub">
+						<li id="nav_num_abuse_top"><a href="/abuse">Overview</a></li>
+						<li id="nav_num_abuse_answers"><a href="/abuse/answers">Questions and Answers</a></li>
+					</ul>
+				</ul>
+				</div>
+			</div>
+			
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script>
+$(document).ready(function() {
+	$("#nav_num_abuse").addClass("selected")
+	$("#nav_num_abuse_top").addClass("selected")
+});
+</script>
+
+	
+</body>
+
+</html>

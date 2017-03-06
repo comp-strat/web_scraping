@@ -1,0 +1,1195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Simple Mail Transfer Protocol (SMTP) Enhanced Status Codes Registry</title>
+  </head>
+  <body>
+    <h1>Simple Mail Transfer Protocol (SMTP) Enhanced Status Codes Registry</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2008-05-29</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-08-24</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="smtp-enhanced-status-codes.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="smtp-enhanced-status-codes.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="smtp-enhanced-status-codes.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#smtp-enhanced-status-codes-1">Class Sub-Codes</a>
+      </li>
+      <li>
+        <a href="#smtp-enhanced-status-codes-2">Subject Sub-Codes</a>
+      </li>
+      <li>
+        <a href="#smtp-enhanced-status-codes-3">Enumerated Status Codes</a>
+      </li>
+    </ul>
+    <h2><a name="smtp-enhanced-status-codes-1" id="smtp-enhanced-status-codes-1"></a>Class Sub-Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Chris Newman</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5248">RFC5248</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="smtp-enhanced-status-codes-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-smtp-enhanced-status-codes-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Summary</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Submitter</th>
+          <th>Change Controller</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2.XXX.YYY</td>
+          <td>Success</td>
+          <td>Success specifies that the DSN is reporting a
+positive delivery action.  Detail sub-codes may
+provide notification of transformations required for
+delivery.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>4.XXX.YYY</td>
+          <td>Persistent Transient Failure</td>
+          <td>A persistent transient failure is one in which the
+message as sent is valid, but persistence of some
+temporary condition has caused abandonment or delay of
+attempts to send the message. If this code accompanies
+a delivery failure report, sending in the future may be
+successful.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>5.XXX.YYY</td>
+          <td>Permanent Failure</td>
+          <td>A permanent failure is one which is not likely to be
+resolved by resending the message in the current form.
+Some change to the message or the destination must be
+made for successful delivery.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="smtp-enhanced-status-codes-2" id="smtp-enhanced-status-codes-2"></a>Subject Sub-Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Chris Newman</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5248">RFC5248</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="smtp-enhanced-status-codes-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-smtp-enhanced-status-codes-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Summary</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Submitter</th>
+          <th>Change Controller</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>X.0.YYY</td>
+          <td>Other or Undefined Status</td>
+          <td>There is no additional subject information available.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.YYY</td>
+          <td>Addressing Status</td>
+          <td>The address status reports on the originator or
+destination address.  It may include address syntax or
+validity.  These errors can generally be corrected by
+the sender and retried.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.2.YYY</td>
+          <td>Mailbox Status</td>
+          <td>Mailbox status indicates that something having to do
+with the mailbox has caused this DSN.  Mailbox issues are
+assumed to be under the general control of the recipient.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.3.YYY</td>
+          <td>Mail System Status</td>
+          <td>Mail system status indicates that something having to do
+with the destination system has caused this DSN.  System
+issues are assumed to be under the general control of the
+destination system administrator.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.4.YYY</td>
+          <td>Network and Routing Status</td>
+          <td>The networking or routing codes report status about the
+delivery system itself.  These system components include
+any necessary infrastructure such as directory and routing
+services.  Network issues are assumed to be under the
+control of the destination or intermediate system
+administrator.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.5.YYY</td>
+          <td>Mail Delivery Protocol Status</td>
+          <td>The mail delivery protocol status codes report failures
+involving the message delivery protocol.  These failures
+include the full range of problems resulting from
+implementation errors or an unreliable connection.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.6.YYY</td>
+          <td>Message Content or Media Status</td>
+          <td>The message content or media status codes report failures
+involving the content of the message.  These codes report
+failures due to translation, transcoding, or otherwise
+unsupported message media.  Message content or media
+issues are under the control of both the sender and the
+receiver, both of which must support a common set of
+supported content-types.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.YYY</td>
+          <td>Security or Policy Status</td>
+          <td>The security or policy status codes report failures
+involving policies such as per-recipient or per-host
+filtering and cryptographic operations.  Security and
+policy status issues are assumed to be under the control
+of either or both the sender and recipient.  Both the
+sender and recipient must permit the exchange of messages
+and arrange the exchange of necessary keys and
+certificates for cryptographic operations.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="smtp-enhanced-status-codes-3" id="smtp-enhanced-status-codes-3"></a>Enumerated Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Chris Newman</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5248">RFC5248</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="smtp-enhanced-status-codes-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-smtp-enhanced-status-codes-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Sample Text</th>
+          <th>Associated basic status code</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Submitter</th>
+          <th>Change Controller</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>X.0.0</td>
+          <td>Other undefined Status</td>
+          <td>Any</td>
+          <td>Other undefined status is the only undefined error code.
+It should be used for all errors for which only the class
+of the error is known.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.0</td>
+          <td>Other address status</td>
+          <td>Not given</td>
+          <td>Something about the address specified in the message
+caused this DSN.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.1</td>
+          <td>Bad destination mailbox address</td>
+          <td>451, 550</td>
+          <td>The mailbox specified in the address does not exist.
+For Internet mail names, this means the address portion to
+the left of the "@" sign is invalid.  This code is only
+useful for permanent failures.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.2</td>
+          <td>Bad destination system address</td>
+          <td>Not given</td>
+          <td>The destination system specified in the address does not
+exist or is incapable of accepting mail.  For Internet mail
+names, this means the address portion to the right of the "@"
+is invalid for mail.  This code is only useful for permanent
+failures.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.3</td>
+          <td>Bad destination mailbox address syntax</td>
+          <td>501</td>
+          <td>The destination address was syntactically invalid.  This can
+apply to any field in the address.  This code is only useful
+for permanent failures.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.4</td>
+          <td>Destination mailbox address ambiguous</td>
+          <td>Not given</td>
+          <td>The mailbox address as specified matches one or more
+recipients on the destination system.  This may result if a
+heuristic address mapping algorithm is used to map the
+specified address to a local mailbox name.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.5</td>
+          <td>Destination address valid</td>
+          <td>250</td>
+          <td>This mailbox address as specified was valid.  This status code
+should be used for positive delivery reports.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.6</td>
+          <td>Destination mailbox has moved, No forwarding address</td>
+          <td>Not given</td>
+          <td>The mailbox address provided was at one time valid, but mail is
+no longer being accepted for that address.  This code is only
+useful for permanent failures.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.7</td>
+          <td>Bad sender's mailbox address syntax</td>
+          <td>Not given</td>
+          <td>The sender's address was syntactically invalid.  This can apply
+to any field in the address.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.8</td>
+          <td>Bad sender's system address</td>
+          <td>451, 501</td>
+          <td>The sender's system specified in the address does not exist or
+is incapable of accepting return mail.  For domain names, this
+means the address portion to the right of the "@" is invalid
+for mail.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.9</td>
+          <td>Message relayed to non-compliant mailer</td>
+          <td>Not given</td>
+          <td>The mailbox address specified was valid, but the message has
+been relayed to a system that does not speak this protocol; no
+further information can be provided.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3886">RFC3886</a>] (Standards Track)</td>
+          <td>E. Allman</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.1.10</td>
+          <td>Recipient address has null MX</td>
+          <td>556</td>
+          <td>This status code is returned when the associated 
+address is marked as invalid using a null MX.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7505">RFC7505</a>] (Standards Track); [<a href="http://www.iana.org/go/rfc7504">RFC7504</a>] (Standards Track)</td>
+          <td>J. Levine, M. Delany, J. Klensin</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.2.0</td>
+          <td>Other or undefined mailbox status</td>
+          <td>Not given</td>
+          <td>The mailbox exists, but something about the destination mailbox
+has caused the sending of this DSN.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.2.1</td>
+          <td>Mailbox disabled, not accepting messages</td>
+          <td>Not given</td>
+          <td>The mailbox exists, but is not accepting messages.  This may be
+a permanent error if the mailbox will never be re-enabled or a
+transient error if the mailbox is only temporarily disabled.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.2.2</td>
+          <td>Mailbox full</td>
+          <td>552</td>
+          <td>The mailbox is full because the user has exceeded a per-mailbox
+administrative quota or physical capacity.  The general
+semantics implies that the recipient can delete messages to
+make more space available.  This code should be used as a
+persistent transient failure.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.2.3</td>
+          <td>Message length exceeds administrative limit</td>
+          <td>552</td>
+          <td>A per-mailbox administrative message length limit has been
+exceeded.  This status code should be used when the per-mailbox
+message length limit is less than the general system limit.
+This code should be used as a permanent failure.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.2.4</td>
+          <td>Mailing list expansion problem</td>
+          <td>450, 452</td>
+          <td>The mailbox is a mailing list address and the mailing list was
+unable to be expanded.  This code may represent a permanent
+failure or a persistent transient failure.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.3.0</td>
+          <td>Other or undefined mail system status</td>
+          <td>221, 250, 421, 451, 550, 554</td>
+          <td>The destination system exists and normally accepts mail, but
+something about the system has caused the generation of this
+DSN.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.3.1</td>
+          <td>Mail system full</td>
+          <td>452</td>
+          <td>Mail system storage has been exceeded.  The general semantics
+imply that the individual recipient may not be able to delete
+material to make room for additional messages.  This is useful
+only as a persistent transient error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.3.2</td>
+          <td>System not accepting network messages</td>
+          <td>453, 521</td>
+          <td>The host on which the mailbox is resident is not accepting
+messages.  Examples of such conditions include an imminent
+shutdown, excessive load, or system maintenance.  This is
+useful for both permanent and persistent transient errors.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track); [<a href="http://www.iana.org/go/rfc7504">RFC7504</a>] (Standards Track)</td>
+          <td>G. Vaudreuil, J. Klensin</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.3.3</td>
+          <td>System not capable of selected features</td>
+          <td>Not given</td>
+          <td>Selected features specified for the message are not supported
+by the destination system.  This can occur in gateways when
+features from one domain cannot be mapped onto the supported
+feature in another.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.3.4</td>
+          <td>Message too big for system</td>
+          <td>552, 554</td>
+          <td>The message is larger than per-message size limit.  This limit
+may either be for physical or administrative reasons.  This is
+useful only as a permanent error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.3.5</td>
+          <td>System incorrectly configured</td>
+          <td>Not given</td>
+          <td>The system is not configured in a manner that will permit it to
+accept this message.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.3.6</td>
+          <td>Requested priority was changed</td>
+          <td>250 or 251</td>
+          <td>The message was accepted for relay/delivery, but
+the requested priority (possibly the implied default) was not
+honoured. The human readable text after the status code
+contains the new priority, followed by SP (space) and
+explanatory human readable text.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6710">RFC6710</a>] (Standards Track)</td>
+          <td>A. Melnikov</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.4.0</td>
+          <td>Other or undefined network or routing status</td>
+          <td>Not given</td>
+          <td>Something went wrong with the networking, but it is not clear
+what the problem is, or the problem cannot be well expressed
+with any of the other provided detail codes.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.4.1</td>
+          <td>No answer from host</td>
+          <td>451</td>
+          <td>The outbound connection attempt was not answered, because
+either the remote system was busy, or was unable to take a
+call.  This is useful only as a persistent transient error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.4.2</td>
+          <td>Bad connection</td>
+          <td>421</td>
+          <td>The outbound connection was established, but was unable to
+complete the message transaction, either because of time-out,
+or inadequate connection quality.  This is useful only as a
+persistent transient error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.4.3</td>
+          <td>Directory server failure</td>
+          <td>451, 550</td>
+          <td>The network system was unable to forward the message, because a
+directory server was unavailable.  This is useful only as a
+persistent transient error.
+The inability to connect to an Internet DNS server is one
+example of the directory server failure error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.4.4</td>
+          <td>Unable to route</td>
+          <td>Not given</td>
+          <td>The mail system was unable to determine the next hop for the
+message because the necessary routing information was
+unavailable from the directory server.  This is useful for both
+permanent and persistent transient errors.
+A DNS lookup returning only an SOA (Start of Administration)
+record for a domain name is one example of the unable to route
+error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.4.5</td>
+          <td>Mail system congestion</td>
+          <td>451</td>
+          <td>The mail system was unable to deliver the message because the
+mail system was congested.  This is useful only as a persistent
+transient error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.4.6</td>
+          <td>Routing loop detected</td>
+          <td>Not given</td>
+          <td>A routing loop caused the message to be forwarded too many
+times, either because of incorrect routing tables or a user-
+forwarding loop.  This is useful only as a persistent transient
+error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.4.7</td>
+          <td>Delivery time expired</td>
+          <td>Not given</td>
+          <td>The message was considered too old by the rejecting system,
+either because it remained on that host too long or because the
+time-to-live value specified by the sender of the message was
+exceeded.  If possible, the code for the actual problem found
+when delivery was attempted should be returned rather than this
+code.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.5.0</td>
+          <td>Other or undefined protocol status</td>
+          <td>220, 250, 251, 252, 253, 451, 452, 454, 458, 459, 501,
+502, 503, 554</td>
+          <td>Something was wrong with the protocol necessary to deliver the
+message to the next hop and the problem cannot be well
+expressed with any of the other provided detail codes.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.5.1</td>
+          <td>Invalid command</td>
+          <td>430, 500, 501, 503, 530, 550, 554, 555</td>
+          <td>A mail transaction protocol command was issued which was either
+out of sequence or unsupported.  This is useful only as a
+permanent error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.5.2</td>
+          <td>Syntax error</td>
+          <td>500, 501, 502, 550, 555</td>
+          <td>A mail transaction protocol command was issued which could not
+be interpreted, either because the syntax was wrong or the
+command is unrecognized.  This is useful only as a permanent
+error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.5.3</td>
+          <td>Too many recipients</td>
+          <td>451</td>
+          <td>More recipients were specified for the message than could have
+been delivered by the protocol.  This error should normally
+result in the segmentation of the message into two, the
+remainder of the recipients to be delivered on a subsequent
+delivery attempt.  It is included in this list in the event
+that such segmentation is not possible.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.5.4</td>
+          <td>Invalid command arguments</td>
+          <td>451, 501, 502, 503, 504, 550, 555</td>
+          <td>A valid mail transaction protocol command was issued with
+invalid arguments, either because the arguments were out of
+range or represented unrecognized features.  This is useful
+only as a permanent error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.5.5</td>
+          <td>Wrong protocol version</td>
+          <td>Not given</td>
+          <td>A protocol version mis-match existed which could not be
+automatically resolved by the communicating parties.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.5.6</td>
+          <td>Authentication Exchange line is too long</td>
+          <td>500</td>
+          <td>This enhanced status code SHOULD be returned when the server
+fails the AUTH command due to the client sending a [BASE64]
+response which is longer than the maximum buffer size
+available for the currently selected SASL mechanism.  This is
+useful for both permanent and persistent transient errors.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>] (Standards Track)</td>
+          <td>R. Siemborski, A. Melnikov</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.6.0</td>
+          <td>Other or undefined media error</td>
+          <td>Not given</td>
+          <td>Something about the content of a message caused it to be
+considered undeliverable and the problem cannot be well
+expressed with any of the other provided detail codes.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.6.1</td>
+          <td>Media not supported</td>
+          <td>Not given</td>
+          <td>The media of the message is not supported by either the
+delivery protocol or the next system in the forwarding path.
+This is useful only as a permanent error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.6.2</td>
+          <td>Conversion required and prohibited</td>
+          <td>Not given</td>
+          <td>The content of the message must be converted before it can be
+delivered and such conversion is not permitted.  Such
+prohibitions may be the expression of the sender in the message
+itself or the policy of the sending host.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.6.3</td>
+          <td>Conversion required but not supported</td>
+          <td>554</td>
+          <td>The message content must be converted in order to be forwarded
+but such conversion is not possible or is not practical by a
+host in the forwarding path.  This condition may result when an
+ESMTP gateway supports 8bit transport but is not able to
+downgrade the message to 7 bit as required for the next hop.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.6.4</td>
+          <td>Conversion with loss performed</td>
+          <td>250</td>
+          <td>This is a warning sent to the sender when message delivery was
+successfully but when the delivery required a conversion in
+which some data was lost.  This may also be a permanent error
+if the sender has indicated that conversion with loss is
+prohibited for the message.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.6.5</td>
+          <td>Conversion Failed</td>
+          <td>Not given</td>
+          <td>A conversion was required but was unsuccessful.  This may be
+useful as a permanent or persistent temporary notification.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.6.6</td>
+          <td>Message content not available</td>
+          <td>554</td>
+          <td>The message content could not be fetched from a remote system.
+This may be useful as a permanent or persistent temporary
+notification.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4468">RFC4468</a>] (Standards Track)</td>
+          <td>C. Newman</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.6.7</td>
+          <td>Non-ASCII addresses not permitted for that sender/recipient</td>
+          <td>553, 550</td>
+          <td>This indicates the reception of a MAIL or RCPT
+        command that non-ASCII addresses are not permitted</td>
+          <td>[<a href="http://www.iana.org/go/rfc6531">RFC6531</a>] (Standards track)</td>
+          <td>Jiankang YAO</td>
+          <td>ima@ietf.org</td>
+        </tr>
+        <tr>
+          <td>X.6.8</td>
+          <td>UTF-8 string reply is required,
+but not permitted by the SMTP client</td>
+          <td>252, 553, 550</td>
+          <td>This indicates that a reply containing a UTF-8
+string is required to show the mailbox name,
+but that form of response is not
+permitted by the SMTP client.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6531">RFC6531</a>] (Standards track)</td>
+          <td>Jiankang YAO</td>
+          <td>ima@ietf.org</td>
+        </tr>
+        <tr>
+          <td>X.6.9</td>
+          <td>UTF-8 header message cannot be transferred to one or more recipients, so the message must be rejected</td>
+          <td>550</td>
+          <td>This indicates that transaction failed
+after the final "." of the DATA command.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6531">RFC6531</a>] (Standards track)</td>
+          <td>Jiankang YAO</td>
+          <td>ima@ietf.org</td>
+        </tr>
+        <tr>
+          <td>X.6.10</td>
+          <td></td>
+          <td></td>
+          <td>This is a duplicate of X.6.8 and is thus deprecated.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6531">RFC6531</a>] (Standards track)</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>X.7.0</td>
+          <td>Other or undefined security status</td>
+          <td>220, 235, 450, 454, 500, 501, 503, 504, 530, 535, 550</td>
+          <td>Something related to security caused the message to be
+returned, and the problem cannot be well expressed with any of
+the other provided detail codes.  This status code may also be
+used when the condition cannot be further described because of
+security policies in force.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.1</td>
+          <td>Delivery not authorized, message refused</td>
+          <td>451, 454, 502, 503, 533, 550, 551</td>
+          <td>The sender is not authorized to send to the destination.  This
+can be the result of per-host or per-recipient filtering.  This
+memo does not discuss the merits of any such filtering, but
+provides a mechanism to report such.  This is useful only as a
+permanent error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.2</td>
+          <td>Mailing list expansion prohibited</td>
+          <td>550</td>
+          <td>The sender is not authorized to send a message to the intended
+mailing list.  This is useful only as a permanent error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.3</td>
+          <td>Security conversion required but not possible</td>
+          <td>Not given</td>
+          <td>A conversion from one secure messaging protocol to another was
+required for delivery and such conversion was not possible.
+This is useful only as a permanent error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.4</td>
+          <td>Security features not supported</td>
+          <td>504</td>
+          <td>A message contained security features such as secure
+authentication that could not be supported on the delivery
+protocol.  This is useful only as a permanent error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.5</td>
+          <td>Cryptographic failure</td>
+          <td>Not given</td>
+          <td>A transport system otherwise authorized to validate or decrypt
+a message in transport was unable to do so because necessary
+information such as key was not available or such information
+was invalid.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.6</td>
+          <td>Cryptographic algorithm not supported</td>
+          <td>Not given</td>
+          <td>A transport system otherwise authorized to validate or decrypt
+a message was unable to do so because the necessary algorithm
+was not supported.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.7</td>
+          <td>Message integrity failure</td>
+          <td>Not given</td>
+          <td>A transport system otherwise authorized to validate a message
+was unable to do so because the message was corrupted or
+altered.  This may be useful as a permanent, transient
+persistent, or successful delivery code.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3463">RFC3463</a>] (Standards Track)</td>
+          <td>G. Vaudreuil</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.8</td>
+          <td>Authentication credentials invalid</td>
+          <td>535, 554</td>
+          <td>This response to the AUTH command indicates that the authentication
+failed due to invalid or insufficient authentication credentials.  In
+this case, the client SHOULD ask the user to supply new credentials
+(such as by presenting a password dialog box).</td>
+          <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>] (Standards Track)</td>
+          <td>R. Siemborski, A. Melnikov</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.9</td>
+          <td>Authentication mechanism is too weak</td>
+          <td>534</td>
+          <td>This response to the AUTH command indicates that the selected
+authentication mechanism is weaker than server policy permits for
+that user.  The client SHOULD retry with a new authentication
+mechanism.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>] (Standards Track)</td>
+          <td>R. Siemborski, A. Melnikov</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.10</td>
+          <td>Encryption Needed</td>
+          <td>523</td>
+          <td>This indicates that external strong privacy layer
+is needed in order to use the requested
+authentication mechanism.  This is primarily
+intended for use with clear text authentication
+mechanisms.  A client which receives this may
+activate a security layer such as TLS prior to
+authenticating, or attempt to use a stronger
+mechanism.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5248">RFC5248</a>] (Best current practice)</td>
+          <td>T. Hansen, J. Klensin</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.11</td>
+          <td>Encryption required for requested authentication mechanism</td>
+          <td>524, 538</td>
+          <td>This response to the AUTH command indicates that the selected
+authentication mechanism may only be used when the underlying SMTP
+connection is encrypted.  Note that this response code is documented
+here for historical purposes only.  Modern implementations SHOULD NOT
+advertise mechanisms that are not permitted due to lack of
+encryption, unless an encryption layer of sufficient strength is
+currently being employed.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>] (Standards Track)</td>
+          <td>R. Siemborski, A. Melnikov</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.12</td>
+          <td>A password transition is needed</td>
+          <td>422, 432</td>
+          <td>This response to the AUTH command indicates that the user needs to
+transition to the selected authentication mechanism.  This is
+typically done by authenticating once using the [PLAIN]
+authentication mechanism.  The selected mechanism SHOULD then work
+for authentications in subsequent sessions.</td>
+          <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>] (Standards Track)</td>
+          <td>R. Siemborski, A. Melnikov</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.13</td>
+          <td>User Account Disabled</td>
+          <td>525</td>
+          <td>Sometimes a system administrator will have to
+disable a user's account (e.g., due to lack of
+payment, abuse, evidence of a break-in attempt,
+etc).  This error code occurs after a successful
+authentication to a disabled account.  This
+informs the client that the failure is permanent
+until the user contacts their system
+administrator to get the account re-enabled.  It
+differs from a generic authentication failure
+where the client's best option is to present the
+passphrase entry dialog in case the user simply
+mistyped their passphrase.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5248">RFC5248</a>] (Best current practice)</td>
+          <td>T. Hansen, J. Klensin</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.14</td>
+          <td>Trust relationship required</td>
+          <td>535, 554</td>
+          <td>The submission server requires a configured trust
+relationship with a third-party server in order
+to access the message content.  This value
+replaces the prior use of X.7.8 for this error
+condition. thereby updating [RFC4468].</td>
+          <td>[<a href="http://www.iana.org/go/rfc5248">RFC5248</a>] (Best current practice)</td>
+          <td>T. Hansen, J. Klensin</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.15</td>
+          <td>Priority Level is too low</td>
+          <td>450, 550 (other 4XX or 5XX codes are allowed)</td>
+          <td>The specified priority level is below the lowest
+priority acceptable for the receiving SMTP server.  This
+condition might be temporary, for example the server is
+operating in a mode where only higher priority messages are
+accepted for transfer and delivery, while lower priority
+messages are rejected.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6710">RFC6710</a>] (Standards Track)</td>
+          <td>A. Melnikov</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.16</td>
+          <td>Message is too big for the specified priority</td>
+          <td>552 (other 4XX or 5XX codes are allowed)</td>
+          <td>The message is too big for the specified priority.
+This condition might be temporary, for example the server is
+operating in a mode where only higher priority messages below
+certain size are accepted for transfer and delivery.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6710">RFC6710</a>] (Standards Track)</td>
+          <td>A. Melnikov</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.17</td>
+          <td>Mailbox owner has changed</td>
+          <td>5XX</td>
+          <td>This status code is returned when a message is received with 
+        a Require-Recipient-Valid-Since field or RRVS extension and the receiving 
+        system is able to determine that the intended recipient mailbox has not 
+        been under continuous ownership since the specified date-time.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>] (Standards Track)</td>
+          <td>M. Kucherawy</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.18</td>
+          <td>Domain owner has changed</td>
+          <td>5XX</td>
+          <td>This status code is returned when a message is received with 
+        a Require-Recipient-Valid-Since field or RRVS extension and the receiving 
+        system wishes to disclose that the owner of the domain name of the 
+        recipient has changed since the specified date-time.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>] (Standards Track)</td>
+          <td>M. Kucherawy</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.19</td>
+          <td>RRVS test cannot be completed</td>
+          <td>5XX</td>
+          <td>This status code is returned when a message is
+received with a Require-Recipient-Valid-Since
+field or RRVS extension and the receiving
+system cannot complete the requested
+evaluation because the required timestamp was
+not recorded.  The message originator needs to
+decide whether to reissue the message without
+RRVS protection.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>] (Standards Track)</td>
+          <td>M. Kucherawy</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.20</td>
+          <td>No passing DKIM signature found</td>
+          <td>550</td>
+          <td>This status code is returned when a message
+did not contain any passing DKIM signatures.  (This violates the
+advice of Section 6.1 of [<a href="http://www.iana.org/go/rfc6376">RFC6376</a>].)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7372">RFC7372</a>] (Standards Track); [<a href="http://www.iana.org/go/rfc6376">RFC6376</a>] (Standards Track)</td>
+          <td>M. Kucherawy</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.21</td>
+          <td>No acceptable DKIM signature found</td>
+          <td>550</td>
+          <td>This status code is returned when a message
+contains one or more passing DKIM signatures,
+but none are acceptable.  (This violates the
+advice of Section 6.1 of [<a href="http://www.iana.org/go/rfc6376">RFC6376</a>].)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7372">RFC7372</a>] (Standards Track); [<a href="http://www.iana.org/go/rfc6376">RFC6376</a>] (Standards Track)</td>
+          <td>M. Kucherawy</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.22</td>
+          <td>No valid author-matched DKIM signature found</td>
+          <td>550</td>
+          <td>This status code is returned when a message
+contains one or more passing DKIM signatures, but none are acceptable because
+none have an identifier(s) that matches the author address(es) found in
+the From header field.  This is a special case of X.7.21.  (This violates the
+advice of Section 6.1 of [<a href="http://www.iana.org/go/rfc6376">RFC6376</a>].)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7372">RFC7372</a>] (Standards Track); [<a href="http://www.iana.org/go/rfc6376">RFC6376</a>] (Standards Track)</td>
+          <td>M. Kucherawy</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.23</td>
+          <td>SPF validation failed</td>
+          <td>550</td>
+          <td>This status code is returned when a message
+completed an SPF check that produced a "fail" result, contrary to local policy
+requirements.  Used in place of 5.7.1 as described in Section 8.4 of 
+[<a href="http://www.iana.org/go/rfc7208">RFC7208</a>].</td>
+          <td>[<a href="http://www.iana.org/go/rfc7372">RFC7372</a>] (Standards Track); [<a href="http://www.iana.org/go/rfc7208">RFC7208</a>] (Standards Track)</td>
+          <td>M. Kucherawy</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.24</td>
+          <td>SPF validation error</td>
+          <td>451/550</td>
+          <td>This status code is returned when evaluation
+of SPF relative to an arriving message resulted in an error.  Used in place of
+4.4.3 or 5.5.2 as described in Sections 8.6 and 8.7 of 
+[<a href="http://www.iana.org/go/rfc7208">RFC7208</a>].</td>
+          <td>[<a href="http://www.iana.org/go/rfc7372">RFC7372</a>] (Standards Track); [<a href="http://www.iana.org/go/rfc7208">RFC7208</a>] (Standards Track)</td>
+          <td>M. Kucherawy</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.25</td>
+          <td>Reverse DNS validation failed</td>
+          <td>550</td>
+          <td>This status code is returned when an SMTP
+client's IP address failed a reverse DNS
+validation check, contrary to local policy
+requirements.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7372">RFC7372</a>] (Standards Track); [<a href="http://www.iana.org/go/rfc7601">RFC7601</a>] (Standards Track)</td>
+          <td>M. Kucherawy</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.26</td>
+          <td>Multiple authentication checks failed</td>
+          <td>550</td>
+          <td>This status code is returned when a message
+failed more than one message authentication
+check, contrary to local policy requirements.
+The particular mechanisms that failed are not
+specified.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7372">RFC7372</a>] (Standards Track)</td>
+          <td>M. Kucherawy</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td>X.7.27</td>
+          <td>Sender address has null MX</td>
+          <td>550</td>
+          <td>This status code is returned when the associated
+sender address has a null MX, and the SMTP
+receiver is configured to reject mail from such
+sender (e.g., because it could not return a DSN).</td>
+          <td>[<a href="http://www.iana.org/go/rfc7505">RFC7505</a>] (Standards Track)</td>
+          <td>J. Levine, M. Delany</td>
+          <td>IESG</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

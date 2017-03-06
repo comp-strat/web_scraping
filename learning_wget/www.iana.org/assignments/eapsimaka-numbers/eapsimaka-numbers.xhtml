@@ -1,0 +1,1044 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>EAP-AKA and EAP-SIM Parameters</title>
+  </head>
+  <body>
+    <h1>EAP-AKA and EAP-SIM Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2005-05-02</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-02-27</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>All requests for value assignment from the various number spaces below
+require "Specification Required".  Requests must be specified in sufficient
+detail so that interoperability between independent implementations is
+possible.  Possible forms of documentation include, but are not limited to,
+RFCs, the products of another standards body (e.g. 3GPP), or permanently
+and readily available vendor design notes.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eapsimaka-numbers.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="eapsimaka-numbers.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="eapsimaka-numbers.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#eapsimaka-numbers-1">Subtypes</a>
+      </li>
+      <li>
+        <a href="#eapsimaka-numbers-2">Attribute Types (Non-Skippable Attributes 0-127)</a>
+      </li>
+      <li>
+        <a href="#eapsimaka-numbers-3">Attribute Types (Skippable Attributes 128-255)</a>
+        <ul>
+          <li>
+            <a href="#eapsimaka-numbers-4">AT_NOTIFICATION (12) Attribute - Notification Code Values</a>
+          </li>
+          <li>
+            <a href="#eapsimaka-numbers-5">AT_VERSION_LIST (15) and AT_SELECTED_VERSION (16) Attributes - EAP method version numbers</a>
+          </li>
+          <li>
+            <a href="#eapsimaka-numbers-6">AT_CLIENT_ERROR_CODE (22) Attribute - Client Error Code Values</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#eapsimaka-numbers-7">EAP-AKA' AT_KDF Key Derivation Function values</a>
+      </li>
+      <li>
+        <a href="#trusted-non-3gpp-access">Trusted Non-3GPP Access EAP Parameters</a>
+        <ul>
+          <li>
+            <a href="#virt-net-req-type">Virt-Net-Req Type</a>
+          </li>
+          <li>
+            <a href="#virt-net-req-sub-type">Virt-Net-Req Sub Type</a>
+          </li>
+          <li>
+            <a href="#connectivity-type">Connectivity Type</a>
+          </li>
+          <li>
+            <a href="#access-technology">Access Technology</a>
+          </li>
+          <li>
+            <a href="#serial-id">Serial ID Type</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2><a name="eapsimaka-numbers-1" id="eapsimaka-numbers-1"></a>Subtypes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Vesa Lehtovirta</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eapsimaka-numbers-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eapsimaka-numbers-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>AKA-Challenge</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>AKA-Authentication-Reject</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>AKA-Synchronization-Failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>AKA-Identity</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>6-9</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>SIM-Start</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>SIM-Challenge</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>AKA-Notification and SIM-Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>AKA-Reauthentication and SIM-Reauthentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>AKA-Client-Error and SIM-Client-Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>15-255</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eapsimaka-numbers-2" id="eapsimaka-numbers-2"></a>Attribute Types (Non-Skippable Attributes 0-127)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Vesa Lehtovirta</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eapsimaka-numbers-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eapsimaka-numbers-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>AT_RAND</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>AT_AUTN</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>AT_RES</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>AT_AUTS</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>AT_PADDING</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>AT_NONCE_MT</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>8-9</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>AT_PERMANENT_ID_REQ</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>AT_MAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>AT_NOTIFICATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>AT_ANY_ID_REQ</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>AT_IDENTITY</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>AT_VERSION_LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>AT_SELECTED_VERSION</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>AT_FULLAUTH_ID_REQ</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>AT_COUNTER</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>AT_COUNTER_TOO_SMALL</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>AT_NONCE_S</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>AT_CLIENT_ERROR_CODE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>AT_KDF_INPUT</td>
+          <td>[<a href="http://www.iana.org/go/rfc5448">RFC5448</a>]</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>AT_KDF</td>
+          <td>[<a href="http://www.iana.org/go/rfc5448">RFC5448</a>]</td>
+        </tr>
+        <tr>
+          <td>25-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eapsimaka-numbers-3" id="eapsimaka-numbers-3"></a>Attribute Types (Skippable Attributes 128-255)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Vesa Lehtovirta</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eapsimaka-numbers-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eapsimaka-numbers-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>128</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>129</td>
+          <td>AT_IV</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>130</td>
+          <td>AT_ENCR_DATA</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>131</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>132</td>
+          <td>AT_NEXT_PSEUDONYM</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>133</td>
+          <td>AT_NEXT_REAUTH_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>134</td>
+          <td>AT_CHECKCODE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>135</td>
+          <td>AT_RESULT_IND</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td>136</td>
+          <td>AT_BIDDING</td>
+          <td>[<a href="http://www.iana.org/go/rfc5448">RFC5448</a>]</td>
+        </tr>
+        <tr>
+          <td>137</td>
+          <td>AT_IPMS_IND</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/html-info/24302.htm">3GPP TS 24.302</a>][<a href="#John_Meredith">John_Meredith</a>]</td>
+        </tr>
+        <tr>
+          <td>138</td>
+          <td>AT_IPMS_RES</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/html-info/24302.htm">3GPP TS 24.302</a>][<a href="#John_Meredith">John_Meredith</a>]</td>
+        </tr>
+        <tr>
+          <td>139</td>
+          <td>AT_TRUST_IND</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/html-info/24302.htm">3GPP TS 24.302</a>][<a href="#John_Meredith">John_Meredith</a>]</td>
+        </tr>
+        <tr>
+          <td>140</td>
+          <td>AT_SHORT_NAME_FOR_NETWORK</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/html-info/24302.htm">3GPP TS 24.302</a>][<a href="#Frederic_Firmin">Frederic_Firmin</a>]</td>
+        </tr>
+        <tr>
+          <td>141</td>
+          <td>AT_FULL_NAME_FOR_NETWORK</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/html-info/24302.htm">3GPP TS 24.302</a>][<a href="#Frederic_Firmin">Frederic_Firmin</a>]</td>
+        </tr>
+        <tr>
+          <td>142</td>
+          <td>AT_RQSI_IND</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/html-info/24139.htm">3GPP TS 24.139</a>][<a href="#Frederic_Firmin">Frederic_Firmin</a>]</td>
+        </tr>
+        <tr>
+          <td>143</td>
+          <td>AT_ RQSI_RES</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/html-info/24139.htm">3GPP TS 24.139</a>][<a href="#Frederic_Firmin">Frederic_Firmin</a>]</td>
+        </tr>
+        <tr>
+          <td>144</td>
+          <td>AT_TWAN_CONN_MODE</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/html-info/24302.htm">3GPP TS 24.302 12.6.0</a>][<a href="#Frederic_Firmin">Frederic_Firmin</a>]</td>
+        </tr>
+        <tr>
+          <td>145</td>
+          <td>AT_VIRTUAL_NETWORK_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>146</td>
+          <td>AT_VIRTUAL_NETWORK_REQ</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>147</td>
+          <td>AT_CONNECTIVITY_TYPE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>148</td>
+          <td>AT_HANDOVER_INDICATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>149</td>
+          <td>AT_HANDOVER_SESSION_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>150</td>
+          <td>AT_MN_SERIAL_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>151-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="eapsimaka-numbers-4" id="eapsimaka-numbers-4"></a>AT_NOTIFICATION (12) Attribute - Notification Code Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Vesa Lehtovirta</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="eapsimaka-numbers-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-eapsimaka-numbers-4" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>General failure after authentication</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+          </tr>
+          <tr>
+            <td>1-1025</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</td>
+          </tr>
+          <tr>
+            <td>1026</td>
+            <td>User has been temporarily denied access</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+          </tr>
+          <tr>
+            <td>1027-1030</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</td>
+          </tr>
+          <tr>
+            <td>1031</td>
+            <td>User has not subscribed to the requested service</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+          </tr>
+          <tr>
+            <td>1032-16383</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</td>
+          </tr>
+          <tr>
+            <td>16384</td>
+            <td>General failure</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+          </tr>
+          <tr>
+            <td>16385-32767</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</td>
+          </tr>
+          <tr>
+            <td>32768</td>
+            <td>Success</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+          </tr>
+          <tr>
+            <td>32769-65535</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="eapsimaka-numbers-5" id="eapsimaka-numbers-5"></a>AT_VERSION_LIST (15) and AT_SELECTED_VERSION (16) Attributes - EAP method version numbers</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Vesa Lehtovirta</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="eapsimaka-numbers-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-eapsimaka-numbers-5" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>EAP-SIM Version 1</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+          </tr>
+          <tr>
+            <td>2-65535</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="eapsimaka-numbers-6" id="eapsimaka-numbers-6"></a>AT_CLIENT_ERROR_CODE (22) Attribute - Client Error Code Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Vesa Lehtovirta</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="eapsimaka-numbers-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-eapsimaka-numbers-6" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>"unable to process packet": a general error code</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>"unsupported version": the peer does not support      
+any of the versions listed in AT_VERSION_LIST</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>"insufficient number of challenges": the peer's       
+policy requires more triplets than the server
+included in AT_RAND</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>"RANDs are not fresh": the peer believes that the     
+RAND challenges included in AT_RAND were not fresh</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>][<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+          </tr>
+          <tr>
+            <td>4-65535</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="eapsimaka-numbers-7" id="eapsimaka-numbers-7"></a>EAP-AKA' AT_KDF Key Derivation Function values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Vesa Lehtovirta</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5448">RFC5448</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eapsimaka-numbers-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eapsimaka-numbers-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5448">RFC5448</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>EAP-AKA' with CK'/IK'</td>
+          <td>[<a href="http://www.iana.org/go/rfc5448">RFC5448</a>]</td>
+        </tr>
+        <tr>
+          <td>2-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="trusted-non-3gpp-access" id="trusted-non-3gpp-access"></a>Trusted Non-3GPP Access EAP Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jouni Korhonen, Pierrick Seite</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="trusted-non-3gpp-access.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-trusted-non-3gpp-access" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Virt-Net-Req Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Virt-Net-Req Sub type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Connectivity Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Access Technology</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Serial ID Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+        </tr>
+        <tr>
+          <td>6-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="virt-net-req-type" id="virt-net-req-type"></a>Virt-Net-Req Type</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Jouni Korhonen, Pierrick Seite</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="virt-net-req-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-virt-net-req-type" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Single PDN connection</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Multiple PDN connection.  Can request Non-Seamless Wi-
+      Fi Offload or EPC connectivity (see the Connectivity Type
+      attribute below)</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>3-127</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="virt-net-req-sub-type" id="virt-net-req-sub-type"></a>Virt-Net-Req Sub Type</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Jouni Korhonen, Pierrick Seite</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="virt-net-req-sub-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-virt-net-req-sub-type" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>PDN Type: IPv4</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>PDN Type: IPv6</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>PDN Type: IPv4v6</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>4-127</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="connectivity-type" id="connectivity-type"></a>Connectivity Type</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Jouni Korhonen, Pierrick Seite</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="connectivity-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-connectivity-type" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Non-Seamless WLAN Offload (NSWO)</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>EPC PDN connectivity</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>3-127</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="access-technology" id="access-technology"></a>Access Technology</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Jouni Korhonen, Pierrick Seite</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="access-technology.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-access-technology" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>UTRAN</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>E-UTRAN</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>3-127</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="serial-id" id="serial-id"></a>Serial ID Type</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Jouni Korhonen, Pierrick Seite</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="serial-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-serial-id" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>IMEI</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>IMEISV</td>
+            <td>[<a href="http://www.iana.org/go/rfc7458">RFC7458</a>]</td>
+          </tr>
+          <tr>
+            <td>3-127</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Frederic_Firmin" id="Frederic_Firmin">[Frederic_Firmin]</a>
+          </td>
+          <td>Frederic Firmin</td>
+          <td>
+            <a href="mailto:frederic.firmin&amp;etsi.org">mailto:frederic.firmin&amp;etsi.org</a>
+          </td>
+          <td>2014-10-16</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="John_Meredith" id="John_Meredith">[John_Meredith]</a>
+          </td>
+          <td>John Meredith</td>
+          <td>
+            <a href="mailto:john.meredith&amp;etsi.org">mailto:john.meredith&amp;etsi.org</a>
+          </td>
+          <td>2010-04-29</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

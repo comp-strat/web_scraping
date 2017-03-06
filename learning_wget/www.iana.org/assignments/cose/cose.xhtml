@@ -1,0 +1,1106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>CBOR Object Signing and Encryption (COSE)</title>
+  </head>
+  <body>
+    <h1>CBOR Object Signing and Encryption (COSE)</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2017-01-11</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-01-24</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cose.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="cose.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="cose.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#header-parameters">COSE Header Parameters</a>
+      </li>
+      <li>
+        <a href="#header-algorithm-parameters">COSE Header Algorithm Parameters</a>
+      </li>
+      <li>
+        <a href="#algorithms">COSE Algorithms Registry</a>
+      </li>
+      <li>
+        <a href="#key-common-parameters">COSE Key Common Parameters</a>
+      </li>
+      <li>
+        <a href="#key-type-parameters">COSE Key Type Parameters</a>
+      </li>
+      <li>
+        <a href="#key-type">COSE Key Type Registry</a>
+      </li>
+      <li>
+        <a href="#elliptic-curve-parameters">COSE Elliptic Curve Parameters</a>
+      </li>
+    </ul>
+    <h2><a name="header-parameters" id="header-parameters"></a>COSE Header Parameters</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Francesca Palombini, Matt Miller, Justin Richer, Carsten Bormann</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="header-parameters.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-header-parameters-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">Integer values less than -65536</td>
+          <td>Reserved for Private Use</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values in the range -1 to -65536</td>
+          <td>delegated to the "COSE Header Algorithm Parameters" registry</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values between 1 and 255 and strings of length 1</td>
+          <td>Standards Action With Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values from 256 to 65535 and strings of length 2</td>
+          <td>Specification Required</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values of greater than 65535 and strings of length greater than 2</td>
+          <td>Expert Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-header-parameters" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Label</th>
+          <th>Value</th>
+          <th>Value Registry</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reserved for Private Use</td>
+          <td>less than -65536</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td>-65535 to -1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Reserved</td>
+          <td>0</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>alg</td>
+          <td>1</td>
+          <td>int / tstr</td>
+          <td>COSE Algorithms registry</td>
+          <td>Cryptographic algorithm to use</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>crit</td>
+          <td>2</td>
+          <td>[+ label]</td>
+          <td>COSE Header Labels registry</td>
+          <td>Critical headers to be understood</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>content type</td>
+          <td>3</td>
+          <td>tstr / uint</td>
+          <td>COAP Content-Formats or Media Types registry</td>
+          <td>Content type of the payload</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>kid</td>
+          <td>4</td>
+          <td>bstr</td>
+          <td></td>
+          <td>Key identifier</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>IV</td>
+          <td>5</td>
+          <td>bstr</td>
+          <td></td>
+          <td>Full Initialization Vector</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>Partial IV</td>
+          <td>6</td>
+          <td>bstr</td>
+          <td></td>
+          <td>Partial Initialization Vector</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>counter signature</td>
+          <td>7</td>
+          <td>COSE_Signature / [+ COSE_Signature ]</td>
+          <td></td>
+          <td>CBOR encoded signature structure</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td>8</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CounterSignature0</td>
+          <td>9</td>
+          <td>bstr</td>
+          <td></td>
+          <td>Counter signature with implied signer and headers</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="header-algorithm-parameters" id="header-algorithm-parameters"></a>COSE Header Algorithm Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, G&#246;ran Selander, Derek Atkins, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="header-algorithm-parameters.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-header-algorithm-parameters" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Algorithm</th>
+          <th>Label</th>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>-65536 through -27</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PartyV other</td>
+          <td>direct+HKDF-SHA-256, direct+HKDF-SHA-512, direct+HKDF-AES-128, 
+        direct+HKDF-AES-256, ECDH-ES+HKDF-256, ECDH-ES+HKDF-512, 
+        ECDH-SS+HKDF-256, ECDH-SS+HKDF-512, ECDH-ES+A128KW, ECDH-ES+A192KW, 
+        ECDH-ES+A256KW, ECDH-SS+A128KW, ECDH-SS+A192KW, ECDH-SS+A256KW</td>
+          <td>-26</td>
+          <td>bstr</td>
+          <td>Party V other provided information</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>PartyV nonce</td>
+          <td>direct+HKDF-SHA-256, direct+HKDF-SHA-512, direct+HKDF-AES-128, 
+        direct+HKDF-AES-256, ECDH-ES+HKDF-256, ECDH-ES+HKDF-512, 
+        ECDH-SS+HKDF-256, ECDH-SS+HKDF-512, ECDH-ES+A128KW, ECDH-ES+A192KW, 
+        ECDH-ES+A256KW, ECDH-SS+A128KW, ECDH-SS+A192KW, ECDH-SS+A256KW</td>
+          <td>-25</td>
+          <td>bstr / int</td>
+          <td>Party V provided nonce</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>PartyV identity</td>
+          <td>direct+HKDF-SHA-256, direct+HKDF-SHA-512, direct+HKDF-AES-128, 
+        direct+HKDF-AES-256, ECDH-ES+HKDF-256, ECDH-ES+HKDF-512, 
+        ECDH-SS+HKDF-256, ECDH-SS+HKDF-512, ECDH-ES+A128KW, ECDH-ES+A192KW, 
+        ECDH-ES+A256KW, ECDH-SS+A128KW, ECDH-SS+A192KW, ECDH-SS+A256KW</td>
+          <td>-24</td>
+          <td>bstr</td>
+          <td>Party V identity Information</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>PartyU other</td>
+          <td>direct+HKDF-SHA-256, direct+HKDF-SHA-512, direct+HKDF-AES-128, 
+        direct+HKDF-AES-256, ECDH-ES+HKDF-256, ECDH-ES+HKDF-512, 
+        ECDH-SS+HKDF-256, ECDH-SS+HKDF-512, ECDH-ES+A128KW, ECDH-ES+A192KW, 
+        ECDH-ES+A256KW, ECDH-SS+A128KW, ECDH-SS+A192KW, ECDH-SS+A256KW</td>
+          <td>-23</td>
+          <td>bstr</td>
+          <td>Party U other provided information</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>PartyU nonce</td>
+          <td>direct+HKDF-SHA-256, direct+HKDF-SHA-512, direct+HKDF-AES-128, 
+        direct+HKDF-AES-256, ECDH-ES+HKDF-256, ECDH-ES+HKDF-512, 
+        ECDH-SS+HKDF-256, ECDH-SS+HKDF-512, ECDH-ES+A128KW, ECDH-ES+A192KW, 
+        ECDH-ES+A256KW, ECDH-SS+A128KW, ECDH-SS+A192KW, ECDH-SS+A256KW</td>
+          <td>-22</td>
+          <td>bstr / int</td>
+          <td>Party U provided nonce</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>PartyU identity</td>
+          <td>direct+HKDF-SHA-256, direct+HKDF-SHA-512, direct+HKDF-AES-128, 
+        direct+HKDF-AES-256, ECDH-ES+HKDF-256, ECDH-ES+HKDF-512, 
+        ECDH-SS+HKDF-256, ECDH-SS+HKDF-512, ECDH-ES+A128KW, ECDH-ES+A192KW, 
+        ECDH-ES+A256KW, ECDH-SS+A128KW, ECDH-SS+A192KW, ECDH-SS+A256KW</td>
+          <td>-21</td>
+          <td>bstr</td>
+          <td>Party U identity Information</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>salt</td>
+          <td>direct+HKDF-SHA-256, direct +HKDF-SHA-512, 
+        direct+HKDF-AES-128, direct+HKDF-AES-256, ECDH-ES+HKDF-256, 
+        ECDH-ES+HKDF-512, ECDH-SS+HKDF-256, ECDH-SS+HKDF-512, 
+        ECDH-ES+A128KW, ECDH-ES+A192KW, ECDH-ES+A256KW, 
+        ECDH-SS+A128KW, ECDH-SS+A192KW, ECDH-SS+A256KW</td>
+          <td>-20</td>
+          <td>bstr</td>
+          <td>Random salt</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>-19 through -4</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>static key id</td>
+          <td>ECDH-SS+HKDF-256, ECDH-SS+HKDF-512, ECDH-SS+A128KW, 
+        ECDH-SS+A192KW, ECDH-SS+A256KW</td>
+          <td>-3</td>
+          <td>bstr</td>
+          <td>Static Public key identifier for the sender</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>static key</td>
+          <td>ECDH-SS+HKDF-256, ECDH-SS+HKDF-512, ECDH-SS+A128KW, 
+        ECDH-SS+A192KW, ECDH-SS+A256KW</td>
+          <td>-2</td>
+          <td>COSE_Key</td>
+          <td>Static Public key for the sender</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>ephemeral key</td>
+          <td>ECDH-ES+HKDF-256, ECDH-ES+HKDF-512, ECDH-ES+A128KW, 
+        ECDH-ES+A192KW, ECDH-ES+A256KW</td>
+          <td>-1</td>
+          <td>COSE_Key</td>
+          <td>Ephemeral Public key for the sender</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="algorithms" id="algorithms"></a>COSE Algorithms Registry</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, G&#246;ran Selander, Derek Atkins, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="algorithms.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-algorithms-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">Integer values less than -65536</td>
+          <td>Reserved for Private Use</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values between -256 and 255 and strings of length 1</td>
+          <td>Standards Action With Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values from -65536 to 65535 and strings of length 2</td>
+          <td>Specification Required</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values of greater than 65535 and strings of length greater than 2</td>
+          <td>Expert Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-algorithms" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Recommended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ES512</td>
+          <td>-36</td>
+          <td>ECDSA w/ SHA-512</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ES384</td>
+          <td>-35</td>
+          <td>ECDSA w/ SHA-384</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ECDH-SS + A256KW</td>
+          <td>-34</td>
+          <td>ECDH SS w/ Concat KDF and AES Key wrap w/ 256 bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ECDH-SS + A192KW</td>
+          <td>-33</td>
+          <td>ECDH SS w/ Concat KDF and AES Key wrap w/ 192 bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ECDH-SS + A128KW</td>
+          <td>-32</td>
+          <td>ECDH SS w/ Concat KDF and AES Key wrap w/ 128 bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ECDH-ES + A256KW</td>
+          <td>-31</td>
+          <td>ECDH ES w/ Concat KDF and AES Key wrap w/ 256 bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ECDH-ES + A192KW</td>
+          <td>-30</td>
+          <td>ECDH ES w/ Concat KDF and AES Key wrap w/ 192 bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ECDH-ES + A128KW</td>
+          <td>-29</td>
+          <td>ECDH ES w/ Concat KDF and AES Key wrap w/ 128 bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ECDH-SS + HKDF-512</td>
+          <td>-28</td>
+          <td>ECDH SS w/ HKDF - generate key directly</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ECDH-SS + HKDF-256</td>
+          <td>-27</td>
+          <td>ECDH SS w/ HKDF - generate key directly</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ECDH-ES + HKDF-512</td>
+          <td>-26</td>
+          <td>ECDH ES w/ HKDF - generate key directly</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ECDH-ES + HKDF-256</td>
+          <td>-25</td>
+          <td>ECDH ES w/ HKDF - generate key directly</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>direct+HKDF-AES-256</td>
+          <td>-13</td>
+          <td>Shared secret w/ AES-MAC 256-bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>direct+HKDF-AES-128</td>
+          <td>-12</td>
+          <td>Shared secret w/ AES-MAC 128-bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>direct+HKDF-SHA-512</td>
+          <td>-11</td>
+          <td>Shared secret w/ HKDF and SHA-512</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>direct+HKDF-SHA-256</td>
+          <td>-10</td>
+          <td>Shared secret w/ HKDF and SHA-256</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>EdDSA</td>
+          <td>-8</td>
+          <td>EdDSA</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ES256</td>
+          <td>-7</td>
+          <td>ECDSA w/ SHA-256</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>direct</td>
+          <td>-6</td>
+          <td>Direct use of CEK</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>A256KW</td>
+          <td>-5</td>
+          <td>AES Key Wrap w/ 256-bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>A192KW</td>
+          <td>-4</td>
+          <td>AES Key Wrap w/ 192-bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>A128KW</td>
+          <td>-3</td>
+          <td>AES Key Wrap w/ 128-bit key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Reserved</td>
+          <td>0</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>A128GCM</td>
+          <td>1</td>
+          <td>AES-GCM mode w/ 128-bit key, 128-bit tag</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>A192GCM</td>
+          <td>2</td>
+          <td>AES-GCM mode w/ 192-bit key, 128-bit tag</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>A256GCM</td>
+          <td>3</td>
+          <td>AES-GCM mode w/ 256-bit key, 128-bit tag</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>HMAC 256/64</td>
+          <td>4</td>
+          <td>HMAC w/ SHA-256 truncated to 64 bits</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>HMAC 256/256</td>
+          <td>5</td>
+          <td>HMAC w/ SHA-256</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>HMAC 384/384</td>
+          <td>6</td>
+          <td>HMAC w/ SHA-384</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>HMAC 512/512</td>
+          <td>7</td>
+          <td>HMAC w/ SHA-512</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-CCM-16-64-128</td>
+          <td>10</td>
+          <td>AES-CCM mode 128-bit key, 64-bit tag, 13-byte nonce</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-CCM-16-64-256</td>
+          <td>11</td>
+          <td>AES-CCM mode 256-bit key, 64-bit tag, 13-byte nonce</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-CCM-64-64-128</td>
+          <td>12</td>
+          <td>AES-CCM mode 128-bit key, 64-bit tag, 7-byte nonce</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-CCM-64-64-256</td>
+          <td>13</td>
+          <td>AES-CCM mode 256-bit key, 64-bit tag, 7-byte nonce</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-MAC 128/64</td>
+          <td>14</td>
+          <td>AES-MAC 128 bit key, 64-bit tag</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-MAC 256/64</td>
+          <td>15</td>
+          <td>AES-MAC 256 bit key, 64-bit tag</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>ChaCha20/Poly1305</td>
+          <td>24</td>
+          <td>ChaCha20/Poly1305 w/ 256-bit key, 128-bit tag</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-MAC 128/128</td>
+          <td>25</td>
+          <td>AES-MAC 128 bit key, 128-bit tag</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-MAC 256/128</td>
+          <td>26</td>
+          <td>AES-MAC 256 bit key, 128-bit tag</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-CCM-16-128-128</td>
+          <td>30</td>
+          <td>AES-CCM mode 128-bit key, 128-bit tag, 13-byte nonce</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-CCM-16-128-256</td>
+          <td>31</td>
+          <td>AES-CCM mode 256-bit key, 128-bit tag, 13-byte nonce</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-CCM-64-128-128</td>
+          <td>32</td>
+          <td>AES-CCM mode 128-bit key, 128-bit tag, 7-byte nonce</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>AES-CCM-64-128-256</td>
+          <td>33</td>
+          <td>AES-CCM mode 256-bit key, 128-bit tag, 7-byte nonce</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="key-common-parameters" id="key-common-parameters"></a>COSE Key Common Parameters</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Francesca Palombini, Matt Miller, Justin Richer, Carsten Bormann</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="key-common-parameters.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-key-common-parameters-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">Integer values less than -65536</td>
+          <td>Reserved for Private Use</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values in the range -1 to -65536</td>
+          <td>used for key parameters specific to a single algorithm
+delegated to the "COSE Key Type Parameter Labels" registry</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values between 0 and 255 and strings of length 1</td>
+          <td>Standards Action With Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values from 256 to 65535 and strings of length 2</td>
+          <td>Specification Required</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values of greater than 65535 and strings of length greater than 2</td>
+          <td>Expert Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-key-common-parameters" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Label</th>
+          <th>CBOR Type</th>
+          <th>Registry</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reserved for Private Use</td>
+          <td>less than -65536</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td>-65535 to 0</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>kty</td>
+          <td>1</td>
+          <td>tstr / int</td>
+          <td>COSE Key Common Parameters</td>
+          <td>Identification of the key type</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>kid</td>
+          <td>2</td>
+          <td>bstr</td>
+          <td></td>
+          <td>Key identification value - match to kid in message</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>alg</td>
+          <td>3</td>
+          <td>tstr / int</td>
+          <td>COSE Algorithm Values</td>
+          <td>Key usage restriction to this algorithm</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>key_ops</td>
+          <td>4</td>
+          <td>[+ (tstr/int)]</td>
+          <td></td>
+          <td>Restrict set of permissible operations</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>Base IV</td>
+          <td>5</td>
+          <td>bstr</td>
+          <td></td>
+          <td>Base IV to be xor-ed with Partial IVs</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="key-type-parameters" id="key-type-parameters"></a>COSE Key Type Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, G&#246;ran Selander, Derek Atkins, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="key-type-parameters.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-key-type-parameters" class="sortable">
+      <thead>
+        <tr>
+          <th>Key Type</th>
+          <th>Name</th>
+          <th>Label</th>
+          <th>CBOR Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>d</td>
+          <td>-4</td>
+          <td>bstr</td>
+          <td>Private key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>x</td>
+          <td>-2</td>
+          <td>bstr</td>
+          <td>X Coordinate</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>crv</td>
+          <td>-1</td>
+          <td>int / tstr</td>
+          <td>EC Curve identifier - Taken from the COSE Key Common Parameters registry</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>d</td>
+          <td>-4</td>
+          <td>bstr</td>
+          <td>Private key</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>y</td>
+          <td>-3</td>
+          <td>bstr / bool</td>
+          <td>Y Coordinate</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>x</td>
+          <td>-2</td>
+          <td>bstr</td>
+          <td>X Coordinate</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>crv</td>
+          <td>-1</td>
+          <td>int / tstr</td>
+          <td>EC Curve identifier - Taken from the COSE Curves registry</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>k</td>
+          <td>-1</td>
+          <td>bstr</td>
+          <td>Key Value</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="key-type" id="key-type"></a>COSE Key Type Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, G&#246;ran Selander, Derek Atkins, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="key-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-key-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reserved</td>
+          <td>0</td>
+          <td>This value is reserved</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>OKP</td>
+          <td>1</td>
+          <td>Octet Key Pair</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>EC2</td>
+          <td>2</td>
+          <td>Elliptic Curve Keys w/ X,Y Coordinate pair</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td>3</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Symmetric</td>
+          <td>4</td>
+          <td>Symmetric Keys</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="elliptic-curve-parameters" id="elliptic-curve-parameters"></a>COSE Elliptic Curve Parameters</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Schaad, G&#246;ran Selander, Derek Atkins, Sean Turner</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="elliptic-curve-parameters.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-elliptic-curve-parameters-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">Integer values less than -65536</td>
+          <td>Reserved for Private Use</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values -65536 to -257</td>
+          <td>Specification Required</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values -256 to 255</td>
+          <td>Standards Action With Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values 256 to 65535</td>
+          <td>Specification Required</td>
+        </tr>
+        <tr>
+          <td align="center">Integer values over 65535</td>
+          <td>Expert Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-elliptic-curve-parameters" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Key Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Recommended</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reserved for Private Use</td>
+          <td>Integer values less than -65536</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td>-65536 to 0</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>P-256</td>
+          <td>1</td>
+          <td>EC2</td>
+          <td>NIST P-256 also known as secp256r1</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>P-384</td>
+          <td>2</td>
+          <td>EC2</td>
+          <td>NIST P-384 also known as secp384r1</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>P-521</td>
+          <td>3</td>
+          <td>EC2</td>
+          <td>NIST P-521 also known as secp521r1</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>X25519</td>
+          <td>4</td>
+          <td>OKP</td>
+          <td>X25519 for use w/ ECDH only</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>X448</td>
+          <td>5</td>
+          <td>OKP</td>
+          <td>X448 for use w/ ECDH only</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Ed25519</td>
+          <td>6</td>
+          <td>OKP</td>
+          <td>Ed25519 for use w/ EdDSA only</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <td>Ed448</td>
+          <td>7</td>
+          <td>OKP</td>
+          <td>Ed448 for use w/ EdDSA only</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

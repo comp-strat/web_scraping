@@ -1,0 +1,1574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Internet Control Message Protocol (ICMP) Parameters</title>
+  </head>
+  <body>
+    <h1>Internet Control Message Protocol (ICMP) Parameters</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2013-04-19</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="icmp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="icmp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#icmp-parameters-types">ICMP Type Numbers</a>
+      </li>
+      <li>
+        <a href="#icmp-parameters-codes">Code Fields</a>
+        <ul>
+          <li>
+            <a href="#icmp-parameters-codes-0">Type 0 &#8212; Echo Reply</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-1">Type 1 &#8212; Unassigned</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-2">Type 2 &#8212; Unassigned</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-3">Type 3 &#8212; Destination Unreachable</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-4">Type 4 &#8212; Source Quench (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-5">Type 5 &#8212; Redirect</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-6">Type 6 &#8212; Alternate Host Address (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-7">Type 7 &#8212; Unassigned</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-8">Type 8 &#8212; Echo</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-9">Type 9 &#8212; Router Advertisement</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-10">Type 10 &#8212; Router Selection</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-11">Type 11 &#8212; Time Exceeded</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-12">Type 12 &#8212; Parameter Problem</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-13">Type 13 &#8212; Timestamp</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-14">Type 14 &#8212; Timestamp Reply</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-15">Type 15 &#8212; Information Request (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-16">Type 16 &#8212; Information Reply (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-17">Type 17 &#8212; Address Mask Request (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-18">Type 18 &#8212; Address Mask Reply (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-19">Type 19 &#8212; Reserved (for Security)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-20-29">Types 20-29 &#8212; Reserved (for Robustness Experiment)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-30">Type 30 &#8212; Traceroute (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-31">Type 31 &#8212; Datagram Conversion Error (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-32">Type 32 &#8212; Mobile Host Redirect (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-33">Type 33 &#8212; IPv6 Where-Are-You (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-34">Type 34 &#8212; IPv6 I-Am-Here (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-35">Type 35 &#8212; Mobile Registration Request (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-36">Type 36 &#8212; Mobile Registration Reply (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-37">Types 37 &#8212; Domain Name Request (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-38">Types 38 &#8212; Domain Name Reply (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-39">Type 39 &#8212; SKIP (Deprecated)</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-40">Type 40 &#8212; Photuris</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-41">Type 41 &#8212; ICMP messages utilized by experimental mobility protocols such as Seamoby</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-42-252">Types 42-252 &#8212; Unassigned</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-253">Type 253 &#8212; RFC3692-style Experiment 1 </a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-codes-254">Type 254 &#8212; RFC3692-style Experiment 2 </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#icmp-parameters-ext-classes">ICMP Extension Object Classes and Class Sub-types</a>
+        <ul>
+          <li>
+            <a href="#icmp-parameters-ext-class-1">Sub-types &#8212; Class 1 &#8212; MPLS Label Stack Class</a>
+          </li>
+          <li>
+            <a href="#icmp-parameters-ext-class-2">Sub-types &#8212; Class 2 &#8212; Interface Information Object</a>
+            <ul>
+              <li>
+                <a href="#icmp-parameters-ext-class-2-if-roles">Sub-types &#8212; Class 2 &#8212; Interface Information Object &#8212; Interface Roles</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2><a name="icmp-parameters-types" id="icmp-parameters-types"></a>ICMP Type Numbers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IESG Approval or Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2780">RFC2780</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Internet Control Message Protocol (ICMP) has many messages that
+are identified by a "type" field.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmp-parameters-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icmp-parameters-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Echo Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Destination Unreachable</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Source Quench (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>][<a href="http://www.iana.org/go/rfc6633">RFC6633</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Redirect</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Alternate Host Address (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Echo</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Router Advertisement</td>
+          <td>[<a href="http://www.iana.org/go/rfc1256">RFC1256</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Router Solicitation</td>
+          <td>[<a href="http://www.iana.org/go/rfc1256">RFC1256</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Time Exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Parameter Problem</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Timestamp</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Timestamp Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Information Request (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Information Reply (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Address Mask Request (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc950">RFC950</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Address Mask Reply (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc950">RFC950</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Reserved (for Security)</td>
+          <td>[<a href="#Solo">Solo</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20-29</td>
+          <td>Reserved (for Robustness Experiment)</td>
+          <td>[<a href="#ZSu">ZSu</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>Traceroute (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1393">RFC1393</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>Datagram Conversion Error (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1475">RFC1475</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>Mobile Host Redirect (Deprecated)</td>
+          <td>[<a href="#David_Johnson">David_Johnson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>IPv6 Where-Are-You (Deprecated)</td>
+          <td>[<a href="#Simpson">Simpson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>IPv6 I-Am-Here (Deprecated)</td>
+          <td>[<a href="#Simpson">Simpson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>Mobile Registration Request (Deprecated)</td>
+          <td>[<a href="#Simpson">Simpson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36</td>
+          <td>Mobile Registration Reply (Deprecated)</td>
+          <td>[<a href="#Simpson">Simpson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">37</td>
+          <td>Domain Name Request (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1788">RFC1788</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">38</td>
+          <td>Domain Name Reply (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1788">RFC1788</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">39</td>
+          <td>SKIP (Deprecated)</td>
+          <td>[<a href="#Markson">Markson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">40</td>
+          <td>Photuris</td>
+          <td>[<a href="http://www.iana.org/go/rfc2521">RFC2521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>ICMP messages utilized by experimental
+        mobility protocols such as Seamoby</td>
+          <td>[<a href="http://www.iana.org/go/rfc4065">RFC4065</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">42-252</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">253</td>
+          <td>RFC3692-style Experiment 1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4727">RFC4727</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">254</td>
+          <td>RFC3692-style Experiment 2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4727">RFC4727</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="#JBP">JBP</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icmp-parameters-codes" id="icmp-parameters-codes"></a>Code Fields</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IESG Approval or Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2780">RFC2780</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Many of these ICMP types have a "code" field.  Here we list the types
+again with their assigned code fields.</pre>
+      </dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="icmp-parameters-codes-0" id="icmp-parameters-codes-0"></a>Type 0 &#8212; Echo Reply</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-0.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-0" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Code</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-1" id="icmp-parameters-codes-1"></a>Type 1 &#8212; Unassigned</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-2" id="icmp-parameters-codes-2"></a>Type 2 &#8212; Unassigned</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-3" id="icmp-parameters-codes-3"></a>Type 3 &#8212; Destination Unreachable</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-3" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Net Unreachable</td>
+            <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Host Unreachable</td>
+            <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>Protocol Unreachable</td>
+            <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Port Unreachable</td>
+            <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>Fragmentation Needed and Don't
+        Fragment was Set</td>
+            <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>Source Route Failed</td>
+            <td>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>Destination Network Unknown</td>
+            <td>[<a href="http://www.iana.org/go/rfc1122">RFC1122</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td>Destination Host Unknown</td>
+            <td>[<a href="http://www.iana.org/go/rfc1122">RFC1122</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">8</td>
+            <td>Source Host Isolated</td>
+            <td>[<a href="http://www.iana.org/go/rfc1122">RFC1122</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">9</td>
+            <td>Communication with Destination
+        Network is Administratively Prohibited</td>
+            <td>[<a href="http://www.iana.org/go/rfc1122">RFC1122</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">10</td>
+            <td>Communication with Destination Host is
+        Administratively Prohibited</td>
+            <td>[<a href="http://www.iana.org/go/rfc1122">RFC1122</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">11</td>
+            <td>Destination Network Unreachable for Type
+        of Service</td>
+            <td>[<a href="http://www.iana.org/go/rfc1122">RFC1122</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">12</td>
+            <td>Destination Host Unreachable for Type of
+        Service</td>
+            <td>[<a href="http://www.iana.org/go/rfc1122">RFC1122</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">13</td>
+            <td>Communication Administratively Prohibited</td>
+            <td>[<a href="http://www.iana.org/go/rfc1812">RFC1812</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">14</td>
+            <td>Host Precedence Violation</td>
+            <td>[<a href="http://www.iana.org/go/rfc1812">RFC1812</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">15</td>
+            <td>Precedence cutoff in effect</td>
+            <td>[<a href="http://www.iana.org/go/rfc1812">RFC1812</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-4" id="icmp-parameters-codes-4"></a>Type 4 &#8212; Source Quench (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>][<a href="http://www.iana.org/go/rfc6633">RFC6633</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-4" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Code</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-5" id="icmp-parameters-codes-5"></a>Type 5 &#8212; Redirect</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-5" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Redirect Datagram for the Network (or subnet)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Redirect Datagram for the Host</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>Redirect Datagram for the Type of Service and Network</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Redirect Datagram for the Type of Service and Host</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-6" id="icmp-parameters-codes-6"></a>Type 6 &#8212; Alternate Host Address (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="#JBP">JBP</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-6" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Alternate Address for Host</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-7" id="icmp-parameters-codes-7"></a>Type 7 &#8212; Unassigned</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-8" id="icmp-parameters-codes-8"></a>Type 8 &#8212; Echo</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-8" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Code</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-9" id="icmp-parameters-codes-9"></a>Type 9 &#8212; Router Advertisement</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc1256">RFC1256</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-9" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Normal router advertisement</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">16</td>
+            <td>Does not route common traffic</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-10" id="icmp-parameters-codes-10"></a>Type 10 &#8212; Router Selection</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc1256">RFC1256</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-10" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Code</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-11" id="icmp-parameters-codes-11"></a>Type 11 &#8212; Time Exceeded</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-11" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Time to Live exceeded in Transit</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Fragment Reassembly Time Exceeded</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-12" id="icmp-parameters-codes-12"></a>Type 12 &#8212; Parameter Problem</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-12" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Pointer indicates the error</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Missing a Required Option</td>
+            <td>[<a href="http://www.iana.org/go/rfc1108">RFC1108</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>Bad Length</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-13" id="icmp-parameters-codes-13"></a>Type 13 &#8212; Timestamp</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-13" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Code</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-14" id="icmp-parameters-codes-14"></a>Type 14 &#8212; Timestamp Reply</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-14" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Code</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-15" id="icmp-parameters-codes-15"></a>Type 15 &#8212; Information Request (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-15" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Code</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-16" id="icmp-parameters-codes-16"></a>Type 16 &#8212; Information Reply (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc792">RFC792</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-16.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-16" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Code</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-17" id="icmp-parameters-codes-17"></a>Type 17 &#8212; Address Mask Request (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc950">RFC950</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-17" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Code</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-18" id="icmp-parameters-codes-18"></a>Type 18 &#8212; Address Mask Reply (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc950">RFC950</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-18.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-18" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No Code</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-19" id="icmp-parameters-codes-19"></a>Type 19 &#8212; Reserved (for Security)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="#Solo">Solo</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-20-29" id="icmp-parameters-codes-20-29"></a>Types 20-29 &#8212; Reserved (for Robustness Experiment)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="#ZSu">ZSu</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-30" id="icmp-parameters-codes-30"></a>Type 30 &#8212; Traceroute (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc1393">RFC1393</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-31" id="icmp-parameters-codes-31"></a>Type 31 &#8212; Datagram Conversion Error (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc1475">RFC1475</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-32" id="icmp-parameters-codes-32"></a>Type 32 &#8212; Mobile Host Redirect (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="#David_Johnson">David_Johnson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-33" id="icmp-parameters-codes-33"></a>Type 33 &#8212; IPv6 Where-Are-You (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="#Simpson">Simpson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-34" id="icmp-parameters-codes-34"></a>Type 34 &#8212; IPv6 I-Am-Here (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="#Simpson">Simpson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-35" id="icmp-parameters-codes-35"></a>Type 35 &#8212; Mobile Registration Request (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="#Simpson">Simpson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-36" id="icmp-parameters-codes-36"></a>Type 36 &#8212; Mobile Registration Reply (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="#Simpson">Simpson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-37" id="icmp-parameters-codes-37"></a>Types 37 &#8212; Domain Name Request (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc1788">RFC1788</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-38" id="icmp-parameters-codes-38"></a>Types 38 &#8212; Domain Name Reply (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc1788">RFC1788</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-39" id="icmp-parameters-codes-39"></a>Type 39 &#8212; SKIP (Deprecated)</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="#Markson">Markson</a>][<a href="http://www.iana.org/go/rfc6918">RFC6918</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-40" id="icmp-parameters-codes-40"></a>Type 40 &#8212; Photuris</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2521">RFC2521</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-codes-40.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-codes-40" class="sortable">
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Bad SPI</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Authentication Failed</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>Decompression Failed</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Decryption Failed</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>Need Authentication</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>Need Authorization</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-41" id="icmp-parameters-codes-41"></a>Type 41 &#8212; ICMP messages utilized by experimental mobility protocols such as Seamoby</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4065">RFC4065</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-42-252" id="icmp-parameters-codes-42-252"></a>Types 42-252 &#8212; Unassigned</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-253" id="icmp-parameters-codes-253"></a>Type 253 &#8212; RFC3692-style Experiment 1 [<a href="#note1">1</a>]</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4727">RFC4727</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-codes-254" id="icmp-parameters-codes-254"></a>Type 254 &#8212; RFC3692-style Experiment 2 [<a href="#note1">1</a>]</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4727">RFC4727</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Codes</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="icmp-parameters-ext-classes" id="icmp-parameters-ext-classes"></a>ICMP Extension Object Classes and Class Sub-types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4884">RFC4884</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmp-parameters-ext-classes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-icmp-parameters-ext-classes-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-246</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">247-255</td>
+          <td>Private Use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-icmp-parameters-ext-classes" class="sortable">
+      <thead>
+        <tr>
+          <th>Class Value</th>
+          <th>Class Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>MPLS Label Stack Class</td>
+          <td>[<a href="http://www.iana.org/go/rfc4950">RFC4950</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Interface Information Object</td>
+          <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="icmp-parameters-ext-class-1" id="icmp-parameters-ext-class-1"></a>Sub-types &#8212; Class 1 &#8212; MPLS Label Stack Class</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>C-Type values for Class-num 1 are 
+assignable on a first-come-first-serve (FCFS) basis
+[<a href="http://www.iana.org/go/rfc2434">RFC2434</a>].</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4950">RFC4950</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-ext-class-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-ext-class-1" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type (Value)</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc4950">RFC4950</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Incoming MPLS Label Stack</td>
+            <td>[<a href="http://www.iana.org/go/rfc4950">RFC4950</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02-0xF6</td>
+            <td>Unassigned</td>
+            <td>[<a href="http://www.iana.org/go/rfc4950">RFC4950</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0xF7-0xFF</td>
+            <td>Reserved for private use</td>
+            <td>[<a href="http://www.iana.org/go/rfc4950">RFC4950</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmp-parameters-ext-class-2" id="icmp-parameters-ext-class-2"></a>Sub-types &#8212; Class 2 &#8212; Interface Information Object</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmp-parameters-ext-class-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmp-parameters-ext-class-2" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type (Value)</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0-1</td>
+            <td>Interface Role field</td>
+            <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>Unallocated - allocatable with Standards Action</td>
+            <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Unallocated - allocatable with Standards Action</td>
+            <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>ifIndex included</td>
+            <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>IP Address Sub-object included</td>
+            <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>Name Sub-object included</td>
+            <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td>MTU included</td>
+            <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="registry level3">
+        <h4><a name="icmp-parameters-ext-class-2-if-roles" id="icmp-parameters-ext-class-2-if-roles"></a>Sub-types &#8212; Class 2 &#8212; Interface Information Object &#8212; Interface Roles</h4>
+        <dl>
+          <dt>Available Formats</dt>
+          <dd>
+            <a class="altformat" href="icmp-parameters-ext-class-2-if-roles.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+          </dd>
+        </dl>
+        <table id="table-icmp-parameters-ext-class-2-if-roles" class="sortable">
+          <thead>
+            <tr>
+              <th>Value</th>
+              <th>Description</th>
+              <th>Reference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center">0</td>
+              <td>Incoming IP Interface</td>
+              <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td>Sub-IP Component of Incoming IP Interface</td>
+              <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">2</td>
+              <td>Outgoing IP Interface</td>
+              <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">3</td>
+              <td>IP Next-hop</td>
+              <td>[<a href="http://www.iana.org/go/rfc5837">RFC5837</a>]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="JBP" id="JBP">[JBP]</a>
+          </td>
+          <td>Jon Postel</td>
+          <td>
+            <a href="mailto:postel&amp;isi.edu">mailto:postel&amp;isi.edu</a>
+          </td>
+          <td>1995-09</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="David_Johnson" id="David_Johnson">[David_Johnson]</a>
+          </td>
+          <td>David Johnson</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Markson" id="Markson">[Markson]</a>
+          </td>
+          <td>Tom Markson</td>
+          <td>
+            <a href="mailto:markson&amp;osmosys.incog.com">mailto:markson&amp;osmosys.incog.com</a>
+          </td>
+          <td>1995-09</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Simpson" id="Simpson">[Simpson]</a>
+          </td>
+          <td>Bill Simpson</td>
+          <td>
+            <a href="mailto:Bill.Simpson&amp;um.cc.umich.edu">mailto:Bill.Simpson&amp;um.cc.umich.edu</a>
+          </td>
+          <td>1995-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Solo" id="Solo">[Solo]</a>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="ZSu" id="ZSu">[ZSu]</a>
+          </td>
+          <td>Zaw-Sing Su</td>
+          <td>
+            <a href="mailto:ZSu&amp;TSCA.ISTC.SRI.COM">mailto:ZSu&amp;TSCA.ISTC.SRI.COM</a>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Footnote</h1>
+    <table class="fn">
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note1" id="note1">[1]</a>
+        </td>
+        <td class="fn">
+          <pre>It is only appropriate to use these values in explicitly-
+configured experiments; they MUST NOT be shipped as defaults in
+implementations.  See RFC 3692 for details.</pre>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<!-- InstanceBeginEditable name="doctitle" -->
+
+<title>UN General Assembly - Observers</title>
+<meta name="dc.title" content="General Assembly of the United Nations" />
+<meta name="dc.subject" content="United Nations, main body, main organs, General Assembly" />
+<meta name="dc.description" content="The General Assembly is the main deliberative, policymaking and representative organ of the United Nations. " />
+<!-- InstanceEndEditable -->
+<meta name="dc.publisher" content="United Nations" />
+<meta name="dc.format" content="text/html" />
+<meta name="dc.language" content="EN" />
+<meta name="dc.rights" content="United Nations" />
+<link href="/css/global_en.css" rel="stylesheet" type="text/css" />
+<link href="/en/ga/css/styles.css" rel="stylesheet" type="text/css" />
+
+<!-- responsive styles -->
+<link rel="stylesheet" href="/en/events/global-assets/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/en/events/global-assets/bootstrap-3.3.5-dist/css/bootstrap-theme.min.css">
+<link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/en/events/global-assets/css/flying-focus.css">
+<link href="/en/events/global-assets/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/en/events/global-assets/css/animation.css">
+<link rel="stylesheet" href="/en/events/global-assets/css/footer.css">
+<link rel="stylesheet" href="/en/events/global-assets/css/search.css">
+<link rel="stylesheet" href="/en/events/global-assets/css/main.css">
+<link href="/en/ga/css/nav.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/en/ga/css/global-ga.css">
+<link rel="stylesheet" href="/en/ga/css/site-specific.css">
+<!-- InstanceBeginEditable name="head" -->
+<style type="text/css">
+
+#mainnav ul li#about a {color:#064963; border-bottom:#064963 solid 2px;}
+
+div#submenu ul li#ab_observers a { font-weight:bold; background-image: url(/en/ga/images/bullet7.gif);}
+
+
+
+</style>
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4803886-1']);
+  _gaq.push(['_setDomainName', 'un.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-LQCS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-LQCS');</script>
+<!-- End Google Tag Manager -->
+
+<div id="skiplink">
+  <ul>
+    <li><a href="#site-main-menu">Skip to main navigation</a></li>
+    <li><a href="#content">Skip to content</a></li>
+  </ul>
+</div>
+<header role="banner"> 
+  <!-- used div instead of nav to not interfere with jquery for site nav, temp solution -->
+<div class="un-brand-bar">
+  <div class="container">
+    <div class="row">
+    <div id="skiptocontent" tabindex="1"><a href="#un-main-content" class="">Skip to main content</a></div>
+      <div class="col-md-4 un-no-padding un-sm-padding"> <a class="navbar-brand un-brandbar-welcome-lr" href="http://www.un.org/en"><span class="un-offscreen">UN Homepage</span></a> </div>
+      <div class="col-md-8 language-switcher un-no-padding un-sm-padding">
+              
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#language-switcher"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar blue-icon-bar"></span> <span class="icon-bar blue-icon-bar"></span> <span class="icon-bar blue-icon-bar"></span> </button>
+<div class="language-title visible-xs-inline"><a href="javascript:void(0)" data-toggle="collapse" data-target="#language-switcher">Language:</a></div>
+
+        <div class="navbar-collapse collapse un-collapsed-language-bar un-no-padding un-sm-padding" id="language-switcher">
+          <div role="navigation">
+            <ul id="languages" class="language-switcher-locale-url nav navbar-nav navbar-right" role="menu">
+              <li class="ar first"><a href="../ar/index.html" class="un-language-link" lang="ar">العربية</a></li>
+              <li class="zh-hans"><a href="../zh/index.html" class="un-language-link" lang="zh-hans">中文</a></li>
+              <li class="en un-active"><a href="index.html" class="un-language-link active" lang="en">English</a></li>
+              <li class="fr"><a href="../fr/index.html" class="un-language-link" lang="fr">Français</a></li>
+              <li class="ru"><a href="../ru/index.html" class="un-language-link" lang="ru">Русский</a></li>
+              <li class="es last"><a href="../es/index.html" class="un-language-link" lang="es">Español</a></li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- the site-banner div is closed outside this include file --> 
+    <div id="site-banner" class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-12 un-no-padding un-sm-padding"><a href="index.shtml"><img class="img-responsive unga-banner-logo pull-right" src="/en/ga/images/ga-70-logo.jpg" alt="Logo of the United Nations General Assembly"/></a><a href="index.shtml"><img class="img-responsive un-banner-logo pull-left" src="/en/ga/images/un-logo-light-blue.jpg" alt="Logo of the United Nations"/></a>
+        <h1 class="site-header site-header-sm"> General Assembly
+	     of the United Nations 
+        </h1>
+      </div>
+      
+    </div>
+  </div> 
+</header>
+
+<div id="pattern" class="pattern container un-no-padding"> 
+  <!--Begin Pattern HTML-->
+  
+  <button type="button" class="menu-link"><span class="un-min-menu">Menu</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+  <nav class="navbar un-no-margin un-no-border" role="navigation">
+    <ul id="site-main-menu" class="nav-menu" role="menubar">
+      <li id="li-home" class="nav-item col-xs-12  col-sm-1 col-md-1" role="menuitem"> <a href="/en/ga/">Home <i class="fa fa-caret-down"></i></a></li>
+      <li id="li-president" class="nav-item  col-xs-12  col-sm-1 col-md-1" role="menuitem"> <a href="/pga/71/">President <i class="fa fa-caret-down"></i></a> </li>
+      <li id="li-about" class="nav-item  col-xs-12  col-sm-1 col-md-1" role="menuitem"> <a href="/en/ga/about/index.shtml">About <i class="fa fa-caret-down"></i></a>
+      	<div class="sub-nav">
+	        <ul role="menubar">
+                <li role="menuitem"  id="ab_background"><a href="/en/ga/about/background.shtml">Functions and powers of the General Assembly </a></li>
+                  <li role="menuitem"  id="ab_secretariat"><a href="/en/ga/about/secretariat.shtml">General Assembly Secretariat </a></li>
+                  <li role="menuitem"  id="ab_sub"><a href="/en/ga/about/subsidiary/index.shtml">Subsidiary organs  </a>
+                    
+                  </li>
+                  <li role="menuitem"  id="ab_rules"><a href="/en/ga/about/ropga/index.shtml">Rules of procedure </a> </li>
+                  <li  role="menuitem" id="ab_arrears"><a href="/en/ga/about/art19.shtml">Arrears in the payment of contributions (Article 19) </a></li>
+               <!--  <li role="menuitem"  id="ab_observers"><a href="/en/ga/about/observers.shtml">Observers </a></li> --> 
+            </ul>
+        </div>
+      </li>
+      <li id="li-meetings" class="nav-item  col-xs-12  col-sm-1 col-md-1" role="menuitem"> <a href="/en/ga/meetings/">Meetings <i class="fa fa-caret-down"></i></a>      
+        <div class="sub-nav">
+            <ul role="menubar">
+              <li class="nolink">Current session (71st  session)
+                <ul>
+                <!--  <li role="menuitem" id="schedule70"><a href="/en/ga/info/meetings/70schedule.shtml">Meetings schedule</a></li> -->
+                  <li role="menuitem" id="meetings70"><a href="/en/ga/71/meetings/index.shtml">High-level meetings</a></li>
+                  <li role="menuitem" id="elections70"><a href="/en/ga/71/meetings/elections/index.shtml">Elections</a></li>
+                  <li role="menuitem" id="meeting_summaries2"><a href="/press/en/content/general-assembly/meetings-coverage">Summaries</a></li>
+                  <li><a href="http://webtv.un.org/meetings-events/general-assembly/general-debate/71st-session/">Webcast</a>              </li>
+                  <li><a href="/en/sections/documents/journal-united-nations/">UN Journal</a></li>
+                  <li><a href="/accessibilitycentre/">Accessibility Centre</a></li>
+                </ul>
+              </li>
+          </ul>
+        </div>
+      </li>
+      
+      <li id="li-main-committees" class="nav-item  col-xs-12  col-sm-2 col-md-2" role="menuitem"> <a href="/en/ga/maincommittees/index.shtml">Main Committees <i class="fa fa-caret-down"></i></a>
+      <div class="sub-nav">
+        	<ul role="menubar">
+              <li role="menuitem"><a href="/en/ga/first/index.shtml">First  Committee (Disarmament &amp; International Security) </a></li>
+              <li role="menuitem"><a href="/en/ga/second/index.shtml">Second Committee (Economic &amp; Financial)</a></li>
+              <li role="menuitem"><a href="/en/ga/third/index.shtml">Third Committee (Social, Humanitarian &amp;  Cultural) </a></li>
+             <li role="menuitem"><a href="/en/ga/fourth/index.shtml">Fourth Committee (Special Political &amp; Decolonization)</a></li>
+             <li role="menuitem"><a href="/en/ga/fifth/index.shtml">Fifth Committee (Administrative &amp; Budgetary) </a></li>
+              <li id="menuitem"><a href="/en/ga/sixth/index.shtml">Sixth Committee (Legal)  </a> </li>
+            </ul>
+        </div></li>
+      
+      <li  id="li-news" class="nav-item  col-xs-12  col-sm-1 col-md-1" role="menuitem"> <a href="/en/ga/news/">News<i class="fa fa-caret-down"></i></a>
+      	<div class="sub-nav">
+        	<ul role="menubar">
+              <li role="menuitem" id="news_news"><a href="/en/ga/news/index.shtml">News stories </a></li>
+              <li role="menuitem"><a href="/press/en/content/general-assembly">Press releases</a></li>
+              <li role="menuitem" id="news_webcast"><a href="http://webtv.un.org/meetings-events/general-assembly/">Webcast</a></li>
+             <li role="menuitem"><a href="http://www.unmultimedia.org/radio/english/">Radio</a></li>
+             <li role="menuitem"><a href="http://www.unmultimedia.org/photo/gallery.jsp?mode=auto&amp;query=category%3A%22General%20Assembly%22">Photos</a></li>
+              <li id="news_rss"><a href="/en/ga/rss/index.shtml">RSS </a> </li>
+            </ul>
+
+        </div>
+      </li>
+      <li  id="li-documents" class="nav-item  col-xs-12  col-sm-2 col-md-2" role="menuitem"> <a href="/en/ga/documents/index.shtml">Documents<i class="fa fa-caret-down"></i></a>
+      <div class="sub-nav">
+      	<ul role="menubar">
+         <li class="nolink">Current session (71st session)
+           <ul>
+             <li><a href="/en/ga/71/agenda/">Agenda </a></li>
+             <li><a href="/en/ga/71/resolutions.shtml">Resolutions</a></li>
+             <li><a href="http://unbisnet.un.org:8080/ipac20/ipac.jsp?session=P34D08339303J.352758&amp;menu=search&amp;aspect=subtab124&amp;npp=50&amp;ipp=20&amp;spp=20&amp;profile=bib&amp;ri=&amp;index=.UD&amp;term=A%2F71%2F*&amp;matchopt=0|0&amp;oper=AND&amp;aspect=subtab124&amp;index=.TW&amp;term=&amp;matchopt=0|0&amp;oper=AND&amp;index=.TN&amp;term=&amp;matchopt=0|0&amp;oper=AND&amp;index=.AW&amp;term=&amp;matchopt=0|0&amp;ultype=&amp;uloper=%3D&amp;ullimit=&amp;ultype=&amp;uloper=%3D&amp;ullimit=&amp;sort=3100054&amp;x=15&amp;y=14#focus">All the documents (UNBisnet)</a></li>
+           </ul>
+         </li>
+         <li class="nolink">Search
+           <ul>
+             <li role="menuitem" id="doc_symbol"><a href="/en/ga/documents/symbol.shtml">Documents by Symbol </a></li>
+             <li role="menuitem" id="doc_meeting"><a href="/en/ga/documents/pvsr.asp">Meeting Records </a></li>
+             <li role="menuitem"><a href="/en/sections/documents/journal-united-nations/">UN Journal</a></li>
+           </ul>
+         </li>
+          <li class="nolink">Archives
+            <ul>
+              <li role="menuitem"><a href="/en/sections/documents/general-assembly-resolutions/index.html">Resolutions </a></li>
+              <li role="menuitem"><a href="/documents/instruments/docs_en.asp">Conventions, Declarations and other instruments </a></li>
+            </ul>
+          </li>
+        
+        </ul>
+      </div>
+      </li>
+      <li  id="li-past-sessions" class="nav-item  col-xs-12  col-sm-2 col-md-2" role="menuitem"> <a href="/en/ga/sessions/">Past Sessions <i class="fa fa-caret-down"></i></a>
+      <ul>
+     <li role="menuitem"><a href="/en/ga/sessions/">Regular sessions </a></li>
+     <li role="menuitem"><a href="/en/ga/sessions/special.shtml">Special sessions </a></li>
+     <li role="menuitem"><a href="/en/ga/sessions/emergency.shtml">Emergency special sessions </a></li>     
+  </ul>
+  </li>
+      
+      <li id="li-search" class="nav-item col-xs-12  col-sm-1 col-md-1" role="menuitem">
+      	<button class="input-group-addon search-btn search-btn-in-nav" value="Search"><span class="un-offscreen">Search</span></button>
+      
+    	<div class="sub-nav search-lg input-group">
+        <ul><li>
+        <section class="region region-search">
+<h2 class="un-offscreen"><a href="javascript:void(0);">Search</a></h2>
+<form id="searchfrm" name="gs" method="get" action="//search.un.org/results.php">
+<input type="hidden" name="ie" value="utf8">
+<input type="hidden" name="site" value="un_org">
+<input type="hidden" name="output" value="xml_no_dtd">
+<input type="hidden" name="client" value="UN_Website_en">
+<input type="hidden" name="num" value="10">
+<input name="lr" type="hidden" value="lang_en">
+<input type="hidden" name="proxystylesheet" id="proxystylesheet" value="UN_Website_en">
+<input type="hidden" name="oe" value="utf8">
+<div class="search-lg input-group">
+    <input class="search-control form-control" title="Search the UN" type="text" name="q" id="search-lg" value="Search">
+    <span class="input-group-btn input-group-btn-in-nav">
+    	<button class="input-group-addon search-btn" type="submit" name="Submit" value="Search"><span class="un-offscreen">Search</span></button>
+    </span>
+</div>
+
+<div class="search-sm">
+    <input class="search-control form-control" type="text" name="q" id="search-sm" onfocus="this.value='';" value="Search">
+</div>
+
+</form> </section>
+
+    <!--<input class="search-control form-control" title="Search the UN" type="text" name="q" id="search-lg" value="Search">
+    <span class="input-group-btn  input-group-btn-in-nav">
+    	<button class="input-group-addon search-btn" type="submit" name="Submit" value="Search"><span class="un-offscreen">Search</span></button>
+    </span></li>-->
+    </ul>
+</div>
+      </li>
+      
+        </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="container search-container un-no-padding">
+  <div class="search-form col-xs-4 col-md-3 pull-right un-no-padding un-sm-padding"> 
+    <section class="region region-search">
+<h2 class="un-offscreen"><a href="javascript:void(0);">Search</a></h2>
+<form id="searchfrm" name="gs" method="get" action="//search.un.org/results.php">
+<input type="hidden" name="ie" value="utf8">
+<input type="hidden" name="site" value="un_org">
+<input type="hidden" name="output" value="xml_no_dtd">
+<input type="hidden" name="client" value="UN_Website_en">
+<input type="hidden" name="num" value="10">
+<input name="lr" type="hidden" value="lang_en">
+<input type="hidden" name="proxystylesheet" id="proxystylesheet" value="UN_Website_en">
+<input type="hidden" name="oe" value="utf8">
+<div class="search-lg input-group">
+    <input class="search-control form-control" title="Search the UN" type="text" name="q" id="search-lg" value="Search">
+    <span class="input-group-btn">
+    	<button class="input-group-addon search-btn" type="submit" name="Submit" value="Search"><span class="un-offscreen">Search</span></button>
+    </span>
+</div>
+
+<div class="search-sm">
+    <input class="search-control form-control" type="text" name="q" id="search-sm" onfocus="this.value='';" value="Search">
+</div>
+
+</form> </section>
+ 
+  </div>
+</div> 
+<div id="main-responsive" class="container  un-no-padding">
+
+ <div id="content" class="col-xs-12 col-md-9">
+  <!-- InstanceBeginEditable name="content" --> 
+
+  <h2>Observers</h2>
+  <p>Non-Member States, entities and organizations  having received a standing invitation to participate as observers in the  sessions and the work of the General Assembly:</p>
+<ul>
+        <li type="disc"><a href="/ga/search/view_doc.asp?symbol=A/INF/71/5">Note by the Secretariat (A/INF/71/5)</a> <span class="date">(12  January  2017)</span> </li>
+       <!-- <li><a href="/en/members/nonmembers.shtml">Non-member States and Entities</a></li>
+        <li><a href="/en/members/intergovorg.shtml">International Organizations</a></li> -->
+  </ul>
+  <p>&nbsp;</p> 
+<!-- InstanceEndEditable --> 
+</div>
+<div id="submenu" class="col-xs-12 col-md-3" >
+<!-- InstanceBeginEditable name="submenu" -->
+<h3>About the GA</h3>
+<ul>
+<li id="ab_background"><a href="/en/ga/about/background.shtml">Functions and powers of the General Assembly </a></li>
+  <li id="ab_secretariat"><a href="/en/ga/about/secretariat.shtml">General Assembly Secretariat </a></li>
+  <li id="ab_sub"><a href="/en/ga/about/subsidiary/index.shtml">Subsidiary organs  </a>
+    <ul id="ab_subs">
+      <li id="ab_boards"><a href="/en/ga/about/subsidiary/boards.shtml">Boards </a></li>
+      <li id="ab_commissions"><a href="/en/ga/about/subsidiary/commissions.shtml">Commissions </a></li>
+      <li id="ab_committees"><a href="/en/ga/about/subsidiary/committees.shtml">Committees </a></li>
+      <li id="ab_councils"><a href="/en/ga/about/subsidiary/councils.shtml">Assemblies and councils </a></li>
+      <li id="ab_other"><a href="/en/ga/about/subsidiary/other.shtml">Working groups, etc. </a></li>
+    </ul>
+  </li>
+  <li id="ab_rules"><a href="/en/ga/about/ropga/index.shtml">Rules of procedure </a> </li>
+  <li id="ab_arrears"><a href="/en/ga/about/art19.shtml">Arrears in the payment of contributions (Article 19) </a></li>
+ <li id="ab_observers"><a href="/en/ga/about/observers.shtml">Observers </a></li> 
+</ul>
+
+
+
+<!-- InstanceEndEditable -->
+</div>
+</div>
+<div id="bottomnav-responsive" class="container"> <!-- InstanceBeginEditable name="bottomnav" -->
+<!-- Bottom Navigation for the General Assembly -->
+
+	 <div id="basicfacts">
+        <h3>Quick Links</h3>
+       <ul>
+            <li><a href="/en/sections/documents/journal-united-nations/index.html">UN Journal</a></li>
+            <li><a href="/en/ga/news/">News</a></li>           
+            <li><a href="/en/ga/sitemap.shtml">Site Map</a><a href="/en/sections/documents/journal-united-nations/index.html"></a></li>
+                     </ul>
+      </div>   
+      
+      <div id="keydocs">
+        <h3>Key Documents</h3>
+        <ul>
+          <li><a href="/en/documents/charter/">Charter of the United Nations</a></li>
+      		<li><a href="/en/ga/about/ropga/">Rules of Procedure</a></li>
+      		<li><a href="/en/ga/70/resolutions.shtml">Resolutions</a></li>
+        </ul>
+      </div> 
+      
+      <div id="relatedlinks">
+        <h3>Related Sites </h3>
+        <ul> <li><a href="/pga/71/">General Assembly President</a></li>
+           <li><a href="/Depts/DGACM/">General Assembly  Affairs</a></li>
+            <li><a href="https://protocol.un.org/dgacm/pls/site.nsf/home.xsp">Protocol</a></li>
+        </ul>
+</div>  
+      
+      <div id="resources"> 
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="/en/ga/documents/symbol.shtml">Documents Search</a></li>
+         <li><a href="/en/ga/71/PDF/Delegates_Handbook_71st_session_EN.pdf">Interactive Delegates Handbook</a> <img src="/common/images/icons/ico_pdf.gif" alt="PDF" /></li>
+            <li><a href="/en/ga/71/presskit/index.shtml">Press Kit - 71st session</a></li>
+        </ul>
+	  </div>     
+<!-- InstanceEndEditable --> </div>
+<div class="un-social-media container">
+<ul>
+  <li class="facebook"><a href="//www.facebook.com/unitednations">Facebook</a></li>
+  <li class="twitter"><a href="//twitter.com/un">Twitter</a></li>
+  <li class="youtube"><a href="//www.youtube.com/unitednations">YouTube</a></li>
+  <li class="pinterest"><a href="//pinterest.com/unitednations">Pinterest</a></li>
+  <li class="google"><a href="//gplus.to/unitednations">Google+</a></li>
+  <li class="flickr"><a href="//www.flickr.com/photos/un_photo/">Flickr</a></li>
+  <li class="tumblr"><a href="//united-nations.tumblr.com/">Tumblr</a></li>
+  <li class="instagram"><a href="//instagram.com/unitednations">Instagram</a></li>
+  <li class="more"><a href="sections/about-website/un-social-media/index.html">UN Social Media</a></li>
+</ul>
+</div> 
+ <footer class="footer container">
+      <div class="row list-inline">
+        <div class="col-md-12">
+          <div class="pull-left flip footer-brand">
+            <a href="http://www.un.org/en/" title="Home"><span class="site-name">United Nations</span></a>
+          </div>
+            <div class="pull-right flip"> 
+              <section class="region region-footer-5">
+               <div id="block-menu-menu-footer-links" class="block block-menu">
+                  <ul class="menu nav">
+                    <li class="first leaf"><a href="http://www.un.org/en/contact-us/index.html">Contact</a></li>
+                    <li class="leaf"><a href="http://www.un.org/en/aboutun/copyright/index.html">Copyright</a></li>
+                    <li class="leaf"><a href="http://www.un.org/en/sections/aboutun/fraud-alert/index.html">Fraud Alert</a></li>
+                    <li class="leaf"><a href="http://www.un.org/en/sections/about-website/privacy-notice/index.html">Privacy Notice</a></li>
+                    <li class="leaf"><a href="http://www.un.org/en/sections/about-website/site-index/index.html">Site Index</a></li>
+                    <li class="last leaf"><a href="http://www.un.org/en/sections/about-website/terms-use/index.html">Terms of Use</a></li>
+                  </ul> 
+                </div> 
+              </section>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</div>
+<!-- InstanceBeginEditable name="wsscredit" -->
+ <div id="wsscredit"></div>
+<!-- InstanceEndEditable --> 
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<!-- Latest compiled and minified JavaScript --> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+<script src="//use.edgefonts.net/source-sans-pro.js"></script> 
+
+<!-- include jquery --> 
+<script src="//code.jquery.com/jquery-1.10.1.min.js"></script> 
+<!-- include the jquery-accessibleMegaMenu plugin script --> 
+<script src="/en/events/global-assets/Accessible-Mega-Menu-master/js/jquery-accessibleMegaMenu.js"></script> 
+<!-- initialize a selector as an accessibleMegaMenu --> 
+<script src="/en/events/global-assets/js/site.js"></script> 
+<script src="/en/events/global-assets/js/en/search.js"></script> 
+<script src="/en/ga/js/ga-nav.js"></script>
+ 
+
+</body>
+<!-- InstanceEnd --></html>

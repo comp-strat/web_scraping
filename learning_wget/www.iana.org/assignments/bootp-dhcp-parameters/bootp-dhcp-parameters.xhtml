@@ -1,0 +1,2458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Dynamic Host Configuration Protocol (DHCP) and Bootstrap Protocol (BOOTP) Parameters</title>
+  </head>
+  <body>
+    <h1>Dynamic Host Configuration Protocol (DHCP) and Bootstrap Protocol (BOOTP) Parameters</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2016-11-17</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>For the Civic Address Types Registry [<a href="http://www.iana.org/go/rfc4776">RFC4776</a>], please see:
+http://www.iana.org/assignments/civic-address-types-registry</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="bootp-dhcp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="bootp-dhcp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="bootp-dhcp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#options">BOOTP Vendor Extensions and DHCP Options</a>
+      </li>
+      <li>
+        <a href="#message-type-53">DHCP Message Type 53 Values</a>
+      </li>
+      <li>
+        <a href="#type-63-sub-options">NetWare/IP Option Type 63 Sub-Option Codes</a>
+      </li>
+      <li>
+        <a href="#type-122-sub-options">DHCP Cablelabs Client Configuration Option Type 122 Sub-Option Codes</a>
+      </li>
+      <li>
+        <a href="#type-151">DHCP Status Code Type 151 Values</a>
+      </li>
+      <li>
+        <a href="#type-156">DHCP State Type 156 Values</a>
+      </li>
+      <li>
+        <a href="#altitude">Altitude Type Registry</a>
+      </li>
+      <li>
+        <a href="#datum">Datum Registry</a>
+      </li>
+      <li>
+        <a href="#geoloc-option-version">GeoLoc Option Version Registry</a>
+      </li>
+      <li>
+        <a href="#control-mask-bit">CableLabs Client Configuration Option Ticket Control Mask Bit Definitions</a>
+      </li>
+      <li>
+        <a href="#relay-agent-sub-options">DHCP Relay Agent Sub-Option Codes</a>
+      </li>
+      <li>
+        <a href="#authentication-protocol-id">Authentication Suboption (value 8) - Protocol identifier values</a>
+      </li>
+      <li>
+        <a href="#authentication-algorithm-id">Authentication Suboption (value 8) - Algorithm identifier values</a>
+      </li>
+      <li>
+        <a href="#authentication-rdm-id">Authentication Suboption (value 8) - Replay Detection Method (RDM) identifier values</a>
+      </li>
+      <li>
+        <a href="#ieee-80221-service-type">IEEE 802.21 Service Type (MoS DHCPv4 Address and FQDN Sub-Options)</a>
+      </li>
+      <li>
+        <a href="#ntp-time-source">NTP Time Source Suboptions</a>
+      </li>
+      <li>
+        <a href="#vss-type">VSS Type Options</a>
+      </li>
+    </ul>
+    <h2><a name="options" id="options"></a>BOOTP Vendor Extensions and DHCP Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2939">RFC2939</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Bootstrap Protocol (BOOTP) [<a href="http://www.iana.org/go/rfc951">RFC951</a>] describes an IP/UDP bootstrap
+protocol (BOOTP) which allows a diskless client machine to discover
+its own IP address, the address of a server host, and the name of a
+file to be loaded into memory and executed.  The Dynamic Host
+Configuration Protocol (DHCP) [<a href="http://www.iana.org/go/rfc2131">RFC2131</a>] provides a framework for
+automatic configuration of IP hosts.  The document "DHCP Options and
+BOOTP Vendor Information Extensions" [<a href="http://www.iana.org/go/rfc2132">RFC2132</a>] describes options for
+DHCP, some of which can also be used with BOOTP. Additional DHCP
+options are described in other RFCs, as documented in this registry.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="options.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-options" class="sortable">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Name</th>
+          <th>Data
+            Length</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Pad</td>
+          <td align="center">0</td>
+          <td>None</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Subnet Mask</td>
+          <td align="center">4</td>
+          <td>Subnet Mask Value</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Time Offset</td>
+          <td align="center">4</td>
+          <td>Time Offset in Seconds from UTC                   
+(note: deprecated by 100 and 101)</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Router</td>
+          <td align="center">N</td>
+          <td>N/4 Router addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Time Server</td>
+          <td align="center">N</td>
+          <td>N/4 Timeserver addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Name Server</td>
+          <td align="center">N</td>
+          <td>N/4 IEN-116 Server addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Domain Server</td>
+          <td align="center">N</td>
+          <td>N/4 DNS Server addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Log Server</td>
+          <td align="center">N</td>
+          <td>N/4 Logging Server addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Quotes Server</td>
+          <td align="center">N</td>
+          <td>N/4 Quotes Server addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>LPR Server</td>
+          <td align="center">N</td>
+          <td>N/4 Printer Server addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Impress Server</td>
+          <td align="center">N</td>
+          <td>N/4 Impress Server addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>RLP Server</td>
+          <td align="center">N</td>
+          <td>N/4 RLP Server addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Hostname</td>
+          <td align="center">N</td>
+          <td>Hostname string</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Boot File Size</td>
+          <td align="center">2</td>
+          <td>Size of boot file in 512 byte chunks</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Merit Dump File</td>
+          <td align="center">N</td>
+          <td>Client to dump and name the file to dump it to</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Domain Name</td>
+          <td align="center">N</td>
+          <td>The DNS domain name of the client</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Swap Server</td>
+          <td align="center">N</td>
+          <td>Swap Server address</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Root Path</td>
+          <td align="center">N</td>
+          <td>Path name for root disk</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Extension File</td>
+          <td align="center">N</td>
+          <td>Path name for more BOOTP info</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Forward On/Off</td>
+          <td align="center">1</td>
+          <td>Enable/Disable IP Forwarding</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>SrcRte On/Off</td>
+          <td align="center">1</td>
+          <td>Enable/Disable Source Routing</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>Policy Filter</td>
+          <td align="center">N</td>
+          <td>Routing Policy Filters</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>Max DG Assembly</td>
+          <td align="center">2</td>
+          <td>Max Datagram Reassembly Size</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Default IP TTL</td>
+          <td align="center">1</td>
+          <td>Default IP Time to Live</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>MTU Timeout</td>
+          <td align="center">4</td>
+          <td>Path MTU Aging Timeout</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>MTU Plateau</td>
+          <td align="center">N</td>
+          <td>Path MTU  Plateau Table</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>MTU Interface</td>
+          <td align="center">2</td>
+          <td>Interface MTU Size</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>MTU Subnet</td>
+          <td align="center">1</td>
+          <td>All Subnets are Local</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>Broadcast Address</td>
+          <td align="center">4</td>
+          <td>Broadcast Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>Mask Discovery</td>
+          <td align="center">1</td>
+          <td>Perform Mask Discovery</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>Mask Supplier</td>
+          <td align="center">1</td>
+          <td>Provide Mask to Others</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>Router Discovery</td>
+          <td align="center">1</td>
+          <td>Perform Router Discovery</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>Router Request</td>
+          <td align="center">4</td>
+          <td>Router Solicitation Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>Static Route</td>
+          <td align="center">N</td>
+          <td>Static Routing Table</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>Trailers</td>
+          <td align="center">1</td>
+          <td>Trailer Encapsulation</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>ARP Timeout</td>
+          <td align="center">4</td>
+          <td>ARP Cache Timeout</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36</td>
+          <td>Ethernet</td>
+          <td align="center">1</td>
+          <td>Ethernet Encapsulation</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">37</td>
+          <td>Default TCP TTL</td>
+          <td align="center">1</td>
+          <td>Default TCP Time to Live</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">38</td>
+          <td>Keepalive Time</td>
+          <td align="center">4</td>
+          <td>TCP Keepalive Interval</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">39</td>
+          <td>Keepalive Data</td>
+          <td align="center">1</td>
+          <td>TCP Keepalive Garbage</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">40</td>
+          <td>NIS Domain</td>
+          <td align="center">N</td>
+          <td>NIS Domain Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>NIS Servers</td>
+          <td align="center">N</td>
+          <td>NIS Server Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">42</td>
+          <td>NTP Servers</td>
+          <td align="center">N</td>
+          <td>NTP Server Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">43</td>
+          <td>Vendor Specific</td>
+          <td align="center">N</td>
+          <td>Vendor Specific Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">44</td>
+          <td>NETBIOS Name Srv</td>
+          <td align="center">N</td>
+          <td>NETBIOS Name Servers</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">45</td>
+          <td>NETBIOS Dist Srv</td>
+          <td align="center">N</td>
+          <td>NETBIOS Datagram Distribution</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">46</td>
+          <td>NETBIOS Node Type</td>
+          <td align="center">1</td>
+          <td>NETBIOS Node Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">47</td>
+          <td>NETBIOS Scope</td>
+          <td align="center">N</td>
+          <td>NETBIOS Scope</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">48</td>
+          <td>X Window Font</td>
+          <td align="center">N</td>
+          <td>X Window Font Server</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">49</td>
+          <td>X Window Manager</td>
+          <td align="center">N</td>
+          <td>X Window Display Manager</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">50</td>
+          <td>Address Request</td>
+          <td align="center">4</td>
+          <td>Requested IP Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">51</td>
+          <td>Address Time</td>
+          <td align="center">4</td>
+          <td>IP Address Lease Time</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">52</td>
+          <td>Overload</td>
+          <td align="center">1</td>
+          <td>Overload "sname" or "file"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">53</td>
+          <td>DHCP Msg Type</td>
+          <td align="center">1</td>
+          <td>DHCP Message Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">54</td>
+          <td>DHCP Server Id</td>
+          <td align="center">4</td>
+          <td>DHCP Server Identification</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">55</td>
+          <td>Parameter List</td>
+          <td align="center">N</td>
+          <td>Parameter Request List</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">56</td>
+          <td>DHCP Message</td>
+          <td align="center">N</td>
+          <td>DHCP Error Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">57</td>
+          <td>DHCP Max Msg Size</td>
+          <td align="center">2</td>
+          <td>DHCP Maximum Message Size</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">58</td>
+          <td>Renewal Time</td>
+          <td align="center">4</td>
+          <td>DHCP Renewal (T1) Time</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">59</td>
+          <td>Rebinding Time</td>
+          <td align="center">4</td>
+          <td>DHCP Rebinding (T2) Time</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">60</td>
+          <td>Class Id</td>
+          <td align="center">N</td>
+          <td>Class Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">61</td>
+          <td>Client Id</td>
+          <td align="center">N</td>
+          <td>Client Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">62</td>
+          <td>NetWare/IP Domain</td>
+          <td align="center">N</td>
+          <td>NetWare/IP Domain Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">63</td>
+          <td>NetWare/IP Option</td>
+          <td align="center">N</td>
+          <td>NetWare/IP sub Options</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">64</td>
+          <td>NIS-Domain-Name</td>
+          <td align="center">N</td>
+          <td>NIS+ v3 Client Domain Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65</td>
+          <td>NIS-Server-Addr</td>
+          <td align="center">N</td>
+          <td>NIS+ v3 Server Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">66</td>
+          <td>Server-Name</td>
+          <td align="center">N</td>
+          <td>TFTP Server Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">67</td>
+          <td>Bootfile-Name</td>
+          <td align="center">N</td>
+          <td>Boot File Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">68</td>
+          <td>Home-Agent-Addrs</td>
+          <td align="center">N</td>
+          <td>Home Agent Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">69</td>
+          <td>SMTP-Server</td>
+          <td align="center">N</td>
+          <td>Simple Mail Server Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">70</td>
+          <td>POP3-Server</td>
+          <td align="center">N</td>
+          <td>Post Office Server Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">71</td>
+          <td>NNTP-Server</td>
+          <td align="center">N</td>
+          <td>Network News Server Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">72</td>
+          <td>WWW-Server</td>
+          <td align="center">N</td>
+          <td>WWW Server Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">73</td>
+          <td>Finger-Server</td>
+          <td align="center">N</td>
+          <td>Finger Server Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">74</td>
+          <td>IRC-Server</td>
+          <td align="center">N</td>
+          <td>Chat Server Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">75</td>
+          <td>StreetTalk-Server</td>
+          <td align="center">N</td>
+          <td>StreetTalk Server Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">76</td>
+          <td>STDA-Server</td>
+          <td align="center">N</td>
+          <td>ST Directory Assist. Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">77</td>
+          <td>User-Class</td>
+          <td align="center">N</td>
+          <td>User Class Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc3004">RFC3004</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">78</td>
+          <td>Directory Agent</td>
+          <td align="center">N</td>
+          <td>directory agent information</td>
+          <td>[<a href="http://www.iana.org/go/rfc2610">RFC2610</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">79</td>
+          <td>Service Scope</td>
+          <td align="center">N</td>
+          <td>service location agent scope</td>
+          <td>[<a href="http://www.iana.org/go/rfc2610">RFC2610</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">80</td>
+          <td>Rapid Commit</td>
+          <td align="center">0</td>
+          <td>Rapid Commit</td>
+          <td>[<a href="http://www.iana.org/go/rfc4039">RFC4039</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">81</td>
+          <td>Client FQDN</td>
+          <td align="center">N</td>
+          <td>Fully Qualified Domain Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc4702">RFC4702</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">82</td>
+          <td>Relay Agent Information</td>
+          <td align="center">N</td>
+          <td>Relay Agent Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc3046">RFC3046</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">83</td>
+          <td>iSNS</td>
+          <td align="center">N</td>
+          <td>Internet Storage Name Service</td>
+          <td>[<a href="http://www.iana.org/go/rfc4174">RFC4174</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">84</td>
+          <td>REMOVED/Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">85</td>
+          <td>NDS Servers</td>
+          <td align="center">N</td>
+          <td>Novell Directory Services</td>
+          <td>[<a href="http://www.iana.org/go/rfc2241">RFC2241</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">86</td>
+          <td>NDS Tree Name</td>
+          <td align="center">N</td>
+          <td>Novell Directory Services</td>
+          <td>[<a href="http://www.iana.org/go/rfc2241">RFC2241</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">87</td>
+          <td>NDS Context</td>
+          <td align="center">N</td>
+          <td>Novell Directory Services</td>
+          <td>[<a href="http://www.iana.org/go/rfc2241">RFC2241</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">88</td>
+          <td>BCMCS Controller Domain Name list</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4280">RFC4280</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">89</td>
+          <td>BCMCS Controller IPv4 address option</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4280">RFC4280</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">90</td>
+          <td>Authentication</td>
+          <td align="center">N</td>
+          <td>Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3118">RFC3118</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">91</td>
+          <td>client-last-transaction-time option</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4388">RFC4388</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">92</td>
+          <td>associated-ip option</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4388">RFC4388</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">93</td>
+          <td>Client System</td>
+          <td align="center">N</td>
+          <td>Client System Architecture</td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">94</td>
+          <td>Client NDI</td>
+          <td align="center">N</td>
+          <td>Client Network Device Interface</td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">95</td>
+          <td>LDAP</td>
+          <td align="center">N</td>
+          <td>Lightweight Directory Access Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">96</td>
+          <td>REMOVED/Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">97</td>
+          <td>UUID/GUID</td>
+          <td align="center">N</td>
+          <td>UUID/GUID-based Client Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">98</td>
+          <td>User-Auth</td>
+          <td align="center">N</td>
+          <td>Open Group's User Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc2485">RFC2485</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">99</td>
+          <td>GEOCONF_CIVIC</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4776">RFC4776</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">100</td>
+          <td>PCode</td>
+          <td align="center">N</td>
+          <td>IEEE 1003.1 TZ String</td>
+          <td>[<a href="http://www.iana.org/go/rfc4833">RFC4833</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">101</td>
+          <td>TCode</td>
+          <td align="center">N</td>
+          <td>Reference to the TZ Database</td>
+          <td>[<a href="http://www.iana.org/go/rfc4833">RFC4833</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">102-107</td>
+          <td>REMOVED/Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">108</td>
+          <td>REMOVED/Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">109</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">110</td>
+          <td>REMOVED/Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">111</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">112</td>
+          <td>Netinfo Address</td>
+          <td align="center">N</td>
+          <td>NetInfo Parent Server Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">113</td>
+          <td>Netinfo Tag</td>
+          <td align="center">N</td>
+          <td>NetInfo Parent Server Tag</td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">114</td>
+          <td>URL</td>
+          <td align="center">N</td>
+          <td>URL</td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">115</td>
+          <td>REMOVED/Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">116</td>
+          <td>Auto-Config</td>
+          <td align="center">N</td>
+          <td>DHCP Auto-Configuration</td>
+          <td>[<a href="http://www.iana.org/go/rfc2563">RFC2563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">117</td>
+          <td>Name Service Search</td>
+          <td align="center">N</td>
+          <td>Name Service Search</td>
+          <td>[<a href="http://www.iana.org/go/rfc2937">RFC2937</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">118</td>
+          <td>Subnet Selection Option</td>
+          <td align="center">4</td>
+          <td>Subnet Selection Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3011">RFC3011</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">119</td>
+          <td>Domain Search</td>
+          <td align="center">N</td>
+          <td>DNS domain search list</td>
+          <td>[<a href="http://www.iana.org/go/rfc3397">RFC3397</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">120</td>
+          <td>SIP Servers DHCP Option</td>
+          <td align="center">N</td>
+          <td>SIP Servers DHCP Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3361">RFC3361</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">121</td>
+          <td>Classless Static Route Option</td>
+          <td align="center">N</td>
+          <td>Classless Static Route Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3442">RFC3442</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">122</td>
+          <td>CCC</td>
+          <td align="center">N</td>
+          <td>CableLabs Client Configuration</td>
+          <td>[<a href="http://www.iana.org/go/rfc3495">RFC3495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">123</td>
+          <td>GeoConf Option</td>
+          <td align="center">16</td>
+          <td>GeoConf Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">124</td>
+          <td>V-I Vendor Class</td>
+          <td align="center"></td>
+          <td>Vendor-Identifying Vendor Class</td>
+          <td>[<a href="http://www.iana.org/go/rfc3925">RFC3925</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">125</td>
+          <td>V-I Vendor-Specific Information</td>
+          <td align="center"></td>
+          <td>Vendor-Identifying Vendor-Specific Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc3925">RFC3925</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">126</td>
+          <td>Removed/Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">127</td>
+          <td>Removed/Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3679">RFC3679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>PXE - undefined (vendor specific)</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Etherboot signature. 6 bytes:
+E4:45:74:68:00:00</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>DOCSIS "full security" server IP
+address</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>TFTP Server IP address (for IP
+Phone software load)</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>PXE - undefined (vendor specific)</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Kernel options. Variable length
+string</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Call Server IP address</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>PXE - undefined (vendor specific)</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Ethernet interface. Variable
+length string.</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Discrimination string (to
+identify vendor)</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>PXE - undefined (vendor specific)</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Remote statistics server IP address</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>PXE - undefined (vendor specific)</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>IEEE 802.1Q VLAN ID</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">133</td>
+          <td>PXE - undefined (vendor specific)</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133</td>
+          <td>IEEE 802.1D/p Layer 2 Priority</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">134</td>
+          <td>PXE - undefined (vendor specific)</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">134</td>
+          <td>Diffserv Code Point (DSCP) for
+VoIP signalling and media streams</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">135</td>
+          <td>PXE - undefined (vendor specific)</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4578">RFC4578</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">135</td>
+          <td>HTTP Proxy for phone-specific
+applications</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">136</td>
+          <td>OPTION_PANA_AGENT</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5192">RFC5192</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">137</td>
+          <td>OPTION_V4_LOST</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5223">RFC5223</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">138</td>
+          <td>OPTION_CAPWAP_AC_V4</td>
+          <td align="center">N</td>
+          <td>CAPWAP Access Controller addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc5417">RFC5417</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">139</td>
+          <td>OPTION-IPv4_Address-MoS</td>
+          <td align="center">N</td>
+          <td>a series of suboptions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5678">RFC5678</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">140</td>
+          <td>OPTION-IPv4_FQDN-MoS</td>
+          <td align="center">N</td>
+          <td>a series of suboptions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5678">RFC5678</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">141</td>
+          <td>SIP UA Configuration Service Domains</td>
+          <td align="center">N</td>
+          <td>List of domain names to search for SIP User Agent Configuration </td>
+          <td>[<a href="http://www.iana.org/go/rfc6011">RFC6011</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">142</td>
+          <td>OPTION-IPv4_Address-ANDSF</td>
+          <td align="center">N</td>
+          <td>ANDSF IPv4 Address Option for DHCPv4</td>
+          <td>[<a href="http://www.iana.org/go/rfc6153">RFC6153</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">143</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">144</td>
+          <td>GeoLoc</td>
+          <td align="center">16</td>
+          <td>Geospatial Location with Uncertainty</td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">145</td>
+          <td>FORCERENEW_NONCE_CAPABLE</td>
+          <td align="center">1</td>
+          <td>Forcerenew Nonce Capable</td>
+          <td>[<a href="http://www.iana.org/go/rfc6704">RFC6704</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">146</td>
+          <td>RDNSS Selection</td>
+          <td align="center">N</td>
+          <td>Information for selecting RDNSS</td>
+          <td>[<a href="http://www.iana.org/go/rfc6731">RFC6731</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">147-149</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3942">RFC3942</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>TFTP server address</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5859">RFC5859</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>Etherboot</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>GRUB configuration path name</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">151</td>
+          <td>status-code</td>
+          <td align="center">N+1</td>
+          <td>Status code and optional N byte text message describing status.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">152</td>
+          <td>base-time</td>
+          <td align="center">4</td>
+          <td>Absolute time (seconds since Jan 1, 1970) message was sent.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">153</td>
+          <td>start-time-of-state</td>
+          <td align="center">4</td>
+          <td>Number of seconds in the past when client entered current state.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">154</td>
+          <td>query-start-time</td>
+          <td align="center">4</td>
+          <td>Absolute time (seconds since Jan 1, 1970) for beginning of query.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">155</td>
+          <td>query-end-time</td>
+          <td align="center">4</td>
+          <td>Absolute time (seconds since Jan 1, 1970) for end of query.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">156</td>
+          <td>dhcp-state</td>
+          <td align="center">1</td>
+          <td>State of IP address.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">157</td>
+          <td>data-source</td>
+          <td align="center">1</td>
+          <td> Indicates information came from local or remote server.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">158</td>
+          <td>OPTION_V4_PCP_SERVER</td>
+          <td align="center">Variable; the minimum length is 5.</td>
+          <td> Includes one or multiple lists of PCP server IP addresses; 
+      each list is treated as a separate PCP server.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7291">RFC7291</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">159</td>
+          <td>OPTION_V4_PORTPARAMS</td>
+          <td align="center">4</td>
+          <td>This option is used to configure a set of ports bound to a 
+      shared IPv4 address.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7618">RFC7618</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">160</td>
+          <td>DHCP Captive-Portal</td>
+          <td align="center">N</td>
+          <td>DHCP Captive-Portal</td>
+          <td>[<a href="http://www.iana.org/go/rfc7710">RFC7710</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">161</td>
+          <td>OPTION_MUD_URL_V4 (TEMPORARY - registered 2016-11-17, expires 2017-11-17)</td>
+          <td align="center">N (variable)</td>
+          <td>Manufacturer Usage Descriptions</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-opsawg-mud">draft-ietf-opsawg-mud</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">162-174</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3942">RFC3942</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">175</td>
+          <td>Etherboot (Tentatively Assigned -
+2005-06-23)</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">176</td>
+          <td>IP Telephone (Tentatively Assigned -
+2005-06-23)</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">177</td>
+          <td>Etherboot (Tentatively Assigned -
+2005-06-23)</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">177</td>
+          <td>PacketCable and CableHome (replaced by
+122)</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">178-207</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3942">RFC3942</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">208</td>
+          <td>PXELINUX Magic</td>
+          <td align="center">4</td>
+          <td>magic string = F1:00:74:7E</td>
+          <td>[<a href="http://www.iana.org/go/rfc5071">RFC5071</a>][Deprecated]</td>
+        </tr>
+        <tr>
+          <td align="center">209</td>
+          <td>Configuration File</td>
+          <td align="center">N</td>
+          <td>Configuration file</td>
+          <td>[<a href="http://www.iana.org/go/rfc5071">RFC5071</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">210</td>
+          <td>Path Prefix</td>
+          <td align="center">N</td>
+          <td>Path Prefix Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5071">RFC5071</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">211</td>
+          <td>Reboot Time</td>
+          <td align="center">4</td>
+          <td>Reboot Time</td>
+          <td>[<a href="http://www.iana.org/go/rfc5071">RFC5071</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">212</td>
+          <td>OPTION_6RD</td>
+          <td align="center">18 + N</td>
+          <td>OPTION_6RD with N/4 6rd BR addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc5969">RFC5969</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">213</td>
+          <td>OPTION_V4_ACCESS_DOMAIN</td>
+          <td align="center">N</td>
+          <td>Access Network Domain Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc5986">RFC5986</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">214-219</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">220</td>
+          <td>Subnet Allocation Option</td>
+          <td align="center">N</td>
+          <td>Subnet Allocation Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6656">RFC6656</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">221</td>
+          <td>Virtual Subnet Selection (VSS) Option</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6607">RFC6607</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">222-223</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3942">RFC3942</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">224-254</td>
+          <td>Reserved (Private Use)</td>
+          <td align="center"></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>End</td>
+          <td align="center">0</td>
+          <td>None</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="message-type-53" id="message-type-53"></a>DHCP Message Type 53 Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2939">RFC2939</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-type-53.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-message-type-53" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Message Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>DHCPDISCOVER</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>DHCPOFFER</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>DHCPREQUEST</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>DHCPDECLINE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>DHCPACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>DHCPNAK</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>DHCPRELEASE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>DHCPINFORM</td>
+          <td>[<a href="http://www.iana.org/go/rfc2132">RFC2132</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>DHCPFORCERENEW</td>
+          <td>[<a href="http://www.iana.org/go/rfc3203">RFC3203</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>DHCPLEASEQUERY</td>
+          <td>[<a href="http://www.iana.org/go/rfc4388">RFC4388</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>DHCPLEASEUNASSIGNED</td>
+          <td>[<a href="http://www.iana.org/go/rfc4388">RFC4388</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>DHCPLEASEUNKNOWN</td>
+          <td>[<a href="http://www.iana.org/go/rfc4388">RFC4388</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>DHCPLEASEACTIVE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4388">RFC4388</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>DHCPBULKLEASEQUERY</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>DHCPLEASEQUERYDONE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>DHCPACTIVELEASEQUERY</td>
+          <td>[<a href="http://www.iana.org/go/rfc7724">RFC7724</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>DHCPLEASEQUERYSTATUS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7724">RFC7724</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>DHCPTLS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7724">RFC7724</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="type-63-sub-options" id="type-63-sub-options"></a>NetWare/IP Option Type 63 Sub-Option Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not defined</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="type-63-sub-options.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-type-63-sub-options" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Message Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>NWIP_DOES_NOT_EXIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>NWIP_EXIST_IN_OPTIONS_AREA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>NWIP_EXIST_IN_SNAME_FILE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>NWIP_EXIST_BUT_TOO_BIG</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>NSQ_BROADCAST</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>PREFERRED_DSS</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>NEAREST_NWIP_SERVER</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>AUTORETRIES</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>AUTORETRY_SECS</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>NWIP_1_1</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>PRIMARY_DSS</td>
+          <td>[<a href="http://www.iana.org/go/rfc2242">RFC2242</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="type-122-sub-options" id="type-122-sub-options"></a>DHCP Cablelabs Client Configuration Option Type 122 Sub-Option Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3495">RFC3495</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="type-122-sub-options.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-type-122-sub-options" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Sub-Option Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>TSP's Primary DHCP Server Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3495">RFC3495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>TSP's Secondary DHCP Server Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3495">RFC3495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>TSP's Provisioning Server Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3495">RFC3495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>TSP's AS-REQ/AS-REP Backoff and Retry</td>
+          <td>[<a href="http://www.iana.org/go/rfc3495">RFC3495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>TSP's AP-REQ/AP-REP Backoff and Retry</td>
+          <td>[<a href="http://www.iana.org/go/rfc3495">RFC3495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>TSP's Kerberos Realm Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc3495">RFC3495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>TSP's Ticket Granting Server Utilization</td>
+          <td>[<a href="http://www.iana.org/go/rfc3495">RFC3495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>TSP's Provisioning Timer Value</td>
+          <td>[<a href="http://www.iana.org/go/rfc3495">RFC3495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>TSP's Security Ticket Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc3594">RFC3594</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>KDC Server Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3634">RFC3634</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="type-151" id="type-151"></a>DHCP Status Code Type 151 Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="type-151.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-type-151" class="sortable">
+      <thead>
+        <tr>
+          <th>Status-Code</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>UnspecFail</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>QueryTerminated</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>MalformedQuery</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>NotAllowed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>DataMissing</td>
+          <td>[<a href="http://www.iana.org/go/rfc7724">RFC7724</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>ConnectionActive</td>
+          <td>[<a href="http://www.iana.org/go/rfc7724">RFC7724</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>CatchUpComplete</td>
+          <td>[<a href="http://www.iana.org/go/rfc7724">RFC7724</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>TLSConnectionRefused</td>
+          <td>[<a href="http://www.iana.org/go/rfc7724">RFC7724</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="type-156" id="type-156"></a>DHCP State Type 156 Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="type-156.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-type-156" class="sortable">
+      <thead>
+        <tr>
+          <th>State</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>AVAILABLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ACTIVE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>EXPIRED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>RELEASED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>ABANDONED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>RESET</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>REMOTE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>TRANSITIONING</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="altitude" id="altitude"></a>Altitude Type Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="altitude.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-altitude" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Altitude Field Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>No known altitude</td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Altitude in meters</td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Altitude in floors</td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="datum" id="datum"></a>Datum Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="datum.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-datum" class="sortable">
+      <thead>
+        <tr>
+          <th>Datum</th>
+          <th>Datum Field Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Vertical datum WGS 84 defined by EPSG CRS Code 4327</td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Vertical datum NAD83 defined by EPSG CRS Code 4269 
+          with North American Vertical Datum of 1988 (NAVD88)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Vertical datum NAD83 defined by EPSG 
+          CRS Code 4269 with Mean Lower Low Water 
+          (MLLW) as associated vertical datum
+        </td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="geoloc-option-version" id="geoloc-option-version"></a>GeoLoc Option Version Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="geoloc-option-version.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-geoloc-option-version" class="sortable">
+      <thead>
+        <tr>
+          <th>Version</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Implementations utilizing uncertainty parameters for both DHCPv4 and DHCPv6 
+        GeoLoc options</td>
+          <td>[<a href="http://www.iana.org/go/rfc6225">RFC6225</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-3</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="control-mask-bit" id="control-mask-bit"></a>CableLabs Client Configuration Option Ticket Control Mask Bit Definitions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3594">RFC3594</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="control-mask-bit.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-control-mask-bit" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>the PacketCable Provisioning Server     
+used by the CCD.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3594">RFC3594</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>the group of all PacketCable Call       
+Management Servers used by the CCD.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3594">RFC3594</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-15</td>
+          <td>Reserved and MUST be set to 0.</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="relay-agent-sub-options" id="relay-agent-sub-options"></a>DHCP Relay Agent Sub-Option Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3046">RFC3046</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="relay-agent-sub-options.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-relay-agent-sub-options" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Sub-Option Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Agent Circuit ID Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3046">RFC3046</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Agent Remote ID Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3046">RFC3046</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Sub-option 3 is reserved and should      
+not be assigned at this time;
+proprietary and incompatible usages
+of this sub-option value have been
+seen limited deployment.</td>
+          <td>[<a href="#Ralph_Droms">Ralph_Droms</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>DOCSIS Device Class Suboption</td>
+          <td>[<a href="http://www.iana.org/go/rfc3256">RFC3256</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Link selection Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3527">RFC3527</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Subscriber-ID Suboption</td>
+          <td>[<a href="http://www.iana.org/go/rfc3993">RFC3993</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>RADIUS Attributes Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4014">RFC4014</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Authentication Suboption</td>
+          <td>[<a href="http://www.iana.org/go/rfc4030">RFC4030</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Vendor-Specific Information Suboption</td>
+          <td>[<a href="http://www.iana.org/go/rfc4243">RFC4243</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Relay Agent Flags</td>
+          <td>[<a href="http://www.iana.org/go/rfc5010">RFC5010</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Server Identifier Override Suboption</td>
+          <td>[<a href="http://www.iana.org/go/rfc5107">RFC5107</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Relay Agent Identifier Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6925">RFC6925</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Access-Technology-Type Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7839">RFC7839</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Access-Network-Name Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7839">RFC7839</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Access-Point-Name Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7839">RFC7839</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Access-Point-BSSID Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7839">RFC7839</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Operator-Identifier Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7839">RFC7839</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Operator-Realm Sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7839">RFC7839</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19-150</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">151</td>
+          <td>DHCPv4 Virtual Subnet Selection Sub-Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6607">RFC6607</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">152</td>
+          <td>DHCPv4 Virtual Subnet Selection Control Sub-Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6607">RFC6607</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="authentication-protocol-id" id="authentication-protocol-id"></a>Authentication Suboption (value 8) - Protocol identifier values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3118">RFC3118</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="authentication-protocol-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-authentication-protocol-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Protocol</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>DHCPv4 Configuration Token</td>
+          <td>[<a href="http://www.iana.org/go/rfc3118">RFC3118, Section 4</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>DHCPv4 Delayed Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3118">RFC3118, Section 5</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>DHCPv6 Delayed Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3315">RFC3315, Section 21.4</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>DHCPv6 Reconfigure Key Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3315">RFC3315, Section 21.5</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3118">RFC3118</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="authentication-algorithm-id" id="authentication-algorithm-id"></a>Authentication Suboption (value 8) - Algorithm identifier values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4030">RFC4030</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="authentication-algorithm-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-authentication-algorithm-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Algorithm</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4030">RFC4030</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>HMAC-SHA1 keyed hash</td>
+          <td>[<a href="http://www.iana.org/go/rfc4030">RFC4030</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="authentication-rdm-id" id="authentication-rdm-id"></a>Authentication Suboption (value 8) - Replay Detection Method (RDM) identifier values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4030">RFC4030</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="authentication-rdm-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-authentication-rdm-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4030">RFC4030</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>use of a monotonically increasing counter value</td>
+          <td>[<a href="http://www.iana.org/go/rfc4030">RFC4030</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ieee-80221-service-type" id="ieee-80221-service-type"></a>IEEE 802.21 Service Type (MoS DHCPv4 Address and FQDN Sub-Options)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5678">RFC5678</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ieee-80221-service-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ieee-80221-service-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5678">RFC5678</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5678">RFC5678</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>CS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5678">RFC5678</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>ES</td>
+          <td>[<a href="http://www.iana.org/go/rfc5678">RFC5678</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5678">RFC5678</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ntp-time-source" id="ntp-time-source"></a>NTP Time Source Suboptions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5908">RFC5908</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>See the NTP Time Source Suboptions registry at [<a href="http://www.iana.org/assignments/dhcpv6-parameters">http://www.iana.org/assignments/dhcpv6-parameters</a>]</pre>
+      </dd>
+    </dl>
+    <table>
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="vss-type" id="vss-type"></a>VSS Type Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6607">RFC6607</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="vss-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-vss-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Network Virtual Terminal (NVT) ASCII VPN identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc6607">RFC6607</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>RFC2685 VPN-ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc2685">RFC2685</a>][<a href="http://www.iana.org/go/rfc6607">RFC6607</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-253</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">254</td>
+          <td>All VPNs (wildcard)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6926">RFC6926</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Global, default VPN</td>
+          <td>[<a href="http://www.iana.org/go/rfc6607">RFC6607</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Ralph_Droms" id="Ralph_Droms">[Ralph_Droms]</a>
+          </td>
+          <td>Ralph Droms</td>
+          <td>
+            <a href="mailto:rdroms&amp;cisco.com">mailto:rdroms&amp;cisco.com</a>
+          </td>
+          <td>2001-01</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

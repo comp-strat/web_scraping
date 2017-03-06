@@ -1,0 +1,64 @@
+###############################################################
+#
+# TLD:            NET
+# Script:         Imperial Aramaic
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Imperial Aramaic script.
+#
+###############################################################
+U+10840	# IMPERIAL ARAMAIC LETTER ALEPH
+U+10841	# IMPERIAL ARAMAIC LETTER BETH
+U+10842	# IMPERIAL ARAMAIC LETTER GIMEL
+U+10843	# IMPERIAL ARAMAIC LETTER DALETH
+U+10844	# IMPERIAL ARAMAIC LETTER HE
+U+10845	# IMPERIAL ARAMAIC LETTER WAW
+U+10846	# IMPERIAL ARAMAIC LETTER ZAYIN
+U+10847	# IMPERIAL ARAMAIC LETTER HETH
+U+10848	# IMPERIAL ARAMAIC LETTER TETH
+U+10849	# IMPERIAL ARAMAIC LETTER YODH
+U+1084A	# IMPERIAL ARAMAIC LETTER KAPH
+U+1084B	# IMPERIAL ARAMAIC LETTER LAMEDH
+U+1084C	# IMPERIAL ARAMAIC LETTER MEM
+U+1084D	# IMPERIAL ARAMAIC LETTER NUN
+U+1084E	# IMPERIAL ARAMAIC LETTER SAMEKH
+U+1084F	# IMPERIAL ARAMAIC LETTER AYIN
+U+10850	# IMPERIAL ARAMAIC LETTER PE
+U+10851	# IMPERIAL ARAMAIC LETTER SADHE
+U+10852	# IMPERIAL ARAMAIC LETTER QOPH
+U+10853	# IMPERIAL ARAMAIC LETTER RESH
+U+10854	# IMPERIAL ARAMAIC LETTER SHIN
+U+10855	# IMPERIAL ARAMAIC LETTER TAW
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

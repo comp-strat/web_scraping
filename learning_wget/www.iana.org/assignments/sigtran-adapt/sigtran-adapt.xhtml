@@ -1,0 +1,1779 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Signaling User Adaptation Layer Assignments</title>
+  </head>
+  <body>
+    <h1>Signaling User Adaptation Layer Assignments</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2002-08-12</dd>
+      <dt>Last Updated</dt>
+      <dd>2011-12-01</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="sigtran-adapt.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="sigtran-adapt.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#sigtran-adapt-1">Message Classes</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-2">Message Types - Management (MGMT) Message (Value 0)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-3">Message Types - Transfer Messages (Value 1)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-4">Message Types - SS7 Signalling Network Management (SSNM) Messages (Value 2)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-5">Message Types - ASP State Maintenance (ASPSM) Messages (Value 3)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-6">Message Types - ASP Traffic Maintenance (ASPTM) Messages (Value 4)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-7">Message Types - Q.921/Q.931 Boundary Primitives Transport (QPTM) Messages (Value 5)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-8">Message Types - MTP2 User Adaptation (MAUP) Messages (Value 6)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-9">Message Types - Connectionless Messages (Value 7)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-10">Message Types - Connection-Oriented Messages (Value 8)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-11">Message Types - Routing Key Management (RKM) Messages (Value 9)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-12">Message Types - Interface Identifier Management (IIM) Messages (Value 10)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-13">Message Types - M2PA Messages (Value 11)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-14">Message Types - Security Messages (Value 12)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-15">Message Types - DPNSS/DASS2 Boundary Primitives Transport Messages (Value 13)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-16">Message Types - V5 Boundary Primitives Transport (V5PTM) Messages (Value 14)</a>
+      </li>
+      <li>
+        <a href="#sigtran-adapt-17">Message Parameters</a>
+      </li>
+    </ul>
+    <h2><a name="sigtran-adapt-1" id="sigtran-adapt-1"></a>Message Classes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3057">RFC3057</a>][<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Management (MGMT) Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Transfer Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>SS7 Signalling Network Management (SSNM) Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ASP State Maintenance (ASPSM) Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ASP Traffic Maintenance (ASPTM) Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Q.921/Q.931 Boundary Primitives Transport (QPTM) Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>MTP2 User Adaptation (MAUP) Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Connectionless Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Connection-Oriented Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Routing Key Management (RKM) Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Interface Identifier Management (IIM) Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>M2PA Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc4165">RFC4165</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Security Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc3788">RFC3788</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>DPNSS/DASS2 Boundary Primitives Transport Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>V5 Boundary Primitives Transport Messages (V5PTM)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>15-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined Message Class extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-2" id="sigtran-adapt-2"></a>Message Types - Management (MGMT) Message (Value 0)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Error (ERR)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Notify (NTFY)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>TEI Status Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>TEI Status Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>TEI Status Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>DLC Status Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>DLC Status Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>DLC Status Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>TEI Query Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5133">RFC5133</a>][<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>9-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined MGMT extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-3" id="sigtran-adapt-3"></a>Message Types - Transfer Messages (Value 1)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Payload Data (DATA)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>2-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined Transfer extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-4" id="sigtran-adapt-4"></a>Message Types - SS7 Signalling Network Management (SSNM) Messages (Value 2)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Destination Unavailable (DUNA)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Destination Available (DAVA)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Destination State Audit (DAUD)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Signalling Congestion (SCON)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Destination User Part Unavailable (DPU)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Destination Restricted (DRST)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>7-127</td>
+          <td>Reserved by the IETF</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined SSNM extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-5" id="sigtran-adapt-5"></a>Message Types - ASP State Maintenance (ASPSM) Messages (Value 3)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ASP Up (UP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>ASP Down (DOWN)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Heartbeat (BEAT)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ASP Up Ack (UP ACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ASP Down Ack (DOWN ACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Heartbeat Ack (BEAT ACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>7-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined ASPSM extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-6" id="sigtran-adapt-6"></a>Message Types - ASP Traffic Maintenance (ASPTM) Messages (Value 4)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ASP Active (ACTIVE)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>ASP Inactive (INACTIVE)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ASP Active Ack (ACTIVE ACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ASP Inactive Ack (INACTIVE ACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3057">RFC3057</a>]</td>
+        </tr>
+        <tr>
+          <td>5-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined ASPTM extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-7" id="sigtran-adapt-7"></a>Message Types - Q.921/Q.931 Boundary Primitives Transport (QPTM) Messages (Value 5)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Data Request Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Data Indication Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Unit Data Request Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Unit Data Indication Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Establish Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Establish Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Establish Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Release Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Release Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Release Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>11-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined QPTM extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-8" id="sigtran-adapt-8"></a>Message Types - MTP2 User Adaptation (MAUP) Messages (Value 6)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Data</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Establish Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Establish Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Release Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Release Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Release Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>State Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>State Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>State Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Data Retrieval Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Data Retrieval Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Data Retrieval Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Data Retrieval Complete Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Congestion Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Data Acknowledge</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>16-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined MAUP extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-9" id="sigtran-adapt-9"></a>Message Types - Connectionless Messages (Value 7)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Connectionless Data Transfer (CLDT)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Connectionless Data Response (CLDR)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>3-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined Message Class Extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-10" id="sigtran-adapt-10"></a>Message Types - Connection-Oriented Messages (Value 8)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-10" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Connection Request (CORE)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Connection Acknowledge (COAK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Connection Refused (COREF)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Release Request (RELRE)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Release Complete (RELCO)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Reset Confirm (RESCO)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Reset Request (RESRE)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Connection Oriented Data Transfer (CODT)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Connection Oriented Data Acknowledge (CODA)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Connection Oriented Error (COERR)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Inactivity Test (COIT)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>12-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined Message Class Extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-11" id="sigtran-adapt-11"></a>Message Types - Routing Key Management (RKM) Messages (Value 9)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Registration Request (REG REQ)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Registration Response (REG RSP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Deregistration Request (DEREG REQ)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Deregistration Response (DEREG RSP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>5-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined RKM extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-12" id="sigtran-adapt-12"></a>Message Types - Interface Identifier Management (IIM) Messages (Value 10)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-12" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Registration Request (REG REQ)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Registration Response (REG RSP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Deregistration Request (DEREG REQ)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Deregistration Response (DEREG RSP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>5-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for IETF-Defined IIM extensions</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-13" id="sigtran-adapt-13"></a>Message Types - M2PA Messages (Value 11)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4165">RFC4165</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-13" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>User Data</td>
+          <td>[<a href="http://www.iana.org/go/rfc4165">RFC4165</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Link Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc4165">RFC4165</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-14" id="sigtran-adapt-14"></a>Message Types - Security Messages (Value 12)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3788">RFC3788</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-14" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>STARTTLS message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3788">RFC3788</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>STARTTLS_ACK message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3788">RFC3788</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-15" id="sigtran-adapt-15"></a>Message Types - DPNSS/DASS2 Boundary Primitives Transport Messages (Value 13)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-15" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Data Request Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Data Indication Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Unit Data Request Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Unit Data Indication Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Establish Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Establish Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Establish Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Release Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Release Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Release Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-16" id="sigtran-adapt-16"></a>Message Types - V5 Boundary Primitives Transport (V5PTM) Messages (Value 14)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-16.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-16" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Data Request Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Data Indication Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Unit Data Request Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Unit Data Indication Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Establish Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Establish Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Establish Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Release Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Release Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Release Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Link Status Start Reporting</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Link Status Stop Reporting</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Link Status Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Sa-Bit Set Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Sa-Bit Set Confirm</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Sa-Bit Status Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Sa-Bit Status Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Error Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sigtran-adapt-17" id="sigtran-adapt-17"></a>Message Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sigtran-adapt-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sigtran-adapt-17" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Interface Identifier (Integer)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Interface Identifier (Text)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Info String</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>DLCI</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Routing Context</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Diagnostic Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Interface Identifier (Integer Range)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Heartbeat Data</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Reason</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Traffic Mode Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Error Code</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Status Type/Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Protocol Data</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Release Reason</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>][<a href="http://www.iana.org/go/rfc4129">RFC4129</a>][<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>ASP Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Affected Point Code</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>Correlation Id</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>][<a href="http://www.iana.org/go/rfc4666">RFC4666</a>][<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>Registration Result</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>Deregistration Result</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>Registration Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>Deregistration Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>Local Routing Key Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>25-128</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>129</td>
+          <td>DLCI/EFA</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>130</td>
+          <td>Link Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>131</td>
+          <td>Bit ID/Bit Value</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>132</td>
+          <td>Error Reason</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+        </tr>
+        <tr>
+          <td>133-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>256</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>257</td>
+          <td>SS7 Hop Counter</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>258</td>
+          <td>Source Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>259</td>
+          <td>Destination Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>260</td>
+          <td>Source Reference Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>261</td>
+          <td>Destination Reference Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>262</td>
+          <td>SCCP Cause</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>263</td>
+          <td>Sequence Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>264</td>
+          <td>Receive Sequence Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>265</td>
+          <td>ASP Capabilities</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>266</td>
+          <td>Credit</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>267</td>
+          <td>Data</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>268</td>
+          <td>Cause / User</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>269</td>
+          <td>Network Appearance</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>270</td>
+          <td>Routing Key</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>271</td>
+          <td>DRN Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>272</td>
+          <td>TID Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>273</td>
+          <td>Address Range</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>274</td>
+          <td>SMI</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>275</td>
+          <td>Importance</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>276</td>
+          <td>Message Priority</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>277</td>
+          <td>Protocol Class</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>278</td>
+          <td>Sequence Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>279</td>
+          <td>Segmentation</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>280</td>
+          <td>Congestion Level</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>281-511</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>512</td>
+          <td>Network Appearance</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>513</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>514</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>515</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>516</td>
+          <td>User/Cause</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>517</td>
+          <td>Congestion Indications</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>518</td>
+          <td>Concerned Destination</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>519</td>
+          <td>Routing Key</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>520</td>
+          <td>Registration Result</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>521</td>
+          <td>Deregistration Result</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>522</td>
+          <td>Local_Routing Key Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>523</td>
+          <td>Destination Point Code</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>524</td>
+          <td>Service Indicators</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>525</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>526</td>
+          <td>Originating Point Code List</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>527</td>
+          <td>Circuit Range</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>528</td>
+          <td>Protocol Data</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>529</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>530</td>
+          <td>Registration Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>531</td>
+          <td>Deregistration Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+        </tr>
+        <tr>
+          <td>532-767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>768</td>
+          <td>Protocol Data 1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>769</td>
+          <td>Protocol Data 2 (TTC)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>770</td>
+          <td>State Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>771</td>
+          <td>State Event</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>772</td>
+          <td>Congestion Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>773</td>
+          <td>Discard Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>774</td>
+          <td>Action</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>775</td>
+          <td>Sequence Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>776</td>
+          <td>Retrieval Result</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>777</td>
+          <td>Link Key</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>778</td>
+          <td>Local-LK-Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>779</td>
+          <td>Signalling Data Terminal (SDT) Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>780</td>
+          <td>Signalling Data Link (SDL) Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>781</td>
+          <td>Registration Result</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>782</td>
+          <td>Registration Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>783</td>
+          <td>De-Registration Result</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>784</td>
+          <td>De-Registration Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+        </tr>
+        <tr>
+          <td>785-32768</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>32769</td>
+          <td>Global Title</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>32770</td>
+          <td>Point Code</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>32771</td>
+          <td>Subsystem Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>32772</td>
+          <td>IPv4 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>32773</td>
+          <td>Hostname</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>32774</td>
+          <td>IPv6 Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+        </tr>
+        <tr>
+          <td>32775-65534</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

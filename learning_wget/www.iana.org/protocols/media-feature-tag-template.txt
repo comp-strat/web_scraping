@@ -1,0 +1,128 @@
+Registration template
+ 
+   To: ietf-media-feature-tags@iana.org (Media feature tags mailing list)
+        (or directly to iana@iana.org)
+   Subject: Registration of media feature tag XXXX
+ 
+ 
+    | Instructions are preceded by `|'.  Some fields are optional.
+ 
+   Media feature tag name:
+ 
+   ASN.1 identifier associated with feature tag:       [optional]
+ 
+    | To have IANA assign an ASN.1 identifier,
+    | use the value "New assignment by IANA" here.
+ 
+   Summary of the media feature indicated by this feature tag:
+ 
+    | Include a short (no longer than 4 lines) description or summary
+    | Examples:
+    |   `Use of the xyzzy feature is indicated by ...'
+    |   `Support of color display is indicated by ...'
+    |   `Number of colors in a palette which can be defined ...'
+ 
+   Values appropriate for use with this feature tag:
+ 
+     [ ] 1. The feature tag is Boolean and may have values of
+          TRUE or FALSE.   A value of TRUE indicates an available
+          capability.  A value of FALSE indicates the capability
+          is not available.
+ 
+    | If you wish to indicate two mutually exclusive possiblities
+    | that cannot be expressed as the availability or lack of a
+    | capability, use a two-token list, rather than a Boolean value.
+ 
+ 
+     [ ] 2. The feature has an associated numeric or enumerated value.
+ 
+ 
+   For case 2: Indicate the data type of the value:
+ 
+        [ ] 2a. Signed Integer
+        [ ] 2b. Rational number
+        [ ] 2c. Token (equality relationship)
+        [ ] 2d. Token (ordered)
+        [ ] 2e. String (equality relationship)
+        [ ] 2f. String (defined comparison)
+ 
+    |IMPORTANT: You may only chose one of the above data types.
+ 
+  (Only for case 2) Detailed description of the feature value meaning,
+  and of the format and meaning of the feature tag values
+  for the alternative results.
+ 
+    | If you have selected 2d you must provide the ordering mechanism
+    | or a full and ordered enumeration of possible values.  If you
+    | have selected 2f, you must provide a defintion of the comparison.
+    | Definitions by included reference must be to stable and readily
+    | available specifications:
+    |
+    | If the number of alternative results is small, you may
+    | enumerate the identifiers of the different results and describe
+    | their meaning.
+    |
+    | If there is a limited useful numeric range of result (2b, 2c),
+    | indicate the range.
+    |
+    | The identifiers of the alternative results could also be
+    | described by referring to another IANA registry, for example
+    | the paper sizes enumerated by the Printer MIB.
+ 
+  The feature tag is intended primarily for use in the following
+  applications, protocols, services, or negotiation mechanisms:
+                                                   [optional]
+ 
+    | For applications, also specify the number of the first version
+    | which will use the tag, if applicable.
+ 
+   Examples of typical use:                               [optional]
+ 
+   Related standards or documents:                        [optional]
+ 
+   Considerations particular to use in individual applications,
+   protocols, services, or negotiation mechanisms:        [optional]
+ 
+   Interoperability considerations:                       [optional]
+ 
+   Security considerations:
+ 
+     Privacy concerns, related to exposure of personal information:
+ 
+     Denial of service concerns related to consequences of specifying
+     incorrect values:
+ 
+     Other:
+ 
+   Additional information:                                [optional]
+ 
+     Keywords:                                            [optional]
+ 
+     Related feature tags:                                [optional]
+ 
+     Related media types or data formats:                 [optional]
+ 
+     Related markup tags:                                 [optional]
+ 
+   Name(s) & email address(es) of person(s) to contact for
+   further information:
+ 
+   Intended usage:
+ 
+    | one of COMMON, LIMITED USE or OBSOLETE
+ 
+   Author/Change controller:
+ 
+   Requested IANA publication delay:                      [optional]
+ 
+    | A delay may only be requested for final placement in the global
+    | or IETF trees, with a maximum of two months.  Organizations
+    | requesting a registration with a publication delay should note
+    | that this delays only the official publication of the tag
+    | and does not prevent information on it from being disseminated
+    | by the members of the relevant mailing list.
+ 
+   Other information:                                     [optional]
+ 
+    |  Any other information that the author deems interesting may be
+    |  added here.

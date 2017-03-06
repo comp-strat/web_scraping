@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Application for Service Names and User Port Numbers</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+<div id="form">
+
+
+    <h1>Application for Service Names and User Port Numbers</h1>
+
+    <p>This form is used to register user port numbers and service names
+        in the IANA <a href="/assignments/service-names-port-numbers">Service Name and Transport Protocol Port Number Registry</a>.
+    <p>For detailed instructions on how to fill out the elements of this form, please read <a href="/go/rfc6335">the procedures document</a> (RFC 6335).</p>
+    <p>Please read the following before submitting your request:</p>
+    <ul>
+        <li>Registration is open to any party that meets the eligibility requirements described in <a href="/go/rfc6335">RFC
+            6335</a> Section 8.1.2 and <a href="/go/rfc7605">RFC 7605</a>.  This includes
+            review under the "Expert review" procedure documented in <a href="/go/rfc5226">RFC 5226</a>.</li>
+        <li>User port numbers range between 1024 and 49151. If you wish to register a system port — those numbered 1023 or less — it must be done through the standardisation process of the IETF.</li>
+        <li>Assignment of a port number does not in any way imply an endorsement of
+        an application or product, and the fact that network traffic is flowing to
+        or from an assigned port does not mean that it is "good" traffic nor that the traffic corresponds to the assigned service.  Firewall and system administrators should choose how to configure their systems based on their knowledge of the traffic in question, and any other relevant criteria.</li>
+        <li>A particular application or service should require at most one assigned user port number. For applications or services that offer multiple functions it is usually possible to utilize one port as a multiplexer or rendezvous service.</li>
+        <li>To add an additional transport protocol (TCP, UDP, SCTP or DCCP) to an existing assignment, a new template is required.  The new request requires Expert Review.</li>
+        <li>In the Service Name and Description, avoid terms and acronyms referring to "service" and "protocol", as these are implied for all assignments. Please also avoid version-specific information, as new assignments are expected to be version-independent.</li>
+        <li><b>Unassigned service names and port numbers should not be used prior to assignment. IANA will assign the service name and optionally a port number after your application has been approved.</b></li>
+    </ul>
+
+    <div class="form_sheet">
+    <form action="/form/ports-services" method="post">
+
+        
+
+        <fieldset>
+            <h2>Assignee</h2>
+            <p>List the organization, company or individual person responsible for the initial assignment. If you are
+                registering this on behalf of a company or organization, the company/organization name would go here.
+            </p>
+
+        <div class="form-field">
+        <label for="assignee_name">Assignee Name<br/><span class="required">Required</span></label>
+        <div class="input">
+        <input name="assignee_name" value="">
+        
+        </div>
+        </div>
+
+        <div class="form-field">
+        <label for="assignee_email">Assignee E-mail<br/><span class="required">Required</span></label>
+        <div class="input">
+        <input name="assignee_email" value="">
+        
+        </div>
+        </div>
+
+        </fieldset>
+
+        <fieldset>
+            <h2>Contact Person</h2>
+            <p>The responsible person for the Internet community to send questions to. This person is also authorized to submit changes on behalf of
+            the Assignee. In cases of conflict between the Assignee and the Contact, the Assignee decisions take precedence.
+            </p>
+
+        <div class="form-field">
+        <label for="contact_name">Contact Name<br/><span class="required">Required</span></label>
+        <div class="input">
+        <input name="contact_name" value="">
+        
+
+        </div>
+        </div>
+
+        <div class="form-field">
+        <label for="contact_email">Contact E-mail<br/><span class="required">Required</span></label>
+        <div class="input">
+        <input name="contact_email" value="">
+        
+        
+        </div>
+        </div>
+
+        </fieldset>
+
+        <fieldset>
+            <h2>Resource request</h2>
+
+            <div class="form-field">
+            <label for="resources">Resources required<br/><span class="required">Required</span></label>
+            <div class="input">
+                <ul class="inputs-list">
+                    <li>
+                        <label>
+                        <input type="radio" name="resources" value="port_number" >
+                        <span>Port number and service name</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                        <input type="radio" name="resources" value="service_name" >
+                        <span>Service name only</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="form-field">
+            <label for="transport_protocols">Transport Protocols<br/><span class="required">Required</span></label>
+            <div class="input">
+                <ul class="inputs-list">
+                    <li>
+                        <label>
+                        <input type="checkbox" name="transport_protocols_tcp" value="1" >
+                        <span>TCP</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                        <input type="checkbox" name="transport_protocols_udp" value="1" >
+                        <span>UDP</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                        <input type="checkbox" name="transport_protocols_sctp" value="1" >
+                        <span>SCTP</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                        <input type="checkbox" name="transport_protocols_dccp" value="1" >
+                        <span>DCCP</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div class="form-field">
+            <label for="service_code">Service Code</label>
+            <div class="input">
+            <input name="service_code" value="">
+            <span class="help-inline">Required if DCCP is requested; leave blank otherwise. See <a href="/go/rfc6335">RFC 6335</a> section 10.3.</span>
+
+            </div>
+            </div>
+
+            <div class="form-field">
+            <label for="service_name">Service Name<br/><span class="required">Required</span></label>
+            <div class="input">
+            <input name="service_name" value="" maxlength=15>
+            <span class="help-inline">(REQUIRED, 15 character maximum) See <a href="/go/rfc6335">RFC 6335</a> section 5.1</span>
+            </div>
+            </div>
+
+            <div class="form-field">
+            <label for="desired_port_number">Desired Port Number</label>
+            <div class="input">
+            <input name="desired_port_number" value="">
+            <span class="help-inline">Leave blank if no preference</span>
+            <span class="help-block"><b>Note:</b> It is inappropriate to use a port number until your application has been approved for assignment.</span>
+            </div>
+            </div>
+
+            <div class="form-field">
+            <label for="description">Description<br/><span class="required">Required</span></label>
+            <div class="input">
+            <input name="description" maxlength="40" value="">
+            <span class="help-inline">See <a href="/go/rfc6335">RFC 6335</a> section 8.1.1</span>
+            </div>
+            </div>
+
+            <div class="form-field">
+            <label for="reference">Reference<br/><span class="required">Required</span></label>
+            <div class="input">
+            <textarea class="xxlarge" id="reference" name="reference" rows="3"></textarea>
+            <span class="help-block"> Please provide a brief and basic technical description of the protocol that will use the service name or port number, including message formats, types, sequences, functionalities, of your protocol. In addition, please address the specific questions included below to the extent possible. </span>
+            </div>
+            </div>
+
+            <div class="form-field">
+            <label for="description">Defined TXT keys</label>
+            <div class="input">
+            <input name="txt_keys" value="">
+            <span class="help-block">The list of defined TXT record keys for this service or URL
+            reference to document describing defined keys (see
+            <a href="/go/rfc6763">RFC 6763</a>, Section 6). Required for service names only.</span>
+            </div>
+            </div>
+
+            </fieldset>
+
+            <fieldset>
+            <h2>Usage Questions</h2>
+
+
+            <div class="form-field">
+                            <label for="description">Usage Questions</label>
+
+            <div class="input">
+            <p>If broadcast/multicast is used, how and what for?</p>
+            <textarea class="xxlarge" id="usage_question_1" name="usage_question_1" rows="2"></textarea>
+            <p>If UDP is requested, please explain how traffic is limited, and
+            whether the protocol reacts to congestion.</p>
+            <textarea class="xxlarge" id="usage_question_2" name="usage_question_2" rows="2"></textarea>
+            <p>If UDP is requested, please indicate whether the service is solely
+            for the discovery of hosts supporting this protocol.</p>
+            <textarea class="xxlarge" id="usage_question_3" name="usage_question_3" rows="2"></textarea>
+            <p>Please explain how your protocol supports versioning.</p>
+            <textarea class="xxlarge" id="usage_question_4" name="usage_question_4" rows="2"></textarea>
+            <p>If your request is for more than one transport, please explain in
+            detail how the protocol differs over each transport.</p>
+            <textarea class="xxlarge" id="usage_question_5" name="usage_question_5" rows="2"></textarea>
+            <p>Please describe how your protocol supports security. Note that new services are expected to support security capabilities and to avoid insecure variants.</p>
+            <textarea class="xxlarge" id="usage_question_6" name="usage_question_6" rows="2"></textarea>
+            <p>Please explain why a unique port assignment is necessary as opposed to a port in range (49152-65535) or existing port.</p>
+            <textarea class="xxlarge" id="usage_question_7" name="usage_question_7" rows="2"></textarea>
+            <p>Please explain the state of development of your protocol.</p>
+            <textarea class="xxlarge" id="usage_question_8" name="usage_question_8" rows="2"></textarea>
+            <p>If SCTP is requested, is there an
+            existing TCP and/or UDP service name or port number assignment? If yes, provide
+            the existing service name and port number.</p>
+            <textarea class="xxlarge" id="usage_question_9" name="usage_question_9" rows="2"></textarea>
+            <p>What specific SCTP capability is used by the application such that a user who has the choice of both TCP (and/or UDP) and SCTP ports for this application would choose SCTP? See <a href="/go/rfc4960">RFC 4960</a> section 7.1.</p>
+            <textarea class="xxlarge" id="usage_question_10" name="usage_question_10" rows="2"></textarea><p>Please provide any other information that would be helpful in understanding how this protocol differs from existing assigned services.</p>
+            <textarea class="xxlarge" id="usage_question_11" name="usage_question_11" rows="2"></textarea>
+
+            </div>
+            </div>
+
+            <div class="actions">
+                        <input type="submit" class="button primary green" value="Lodge request">
+                      </div>
+            </fieldset>
+        </form>
+        </div>
+
+
+</div>
+
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+	
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+###############################################################
+#
+# TLD:            COM
+# Script:         Rejang
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Rejang script.
+#
+###############################################################
+U+A930	# REJANG LETTER KA
+U+A931	# REJANG LETTER GA
+U+A932	# REJANG LETTER NGA
+U+A933	# REJANG LETTER TA
+U+A934	# REJANG LETTER DA
+U+A935	# REJANG LETTER NA
+U+A936	# REJANG LETTER PA
+U+A937	# REJANG LETTER BA
+U+A938	# REJANG LETTER MA
+U+A939	# REJANG LETTER CA
+U+A93A	# REJANG LETTER JA
+U+A93B	# REJANG LETTER NYA
+U+A93C	# REJANG LETTER SA
+U+A93D	# REJANG LETTER RA
+U+A93E	# REJANG LETTER LA
+U+A93F	# REJANG LETTER YA
+U+A940	# REJANG LETTER WA
+U+A941	# REJANG LETTER HA
+U+A942	# REJANG LETTER MBA
+U+A943	# REJANG LETTER NGGA
+U+A944	# REJANG LETTER NDA
+U+A945	# REJANG LETTER NYJA
+U+A946	# REJANG LETTER A
+U+A947	# REJANG VOWEL SIGN I
+U+A948	# REJANG VOWEL SIGN U
+U+A949	# REJANG VOWEL SIGN E
+U+A94A	# REJANG VOWEL SIGN AI
+U+A94B	# REJANG VOWEL SIGN O
+U+A94C	# REJANG VOWEL SIGN AU
+U+A94D	# REJANG VOWEL SIGN EU
+U+A94E	# REJANG VOWEL SIGN EA
+U+A94F	# REJANG CONSONANT SIGN NG
+U+A950	# REJANG CONSONANT SIGN N
+U+A951	# REJANG CONSONANT SIGN R
+U+A952	# REJANG CONSONANT SIGN H
+U+A953	# REJANG VIRAMA
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

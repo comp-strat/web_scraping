@@ -1,0 +1,1417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>REsource LOcation And Discovery (RELOAD)</title>
+  </head>
+  <body>
+    <h1>REsource LOcation And Discovery (RELOAD)</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2013-03-26</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-12-12</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="reload.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="reload.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="reload.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#overlay-alg">RELOAD Overlay Algorithm Types</a>
+      </li>
+      <li>
+        <a href="#access-control">RELOAD Access Control Policies</a>
+      </li>
+      <li>
+        <a href="#app-id">RELOAD Application-ID</a>
+      </li>
+      <li>
+        <a href="#data-kind-id">RELOAD Data Kind-ID</a>
+      </li>
+      <li>
+        <a href="#data-model">RELOAD Data Model</a>
+      </li>
+      <li>
+        <a href="#message-codes">RELOAD Message Codes</a>
+      </li>
+      <li>
+        <a href="#error-codes">RELOAD Error Codes</a>
+      </li>
+      <li>
+        <a href="#overlay-link-types">RELOAD Overlay Link Registry</a>
+      </li>
+      <li>
+        <a href="#overlay-link-protocols">RELOAD Overlay Link Protocol Registry</a>
+      </li>
+      <li>
+        <a href="#forwarding-options">RELOAD Forwarding Option Registry</a>
+      </li>
+      <li>
+        <a href="#probe-info">RELOAD Probe Information Type Registry</a>
+      </li>
+      <li>
+        <a href="#message-extensions">RELOAD Extensions Registry</a>
+      </li>
+      <li>
+        <a href="#services">RELOAD Services Registry</a>
+      </li>
+      <li>
+        <a href="#access-control-policy">CoAP Usage for RELOAD Access Control Policy</a>
+      </li>
+      <li>
+        <a href="#diagnostics-flag">RELOAD Diagnostics Flag</a>
+      </li>
+      <li>
+        <a href="#diagnostic-kind-id">RELOAD Diagnostic Kind ID</a>
+      </li>
+    </ul>
+    <h2><a name="overlay-alg" id="overlay-alg"></a>RELOAD Overlay Algorithm Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="overlay-alg.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-overlay-alg" class="sortable">
+      <thead>
+        <tr>
+          <th>Algorithm Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CHORD-RELOAD</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>EXP-OVERLAY</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>CHORD-SELF-TUNING</td>
+          <td>[<a href="http://www.iana.org/go/rfc7363">RFC7363</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="access-control" id="access-control"></a>RELOAD Access Control Policies</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="access-control.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-access-control" class="sortable">
+      <thead>
+        <tr>
+          <th>Access Policy</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>USER-MATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>NODE-MATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>USER-NODE-MATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>NODE-MULTIPLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>EXP-MATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>NODE-ID-MATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7374">RFC7374</a>]</td>
+        </tr>
+        <tr>
+          <td>USER-CHAIN-ACL</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-p2psip-share-10">RFC-ietf-p2psip-share-10</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="app-id" id="app-id"></a>RELOAD Application-ID</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Marc Petit-Huguenin (primary), Cullen Jennings (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="app-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-app-id-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-32767</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">32768-61440</td>
+          <td>Expert Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-app-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Application-ID</th>
+          <th>Application</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>INVALID</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>1-5059</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5060</td>
+          <td>SIP</td>
+          <td>Reserved for use by SIP Usage</td>
+        </tr>
+        <tr>
+          <td>5061</td>
+          <td>SIP</td>
+          <td>Reserved for use by SIP Usage</td>
+        </tr>
+        <tr>
+          <td>5062-61440</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>61441-65534</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="data-kind-id" id="data-kind-id"></a>RELOAD Data Kind-ID</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Marc Petit-Huguenin (primary), Cullen Jennings (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="data-kind-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-data-kind-id-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00000001-0x7fffffff</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">0x8000000-0xf0000000</td>
+          <td>Expert Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-data-kind-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Kind-ID</th>
+          <th>Kind</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0</td>
+          <td>INVALID</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1</td>
+          <td>SIP-REGISTRATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc7904">RFC7904</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2</td>
+          <td>TURN-SERVICE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x3</td>
+          <td>CERTIFICATE_BY_NODE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x4</td>
+          <td>ACCESS-CONTROL-LIST</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-p2psip-share-10">RFC-ietf-p2psip-share-10</a>]</td>
+        </tr>
+        <tr>
+          <td>0x5-0x9</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x10</td>
+          <td>CERTIFICATE_BY_USER</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x11-0x103</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x104</td>
+          <td>REDIR</td>
+          <td>[<a href="http://www.iana.org/go/rfc7374">RFC7374</a>]</td>
+        </tr>
+        <tr>
+          <td>0x105</td>
+          <td>CoAP-REGISTRATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc7650">RFC7650</a>]</td>
+        </tr>
+        <tr>
+          <td>0x106</td>
+          <td>CoAP-CACHING</td>
+          <td>[<a href="http://www.iana.org/go/rfc7650">RFC7650</a>]</td>
+        </tr>
+        <tr>
+          <td>0x107-0x7ffffffe</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x7fffffff</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x8000000-0xf0000000</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0xf0000001-0xfffffffe</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xffffffff</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="data-model" id="data-model"></a>RELOAD Data Model</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="data-model.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-data-model" class="sortable">
+      <thead>
+        <tr>
+          <th>Data Model</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>INVALID</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>SINGLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>ARRAY</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>DICTIONARY</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>EXP-DATA</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="message-codes" id="message-codes"></a>RELOAD Message Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-message-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Code Value</th>
+          <th>Message Code Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0</td>
+          <td>invalidMessageCode</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1</td>
+          <td>probe_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2</td>
+          <td>probe_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x3</td>
+          <td>attach_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x4</td>
+          <td>attach_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x5-0x6</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x7</td>
+          <td>store_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x8</td>
+          <td>store_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x9</td>
+          <td>fetch_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xa</td>
+          <td>fetch_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xb-0xc</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0xd</td>
+          <td>find_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xe</td>
+          <td>find_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xf</td>
+          <td>join_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x10</td>
+          <td>join_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x11</td>
+          <td>leave_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x12</td>
+          <td>leave_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x13</td>
+          <td>update_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x14</td>
+          <td>update_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x15</td>
+          <td>route_query_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x16</td>
+          <td>route_query_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x17</td>
+          <td>ping_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x18</td>
+          <td>ping_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x19</td>
+          <td>stat_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1a</td>
+          <td>stat_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1b-0x1c</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x1d</td>
+          <td>app_attach_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1e</td>
+          <td>app_attach_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1f-0x20</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x21</td>
+          <td>config_update_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x22</td>
+          <td>config_update_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x23</td>
+          <td>exp_a_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x24</td>
+          <td>exp_a_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x25</td>
+          <td>exp_b_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x26</td>
+          <td>exp_b_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x27</td>
+          <td>path_track_req</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x28</td>
+          <td>path_track_ans</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x29-0x7fff</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x8000-0xfffe</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xffff</td>
+          <td>error</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="error-codes" id="error-codes"></a>RELOAD Error Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="error-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-error-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Code Value</th>
+          <th>Error Code Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0</td>
+          <td>invalidErrorCode</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x2</td>
+          <td>Error_Forbidden</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x3</td>
+          <td>Error_Not_Found</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x4</td>
+          <td>Error_Request_Timeout</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x5</td>
+          <td>Error_Generation_Counter_Too_Low</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x6</td>
+          <td>Error_Incompatible_with_Overlay</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x7</td>
+          <td>Error_Unsupported_Forwarding_Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x8</td>
+          <td>Error_Data_Too_Large</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x9</td>
+          <td>Error_Data_Too_Old</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xa</td>
+          <td>Error_TTL_Exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xb</td>
+          <td>Error_Message_Too_Large</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xc</td>
+          <td>Error_Unknown_Kind</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xd</td>
+          <td>Error_Unknown_Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xe</td>
+          <td>Error_Response_Too_Large</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0xf</td>
+          <td>Error_Config_Too_Old</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x10</td>
+          <td>Error_Config_Too_New</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x11</td>
+          <td>Error_In_Progress</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x12</td>
+          <td>Error_Exp_A</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x13</td>
+          <td>Error_Exp_B</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x14</td>
+          <td>Error_Invalid_Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x15</td>
+          <td>Error_Underlay_Destination_Unreachable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x16</td>
+          <td>Error_Underlay_Time_Exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x17</td>
+          <td>Error_Message_Expired</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x18</td>
+          <td>Error_Upstream_Misrouting</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x19</td>
+          <td>Error_Loop_Detected</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1a</td>
+          <td>Error_TTL_Hops_Exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1b-0x7fff</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x8000-0xffff</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="overlay-link-types" id="overlay-link-types"></a>RELOAD Overlay Link Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="overlay-link-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-overlay-link-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Protocol</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>INVALID-PROTOCOL</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>DTLS-UDP-SR</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>DTLS-UDP-SR-NO-ICE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>TLS-TCP-FH-NO-ICE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>EXP-LINK</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>6-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="overlay-link-protocols" id="overlay-link-protocols"></a>RELOAD Overlay Link Protocol Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="overlay-link-protocols.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-overlay-link-protocols" class="sortable">
+      <thead>
+        <tr>
+          <th>Link Protocol</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TLS</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>EXP-PROTOCOL</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>HIP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7086">RFC7086</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="forwarding-options" id="forwarding-options"></a>RELOAD Forwarding Option Registry</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Marc Petit-Huguenin (primary), Cullen Jennings (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="forwarding-options.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-forwarding-options-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">01-127</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">128-254</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-forwarding-options" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Forwarding Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>invalidForwardingOption</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>exp-forward</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>extensive_routing_mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc7263">RFC7263</a>][<a href="http://www.iana.org/go/rfc7263">RFC7263</a>]</td>
+        </tr>
+        <tr>
+          <td>3-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="probe-info" id="probe-info"></a>RELOAD Probe Information Type Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="probe-info.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-probe-info" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Probe Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>invalidProbeOption</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>responsible_set</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>num_resources</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>uptime</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>exp-probe</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>5-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="message-extensions" id="message-extensions"></a>RELOAD Extensions Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Marc Petit-Huguenin (primary), Cullen Jennings (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-extensions.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-message-extensions" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Extension Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0</td>
+          <td>invalidMessageExtensionType</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x1</td>
+          <td>exp-ext</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+        <tr>
+          <td>0x2</td>
+          <td>Diagnostic_Ping</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x3</td>
+          <td>self_tuning_data</td>
+          <td>[<a href="http://www.iana.org/go/rfc7363">RFC7363</a>]</td>
+        </tr>
+        <tr>
+          <td>0x4-0xfffe</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0xffff</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6940">RFC6940</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="services" id="services"></a>RELOAD Services Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7374">RFC7374</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="services.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-services" class="sortable">
+      <thead>
+        <tr>
+          <th>Namespace</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>turn-server</td>
+          <td>[<a href="http://www.iana.org/go/rfc7374">RFC7374</a>]</td>
+        </tr>
+        <tr>
+          <td>voice-mail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7374">RFC7374</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="access-control-policy" id="access-control-policy"></a>CoAP Usage for RELOAD Access Control Policy</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7650">RFC7650</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="access-control-policy.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-access-control-policy" class="sortable">
+      <thead>
+        <tr>
+          <th>Access Policy</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>URI-NODE-MATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7650">RFC7650</a>]</td>
+        </tr>
+        <tr>
+          <td>URI-MATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7650">RFC7650</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="diagnostics-flag" id="diagnostics-flag"></a>RELOAD Diagnostics Flag</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Assignments must be accompanied by the registration of corresponding 
+values in the RELOAD Diagnostic Kind ID registry. 
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="diagnostics-flag.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-diagnostics-flag" class="sortable">
+      <thead>
+        <tr>
+          <th>Diagnostic Information</th>
+          <th>Diagnostic Flag in dMFlags</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x 0000 0000 0000 0000</td>
+          <td>Reserved All 0s value</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0001</td>
+          <td>Reserved First Bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0002</td>
+          <td>STATUS_INFO</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0004</td>
+          <td>ROUTING_TABLE_SIZE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0008</td>
+          <td>PROCESS_POWER</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0010</td>
+          <td>UPSTREAM_BANDWIDTH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0020</td>
+          <td>DOWNSTREAM_ BANDWIDTH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0040</td>
+          <td>SOFTWARE_VERSION</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0080</td>
+          <td>MACHINE_UPTIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0100</td>
+          <td>APP_UPTIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0200</td>
+          <td>MEMORY_FOOTPRINT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0400</td>
+          <td>DATASIZE_STORED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 0800</td>
+          <td>INSTANCES_STORED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 1000</td>
+          <td>MESSAGES_SENT_RCVD</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 2000</td>
+          <td>EWMA_BYTES_SENT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 4000</td>
+          <td>EWMA_BYTES_RCVD</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0000 8000</td>
+          <td>UNDERLAY_HOP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 0000 0000 0001 0000</td>
+          <td>BATTERY_STATUS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x 8000 0000 0000 0000</td>
+          <td>Reserved Last Bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x ffff ffff ffff ffff</td>
+          <td>Reserved All 1s value</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="diagnostic-kind-id" id="diagnostic-kind-id"></a>RELOAD Diagnostic Kind ID</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Assignments in the 0x0001 to 0x003e range must be accompanied by 
+the registration of corresponding values in the RELOAD Diagnostics Flag 
+registry.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="diagnostic-kind-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-diagnostic-kind-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Diagnostic Kind</th>
+          <th>Code</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0000</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0001</td>
+          <td>STATUS_INFO</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0002</td>
+          <td>ROUTING_TABLE_SIZE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0003</td>
+          <td>PROCESS_POWER</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0004</td>
+          <td>UPSTREAM_BANDWIDTH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0005</td>
+          <td>DOWNSTREAM_ BANDWIDTH</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0006</td>
+          <td>SOFTWARE_VERSION</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0007</td>
+          <td>MACHINE_UPTIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0008</td>
+          <td>APP_UPTIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0009</td>
+          <td>MEMORY_FOOTPRINT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000a</td>
+          <td>DATASIZE_STORED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000b</td>
+          <td>INSTANCES_STORED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000c</td>
+          <td>MESSAGES_SENT_RCVD</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000d</td>
+          <td>EWMA_BYTES_SENT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000e</td>
+          <td>EWMA_BYTES_RCVD</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x000f</td>
+          <td>UNDERLAY_HOP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0010</td>
+          <td>BATTERY_STATUS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0011-0x003e</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0xf000-0xfffe</td>
+          <td>local use (Reserved)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+        <tr>
+          <td>0xffff</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7851">RFC7851</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

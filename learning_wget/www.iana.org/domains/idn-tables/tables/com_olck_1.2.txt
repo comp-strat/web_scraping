@@ -1,0 +1,88 @@
+###############################################################
+#
+# TLD:            COM
+# Script:         Ol Chiki
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Ol Chiki script.
+#
+###############################################################
+U+1C50	# OL CHIKI DIGIT ZERO
+U+1C51	# OL CHIKI DIGIT ONE
+U+1C52	# OL CHIKI DIGIT TWO
+U+1C53	# OL CHIKI DIGIT THREE
+U+1C54	# OL CHIKI DIGIT FOUR
+U+1C55	# OL CHIKI DIGIT FIVE
+U+1C56	# OL CHIKI DIGIT SIX
+U+1C57	# OL CHIKI DIGIT SEVEN
+U+1C58	# OL CHIKI DIGIT EIGHT
+U+1C59	# OL CHIKI DIGIT NINE
+U+1C5A	# OL CHIKI LETTER LA
+U+1C5B	# OL CHIKI LETTER AT
+U+1C5C	# OL CHIKI LETTER AG
+U+1C5D	# OL CHIKI LETTER ANG
+U+1C5E	# OL CHIKI LETTER AL
+U+1C5F	# OL CHIKI LETTER LAA
+U+1C60	# OL CHIKI LETTER AAK
+U+1C61	# OL CHIKI LETTER AAJ
+U+1C62	# OL CHIKI LETTER AAM
+U+1C63	# OL CHIKI LETTER AAW
+U+1C64	# OL CHIKI LETTER LI
+U+1C65	# OL CHIKI LETTER IS
+U+1C66	# OL CHIKI LETTER IH
+U+1C67	# OL CHIKI LETTER INY
+U+1C68	# OL CHIKI LETTER IR
+U+1C69	# OL CHIKI LETTER LU
+U+1C6A	# OL CHIKI LETTER UC
+U+1C6B	# OL CHIKI LETTER UD
+U+1C6C	# OL CHIKI LETTER UNN
+U+1C6D	# OL CHIKI LETTER UY
+U+1C6E	# OL CHIKI LETTER LE
+U+1C6F	# OL CHIKI LETTER EP
+U+1C70	# OL CHIKI LETTER EDD
+U+1C71	# OL CHIKI LETTER EN
+U+1C72	# OL CHIKI LETTER ERR
+U+1C73	# OL CHIKI LETTER LO
+U+1C74	# OL CHIKI LETTER OTT
+U+1C75	# OL CHIKI LETTER OB
+U+1C76	# OL CHIKI LETTER OV
+U+1C77	# OL CHIKI LETTER OH
+U+1C78	# OL CHIKI MU TTUDDAG
+U+1C79	# OL CHIKI GAAHLAA TTUDDAAG
+U+1C7A	# OL CHIKI MU-GAAHLAA TTUDDAAG
+U+1C7B	# OL CHIKI RELAA
+U+1C7C	# OL CHIKI PHAARKAA
+U+1C7D	# OL CHIKI AHAD
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

@@ -1,0 +1,1139 @@
+<!DOCTYPE html> 
+
+<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html -->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+  
+    draft-ietf-sidr-bgpsec-protocol-22
+  
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://www.ietf.org/lib/dt/6.46.0/ptmono/stylesheet.css" rel='stylesheet' type='text/css'>
+    <link href="https://www.ietf.org/lib/dt/6.46.0/ptsans/stylesheet.css" rel='stylesheet' type='text/css'>
+    <link href="https://www.ietf.org/lib/dt/6.46.0/ptserif/stylesheet.css" rel='stylesheet' type='text/css'>
+    
+
+    <link rel="stylesheet" href="https://www.ietf.org/lib/dt/6.46.0/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.ietf.org/lib/dt/6.46.0/ietf/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.ietf.org/lib/dt/6.46.0/ietf/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://www.ietf.org/lib/dt/6.46.0/ietf/css/ietf.css">
+    
+    <style>
+     
+.inline	{ display: inline; }
+
+    </style>
+
+    <!--[if lt IE 9]>
+        <script src="https://www.ietf.org/lib/dt/6.46.0/html5shiv/html5shiv.min.js"></script>
+        <script src="https://www.ietf.org/lib/dt/6.46.0/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    
+  <link rel="alternate" type="application/atom+xml" title="Document changes" href="/feed/document-changes/draft-ietf-sidr-bgpsec-protocol/">
+  <meta name="description" content="BGPsec Protocol Specification (Internet-Draft, 2017)">
+  <script src="https://www.ietf.org/lib/dt/6.46.0/d3/d3.min.js"></script>
+  <script src="https://www.ietf.org/lib/dt/6.46.0/jquery/jquery.min.js"></script>
+  <script src="https://www.ietf.org/lib/dt/6.46.0/ietf/js/document_timeline.js"></script>
+
+
+    
+    <link rel="shortcut icon" href="https://www.ietf.org/lib/dt/6.46.0/ietf/images/ietf-icon-blue3.png">
+    
+    <link rel="apple-touch-icon" href="https://www.ietf.org/lib/dt/6.46.0/ietf/images/apple-touch-icon.png">
+  </head>
+
+  <body  data-group-menu-data-url="/group/groupmenu.json">
+    
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="/">
+	       <img alt="IETF Logo" src="https://www.ietf.org/lib/dt/6.46.0/ietf/images/ietflogo-small-transparent.png">
+	       
+		  
+		  Datatracker
+		  
+	       
+	    </a>
+	  </div>
+
+	  <noscript>
+	    <p class="navbar-text"><small>Enable Javascript for full functionality.</small></p>
+	  </noscript>
+
+	  <div class="collapse navbar-collapse" id="navbar-collapse">
+	    <ul class="hidden-nojs nav navbar-nav">
+              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html -->
+
+
+
+
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+  
+  Groups
+  
+    </a>
+    <ul class="dropdown-menu" role="menu">
+  
+
+  <li><a href="/wg/">Active WGs</a></li>
+  <li><a href="/rg/">Active RGs</a></li>
+  <li class="dropdown-submenu group-menu"><a href="/group/">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html -->
+<ul class="dropdown-menu" role="menu">
+
+  <li>
+    <a href="/ag/">Active AGs</a>
+  </li>
+
+  <li>
+    <a href="/area/">Active Areas</a>
+  </li>
+
+  <li>
+    <a href="/dir/">Active Directorates</a>
+  </li>
+
+  <li>
+    <a href="/program/">Active Programs</a>
+  </li>
+
+  <li>
+    <a href="/team/">Active Teams</a>
+  </li>
+
+</ul>
+ </li>
+
+  <li class="divider hidden-xs"></li>
+  <li class="dropdown-header visible-lg-block">By area/parent</li>
+        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html -->
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-2010">
+    <a href="/wg/#art">Applications and Real-Time</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1008">
+    <a href="/wg/#gen">General</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1052">
+    <a href="/wg/#int">Internet</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1193">
+    <a href="/wg/#ops">Ops &amp; Mgmt</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1249">
+    <a href="/wg/#rtg">Routing</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1260">
+    <a href="/wg/#sec">Security</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1324">
+    <a href="/wg/#tsv">Transport</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-3">
+    <a href="/rg/">IRTF</a>
+  </li>
+
+
+        
+
+  <li class="divider hidden-xs"></li>
+  <li class="dropdown-header hidden-xs">New work</li>
+  <li><a href="/group/chartering/">Chartering groups</a></li>
+  <li><a href="/wg/bofs/">BOFs</a></li>
+
+  <li class="divider hidden-xs"></li>
+  <li class="dropdown-header hidden-xs">Other groups</li>
+  <li><a href="/group/concluded/">Concluded groups</a></li>
+  <li><a href="https://www.ietf.org/list/nonwg.html">Non-WG lists</a></li>
+
+</ul>
+
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+  
+  Documents
+  
+    </a>
+    <ul class="dropdown-menu" role="menu">
+  
+  <li><a href="/doc/">Search</a></li>
+  <li><a href="/submit/">Draft submission</a></li>
+
+  
+    <li><a rel="nofollow" href="/accounts/login/?next=/doc/draft-ietf-sidr-bgpsec-protocol/">Sign in to track docs</a></li>
+  
+
+  
+
+  
+
+  
+  <li class="divider hidden-xs"></li>
+  <li class="dropdown-header hidden-xs">RFC streams</li>
+        <li><a href="/stream/iab/">IAB</a></li>
+        <li><a href="/stream/irtf/">IRTF</a></li>
+        <li><a href="/stream/ise/">ISE</a></li>
+
+</ul>
+
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+  
+  Meetings
+  
+    </a>
+    <ul class="dropdown-menu" role="menu">
+  
+
+  <li><a href="/meeting/agenda/">Agenda</a></li>
+  <li><a href="/meeting/">Materials</a></li>
+  <li><a href="https://www.ietf.org/meeting/proceedings.html">Past proceedings</a></li>
+  <li><a href="/meeting/upcoming">Upcoming</a></li>
+  <li><a href="/meeting/past">Past</a></li>
+  <li><a href="/secr/sreq/">Request a session</a></li>
+  <li><a href="/meeting/requests">Session requests</a></li>
+</ul>
+
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+  
+  Other
+  
+    </a>
+    <ul class="dropdown-menu" role="menu">
+  
+
+  <li><a href="/ipr/">IPR disclosures</a></li>
+  <li><a href="/liaison/">Liaison statements</a></li>
+  <li><a href="/iesg/agenda/">IESG agenda</a></li>
+  <li><a href="/stats/">Statistics</a></li>
+  <li><a href="/group/edu/materials/">Tutorials</a></li>
+  <li class="divider hidden-xs"></li>
+  <li><a href="https://tools.ietf.org/tools/ietfdb/newticket"><span class="fa fa-bug"></span> Report a bug</a></li>
+</ul>
+
+
+  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html -->
+
+
+<li class="dropdown">
+  
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+     User 
+  </a>
+  <ul class="dropdown-menu" role="menu">
+  
+
+  
+    
+      <li><a rel="nofollow" href="/accounts/login/?next=/doc/draft-ietf-sidr-bgpsec-protocol/">Sign in</a></li>
+      <li><a rel="nofollow" href="/accounts/reset/">Password reset</a></li>
+      <li><a href="/accounts/settings/" rel="nofollow">Preferences</a></li>
+    
+  
+
+  
+    <li><a href="/accounts/create/">New account</a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</ul>
+
+
+
+            </ul>
+
+	    <form class="navbar-form navbar-right hidden-xs" action="/doc/search/">
+	      <div class="form-group">
+	        <input class="form-control input-sm" type="text" name="name" placeholder="Document search">
+	        <input type="hidden" name="activedrafts" value="on">
+	        <input type="hidden" name="rfcs" value="on">
+	      </div>
+	    </form>
+	  </div>
+        </div>
+      </nav>
+    
+      <div class="container-fluid">
+        
+        
+         
+          <div class="row">
+	    <div class="col-md-2 visible-md visible-lg leftmenu">
+	      <ul class="nav nav-pills nav-stacked panel panel-default panel-body">
+                <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html -->
+
+
+
+  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html -->
+
+
+<li class="nav-header">
+  
+     User
+  
+
+  
+    
+      <li><a rel="nofollow" href="/accounts/login/?next=/doc/draft-ietf-sidr-bgpsec-protocol/">Sign in</a></li>
+      <li><a rel="nofollow" href="/accounts/reset/">Password reset</a></li>
+      <li><a href="/accounts/settings/" rel="nofollow">Preferences</a></li>
+    
+  
+
+  
+    <li><a href="/accounts/create/">New account</a></li>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+<li class="nav-header">
+  
+  
+  Groups
+  
+
+  <li><a href="/wg/">Active WGs</a></li>
+  <li><a href="/rg/">Active RGs</a></li>
+  <li class="dropdown-submenu group-menu"><a href="/group/">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html -->
+<ul class="dropdown-menu" role="menu">
+
+  <li>
+    <a href="/ag/">Active AGs</a>
+  </li>
+
+  <li>
+    <a href="/area/">Active Areas</a>
+  </li>
+
+  <li>
+    <a href="/dir/">Active Directorates</a>
+  </li>
+
+  <li>
+    <a href="/program/">Active Programs</a>
+  </li>
+
+  <li>
+    <a href="/team/">Active Teams</a>
+  </li>
+
+</ul>
+ </li>
+
+  
+  <li class="nav-header hidden-nojs">By area/parent</li>
+        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html -->
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-2010">
+    <a href="/wg/#art">Applications and Real-Time</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1008">
+    <a href="/wg/#gen">General</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1052">
+    <a href="/wg/#int">Internet</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1193">
+    <a href="/wg/#ops">Ops &amp; Mgmt</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1249">
+    <a href="/wg/#rtg">Routing</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1260">
+    <a href="/wg/#sec">Security</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-1324">
+    <a href="/wg/#tsv">Transport</a>
+  </li>
+
+  <li class="hidden-nojs dropdown-submenu group-menu group-parent-3">
+    <a href="/rg/">IRTF</a>
+  </li>
+
+
+        
+
+  
+  <li class="nav-header">New work</li>
+  <li><a href="/group/chartering/">Chartering groups</a></li>
+  <li><a href="/wg/bofs/">BOFs</a></li>
+
+  
+  <li class="nav-header">Other groups</li>
+  <li><a href="/group/concluded/">Concluded groups</a></li>
+  <li><a href="https://www.ietf.org/list/nonwg.html">Non-WG lists</a></li>
+
+
+
+<li class="nav-header">
+  
+  
+  Documents
+  
+  <li><a href="/doc/">Search</a></li>
+  <li><a href="/submit/">Draft submission</a></li>
+
+  
+    <li><a rel="nofollow" href="/accounts/login/?next=/doc/draft-ietf-sidr-bgpsec-protocol/">Sign in to track docs</a></li>
+  
+
+  
+
+  
+
+  
+  
+  <li class="nav-header">RFC streams</li>
+        <li><a href="/stream/iab/">IAB</a></li>
+        <li><a href="/stream/irtf/">IRTF</a></li>
+        <li><a href="/stream/ise/">ISE</a></li>
+
+
+
+<li class="nav-header">
+  
+  
+  Meetings
+  
+
+  <li><a href="/meeting/agenda/">Agenda</a></li>
+  <li><a href="/meeting/">Materials</a></li>
+  <li><a href="https://www.ietf.org/meeting/proceedings.html">Past proceedings</a></li>
+  <li><a href="/meeting/upcoming">Upcoming</a></li>
+  <li><a href="/meeting/past">Past</a></li>
+  <li><a href="/secr/sreq/">Request a session</a></li>
+  <li><a href="/meeting/requests">Session requests</a></li>
+
+
+<li class="nav-header">
+  
+  
+  Other
+  
+
+  <li><a href="/ipr/">IPR disclosures</a></li>
+  <li><a href="/liaison/">Liaison statements</a></li>
+  <li><a href="/iesg/agenda/">IESG agenda</a></li>
+  <li><a href="/stats/">Statistics</a></li>
+  <li><a href="/group/edu/materials/">Tutorials</a></li>
+  
+  <li><a href="https://tools.ietf.org/tools/ietfdb/newticket"><span class="fa fa-bug"></span> Report a bug</a></li>
+
+
+
+
+              </ul>
+	    </div>
+            <div class="col-md-10" id="content">
+	      <!--[if lt IE 8]>
+	      <p id="browsehappy" class="collapse alert alert-warning alert-dismissible">
+	      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	      <b>You are using an outdated browser.</b> Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+	      </p>
+	      <![endif]-->
+
+        
+        
+  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/doc/document_draft.html -->
+  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/doc/document_top.html -->
+
+<h1>BGPsec Protocol Specification<br><small>draft-ietf-sidr-bgpsec-protocol-22</small></h1>
+
+<ul class="nav nav-tabs" role="tablist">
+  
+    <li  class="active ">
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/">Document</a>
+    </li>
+  
+    <li  class="">
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/ballot/">IESG evaluation record</a>
+    </li>
+  
+    <li  class="">
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/writeup/">IESG writeups</a>
+    </li>
+  
+    <li  class="">
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/email/">Email expansions</a>
+    </li>
+  
+    <li  class="">
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/history/">History</a>
+    </li>
+  
+</ul>
+
+
+  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/doc/revisions_list.html -->
+<ul class="pagination revlist">
+  <li class="disabled"><a><b>Versions</b></a></li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/01/" rel="nofollow" >01</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/02/" rel="nofollow" >02</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/03/" rel="nofollow" >03</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/04/" rel="nofollow" >04</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/05/" rel="nofollow" >05</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/06/" rel="nofollow" >06</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/07/" rel="nofollow" >07</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/08/" rel="nofollow" >08</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/09/" rel="nofollow" >09</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/10/" rel="nofollow" >10</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/11/" rel="nofollow" >11</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/12/" rel="nofollow" >12</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/13/" rel="nofollow" >13</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/14/" rel="nofollow" >14</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/15/" rel="nofollow" >15</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/16/" rel="nofollow" >16</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/17/" rel="nofollow" >17</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/18/" rel="nofollow" >18</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/19/" rel="nofollow" >19</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/20/" rel="nofollow" >20</a>
+    </li>
+  
+    <li >
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/21/" rel="nofollow" >21</a>
+    </li>
+  
+    <li class="active">
+      <a href="/doc/draft-ietf-sidr-bgpsec-protocol/"  >22</a>
+    </li>
+  
+</ul>
+
+  <div id="timeline"></div>
+
+  <table class="table table-condensed">
+    <thead id="message-row">
+       <tr>
+	  
+	  <th colspan="4"></th>
+	  
+       </tr>
+    </thead>
+
+    <tbody class="meta">
+      <tr>
+	<th>Document</th>
+	<th>Type</th>
+	<td class="edit"></td>
+	<td>
+	  
+	    Active Internet-Draft (<a href="/wg/sidr/">sidr WG</a>)
+	    
+	  
+	</td>
+      </tr>
+
+      <tr>
+      	<th></th>
+	<th>Last updated</th>
+	<td class="edit"></td>
+	<td>
+	  2017-01-27
+	  
+	    (latest revision 2017-01-16)
+	  
+	  
+	     
+	  
+	     
+	  
+	</td>
+      </tr>
+
+      
+	<tr>
+	  <th></th>
+	  <th>Replaces</th>
+	  <td class="edit">
+            
+	  </td>
+	  <td>
+	    <a href="/doc/draft-lepinski-bgpsec-protocol/">draft-lepinski-bgpsec-protocol</a>
+	  </td>
+	</tr>
+      
+
+      
+
+      
+
+      <tr>
+        <th></th>
+	<th>Stream</th>
+	<td class="edit">
+          
+	</td>
+	<td>
+	  IETF
+	</td>
+      </tr>
+
+      
+	<tr>
+	  <th></th>
+	  <th>Intended RFC status</th>
+	  <td class="edit">
+            
+	  </td>
+	  <td>
+	    Proposed Standard
+	  </td>
+	</tr>
+      
+
+      <tr>
+        <th></th>
+	<th>Formats</th>
+	<td class="edit"></td>
+	<td>
+	  
+	  
+	    
+	      <a class="btn btn-default btn-xs" href="https://www.ietf.org/id/draft-ietf-sidr-bgpsec-protocol-22.txt">
+		<span class="fa fa-file-text-o"></span>
+		plain text</a>
+	    
+	      <a class="btn btn-default btn-xs" href="https://tools.ietf.org/pdf/draft-ietf-sidr-bgpsec-protocol-22.pdf">
+		<span class="fa fa-file-pdf-o"></span>
+		pdf</a>
+	    
+	      <a class="btn btn-default btn-xs" href="https://tools.ietf.org/html/draft-ietf-sidr-bgpsec-protocol-22">
+		<span class="fa fa-file-code-o"></span>
+		html</a>
+	    
+	      <a class="btn btn-default btn-xs" href="bibtex">
+		<span class="fa fa-file-o"></span>
+		bibtex</a>
+	    
+	  
+	</td>
+      </tr>
+
+      
+      <tr>
+        <th></th>
+        <th>Reviews</th>
+	<td class="edit"></td>
+        <td>
+          
+            <div class="review-request-summary">
+  
+    <a href="/doc/review-ietf-sidr-bgpsec-protocol-21-genart-telechat-housley-2017-01-01/">
+      GENART Telechat Review (of -21):
+      Ready 
+    </a>
+  
+</div>
+
+          
+            <div class="review-request-summary">
+  
+    <a href="/doc/review-ietf-sidr-bgpsec-protocol-21-rtgdir-lc-patel-2017-01-10/">
+      RTGDIR Last Call Review (of -21):
+      Has Issues 
+    </a>
+  
+</div>
+
+          
+            <div class="review-request-summary">
+  
+    <a href="/doc/review-ietf-sidr-bgpsec-protocol-20-secdir-lc-housley-2016-12-08/">
+      SECDIR Last Call Review (of -20):
+      Ready 
+    </a>
+  
+</div>
+
+          
+            <div class="review-request-summary">
+  
+    <a href="/doc/review-ietf-sidr-bgpsec-protocol-20-genart-lc-housley-2016-12-07/">
+      GENART Last Call Review (of -20):
+      Almost Ready 
+    </a>
+  
+</div>
+
+          
+            <div class="review-request-summary">
+  
+    <a href="/doc/review-ietf-sidr-bgpsec-protocol-20-opsdir-lc-brownlee-2016-12-12/">
+      OPSDIR Last Call Review (of -20):
+      Ready 
+    </a>
+  
+</div>
+
+          
+
+          
+            
+              OPSDIR
+            
+            will not review this version
+          
+
+          
+        </td>
+      </tr>
+      
+
+      
+      
+
+    </tbody>
+    <tbody class="meta">
+      <tr>
+	<th>Stream</th>
+	
+	  <th>
+	     
+	     <a href="/help/state/draft/ietf">
+		 WG  state
+	     </a>
+	     
+	  </th>
+	  <td class="edit">
+            
+	  </td>
+	  <td>
+	    Submitted to IESG for Publication
+
+	    
+
+	    
+	  </td>
+	
+      </tr>
+
+      
+
+      
+
+      
+	<tr>
+	  <th></th>
+	  <th>Document shepherd</th>
+	  <td class="edit">
+
+	    
+	  </td>
+	  <td>
+	    Matthias Wählisch
+	  </td>
+	</tr>
+
+        
+	  <tr>
+	    <th></th>
+	    <th>Shepherd write-up</th>
+	    <td class="edit">
+	      
+	    </td>
+	    <td>
+	      
+	        <a class="btn btn-default btn-xs" href="/doc/draft-ietf-sidr-bgpsec-protocol/shepherdwriteup/">Show</a>
+		(last changed 2016-06-23)
+	      
+	    </td>
+	  </tr>
+        
+      
+
+      
+
+    </tbody>
+
+    
+      <tbody class="meta">
+	<tr>
+	  <th>IESG</th>
+	  <th><a href="/help/state/draft/iesg">IESG state</a></th>
+	  <td class="edit">
+	    
+	  </td>
+	  <td>
+	    RFC Ed Queue
+	  </td>
+	</tr>
+
+        
+	  <tr>
+	    <th></th>
+	    <th>Consensus Boilerplate</th>
+	    <td class="edit">
+	      
+	    </td>
+	    <td>
+	      <span title="Whether the document is the result of a community consensus process as defined in RFC 5741">Yes</span>
+	    </td>
+	  </tr>
+        
+
+	<tr>
+	  <th></th>
+	  <th>Telechat date</th>
+	  <td class="edit">
+	    
+	  </td>
+	  <td>
+	    
+	      
+	    
+
+	    
+	  </td>
+	</tr>
+
+	<tr>
+	  <th></th>
+	  <th>Responsible AD</th>
+	  <td class="edit">
+	    
+	  </td>
+	  <td>
+	    Alvaro Retana
+	  </td>
+	</tr>
+
+        
+	  
+	
+
+	<tr>
+	  <th></th>
+	  <th>Send notices to</th>
+	  <td class="edit">
+	    
+	  </td>
+	  <td>
+	    &quot;Matthias Waehlisch&quot; &lt;m.waehlisch@fu-berlin.de&gt;, aretana@cisco.com
+	  </td>
+	</tr>
+
+      </tbody>
+    
+
+    
+    <tbody class="meta">
+      <tr>
+	<th>IANA</th>
+	<th><a href="/help/state/draft/iana-review">IANA review state</a></th>
+	<td class="edit">
+          
+	</td>
+	<td>
+	  Version Changed - Review Needed
+	</td>
+      </tr>
+
+      <tr>
+        <th></th>
+	<th>IANA action state</th>
+	<td class="edit">
+          
+	</td>
+	<td>
+	  RFC-Ed-Ack
+	</td>
+      </tr>
+    </tbody>
+    
+
+    <tbody class="meta">
+      
+	<tr>
+	  <th>RFC Editor</th>
+	  <th><a href="/help/state/draft/rfceditor">RFC Editor state</a></th>
+	  <td class="edit"></td>
+	  <td><a href="https://www.rfc-editor.org/queue2.html#draft-ietf-sidr-bgpsec-protocol">MISSREF</a></td>
+	</tr>
+      
+
+    </tbody>
+  </table>
+
+  <div class="buttonlist">
+    <a class="btn btn-default btn-xs" href="mailto:draft-ietf-sidr-bgpsec-protocol@ietf.org?subject=Mail%20regarding%20draft-ietf-sidr-bgpsec-protocol"><span class="fa fa-envelope-o"></span> Email authors</a>
+    <a class="btn btn-default btn-xs" href="/ipr/search/?submit=draft&amp;id=draft-ietf-sidr-bgpsec-protocol" rel="nofollow"><span class="fa fa-bolt"></span> IPR </a>
+    <a class="btn btn-default btn-xs" href="/doc/draft-ietf-sidr-bgpsec-protocol/references/" rel="nofollow"><span class="fa fa-long-arrow-left"></span> References</a>
+    <a class="btn btn-default btn-xs" href="/doc/draft-ietf-sidr-bgpsec-protocol/referencedby/" rel="nofollow"><span class="fa fa-long-arrow-right"></span> Referenced by</a>
+    <a class="btn btn-default btn-xs" href="https://www.ietf.org/tools/idnits?url=https://www.ietf.org/archive/id/draft-ietf-sidr-bgpsec-protocol-22.txt" rel="nofollow" target="_blank"><span class="fa fa-exclamation"></span> Nits</a>
+    <div class="dropdown inline">
+      <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="ddSearchMenu" data-toggle="dropdown" aria-expanded="true">
+          <span class="fa fa-search"></span> Search lists <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li role="presentation"><a role="menuitem" href="https://mailarchive.ietf.org/arch/search?q=draft-ietf-sidr-bgpsec-protocol" rel="nofollow" target="_blank">IETF Mail Archive</a></li>
+        <li role="presentation"><a role="menuitem" href="https://www.google.com/search?as_q=draft-ietf-sidr-bgpsec-protocol&amp;as_sitesearch=https%3A%2F%2Fmailarchive.ietf.org%2Farch%2Fbrowse%2Fsidr%2F" rel="nofollow" target="_blank">Google</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+  </div>
+
+  
+    <pre>Network Working Group                                   M. Lepinski, Ed.
+Internet-Draft                                                       NCF
+Intended status: Standards Track                          K. Sriram, Ed.
+Expires: July 20, 2017                                              NIST
+                                                        January 16, 2017
+
+                     BGPsec Protocol Specification
+                   draft-ietf-sidr-bgpsec-protocol-22
+
+<span class="m_h">Abstract</span>
+
+   This document describes BGPsec, an extension to the Border Gateway
+   Protocol (BGP) that provides security for the path of autonomous
+   systems (ASes) through which a BGP update message passes.  BGPsec is
+   implemented via an optional non-transitive BGP path attribute that
+   carries digital signatures produced by each autonomous system that
+   propagates the update message.  The digital signatures provide
+   confidence that every AS on the path of ASes listed in the update
+   message has explicitly authorized the advertisement of the route.
+
+<span class="m_h">Status of This Memo</span>
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at http://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as &quot;work in progress.&quot;
+
+   This Internet-Draft will expire on July 20, 2017.
+
+<span class="m_h">Copyright Notice</span>
+
+   Copyright (c) 2017 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust&#39;s Legal
+   Provisions Relating to IETF Documents
+   (http://trustee.ietf.org/license-info) in effect on the date of
+   publication of this document.  Please review these documents
+   carefully, as they describe your rights and restrictions with respect
+
+<span class="m_ftr">Lepinski &amp; Sriram         Expires July 20, 2017                 [Page 1]</span>
+<span class="m_hdr">Internet-Draft               BGPsec Protocol                January 2017</span>
+
+   to this document.  Code Components extracted from this document must
+   include Simplified BSD License text as described in Section 4.e of
+   the Trust Legal Provisions and are provided without warranty as
+   described in the Simplified BSD License.
+
+<span class="m_h">Table of Contents</span>
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+     1.1.  Requirements Language . . . . . . . . . . . . . . . . . .   3
+   2.  BGPsec Negotiation  . . . . . . . . . . . . . . . . . . . . .   3
+     2.1.  The BGPsec Capability . . . . . . . . . . . . . . . . . .   3
+     2.2.  Negotiating BGPsec Support  . . . . . . . . . . . . . . .   4
+   3.  The BGPsec_Path Attribute . . . . . . . . . . . . . . . . . .   6
+     3.1.  Secure_Path . . . . . . . . . . . . . . . . . . . . . . .   8
+     3.2.  Signature_Block . . . . . . . . . . . . . . . . . . . . .  10
+   4.  BGPsec Update Messages  . . . . . . . . . . . . . . . . . . .  11
+     4.1.  General Guidance  . . . . . . . . . . . . . . . . . . . .  11
+     4.2.  Constructing the BGPsec_Path Attribute  . . . . . . . . .  13
+     4.3.  Processing Instructions for Confederation Members . . . .  18
+     4.4.  Reconstructing the AS_PATH Attribute  . . . . . . . . . .  19
+   5.  Processing a Received BGPsec Update . . . . . . . . . . . . .  21
+     5.1.  Overview of BGPsec Validation . . . . . . . . . . . . . .  22
+     5.2.  Validation Algorithm  . . . . . . . . . . . . . . . . . .  23
+   6.  Algorithms and Extensibility  . . . . . . . . . . . . . . . .  27
+     6.1.  Algorithm Suite Considerations  . . . . . . . . . . . . .  27
+     6.2.  Considerations for the SKI Size . . . . . . . . . . . . .  28
+     6.3.  Extensibility Considerations  . . . . . . . . . . . . . .  28
+   7.  Operations and Management Considerations  . . . . . . . . . .  29
+   8.  Security Considerations . . . . . . . . . . . . . . . . . . .  33
+     8.1.  Security Guarantees . . . . . . . . . . . . . . . . . . .  33
+     8.2.  On the Removal of BGPsec Signatures . . . . . . . . . . .  34
+     8.3.  Mitigation of Denial of Service Attacks . . . . . . . . .  35
+     8.4.  Additional Security Considerations  . . . . . . . . . . .  36
+   9.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  37
+   10. Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  39
+     10.1.  Authors  . . . . . . . . . . . . . . . . . . . . . . . .  39
+     10.2.  Acknowledgements . . . . . . . . . . . . . . . . . . . .  40
+   11. References  . . . . . . . . . . . . . . . . . . . . . . . . .  40
+</pre>
+
+
+    
+      <a class="btn btn-default btn-block" href="?include_text=1"><span class="fa fa-caret-down"></span> Show full document text</a>
+    
+
+  
+
+        
+        
+	    </div>
+          </div>
+        
+
+	<hr>
+	  <div class="col-md-12">
+	    <div class="text-center padded">
+	        <a href="https://www.internetsociety.org/" class="padded">ISOC</a>
+	        <a href="https://trustee.ietf.org/" class="padded">IETF&nbsp;Trust</a>
+	        <a href="https://www.rfc-editor.org/" class="padded">RFC&nbsp;Editor</a>
+	        <a href="https://www.irtf.org/" class="padded">IRTF</a>
+	        <a href="https://www.ietf.org/iesg/" class="padded">IESG</a>
+	        <a href="https://www.ietf.org/" class="padded">IETF</a>
+	        <a href="https://www.iab.org/" class="padded">IAB</a>
+	        <a href="https://iaoc.ietf.org" class="padded">IASA&nbsp;&amp;&nbsp;IAOC</a>
+	        <a href="https://tools.ietf.org/" class="padded">IETF&nbsp;Tools</a>
+	        <a href="https://www.iana.org/" class="padded">IANA</a>
+	    </div>
+	  </div>
+
+        <footer class="row">
+	  <div class="col-md-12">
+	    <div class="text-center">
+	      <p class="small text-muted">
+	        
+		  <a href="/release/about">About</a> |
+	          IETF Datatracker |
+	          <a href="/release/6.46.0/">Version 6.46.0</a> |
+	          2017-02-24 |
+	        
+	        <a href="https://tools.ietf.org/tools/ietfdb/newticket">Report a bug <span class="fa fa-bug"></span></a>
+		<br>
+		  Python 2.7.12 |
+		  Django 1.10.5
+	      </p>
+	    </div>
+	  </div>
+        </footer>
+        
+<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html -->
+
+
+      </div>
+      <script src="https://www.ietf.org/lib/dt/6.46.0/jquery/jquery.min.js"></script>
+      
+      <script>$(".visible-nojs").removeClass("visible-nojs");</script>
+      <script>$(".hidden-nojs").removeClass("hidden-nojs");</script>
+      <script src="https://www.ietf.org/lib/dt/6.46.0/jquery.cookie/jquery.cookie.js"></script>
+      <script src="https://www.ietf.org/lib/dt/6.46.0/ietf/bootstrap/js/bootstrap.min.js"></script>
+      <script src="https://www.ietf.org/lib/dt/6.46.0/ietf/js/ietf.js"></script>
+      
+      
+  </body>
+</html>
+

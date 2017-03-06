@@ -1,0 +1,72 @@
+
+IDN Table for the Greek Language
+
+TLD: .sap
+
+Language Tag: el
+
+Language Description: Greek
+
+Version: 1.0
+
+Effective Date: 2012-04-02
+
+Registry: SAP AG
+
+The .sap Greek Language IDN implementation provides a feature that mitigates homographic attacks by blocking a name from being registered if a similar name is already registered.
+
+For every registered Greek language IDN a canonical string will be computed and stored in the SRS database. The canonical string is produced by mapping every character in the IDN U-label to the corresponding canonical character as specified in the character table below. Once a Greek language IDN is registered, other domain names that map to the same canonical string will be unavailable for registration. Conversely, if the US ASCII registration exists then the Greek IDN label that maps to the identical canonical string is unavailable.
+
+The table below lists the characters allowed in the Unicode representation of IDNs associated with the Greek language. The second column shows the canonical code point corresponding to the first column. The third column lists the other variants that also map to the same canonical character in the second column. Columns are delimited by semicolons. The "#" symbol denotes the start of a comment that continues to the end of line.
+
+The table presented here is in compliance with the ICANN Guidelines for the Implementation of Internationalized Domain Names Version 3.0 and is intended for publication in the IANA Repository of TLD IDN Practices, for the information of prospective holders of domains in .sap and for the users of resources within those domains. To avoid user confusion due to differing practices across TLD registries, SAP AG has created this IDN table based upon ICANN's "Study of the Issues Present in the Registration of IDN TLDs in Greek Characters," see http://archive.icann.org/en/topics/new-gtlds/greek-vip-issues-report-07oct11-en.pdf. Even though the study is about Greek character TLDs, its findings should also be used for second level domain names for consistency reasons. Especially both the accent marks and the final sigma have to be included in the allowed for registrations characters since they are paramount for the proper typing of so many words in the Greek language. Additionally any variations of the characters of a specific string submitted for registration should be reserved only for the same registrant.
+
+Since ICANN's study on Greek characters is not yet complete (in particular regarding the issues that exist between scripts, especially between the Greek, Cyrillic and Latin), the SAP AG is ready to adjust its table, when further information is available.
+
+U+002D;U+002D                      # HYPHEN-MINUS -;-
+U+0030;U+0030                      # DIGIT ZERO 0;0
+U+0031;U+0031                      # DIGIT ONE 1;1
+U+0032;U+0032                      # DIGIT TWO 2;2
+U+0033;U+0033                      # DIGIT THREE 3;3
+U+0034;U+0034                      # DIGIT FOUR 4;4
+U+0035;U+0035                      # DIGIT FIVE 5;5
+U+0036;U+0036                      # DIGIT SIX 6;6
+U+0037;U+0037                      # DIGIT SEVEN 7;7
+U+0038;U+0038                      # DIGIT EIGHT 8;8
+U+0039;U+0039                      # DIGIT NINE 9;9
+U+0390;U+0069;U+03AF,U+03B9,U+03CA # GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS ΐ;i;ί,ι,ϊ
+U+03AC;U+0061;U+03B1               # GREEK SMALL LETTER ALPHA WITH TONOS ά;a;α
+U+03AD;U+0065;U+03B5               # GREEK SMALL LETTER EPSILON WITH TONOS έ;e;ε
+U+03AE;U+006E;U+03B7               # GREEK SMALL LETTER ETA WITH TONOS ή;n;η
+U+03AF;U+0069;U+0390,U+03B9,U+03CA # GREEK SMALL LETTER IOTA WITH TONOS ί;i;ΐ,ι,ϊ
+U+03B0;U+0075;U+03C5,U+03CB,U+03CD # GREEK SMALL LETTER UPSILON WITH DIALYTIKA AND TONOS ΰ;u;υ,ϋ,ύ
+U+03B1;U+0061;U+03AC               # GREEK SMALL LETTER ALPHA α;a;ά
+U+03B2;U+0062                      # GREEK SMALL LETTER BETA β;b
+U+03B3;U+03B3                      # GREEK SMALL LETTER GAMMA γ;γ
+U+03B4;U+03B4                      # GREEK SMALL LETTER DELTA δ;δ
+U+03B5;U+0065;U+03AD               # GREEK SMALL LETTER EPSILON ε;e;έ
+U+03B6;U+007A                      # GREEK SMALL LETTER ZETA ζ;z
+U+03B7;U+006E;U+03AE               # GREEK SMALL LETTER ETA η;n;ή
+U+03B8;U+03B8                      # GREEK SMALL LETTER THETA θ;θ
+U+03B9;U+0069;U+0390,U+03AF,U+03CA # GREEK SMALL LETTER IOTA ι;i;ΐ,ί,ϊ
+U+03BA;U+006B                      # GREEK SMALL LETTER KAPPA κ;k
+U+03BB;U+03BB                      # GREEK SMALL LETTER LAMDA λ;λ
+U+03BC;U+006D                      # GREEK SMALL LETTER MU μ;m
+U+03BD;U+0076                      # GREEK SMALL LETTER NU ν;v
+U+03BE;U+03BE                      # GREEK SMALL LETTER XI ξ;ξ
+U+03BF;U+006F;U+03CC               # GREEK SMALL LETTER OMICRON ο;o;ό
+U+03C0;U+03C0                      # GREEK SMALL LETTER PI π;π
+U+03C1;U+0070                      # GREEK SMALL LETTER RHO ρ;p
+U+03C2;U+03C3;U+03C3               # GREEK SMALL LETTER FINAL SIGMA ς;σ;σ
+U+03C3;U+03C3;U+03C2               # GREEK SMALL LETTER SIGMA σ;σ;ς
+U+03C4;U+0074                      # GREEK SMALL LETTER TAU τ;t
+U+03C5;U+0075;U+03B0,U+03CB,U+03CD # GREEK SMALL LETTER UPSILON υ;u;ΰ,ϋ,ύ
+U+03C6;U+03C6                      # GREEK SMALL LETTER PHI φ;φ
+U+03C7;U+0078                      # GREEK SMALL LETTER CHI χ;x
+U+03C8;U+03C8                      # GREEK SMALL LETTER PSI ψ;ψ
+U+03C9;U+03C9;U+03CE               # GREEK SMALL LETTER OMEGA ω;ω;ώ
+U+03CA;U+0069;U+0390,U+03AF,U+03B9 # GREEK SMALL LETTER IOTA WITH DIALYTIKA ϊ;i;ΐ,ί,ι
+U+03CB;U+0075;U+03B0,U+03C5,U+03CD # GREEK SMALL LETTER UPSILON WITH DIALYTIKA ϋ;u;ΰ,υ,ύ
+U+03CC;U+006F;U+03BF               # GREEK SMALL LETTER OMICRON WITH TONOS ό;o;ο
+U+03CD;U+0075;U+03B0,U+03C5,U+03CB # GREEK SMALL LETTER UPSILON WITH TONOS ύ;u;ΰ,υ,ϋ
+U+03CE;U+03C9;U+03C9               # GREEK SMALL LETTER OMEGA WITH TONOS ώ;ω;ω

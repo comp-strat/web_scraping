@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Multicast Ping Protocol Parameters</title>
+  </head>
+  <body>
+    <h1>Multicast Ping Protocol Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2011-10-31</dd>
+      <dt>Last Updated</dt>
+      <dd>2011-12-09</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="multicast-ping.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="multicast-ping.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="multicast-ping.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#message-types">Multicast Ping Protocol Message Types</a>
+      </li>
+      <li>
+        <a href="#option-types">Multicast Ping Protocol Option Types</a>
+      </li>
+    </ul>
+    <h2><a name="message-types" id="message-types"></a>Multicast Ping Protocol Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-message-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-64</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65</td>
+          <td>Echo Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">66-72</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">73</td>
+          <td>Init</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">74-80</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">81</td>
+          <td>Echo Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">82</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">83</td>
+          <td>Server Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">84-253</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">254-255</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="option-types" id="option-types"></a>Multicast Ping Protocol Option Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="option-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-option-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Version</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Client ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Sequence Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Client Timestamp</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Multicast Group</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Option Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Server Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Deprecated</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Deprecated</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>TTL</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Multicast Prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Session ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Server Timestamp</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13-65531</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65532-65535</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc6450">RFC6450</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

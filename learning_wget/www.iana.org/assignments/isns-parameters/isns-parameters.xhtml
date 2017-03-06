@@ -1,0 +1,906 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Internet Storage Name Service (iSNS) Parameters</title>
+  </head>
+  <body>
+    <h1>Internet Storage Name Service (iSNS) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2005-01-19</dd>
+      <dt>Last Updated</dt>
+      <dd>2005-10-25</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isns-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="isns-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="isns-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#isns-parameters-1">Block Storage Protocols</a>
+      </li>
+      <li>
+        <a href="#isns-parameters-2">Standard iSNS Attributes</a>
+      </li>
+    </ul>
+    <h2><a name="isns-parameters-1" id="isns-parameters-1"></a>Block Storage Protocols</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert review (by IPS WG Chairperson or by Designated Expert)</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>David Black</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isns-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-isns-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Entity Protocol Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>No Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>iSCSI</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>iFCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="isns-parameters-2" id="isns-parameters-2"></a>Standard iSNS Attributes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="isns-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-isns-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Attribute</th>
+          <th>Length</th>
+          <th>Reg Key</th>
+          <th>Query Key</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Delimiter</td>
+          <td>0</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Entity Identifier (EID)</td>
+          <td>4-256</td>
+          <td>1</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Entity Protocol</td>
+          <td>4</td>
+          <td>1</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Management IP Address</td>
+          <td>16</td>
+          <td>1</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Timestamp</td>
+          <td>8</td>
+          <td>--</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Protocol Version Range</td>
+          <td>4</td>
+          <td>1</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Registration Period</td>
+          <td>4</td>
+          <td>1</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Entity Index</td>
+          <td>4</td>
+          <td>1</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Entity Next Index</td>
+          <td>4</td>
+          <td>--</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>9-10</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Entity ISAKMP Phase-1</td>
+          <td>var</td>
+          <td>1</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Entity Certificate</td>
+          <td>var</td>
+          <td>1</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>13-15</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Portal IP Address</td>
+          <td>16</td>
+          <td>1</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Portal TCP/UDP Port</td>
+          <td>4</td>
+          <td>1</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Portal Symbolic Name</td>
+          <td>4-256</td>
+          <td>16&amp;17</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>ESI Interval</td>
+          <td>4</td>
+          <td>16&amp;17</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>ESI Port</td>
+          <td>4</td>
+          <td>16&amp;17</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>Portal Index</td>
+          <td>4</td>
+          <td>16&amp;17</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>SCN Port</td>
+          <td>4</td>
+          <td>16&amp;17</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>Portal Next Index</td>
+          <td>4</td>
+          <td>--</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>25-26</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td>Portal Security Bitmap</td>
+          <td>4</td>
+          <td>16&amp;17</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>Portal ISAKMP Phase-1</td>
+          <td>var</td>
+          <td>16&amp;17</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>Portal ISAKMP Phase-2</td>
+          <td>var</td>
+          <td>16&amp;17</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>Portal Certificate</td>
+          <td>var</td>
+          <td>16&amp;17</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>iSCSI Name</td>
+          <td>4-224</td>
+          <td>1</td>
+          <td>1|16&amp;17|32|33</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>33</td>
+          <td>iSCSI Node Type</td>
+          <td>4</td>
+          <td>32</td>
+          <td>1|16&amp;17|32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>34</td>
+          <td>iSCSI Alias</td>
+          <td>4-256</td>
+          <td>32</td>
+          <td>1|16&amp;17|32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>35</td>
+          <td>iSCSI SCN Bitmap</td>
+          <td>4</td>
+          <td>32</td>
+          <td>1|16&amp;17|32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>36</td>
+          <td>iSCSI Node Index</td>
+          <td>4</td>
+          <td>32</td>
+          <td>1|16&amp;17|32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>37</td>
+          <td>WWNN Token</td>
+          <td>8</td>
+          <td>32</td>
+          <td>1|16&amp;17|32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>38</td>
+          <td>iSCSI Node Next Index</td>
+          <td>4</td>
+          <td>--</td>
+          <td>1|16&amp;17|32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>39-41</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>42</td>
+          <td>iSCSI AuthMethod</td>
+          <td>var</td>
+          <td>32</td>
+          <td>1|16&amp;17|32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>43-47</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>48</td>
+          <td>PG iSCSI Name</td>
+          <td>4-224</td>
+          <td>32|16&amp;17</td>
+          <td>1|16&amp;17|32|52</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>49</td>
+          <td>PG Portal IP Addr</td>
+          <td>16</td>
+          <td>32|16&amp;17</td>
+          <td>1|16&amp;17|32|52</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>50</td>
+          <td>PG Portal TCP/UDP Port</td>
+          <td>4</td>
+          <td>32|16&amp;17</td>
+          <td>1|16&amp;17|32|52</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>51</td>
+          <td>PG Tag (PGT)</td>
+          <td>4</td>
+          <td>32|16&amp;17</td>
+          <td>1|16&amp;17|32|52</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>52</td>
+          <td>PG Index</td>
+          <td>4</td>
+          <td>32|16&amp;17</td>
+          <td>1|16&amp;17|32|52</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>53</td>
+          <td>PG Next Index</td>
+          <td>4</td>
+          <td>--</td>
+          <td>1|16&amp;17|32|52</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>54-63</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>64</td>
+          <td>FC Port Name WWPN</td>
+          <td>8</td>
+          <td>1</td>
+          <td>1|16&amp;17|64|66|96|128</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>65</td>
+          <td>Port ID</td>
+          <td>4</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>66</td>
+          <td>FC Port Type</td>
+          <td>4</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>67</td>
+          <td>Symbolic Port Name</td>
+          <td>4-256</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>68</td>
+          <td>Fabric Port Name</td>
+          <td>8</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>69</td>
+          <td>Hard Address</td>
+          <td>4</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>70</td>
+          <td>Port IP-Address</td>
+          <td>16</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>71</td>
+          <td>Class of Service</td>
+          <td>4</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>72</td>
+          <td>FC-4 Types</td>
+          <td>32</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>73</td>
+          <td>FC-4 Descriptor</td>
+          <td>4-256</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>74</td>
+          <td>FC-4 Features</td>
+          <td>128</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>75</td>
+          <td>iFCP SCN bitmap</td>
+          <td>4</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>76</td>
+          <td>Port Role</td>
+          <td>4</td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>77</td>
+          <td>Permanent Port Name</td>
+          <td>8</td>
+          <td>--</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>78-94</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>95</td>
+          <td>FC-4 Type Code</td>
+          <td>4</td>
+          <td>--</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>96</td>
+          <td>FC Node Name WWNN</td>
+          <td>8</td>
+          <td>64</td>
+          <td>1|16&amp;17|64|96</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>97</td>
+          <td>Symbolic Node Name</td>
+          <td>4-256</td>
+          <td>96</td>
+          <td>64|96</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>98</td>
+          <td>Node IP-Address</td>
+          <td>16</td>
+          <td>96</td>
+          <td>64|96</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>99</td>
+          <td>Node IPA</td>
+          <td>8</td>
+          <td>96</td>
+          <td>64|96</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>101</td>
+          <td>Proxy iSCSI Name</td>
+          <td>4-256</td>
+          <td>96</td>
+          <td>64|96</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>102-127</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128</td>
+          <td>Switch Name</td>
+          <td>8</td>
+          <td>128</td>
+          <td>128</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>129</td>
+          <td>Preferred ID</td>
+          <td>4</td>
+          <td>128</td>
+          <td>128</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>130</td>
+          <td>Assigned ID</td>
+          <td>4</td>
+          <td>128</td>
+          <td>128</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>131</td>
+          <td>Virtual_Fabric_ID</td>
+          <td>4-256</td>
+          <td>128</td>
+          <td>128</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>132-255</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>256</td>
+          <td>iSNS Server Vendor OUI</td>
+          <td>4</td>
+          <td>--</td>
+          <td>SOURCE Attribute</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>257-384</td>
+          <td>Vendor-Spec iSNS Srvr</td>
+          <td></td>
+          <td>--</td>
+          <td>SOURCE Attribute</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>385-512</td>
+          <td>Vendor-Spec Entity</td>
+          <td></td>
+          <td>1</td>
+          <td>1|2|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>513-640</td>
+          <td>Vendor-Spec Portal</td>
+          <td></td>
+          <td>16&amp;17</td>
+          <td>1|16&amp;17|32|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>641-768</td>
+          <td>Vendor-Spec iSCSI Node</td>
+          <td></td>
+          <td>32</td>
+          <td>16&amp;17|32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>769-896</td>
+          <td>Vendor-Spec FC Port Name</td>
+          <td></td>
+          <td>64</td>
+          <td>1|16&amp;17|64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>897-1024</td>
+          <td>Vendor-Spec FC Node Name</td>
+          <td></td>
+          <td>96</td>
+          <td>64|96</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>1025-1280</td>
+          <td>Vendor-Specific DDS</td>
+          <td></td>
+          <td>2049</td>
+          <td>2049</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>1281-1536</td>
+          <td>Vendor-Specific DD</td>
+          <td></td>
+          <td>2065</td>
+          <td>2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>1537-2048</td>
+          <td>Other Vendor-Specific</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2049</td>
+          <td>DD_Set ID</td>
+          <td>4</td>
+          <td>2049</td>
+          <td>1|32|64|2049|2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2050</td>
+          <td>DD_Set Sym Name</td>
+          <td>4-256</td>
+          <td>2049</td>
+          <td>2049</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2051</td>
+          <td>DD_Set Status</td>
+          <td>4</td>
+          <td>2049</td>
+          <td>2049</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2052</td>
+          <td>DD_Set_Next_ID</td>
+          <td>4</td>
+          <td>--</td>
+          <td>2049</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2053-2064</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2065</td>
+          <td>DD_ID</td>
+          <td>4</td>
+          <td>2049</td>
+          <td>1|32|64|2049|2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2066</td>
+          <td>DD_Symbolic Name</td>
+          <td>4-256</td>
+          <td>2065</td>
+          <td>2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2067</td>
+          <td>DD_Member iSCSI Index</td>
+          <td>4</td>
+          <td>2065</td>
+          <td>2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2068</td>
+          <td>DD_Member iSCSI Name</td>
+          <td>4-224</td>
+          <td>2065</td>
+          <td>2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2069</td>
+          <td>DD_Member FC Port Name</td>
+          <td>8</td>
+          <td>2065</td>
+          <td>2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2070</td>
+          <td>DD_Member Portal Index</td>
+          <td>4</td>
+          <td>2065</td>
+          <td>2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2071</td>
+          <td>DD_Member Portal IP Addr</td>
+          <td>16</td>
+          <td>2065</td>
+          <td>2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2072</td>
+          <td>DD_Member Portal TCP/UDP</td>
+          <td>4</td>
+          <td>2065</td>
+          <td>2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2073-2077</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2078</td>
+          <td>DD_Features</td>
+          <td>4</td>
+          <td>2065</td>
+          <td>2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2079</td>
+          <td>DD_ID Next ID</td>
+          <td>4</td>
+          <td>--</td>
+          <td>2065</td>
+          <td>[<a href="http://www.iana.org/go/rfc4171">RFC4171</a>]</td>
+        </tr>
+        <tr>
+          <td>2080-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

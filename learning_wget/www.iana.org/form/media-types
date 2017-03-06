@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Application for Media Type</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+<div id="form">
+
+
+    <h1>Application for a Media Type</h1>
+
+<p>We recommend that you read the following RFCs before proceeding with
+this application.  It is important that you understand the application
+process and requirements completely.  These documents are the standards for
+Media Types:</p>
+
+<ul>
+<li><a href="/go/rfc2045">RFC 2045</a> - MIME formats and encodings</li>
+<li><a href="/go/rfc2046">RFC 2046</a> - Definition of media types</li>
+<li><a href="/go/rfc2077">RFC 2077</a> - Model top-level media type</li>
+<li><a href="/go/rfc7303">RFC 7303</a> - XML Media Types</li>
+<li><a href="/go/rfc6657">RFC 6657</a> - Update to MIME regarding "charset" Parameter Handling in Textual Media Types</li>
+<li><a href="/go/rfc6838">RFC 6838</a> - Media type specifications and registration procedures</li>
+</ul>
+
+        <div class="form_sheet">
+        <form action="/form/media-types" method=post>
+
+            
+
+        <fieldset>
+
+        <div class="form-field">
+        <label for="contact_name">Your Full Name<span class="required">Required</span></label>
+        <div class="input">
+        <input name="contact_name" value="">
+        
+        </div>
+        </div>
+
+        <div class="form-field">
+        <label for="contact_email">Your E-mail<span class="required">Required</span></label>
+        <div class="input">
+        <input name="contact_email" value="">
+        
+        
+        
+        </div>
+        </div>
+
+        </fieldset>
+
+        <div class="instructions">
+            <p>Please read the following questions carefully and provide complete answers. Write "N/A" for
+            mandatory answers that are not applicable.</p>
+        </div>
+
+        <!-- Media Type Name -->
+        <div class="form-field">
+        <label for="medianame">Type Name<span class="required">Required</span></label>
+
+        <div class="input">
+            <p>What is the media type name?</p>
+                <select name="medianame">
+                    <option >application</option>
+                    <option >audio</option>
+                    <option >font</option>
+                    <option >image</option>
+                    <option >message</option>
+                    <option >model</option>
+                    <option >multipart</option>
+                    <option >text</option>
+                    <option >video</option>
+                </select>
+            
+            <p>See <a href="/go/rfc2046">RFC 2046</a> §3, and
+    <a href="/go/rfc2077">RFC 2077</a>.
+        </div>
+        </div>
+
+        <!-- Sub Type Name -->
+        <div class="form-field">
+        <label for="subtype">Subtype Name<span class="required">Required</span></label>
+
+        <div class="input">
+            <p>What is the media subtype name?</p>
+                <select name="subtype">
+        <option value="vnd." >Vendor Tree (vnd prefix)</option>
+        <option value="" >Standards Tree (no prefix)</option>
+        <option value="prs." >Personal Tree (prs prefix)</option>
+        </select><input type="text" name="shortname" value="" size="40" maxlength="60">
+
+	
+	
+
+            <p>Review the <a href="http://www.iana.org/assignments/media-types">existing subtype names</a>.
+                See also <a href="/go/rfc2046">RFC 2046</a>, and <a href="/go/rfc6838">RFC 6838</a>, §3 and §4.2.
+    Note:  Registrations in the standards tree must be approved by the IESG or
+    must correspond to a formal publication by a recognized standards
+    body.</p>
+        </div>
+        </div>
+
+        <!-- Required Parameters -->
+        <div class="form-field">
+        <label for="subtype">Required Parameters<span class="required">Required</span></label>
+
+        <div class="input">
+            <p>Describe the required parameters.</p>
+                <textarea name="mediatypes" rows="4" cols="72"></textarea>
+                
+
+            <p>See <a href="/go/rfc2046">RFC 2046</a> §1, and <a href="/go/rfc6838">RFC 6838</a> §4.3.</p>
+        </div>
+        </div>
+
+
+        <!-- Optional Parameters -->
+        <div class="form-field">
+        <label for="optparameters">Optional Parameters<span class="required">Required</span></label>
+
+        <div class="input">
+            <p>Describe the optional parameters.</p>
+                <textarea name="optparameters" rows="4" cols="72"></textarea>
+                
+
+            <p>See <a href="/go/rfc2046">RFC 2046</a> §1, and <a href="/go/rfc6838">RFC 6838</a> §4.3.</p>
+        </div>
+        </div>
+
+
+
+
+        <!-- Encoding Considerations -->
+        <div class="form-field">
+        <label for="encoding">Encoding Considerations<span class="required">Required</span></label>
+
+        <div class="input">
+            <p>
+                <input type="radio" name="encoding" value="7bit" > 7-bit text<br>
+                <input type="radio" name="encoding" value="8bit" > 8-bit text (this media type may require encoding on transports not capable of handling 8-bit text)<br>
+                <input type="radio" name="encoding" value="binary" > binary (this media type may require encoding on transports not capable of handling binary)<br>
+                <input type="radio" name="encoding" value="transport_provided" > framed (transport must provide framing information)
+                </p>
+                
+                <p>Additional notes (optional):</p>
+                <textarea name="encoding_notes"></textarea>
+            <p>See <a href="/go/rfc2045">RFC 2045</a> §6, and <a href="/go/rfc6838">RFC 6838</a> §4.8.</p>
+        </div>
+        </div>
+
+        <!-- Security Considerations -->
+        <div class="form-field">
+        <label for="security">Security Considerations<span class="required">Required</span></label>
+        <div class="input">
+            <p>Provide a discussion of the security considerations.</p>
+                <textarea name="security" rows="4" cols="72"></textarea>
+                
+            <p>See <a href="/go/rfc6838">RFC 6838</a> §4.6</p>
+        </div>
+        </div>
+
+
+        <!-- Interoperability Considerations -->
+        <div class="form-field">
+        <label for="interop">Interoperability Considerations<span class="required">Required</span></label>
+        <div class="input">
+            <p>Provide a discussion of the interoperability considerations.</p>
+            <textarea name="interop" rows="4" cols="72"></textarea>
+            
+            <p>See <a href="/go/rfc6838">RFC 6838</a> §4.5</p>
+        </div>
+        </div>
+
+        <!-- Published specification -->
+        <div class="form-field">
+        <label for="spec">Published specification<span class="required">Required</span></label>
+        <div class="input">
+            <p>Provide references to the published specification.</p>
+            <textarea name="spec" rows="4" cols="72"></textarea>
+            
+            <p>See <a href="/go/rfc6838">RFC 6838</a> §4.10</p>
+        </div>
+        </div>
+
+        <!-- Applications which use this media type -->
+        <div class="form-field">
+        <label for="apps">Application Usage<span class="required">Required</span></label>
+        <div class="input">
+            <p>Describe applications which use this media type.</p>
+            <textarea name="apps" rows="4" cols="72"></textarea>
+            
+            <p>See <a href="/go/rfc6838">RFC 6838</a> §4.5</p>
+        </div>
+        </div>
+
+        <!-- Fragment Identifiers -->
+        <div class="form-field">
+        <label for="fragment_identifier">Fragment Identifier Considerations</label>
+        <div class="input">
+            <textarea name="fragment_identifier" rows="4" cols="72"></textarea>
+	        
+            <p>See <a href="/go/rfc6838">RFC 6838</a> §4.11</p>
+        </div>
+        </div>
+
+        <!-- Restrictions on Usage -->
+        <div class="form-field">
+        <label for="usage_restrictions">Restrictions on Usage</label>
+        <div class="input">
+            <textarea name="usage_restrictions" rows="4" cols="72"></textarea>
+	        
+            <p>See <a href="/go/rfc6838">RFC 6838</a> §4.9</p>
+        </div>
+        </div>
+
+        <!-- Provisional Registration -->
+        <div class="form-field">
+        <label for="provisional_registration">Provisional Registrations</label>
+        <div class="input">
+            <p>Standards tree applications only.</p>
+            <textarea name="provisional_registration" rows="4" cols="72"></textarea>
+	        
+            <p>See <a href="/go/rfc6838">RFC 6838</a> §5.2.1</p>
+        </div>
+        </div>
+
+
+    <!-- Additional Information -->
+        <div class="form-field">
+        <label>Additional Information<span class="required">Required</span></label>
+        <div class="input">
+            <p>See <a href="/go/rfc6838">RFC 6838</a>, §4.12</p>
+        <p>Deprecated alias names for this type</p>
+        <input type="text" name="deprecated_alias" value=""
+            size="50" maxlength="60">
+			
+
+        <p>Magic number(s)</p>
+        <input type="text" name="magic" value="" 
+            size="50" maxlength="60">
+			
+
+        <p>File extension(s)</p>
+	    <input type="text" name="ext" value=""
+            size="50" maxlength="60">
+		    
+
+        <p>Macintosh File Type Code(s)</p>
+        <input type="text" name="filecode" value="" 
+             size="50" maxlength="60">
+			 
+
+        <p>Object Identifier(s) or OID(s) — See <a href="/go/rfc1494">RFC 1494</a></p>
+        <input type="text" name="oids" value="" 
+            size="50" maxlength="60">
+			
+
+            </div>
+            </div>
+
+        <!-- Intended Usage -->
+        <div class="form-field">
+        <label for="intent">Intended Usage<span class="required">Required</span></label>
+        <div class="input">
+            <p>
+            <select name="intent">
+                <option >Common</option>
+                <option >Limited Use</option>
+                <option >Obsolete</option>
+            </select></p>
+    	
+            <textarea name="usage" rows="4" cols="72"></textarea>
+    	
+
+        </div>
+        </div>
+
+
+        <!-- Other Information -->
+        <div class="form-field">
+        <label for="intent">Other Information &amp; Comments</label>
+        <div class="input">
+            <textarea name="general" rows="4" cols="72"></textarea>
+        </div>
+        </div>
+
+        <!-- Contact Person -->
+        <div class="form-field">
+        <label for="intent">Contact Person</label>
+        <div class="input">
+            <p>Provide the contact for further information. See <a href="/go/rfc6838">RFC 6838</a> §5.5.</p>
+            <p>Contact Name</p>
+            <input type="text" name="coname" value="" size="50" maxlength="60">
+           
+            <p>Contact Email Address</p>
+            <input type="text" name="comail" value="" size="50" maxlength="60">
+            
+            <p>Author/Change Controller (for standards tree registrations, this is typically the standards body)</p>
+            <textarea name="control" rows="4" cols="64"></textarea>
+            
+
+        </div>
+        </div>
+
+<div class="actions">
+            <input type="submit" class="button primary green" value="Lodge request">
+            <!--&nbsp;<button type="reset" class="btn">Cancel</button>-->
+        </div>
+</form>
+
+</div>
+
+
+</div>
+
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+	
+</body>
+
+</html>

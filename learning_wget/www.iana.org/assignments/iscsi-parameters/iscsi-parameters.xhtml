@@ -1,0 +1,1285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Internet Small Computer System Interface (iSCSI) Parameters</title>
+  </head>
+  <body>
+    <h1>Internet Small Computer System Interface (iSCSI) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2003-04-16</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-04-08</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="iscsi-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="iscsi-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#iscsi-parameters-1">iSCSI authentication methods</a>
+      </li>
+      <li>
+        <a href="#iscsi-parameters-2">iSCSI digests</a>
+      </li>
+      <li>
+        <a href="#iscsi-parameters-4">SRP_GROUP key values</a>
+      </li>
+      <li>
+        <a href="#iscsi-parameters-5">iSCSI Opcodes</a>
+      </li>
+      <li>
+        <a href="#iscsi-parameters-6">iSCSI Login/Text Keys</a>
+      </li>
+      <li>
+        <a href="#iscsi-parameters-7">iSCSI Asynchronous Events</a>
+      </li>
+      <li>
+        <a href="#iscsi-parameters-8">iSCSI Task Management Function Codes</a>
+      </li>
+      <li>
+        <a href="#iscsi-parameters-9">iSCSI Login Response Status Codes</a>
+        <ul>
+          <li>
+            <a href="#iscsi-parameters-10">Status-Detail for Status-Class=0x00</a>
+          </li>
+          <li>
+            <a href="#iscsi-parameters-11">Status-Detail for Status-Class=0x01</a>
+          </li>
+          <li>
+            <a href="#iscsi-parameters-12">Status-Detail for Status-Class=0x02</a>
+          </li>
+          <li>
+            <a href="#iscsi-parameters-13">Status-Detail for Status-Class=0x03</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#iscsi-parameters-14">iSCSI Reject Reason Codes</a>
+      </li>
+      <li>
+        <a href="#iscsi-parameters-15">iSER Opcodes</a>
+      </li>
+      <li>
+        <a href="#protocol-level">iSCSI Protocol Level</a>
+      </li>
+      <li>
+        <a href="#management-function-response">iSCSI Task Management Function Response Codes</a>
+      </li>
+    </ul>
+    <h2><a name="iscsi-parameters-1" id="iscsi-parameters-1"></a>iSCSI authentication methods</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iscsi-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Authentication Method</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>CHAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>SRP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>KRB5</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>SPKM1 (OBSOLETE)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>SPKM2 (OBSOLETE)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-255</td>
+          <td>Reserved (Not assigned by IANA)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">256-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iscsi-parameters-2" id="iscsi-parameters-2"></a>iSCSI digests</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iscsi-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Digest</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>CRC32c</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-255</td>
+          <td>Reserved (Not assigned by IANA)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">256-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iscsi-parameters-4" id="iscsi-parameters-4"></a>SRP_GROUP key values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Designated Expert with Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3723">RFC3723</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>When a MODP group is used with SRP, the generator (g)
+value differs from the usual generator of 2.  Consult the
+appropriate reference for the correct generator to use.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iscsi-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Key Value</th>
+          <th>Group Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">SRP-768</td>
+          <td>768 bit SRP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc3723">RFC3723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">SRP-1024</td>
+          <td>1024 bit SRP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc3723">RFC3723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">SRP-1280</td>
+          <td>1280 bit SRP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc3723">RFC3723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">SRP-1536</td>
+          <td>1536 bit SRP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc3723">RFC3723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">SRP-2048</td>
+          <td>2048 bit SRP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc3723">RFC3723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">MODP-3072</td>
+          <td>3072 bit MODP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc3723">RFC3723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">MODP-4096</td>
+          <td>4096 bit MODP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc3723">RFC3723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">MODP-6144</td>
+          <td>6144 bit MODP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc3723">RFC3723</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">MODP-8192</td>
+          <td>8192 bit MODP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc3723">RFC3723</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iscsi-parameters-5" id="iscsi-parameters-5"></a>iSCSI Opcodes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action to define the semantics of the opcode;
+Expert Review to select the specific opcode(s)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Namespace details: Numerical values that can fit in
+one octet with most significant two bits (bits 0 and 1)
+already designated by [<a href="http://www.iana.org/go/rfc7143">RFC7143</a>], bit 0 being reserved and
+bit 1 for immediate delivery. Bit 2 is designated to identify
+the originator of the opcode. Bit 2 = 0 for initiator and
+Bit 2 = 1 for target.</pre>
+      </dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Reserved to IANA:
+    0x07-0x0f, 0x13-0x1b (initiator codes)
+    0x27-0x2f, 0x33-0x3b (target codes)
+
+Reserved to IANA for allocation only if no opcode pair is available:
+    0x11, 0x12, 0x1f (initiator codes)
+    0x30 (target codes)</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iscsi-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Opcode</th>
+          <th>Originator</th>
+          <th>Operation Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td align="center">Initiator</td>
+          <td>NOP-Out</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td align="center">Initiator</td>
+          <td>SCSI Command</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td align="center">Initiator</td>
+          <td>SCSI Task Management Function Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td align="center">Initiator</td>
+          <td>Login Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td align="center">Initiator</td>
+          <td>Text Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td align="center">Initiator</td>
+          <td>SCSI Data-Out</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x06</td>
+          <td align="center">Initiator</td>
+          <td>Logout Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x10</td>
+          <td align="center">Initiator</td>
+          <td>SNACK Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x1c-0x1e</td>
+          <td align="center">Initiator</td>
+          <td>Vendor-specific codes</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x20</td>
+          <td align="center">Target</td>
+          <td>NOP-In</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x21</td>
+          <td align="center">Target</td>
+          <td>SCSI Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x22</td>
+          <td align="center">Target</td>
+          <td>SCSI Task Management Function Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x23</td>
+          <td align="center">Target</td>
+          <td>Login Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x24</td>
+          <td align="center">Target</td>
+          <td>Text Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x25</td>
+          <td align="center">Target</td>
+          <td>SCSI Data-In</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x26</td>
+          <td align="center">Target</td>
+          <td>Logout Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x31</td>
+          <td align="center">Target</td>
+          <td>Ready To Transfer (R2T)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x32</td>
+          <td align="center">Target</td>
+          <td>Asynchronous Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3c-0x3e</td>
+          <td align="center">Target</td>
+          <td>Vendor-specific codes</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3f</td>
+          <td align="center">Target</td>
+          <td>Reject</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iscsi-parameters-6" id="iscsi-parameters-6"></a>iSCSI Login/Text Keys</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>][<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iscsi-parameters-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AuthMethod</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>DataDigest</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>DataPDUInOrder</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>DataSequenceInOrder</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>DefaultTime2Retain</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>DefaultTime2Wait</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>ErrorRecoveryLevel</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>FirstBurstLength</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>HeaderDigest</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>ImmediateData</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>InitialR2T</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>InitiatorAlias</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>InitiatorName</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>InitiatorRecvDataSegmentLength</td>
+          <td>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</td>
+        </tr>
+        <tr>
+          <td>iSCSIProtocolLevel</td>
+          <td>[<a href="http://www.iana.org/go/rfc7144">RFC7144</a>]</td>
+        </tr>
+        <tr>
+          <td>iSERHelloRequired</td>
+          <td>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</td>
+        </tr>
+        <tr>
+          <td>MaxAHSLength</td>
+          <td>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</td>
+        </tr>
+        <tr>
+          <td>MaxBurstLength</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>MaxConnections</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>MaxOutstandingR2T</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>MaxOutstandingUnexpectedPDUs</td>
+          <td>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</td>
+        </tr>
+        <tr>
+          <td>MaxRecvDataSegmentLength</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>RDMAExtensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</td>
+        </tr>
+        <tr>
+          <td>SendTargets</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>SessionType</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>TaggedBufferForSolicitedDataOnly</td>
+          <td>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</td>
+        </tr>
+        <tr>
+          <td>TargetAddress</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>TargetAlias</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>TargetName</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>TargetPortalGroupTag</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>TargetRecvDataSegmentLength</td>
+          <td>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</td>
+        </tr>
+        <tr>
+          <td>TaskReporting</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td>X#NodeArchitecture</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iscsi-parameters-7" id="iscsi-parameters-7"></a>iSCSI Asynchronous Events</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iscsi-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Event Number<br />(one octet)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>SCSI Async Event</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Logout Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Connection drop notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Session drop notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Negotiation Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Task termination</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-247</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">248-254</td>
+          <td>Vendor-unique</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Vendor-unique</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iscsi-parameters-8" id="iscsi-parameters-8"></a>iSCSI Task Management Function Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iscsi-parameters-8" class="sortable">
+      <thead>
+        <tr>
+          <th>TMF Code<br />(7 bits)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>ABORT TASK</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ABORT TASK SET</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>CLEAR ACA</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>CLEAR TASK SET</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>LOGICAL UNIT RESET</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>TARGET WARM RESET</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>TARGET COLD RESET</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>TASK REASSIGN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>QUERY TASK</td>
+          <td>[<a href="http://www.iana.org/go/rfc7144">RFC7144</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>QUERY TASK SET</td>
+          <td>[<a href="http://www.iana.org/go/rfc7144">RFC7144</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>I_T NEXUS RESET</td>
+          <td>[<a href="http://www.iana.org/go/rfc7144">RFC7144</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>QUERY ASYNCHRONOUS EVENT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7144">RFC7144</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iscsi-parameters-9" id="iscsi-parameters-9"></a>iSCSI Login Response Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iscsi-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Status Class<br />(one octet)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Redirection</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Initiator Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>Target Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04-0x0e</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0f</td>
+          <td>Vendor-Unique</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x10-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="iscsi-parameters-10" id="iscsi-parameters-10"></a>Status-Detail for Status-Class=0x00</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Standards Action</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="iscsi-parameters-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-iscsi-parameters-10" class="sortable">
+        <thead>
+          <tr>
+            <th>Status Class<br />(fixed)</th>
+            <th>Status Code<br />(one octet)</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0x00</td>
+            <td align="center">0x00</td>
+            <td>Success</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x00</td>
+            <td align="center">0x01-0xff</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="iscsi-parameters-11" id="iscsi-parameters-11"></a>Status-Detail for Status-Class=0x01</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Standards Action</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="iscsi-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-iscsi-parameters-11" class="sortable">
+        <thead>
+          <tr>
+            <th>Status Class<br />(fixed)</th>
+            <th>Status Code<br />(one octet)</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0x01</td>
+            <td align="center">0x01</td>
+            <td>Target moved temporarily</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x01</td>
+            <td align="center">0x02</td>
+            <td>Target moved permanently</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x01</td>
+            <td align="center">0x03-0xff</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="iscsi-parameters-12" id="iscsi-parameters-12"></a>Status-Detail for Status-Class=0x02</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Standards Action</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="iscsi-parameters-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-iscsi-parameters-12" class="sortable">
+        <thead>
+          <tr>
+            <th>Status Class<br />(fixed)</th>
+            <th>Status Code<br />(one octet)</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x00</td>
+            <td>Initiator error</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x01</td>
+            <td>Authentication failure</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x02</td>
+            <td>Authorization failure</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x03</td>
+            <td>Not found</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x04</td>
+            <td>Target removed</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x05</td>
+            <td>Unsupported version</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x06</td>
+            <td>Too many connections</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x07</td>
+            <td>Missing parameter</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x08</td>
+            <td>Can't include in session</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x09</td>
+            <td>Session type not supported</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x0a</td>
+            <td>Session does not exist</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x0b</td>
+            <td>Invalid during login</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x02</td>
+            <td align="center">0x0c-0xff</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="iscsi-parameters-13" id="iscsi-parameters-13"></a>Status-Detail for Status-Class=0x03</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Standards Action</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="iscsi-parameters-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-iscsi-parameters-13" class="sortable">
+        <thead>
+          <tr>
+            <th>Status Class<br />(fixed)</th>
+            <th>Status Code<br />(one octet)</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0x03</td>
+            <td align="center">0x00</td>
+            <td>Target error</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x03</td>
+            <td align="center">0x01</td>
+            <td>Service unavailable</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x03</td>
+            <td align="center">0x02</td>
+            <td>Out of resources</td>
+            <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x03</td>
+            <td align="center">0x03-0xff</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="iscsi-parameters-14" id="iscsi-parameters-14"></a>iSCSI Reject Reason Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iscsi-parameters-14" class="sortable">
+      <thead>
+        <tr>
+          <th>Reason Code<br />(one octet)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Data digest error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>SNACK Reject</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Protocol Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>Command not supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x06</td>
+          <td>Immediate command reject</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x07</td>
+          <td>Task in progress</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>Invalid data ack</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x09</td>
+          <td>Invalid PDU field</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0a</td>
+          <td>Long op reject</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0b</td>
+          <td>"Deprecated reason code"</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0c</td>
+          <td>Waiting for Logout</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0d-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iscsi-parameters-15" id="iscsi-parameters-15"></a>iSER Opcodes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iscsi-parameters-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iscsi-parameters-15" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x1</td>
+          <td>iSCSI control-type PDU</td>
+          <td>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x2</td>
+          <td>iSER Hello Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3</td>
+          <td>iSER HelloReply Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7145">RFC7145</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x4-0xf</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="protocol-level" id="protocol-level"></a>iSCSI Protocol Level</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review and Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7144">RFC7144</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="protocol-level.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-protocol-level" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>No version claimed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7144">RFC7144</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>RFC7143</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>RFC7144</td>
+          <td>[<a href="http://www.iana.org/go/rfc7144">RFC7144</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-31</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="management-function-response" id="management-function-response"></a>iSCSI Task Management Function Response Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7144">RFC7144</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="management-function-response.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-management-function-response" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Operation Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Function complete</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Task does not exist</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>LUN does not exist</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Task still allegiant</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Task allegiance reassignment not supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Task management function not supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Function authorization failed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Function succeeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc7144">RFC7144</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Function rejected</td>
+          <td>[<a href="http://www.iana.org/go/rfc7143">RFC7143</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

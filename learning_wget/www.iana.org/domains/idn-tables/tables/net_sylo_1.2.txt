@@ -1,0 +1,82 @@
+###############################################################
+#
+# TLD:            NET
+# Script:         Syloti Nagri
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Syloti Nagri script.
+#
+###############################################################
+U+A800	# SYLOTI NAGRI LETTER A
+U+A801	# SYLOTI NAGRI LETTER I
+U+A802	# SYLOTI NAGRI SIGN DVISVARA
+U+A803	# SYLOTI NAGRI LETTER U
+U+A804	# SYLOTI NAGRI LETTER E
+U+A805	# SYLOTI NAGRI LETTER O
+U+A806	# SYLOTI NAGRI SIGN HASANTA
+U+A807	# SYLOTI NAGRI LETTER KO
+U+A808	# SYLOTI NAGRI LETTER KHO
+U+A809	# SYLOTI NAGRI LETTER GO
+U+A80A	# SYLOTI NAGRI LETTER GHO
+U+A80B	# SYLOTI NAGRI SIGN ANUSVARA
+U+A80C	# SYLOTI NAGRI LETTER CO
+U+A80D	# SYLOTI NAGRI LETTER CHO
+U+A80E	# SYLOTI NAGRI LETTER JO
+U+A80F	# SYLOTI NAGRI LETTER JHO
+U+A810	# SYLOTI NAGRI LETTER TTO
+U+A811	# SYLOTI NAGRI LETTER TTHO
+U+A812	# SYLOTI NAGRI LETTER DDO
+U+A813	# SYLOTI NAGRI LETTER DDHO
+U+A814	# SYLOTI NAGRI LETTER TO
+U+A815	# SYLOTI NAGRI LETTER THO
+U+A816	# SYLOTI NAGRI LETTER DO
+U+A817	# SYLOTI NAGRI LETTER DHO
+U+A818	# SYLOTI NAGRI LETTER NO
+U+A819	# SYLOTI NAGRI LETTER PO
+U+A81A	# SYLOTI NAGRI LETTER PHO
+U+A81B	# SYLOTI NAGRI LETTER BO
+U+A81C	# SYLOTI NAGRI LETTER BHO
+U+A81D	# SYLOTI NAGRI LETTER MO
+U+A81E	# SYLOTI NAGRI LETTER RO
+U+A81F	# SYLOTI NAGRI LETTER LO
+U+A820	# SYLOTI NAGRI LETTER RRO
+U+A821	# SYLOTI NAGRI LETTER SO
+U+A822	# SYLOTI NAGRI LETTER HO
+U+A823	# SYLOTI NAGRI VOWEL SIGN A
+U+A824	# SYLOTI NAGRI VOWEL SIGN I
+U+A825	# SYLOTI NAGRI VOWEL SIGN U
+U+A826	# SYLOTI NAGRI VOWEL SIGN E
+U+A827	# SYLOTI NAGRI VOWEL SIGN OO
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

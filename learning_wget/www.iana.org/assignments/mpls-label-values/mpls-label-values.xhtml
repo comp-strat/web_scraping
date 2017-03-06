@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Special-Purpose Multiprotocol Label Switching (MPLS) Label Values</title>
+  </head>
+  <body>
+    <h1>Special-Purpose Multiprotocol Label Switching (MPLS) Label Values</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2002-11-08</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-07-09</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mpls-label-values.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="mpls-label-values.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="mpls-label-values.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#special-purpose">Special-Purpose MPLS Label Values</a>
+      </li>
+      <li>
+        <a href="#extended">Extended Special-Purpose MPLS Label Values</a>
+      </li>
+    </ul>
+    <h2><a name="special-purpose" id="special-purpose"></a>Special-Purpose MPLS Label Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3032">RFC3032</a>][<a href="http://www.iana.org/go/rfc7274">RFC7274</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="special-purpose.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-special-purpose" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>IPv4 Explicit NULL Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc3032">RFC3032</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Router Alert Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc3032">RFC3032</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPv6 Explicit NULL Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc3032">RFC3032</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Implicit NULL Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc3032">RFC3032</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-6</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Entropy Label Indicator (ELI)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6790">RFC6790</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-12</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>GAL Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc5586">RFC5586</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>OAM Alert Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc3429">RFC3429</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Extension Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc7274">RFC7274</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="extended" id="extended"></a>Extended Special-Purpose MPLS Label Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7274">RFC7274</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="extended.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-extended" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-15</td>
+          <td>Reserved. Never to be made available for allocation.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7274">RFC7274</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16-239</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">240-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7274">RFC7274</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">256-1048575</td>
+          <td>Reserved. Not to be made available for allocation without a new Standards Track 
+        RFC to define an allocation policy.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7274">RFC7274</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

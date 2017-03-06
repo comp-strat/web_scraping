@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>CERT RR Certificate Types</title>
+  </head>
+  <body>
+    <h1>CERT RR Certificate Types</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2005-12-20</dd>
+      <dt>Last Updated</dt>
+      <dd>2006-09-27</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cert-rr-types.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="cert-rr-types.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="cert-rr-types.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registry included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#cert-rr-types-2">CERT RR Certificate Types</a>
+      </li>
+    </ul>
+    <h2><a name="cert-rr-types-2" id="cert-rr-types-2"></a>CERT RR Certificate Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cert-rr-types-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-cert-rr-types-2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0000-0x00FF</td>
+          <td>IETF Standards Action</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xFF00-0xFFFF</td>
+          <td>IETF Standards Action</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0100-0xFEFF</td>
+          <td>IETF Consensus</td>
+          <td>based on RFC documentation of the certificate type</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-cert-rr-types-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Decimal</th>
+          <th>Type</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td></td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PKIX</td>
+          <td>X.509 as per PKIX</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>SPKI</td>
+          <td>SPKI certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>PGP</td>
+          <td>OpenPGP packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>IPKIX</td>
+          <td>The URL of an X.509 data object</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>ISPKI</td>
+          <td>The URL of an SPKI certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>IPGP</td>
+          <td>The URL of an OpenPGP packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>ACPKIX</td>
+          <td>Attribute Certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>IACPKIX</td>
+          <td>The URL of an Attribute Certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-252</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">253</td>
+          <td>URI</td>
+          <td>URI private</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">254</td>
+          <td>OID</td>
+          <td>OID private</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td></td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">256-65279</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65280-65534</td>
+          <td></td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65535</td>
+          <td></td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4398">RFC4398</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

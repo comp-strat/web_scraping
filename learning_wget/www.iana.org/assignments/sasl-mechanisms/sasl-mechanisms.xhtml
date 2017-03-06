@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Simple Authentication and Security Layer (SASL) Mechanisms</title>
+  </head>
+  <body>
+    <h1>Simple Authentication and Security Layer (SASL) Mechanisms</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2015-11-02</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Simple Authentication and Security Layer (SASL) [<a href="http://www.iana.org/go/rfc4422">RFC4422</a>] is a
+method for adding authentication support to connection-based
+protocols.  To use this specification, a protocol includes a command
+for identifying and authenticating a user to a server and for
+optionally negotiating a security layer for subsequent protocol
+interactions.  The command has a required argument identifying a SASL
+mechanism.
+
+SASL mechanisms are named by strings, from 1 to 20 characters in
+length, consisting of upper-case letters, digits, hyphens, and/or
+underscores.  SASL mechanism names must be registered with the IANA.
+Procedures for registering new SASL mechanisms are described in
+[<a href="http://www.iana.org/go/rfc4422">RFC4422</a>].
+
+SASL mechanism names starting with "GS2-" are reserved for SASL
+mechanisms which conform to [<a href="http://www.iana.org/go/rfc5801">RFC5801</a>]. 
+
+Registration procedures for SASL mechanism names starting with 
+"SCRAM-" are defined in [<a href="http://www.iana.org/go/rfc7677">RFC7677</a>].
+    
+</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sasl-mechanisms.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="sasl-mechanisms.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="sasl-mechanisms.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#sasl-mechanisms-1">SASL Mechanisms</a>
+      </li>
+      <li>
+        <a href="#scram">SASL SCRAM Family Mechanisms</a>
+      </li>
+    </ul>
+    <h2><a name="sasl-mechanisms-1" id="sasl-mechanisms-1"></a>SASL Mechanisms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served for mechanisms.
+Expert Review with mailing list for family name registrations.
+For names beginning with "GS2-", see RFC 5801. 
+For names beginning with "SCRAM-", see RFC7677.
+
+</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Simon Josefsson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4422">RFC4422</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sasl-mechanisms-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sasl-mechanisms-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Mechanism</th>
+          <th>Usage</th>
+          <th>Reference</th>
+          <th>Owner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>9798-M-DSA-SHA1</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc3163">RFC3163</a>]</td>
+          <td>[<a href="#Robert_Zuccherato">Robert_Zuccherato</a>]</td>
+        </tr>
+        <tr>
+          <td>9798-M-ECDSA-SHA1</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc3163">RFC3163</a>]</td>
+          <td>[<a href="#Robert_Zuccherato">Robert_Zuccherato</a>]</td>
+        </tr>
+        <tr>
+          <td>9798-M-RSA-SHA1-ENC</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc3163">RFC3163</a>]</td>
+          <td>[<a href="#Robert_Zuccherato">Robert_Zuccherato</a>]</td>
+        </tr>
+        <tr>
+          <td>9798-U-DSA-SHA1</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc3163">RFC3163</a>]</td>
+          <td>[<a href="#Robert_Zuccherato">Robert_Zuccherato</a>]</td>
+        </tr>
+        <tr>
+          <td>9798-U-ECDSA-SHA1</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc3163">RFC3163</a>]</td>
+          <td>[<a href="#Robert_Zuccherato">Robert_Zuccherato</a>]</td>
+        </tr>
+        <tr>
+          <td>9798-U-RSA-SHA1-ENC</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc3163">RFC3163</a>]</td>
+          <td>[<a href="#Robert_Zuccherato">Robert_Zuccherato</a>]</td>
+        </tr>
+        <tr>
+          <td>ANONYMOUS</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc4505">RFC4505</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>CRAM-MD5</td>
+          <td>LIMITED</td>
+          <td>[<a href="http://www.iana.org/go/rfc2195">RFC2195</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>DIGEST-MD5</td>
+          <td>OBSOLETE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6331">RFC6331</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>EAP-AES128</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>EAP-AES128-PLUS</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>EXTERNAL</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc4422">RFC4422</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>GS2-*</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc5801">RFC5801</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>GS2-KRB5</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc5801">RFC5801</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>GS2-KRB5-PLUS</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc5801">RFC5801</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>GSS-SPNEGO</td>
+          <td>LIMITED</td>
+          <td>[<a href="#Paul_Leach">Paul_Leach</a>]</td>
+          <td>[<a href="#Paul_Leach">Paul_Leach</a>]</td>
+        </tr>
+        <tr>
+          <td>GSSAPI</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc4752">RFC4752</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>KERBEROS_V4</td>
+          <td>OBSOLETE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2222">RFC2222</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>KERBEROS_V5</td>
+          <td>COMMON</td>
+          <td>[<a href="#Simon_Josefsson">Simon_Josefsson</a>]</td>
+          <td>[<a href="#Simon_Josefsson">Simon_Josefsson</a>]</td>
+        </tr>
+        <tr>
+          <td>LOGIN</td>
+          <td>OBSOLETE</td>
+          <td>[<a href="http://www.iana.org/go/draft-murchison-sasl-login">draft-murchison-sasl-login</a>]</td>
+          <td>[<a href="#Kenneth_Murchison">Kenneth_Murchison</a>][<a href="#Mark_R._Crispin">Mark_R._Crispin</a>]</td>
+        </tr>
+        <tr>
+          <td>NMAS_AUTHEN</td>
+          <td>LIMITED</td>
+          <td>[<a href="#Mark_G._Gayman">Mark_G._Gayman</a>]</td>
+          <td>[<a href="#Mark_G._Gayman">Mark_G._Gayman</a>]</td>
+        </tr>
+        <tr>
+          <td>NMAS_LOGIN</td>
+          <td>LIMITED</td>
+          <td>[<a href="#Mark_G._Gayman">Mark_G._Gayman</a>]</td>
+          <td>[<a href="#Mark_G._Gayman">Mark_G._Gayman</a>]</td>
+        </tr>
+        <tr>
+          <td>NMAS-SAMBA-AUTH</td>
+          <td>LIMITED</td>
+          <td>[<a href="#Vince_Brimhall">Vince_Brimhall</a>]</td>
+          <td>[<a href="#Vince_Brimhall">Vince_Brimhall</a>]</td>
+        </tr>
+        <tr>
+          <td>NTLM</td>
+          <td>LIMITED</td>
+          <td>[<a href="#Paul_Leach">Paul_Leach</a>]</td>
+          <td>[<a href="#Paul_Leach">Paul_Leach</a>]</td>
+        </tr>
+        <tr>
+          <td>OAUTH10A</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc7628">RFC7628</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>OAUTHBEARER</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc7628">RFC7628</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>OPENID20</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc6616">RFC6616</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>OTP</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc2444">RFC2444</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>PLAIN</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc4616">RFC4616</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>SAML20</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc6595">RFC6595</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>SCRAM-*</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc7677">RFC7677</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>SECURID</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc2808">RFC2808</a>]</td>
+          <td>[<a href="#Magnus_Nystrom">Magnus_Nystrom</a>]</td>
+        </tr>
+        <tr>
+          <td>SKEY</td>
+          <td>OBSOLETE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2444">RFC2444</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>SPNEGO</td>
+          <td>MUST NOT be used</td>
+          <td>[<a href="http://www.iana.org/go/rfc5801">RFC5801</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>SPNEGO-PLUS</td>
+          <td>MUST NOT be used</td>
+          <td>[<a href="http://www.iana.org/go/rfc5801">RFC5801</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>XOAUTH</td>
+          <td>OBSOLETE</td>
+          <td>[N/A]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>XOAUTH2</td>
+          <td>OBSOLETE</td>
+          <td>[N/A]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="scram" id="scram"></a>SASL SCRAM Family Mechanisms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review with mailing list</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7677">RFC7677</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="scram.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-scram" class="sortable">
+      <thead>
+        <tr>
+          <th>Mechanism</th>
+          <th>Usage</th>
+          <th>Reference</th>
+          <th>Minimum iteration-count</th>
+          <th>Associated OID</th>
+          <th>Owner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SCRAM-SHA-1</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc5802">RFC5802</a>][<a href="http://www.iana.org/go/rfc7677">RFC7677</a>]</td>
+          <td>4096</td>
+          <td>1.3.6.1.5.5.14</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>SCRAM-SHA-1-PLUS</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc5802">RFC5802</a>][<a href="http://www.iana.org/go/rfc7677">RFC7677</a>]</td>
+          <td>4096</td>
+          <td>1.3.6.1.5.5.14</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>SCRAM-SHA-256</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc7677">RFC7677</a>]</td>
+          <td>4096</td>
+          <td>1.3.6.1.5.5.18</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+        <tr>
+          <td>SCRAM-SHA-256-PLUS</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc7677">RFC7677</a>]</td>
+          <td>4096</td>
+          <td>1.3.6.1.5.5.18</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="IESG" id="IESG">[IESG]</a>
+          </td>
+          <td>IESG</td>
+          <td>
+            <a href="mailto:iesg&amp;ietf.org">mailto:iesg&amp;ietf.org</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Kenneth_Murchison" id="Kenneth_Murchison">[Kenneth_Murchison]</a>
+          </td>
+          <td>Kenneth Murchison</td>
+          <td>
+            <a href="mailto:ken&amp;oceana.com">mailto:ken&amp;oceana.com</a>
+          </td>
+          <td>2014-11-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Magnus_Nystrom" id="Magnus_Nystrom">[Magnus_Nystrom]</a>
+          </td>
+          <td>Magnus Nystrom</td>
+          <td>
+            <a href="mailto:magnus&amp;rsasecurity.com">mailto:magnus&amp;rsasecurity.com</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Mark_G._Gayman" id="Mark_G._Gayman">[Mark_G._Gayman]</a>
+          </td>
+          <td>Mark G. Gayman</td>
+          <td>
+            <a href="mailto:mgayman&amp;novell.com">mailto:mgayman&amp;novell.com</a>
+          </td>
+          <td>2000-09</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Mark_R._Crispin" id="Mark_R._Crispin">[Mark_R._Crispin]</a>
+          </td>
+          <td>Mark R. Crispin</td>
+          <td>
+            <a href="mailto:MRC&amp;CAC.Washington.EDU">mailto:MRC&amp;CAC.Washington.EDU</a>
+          </td>
+          <td>2014-11-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Paul_Leach" id="Paul_Leach">[Paul_Leach]</a>
+          </td>
+          <td>Paul Leach</td>
+          <td>
+            <a href="mailto:paulle&amp;microsoft.com">mailto:paulle&amp;microsoft.com</a>
+          </td>
+          <td>2000-06</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Robert_Zuccherato" id="Robert_Zuccherato">[Robert_Zuccherato]</a>
+          </td>
+          <td>Robert Zuccherato</td>
+          <td>
+            <a href="mailto:robert.zuccherato&amp;entrust.com">mailto:robert.zuccherato&amp;entrust.com</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Simon_Josefsson" id="Simon_Josefsson">[Simon_Josefsson]</a>
+          </td>
+          <td>Simon Josefsson</td>
+          <td>
+            <a href="mailto:simon&amp;josefsson.org">mailto:simon&amp;josefsson.org</a>
+          </td>
+          <td>2004-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Vince_Brimhall" id="Vince_Brimhall">[Vince_Brimhall]</a>
+          </td>
+          <td>Vince Brimhall</td>
+          <td>
+            <a href="mailto:vbrimhall&amp;novell.com">mailto:vbrimhall&amp;novell.com</a>
+          </td>
+          <td>2004-04</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

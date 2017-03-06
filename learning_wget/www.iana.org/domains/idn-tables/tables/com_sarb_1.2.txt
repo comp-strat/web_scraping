@@ -1,0 +1,71 @@
+###############################################################
+#
+# TLD:            COM
+# Script:         Old South Arabian
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Old South Arabian script.
+#
+###############################################################
+U+10A60	# OLD SOUTH ARABIAN LETTER HE
+U+10A61	# OLD SOUTH ARABIAN LETTER LAMEDH
+U+10A62	# OLD SOUTH ARABIAN LETTER HETH
+U+10A63	# OLD SOUTH ARABIAN LETTER MEM
+U+10A64	# OLD SOUTH ARABIAN LETTER QOPH
+U+10A65	# OLD SOUTH ARABIAN LETTER WAW
+U+10A66	# OLD SOUTH ARABIAN LETTER SHIN
+U+10A67	# OLD SOUTH ARABIAN LETTER RESH
+U+10A68	# OLD SOUTH ARABIAN LETTER BETH
+U+10A69	# OLD SOUTH ARABIAN LETTER TAW
+U+10A6A	# OLD SOUTH ARABIAN LETTER SAT
+U+10A6B	# OLD SOUTH ARABIAN LETTER KAPH
+U+10A6C	# OLD SOUTH ARABIAN LETTER NUN
+U+10A6D	# OLD SOUTH ARABIAN LETTER KHETH
+U+10A6E	# OLD SOUTH ARABIAN LETTER SADHE
+U+10A6F	# OLD SOUTH ARABIAN LETTER SAMEKH
+U+10A70	# OLD SOUTH ARABIAN LETTER FE
+U+10A71	# OLD SOUTH ARABIAN LETTER ALEF
+U+10A72	# OLD SOUTH ARABIAN LETTER AYN
+U+10A73	# OLD SOUTH ARABIAN LETTER DHADHE
+U+10A74	# OLD SOUTH ARABIAN LETTER GIMEL
+U+10A75	# OLD SOUTH ARABIAN LETTER DALETH
+U+10A76	# OLD SOUTH ARABIAN LETTER GHAYN
+U+10A77	# OLD SOUTH ARABIAN LETTER TETH
+U+10A78	# OLD SOUTH ARABIAN LETTER ZAYN
+U+10A79	# OLD SOUTH ARABIAN LETTER DHALETH
+U+10A7A	# OLD SOUTH ARABIAN LETTER YODH
+U+10A7B	# OLD SOUTH ARABIAN LETTER THAW
+U+10A7C	# OLD SOUTH ARABIAN LETTER THETH
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

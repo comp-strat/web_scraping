@@ -1,0 +1,713 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Port Control Protocol (PCP) Parameters</title>
+  </head>
+  <body>
+    <h1>Port Control Protocol (PCP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2012-11-21</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-05-11</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pcp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="pcp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="pcp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#opcodes">PCP Opcodes</a>
+      </li>
+      <li>
+        <a href="#result-codes">PCP Result Codes</a>
+      </li>
+      <li>
+        <a href="#options">PCP Options</a>
+      </li>
+    </ul>
+    <h2><a name="opcodes" id="opcodes"></a>PCP Opcodes</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Dan Wing, Stuart Cheshire</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="opcodes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-opcodes-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-31, 127</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">32-63</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-opcodes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>ANNOUNCE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>MAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>PEER</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>AUTHENTICATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>4-63</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>64-95</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>96-126</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>127</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="result-codes" id="result-codes"></a>PCP Result Codes</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Dan Wing, Stuart Cheshire</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="result-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-result-codes-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127, 255</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">128-191</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-result-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>SUCCESS</td>
+          <td>Success.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>UNSUPP_VERSION</td>
+          <td>The version number at the start of the PCP Request
+        header is not recognized by this PCP server.  This is a long
+        lifetime error.  [<a href="http://www.iana.org/go/rfc6887">RFC6887</a>] describes PCP version 2.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>NOT_AUTHORIZED</td>
+          <td>The requested operation is disabled for this PCP
+        client, or the PCP client requested an operation that cannot be
+        fulfilled by the PCP server's security policy.  This is a long
+        lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>MALFORMED_REQUEST</td>
+          <td>The request could not be successfully parsed.
+        This is a long lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>UNSUPP_OPCODE</td>
+          <td>Unsupported Opcode.  This is a long lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>UNSUPP_OPTION</td>
+          <td>Unsupported Option.  This error only occurs if the
+        Option is in the mandatory-to-process range.  This is a long
+        lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>MALFORMED_OPTION</td>
+          <td>Malformed Option (e.g., appears too many times,
+        invalid length).  This is a long lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>NETWORK_FAILURE</td>
+          <td>The PCP server or the device it controls are
+        experiencing a network failure of some sort (e.g., has not
+        obtained an External IP address).  This is a short lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>NO_RESOURCES</td>
+          <td>Request is well-formed and valid, but the server has
+        insufficient resources to complete the requested operation at this
+        time.  For example, the NAT device cannot create more mappings at
+        this time, is short of CPU cycles or memory, or is unable to
+        handle the request due to some other temporary condition.  The
+        same request may succeed in the future.  This is a system-wide
+        error, different from USER_EX_QUOTA.  This can be used as a catch-
+        all error, should no other error message be suitable.  This is a
+        short lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>UNSUPP_PROTOCOL</td>
+          <td>Unsupported transport protocol, e.g.  SCTP in a
+        NAT that handles only UDP and TCP.  This is a long lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>USER_EX_QUOTA</td>
+          <td>This attempt to create a new mapping would exceed
+        this subscriber's port quota.  This is a short lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>CANNOT_PROVIDE_EXTERNAL</td>
+          <td>The suggested external port and/or
+        external address cannot be provided.  This error MUST only be
+        returned for:
+        *  MAP requests that included the PREFER_FAILURE Option
+        (normal MAP requests will return an available external port); 
+        *  MAP requests for the SCTP protocol (PREFER_FAILURE is implied); 
+        *  PEER requests. 
+        
+        See Section 13.2 of [<a href="http://www.iana.org/go/rfc6887">RFC6887</a>] for processing details.  The error lifetime
+        depends on the reason for the failure.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>ADDRESS_MISMATCH</td>
+          <td>The source IP address of the request packet does
+        not match the contents of the PCP Client's IP Address field, due
+        to an unexpected NAT on the path between the PCP client and the
+        PCP-controlled NAT or firewall.  This is a long lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>EXCESSIVE_REMOTE_PEERS</td>
+          <td>The PCP server was not able to create the
+        filters in this request.  This result code MUST only be returned
+        if the MAP request contained the FILTER Option.  See Section 13.3
+        for processing information.  This is a long lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>INITIATION</td>
+          <td>The client includes this PCP result code in its
+        request to the server for authentication.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>AUTHENTICATION_REQUIRED</td>
+          <td>This error response is sent to the
+        client if EAP authentication is required.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>AUTHENTICATION_FAILED</td>
+          <td>This error response is sent to the
+        client if EAP authentication failed.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>AUTHENTICATION_SUCCEEDED</td>
+          <td>This success response is sent to the
+        client if EAP authentication succeeded.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>AUTHORIZATION_FAILED</td>
+          <td>This error response is sent to the client
+        if EAP authentication succeeded but authorization failed.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>SESSION_TERMINATED</td>
+          <td>This PCP result code indicates to the
+        partner that the PA session must be terminated.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>UNKNOWN_SESSION_ID</td>
+          <td>This error response is sent from the
+        PCP server if there is no known PA session associated with the
+        Session ID sent in the PA request or common PCP request from the
+        PCP client.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>DOWNGRADE_ATTACK_DETECTED</td>
+          <td>This PCP result code indicates to
+        the client that the server detected a downgrade attack.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>AUTHENTICATION_REQUEST</td>
+          <td>The server indicates to the client that
+        the PA message contains an EAP request.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>AUTHENTICATION_REPLY</td>
+          <td>The client indicates to the server that
+        the PA message contains an EAP response.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>THIRD_PARTY_ID_UNKNOWN</td>
+          <td>The provided identifier in a
+      THIRD_PARTY_ID option is unknown/unavailable to the PCP server.
+      This is a long lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7843">RFC7843</a>]</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>THIRD_PARTY_MISSING_OPTION</td>
+          <td>This error occurs if both
+      THIRD_PARTY and THIRD_PARTY_ID options are expected in a request
+      but one option is missing.  This is a long lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7843">RFC7843</a>]</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>UNSUPP_THIRD_PARTY_ID_LENGTH</td>
+          <td>The received option length is
+      not supported.  This is a long lifetime error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7843">RFC7843</a>]</td>
+        </tr>
+        <tr>
+          <td>27-191</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>192-254</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="options" id="options"></a>PCP Options</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Dan Wing, Stuart Cheshire</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Values 0-127 are mandatory to process, and 128-255 are optional to process.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="options.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-options-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-63, 127-191, 255</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">64-95, 192-223</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-options" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Purpose</th>
+          <th>Valid for Opcodes</th>
+          <th>Length</th>
+          <th>May Appear in</th>
+          <th>Maximum Occurrences</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>THIRD_PARTY</td>
+          <td>Indicates the MAP or PEER request is for a host other
+        than the host sending the PCP Option.</td>
+          <td>MAP, PEER</td>
+          <td>16 octets</td>
+          <td>Request.  May appear in response only if it
+        appeared in the associated request.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>PREFER_FAILURE</td>
+          <td>Indicates that the PCP server should not create an
+        alternative mapping if the suggested external port and address
+        cannot be mapped.</td>
+          <td>MAP</td>
+          <td>0</td>
+          <td>Request.  May appear in response only if it
+        appeared in the associated request.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>FILTER</td>
+          <td>Specifies a filter for incoming packets.</td>
+          <td>MAP</td>
+          <td>20 octets</td>
+          <td>Request.  May appear in response only if it
+        appeared in the associated request.</td>
+          <td>As many as fit within maximum PCP message size.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>NONCE</td>
+          <td>See Section 5.3 of [<a href="http://www.iana.org/go/rfc7652">RFC7652</a>].</td>
+          <td>AUTHENTICATION</td>
+          <td>4 octets</td>
+          <td>Request and response.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>AUTHENTICATION_TAG</td>
+          <td>See Section 5.4 of [<a href="http://www.iana.org/go/rfc7652">RFC7652</a>].</td>
+          <td>MAP, PEER, ANNOUNCE</td>
+          <td>variable</td>
+          <td>Request and response.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>PA_AUTHENTICATION_TAG</td>
+          <td>See Section 5.5 of [<a href="http://www.iana.org/go/rfc7652">RFC7652</a>].</td>
+          <td>AUTHENTICATION</td>
+          <td>variable</td>
+          <td>Request and response.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>EAP_PAYLOAD</td>
+          <td>See Section 5.6 of [<a href="http://www.iana.org/go/rfc7652">RFC7652</a>].</td>
+          <td>AUTHENTICATION</td>
+          <td>variable</td>
+          <td>Request and response.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>PRF</td>
+          <td>See Section 5.7 of [<a href="http://www.iana.org/go/rfc7652">RFC7652</a>].</td>
+          <td>AUTHENTICATION</td>
+          <td>4 octets</td>
+          <td>Request and response.</td>
+          <td>As many as fit within maximum PCP message size.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>MAC_ALGORITHM</td>
+          <td>See Section 5.8 of [<a href="http://www.iana.org/go/rfc7652">RFC7652</a>].</td>
+          <td>AUTHENTICATION</td>
+          <td>4 octets</td>
+          <td>Request and response.</td>
+          <td>As many as fit within maximum PCP message size.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>SESSION_LIFETIME</td>
+          <td>See Section 5.9 of [<a href="http://www.iana.org/go/rfc7652">RFC7652</a>].</td>
+          <td>AUTHENTICATION</td>
+          <td>4 octets</td>
+          <td>Response.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>RECEIVED_PAK</td>
+          <td>See Section 5.10 of [<a href="http://www.iana.org/go/rfc7652">RFC7652</a>].</td>
+          <td>AUTHENTICATION</td>
+          <td>4 octets</td>
+          <td>Request and response.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>ID_INDICATOR</td>
+          <td>See Section 5.11 of [<a href="http://www.iana.org/go/rfc7652">RFC7652</a>].</td>
+          <td>AUTHENTICATION</td>
+          <td>variable</td>
+          <td>Response.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7652">RFC7652</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>THIRD_PARTY_ID</td>
+          <td>Together with the THIRD_PARTY option, the
+      THIRD_PARTY_ID option identifies a third party
+      for which a request for an external IP address
+      and port is made.</td>
+          <td>MAP, PEER</td>
+          <td>Variable; maximum 1016 octets.</td>
+          <td>Request. May appear in response only if it
+      appeared in the associated request.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7843">RFC7843</a>]</td>
+        </tr>
+        <tr>
+          <td>14-95</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>96-126</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>127</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>128</td>
+          <td>DESCRIPTION</td>
+          <td>Used to associate a text description with a mapping.</td>
+          <td>MAP, PEER</td>
+          <td>variable, maximum 1016 octets.</td>
+          <td>Request.  May appear in response only if it
+        appeared in the associated request.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7220">RFC7220</a>]</td>
+        </tr>
+        <tr>
+          <td>129</td>
+          <td>PREFIX64</td>
+          <td>Learn the prefix used by the NAT64 to build
+          IPv4-converted IPv6 addresses. This is used by a host
+          for local address synthesis (e.g., when an IPv4 address
+          is present in referrals).</td>
+          <td>MAP, ANNOUNCE</td>
+          <td>variable</td>
+          <td>request, response</td>
+          <td>1 for a request. As many as fit within
+          the maximum PCP message size for a response.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7225">RFC7225</a>]</td>
+        </tr>
+        <tr>
+          <td>130</td>
+          <td>PORT_SET</td>
+          <td>To map sets of ports.</td>
+          <td>MAP</td>
+          <td>5 bytes</td>
+          <td>Request and response.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7753">RFC7753</a>]</td>
+        </tr>
+        <tr>
+          <td>131-191</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>192</td>
+          <td>CHECKPOINT_REQUIRED</td>
+          <td>Indicate if an entry needs to be check-pointed.</td>
+          <td>MAP, PEER</td>
+          <td>0</td>
+          <td>Request and response.</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7767">RFC7767</a>]</td>
+        </tr>
+        <tr>
+          <td>193-223</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>224-254</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6887">RFC6887</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

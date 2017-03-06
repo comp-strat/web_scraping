@@ -1,0 +1,3309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Point-to-Point (PPP) Protocol Field Assignments</title>
+  </head>
+  <body>
+    <h1>Point-to-Point (PPP) Protocol Field Assignments</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2016-03-11</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ppp-numbers.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ppp-numbers.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ppp-numbers-2">PPP DLL Protocol Numbers</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-3">PPP Link Control Protocol (LCP) and Internet Protocol Control Protocol (IPCP) Codes</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-4">PPP LCP Configuration Option Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-5">PPP TNCP Configuration Option Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-6">PPP ECP Configuration Option Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-7">PPP CCP Configuration Option Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-8">PPP SDCP Configuration Options</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-9">PPP Authentication Algorithms</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-10">PPP LCP FCS-Alternatives</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-11">PPP Multilink Endpoint Discriminator Class</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-12">PPP LCP Callback Operation Fields</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-13">PPP ATCP Configuration Option Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-14">PPP OSINLCP Configuration Option Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-15">PPP Banyan Vines Configuration Option Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-16">PPP Bridging Configuration Option Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-17">PPP Bridging MAC Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-18">PPP Bridging Spanning Tree</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-19">PPP (IPXCP) Configuration Options</a>
+        <ul>
+          <li>
+            <a href="#ppp-numbers-20">IPX Compression Protocol Values (Value 3)</a>
+          </li>
+          <li>
+            <a href="#ppp-numbers-21">IPX Routing Protocol Options (Value 4)</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#ppp-numbers-22">NetBIOS Frames Control Protocol (NBFCP) Configuration Options</a>
+        <ul>
+          <li>
+            <a href="#ppp-numbers-23">NBFCP Configuration Options - Name-Projection 'Added' field (value 1)</a>
+          </li>
+          <li>
+            <a href="#ppp-numbers-24">NBFCP Configuration Options - Peer-Information (value 2)</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#ppp-numbers-25">PPP EAP Request/Response Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-26">PPP Vendor Specific OUI Options</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-27">PPP IPCP Configuration Option Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-28">PPP IPv6CP Configuration Options</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-29">IP-Compression-Protocol Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-30">IPv6-Compression-Protocol Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-31">IP Header Compression Configuration Option Suboption Types</a>
+      </li>
+      <li>
+        <a href="#ppp-numbers-32">ROHC Configuration Option Suboption Identifier Values</a>
+      </li>
+    </ul>
+    <h2><a name="ppp-numbers-2" id="ppp-numbers-2"></a>PPP DLL Protocol Numbers</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Data Link Layer [<a href="http://www.iana.org/go/rfc1331">RFC1331</a>][<a href="http://www.iana.org/go/rfc1332">RFC1332</a>][<a href="http://www.iana.org/go/rfc1353">RFC1353</a>]
+contains a 16 bit Protocol field to identify the the encapsulated
+protocol.  The Protocol field is consistent with the ISO 3309 (HDLC)
+extension mechanism for Address fields.  All Protocols MUST be
+assigned such that the least significant bit of the most significant
+octet equals "0", and the least significant bit of the least
+significant octet equals "1".
+
+It is recommended that values in the "02xx" to "1exx" and "xx01" to
+"xx1f" ranges not be assigned, as they are compression inefficient.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-ppp-numbers-2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0xxx-3xxx</td>
+          <td>IETF Review</td>
+          <td>Network Layer Protocols</td>
+        </tr>
+        <tr>
+          <td align="center">4xxx-7xxx</td>
+          <td>IETF Review</td>
+          <td>Low volume traffic without NCP</td>
+        </tr>
+        <tr>
+          <td align="center">8xxx-bxxx</td>
+          <td>IETF Review</td>
+          <td>Network Control Protocols</td>
+        </tr>
+        <tr>
+          <td align="center">cxxx-fxxx</td>
+          <td>IETF Review</td>
+          <td>Link-layer Control Protocols</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-ppp-numbers-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value (in hex)</th>
+          <th>Protocol Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0001</td>
+          <td>Padding Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0003</td>
+          <td>ROHC small-CID</td>
+          <td>[<a href="http://www.iana.org/go/rfc3095">RFC3095</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0005</td>
+          <td>ROHC large-CID</td>
+          <td>[<a href="http://www.iana.org/go/rfc3095">RFC3095</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0007-001f</td>
+          <td>Reserved (transparency inefficient)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0021</td>
+          <td>Internet Protocol version 4</td>
+          <td>[<a href="http://www.iana.org/go/rfc1332">RFC1332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0023</td>
+          <td>OSI Network Layer</td>
+          <td>[<a href="http://www.iana.org/go/rfc1377">RFC1377</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0025</td>
+          <td>Xerox NS IDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc1764">RFC1764</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0027</td>
+          <td>DECnet Phase IV</td>
+          <td>[<a href="http://www.iana.org/go/rfc1762">RFC1762</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0029</td>
+          <td>Appletalk</td>
+          <td>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">002b</td>
+          <td>Novell IPX</td>
+          <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">002d</td>
+          <td>Van Jacobson Compressed TCP/IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc1332">RFC1332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">002f</td>
+          <td>Van Jacobson Uncompressed TCP/IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc1332">RFC1332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0031</td>
+          <td>Bridging PDU</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0033</td>
+          <td>Stream Protocol (ST-II)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0035</td>
+          <td>Banyan Vines</td>
+          <td>[<a href="http://www.iana.org/go/rfc1763">RFC1763</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0037</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0039</td>
+          <td>AppleTalk EDDP</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">003b</td>
+          <td>AppleTalk SmartBuffered</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">003d</td>
+          <td>Multi-Link</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">003f</td>
+          <td>NETBIOS Framing</td>
+          <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0041</td>
+          <td>Cisco Systems</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0043</td>
+          <td>Ascom Timeplex</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0045</td>
+          <td>Fujitsu Link Backup and Load Balancing (LBLB)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0047</td>
+          <td>DCA Remote Lan</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0049</td>
+          <td>Serial Data Transport Protocol (PPP-SDTP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">004b</td>
+          <td>SNA over 802.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc2043">RFC2043</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">004d</td>
+          <td>SNA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2043">RFC2043</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">004f</td>
+          <td>IPv6 Header Compression</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0051</td>
+          <td>KNX Bridging Data</td>
+          <td>[<a href="#ianp_knxunix_knx_co">ianp_knxunix_knx_co</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0053</td>
+          <td>Encryption</td>
+          <td>[<a href="http://www.iana.org/go/rfc1968">RFC1968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0055</td>
+          <td>Individual Link Encryption</td>
+          <td>[<a href="http://www.iana.org/go/rfc1968">RFC1968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0057</td>
+          <td>Internet Protocol version 6</td>
+          <td>[<a href="http://www.iana.org/go/rfc5072">RFC5072</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0059</td>
+          <td>PPP Muxing</td>
+          <td>[<a href="http://www.iana.org/go/rfc3153">RFC3153</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">005b</td>
+          <td>Vendor-Specific Network Protocol (VSNP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3772">RFC3772</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">005d</td>
+          <td>TRILL Network Protocol (TNP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6361">RFC6361</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0061</td>
+          <td>RTP IPHC Full Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0063</td>
+          <td>RTP IPHC Compressed TCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0065</td>
+          <td>RTP IPHC Compressed Non TCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0067</td>
+          <td>RTP IPHC Compressed UDP 8</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0069</td>
+          <td>RTP IPHC Compressed RTP 8</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">006f</td>
+          <td>Stampede Bridging</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0071</td>
+          <td>Reserved</td>
+          <td>[<a href="#Karl_Fox">Karl_Fox</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0073</td>
+          <td>MP+ Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1934">RFC1934</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">007d</td>
+          <td>Reserved (Control Escape)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">007f</td>
+          <td>Reserved (compression inefficient)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1662">RFC1662</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0081</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0083</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">00c1</td>
+          <td>NTCITS IPI</td>
+          <td>[<a href="#Alan_Ungar">Alan_Ungar</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">00cf</td>
+          <td>Reserved (PPP NLPID)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">00fb</td>
+          <td>Single link compression in multilink</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">00fd</td>
+          <td>Compressed datagram</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">00ff</td>
+          <td>Reserved (compression inefficient)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0201</td>
+          <td>802.1d Hello Packets</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0203</td>
+          <td>IBM Source Routing BPDU</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0205</td>
+          <td>DEC LANBridge100 Spanning Tree</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0207</td>
+          <td>Cisco Discovery Protocol</td>
+          <td>[<a href="#Arun_Sastry">Arun_Sastry</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0209</td>
+          <td>Netcs Twin Routing</td>
+          <td>[<a href="#Oliver_Korfmacher">Oliver_Korfmacher</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">020b</td>
+          <td>STP - Scheduled Transfer Protocol</td>
+          <td>[<a href="#Ben_Segal">Ben_Segal</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">020d</td>
+          <td>EDP - Extreme Discovery Protocol</td>
+          <td>[<a href="#Don_Grosser">Don_Grosser</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0211</td>
+          <td>Optical Supervisory Channel Protocol (OSCP)</td>
+          <td>[<a href="#Sharat_C_Prasad">Sharat_C_Prasad</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0213</td>
+          <td>Optical Supervisory Channel Protocol (OSCP)</td>
+          <td>[<a href="#Sharat_C_Prasad">Sharat_C_Prasad</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0231</td>
+          <td>Luxcom</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0233</td>
+          <td>Sigma Network Systems</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0235</td>
+          <td>Apple Client Server Protocol</td>
+          <td>[<a href="#Howard_Ridenour">Howard_Ridenour</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0281</td>
+          <td>MPLS Unicast</td>
+          <td>[<a href="http://www.iana.org/go/rfc3032">RFC3032</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0283</td>
+          <td>MPLS Multicast</td>
+          <td>[<a href="http://www.iana.org/go/rfc3032">RFC3032</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0285</td>
+          <td>IEEE p1284.4 standard - data packets</td>
+          <td>[<a href="#Brian_Batchelder">Brian_Batchelder</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0287</td>
+          <td>ETSI TETRA Network Protocol Type 1</td>
+          <td>[<a href="#Seppo_Nieminen">Seppo_Nieminen</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0289</td>
+          <td>Multichannel Flow Treatment Protocol</td>
+          <td>[<a href="#Pete_McCann">Pete_McCann</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">028b-1exx</td>
+          <td>Reserved for compression inefficient</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2063</td>
+          <td>RTP IPHC Compressed TCP No Delta</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2065</td>
+          <td>RTP IPHC Context State</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2067</td>
+          <td>RTP IPHC Compressed UDP 16</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2069</td>
+          <td>RTP IPHC Compressed RTP 16</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4001</td>
+          <td>Cray Communications Control Protocol</td>
+          <td>[<a href="#Erling_B_Stage">Erling_B_Stage</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4003</td>
+          <td>CDPD Mobile Network Registration Protocol</td>
+          <td>[<a href="#Frank_Quick">Frank_Quick</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4005</td>
+          <td>Expand accelerator protocol</td>
+          <td>[<a href="#Ilan_Rachmani">Ilan_Rachmani</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4007</td>
+          <td>ODSICP NCP</td>
+          <td>[<a href="#K_Arvind">K_Arvind</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4009</td>
+          <td>DOCSIS DLL</td>
+          <td>[<a href="#Jason_Gaedtke">Jason_Gaedtke</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">400B</td>
+          <td>Cetacean Network Detection Protocol</td>
+          <td>[<a href="#Curtis_A_Siller_Jr">Curtis_A_Siller_Jr</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4021</td>
+          <td>Stacker LZS</td>
+          <td>[<a href="http://www.iana.org/go/rfc1974">RFC1974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4023</td>
+          <td>RefTek Protocol</td>
+          <td>[<a href="#Robert_Banfill">Robert_Banfill</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4025</td>
+          <td>Fibre Channel</td>
+          <td>[<a href="#Murali_Rajagopal">Murali_Rajagopal</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4027</td>
+          <td>OpenDOF</td>
+          <td>[<a href="#Bryant_Eastham">Bryant_Eastham</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">405b</td>
+          <td>Vendor-Specific Protocol (VSP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3772">RFC3772</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">405d</td>
+          <td>TRILL Link State Protocol (TLSP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6361">RFC6361</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8001-801f</td>
+          <td>Not Used - reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8021</td>
+          <td>Internet Protocol Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1332">RFC1332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8023</td>
+          <td>OSI Network Layer Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1377">RFC1377</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8025</td>
+          <td>Xerox NS IDP Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1764">RFC1764</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8027</td>
+          <td>DECnet Phase IV Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1762">RFC1762</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8029</td>
+          <td>Appletalk Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">802b</td>
+          <td>Novell IPX Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">802d</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">802f</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8031</td>
+          <td>Bridging NCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8033</td>
+          <td>Stream Protocol Control Protocol</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8035</td>
+          <td>Banyan Vines Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1763">RFC1763</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8037</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8039</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">803b</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">803d</td>
+          <td>Multi-Link Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">803f</td>
+          <td>NETBIOS Framing Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8041</td>
+          <td>Cisco Systems Control Protocol</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8043</td>
+          <td>Ascom Timeplex</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8045</td>
+          <td>Fujitsu LBLB Control Protocol</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8047</td>
+          <td>DCA Remote Lan Network Control Protocol (RLNCP)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8049</td>
+          <td>Serial Data Control Protocol (PPP-SDCP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">804b</td>
+          <td>SNA over 802.2 Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc2043">RFC2043</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">804d</td>
+          <td>SNA Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc2043">RFC2043</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">804f</td>
+          <td>IP6 Header Compression Control Protocol</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8051</td>
+          <td>KNX Bridging Control Protocol</td>
+          <td>[<a href="#ianp_knxunix_knx_co">ianp_knxunix_knx_co</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8053</td>
+          <td>Encryption Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1968">RFC1968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8055</td>
+          <td>Individual Link Encryption Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1968">RFC1968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8057</td>
+          <td>IPv6 Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc5072">RFC5072</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8059</td>
+          <td>PPP Muxing Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3153">RFC3153</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">805b</td>
+          <td>Vendor-Specific Network Control Protocol (VSNCP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3772">RFC3772</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">805d</td>
+          <td>TRILL Network Control Protocol (TNCP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6361">RFC6361</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">806f</td>
+          <td>Stampede Bridging Control Protocol</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8073</td>
+          <td>MP+ Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1934">RFC1934</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8071</td>
+          <td>Reserved</td>
+          <td>[<a href="#Karl_Fox">Karl_Fox</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">807d</td>
+          <td>Not Used - reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8081</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8083</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">80c1</td>
+          <td>NTCITS IPI Control Protocol</td>
+          <td>[<a href="#Alan_Ungar">Alan_Ungar</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">80cf</td>
+          <td>Not Used - reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">80fb</td>
+          <td>single link compression in multilink control</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">80fd</td>
+          <td>Compression Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">80ff</td>
+          <td>Not Used - reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8207</td>
+          <td>Cisco Discovery Protocol Control</td>
+          <td>[<a href="#Arun_Sastry">Arun_Sastry</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8209</td>
+          <td>Netcs Twin Routing</td>
+          <td>[<a href="#Oliver_Korfmacher">Oliver_Korfmacher</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">820b</td>
+          <td>STP - Control Protocol</td>
+          <td>[<a href="#Ben_Segal">Ben_Segal</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">820d</td>
+          <td>EDPCP - Extreme Discovery Protocol Ctrl Prtcl</td>
+          <td>[<a href="#Don_Grosser">Don_Grosser</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8235</td>
+          <td>Apple Client Server Protocol Control</td>
+          <td>[<a href="#Howard_Ridenour">Howard_Ridenour</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8281</td>
+          <td>MPLSCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc3032">RFC3032</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8285</td>
+          <td>IEEE p1284.4 standard - Protocol Control</td>
+          <td>[<a href="#Brian_Batchelder">Brian_Batchelder</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8287</td>
+          <td>ETSI TETRA TNP1 Control Protocol</td>
+          <td>[<a href="#Seppo_Nieminen">Seppo_Nieminen</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8289</td>
+          <td>Multichannel Flow Treatment Protocol</td>
+          <td>[<a href="#Pete_McCann">Pete_McCann</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c021</td>
+          <td>Link Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c023</td>
+          <td>Password Authentication Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c025</td>
+          <td>Link Quality Report</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c027</td>
+          <td>Shiva Password Authentication Protocol</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">c029</td>
+          <td>CallBack Control Protocol (CBCP)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">c02b</td>
+          <td>BACP Bandwidth Allocation Control Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc2125">RFC2125</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c02d</td>
+          <td>BAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc2125">RFC2125</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c05b</td>
+          <td>Vendor-Specific Authentication Protocol (VSAP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3772">RFC3772</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c081</td>
+          <td>Container Control Protocol</td>
+          <td>[<a href="#Ken_funk_com">Ken_funk_com</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c223</td>
+          <td>Challenge Handshake Authentication Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c225</td>
+          <td>RSA Authentication Protocol</td>
+          <td>[<a href="#Badari_Narayana">Badari_Narayana</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c227</td>
+          <td>Extensible Authentication Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c229</td>
+          <td>Mitsubishi Security Info Exch Ptcl (SIEP)</td>
+          <td>[<a href="#Shoichiro_Seno">Shoichiro_Seno</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c26f</td>
+          <td>Stampede Bridging Authorization Protocol</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">c281</td>
+          <td>Proprietary Authentication Protocol</td>
+          <td>[<a href="#Ken_funk_com">Ken_funk_com</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c283</td>
+          <td>Proprietary Authentication Protocol</td>
+          <td>[<a href="#Wayne_Tackabury">Wayne_Tackabury</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">c481</td>
+          <td>Proprietary Node ID Authentication Protocol</td>
+          <td>[<a href="#Ken_funk_com">Ken_funk_com</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-3" id="ppp-numbers-3"></a>PPP Link Control Protocol (LCP) and Internet Protocol Control Protocol (IPCP) Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Link Control Protocol (LCP),
+the Compression Control Protocol (CCP), Internet Protocol Control
+Protocol (IPCP), and other control protocols, contain an 8 bit
+Code field which identifies the type of packet.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Packet Type</th>
+          <th>Reference</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Vendor Specific</td>
+          <td>[<a href="http://www.iana.org/go/rfc2153">RFC2153</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Configure-Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Configure-Ack</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Configure-Nak</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Configure-Reject</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Terminate-Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Terminate-Ack</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Code-Reject</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Protocol-Reject</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td>LCP Only</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Echo-Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td>LCP Only</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Echo-Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td>LCP Only</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Discard-Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+          <td>LCP Only</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Identification</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+          <td>LCP Only</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Time-Remaining</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+          <td>LCP Only</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Reset-Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+          <td>CCP Only</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Reset-Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+          <td>CCP Only</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-4" id="ppp-numbers-4"></a>PPP LCP Configuration Option Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Link Control Protocol (LCP)
+specifies a number of Configuration Options which are distinguished by
+an 8 bit Type field.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Configuration Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Vendor Specific</td>
+          <td>[<a href="http://www.iana.org/go/rfc2153">RFC2153</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Maximum-Receive-Unit</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Async-Control-Character-Map</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Authentication-Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Quality-Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Magic-Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>DEPRECATED (Quality-Protocol)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Protocol-Field-Compression</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Address-and-Control-Field-Compression</td>
+          <td>[<a href="http://www.iana.org/go/rfc1661">RFC1661</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>FCS-Alternatives</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Self-Describing-Pad</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Numbered-Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc1663">RFC1663</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>DEPRECATED (Multi-Link-Procedure)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Callback</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>DEPRECATED (Connect-Time)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>DEPRECATED (Compound-Frames)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>DEPRECATED (Nominal-Data-Encapsulation)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Multilink-MRRU</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Multilink-Short-Sequence-Number-Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Multilink-Endpoint-Discriminator</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Proprietary</td>
+          <td>[<a href="#Ken_funk_com">Ken_funk_com</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>DCE-Identifier                                
+[Warning: option type in the RFC is incorrect.]</td>
+          <td>[<a href="http://www.iana.org/go/rfc1976">RFC1976</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>Multi-Link-Plus-Procedure</td>
+          <td>[<a href="http://www.iana.org/go/rfc1934">RFC1934</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Link Discriminator for BACP</td>
+          <td>[<a href="http://www.iana.org/go/rfc2125">RFC2125</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>LCP-Authentication-Option</td>
+          <td>[<a href="#Ken_Culbert">Ken_Culbert</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>Consistent Overhead Byte Stuffing (COBS)</td>
+          <td>[<a href="#James_Carlson">James_Carlson</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>Prefix elision</td>
+          <td>[<a href="http://www.iana.org/go/rfc2686">RFC2686</a>][<a href="http://www.iana.org/go/rfc2687">RFC2687</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>Multilink header format</td>
+          <td>[<a href="http://www.iana.org/go/rfc2686">RFC2686</a>][<a href="http://www.iana.org/go/rfc2687">RFC2687</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>Internationalization</td>
+          <td>[<a href="http://www.iana.org/go/rfc2484">RFC2484</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>Simple Data Link on SONET/SDH</td>
+          <td>[<a href="http://www.iana.org/go/rfc2823">RFC2823</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-5" id="ppp-numbers-5"></a>PPP TNCP Configuration Option Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6361">RFC6361</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Configuration Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Vendor Specific</td>
+          <td>[<a href="http://www.iana.org/go/rfc2153">RFC2153</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-6" id="ppp-numbers-6"></a>PPP ECP Configuration Option Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James Carlson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1968">RFC1968</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>A one octet field is used in the Encryption Control Protocol (ECP)
+to indicate the configuration option type [<a href="http://www.iana.org/go/rfc1968">RFC1968</a>].</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-6" class="sortable">
+      <thead>
+        <tr>
+          <th>ECP Option</th>
+          <th>Configuration Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>OUI</td>
+          <td>[<a href="http://www.iana.org/go/rfc1968">RFC1968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Deprecated (DESE)</td>
+          <td>[<a href="#Karl_Fox">Karl_Fox</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>3DESE</td>
+          <td>[<a href="http://www.iana.org/go/rfc2420">RFC2420</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>DESE-bis</td>
+          <td>[<a href="http://www.iana.org/go/rfc2419">RFC2419</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-7" id="ppp-numbers-7"></a>PPP CCP Configuration Option Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>A one octet field is used in the Compression Control Protocol (CCP)
+to indicate the configuration option type [<a href="http://www.iana.org/go/rfc1962">RFC1962</a>].
+
+The unassigned values 4-15 are intended to be assigned to other
+freely available compression algorithms that have no license fees.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-7" class="sortable">
+      <thead>
+        <tr>
+          <th>CCP Option</th>
+          <th>Configuration Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>OUI</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Predictor type 1</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Predictor type 2</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Puddle Jumper</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Hewlett-Packard PPC</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Stac Electronics LZS</td>
+          <td>[<a href="http://www.iana.org/go/rfc1974">RFC1974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Microsoft PPC</td>
+          <td>[<a href="http://www.iana.org/go/rfc2118">RFC2118</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Gandalf FZA</td>
+          <td>[<a href="http://www.iana.org/go/rfc1993">RFC1993</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>V.42bis compression</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>BSD Compress</td>
+          <td>[<a href="http://www.iana.org/go/rfc1977">RFC1977</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>LZS-DCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc1967">RFC1967</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>MVRCA (Magnalink)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1975">RFC1975</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>Deflate</td>
+          <td>[<a href="http://www.iana.org/go/rfc1979">RFC1979</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>V.44/LZJH Compression Protocol</td>
+          <td>[<a href="#Jeff_Heath">Jeff_Heath</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1962">RFC1962</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-8" id="ppp-numbers-8"></a>PPP SDCP Configuration Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James Carlson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>A one octet field is used in the PPP Serial Data Transport Protocol (SDTP) 
+to indicate the option type [<a href="http://www.iana.org/go/rfc1963">RFC1963</a>].
+
+Note that Option Types 5-8 are specific to a single port and require
+port numbers in their format.  Option Types 6-8 are specific to the
+HDLC-Synchronous Transport-Mode.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-8" class="sortable">
+      <thead>
+        <tr>
+          <th>SDCP Option</th>
+          <th>Configuration Element</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Packet-Format</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Header-Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Length-Field-Present</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Multi-Port</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Transport-Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Maximum-Frame-Size</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Allow-Odd-Frames</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>FCS-Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Flow-Expiration-Time</td>
+          <td>[<a href="http://www.iana.org/go/rfc1963">RFC1963</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-9" id="ppp-numbers-9"></a>PPP Authentication Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James Carlson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1994">RFC1994</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>A one octet field is used in the Challenge-Handshake Authentication
+Protocol (CHAP) to indicate which algorithm is in use [<a href="http://www.iana.org/go/rfc1994">RFC1994</a>].</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1994">RFC1994</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1994">RFC1994</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1994">RFC1994</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1994">RFC1994</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1994">RFC1994</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>CHAP with MD5</td>
+          <td>[<a href="http://www.iana.org/go/rfc1994">RFC1994</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>SHA-1</td>
+          <td>[<a href="#David_L_Black">David_L_Black</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>MS-CHAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc2433">RFC2433</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>MS-CHAP-2</td>
+          <td>[<a href="http://www.iana.org/go/rfc2759">RFC2759</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-10" id="ppp-numbers-10"></a>PPP LCP FCS-Alternatives</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Link Control Protocol (LCP)
+FCS-Alternatives Configuration Option contains an 8-bit Options field
+which identifies the FCS used.  These are assigned as follows.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-10" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>FCS</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Null FCS</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>CCITT 16-Bit FCS</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>CCITT 32-bit FCS</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-11" id="ppp-numbers-11"></a>PPP Multilink Endpoint Discriminator Class</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF REview</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Link Control Protocol (LCP)
+Multilink Endpoint Discriminator Option includes a Class field which
+identifies the address class.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Class</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Null Class</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Locally Assigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Internet Protocol (IPv4)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IEEE 802.1 global MAC address</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>PPP Magic Number Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Public Switched Network Director Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc1990">RFC1990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Internet Protocol (Ipv6) Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3790">RFC3790</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-12" id="ppp-numbers-12"></a>PPP LCP Callback Operation Fields</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Link Control Protocol (LCP) Callback
+Configuration Option contains an 8-bit Operations field which
+identifies the format of the Message.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-12" class="sortable">
+      <thead>
+        <tr>
+          <th>Operation</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Location determined by user authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Dialing string</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Location identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>E.164 number</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>X.500 distinguished name</td>
+          <td>[<a href="http://www.iana.org/go/rfc1570">RFC1570</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Location is determined during CBCP negotiation</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-13" id="ppp-numbers-13"></a>PPP ATCP Configuration Option Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James Carlson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Apple Talk Control Protocol (ATCP)
+specifies a number of Configuration Options [<a href="http://www.iana.org/go/rfc1378">RFC1378</a>] which are
+distinguished by an 8 bit Type field.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-13" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Configuration Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>AppleTalk-Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Routing-Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Suppress-Broadcasts</td>
+          <td>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>AT-Compression-Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Server-information</td>
+          <td>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Zone-information</td>
+          <td>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Default-Router-Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc1378">RFC1378</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-14" id="ppp-numbers-14"></a>PPP OSINLCP Configuration Option Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James Carlson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1377">RFC1377</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) OSI Network Layer Control Protocol
+(OSINLCP) specifies a number of Configuration Options [<a href="http://www.iana.org/go/rfc1377">RFC1377</a>] which
+are distinguished by an 8 bit Type field.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-14" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Configuration Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Align-NPDU</td>
+          <td>[<a href="http://www.iana.org/go/rfc1377">RFC1377</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-15" id="ppp-numbers-15"></a>PPP Banyan Vines Configuration Option Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James Carlson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1763">RFC1763</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Banyan Vines Control Protocol (BVCP)
+specifies a number of Configuration Options [<a href="http://www.iana.org/go/rfc1763">RFC1763</a>] which are
+distinguished by an 8 bit Type field.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-15" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Configuration Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>BV-NS-RTP-Link-Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc1763">RFC1763</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>BV-FRP</td>
+          <td>[<a href="http://www.iana.org/go/rfc1763">RFC1763</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>BV-RTP</td>
+          <td>[<a href="http://www.iana.org/go/rfc1763">RFC1763</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>BV-Suppress-Broadcast</td>
+          <td>[<a href="http://www.iana.org/go/rfc1763">RFC1763</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-16" id="ppp-numbers-16"></a>PPP Bridging Configuration Option Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Bridging Control Protocol (BCP)
+specifies a number of Configuration Options which are distinguished by
+an 8 bit Type field.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-16.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-16" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Configuration Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Bridge-Identification</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Line-Identification</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>MAC-Support</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Tinygram-Compression</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>LAN-Identification (obsoleted)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>MAC-Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Spanning-Tree-Protocol (old formatted)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>IEEE-802-Tagged-Frame</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Management-Inline</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Bridge-Control-Packet-Indicator</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-17" id="ppp-numbers-17"></a>PPP Bridging MAC Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Bridging Control Protocol (BCP)
+contains an 8 bit MAC Type field which identifies the MAC
+encapsulated.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-17" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>MAC</th>
+          <th>Address Format</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IEEE 802.3/Ethernet</td>
+          <td>Canonical addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IEEE 802.4</td>
+          <td>Canonical addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IEEE 802.5</td>
+          <td>Non-canonical addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>FDDI</td>
+          <td>Non-canonical addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-10</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>IEEE 802.5</td>
+          <td>Canonical addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>FDDI</td>
+          <td>Canonical addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-18" id="ppp-numbers-18"></a>PPP Bridging Spanning Tree</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Bridging Control Protocol (BCP)
+Spanning Tree Configuration Option contains an 8-bit Protocol field
+which identifies the spanning tree used.  These are assigned as
+follows:</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-18.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-18" class="sortable">
+      <thead>
+        <tr>
+          <th>Protocol</th>
+          <th>Spanning Tree</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Null - no spanning tree protocol supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IEEE 802.1D spanning tree protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IEEE 802.1G extended spanning tree protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IBM source route spanning tree protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>DEC LANbridge 100 spanning tree protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3518">RFC3518</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-19" id="ppp-numbers-19"></a>PPP (IPXCP) Configuration Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James Carlson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-19.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-19" class="sortable">
+      <thead>
+        <tr>
+          <th>Option</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>IPX-Network-Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPX-Node-Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IPX-Compression-Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>IPX-Routing-Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>IPX-Router-Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>IPX-Configuration-Complete</td>
+          <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="ppp-numbers-20" id="ppp-numbers-20"></a>IPX Compression Protocol Values (Value 3)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>James Carlson</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ppp-numbers-20.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ppp-numbers-20" class="sortable">
+        <thead>
+          <tr>
+            <th>Value (in hex)</th>
+            <th>Protocol</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0000-0001</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">0002</td>
+            <td>Telebit Compressed IPX</td>
+            <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0002-0234</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">0235</td>
+            <td>Shiva Compressed NCP/IPX</td>
+            <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="ppp-numbers-21" id="ppp-numbers-21"></a>IPX Routing Protocol Options (Value 4)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>James Carlson</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ppp-numbers-21.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ppp-numbers-21" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Protocol</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>No routing protocol required</td>
+            <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>Novell RIP/SAP required</td>
+            <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>Novell NLSP required</td>
+            <td>[<a href="http://www.iana.org/go/rfc1552">RFC1552</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>Novell Demand RIP required</td>
+            <td>[<a href="http://www.iana.org/go/rfc1582">RFC1582</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>Novell Demand SAP required</td>
+            <td>[<a href="http://www.iana.org/go/rfc1582">RFC1582</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td>Novell Triggered RIP required</td>
+            <td>[<a href="#Richard_Edmonstone">Richard_Edmonstone</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">8</td>
+            <td>Novell Triggered SAP required</td>
+            <td>[<a href="#Richard_Edmonstone">Richard_Edmonstone</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="ppp-numbers-22" id="ppp-numbers-22"></a>NetBIOS Frames Control Protocol (NBFCP) Configuration Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James Carlson</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>NBFCP Configuration Options [<a href="http://www.iana.org/go/rfc2097">RFC2097</a>] allow modifications to the
+standard characteristics of the network-layer protocol to be
+negotiated.  If a Configuration Option is not included in a
+Configure-Request packet, the default value for that Configuration
+Option is assumed.
+
+NBFCP uses the same Configuration Option format defined for LCP,
+with a separate set of Options.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-22.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-22" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc2153">RFC2153</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Name-Projection</td>
+          <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Peer-Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Multicast-Filtering</td>
+          <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>IEEE-MAC-Address-Required</td>
+          <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="ppp-numbers-23" id="ppp-numbers-23"></a>NBFCP Configuration Options - Name-Projection 'Added' field (value 1)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IANA does not allocate</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</dd>
+        <dt>Note</dt>
+        <dd>
+          <pre>The Name-Projection 'Added' field is not defined by IETF or
+allocated through IANA and thus no new values should be allocated.</pre>
+        </dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ppp-numbers-23.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ppp-numbers-23" class="sortable">
+        <thead>
+          <tr>
+            <th>Value (Hex)</th>
+            <th>Result Codes for Added field</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">00</td>
+            <td>Name successfully added.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0D</td>
+            <td>Duplicate name in local name table.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0E</td>
+            <td>Name table full.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">15</td>
+            <td>Name not found or cannot specify "*" or null.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">16</td>
+            <td>Name in use on remote NetBIOS.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">19</td>
+            <td>Name conflict detected.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">30</td>
+            <td>Name defined by another environment.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">35</td>
+            <td>Required system resources exhausted.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">36-FF</td>
+            <td>Undefined</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="ppp-numbers-24" id="ppp-numbers-24"></a>NBFCP Configuration Options - Peer-Information (value 2)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ppp-numbers-24.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ppp-numbers-24" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Peer-Class</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">1</td>
+            <td>Reserved for legacy implementations.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>PPP NetBIOS Gateway Server.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Reserved for legacy implementations.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>PPP Local Access Only Server.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>Reserved for legacy implementations.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>PPP NBF Bridge.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td>Reserved for legacy implementations.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">8</td>
+            <td>PPP End-System.</td>
+            <td>[<a href="http://www.iana.org/go/rfc2097">RFC2097</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">9-255</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="ppp-numbers-25" id="ppp-numbers-25"></a>PPP EAP Request/Response Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>A one octet field is used in the Extensible Authentication Protocol
+(EAP) to indicate the function and structure of EAP Request and
+Response packets [<a href="http://www.iana.org/go/rfc3748">RFC3748</a>].
+
+This registry has been replaced.  See the "Method Types" registry
+at [<a href="http://www.iana.org/assignments/eap-numbers">IANA registry <i>eap-numbers</i></a>] for a current list
+of the assigned types.</pre>
+      </dd>
+    </dl>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-26" id="ppp-numbers-26"></a>PPP Vendor Specific OUI Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Registry closed by [<a href="http://www.iana.org/go/rfc5342">RFC5342</a>]</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5342">RFC5342</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>PPP Vendor Extensions [<a href="http://www.iana.org/go/rfc2153">RFC2153</a>] uses IEEE standard OUIs
+(Organizationally Unique Identifiers) to indicate vendor-specific
+features.  See [<a href="http://www.iana.org/go/rfc1700">RFC1700</a>] for details on contacting the IEEE.
+Vendors that desire to use their IEEE 802 OUI for PPP Vendor
+Extensions should register their OUI with IANA.  Vendors that do
+not otherwise need an IEEE assigned OUI can request a PPP
+specific OUI from IANA out of the 'CF0000' range, which has both
+the "locally-assigned" and "broadcast/multicast" bits set to one.
+See [<a href="http://www.iana.org/go/rfc2153">RFC2153</a>] for details.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-26.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-26" class="sortable">
+      <thead>
+        <tr>
+          <th>OUI (in hex)</th>
+          <th>Organization</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">CF0001</td>
+          <td>NTT Mobile Communications Network</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">CF0001</td>
+          <td>Data Comm for Business [<a href="#note1">1</a>]</td>
+          <td>[<a href="#John_McCain">John_McCain</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">CF0002</td>
+          <td>3GPP2 Vendor specific packet ID</td>
+          <td>[<a href="#Trevor_Plestid">Trevor_Plestid</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">CF0003</td>
+          <td>Trafficmaster, Plc</td>
+          <td>[<a href="#David_Fernandez">David_Fernandez</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">CF0004-CFFFFF</td>
+          <td>Reserved: Registry closed</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-27" id="ppp-numbers-27"></a>PPP IPCP Configuration Option Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1332">RFC1332</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Point-to-Point Protocol (PPP) Internet Protocol Control Protocol
+(IPCP) specifies a number of Configuration Options which are
+distinguished by an 8 bit Type field.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-27.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-27" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Configuration Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>IP-Addresses (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc1332">RFC1332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IP-Compression-Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc1332">RFC1332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IP-Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc1332">RFC1332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Mobile-IPv4</td>
+          <td>[<a href="http://www.iana.org/go/rfc2290">RFC2290</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-128</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Primary DNS Server Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc1877">RFC1877</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Primary NBNS Server Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc1877">RFC1877</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Secondary DNS Server Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc1877">RFC1877</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>Secondary NBNS Server Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc1877">RFC1877</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-28" id="ppp-numbers-28"></a>PPP IPv6CP Configuration Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5072">RFC5072</a>][<a href="http://www.iana.org/go/rfc3818">RFC3818</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>IPV6CP Configuration Options allow negotiation of desirable IPv6
+parameters.  IPV6CP uses the same Configuration Option format defined
+for LCP, with a separate set of Options.  If a Configuration Option is
+not included in a Configure-Request packet, the default value for that
+Configuration Option is assumed.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-28.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-28" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Configuration Option</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Interface-Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc5072">RFC5072</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPv6-Compression-Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc5172">RFC5172</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-29" id="ppp-numbers-29"></a>IP-Compression-Protocol Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1332">RFC1332</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-29.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-29" class="sortable">
+      <thead>
+        <tr>
+          <th>Value (hex)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">002d</td>
+          <td>Van Jacobson Compressed TCP/IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc1144">RFC1144</a>][<a href="http://www.iana.org/go/rfc1332">RFC1332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0003</td>
+          <td>Robust Header Compression (ROHC)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3241">RFC3241</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0061</td>
+          <td>IP Header Compression</td>
+          <td>[<a href="http://www.iana.org/go/rfc2507">RFC2507</a>][<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-30" id="ppp-numbers-30"></a>IPv6-Compression-Protocol Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5172">RFC5172</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-30.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-30" class="sortable">
+      <thead>
+        <tr>
+          <th>Value (hex)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0003</td>
+          <td>Robust Header Compression (ROHC)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3241">RFC3241</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">004f</td>
+          <td>Historical; do not use -- see RFC2023</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0061</td>
+          <td>IP Header Compression</td>
+          <td>[<a href="http://www.iana.org/go/rfc2507">RFC2507</a>][<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-31" id="ppp-numbers-31"></a>IP Header Compression Configuration Option Suboption Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ppp-numbers-31.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ppp-numbers-31" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>RTP Header Compression</td>
+          <td>[<a href="http://www.iana.org/go/rfc2508">RFC2508</a>][<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Enhanced RTP-Compression</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>TCP or non-TCP Compression Disable</td>
+          <td>[<a href="http://www.iana.org/go/rfc3544">RFC3544</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ppp-numbers-32" id="ppp-numbers-32"></a>ROHC Configuration Option Suboption Identifier Values</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3241">RFC3241</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Please see [<a href="http://www.iana.org/assignments/rohc-sub-ids">IANA registry <i>rohc-sub-ids</i></a>]</pre>
+      </dd>
+    </dl>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Alan_Ungar" id="Alan_Ungar">[Alan_Ungar]</a>
+          </td>
+          <td>Alan Ungar</td>
+          <td>
+            <a href="mailto:AUngar&amp;farradyne.com">mailto:AUngar&amp;farradyne.com</a>
+          </td>
+          <td>1995-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Arun_Sastry" id="Arun_Sastry">[Arun_Sastry]</a>
+          </td>
+          <td>Arun Sastry</td>
+          <td>
+            <a href="mailto:asastry&amp;cisco.com">mailto:asastry&amp;cisco.com</a>
+          </td>
+          <td>1995-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Badari_Narayana" id="Badari_Narayana">[Badari_Narayana]</a>
+          </td>
+          <td>Badari Narayana</td>
+          <td>
+            <a href="mailto:badari&amp;ca.sjf.novell.com">mailto:badari&amp;ca.sjf.novell.com</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Ben_Segal" id="Ben_Segal">[Ben_Segal]</a>
+          </td>
+          <td>Ben Segal</td>
+          <td>
+            <a href="mailto:b.segal&amp;cern.ch">mailto:b.segal&amp;cern.ch</a>
+          </td>
+          <td>2000-08</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Brian_Batchelder" id="Brian_Batchelder">[Brian_Batchelder]</a>
+          </td>
+          <td>Brian Batchelder</td>
+          <td>
+            <a href="mailto:brianb&amp;vcd.hp.com">mailto:brianb&amp;vcd.hp.com</a>
+          </td>
+          <td>1999-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Bryant_Eastham" id="Bryant_Eastham">[Bryant_Eastham]</a>
+          </td>
+          <td>Bryant Eastham</td>
+          <td>
+            <a href="mailto:protocol&amp;opendof.org">mailto:protocol&amp;opendof.org</a>
+          </td>
+          <td>2015-04-23</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Curtis_A_Siller_Jr" id="Curtis_A_Siller_Jr">[Curtis_A_Siller_Jr]</a>
+          </td>
+          <td>Curtis A. Siller Jr.</td>
+          <td>
+            <a href="mailto:csiller&amp;cetacean.com">mailto:csiller&amp;cetacean.com</a>
+          </td>
+          <td>2003-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="David_Fernandez" id="David_Fernandez">[David_Fernandez]</a>
+          </td>
+          <td>David Fernandez</td>
+          <td>
+            <a href="mailto:david.fernandez&amp;trafficmaster.co.uk">mailto:david.fernandez&amp;trafficmaster.co.uk</a>
+          </td>
+          <td>2007-04-18</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="David_L_Black" id="David_L_Black">[David_L_Black]</a>
+          </td>
+          <td>David L. Black</td>
+          <td>
+            <a href="mailto:black_david&amp;emc.com">mailto:black_david&amp;emc.com</a>
+          </td>
+          <td>2002-12</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Don_Grosser" id="Don_Grosser">[Don_Grosser]</a>
+          </td>
+          <td>Don Grosser</td>
+          <td>
+            <a href="mailto:dgrosser&amp;extremenetworks.com">mailto:dgrosser&amp;extremenetworks.com</a>
+          </td>
+          <td>2000-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Erling_B_Stage" id="Erling_B_Stage">[Erling_B_Stage]</a>
+          </td>
+          <td>Erling B. Stage</td>
+          <td>
+            <a href="mailto:ebs&amp;craycom.dk">mailto:ebs&amp;craycom.dk</a>
+          </td>
+          <td>1994-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Frank_Quick" id="Frank_Quick">[Frank_Quick]</a>
+          </td>
+          <td>Frank Quick</td>
+          <td>
+            <a href="mailto:fquick&amp;qualcomm.com">mailto:fquick&amp;qualcomm.com</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Howard_Ridenour" id="Howard_Ridenour">[Howard_Ridenour]</a>
+          </td>
+          <td>Howard Ridenour</td>
+          <td>
+            <a href="mailto:RIDENOUR1&amp;applelink.apple.com">mailto:RIDENOUR1&amp;applelink.apple.com</a>
+          </td>
+          <td>1995-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Ilan_Rachmani" id="Ilan_Rachmani">[Ilan_Rachmani]</a>
+          </td>
+          <td>Ilan Rachmani</td>
+          <td>
+            <a href="mailto:standards&amp;expand.com">mailto:standards&amp;expand.com</a>
+          </td>
+          <td>1999-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="James_Carlson" id="James_Carlson">[James_Carlson]</a>
+          </td>
+          <td>James Carlson</td>
+          <td>
+            <a href="mailto:james.d.carlson&amp;east.sun.com">mailto:james.d.carlson&amp;east.sun.com</a>
+          </td>
+          <td>2001-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jason_Gaedtke" id="Jason_Gaedtke">[Jason_Gaedtke]</a>
+          </td>
+          <td>Jason Gaedtke</td>
+          <td>
+            <a href="mailto:j.gaedtke&amp;cablelabs.com">mailto:j.gaedtke&amp;cablelabs.com</a>
+          </td>
+          <td>2002-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jeff_Heath" id="Jeff_Heath">[Jeff_Heath]</a>
+          </td>
+          <td>Jeff Heath</td>
+          <td>
+            <a href="mailto:jheath&amp;hns.com">mailto:jheath&amp;hns.com</a>
+          </td>
+          <td>2002-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="John_McCain" id="John_McCain">[John_McCain]</a>
+          </td>
+          <td>John McCain</td>
+          <td>
+            <a href="mailto:jmccain&amp;dcbnet.com">mailto:jmccain&amp;dcbnet.com</a>
+          </td>
+          <td>1997-07</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="K_Arvind" id="K_Arvind">[K_Arvind]</a>
+          </td>
+          <td>K. Arvind</td>
+          <td>
+            <a href="mailto:arvind&amp;tenornetworks.com">mailto:arvind&amp;tenornetworks.com</a>
+          </td>
+          <td>2000-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Karl_Fox" id="Karl_Fox">[Karl_Fox]</a>
+          </td>
+          <td>Karl Fox</td>
+          <td>
+            <a href="mailto:karl&amp;ascend.con">mailto:karl&amp;ascend.con</a>
+          </td>
+          <td>1997-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Ken_Culbert" id="Ken_Culbert">[Ken_Culbert]</a>
+          </td>
+          <td>Ken Culbert</td>
+          <td>
+            <a href="mailto:ken&amp;funk.com">mailto:ken&amp;funk.com</a>
+          </td>
+          <td>1996-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Murali_Rajagopal" id="Murali_Rajagopal">[Murali_Rajagopal]</a>
+          </td>
+          <td>Murali Rajagopal</td>
+          <td>
+            <a href="mailto:murali&amp;gadzoox.com">mailto:murali&amp;gadzoox.com</a>
+          </td>
+          <td>2000-05</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Oliver_Korfmacher" id="Oliver_Korfmacher">[Oliver_Korfmacher]</a>
+          </td>
+          <td>Oliver Korfmacher</td>
+          <td>
+            <a href="mailto:okorf&amp;netcs.com">mailto:okorf&amp;netcs.com</a>
+          </td>
+          <td>1995-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Pete_McCann" id="Pete_McCann">[Pete_McCann]</a>
+          </td>
+          <td>Pete McCann</td>
+          <td>
+            <a href="mailto:mccap&amp;research.bell-labs.com">mailto:mccap&amp;research.bell-labs.com</a>
+          </td>
+          <td>2001-03</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Richard_Edmonstone" id="Richard_Edmonstone">[Richard_Edmonstone]</a>
+          </td>
+          <td>Richard Edmonstone</td>
+          <td>
+            <a href="mailto:richarde&amp;spider.co.uk">mailto:richarde&amp;spider.co.uk</a>
+          </td>
+          <td>1996-07</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Robert_Banfill" id="Robert_Banfill">[Robert_Banfill]</a>
+          </td>
+          <td>Robert Banfill</td>
+          <td>
+            <a href="mailto:r_banfill&amp;reftek.com">mailto:r_banfill&amp;reftek.com</a>
+          </td>
+          <td>1997-07</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Seppo_Nieminen" id="Seppo_Nieminen">[Seppo_Nieminen]</a>
+          </td>
+          <td>Seppo Nieminen</td>
+          <td>
+            <a href="mailto:seppo.niemimen&amp;ntc.nokia.com">mailto:seppo.niemimen&amp;ntc.nokia.com</a>
+          </td>
+          <td>1999-07</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Sharat_C_Prasad" id="Sharat_C_Prasad">[Sharat_C_Prasad]</a>
+          </td>
+          <td>Sharat C. Prasad</td>
+          <td>
+            <a href="mailto:shprasad&amp;cisco.com">mailto:shprasad&amp;cisco.com</a>
+          </td>
+          <td>2001-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Shoichiro_Seno" id="Shoichiro_Seno">[Shoichiro_Seno]</a>
+          </td>
+          <td>Shoichiro Seno</td>
+          <td>
+            <a href="mailto:senos&amp;kousoku.isl.melco.co.jp">mailto:senos&amp;kousoku.isl.melco.co.jp</a>
+          </td>
+          <td>1995-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Trevor_Plestid" id="Trevor_Plestid">[Trevor_Plestid]</a>
+          </td>
+          <td>Trevor Plestid</td>
+          <td>
+            <a href="mailto:tplestid&amp;rim.net">mailto:tplestid&amp;rim.net</a>
+          </td>
+          <td>2003-06</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Wayne_Tackabury" id="Wayne_Tackabury">[Wayne_Tackabury]</a>
+          </td>
+          <td>Wayne Tackabury</td>
+          <td>
+            <a href="mailto:wayne&amp;cayman.cayman.com">mailto:wayne&amp;cayman.cayman.com</a>
+          </td>
+          <td>1995-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="ianp_knxunix_knx_co" id="ianp_knxunix_knx_co">[ianp_knxunix_knx_co]</a>
+          </td>
+          <td></td>
+          <td>
+            <a href="mailto:ianp&amp;knxunix.knx.co.uk">mailto:ianp&amp;knxunix.knx.co.uk</a>
+          </td>
+          <td>1994-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Ken_funk_com" id="Ken_funk_com">[Ken_funk_com]</a>
+          </td>
+          <td></td>
+          <td>
+            <a href="mailto:ken&amp;funk.com">mailto:ken&amp;funk.com</a>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Footnote</h1>
+    <table class="fn">
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note1" id="note1">[1]</a>
+        </td>
+        <td class="fn">
+          <pre>The duplicate assignment of CF0001 was inadvertent.  As per Expert
+Donald Eastlake, this assignment has been moved to here from
+the ethernet-numbers registry.</pre>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

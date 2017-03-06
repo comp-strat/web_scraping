@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Border Gateway Protocol (BGP) Well-known Communities</title>
+  </head>
+  <body>
+    <h1>Border Gateway Protocol (BGP) Well-known Communities</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2004-01-16</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-10-21</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="bgp-well-known-communities.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="bgp-well-known-communities.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="bgp-well-known-communities.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registry included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#bgp-well-known-communities-1">BGP Well-known Communities</a>
+      </li>
+    </ul>
+    <h2><a name="bgp-well-known-communities-1" id="bgp-well-known-communities-1"></a>BGP Well-known Communities</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1997">RFC1997</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Out of the total community space defined by RFC1997 of 0x00000000 -
+0xFFFFFFFF, the following ranges and values are reserved for communities
+that have global significance and their operations shall be implemented in
+any community-attribute-aware BGP speaker. The remainder of the space,
+specifically 0x00010000 - 0xFFFEFFFF, is for Private Use, with the first two
+octets encoding the autonomous system value as described by the RFC.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="bgp-well-known-communities-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-bgp-well-known-communities-1-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0xFFFF0000-0xFFFF8000</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF8001-0xFFFFFFFF</td>
+          <td>Standards Action</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-bgp-well-known-communities-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Attribute Value</th>
+          <th>Attribute</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00000000-0x0000FFFF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1997">RFC1997</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00010000-0xFFFEFFFF</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc1997">RFC1997</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF0000</td>
+          <td>planned-shut</td>
+          <td>[<a href="http://www.iana.org/go/draft-francois-bgp-gshut">draft-francois-bgp-gshut</a>][<a href="#Pierre_Francois">Pierre_Francois</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF0001</td>
+          <td>ACCEPT-OWN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7611">RFC7611</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF0002</td>
+          <td>ROUTE_FILTER_TRANSLATED_v4</td>
+          <td>[<a href="http://www.iana.org/go/draft-l3vpn-legacy-rtc">draft-l3vpn-legacy-rtc</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF0003</td>
+          <td>ROUTE_FILTER_v4</td>
+          <td>[<a href="http://www.iana.org/go/draft-l3vpn-legacy-rtc">draft-l3vpn-legacy-rtc</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF0004</td>
+          <td>ROUTE_FILTER_TRANSLATED_v6</td>
+          <td>[<a href="http://www.iana.org/go/draft-l3vpn-legacy-rtc">draft-l3vpn-legacy-rtc</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF0005</td>
+          <td>ROUTE_FILTER_v6</td>
+          <td>[<a href="http://www.iana.org/go/draft-l3vpn-legacy-rtc">draft-l3vpn-legacy-rtc</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF0006</td>
+          <td>LLGR_STALE</td>
+          <td>[<a href="http://www.iana.org/go/draft-uttaro-idr-bgp-persistence">draft-uttaro-idr-bgp-persistence</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF0007</td>
+          <td>NO_LLGR</td>
+          <td>[<a href="http://www.iana.org/go/draft-uttaro-idr-bgp-persistence">draft-uttaro-idr-bgp-persistence</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF0008</td>
+          <td>accept-own-nexthop</td>
+          <td>[<a href="#Ashutosh_Grewal">Ashutosh_Grewal</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF0009-0xFFFF0299</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF029A</td>
+          <td>BLACKHOLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7999">RFC7999</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFF029B-0xFFFFFF00</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFFFF01</td>
+          <td>NO_EXPORT</td>
+          <td>[<a href="http://www.iana.org/go/rfc1997">RFC1997</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFFFF02</td>
+          <td>NO_ADVERTISE</td>
+          <td>[<a href="http://www.iana.org/go/rfc1997">RFC1997</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFFFF03</td>
+          <td>NO_EXPORT_SUBCONFED</td>
+          <td>[<a href="http://www.iana.org/go/rfc1997">RFC1997</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFFFF04</td>
+          <td>NOPEER</td>
+          <td>[<a href="http://www.iana.org/go/rfc3765">RFC3765</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFFFFFF05-0xFFFFFFFF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Ashutosh_Grewal" id="Ashutosh_Grewal">[Ashutosh_Grewal]</a>
+          </td>
+          <td>Ashutosh Grewal</td>
+          <td>
+            <a href="mailto:agrewal&amp;juniper.net">mailto:agrewal&amp;juniper.net</a>
+          </td>
+          <td>2015-12-06</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Pierre_Francois" id="Pierre_Francois">[Pierre_Francois]</a>
+          </td>
+          <td>Pierre Francois</td>
+          <td>
+            <a href="mailto:pierre.francois&amp;uclouvain.be">mailto:pierre.francois&amp;uclouvain.be</a>
+          </td>
+          <td>2009-04-29</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

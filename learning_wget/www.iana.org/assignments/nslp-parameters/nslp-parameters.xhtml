@@ -1,0 +1,1817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>NSIS Signaling Layer Protocol (NSLP) Parameters</title>
+  </head>
+  <body>
+    <h1>NSIS Signaling Layer Protocol (NSLP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2010-02-03</dd>
+      <dt>Last Updated</dt>
+      <dd>2011-03-16</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="nslp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="nslp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="nslp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#messages">QoS NSLP Message Types</a>
+      </li>
+      <li>
+        <a href="#objects">NSLP Message Objects</a>
+      </li>
+      <li>
+        <a href="#binding-codes">QoS NSLP Binding Codes</a>
+      </li>
+      <li>
+        <a href="#error-classes">NSLP Error Classes</a>
+      </li>
+      <li>
+        <a href="#informational">Informational Error Codes</a>
+      </li>
+      <li>
+        <a href="#success">Success Error Codes</a>
+      </li>
+      <li>
+        <a href="#protocol-errors">Protocol Error Codes</a>
+      </li>
+      <li>
+        <a href="#transient-failure-errors">Transient Failure Codes</a>
+      </li>
+      <li>
+        <a href="#permanent-failure-errors">Permanent Failure Codes</a>
+      </li>
+      <li>
+        <a href="#error-codes">QoS Model Error Codes</a>
+      </li>
+      <li>
+        <a href="#error-source-identifiers">QoS NSLP Error Source Identifiers</a>
+      </li>
+      <li>
+        <a href="#natfw-message-types">NATFW NSLP Message Types</a>
+      </li>
+      <li>
+        <a href="#natfw-header-flags">NATFW NSLP Header Flags</a>
+      </li>
+      <li>
+        <a href="#response-codes">NATFW Response Codes</a>
+      </li>
+      <li>
+        <a href="#x-types">SESSION_AUTH X-Types</a>
+      </li>
+      <li>
+        <a href="#x-type-1-subtypes">AUTH_ENT_ID (X-Type 1) SubType values</a>
+      </li>
+      <li>
+        <a href="#x-type-3-subtypes">SOURCE_ADDR (X-Type 3) SubType values</a>
+      </li>
+      <li>
+        <a href="#x-type-4-subtypes">DEST_ADDR (X-Type 4) SubType values</a>
+      </li>
+      <li>
+        <a href="#x-type-5-subtypes">START_TIME (X-Type 5) SubType values</a>
+      </li>
+      <li>
+        <a href="#x-type-6-subtypes">END_TIME (X-Type 6) SubType values</a>
+      </li>
+    </ul>
+    <h2><a name="messages" id="messages"></a>QoS NSLP Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="messages.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-messages" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>RESERVE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>QUERY</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>NOTIFY</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x05-0xEF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xF0-0xFF</td>
+          <td>Reserved for Experimental/Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="objects" id="objects"></a>NSLP Message Objects</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="objects.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-objects-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-1023</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">1024-1999</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-objects" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x000</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x001</td>
+          <td>RII</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x002</td>
+          <td>RSN</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x003</td>
+          <td>REFRESH-PERIOD</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x004</td>
+          <td>BOUND-SESSION-ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x005</td>
+          <td>PACKET-CLASSIFIER</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x006</td>
+          <td>INFO-SPEC</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x007</td>
+          <td>SESSION-ID-LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x008</td>
+          <td>RSN-LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x009</td>
+          <td>MSG-ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00A</td>
+          <td>BOUND-MSG-ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00B</td>
+          <td>QSPEC</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00C</td>
+          <td>NATFW_LT</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00D</td>
+          <td>NATFW_EXTERNAL_IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00E</td>
+          <td>NATFW_EXTERNAL_BINDING</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00F</td>
+          <td>NATFW_EFI</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x010</td>
+          <td>NATFW_INFO</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x011</td>
+          <td>NATFW_NONCE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x012</td>
+          <td>NATFW_MSN</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x013</td>
+          <td>NATFW_DTINFO</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x014</td>
+          <td>NATFW_ICMP_TYPES</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x015</td>
+          <td>NODE_CAPABILITY_TUNNEL</td>
+          <td>[<a href="http://www.iana.org/go/rfc5979">RFC5979</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x016</td>
+          <td>SESSION_AUTH_OBJECT</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x017-0x7CF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x7D0-0x7FF</td>
+          <td>Reserved for Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x800-0xFFF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="binding-codes" id="binding-codes"></a>QoS NSLP Binding Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="binding-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-binding-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Tunnel and end-to-end sessions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Bidirectional sessions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>Aggregate sessions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Dependent sessions (binding session is alive only if the other session is also alive)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>Indicated session caused pre-emption</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x06-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0x9F</td>
+          <td>Reserved for Experimental/Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xA0-0xFF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="error-classes" id="error-classes"></a>NSLP Error Classes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>][<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="error-classes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-error-classes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>][<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Informational</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>][<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>][<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Protocol Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>][<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Transient Failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>][<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Permanent Failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>][<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>QoS Model Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Signaling session failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-15</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>][<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="informational" id="informational"></a>Informational Error Codes</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="informational.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-informational-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-63</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">64-127</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-informational" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Unknown BOUND-SESSION-ID: the message refers to an unknown
+        SESSION-ID in its BOUND-SESSION-ID object.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Route Change: possible route change occurred on downstream
+        path.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>Reduced refreshes not supported; full QSPEC required.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Congestion situation: Possible congestion situation occurred
+        on downstream path.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>Unknown SESSION-ID in SESSION-ID-LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x06</td>
+          <td>Mismatching RSN in RSN-LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x07-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0xBF</td>
+          <td>Reserved for Experimental/Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xC0-0xFF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="success" id="success"></a>Success Error Codes</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="success.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-success-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-63</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">64-127</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-success" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Reservation successful</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Teardown successful</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>Acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Refresh successful</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x05-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0xBF</td>
+          <td>Reserved for Experimental/Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xC0-0xFF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="protocol-errors" id="protocol-errors"></a>Protocol Error Codes</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="protocol-errors.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-protocol-errors-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-63</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">64-127</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-protocol-errors" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Illegal message type: the type given in the Message Type
+        field of the common header is unknown.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Wrong message length: the length given for the message does
+        not match the length of the message data.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>Bad flags value: an undefined flag or combination of flags
+        was set in the generic flags
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Bad flags value: an undefined flag or combination of flags
+        was set in the message-specific flags</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>Mandatory object missing: an object required in a message of
+        this type was missing.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x06</td>
+          <td>Illegal object present: an object was present that must not
+        be used in a message of this type.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x07</td>
+          <td>Unknown object present: an object of an unknown type was
+        present in the message.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>Wrong object length: the length given for the object did not
+        match the length of the object data present.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x09</td>
+          <td>RESERVE received from wrong direction.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0A</td>
+          <td>Unknown object field value: a field in an object had an
+        unknown value.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0B</td>
+          <td>Duplicate object present.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0C</td>
+          <td>Malformed QSPEC.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0D</td>
+          <td>Unknown MRI.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0E</td>
+          <td>Erroneous value in the TLV object's value field.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0F</td>
+          <td>Incompatible QSPEC</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x10-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0xBF</td>
+          <td>Reserved for Experimental/Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xC0-0xFF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="transient-failure-errors" id="transient-failure-errors"></a>Transient Failure Codes</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="transient-failure-errors.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-transient-failure-errors-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-63</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">64-127</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-transient-failure-errors" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>No GIST reverse-path forwarding state</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>No path state for RESERVE, when doing a receiver-oriented
+        reservation
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>RII conflict
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>Full QSPEC required
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x05</td>
+          <td>Mismatch synchronization between end-to-end RESERVE and
+        intra-domain RESERVE
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x06</td>
+          <td>Reservation preempted
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x07</td>
+          <td>Reservation failure
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>Path truncated - Next peer dead
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x09-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0xBF</td>
+          <td>Reserved for Experimental/Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xC0-0xFF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="permanent-failure-errors" id="permanent-failure-errors"></a>Permanent Failure Codes</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="permanent-failure-errors.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-permanent-failure-errors-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-63</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">64-127</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-permanent-failure-errors" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Internal or system error</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Authorization failure
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0xBF</td>
+          <td>Reserved for Experimental/Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xC0-0xFF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="error-codes" id="error-codes"></a>QoS Model Error Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="error-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-error-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-63</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">64-67</td>
+          <td>Reserved for Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">68-255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="error-source-identifiers" id="error-source-identifiers"></a>QoS NSLP Error Source Identifiers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="error-source-identifiers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-error-source-identifiers" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x1</td>
+          <td>IPv4</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x2</td>
+          <td>IPv6</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3</td>
+          <td>FQDN in UTF-8</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x4-0xD</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xE-0xF</td>
+          <td>Reserved for Experimental/Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5974">RFC5974</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="natfw-message-types" id="natfw-message-types"></a>NATFW NSLP Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="natfw-message-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-natfw-message-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x1</td>
+          <td>CREATE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x2</td>
+          <td>EXTERNAL</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3</td>
+          <td>RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x4</td>
+          <td>NOTIFY</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="natfw-header-flags" id="natfw-header-flags"></a>NATFW NSLP Header Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="natfw-header-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-natfw-header-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Bit Position</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>P flag</td>
+          <td>8</td>
+          <td>Section 4.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>E flag</td>
+          <td>9</td>
+          <td>Section 4.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Reserved</td>
+          <td>10-15</td>
+          <td>Section 4.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="response-codes" id="response-codes"></a>NATFW Response Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="response-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-response-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Response Code</th>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Informational</td>
+          <td>0x01</td>
+          <td>Route change: possible route change on the outbound path.
+        </td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Informational</td>
+          <td>0x02</td>
+          <td>Re-authentication required.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Informational</td>
+          <td>0x03</td>
+          <td>NATFW node is going down soon.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Informational</td>
+          <td>0x04</td>
+          <td>NATFW signaling session lifetime expired.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Informational</td>
+          <td>0x05</td>
+          <td>NATFW signaling session terminated.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Success</td>
+          <td>0x01</td>
+          <td>All successfully processed.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x01</td>
+          <td>Illegal message type: the type given in the Message Type
+        field of the NSLP header is unknown.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x02</td>
+          <td>Wrong message length: the length given for the message in
+        the NSLP header does not match the length of the message data.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x03</td>
+          <td>Bad flags value: an undefined flag or combination of
+        flags was set in the NSLP header.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x04</td>
+          <td>Mandatory object missing: an object required in a message
+        of this type was missing.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x05</td>
+          <td>Illegal object present: an object was present which must
+        not be used in a message of this type.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x06</td>
+          <td>Unknown object present: an object of an unknown type was
+        present in the message.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x07</td>
+          <td>Wrong object length: the length given for the object in
+        the object header did not match the length of the object data
+        present.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x08</td>
+          <td>Unknown object field value: a field in an object had an
+        unknown value.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x09</td>
+          <td>Invalid Flag-Field combination: An object contains an
+        invalid combination of flags and/or fields.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x0A</td>
+          <td>Duplicate object present.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Protocol error</td>
+          <td>0x0B</td>
+          <td>Received EXTERNAL request message on external side.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Transient failure</td>
+          <td>0x01</td>
+          <td>Requested resources temporarily not available.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Permanent failure</td>
+          <td>0x01</td>
+          <td>Authentication failed.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Permanent failure</td>
+          <td>0x02</td>
+          <td>Authorization failed.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Permanent failure</td>
+          <td>0x04</td>
+          <td>Internal or system error.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Permanent failure</td>
+          <td>0x06</td>
+          <td>No edge-device here.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Permanent failure</td>
+          <td>0x07</td>
+          <td>DId not reach the NR.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x01</td>
+          <td>Session terminated asynchronously.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x02</td>
+          <td>Requested lifetime is too big.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x03</td>
+          <td>No reservation found matching the MRI of the CREATE
+        request.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x04</td>
+          <td>Requested policy rule denied due to policy conflict.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x05</td>
+          <td>Unknown policy rule action.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x06</td>
+          <td>Requested rule action not applicable.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x07</td>
+          <td>NATFW_DTINFO object is required.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x08</td>
+          <td>Requested value in sub_ports field in NATFW_EFI not
+        permitted.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x09</td>
+          <td>Requested IP protocol not supported.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x0A</td>
+          <td>Plain IP policy rules not permitted -- need transport
+        layer information.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x0B</td>
+          <td>ICMP type value not permitted.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x0C</td>
+          <td>Source IP address range is too large.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x0D</td>
+          <td>Destination IP address range is too large.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x0E</td>
+          <td>Source L4-port range is too large.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x0F</td>
+          <td>Destination L4-port range is too large.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x10</td>
+          <td>Requested lifetime is too small.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x11</td>
+          <td>Modified lifetime is too big.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+        <tr>
+          <td>Signaling session failure</td>
+          <td>0x12</td>
+          <td>Modified lifetime is too small.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5973">RFC5973</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="x-types" id="x-types"></a>SESSION_AUTH X-Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="x-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-x-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>AUTH_ENT_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>SESSION_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>SOURCE_ADDR</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>DEST_ADDR</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>START_TIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>END_TIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>NSLP_OBJECT_LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>AUTHENTICATION_DATA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved for Private or Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="x-type-1-subtypes" id="x-type-1-subtypes"></a>AUTH_ENT_ID (X-Type 1) SubType values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="x-type-1-subtypes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-x-type-1-subtypes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IPV4_ADDRESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPV6_ADDRESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>FQDN</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>ASCII_DN</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>UNICODE_DN</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>URI</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>KRB_PRINCIPAL</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>X509_V3_CERT</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>PGP_CERT</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>HMAC_SIGNED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved for Private or Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="x-type-3-subtypes" id="x-type-3-subtypes"></a>SOURCE_ADDR (X-Type 3) SubType values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="x-type-3-subtypes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-x-type-3-subtypes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IPV4_ADDRESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPV6_ADDRESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>UDP_PORT_LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>TCP_PORT_LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>SPI</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved for Private or Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="x-type-4-subtypes" id="x-type-4-subtypes"></a>DEST_ADDR (X-Type 4) SubType values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="x-type-4-subtypes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-x-type-4-subtypes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IPV4_ADDRESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPV6_ADDRESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>UDP_PORT_LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>TCP_PORT_LIST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>SPI</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved for Private or Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="x-type-5-subtypes" id="x-type-5-subtypes"></a>START_TIME (X-Type 5) SubType values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="x-type-5-subtypes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-x-type-5-subtypes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>NTP_TIMESTAMP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved for Private or Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="x-type-6-subtypes" id="x-type-6-subtypes"></a>END_TIME (X-Type 6) SubType values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="x-type-6-subtypes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-x-type-6-subtypes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>NTP_TIMESTAMP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved for Private or Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5981">RFC5981</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Milnet Parameters - Registry closed</title>
+  </head>
+  <body>
+    <h1>Milnet Parameters - Registry closed</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2001-08-23</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="milnet-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="milnet-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="milnet-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#milnet-parameters-1">Milnet Link Numbers</a>
+      </li>
+      <li>
+        <a href="#milnet-parameters-2">Milnet Logical Addresses</a>
+      </li>
+      <li>
+        <a href="#milnet-parameters-3">Milnet X.25 Address Mappings</a>
+      </li>
+    </ul>
+    <h2><a name="milnet-parameters-1" id="milnet-parameters-1"></a>Milnet Link Numbers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Registry closed</pre>
+      </dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The word "link" here refers to a field in the original MILNET Host/IMP
+interface leader.  The link was originally defined as an 8-bit field.
+Later specifications defined this field as the "message-id" with a
+length of 12 bits.  The name link now refers to the high order 8 bits of
+this 12-bit message-id field.  The Host/IMP interface is defined in BBN
+Report 1822 [BBN, "Specifications for the Interconnection of a Host and
+an IMP", Report 1822, Bolt Beranek and Newman, Cambridge,
+Massachusetts, revised, December 1981.].
+
+The low-order 4 bits of the message-id field are called the sub-link.
+Unless explicitly specified otherwise for a particular protocol, there
+is no sender to receiver significance to the sub-link.  The sender may
+use the sub-link in any way he chooses (it is returned in the RFNM by
+the destination IMP), the receiver should ignore the sub-link.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="milnet-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-milnet-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Decimal</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-63</td>
+          <td>BBNCC Monitoring</td>
+          <td>[<a href="#Michael_Brescia">Michael_Brescia</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">64-149</td>
+          <td>Unassigned</td>
+          <td>[<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>Xerox NS IDP</td>
+          <td>["The Ethernet, A Local Area Network: Data Link Layer and
+Physical Layer Specification", AA-K759B-TK, Digital
+Equipment Corporation, Maynard, MA.  Also as: "The Ethernet
+- A Local Area Network", Version 1.0, Digital Equipment
+Corporation, Intel Corporation, Xerox Corporation,
+September 1980.  And: "The Ethernet, A Local Area Network:
+Data Link Layer and Physical Layer Specifications",
+Digital, Intel and Xerox, November 1982.  And: XEROX, "The
+Ethernet, A Local Area Network: Data Link Layer and
+Physical Layer Specification", X3T51/80-50, Xerox
+Corporation, Stamford, CT., October 1980.][<a href="#Fonda_Pallone">Fonda_Pallone</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">151</td>
+          <td>Unassigned</td>
+          <td>[<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">152</td>
+          <td>PARC Universal Protocol</td>
+          <td>[Boggs, D., J. Shoch, E. Taft, and R. Metcalfe, "PUP: An
+Internetwork Architecture", XEROX Palo Alto Research Center,
+CSL-79-10, July 1979; also in IEEE Transactions on
+Communication, Volume COM-28, Number 4, April 1980.][<a href="#Fonda_Pallone">Fonda_Pallone</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">153</td>
+          <td>TIP Status Reporting</td>
+          <td>[<a href="#Jim_Herman">Jim_Herman</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">154</td>
+          <td>TIP Accounting</td>
+          <td>[<a href="#Jim_Herman">Jim_Herman</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">155</td>
+          <td>Internet Protocol [regular]</td>
+          <td>[<a href="http://www.iana.org/go/rfc791">RFC791</a>][<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">156-158</td>
+          <td>Internet Protocol [experimental]</td>
+          <td>[<a href="http://www.iana.org/go/rfc791">RFC791</a>][<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">159</td>
+          <td>Figleaf Link</td>
+          <td>[<a href="#Joseph_Walters_Jr">Joseph_Walters_Jr</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">160</td>
+          <td>Blacker Local Network Protocol</td>
+          <td>[<a href="#Dennis_Morris">Dennis_Morris</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">161-194</td>
+          <td>Unassigned</td>
+          <td>[<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">195</td>
+          <td>ISO-IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc926">RFC926</a>][<a href="#Robert_Myhill">Robert_Myhill</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">196-247</td>
+          <td>Experimental Protocols</td>
+          <td>[<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">248-255</td>
+          <td>Network Maintenance</td>
+          <td>[<a href="#Jim_Herman">Jim_Herman</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="milnet-parameters-2" id="milnet-parameters-2"></a>Milnet Logical Addresses</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Registry closed</pre>
+      </dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The MILNET facility for "logical addressing" is described in [<a href="http://www.iana.org/go/rfc878">RFC878</a>]
+and [<a href="http://www.iana.org/go/rfc1005">RFC1005</a>].  A portion of the possible logical addresses are
+reserved for standard uses.
+
+There are 49,152 possible logical host addresses.  Of these, 256 are
+reserved for assignment to well-known functions.  Assignments for
+well-known functions are made by the IANA.  Assignments for other
+logical host addresses are made by the NIC.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="milnet-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-milnet-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Decimal</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>The BBN Core Gateways</td>
+          <td>[<a href="#Michael_Brescia">Michael_Brescia</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-254</td>
+          <td>Unassigned</td>
+          <td>[<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="milnet-parameters-3" id="milnet-parameters-3"></a>Milnet X.25 Address Mappings</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Registry closed</pre>
+      </dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>All MILNET hosts are assigned addresses by the Defense Data Network
+(DDN).  The address of a MILNET host may be obtained from the Network
+Information Center (NIC), represented as an ASCII text string in what
+is called "host table format".  This section describes the process by
+which MILNET X.25 addresses may be derived from addresses in the NIC
+host table format.
+
+A NIC host table address consists of the ASCII text string
+representations of four decimal numbers separated by periods,
+corresponding to the four octeted of a thirty-two bit Internet
+address.  The four decimal numbers are referred to in this section as
+"n", "h' "l", and "i".  Thus, a host table address may be represented
+as: "n.h.l.i".  Each of these four numbers will have either one, two,
+or three decimal digits and will never have a value greater than 255.
+For example, in the host table, address: "10.2.0.124", n=10, h=2, l=0,
+and i=124.  To convert a host table address to a MILNET X.25 address:
+
+1.  If h &lt; 64, the host table address corresponds to the X.25
+physical address:
+
+
+ZZZZ F IIIHHZZ (SS)
+
+where:
+
+     ZZZZ = 0000    as required
+
+     F = 0          because the address is a physical address;
+
+     III            is a three decimal digit respresentation of
+                    "i", right-adjusted and padded with leading
+                    zeros if required;
+
+     HH             is a two decimal digit representation of "h",
+                    right-adjusted and padded with leading zeros
+                    if required;
+
+     ZZ = 00        and
+
+     (SS)           is optional
+
+
+In the example given above, the host table address 10.2.0.124
+corresponds to the X.25 physical address 000001240200.
+
+2.  If h &gt; 64 or h = 64, the host table address corresponds to the
+X.25 logical address
+
+
+ZZZZ F RRRRRZZ (SS)
+
+where:
+
+     ZZZZ = 0000    as required
+
+     F = 1          because the address is a logical address;
+
+     RRRRR          is a five decimal digit representation of
+                    the result "r" of the calculation
+
+                             r = h * 256 + i
+
+                    (Note that the decimal representation of
+                    "r" will always require five digits);
+
+     ZZ = 00        and
+
+     (SS)           is optional
+
+Thus, the host table address 10.83.0.207 corresponds to the X.25
+logical address 000012145500.
+
+In both cases, the "n" and "l" fields of the host table address are
+not used.</pre>
+      </dd>
+    </dl>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Dennis_Morris" id="Dennis_Morris">[Dennis_Morris]</a>
+          </td>
+          <td>Dennis Morris</td>
+          <td>
+            <a href="mailto:Morrisd&amp;imo-uvax.dca.mil">mailto:Morrisd&amp;imo-uvax.dca.mil</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Fonda_Pallone" id="Fonda_Pallone">[Fonda_Pallone]</a>
+          </td>
+          <td>Fonda Pallone</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jim_Herman" id="Jim_Herman">[Jim_Herman]</a>
+          </td>
+          <td>Jim Herman</td>
+          <td>
+            <a href="mailto:Herman&amp;ccj.bbn.com">mailto:Herman&amp;ccj.bbn.com</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jon_Postel" id="Jon_Postel">[Jon_Postel]</a>
+          </td>
+          <td>Jon Postel</td>
+          <td>
+            <a href="mailto:postel&amp;isi.edu">mailto:postel&amp;isi.edu</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Joseph_Walters_Jr" id="Joseph_Walters_Jr">[Joseph_Walters_Jr]</a>
+          </td>
+          <td>Joseph Walters, Jr.</td>
+          <td>
+            <a href="mailto:JWalters&amp;BBN.COM">mailto:JWalters&amp;BBN.COM</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Michael_Brescia" id="Michael_Brescia">[Michael_Brescia]</a>
+          </td>
+          <td>Michael Brescia</td>
+          <td>
+            <a href="mailto:Brescia&amp;ccv.bbn.com">mailto:Brescia&amp;ccv.bbn.com</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Robert_Myhill" id="Robert_Myhill">[Robert_Myhill]</a>
+          </td>
+          <td>Robert Myhill</td>
+          <td>
+            <a href="mailto:Myhill&amp;ccs.bbn.com">mailto:Myhill&amp;ccs.bbn.com</a>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

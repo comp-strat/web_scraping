@@ -1,0 +1,227 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Common Questions on delegating and redelegating country-code top-level domains (ccTLDs)</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+			<div id="main_right">
+
+
+<h1>Common Questions on delegating and redelegating country-code top-level domains (ccTLDs)</h1>
+
+<h2>How long does a delegation/redelegation request take?</h2>
+<p>Every delegation or redelegation request is different. With many organisations participating in any particular request, the processing can be affected by delays in coordinating and communicating among the parties, obtaining the necessary approvals, and verifying the information provided. The process is further complicated when not all parties agree to the request.</p>
+<p>Because of this, it is not possible to predict an accurate timetable for the process from receipt of the request through to completion. Fully-formed requests that clearly meet all relevant criteria can take as little as 1-2 months. In some extreme and complicated cases, requests have sometimes taken a number of years.</p>
+<h2>When in the process should a redelegation request be submitted?</h2>
+<p>The request to redelegate a ccTLD should be submitted once the requestor knows the proposed new manager of the ccTLD, and has plans on how the ccTLD will be operated, but prior to any transfer taking place. The transfer of operations to the new manager happens once a redelegation request has been approved.</p>
+<p>It is OK to contact us prior to submitting a formal request to better understand the procedure, or to give us early notice of work being done in the country on a redelegation. It is better if we are able to assist the requestor early on to understand the redelegation process to avoid misunderstandings that could delay transition later.</p>
+<h2>If a company runs an existing ccTLD, can it provide less documentation for a delegation or redelegation request?</h2>
+<p>Generally, the documentary requirements are the same for a new request, regardless of whether the proposed manager operates an existing ccTLD or not. In particular, the requirements of the process are more formalised than they were in the 1980s and 1990s when the bulk of existing ccTLDs were first delegated. A successful request for delegation in the 1980s does not imply that a request would necessarily be successful again under contemporary criteria. As such, we will review new requests under the existing procedures without any assumptions about why a delegation qualified at an earlier time.</p>
+<p>It should be noted that a successful history in operating existing TLDs may form an important part of documenting the operational and technical skills of the proposed manager.</p>
+<h2>If a company simply changes its name, does it need to complete a full redelegation request?</h2>
+<p>There are some special cases where a change to the manager may be deemed to not be a material change to the organisation. In such cases, the change can be considered an “administrative redelegation”, which means that it can be considered a routine update rather than requiring an evaluation of the new manager.</p>
+<p>We will check if a change request to a manager reflects a change of administrative responsibility to a new organisation that is essentially the same as the previous organisation. These situations are typically where ccTLD management has shifted as the result of an internal restructuring, internal governmental restructuring, or the organisation has simply changed its name.</p>
+<p>In such cases, to be considered non-material, day-to-day operations must remain unaltered. For example, there would normally need to be continuity of staff, policy, policy setting structure, levels of service, legal character and so on.</p>
+<p>When a request is deemed non-material, we will process the request as a regular root zone change request, rather than as a delegation request. If there is any doubt, the full redelegation process will be used to fully investigate the nature of the change.</p>
+<p>If we consider a request to be eligible an administrative redelegation, it will advise the requestor.</p>
+<h2>If a registry’s technical operations are outsourced to a company, what organisation should be the Manager?</h2>
+<p>If an organisation that sets and administers policy for the ccTLD outsources the back-end technical operation of the ccTLD to another company, typically it is the policy organisation that is listed as the Manager. If the technical outsource operator is the right party to contact for technical enquiries for the domain, that party could be listed as a Technical Contact.</p>
+<h2>Does the government need to be consulted on a request?</h2>
+<p>As an important part of the local Internet community, it is expected that relevant local governments are consulted regarding a delegation or redelegation. It is not a requirement they consent, but if they do not have an opinion, a statement of non-objection can be useful.</p>
+<p>If the government is non-responsive, the requestor should provide clear evidence they made reasonable attempts to discuss the request with relevant government representatives. </p>
+<h2>What are the local presence requirements?</h2>
+<p>For each ccTLD, at a minimum both the manager and the administrative contact must be resident in the country to which the domain is designated. This means they are accountable to the local community and subject to local law.</p>
+<p>For sub-national territories, it is considered acceptable (with the consent of the local Internet community) if the manager and the administrative contact are located elsewhere in the country so long as they are still subject to applicable law.</p>
+<h2>What should be in a letter of endorsement from a government?</h2>
+<p>When communicating support for a delegation or redelegation by a government representative, there are no strict formatting requirements, but we recommend the letter reference the following points:</p>
+<ul>
+	<li>An explanation why the agency or author is the appropriate representative of the government to be providing support.</li>
+	<li>If the support reflects formal decision-making made under the powers granted by a specific law or regulation that covers the ccTLD, that law or regulation should be cited. It should be clear that the decision is made under the powers of the specific law or regulation.</li>
+	<li>Clearly express the position — whether it is approving of the proposed request, not approving of the proposed request, or expressing non-objection to the request.</li>
+	<li>Refer to the ticket number (if available) and identify clearly the specific organisation and circumstances under which the position is being supplied. This is to avoid a scenario where it is unclear which organisation or which request the communication is referring to.</li>
+</ul>
+<h2>Is it appropriate for a regulator to be the Manager?</h2>
+<p>The relevant frameworks, including the delegation assessment procedures, call for the Manager to actively be responsible for the operation of a ccTLD. If a regulator runs the domain registry itself, and all other criteria are satisfied, then it would be appropriate for the regulator to be the Manager for the ccTLD.</p>
+<h2>Does the government or regulator have to be the manager to have involvement in deciding how the domain is operated?</h2>
+<p>It is not necessary for a government or regulator to be a manager for a ccTLD as a mechanism for them to have a say in how the domain is operated. Governments are consulted for all redelegation requests for the domain regardless of whether they are listed in the record (see the GAC Principles). Furthermore, the manager is required to be located within the country and to comply with local laws.</p>
+<h2>How does a requestor demonstrate local Internet community support?</h2>
+<ul>
+<p>The Manager for a ccTLD is considered a trustee on behalf of the local community in the country. Some of the elements that could show support for the request are:</p>
+<ul>
+	<li><b>Community consultation.</b> It is typically an important aspect of selecting the proper manager for a ccTLD to consult with the local Internet community. Providing documentation that shows which consultations were performed, who was able to participate in them, and that participation was broadly representative of the community is one good way to show a bottom-up process was used to arrive at the proposal for the new manager. Relevant documentation might include timelines, minutes of meetings, pointers to online consultations and compilations of feedback received.</li>
+	<li><b>Describe the options considered.</b> It is rare there is a uniform agreement that a particular approach is the best approach. It is helpful to document what alternatives have been considered regarding management of the ccTLD, what the pros and cons of the options were, and how those considerations were factored into the final decision. If there is opposition to the request, it is useful to document that.</li>
+	<li><b>Statements of support.</b> Expressions of support from representatives of the local Internet community can also be helpful in describing local support for the application. (See <i>What should be in a statement of support or objection from an interested party?</i>)</li>
+</ul>
+<h2>What should be in a statement of support or objection from an interested party?</h2>
+<p>When communicating support for a delegation or redelegation by an interested party, there are no strict formatting requirements, but we recommend the letters reference the following points:</p>
+<ul>
+	<li>Explain the person or organisation providing the statement, and what their role is in the local Internet community. If the organisation is a representative organisation, explain the membership or community sector the organisation is representing.</li>
+	<li>Clearly express the position — whether it is approving of the proposed request, not approving of the proposed request, or expressing non-objection to the request.</li>
+	<li>Articulate the reasons why the organisation is considered appropriate or not appropriate for managing the ccTLD on behalf of the local Internet community.</li>
+	<li>Provide an explanation of the alternatives that have been considered, and why this proposal is their preferred or non-preferred option.</li>
+	<li>It is less useful if the statements are merely “form letters”, where multiple organisations provide letters that are comprised of the same language that has been drafted for them by the requestor. Each communication should uniquely represent the views of that specific party.</li>
+</ul>
+<h2>Must originals of all documents be submitted?</h2>
+<p>We only need originals (or copies that have been properly certified as accurate) for documents where the authenticity is important to the validity of the request. This means items such as certifications, extracts of relevant laws and decrees, and letters of support. We need to independently verify these kinds of documents as authentic with third parties.</p>
+<p>We do not need copies of documents such as operational or technical plans. They can be provided as PDF files electronically to us, but the requestor does not need to send them to us by post.</p>
+<h2>Do all documents need to be provided in English?</h2>
+<p>Generally, we needs all documentation to be provided in English, or be certified translations into English. For complex or long documents (such as complete legislative acts), it is generally OK to only translate the relevant portions. </p>
+<p>In some cases, if there are particular difficulties in providing translations, a requestor should talk with our Root Management staff, who will help find a workable approach. While we do have capacity to translate certain types of documents, the process of getting certified translations can introduce significant delay in processing a request.</p>
+<h2>What is the process for retiring a country-code top-level domain?</h2>
+<p>When a ccTLD is no longer eligible, typically due to the country or code’s removal from the ISO 3166-1 standard, the operator is expected to develop a transition plan to the successor ccTLD(s) and ultimately retire the domain. Consistent with the general approach that ccTLDs are to be managed within the country, the manager is expected to design and execute a locally-appropriate method of notifying impacted registrants that the domain is to be retired, and develop a timeline to transition to new ccTLDs.</p>
+<p>This transition and retirement plan is reviewed in a similar fashion to a delegation or redelegation request. As countries are typically replaced with new successor countries, this process is usually performed in conjunction with delegation of new ccTLDs. Usually there is a transition period of several years so that there is plenty of time for registrants to transition to the new domain(s).</p>
+<p>We work with the manager to provide guidance and assistance throughout the whole process based on our experience from other countries that have had to perform a retirement transition.</p>
+
+
+			</div>
+			
+			<div id="sidebar_left">
+				<div class="navigation_box">
+				<h2>Domain Names</h2>
+				<ul>
+					<li id="nav_dom_top"><a href="/domains">Overview</a></li>
+					<li id="nav_dom_root"><a href="/domains/root">Root Zone Management</a></li>
+					<ul id="nav_dom_root_sub">
+						<li id="nav_dom_root_top"><a href="/domains/root">Overview</a></li>
+						<li id="nav_dom_root_db"><a href="/domains/root/db">Root Database</a></li>
+						<li id="nav_dom_root_files"><a href="/domains/root/files">Hint and Zone Files</a></li>
+						<li id="nav_dom_root_manage"><a href="/domains/root/manage">Change Requests</a></li>
+						<li id="nav_dom_root_procedures"><a href="/domains/root/help">Instructions &amp; Guides</a></li>
+						<li id="nav_dom_root_servers"><a href="/domains/root/servers">Root Servers</a></li>
+					</ul>
+					<li id="nav_dom_int"><a href="/domains/int">.INT Registry</a></li>
+					<ul id="nav_dom_int_sub">
+						<li id="nav_dom_int_top"><a href="/domains/int">Overview</a></li>
+						<li id="nav_dom_int_manage"><a href="/domains/int/manage">Register/modify an .INT domain</a></li>
+						<li id="nav_dom_int_policy"><a href="/domains/int/policy">Eligibility</a></li>
+					</ul>
+					<li id="nav_dom_arpa"><a href="/domains/arpa">.ARPA Registry</a></li>
+					<li id="nav_dom_idn"><a href="/domains/idn-tables">IDN Practices Repository</a></li>
+					<ul id="nav_dom_idn_sub">
+						<li id="nav_dom_idn_top"><a href="/domains/idn-tables">Overview</a></li>
+						<!-- <li id="nav_dom_idn_tables"><a href="/domains/idn-tables/db">Tables</a></li> -->
+						<li id="nav_dom_idn_submit"><a href="/procedures/idn-repository.html">Submit a table</a></li>
+					</ul>
+					<li id="nav_dom_dnssec"><a href="/dnssec">Root Key Signing Key (DNSSEC)</a></li>
+					<ul id="nav_dom_dnssec_sub">
+						<li id="nav_dom_dnssec_top"><a href="/dnssec">Overview</a></li>
+						<li id="nav_dom_dnssec_ksk"><a href="/dnssec/files">Trusts Anchors and Keys</a></li>
+						<li id="nav_dom_dnssec_ceremonies"><a href="/dnssec/ceremonies">Root KSK Ceremonies</a></li>
+						<li id="nav_dom_dnssec_dps"><a href="/dnssec/dps">Practice Statement</a></li>
+                        <li id="nav_dom_dnssec_tcrs"><a href="/dnssec/tcrs">Community Representatives</a></li>
+					</ul>
+					<li id="nav_dom_special"><a href="/domains/reserved">Reserved Domains</a></li>
+				</ul>
+				</div>
+			</div>
+			
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script>
+$(document).ready(function() {
+	$("#nav_dom_int_sub").hide()
+	$("#nav_dom_idn_sub").hide()
+	$("#nav_dom_dnssec_sub").hide()
+	$("#nav_dom_tools_sub").hide()
+	$("#nav_dom_root").addClass("selected")
+	$("#nav_dom_root_procedures").addClass("selected")
+});
+</script>
+
+	
+</body>
+
+</html>

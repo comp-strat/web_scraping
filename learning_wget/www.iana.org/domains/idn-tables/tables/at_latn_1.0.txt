@@ -1,0 +1,76 @@
+# TLD: at
+# Script: Latin
+# Version: 1.0
+# Effective Date: 2004-03-31
+# Contact: Technik NIC.AT <tech-nic-at@nic.at>
+U+002D # HYPHEN-MINUS
+U+0030 # DIGIT ZERO
+U+0031 # DIGIT ONE
+U+0032 # DIGIT TWO
+U+0033 # DIGIT THREE
+U+0034 # DIGIT FOUR
+U+0035 # DIGIT FIVE
+U+0036 # DIGIT SIX
+U+0037 # DIGIT SEVEN
+U+0038 # DIGIT EIGHT
+U+0039 # DIGIT NINE
+U+0061 # LATIN SMALL LETTER A
+U+0062 # LATIN SMALL LETTER B
+U+0063 # LATIN SMALL LETTER C
+U+0064 # LATIN SMALL LETTER D
+U+0065 # LATIN SMALL LETTER E
+U+0066 # LATIN SMALL LETTER F
+U+0067 # LATIN SMALL LETTER G
+U+0068 # LATIN SMALL LETTER H
+U+0069 # LATIN SMALL LETTER I
+U+006A # LATIN SMALL LETTER J
+U+006B # LATIN SMALL LETTER K
+U+006C # LATIN SMALL LETTER L
+U+006D # LATIN SMALL LETTER M
+U+006E # LATIN SMALL LETTER N
+U+006F # LATIN SMALL LETTER O
+U+0070 # LATIN SMALL LETTER P
+U+0071 # LATIN SMALL LETTER Q
+U+0072 # LATIN SMALL LETTER R
+U+0073 # LATIN SMALL LETTER S
+U+0074 # LATIN SMALL LETTER T
+U+0075 # LATIN SMALL LETTER U
+U+0076 # LATIN SMALL LETTER V
+U+0077 # LATIN SMALL LETTER W
+U+0078 # LATIN SMALL LETTER X
+U+0079 # LATIN SMALL LETTER Y
+U+007A # LATIN SMALL LETTER Z
+U+00E0 # Kleiner lateinischer Buchstabe a mit Gravis	
+U+00E1 # Kleiner lateinischer Buchstabe a mit Akut
+U+00E2 # Kleiner lateinischer Buchstabe a mit Zirkumflex
+U+00E3 # Kleiner lateinischer Buchstabe a mit Tilde
+U+00E4 # Kleiner lateinischer Buchstabe a mit Diaerese
+U+00E5 # Kleiner lateinischer Buchstabe a mit Ring oben
+U+00E6 # Kleiner lateinischer Buchstabe ae
+U+00E7 # Kleiner lateinischer Buchstabe c mit Cedille
+U+00E8 # Kleiner lateinischer Buchstabe e mit Gravis
+U+00E9 # Kleiner lateinischer Buchstabe e mit Akut
+U+00EA # Kleiner lateinischer Buchstabe e mit Zirkumflex
+U+00EB # Kleiner lateinischer Buchstabe e mit Diaerese
+U+00EC # Kleiner lateinischer Buchstabe i mit Gravis
+U+00ED # Kleiner lateinischer Buchstabe i mit Akut
+U+00EE # Kleiner lateinischer Buchstabe i mit Zirkumflex
+U+00EF # Kleiner lateinischer Buchstabe i mit Diaerese
+U+00F0 # Kleiner lateinischer Buchstabe Eth
+U+00F1 # Kleiner lateinischer Buchstabe n mit Tilde
+U+00F2 # Kleiner lateinischer Buchstabe o mit Gravis
+U+00F3 # Kleiner lateinischer Buchstabe o mit Akut
+U+00F4 # Kleiner lateinischer Buchstabe o mit Zirkumflex
+U+00F5 # Kleiner lateinischer Buchstabe o mit Tilde
+U+00F6 # Kleiner lateinischer Buchstabe o mit Diaerese
+U+00F8 # Kleiner lateinischer Buchstabe o mit Querstrich
+U+00F9 # Kleiner lateinischer Buchstabe u mit Gravis
+U+00FA # Kleiner lateinischer Buchstabe u mit Akut
+U+00FB # Kleiner lateinischer Buchstabe u mit Zirkumflex
+U+00FC # Kleiner lateinischer Buchstabe u mit Diaerese
+U+00FD # Kleiner lateinischer Buchstabe y mit Akut
+U+00FE # Kleiner lateinischer Buchstabe Thorn
+U+00FF # Kleiner lateinischer Buchstabe y mit Diaerese
+U+0153 # Kleine lateinische Ligatur oe
+U+0161 # Kleiner lateinischer Buchstabe s mit Caron
+U+017E # Kleiner Buchstabe z mit Caron

@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Portable Symmetric Key Container (PSKC)</title>
+  </head>
+  <body>
+    <h1>Portable Symmetric Key Container (PSKC)</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2010-08-19</dd>
+      <dt>Last Updated</dt>
+      <dd>2012-04-06</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pskc.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="pskc.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="pskc.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#alg-profiles">Algorithm URI Registry and Related PSKC Profiles</a>
+      </li>
+      <li>
+        <a href="#versions">PSKC Version Registry</a>
+      </li>
+      <li>
+        <a href="#key-usage">Key Usage Registry</a>
+      </li>
+    </ul>
+    <h2><a name="alg-profiles" id="alg-profiles"></a>Algorithm URI Registry and Related PSKC Profiles</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Algorithm identifiers from this registry are also used as otp-algID values in the PA-OTP-CHALLENGE described in Section 4.1 and the PA-OTP-REQUEST described in Section 4.2 of [<a href="http://www.iana.org/go/rfc6560">RFC6560</a>].</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="alg-profiles.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-alg-profiles" class="sortable">
+      <thead>
+        <tr>
+          <th>Common Name</th>
+          <th>Class</th>
+          <th>URI</th>
+          <th>Identifier Definition</th>
+          <th>Algorithm Definition</th>
+          <th>Registrant Contact</th>
+          <th>Deprecated</th>
+          <th>PSKC Profiling</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HOTP</td>
+          <td>OTP</td>
+          <td>urn:ietf:params:xml:ns:keyprov:pskc:hotp</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc4226">RFC4226</a>]</td>
+          <td>IESG</td>
+          <td>FALSE</td>
+          <td>         
+The &lt;KeyPackage&gt; element MUST be present and the
+&lt;ResponseFormat&gt; element, which is a child element of the
+&lt;AlgorithmParameters&gt; element, MUST be used to indicate the OTP
+length and the value format.<br /> <br /> 
+The &lt;Counter&gt; element (see Section 4.1 of [RFC-ietf-keyprov-pskc-09]) MUST be provided as
+metadata for the key. <br />  <br /> 
+
+The following additional constraints apply:
+        <br /> <br />     
++  The value of the &lt;Secret&gt; element MUST contain key material
+with a length of at least 16 octets (128 bits), if it is present.
+        <br /> <br /> 
++  The &lt;ResponseFormat&gt; element MUST have the 'Format'
+attribute set to "DECIMAL", and the 'Length' attribute MUST
+indicate a length value between 6 and 9 (inclusive).
+        <br /> <br />        
++  The &lt;PINPolicy&gt; element MAY be present, but the
+'PINUsageMode' attribute cannot be set to "Algorithmic".
+        <br /> <br />              
+An example can be found in Figure 3 of [RFC-ietf-keyprov-pskc-09].
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>PIN</td>
+          <td>Symmetric static credential comparison</td>
+          <td>urn:ietf:params:xml:ns:keyprov:pskc:pin</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+          <td>Section 5.1</td>
+          <td>IESG</td>
+          <td>FALSE</td>
+          <td>         
+The &lt;Usage&gt; element MAY be present, but no attribute of the
+&lt;Usage&gt; element is required.  The &lt;ResponseFormat&gt; element MAY
+be used to indicate the PIN value format.<br /> <br /> 
+            
+The &lt;Secret&gt; element (see Section 4.1 of [RFC-ietf-keyprov-pskc-09]) MUST be provided.<br /> <br /> 
+              
+See the example in Figure 5 of [RFC-ietf-keyprov-pskc-09].
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="versions" id="versions"></a>PSKC Version Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="versions.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-versions" class="sortable">
+      <thead>
+        <tr>
+          <th>PSKC Version</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.0</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="key-usage" id="key-usage"></a>Key Usage Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="key-usage.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-key-usage" class="sortable">
+      <thead>
+        <tr>
+          <th>Key Usage</th>
+          <th>Specification</th>
+          <th>Deprecated</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OTP</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>CR</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>Encrypt</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>Integrity</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>Verify</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>Unlock</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>Decrypt</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>KeyWrap</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>Unwrap</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>Derive</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+        <tr>
+          <td>Generate</td>
+          <td>Section 5</td>
+          <td>FALSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6030">RFC6030</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

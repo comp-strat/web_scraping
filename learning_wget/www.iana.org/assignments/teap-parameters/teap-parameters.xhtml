@@ -1,0 +1,738 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Tunnel Extensible Authentication Protocol (TEAP) Parameters</title>
+  </head>
+  <body>
+    <h1>Tunnel Extensible Authentication Protocol (TEAP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2014-01-24</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-05-13</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="teap-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="teap-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="teap-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#teap-tlvs">TEAP TLV Types</a>
+      </li>
+      <li>
+        <a href="#identity-type">TEAP Identity-Type TLV (value 2) Registry</a>
+      </li>
+      <li>
+        <a href="#status-codes">TEAP Status Codes</a>
+      </li>
+      <li>
+        <a href="#error">TEAP Error TLV (value 5) Error Codes</a>
+      </li>
+      <li>
+        <a href="#request-action">TEAP Request-Action TLV (value 8) Registry</a>
+      </li>
+      <li>
+        <a href="#pac-attribute-type-code">TEAP PAC TLV (value 11) PAC Attribute Type Codes</a>
+      </li>
+      <li>
+        <a href="#pac-type-code">TEAP PAC TLV (value 11) PAC-Type Type Codes</a>
+      </li>
+      <li>
+        <a href="#trusted-server-root">TEAP Trusted-Server-Root TLV (value 17) Credential-Format Codes</a>
+      </li>
+    </ul>
+    <h2><a name="teap-tlvs" id="teap-tlvs"></a>TEAP TLV Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="teap-tlvs.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-teap-tlvs" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Authority-ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Identity-Type TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Result TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>NAK TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Error TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Channel-Binding TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Vendor-Specific TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Request-Action TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>EAP-Payload TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Intermediate-Result TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>PAC TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Crypto-Binding TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Basic-Password-Auth-Req TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Basic-Password-Auth-Resp TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>PKCS#7 TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>PKCS#10 TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Trusted-Server-Root TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18-16383</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="identity-type" id="identity-type"></a>TEAP Identity-Type TLV (value 2) Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="identity-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-identity-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>User</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Machine</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="status-codes" id="status-codes"></a>TEAP Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="status-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-status-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="error" id="error"></a>TEAP Error TLV (value 5) Error Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="error.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-error" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>User account expires soon</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>User account credential expires soon</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>User account authorizations change soon</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Clock skew detected</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Contact administrator</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>User account credentials change required</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-1000</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1001</td>
+          <td>Inner Method Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1002</td>
+          <td>Unspecified authentication infrastructure problem</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1003</td>
+          <td>Unspecified authentication failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1004</td>
+          <td>Unspecified authorization failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1005</td>
+          <td>User account credentials unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1006</td>
+          <td>User account expired</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1007</td>
+          <td>User account locked: try again later</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1008</td>
+          <td>User account locked: admin intervention required</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1009</td>
+          <td>Authentication infrastructure unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1010</td>
+          <td>Authentication infrastructure not trusted</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1011</td>
+          <td>Clock skew too great</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1012</td>
+          <td>Invalid inner realm</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1013</td>
+          <td>Token out of sync: administrator intervention required</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1014</td>
+          <td>Token out of sync: PIN change required</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1015</td>
+          <td>Token revoked</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1016</td>
+          <td>Tokens exhausted</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1017</td>
+          <td>Challenge expired</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1018</td>
+          <td>Challenge algorithm mismatch</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1019</td>
+          <td>Client certificate not supplied</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1020</td>
+          <td>Client certificate rejected</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1021</td>
+          <td>Realm mismatch between inner and outer identity</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1022</td>
+          <td>Unsupported Algorithm In Certificate Signing Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1023</td>
+          <td>Unsupported Extension In Certificate Signing Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1024</td>
+          <td>Bad Identity in Certificate Signing Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1025</td>
+          <td>Bad Certificate Signing Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1026</td>
+          <td>Internal CA Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1027</td>
+          <td>General PKI Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1028</td>
+          <td>Inner method's channel-binding data required but not supplied</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1029</td>
+          <td>Inner method's channel-binding data did not include required information</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1030</td>
+          <td>Inner method's channel binding data failed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1031</td>
+          <td>User account credentials incorrect [USAGE NOT RECOMMENDED]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1032-2000</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2001</td>
+          <td>Tunnel Compromise Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2002</td>
+          <td>Unexpected TLVs Exchanged</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2003-4294967295</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="request-action" id="request-action"></a>TEAP Request-Action TLV (value 8) Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="request-action.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-request-action" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Process-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Negotiate-EAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pac-attribute-type-code" id="pac-attribute-type-code"></a>TEAP PAC TLV (value 11) PAC Attribute Type Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pac-attribute-type-code.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pac-attribute-type-code" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PAC-Key</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>PAC-Opaque</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>PAC-Lifetime</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>A-ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>I-ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>A-ID-Info</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>PAC-Acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>PAC-Info</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>PAC-Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pac-type-code" id="pac-type-code"></a>TEAP PAC TLV (value 11) PAC-Type Type Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pac-type-code.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pac-type-code" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Decription</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Tunnel PAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="trusted-server-root" id="trusted-server-root"></a>TEAP Trusted-Server-Root TLV (value 17) Credential-Format Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="trusted-server-root.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-trusted-server-root" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PKCS#7-Server-Certificate-Root</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

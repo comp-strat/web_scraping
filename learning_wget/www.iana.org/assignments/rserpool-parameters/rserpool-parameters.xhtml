@@ -1,0 +1,572 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Reliable Server Pooling (RSerPool) Parameters</title>
+  </head>
+  <body>
+    <h1>Reliable Server Pooling (RSerPool) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2008-07-25</dd>
+      <dt>Last Updated</dt>
+      <dd>2008-09-30</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rserpool-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="rserpool-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="rserpool-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#rserpool-parameters-1">Aggregate Server Access Protocol (ASAP) Message Types</a>
+      </li>
+      <li>
+        <a href="#rserpool-parameters-2">Endpoint Handlespace Redundancy Protocol (ENRP) Message Types</a>
+      </li>
+      <li>
+        <a href="#rserpool-parameters-3">Update Action Types</a>
+      </li>
+      <li>
+        <a href="#rserpool-parameters-4">RSerPool Parameter Types</a>
+      </li>
+      <li>
+        <a href="#rserpool-parameters-5">RSerPool Error Causes</a>
+      </li>
+      <li>
+        <a href="#rserpool-parameters-6">RSerPool Policy Types</a>
+      </li>
+    </ul>
+    <h2><a name="rserpool-parameters-1" id="rserpool-parameters-1"></a>Aggregate Server Access Protocol (ASAP) Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rserpool-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rserpool-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Message Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x01</td>
+          <td>ASAP_REGISTRATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x02</td>
+          <td>ASAP_DEREGISTRATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x03</td>
+          <td>ASAP_REGISTRATION_RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04</td>
+          <td>ASAP_DEREGISTRATION_RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x05</td>
+          <td>ASAP_HANDLE_RESOLUTION</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x06</td>
+          <td>ASAP_HANDLE_RESOLUTION_RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x07</td>
+          <td>ASAP_ENDPOINT_KEEP_ALIVE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x08</td>
+          <td>ASAP_ENDPOINT_KEEP_ALIVE_ACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x09</td>
+          <td>ASAP_ENDPOINT_UNREACHABLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0a</td>
+          <td>ASAP_SERVER_ANNOUNCE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0b</td>
+          <td>ASAP_COOKIE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0c</td>
+          <td>ASAP_COOKIE_ECHO</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0d</td>
+          <td>ASAP_BUSINESS_CARD</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0e</td>
+          <td>ASAP_ERROR</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0f-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rserpool-parameters-2" id="rserpool-parameters-2"></a>Endpoint Handlespace Redundancy Protocol (ENRP) Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rserpool-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rserpool-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Message Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x01</td>
+          <td>ENRP_PRESENCE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x02</td>
+          <td>ENRP_HANDLE_TABLE_REQUEST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x03</td>
+          <td>ENRP_HANDLE_TABLE_RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04</td>
+          <td>ENRP_HANDLE_UPDATE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x05</td>
+          <td>ENRP_LIST_REQUEST</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x06</td>
+          <td>ENRP_LIST_RESPONSE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x07</td>
+          <td>ENRP_INIT_TAKEOVER</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x08</td>
+          <td>ENRP_INIT_TAKEOVER_ACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x09</td>
+          <td>ENRP_TAKEOVER_SERVER</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x10</td>
+          <td>ENRP_ERROR</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0b-0xff</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rserpool-parameters-3" id="rserpool-parameters-3"></a>Update Action Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rserpool-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rserpool-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Update Action</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0000</td>
+          <td>ADD_PE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0001</td>
+          <td>DEL_PE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0002-0xffff</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rserpool-parameters-4" id="rserpool-parameters-4"></a>RSerPool Parameter Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rserpool-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rserpool-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Parameter Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x1</td>
+          <td>IPv4 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x2</td>
+          <td>IPv6 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3</td>
+          <td>DCCP Transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x4</td>
+          <td>SCTP Transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x5</td>
+          <td>TCP Transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x6</td>
+          <td>UDP Transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x7</td>
+          <td>UDP-Lite</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x8</td>
+          <td>Pool Member Selection Policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x9</td>
+          <td>Pool Handle</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xa</td>
+          <td>Pool Element</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xb</td>
+          <td>Server Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xc</td>
+          <td>Operation Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xd</td>
+          <td>Cookie</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xe</td>
+          <td>PE Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xf</td>
+          <td>PE Checksum</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x10</td>
+          <td>Opaque Transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x11-0xfffffffe</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xffffffff</td>
+          <td>IETF-defined extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rserpool-parameters-5" id="rserpool-parameters-5"></a>RSerPool Error Causes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rserpool-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rserpool-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Cause Code</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0</td>
+          <td>Unspecified Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x1</td>
+          <td>Unrecognized Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x2</td>
+          <td>Unrecognized Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3</td>
+          <td>Invalid Values</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x4</td>
+          <td>Non-unique PE Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x5</td>
+          <td>Inconsistent Pooling Policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x6</td>
+          <td>Lack of Resources</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x7</td>
+          <td>Inconsistent Transport Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x8</td>
+          <td>Inconsistent Data/Control Configuration</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x9</td>
+          <td>Unknown Pool Handle</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xa</td>
+          <td>Rejected due to security considerations</td>
+          <td>[<a href="http://www.iana.org/go/rfc5354">RFC5354</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xb-0xffff</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rserpool-parameters-6" id="rserpool-parameters-6"></a>RSerPool Policy Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rserpool-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rserpool-parameters-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Policy</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00000000</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000001</td>
+          <td>Round Robin</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000002</td>
+          <td>Weighted Round Robin</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000003</td>
+          <td>Random</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000004</td>
+          <td>Weighted Random</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000005</td>
+          <td>Priority</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000006-0x3fffffff</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x40000000</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x40000001</td>
+          <td>Least Used</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x40000002</td>
+          <td>Least Used with Degradation</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x40000003</td>
+          <td>Priority Least Used</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x40000004</td>
+          <td>Randomized Least Used</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x40000005-0x7fffffff</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80000000-0xffffffff</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5356">RFC5356</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

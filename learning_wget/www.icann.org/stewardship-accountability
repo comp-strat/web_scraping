@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8" /><title>ICANN</title><meta content="width=device-width, initial-scale=1.0" name="viewport" /><meta content="" name="description" /><meta content="" name="author" /><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><!--HTML5 shim, for IE6-8 support of HTML5 elements--><!--[if lt IE 9]
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>--><link rel="stylesheet" media="all" href="/assets/application-eccb7764fba4611b8b3b9b494ecc5732.css" />
+<!--[if lte IE 9]>
+<link rel="stylesheet" media="all" href="/assets/application_split2-16669b8b605095677cca2e25e7411b89.css" />
+<![endif]--><meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="B/U1CmVpGFVs+eUUCDiarxRsbWzzF4g9B9xj18qY2kbVAYj6zckIdHBhAMEDkksEHi8yTLzxZlRIMmsFjX2RMA==" /><script type="text/javascript">(function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+{
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-25463847-1', 'auto');
+
+// Send pageview hit for all pages expect /search page
+// The /search pageview hit will be generated in the AngularJs doSearch(). See search_filter_ctrl.js.coffee
+if(document.location.pathname != '/search' && document.location.pathname != '/search/') {
+  ga('send', 'pageview');
+}</script><style type="text/css">body { display : none;} </style><base href="/stewardship-accountability" /></head><body><span external-links=""><a class="u-hiddenAndAccessible u-hiddenAndAccessible-shownOnFocus" href="#main-content">Skip to main content</a></span><header class="nav-collapse MainHeader" external_links=""><div class="ActionsBar--container"><div class="ActionsBar"><div class="i-alert"><svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewbox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M256,35.11L0,476.89h512L256,35.11z M256,93.484l205.216,354.138H50.786L256,93.484z M231.901,423.156h48.2v-46.583h-48.2  V423.156z M230.772,186.359v60.228l13.379,110.803h24.019l13.06-110.803v-60.228H230.772L230.772,186.359z" /></svg><div class="label">Pages under review </div></div><div id="alert"><span class="close"><svg enable-background="new 0 0 51.2 51.2" style="text-align: right; float: right; position: relative; width: 16px; top: 1%; right: 1%;" version="1.1" viewbox="0 0 51.2 51.2" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><switch><foreignobject height="1" requiredextensions="http://ns.adobe.com/AdobeIllustrator/10.0/" width="1" x="0" y="0" /><path d="M44.8 6.4C44.8 6.4 44.8 6.4 44.8 6.4l0 38.4c0 0 0 0 0 0H6.4c0 0 0 0 0 0V6.4c0 0 0 0 0 0H44.8zM44.8 0H6.4C2.9 0 0 2.9 0 6.4v38.4c0 3.5 2.9 6.4 6.4 6.4h38.4c3.5 0 6.4-2.9 6.4-6.4V6.4C51.2 2.9 48.3 0 44.8 0L44.8 0zM44.8 0 33.6 12.8l-8 8 -8-8 -4.8 4.8 8 8 -8 8 4.8 4.8 8-8 8 8 4.8-4.8 -8-8 8-8L33.6 12.8zM33.6 12.8" /></switch></svg></span><p class="title">Pages under review</p><p>As a result of the IANA Stewardship Transition, you may find some site content that is out of date. Please use the “Feedback” button in the bottom right corner of the page if you have questions or discover content that requires updating. </p></div><nav class="ActionsBar-primary"><ul class="Languages-list"><li class="Languages-item"><a href="/translations">English</a></li><li class="Languages-item"><a lang="ar" href="/ar">العربية</a></li><li class="Languages-item"><a lang="es" href="/es">Español</a></li><li class="Languages-item"><a lang="fr" href="/fr">Français</a></li><li class="Languages-item"><a lang="ru" href="/ru">Pусский</a></li><li class="Languages-item"><a lang="zh" href="/zh">中文</a></li></ul><ul class="Search"><li><div class="searchbox" ng-app="icannApp"><form ng-controller="SearchBarCtrl"><label class="hidden" for="search_text">Search ICANN.org</label><input type="search" name="search_text" id="search_text" value="" placeholder="Search ICANN.org" class="SearchBox-textField" ng-model="params.searchText" /><input type="submit" name="commit" value="&#xf002;" class="SearchBox-submit" ng-click="doSearch()" /></form></div></li></ul></nav><nav class="ActionsBar-secondary"><ul class="Actions"><li><a href="/users/sign_in">Log In</a></li><li><a href="/users/sign_up">Sign Up</a></li></ul></nav></div></div><div class="MainHeader-navigation" external-links=""><a class="MainHeader-logo" href="/"><img src="/assets/icann_logo-52672386035a35504af59606040687c8.png" alt="Icann logo" /></a><div class="menu-button"><span class="touch-button mobile-menu"><i class="navicon fa fa-bars fa-lg"></i></span></div><nav role="navigation"><div class="nav-item"><a class="nav-item-link" href="/get-started">Get Started</a><div class="nav-dropdown"><a href="/resources/pages/beginners-guides-2012-03-06-en">Beginner&#39;s Guide</a><a href="/en/about/participate/newcomers">Newcomers Program</a><a href="/en/about/participate/fellowships">Fellowship Program</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/news">News &amp; Media</a><div class="nav-dropdown"><a href="/news/announcements">Announcements</a><a href="/news/blog">Blog</a><a href="/news/multimedia">Multimedia</a><a href="/en/news/press">For Journalists</a><a href="/resources/pages/global-newsletter">Global Newsletters</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/policy">Policy</a><div class="nav-dropdown policy"><a href="/policy#what_is_policy">ICANN Policy</a><a href="/policy#how_is_policy_developed">Develop Policy</a><a href="/policy/implementation">Implement Policy</a><a href="/policy#updates">Policy Update</a><a href="/policy#participate">Participate</a><a href="/policy#staff">Team</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/public-comments">Public Comment</a><div class="nav-dropdown"><a href="/public-comments#open-public">Open</a><a href="/public-comments#closed-public">Recently Closed</a><a href="/resources/pages/upcoming-2012-02-25-en">Upcoming</a><a href="/public-comments/archive">Archive</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/resources">Resources</a><div class="nav-dropdown"><a href="/resources/pages/board-of-directors-2014-03-19-en">Board</a><a href="/resources/pages/accountability-2012-02-25-en">Accountability &amp; Transparency</a><a href="/en/resources/registrars">Registrars</a><a href="/en/resources/registries">Registries</a><a href="/en/resources/compliance">Contractual Compliance</a><a href="/resources/pages/help-2012-02-03-en">Help</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/community">Community</a><div class="nav-dropdown"><a href="/community#groups">Groups</a><a href="/community/explore">Explore Profiles</a><a href="https://features.icann.org/calendar">Calendar</a><a href="/community/demographics">Demographics</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link stewardship active" href="/stewardship-accountability">IANA Stewardship<br />&amp; Accountability          </a><div class="nav-dropdown"><a href="/iana-transition-fact-sheet">Fact Sheet</a><a href="/stewardship">IANA Stewardship Transition</a><a href="https://community.icann.org/display/acctcrosscomm/WS1+-+Enhancing+ICANN+Accountability">Enhancing ICANN Accountability</a><a href="/stewardship-implementation">Implementation</a><a href="/csc">Customer Standing Committee</a><a href="/rzerc">Root Zone Evolution Review Committee</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div></nav></div></header><main class="u-fullWidth" id="main-content"><section class="Hero Hero--stewardship-accountability Home-stewardship-accountability" style="background-image: url(/uploads/header_banner/image/13/banner.jpg);"><div class="Hero-content"><div class="Hero-contentContainer"><h1>Historic Moment</h1><p>On 1 October 2016, the IANA functions contract officially expired. As a result, the coordination and management of the Internet’s unique identifiers is now privatized and in the hands of the volunteer-based multistakeholder community.</p><a class="button" href="https://www.icann.org/news/announcement-2016-10-01-en">Read ICANN&#39;s statement</a></div></div></section><div class="MainContent--withHero"><section class="TopSection get-started"><div class="resources-landingPage IANApages"><article class="page" lang="en"><section class="fullwidth fullwidth_1"><table border="1" cellpadding="1" cellspacing="1" style="width:920px">
+    <thead>
+        <tr>
+            <th scope="col">
+            <h2><a href="https://www.icann.org/iana-transition-fact-sheet">Click here</a> to view the&nbsp;IANA Stewardship Transition Fact Sheet &amp;&nbsp;Statements of Support</h2>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+ <h1><strong>Overview</strong></h1>
+
+<p>The current IANA Stewardship Transition proposal development process represents the final phase of a plan to privatize the coordination and management of the DNS, initially outlined in a 1998 Department of Commerce <a href="https://www.icann.org/resources/unthemed-pages/white-paper-2012-02-25-en">White Paper</a>. The U.S. Government recognized that, as the commercial use of the Internet expanded globally, governance of the Internet would also need to expand, evolve and adapt. The U.S. Government also believed that a private sector led organization would be better suited to lead and adapt to the rapid pace of innovation on the Internet.</p>
+</section><section><div class="small_box"><p><strong>Quick Links</strong></p>
+
+<p><a href="https://www.icann.org/en/system/files/files/iana-stewardship-support-statements-31aug16-en.pdf">Statements in Support of the IANA Stewardship Transition</a></p>
+
+<p><a href="https://www.icann.org/en/system/files/correspondence/jeffrey-to-wsj-01sep16-en.pdf">Letter to the Editor Submission on ICANN Antitrust Exemption</a></p>
+
+<p><a href="https://www.icann.org/en/system/files/files/prelim-notice-iana-functions-contract-faq-31aug16-en.pdf">FAQ about Preliminary Written Notice of Intent to Exercise Option year Two for IANA Functions Contract</a></p>
+
+<p><a href="https://www.ntia.doc.gov/files/ntia/publications/20160816marby.pdf">NTIA&nbsp;intends to allow the&nbsp;IANA&nbsp;functions Contract to Expire</a></p>
+
+<p><a href="https://www.icann.org/en/system/files/correspondence/marby-to-strickling-12aug16-en.pdf">ICANN Submits Implementation Planning Status Report</a></p>
+
+<p><a href="https://www.ntia.doc.gov/report/2016/iana-stewardship-transition-proposal-assessment-report" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(0, 152, 213); text-decoration: none; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">NTIA Issues Report on Transition Proposals</a></p>
+
+<p><a href="http://mailer.samanage.com/wf/click?upn=3sVClaOwo5uihwlrrc4Of64YjSKZPbXUE2EsxtogXKNuEhgip6OK5sRM6AeCV7sgHqzGi-2BqvCPyekhIhJ7u8-2BA1CgCCwu-2Fl4lM-2Bgf3ONGbRNIZP5S6Vqp1z92AcIEQOW_sZYNSMtSzsZKqMu4d97qCMHWwKxHUu6DxL2MOkC7e1dwXAN7JryHvltlibS9Q9drCV-2F-2B2xfyUGEG7Zla6fHzUEvFi-2FX3lZzuvOBpMxgdWk3mEmc-2F1ZNJKQzNixJ-2FmOK67kF19aX-2BFjclCWIqM9coD-2FL3JBg895jMZqwDAE0uWuRODM2SdmKyfkCJb7ZNPuFrB2u8ZJwY4yPDGeIlNA1beXX6ZL3sIBL9MI5QqwgKTNfxxx-2FZrPyTbgU8U31witG3u8GpA8ys-2F-2Bee7w-2Fh0Ni7oaSZI8V51qknZHSLZp36uBeEcl08vI3fRh661Av8rTserFuS-2Fr0Cld8Uz-2BO9yVfE2OA8kjmVnwXJDXP4syQsscyET7RNgh8rPgcVStXRz4bxyi4ZeOzXy5Lp0VhifoAeBG2B2at9-2BzPX3K5F8UZrG1BZujEa5kO1FvvlaN3H007DQdJFX89AVjPaa5nyjiuH2xHmP-2BrZf-2Fhwn2R2Pkuoj5uC8DvIMUE8MIgaYGMPf3y1" style="box-sizing: border-box; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: rgb(0, 152, 213); text-decoration: none; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;">ICANN Board Submits Proposals to NTIA</a></p>
+ <p><strong>Relevant Links</strong></p>
+
+<p><a href="https://www.icann.org/stewardship-implementation">Implementation Planning</a></p>
+
+<p><a href="https://www.icann.org/resources/pages/board-input-stewardship-accountability-2015-07-10-en">Board Inputs into the Process</a></p>
+
+<p><a href="https://www.icann.org/resources/pages/transition-facilitation-2015-09-23-en">Transition Facilitation Calls</a></p>
+
+<p><a href="https://www.icann.org/resources/pages/iana-stewardship-project-costs-2015-10-16-en">Transition Project Costs</a></p>
+
+<p><a href="https://www.icann.org/resources/pages/iana-accountability-participation-statistics-2015-11-04-en">Transition Participation and Engagement</a></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Working Group&nbsp;Spaces&nbsp;</strong></p>
+
+<p><a href="http://www.icann.org/stewardship">ICG Microsite</a></p>
+
+<p><a href="https://community.icann.org/x/37fhAg">CWG-Stewardship Wiki&nbsp;</a></p>
+
+<p><a href="https://www.nro.net/nro-and-internet-governance/iana-oversight/consolidated-rir-iana-stewardship-proposal-team-crisp-team">CRISP Team Website&nbsp;</a></p>
+
+<p><a href="http://www.ietf.org/iana-transition.html">IANAPLAN Website&nbsp;</a></p>
+
+<p><a href="https://community.icann.org/display/acctcrosscomm/CCWG+on+Enhancing+ICANN+Accountability">CCWG-Accountability Wiki</a></p>
+
+<p>&nbsp;</p>
+</div><div class="big_box"><p><strong>NTIA&rsquo;s Announcement</strong></p>
+
+<p>On 14 March 2014, the U.S.&nbsp;National Telecommunications and Information Administration (NTIA) announced its&nbsp;intent to transition its stewardship of the IANA functions to the global multistakeholder community.</p>
+
+<p>In its announcement, NTIA asked ICANN to convene an inclusive, global discussion to determine a process for transitioning the stewardship of these functions to the multistakeholder community. It specifically stated that the transition proposal must have broad community support and address the following four principles:</p>
+
+<ul>
+    <li>
+    <p>Support and enhance the multistakeholder model;</p>
+    </li>
+    <li>
+    <p>Maintain the security, stability, and resiliency of the Internet DNS;</p>
+    </li>
+    <li>
+    <p>Meet the needs and expectations of the global customers and partners of the IANA services; and,</p>
+    </li>
+    <li>
+    <p>Maintain the openness of the Internet.</p>
+    </li>
+</ul>
+
+<p>NTIA also specified that it would not accept a proposal that replaces NTIA&rsquo;s role with a government-led or intergovernmental organization solution.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+      <div class='read-more'>
+        <a href="http://www.ntia.doc.gov/press-release/2014/ntia-announces-intent-transition-key-internet-domain-name-functions">Read the full announcement here <i class='fa fa-times arrow-direction'></i></a>
+      </div>
+</div></section><section class="grey_box box_1"><h2><strong>Why now?</strong></h2>
+
+<p>The U.S. Government always envisioned its role as temporary. Transitioning stewardship of the IANA functions to the multistakeholder community marks the final phase of the privatization of the DNS as outlined by the 1998 <a href="https://www.icann.org/resources/unthemed-pages/white-paper-2012-02-25-en">White Paper</a>.</p>
+
+<p>In making its announcement, NTIA recognized ICANN&rsquo;s organizational maturation, including steps taken to improve its accountability, transparency and technical competence, and the continued growth of international support for the multistakeholder model of Internet governance.</p>
+</section><section class="fullwidth fullwidth_2"></section><section><div class="left_box"><h2 style="font-style:italic"><strong>IANA STEWARDSHIP TRANSITION</strong></h2>
+
+<h2><strong>Process Overview</strong></h2>
+
+<p>At the ICANN 49 Meeting in Singapore two weeks after NTIA&rsquo;s announcement, ICANN launched the multistakeholder process to develop the IANA Stewardship Transition final proposal. Based on discussions at ICANN 49, feedback from a Public Comment period and subsequent dialogues, ICANN drafted the Process to Develop a Proposal and Next Steps to guide the development of the IANA Stewardship Transition final proposal.</p>
+
+<h2><strong>Structure and Key Groups</strong></h2>
+
+<p>Reflecting the open and global nature of the Internet, the IANA Stewardship Transition process represents all Internet stakeholders. The organizational structure of the process calls for direct input from those communities that have working relationships with the IANA functions &ndash; Domain Names, Numbering Resources and Protocol Parameters.</p>
+
+<ul>
+    <li><strong>The IANA Stewardship Transition Coordination Group (ICG):&nbsp;</strong>The ICG has 30 members representing 13 Internet communities, including those direct stakeholders (e.g., operational communities with direct operation or service relationships with the IANA functions) and indirect stakeholders, such as civil society, governments and Internet users.</li>
+    <li><strong>Domain Names: Cross Community Working Group (CWG-Stewardship):&nbsp;</strong>A Cross Community Working Group was formed to develop an IANA Stewardship Transition Proposal on Naming Related Functions. The group was chartered by, and represents five communities.</li>
+    <li><strong>Numbering Resources: Consolidated RIR IANA Stewardship Proposal Team (CRISP TEAM):&nbsp;</strong>The CRISP Team was formed by the Number Resource Organization (NRO) &ndash; a coordinating body for the five Regional Internet Registries (RIRs) that manage the distribution of Internet number resources, including IP addresses.</li>
+    <li><strong>Protocol Parameters: IANAPLAN Working Group (IANAPLAN WG):&nbsp;</strong>The Internet Engineering Task Force (IETF) formed the IANAPLAN Working Group, which used their routine process of developing an &ldquo;Internet Draft&rdquo; for their response.</li>
+</ul>
+
+<h2><strong>Inclusive, Open Participation</strong></h2>
+
+<p>As mandated by the original RFP from the ICG, all community proposals are to be &ldquo;developed through a transparent process that is open to and inclusive of all stakeholders interested in participating in the development of the proposal.&rdquo;</p>
+
+<p>The groups tasked with drafting IANA Stewardship Transition proposals are diverse, both geographically and in terms of the interests and needs represented within each working group and team. The CWG-Stewardship, CRISP Team and IANAPLAN WG have posted their proposals for public comment or feedback.</p>
+</div><div class="right_box"><h2 style="font-style:italic"><strong>ENHANCING ICANN ACCOUNTABILITY</strong></h2>
+
+<h2><strong>Process Overview</strong></h2>
+
+<p>In response to a public session at ICANN 49 in Singapore and the community&rsquo;s call for broader accountability mechanisms, including external and independent processes. After significant collaborative work and community input, ICANN published an Enhancing ICANN Accountability process.</p>
+
+<h2><strong>Structure and Key Groups</strong></h2>
+
+<ul>
+    <li><strong>Cross Community Working Group On Enhancing ICANN Accountability (CCWG-Accountability):&nbsp;</strong>A Cross Community Working Group (CCWG-Accountability) was formed to facilitate the process of developing enhancements to ICANN Accountability. This CCWG-Accountability, chartered by and comprised of both Supporting Organizations and Advisory Committees also provides meaningful opportunities for participation and comment from outside voices that may not participate in the daily workings of the group.<br />
+    <br />
+    The community also strongly felt the CCWG-Accountability should have two Work Streams:<br />
+    &nbsp;
+    <ul>
+        <li><strong>Work Stream 1:</strong> focused on mechanisms enhancing ICANN accountability that must be in place or committed to within the time frame of the IANA Stewardship Transition;</li>
+        <li><strong>Work Stream 2:</strong> focused on addressing accountability topics for which a timeline for developing solutions and full implementation may extend beyond the IANA Stewardship Transition.</li>
+    </ul>
+    </li>
+    <li><strong>Public Experts Group (PEG) and External Advisors:&nbsp;</strong>To advise and contribute to the dialogue of the CCWG-Accountability, a Public Experts Group selected seven Advisors to work with the CCWG-Accountability. The Advisors roles are to contribute research and advice to the CCWG-Accountability, and to bring perspectives on global best practices to enrich the discussion, all while engaging with a broader network of accountability experts from around the world.</li>
+    <li><strong>ICANN Board:&nbsp;</strong>The ICANN Board is involved in the accountability process, most prominently by way of a Board liaison that brings the Board&rsquo;s voice and expertise to all discussions around the final recommendations.&nbsp;Secondly, the Board will consider the recommendations from the CCWG-Accountability. The Board can then accept the recommendations or, if members believe a recommendation is not in the global public interest, it will refer the recommendation back to the CCWG-Accountability to work on any issues identified.</li>
+</ul>
+
+<h2><strong>Inclusive, Open Participation</strong></h2>
+
+<p>Volunteers from the community are encouraged to participate in the Enhancing ICANN Accountability effort. Any interested party can join as a participant by completing a statement of interest and actively contributing to conversations and meetings or, alternatively, as a mailing list observer interested in simply monitoring CCWG-Accountability conversations. There are now 154 individual participants, along with 26 appointed members.</p>
+
+<p>Similar to the groups tasked with drafting IANA Stewardship Transition proposals, the CCWG-Accountability represents broad diversity, both geographically and in terms of the interests and needs represented.</p>
+
+<p>Participation is also encouraged through the opportunities for public comment or feedback on any Work Stream 1 and Work Stream 2 proposals.</p>
+</div></section><section class="grey_box box_2"><h2><strong>Get&nbsp;Involved</strong></h2>
+
+<p><strong>1. Join a working group:</strong></p>
+
+<p>CCWG<a href="mailto:grace.abuhamad@icann.org">-</a>Accountability<a href="mailto:grace.abuhamad@icann.org">, </a>contact<a href="mailto:grace.abuhamad@icann.org">&nbsp;</a>acct-staff[at]icann.org</p>
+
+<p>&nbsp;</p>
+
+<p><strong>2. Participate in a public comment period:</strong></p>
+
+<p>Participating in public comment periods is an integral part of ICANN&rsquo;s inclusive and bottom-up model of proposal development</p>
+
+<p><a href="https://www.icann.org/stewardship-accountability-public-comment">Open Public Comments can be found here</a></p>
+
+<p>&nbsp;</p>
+
+<p><strong>3. Stay up to date on recent developments:</strong></p>
+
+<p>Follow @ICANN on <a href="https://twitter.com/ICANN">Twitter</a>&nbsp;or like ICANN on <a href="https://www.facebook.com/icannorg">Facebook</a></p>
+
+<p><a href="https://www.icann.org/user/account_setting/edit?section=news">Subscribe</a>&nbsp;to ICANN news alerts</p>
+</section></article></div></section></div></main><footer class="MainFooter" external_links="" id="main_footer"><section class="FooterDisclaimer" style="display: none">ICANN is not responsible for profile content or verification of user details.</section><section class="FooterSocial"><ul><li><a href="http://www.youtube.com/icannnews"><i class="fa fa-youtube"></i>You Tube</a></li><li><a href="https://www.twitter.com/icann"><i class="fa fa-twitter"></i>Twitter</a></li><li><a href="https://www.linkedin.com/company/icann"><i class="fa fa-linkedin"></i>LinkedIn</a></li><li><a href="http://www.flickr.com/photos/icann"><i class="fa fa-flickr"></i>Flickr</a></li><li><a href="http://www.facebook.com/icannorg"><i class="fa fa-facebook"></i>Facebook</a></li><li><a href="/en/news/rss"><i class="fa fa-rss"></i>RSS Feeds</a></li><li><a href="https://community.icann.org"><i class="fa fa-user"></i>Community Wiki</a></li><li><a href="/news/blog"><i class="fa fa-pencil"></i>ICANN Blog </a></li></ul></section><div class="MainFooter-content"><nav class="FooterMenu"><div class="FooterMenu-item"><h3 class="FooterMenu-title">Who We Are</h3><ul class="FooterSubmenu"><li><a href="/get-started">Get Started</a></li><li><a href="/en/about/learning">Learning</a></li><li><a href="/en/about/participate">Participate</a></li><li><a href="https://www.icann.org/resources/pages/groups-2012-02-06-en">Groups</a></li><li><a href="/resources/pages/board-of-directors-2014-03-19-en">Board</a></li><li><a href="/presidents-corner">President&#39;s Corner</a></li><li><a href="/en/about/staff">Staff</a></li><li><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&amp;cws=37">Careers</a></li><li><a href="/en/news/newsletter">Newsletter</a></li><li><a href="https://www.icann.org/development-and-public-responsibility">Development and Public Responsibility</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Contact Us</h3><ul class="FooterSubmenu"><li><a href="https://forms.icann.org/en/contact">Offices</a></li><li><a href="/resources/pages/customer-support-2015-06-22-en">Global Support</a></li><li><a href="/about/staff/security">Security Team</a></li><li><a href="/en/contact/pgp-keys">PGP Keys</a></li><li><a href="/contact/certificate-authority">Certificate Authority</a></li><li><a href="/resources/pages/contact-f2-2012-02-25-en">Registry Liaison</a></li><li><a href="https://forms.icann.org/en/about/aoc-review/contact">Specific Reviews</a></li><li><a href="http://forms.icann.org/en/groups/reviews/contact">Organizational Reviews</a></li><li><a href="http://forms.icann.org/en/contact/speakers">Request a Speaker</a></li><li><a href="/en/news/press">For Journalists</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Accountability &amp; Transparency</h3><ul class="FooterSubmenu"><li><a href="/en/news/in-focus/accountability/mechanisms">Accountability Mechanisms</a></li><li><a href="/resources/pages/irp-2012-02-25-en">Independent Review Process</a></li><li><a href="/groups/board/governance/reconsideration">Request for Reconsideration</a></li><li><a href="/help/ombudsman">Ombudsman</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Governance</h3><ul class="FooterSubmenu"><li><a href="/en/about/governance">Documents</a></li><li><a href="/en/about/agreements">Agreements</a></li><li><a href="/resources/reviews/aoc">Specific Reviews</a></li><li><a href="/about/annual-report">Annual Report</a></li><li><a href="/en/about/financials">Financials</a></li><li><a href="/en/about/transparency">Document Disclosure</a></li><li><a href="/en/about/planning">Planning</a></li><li><a href="/progress">KPI Dashboard</a></li><li><a href="/en/news/rfps">RFPs</a></li><li><a href="/en/news/litigation">Litigation</a></li><li><a href="/en/news/correspondence">Correspondence</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Help</h3><ul class="FooterSubmenu"><li><a href="/en/help/dispute-resolution">Dispute Resolution</a></li><li><a href="/en/help/dndr">Domain Name Dispute Resolution</a></li><li><a href="/en/help/name-collision">Name Collision</a></li><li><a href="/en/news/announcements/announcement-06mar07-en.htm">Registrar Problems</a></li><li><a href="http://whois.icann.org/">WHOIS</a></li></ul></div></nav></div><section class="copyright"><p><span>© 2016 Internet Corporation For Assigned Names and Numbers.</span><span><a href="/en/help/privacy">Privacy Policy</a></span><span><a href="/en/help/tos">Terms of Service</a></span><span><a href="/en/help/privacy-cookie-policy">Cookie Policy</a></span></p></section></footer><script src="/assets/application-94c6aceae2068177e83af77b024547c1.js"></script><script type="text/javascript">if (self == top) {
+ var theBody = document.getElementsByTagName('body')[0];
+ theBody.style.display = "block"
+} else {
+ top.location = self.location
+} </script><script src="/glossary_terms.js"></script><div class="cookie-notification"><div class="wrapper"><h4>A note about tracking cookies:</h4><p>This site uses cookies to deliver an efficient user experience and to help us see how the site is used. If you would like to read more about the use of cookies, <a href='/en/help/privacy-cookie-policy'>click here</a></p><p class="cookie-notification-notice">This notice is intended to appear only the first time you visit the site on any computer.<span class="js-close-cookie-notification"><i class="close-icon fa fa-times"></i>OK</span></p></div></div><div class="acronym-helper"><div class="wrapper"><div class="acronym-helper-term">Domain Name System</div><div class="acronym-helper-definition">Internationalized Domain Name ,IDN,"IDNs are domain names that include characters used in the local representation of languages that are not written with the twenty-six letters of the basic Latin alphabet ""a-z"". An IDN can contain Latin letters with diacritical marks, as required by many European languages, or may consist of characters from non-Latin scripts such as Arabic or Chinese. Many languages also use other types of digits than the European ""0-9"". The basic Latin alphabet together with the European-Arabic digits are, for the purpose of domain names, termed ""ASCII characters"" (ASCII = American Standard Code for Information Interchange). These are also included in the broader range of ""Unicode characters"" that provides the basis for IDNs. The ""hostname rule"" requires that all domain names of the type under consideration here are stored in the DNS using only the ASCII characters listed above, with the one further addition of the hyphen ""-"". The Unicode form of an IDN therefore requires special encoding before it is entered into the DNS. The following terminology is used when distinguishing between these forms: A domain name consists of a series of ""labels"" (separated by ""dots""). The ASCII form of an IDN label is termed an ""A-label"". All operations defined in the DNS protocol use A-labels exclusively. The Unicode form, which a user expects to be displayed, is termed a ""U-label"". The difference may be illustrated with the Hindi word for ""test"" — परीका — appearing here as a U-label would (in the Devanagari script). A special form of ""ASCII compatible encoding"" (abbreviated ACE) is applied to this to produce the corresponding A-label: xn--11b5bs1di. A domain name that only includes ASCII letters, digits, and hyphens is termed an ""LDH label"". Although the definitions of A-labels and LDH-labels overlap, a name consisting exclusively of LDH labels, such as""icann.org"" is not an IDN."</div></div></div><script type="text/javascript">$('a').on('click', function(event) {
+  el = $(this);
+  var filetypes = /\.(zip|exe|dmg|pdf|csv|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+  href = (typeof(el.attr('href')) != 'undefined' ) ? el.attr('href') :"";
+  var is_same_domain = href.match(document.domain.split('.').reverse()[0]);
+  console.log("clicked a link");
+  if(href.match("www.icann.org") && href.match(filetypes))
+  {
+    ga('send', 'event', 'File', 'download', event.target.href);
+  }
+});</script></body></html>

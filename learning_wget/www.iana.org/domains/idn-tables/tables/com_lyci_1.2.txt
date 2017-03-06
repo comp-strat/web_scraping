@@ -1,0 +1,71 @@
+###############################################################
+#
+# TLD:            COM
+# Script:         Lycian
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Lycian script.
+#
+###############################################################
+U+10280	# LYCIAN LETTER A
+U+10281	# LYCIAN LETTER E
+U+10282	# LYCIAN LETTER B
+U+10283	# LYCIAN LETTER BH
+U+10284	# LYCIAN LETTER G
+U+10285	# LYCIAN LETTER D
+U+10286	# LYCIAN LETTER I
+U+10287	# LYCIAN LETTER W
+U+10288	# LYCIAN LETTER Z
+U+10289	# LYCIAN LETTER TH
+U+1028A	# LYCIAN LETTER J
+U+1028B	# LYCIAN LETTER K
+U+1028C	# LYCIAN LETTER Q
+U+1028D	# LYCIAN LETTER L
+U+1028E	# LYCIAN LETTER M
+U+1028F	# LYCIAN LETTER N
+U+10290	# LYCIAN LETTER MM
+U+10291	# LYCIAN LETTER NN
+U+10292	# LYCIAN LETTER U
+U+10293	# LYCIAN LETTER P
+U+10294	# LYCIAN LETTER KK
+U+10295	# LYCIAN LETTER R
+U+10296	# LYCIAN LETTER S
+U+10297	# LYCIAN LETTER T
+U+10298	# LYCIAN LETTER TT
+U+10299	# LYCIAN LETTER AN
+U+1029A	# LYCIAN LETTER EN
+U+1029B	# LYCIAN LETTER H
+U+1029C	# LYCIAN LETTER X
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

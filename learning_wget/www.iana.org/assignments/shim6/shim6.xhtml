@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Shim6 Parameters</title>
+  </head>
+  <body>
+    <h1>Shim6 Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2009-03-18</dd>
+      <dt>Last Updated</dt>
+      <dd>2009-06-18</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="shim6.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="shim6.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="shim6.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#types">Shim6 Types</a>
+      </li>
+      <li>
+        <a href="#options">Shim6 Options</a>
+      </li>
+      <li>
+        <a href="#error-codes">Shim6 Error Codes</a>
+      </li>
+      <li>
+        <a href="#verification">Shim6 Verification Methods</a>
+      </li>
+    </ul>
+    <h2><a name="types" id="types"></a>Shim6 Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Option Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>I1 (first establishment message from the initiator)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>R1 (first establishment message from the responder)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>I2 (2nd establishment message from the initiator)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>R2 (2nd establishment message from the responder)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>R1bis (Reply to reference to non-existent context)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>I2bis (Reply to a R1bis message)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-59</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">60-63</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">64</td>
+          <td>Update Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65</td>
+          <td>Update Acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">66</td>
+          <td>Keepalive</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">67</td>
+          <td>Probe Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">68</td>
+          <td>Error Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">69-123</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">124-127</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="options" id="options"></a>Shim6 Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="options.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-options" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Value</th>
+          <th>Message</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Responder Validator</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Locator List</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Locator Preferences</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>CGA Parameter Data Structure</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>CGA Signature</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>ULID Pair</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Forked Instance Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-9</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Keepalive Timeout Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11-16383</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16384-32767</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="error-codes" id="error-codes"></a>Shim6 Error Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="error-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-error-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Code Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unknown Shim6 message type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Critical Option not recognized</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Locator verification method failed</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Locator List Generation number out of sync</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Error in the number of locators</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-119</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">120-127</td>
+          <td>Reserved for debugging purposes</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="verification" id="verification"></a>Shim6 Verification Methods</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="verification.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-verification" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Method</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>HBA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>CGA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-254</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5533">RFC5533</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

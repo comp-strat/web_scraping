@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://www.ntia.doc.gov/sites/all/themes/sevntia/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortlink" href="/node/725" />
+<link rel="canonical" href="/page/iana-functions-purchase-order" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>IANA Functions Contract | NTIA</title>
+  <link type="text/css" rel="stylesheet" href="https://www.ntia.doc.gov/files/ntia/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ntia.doc.gov/files/ntia/css/css_-3x6dGxhhbjSCqHD-h87ux3WmSE-sOQja-8y1liDyp4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ntia.doc.gov/files/ntia/css/css_vMZoPiWQoyPu-iPOumolrO71aUGCc6KHz-ZNt1fsHk0.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.ntia.doc.gov/files/ntia/css/css_SXaj_ZVx74nON5a_XfEccFilgPIbqcBOnhCXpoa7yns.css" media="all" />
+
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="https://www.ntia.doc.gov/sites/all/themes/sevntia/style.ie6.css?olwbz6" media="all" />
+<![endif]-->
+  <script type="text/javascript" src="https://www.ntia.doc.gov/files/ntia/js/js_MpKfe1sTh5JIVGCZ17DsAuT1rqAC38MLLlkjqjQ1X_k.js"></script>
+<script type="text/javascript" src="https://www.ntia.doc.gov/files/ntia/js/js_NpX2cwCeepkWZZ194B6-ViyVBHleaYLOx5R9EWBOMRU.js"></script>
+<script type="text/javascript" src="https://www.ntia.doc.gov/files/ntia/js/js_4op9QotX8n-TCE3S6wxE2gGscr__rujMs-uqbaGDVB4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-22421877-2", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.ntia.doc.gov/files/ntia/js/js_SCc8lM4TEl3XUaEQ0VNxQwbL2EaDAoY38DzBQrCgVB4.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"sevntia","theme_token":"ctzCf7eUITC-6JXPw49evLgPRA-Btu5zcEhQeGiPokY","js":{"sites\/all\/modules\/browserclass\/browserclass.js":1,"sites\/all\/modules\/addthis\/addthis.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/extlink\/extlink.js":1,"sites\/all\/modules\/jquerymenu\/jquerymenu.js":1,"sites\/all\/modules\/custom_search\/js\/custom_search.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/ntia.doc.gov\/themes\/danland\/scripts\/hoverIntent.js":1,"sites\/ntia.doc.gov\/themes\/danland\/scripts\/superfish.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/extlink\/extlink.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/jquerymenu\/jquerymenu.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/typogrify\/typogrify.css":1,"sites\/all\/modules\/print\/print_ui\/css\/print_ui.theme.css":1,"sites\/all\/modules\/custom_search\/custom_search.css":1,"sites\/ntia.doc.gov\/themes\/danland\/style.css":1,"sites\/all\/themes\/sevntia\/sevntia.css":1,"sites\/all\/themes\/sevntia\/style.ie6.css":1}},"jquerymenu":{"hover":0,"animate":0,"edit_link":0,"click_to_expand":0},"custom_search":{"form_target":"_self","solr":0},"extlink":{"extTarget":0,"extClass":"ext","extLabel":"(link is external)","extImgClass":0,"extSubdomains":1,"extExclude":".\\.gov|.\\.mil","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/page\/iana-functions-purchase-order":true}});
+//--><!]]>
+</script>
+</head>
+<body class="html not-front not-logged-in two-sidebars page-node page-node- page-node-725 node-type-page" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div  id="layout-type-2">
+<div id="header">
+<div id="header-wrapper">
+	 
+		<div id="logo-wrapper">
+			<div class="logo">
+				<a href="/" title="Home"><img src="https://www.ntia.doc.gov/files/ntia/motif_ntia_logo.png" alt="Home" /></a>
+			</div>
+		</div><!-- end logo wrapper -->
+			
+			<div id="search-box">
+			  <div class="region region-search-box">
+    <div id="block-search-form" class="block block-search">
+
+
+<div class="content">
+  <form class="search-form" role="search" action="/page/iana-functions-purchase-order" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search this site </label>
+ <input title="Enter the terms you wish to search for." class="custom-search-box form-text" placeholder="Search this site" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-LIWX8g1oYrFWHTdxUwypmlTwiB0mewEgykddNdKTmWA" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form></div> <!-- end block content -->
+</div> <!-- end block -->
+  </div>
+                                                                                <a href="https://www.facebook.com/ntiagov" title="NTIA&#039;s Facebook page" id="service-links-facebook-1" class="service-links-facebook" rel="nofollow"><img src="/sites/all/themes/sevntia/images/facebook.png" alt="Facebook" title="" width="16" height="16" /> </a><a href="https://www.twitter.com/ntiagov" title="Follow NTIA on Twitter" id="service-links-twitter-1" class="service-links-twitter" rel="nofollow"><img src="/sites/all/themes/sevntia/images/twitter.png" alt="Twitter" title="" width="16" height="16" /></a><a href="/rss/updates.xml" title="RSS Feed" id="service-links-RSS-1" class="service-links-rss" rel="nofollow">
+<img src="/sites/all/themes/sevntia/images/rss.gif" alt="RSS Feed" title="" width="16" height="16" /></a>                        		</div><!-- /search-box -->
+	
+	
+      </div><!-- end header-wrapper -->
+</div> <!-- /header -->
+<div style="clear:both"></div>
+
+<div id="menu">
+<!--<div id="rounded-menu-left"></div>-->
+       <div id="nav">
+        <ul class="links"><li class="menu-1299 first"><a href="/home" title="Topics">Topics</a></li>
+<li class="menu-124"><a href="/newsroom" title="Newsroom">Newsroom</a></li>
+<li class="menu-191"><a href="/publications" title="Publications">Publications</a></li>
+<li class="menu-1259"><a href="/blogs" title="Blog">Blog</a></li>
+<li class="menu-117"><a href="/offices" title="NTIA Offices">Offices</a></li>
+<li class="menu-1624"><a href="/about" title="About NTIA">About</a></li>
+<li class="menu-4200 last"><a href="/contact" title="">Contact</a></li>
+</ul>      </div> <!-- end primary -->
+    <!--<div id="rounded-menu-right"></div>-->
+</div> <!-- end menu -->
+<div style="clear:both"></div>
+
+ 
+<div style="clear:both"></div>
+<div id="wrapper">
+
+          <div id="sidebar-left" class="column sidebar"><div class="section">
+          <div class="region region-sidebar-first">
+    <div id="block-taxonomyblocks-0" class="block block-taxonomyblocks">
+
+
+<div class="content">
+  <!--[if IE]><div class="ie"><![endif]--><ul class="menu jquerymenu"><li  class="parent closed"><span class="parent closed"></span><a href="/category/spectrum-management" title="Content tagged with Spectrum Management">Spectrum Management</a><ul><li  class="leaf first"><a href="/category/500-mhz-initiative" title="Content tagged with 500 MHz Initiative">500 MHz Initiative</a></li><li  class="leaf"><a href="/category/irac" title="Content tagged with IRAC">IRAC</a></li><li  class="leaf"><a href="/category/csmac" title="Content tagged with CSMAC">CSMAC</a></li><li  class="parent closed"><span class="parent closed"></span><a href="/category/international" title="Content tagged with International">International</a><ul><li  class="leaf first last"><a href="/category/wrc-15" title="Content tagged with WRC-15">WRC-15</a></li></ul></li><li  class="leaf"><a href="/category/spectrum-sharing" title="Content tagged with Spectrum Sharing">Spectrum Sharing</a></li><li  class="leaf"><a href="/category/aws-1-transition" title="Content tagged with AWS-1 Transition ">AWS-1 Transition </a></li><li  class="leaf"><a href="/category/aws-3-transition" title="Content tagged with AWS-3 Transition">AWS-3 Transition</a></li><li  class="leaf last"><a href="/category/3550-3650-mhz" title="Content tagged with 3550-3650 MHz ">3550-3650 MHz </a></li></ul></li><li  class="parent closed"><span class="parent closed"></span><a href="/category/broadband" title="Content tagged with Broadband">Broadband</a><ul><li  class="leaf first"><a href="/category/broadband-opportunity-council" title="Content tagged with Broadband Opportunity Council">Broadband Opportunity Council</a></li><li  class="leaf"><a href="/category/grants-0" title="Content tagged with Grants">Grants</a></li><li  class="parent closed"><span class="parent closed"></span><a href="/category/adoption-resources" title="Content tagged with Adoption Resources">Adoption Resources</a><ul><li  class="leaf first"><a href="/category/digital-literacy" title="Content tagged with Digital Literacy">Digital Literacy</a></li><li  class="leaf last"><a href="/category/digital-nation-reports" title="Content tagged with Digital Nation Reports">Digital Nation Reports</a></li></ul></li><li  class="leaf"><a href="/category/national-broadband-map" title="Content tagged with National Broadband Map">National Broadband Map</a></li><li  class="leaf last"><a href="/category/connected" title="Content tagged with ConnectED">ConnectED</a></li></ul></li><li  class="parent closed"><span class="parent closed"></span><a href="/category/internet-policy" title="Content tagged with Internet Policy">Internet Policy</a><ul><li  class="leaf first"><a href="/category/digital-economy-board-advisors" title="Content tagged with Digital Economy Board of Advisors">Digital Economy Board of Advisors</a></li><li  class="parent closed last"><span class="parent closed last"></span><a href="/category/internet-policy-task-force" title="Content tagged with Internet Policy Task Force">Internet Policy Task Force</a><ul><li  class="leaf first"><a href="/category/privacy" title="Content tagged with Privacy">Privacy</a></li><li  class="leaf"><a href="/category/cybersecurity" title="Content tagged with Cybersecurity">Cybersecurity</a></li><li  class="leaf"><a href="/category/copyright" title="Content tagged with Copyright">Copyright</a></li><li  class="leaf"><a href="/category/global-free-flow-information" title="Content tagged with Global Free Flow of Information">Global Free Flow of Information</a></li><li  class="leaf last"><a href="/category/internet-things" title="Content tagged with Internet of Things">Internet of Things</a></li></ul></li></ul></li><li  class="parent closed"><span class="parent closed"></span><a href="/category/domain-name-system" title="Content tagged with Domain Name System">Domain Name System</a><ul><li  class="leaf"><a href="/category/iana-functions" title="Content tagged with IANA functions">IANA functions</a></li><li  class="leaf"><a href="/category/ipv6" title="Content tagged with IPv6">IPv6</a></li><li  class="leaf last"><a href="/category/dnssec" title="Content tagged with DNSSEC">DNSSEC</a></li></ul></li><li  class="parent closed"><span class="parent closed"></span><a href="/category/public-safety" title="Content tagged with Public Safety">Public Safety</a><ul><li  class="leaf first last"><a href="/category/firstnet" title="Content tagged with FirstNet">FirstNet</a></li></ul></li><li  class="parent closed"><span class="parent closed"></span><a href="/category/grants" title="Content tagged with Grants">Grants</a><ul><li  class="leaf first"><a href="/category/next-generation-911" title="Content tagged with Next Generation 911">Next Generation 911</a></li><li  class="leaf"><a href="/category/state-alternative-plan-program" title="Content tagged with State Alternative Plan Program">State Alternative Plan Program</a></li><li  class="leaf"><a href="/category/state-and-local-implementation-grant-program" title="Content tagged with State and Local Implementation Grant Program">State and Local Implementation Grant Program</a></li><li  class="leaf"><a href="/category/broadband-technology-opportunities-program" title="Content tagged with Broadband Technology Opportunities Program">Broadband Technology Opportunities Program</a></li><li  class="leaf"><a href="/category/state-broadband-initiative" title="Content tagged with State Broadband Initiative">State Broadband Initiative</a></li><li  class="leaf last"><a href="/category/low-power-television-and-translator-program" title="Content tagged with Low-Power Television and Translator Program">Low-Power Television and Translator Program</a></li></ul></li><li  class="leaf"><a href="/category/institute-telecommunication-sciences" title="Content tagged with Institute for Telecommunication Sciences ">Institute for Telecommunication Sciences </a></li><li  class="leaf last"><a href="/category/data-central" title="Content tagged with Data Central">Data Central</a></li></ul><!--[if IE]></div><![endif]--></div> <!-- end block content -->
+</div> <!-- end block -->
+  </div>
+      </div></div> <!-- end sidebar-first -->
+    <div id="content">
+			<a id="main-content"></a>
+						<h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="/">Home</a></div>			                                              	                                                <h1 class="title" id="page-title">
+                                        IANA Functions Contract                                </h1>
+     	                                             	                                                <div class="tabs">
+                                                        </div>
+                      		      				      <div class="content-middle">  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+
+<div class="content">
+  <div id="node-725" class="node node-page clearfix">
+
+      
+  
+  <div class="content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><p>Critical to the DNS is the continued performance of the Internet Assigned Numbers Authority (IANA) functions.  The IANA functions have historically included:  (1) the coordination of the assignment of technical Internet protocol parameters; (2) the administration of certain responsibilities associated with Internet DNS root zone management; (3) the allocation of Internet numbering resources; and (4) other services related to the management of the .ARPA and .INT top-level domains.  The Internet Corporation for Assigned Names and Numbers (ICANN) performed the IANA functions, on behalf of the United States Government, through a contract with NTIA. </p>
+<hr /><p><strong>2012 Contract</strong></p>
+<ul><li><a href="/files/ntia/publications/sa1301-12-cn-0035001-10212016.pdf">Contract Close-out</a> (October 21, 2016)</li>
+<li><a href="/files/ntia/publications/iana_mod_m0005_key_pers_change_corrected.pdf">Amendment Modification No. 0005</a> (February 2, 2016)</li>
+<li><a href="/files/ntia/publications/iana_mod_option_1_exercised.pdf">Amendment Modification No. 0004</a> (September 17, 2015)</li>
+<li><a href="/files/ntia/publications/mod_0003_for_sa1301-12-cn-0035_signed.pdf">Amendment Modification No. 0003</a> (August 4, 2015)</li>
+<li><a href="/files/ntia/publications/sa1301-12-cn-0035001.pdf">Amendment Modification No.  0002</a> (April 30, 2013)</li>
+<li><a href="/files/ntia/publications/sa1301-12-cn-0035_mod_0001_-_deliverable_schedule.pdf">Amendment Modification No.  0001</a> (October 1, 2012)</li>
+<li><a href="/press-release/2012/commerce-department-awards-contract-management-key-internet-functions-icann">Commerce Department Awards Contract for Management of Key Internet Functions to ICANN</a> (July 2, 2012)</li>
+<li><a href="/files/ntia/publications/sf_26_pg_1-2-final_award_and_sacs.pdf">Award</a> IANA Functions Contract (July 2, 2012) (858 KB pdf); <a href="/other-publication/2012/icann-proposal">ICANN proposal</a> (incorporated by reference)<br />
+	    RFP SA1301-12-RP-0043 was awarded on July 2, 2012 to Internet Corporation for Assigned Numbers (ICANN).</li>
+<li><a href="/files/ntia/publications/amendment_0001_sa1301-12-rp-0043-05.17.12_-final.pdf">Amendment 001</a> Internet Assigned Numbers Authority (IANA) Solicitation Number: SA1301-12-RP-0043 (May 17, 2012)<br />
+	    The purpose of this amendment is to post all <a href="/files/ntia/publications/sf30_amendment_0001.pdf">questions and answers</a> submitted in response to this RFP and amend sections E, F, H, I, L, M and the <a href="/files/ntia/publications/sf_33_-_amend_0001.pdf">SF33 to the original RFP</a> (05/17/2012).</li>
+<li><a href="/files/ntia/publications/sa1301-12-rp-0043-_final_04.16.2012.pdf">Request for Proposal</a> - Internet Assigned Numbers Authority (IANA) Solicitation Number: SA1301-12-RP-0043(April 16, 2012)<br />
+	    On April 16, 2012, the Department of Commerce <a href="/files/ntia/publications/sf_33_04162012.pdf">re-issued</a> the Request for Proposal (RFP) SA1301-12-RP-0043 for a new Internet Assigned Numbers Authority (IANA) functions contract. The continued performance of these functions is critical to preserving the stability and security of the Internet's Domain Name System.</li>
+<li><strong>Notice</strong> - Cancelled <a href="/other-publication/2012/notice-internet-assigned-numbers-authority-iana-functions-request-proposal-rf">Internet Assigned Numbers Authority (IANA) Functions - Request for Proposal (RFP) SA1301-12-RP-IANA</a> (March 10, 2012)</li>
+<li><strong>Notice</strong> - <a href="/other-publication/2012/notice-extension-internet-assigned-numbers-authority-iana-functions-contract">Extension of the Internet Assigned Numbers Authority (IANA) Functions Contract</a> (March 10, 2012)</li>
+<li><a href="/files/ntia/publications/amendment_0003_03092012.pdf">Amendment 003</a> Internet Assigned Numbers Authority (IANA) Solicitation Number: SA1301-12-RP-IANA (March 9, 2012)<br />
+	    Request for Proposal (RFP) SA1301-12-RP-IANA is hereby cancelled. The Department of Commerce intends to reissue the RFP at a future date, date to be determined (TBD).</li>
+<li><a href="/files/ntia/publications/amendment_0002_12.2.11.pdf">Amendment 002</a> Internet Assigned Numbers Authority (IANA) Solicitation Number: SA1301-12-RP-IANA (December 2, 2011)<br />
+	  The purpose of this amendment is to post all questions and answers submitted in response to this  RFP and change the "Note" found on page 82.</li>
+<li><a href="/files/ntia/publications/sf_33_-_rfp_amendment_0001_11172011.pdf">Amendment 001</a> Internet Assigned Numbers Authority (IANA) Solicitation Number: SA1301-12-RP-IANA (November 17, 2011)<br />
+	   This amendment revises Section I.</li>
+<li><a href="/files/ntia/publications/11102011_solicitation.pdf">Internet Assigned Numbers Authority (IANA) Solicitation</a> Number: SA1301-12-RP-IANA (November 10, 2011)</li>
+<li><a href="/files/ntia/publications/presolicitation_notice_10212012.pdf">Pre-solicitation Notice</a> Operation of the Internet Assigned Numbers Authority (IANA) Functions (October 21, 2011)<br />
+	  The U.S. Department of Commerce (DOC), Office of the Secretary (OS) intends to issue a solicitation (Request for Proposal) on behalf of DOC, National Telecommunications and Information Administration (NTIA) for services to maintain the continuity and stability of services related to certain interdependent Internet technical management functions, known collectively as the Internet Assigned Numbers Authority (IANA).</li>
+<li><a href="/federal-register-notice/2011/internet-assigned-numbers-authority-iana-functions-further-notice-inqui">Internet Assigned Numbers Authority (IANA) Functions Further Notice of Inquiry</a> with Public Comments (June 14, 2011)</li>
+<li><a href="/federal-register-notices/2011/request-comments-internet-assigned-numbers-authority-iana-functions">Request for Comments on the Internet Assigned Numbers Authority</a> (IANA) Functions (February 25, 2011)</li>
+</ul><hr /><p><strong>2006 Contract</strong></p>
+<p><a href="/files/ntia/publications/ianacontract_081406.pdf">IANA Functions Contract</a> (August 11, 2006)<br /><a href="/files/ntia/publications/ianacontract_icannresponse_080206.pdf"><strong>ICANN proposal</strong></a> (incorporated into contract)<br />
+Modifications to the contract with ICANN:</p>
+<p class="rteindent1"><a href="/files/ntia/publications/ianacontract_extension_092707.pdf">Modification 1</a> (September 24, 2007)<br /><a href="/files/ntia/publications/mod_2_to_2006_iana_functions_k.pdf">Modification 2</a> (May 30,2008)<br /><a href="/files/ntia/publications/ianacontract_extension_080904.pdf">Modification 3</a> (September 4, 2008)<br /><a href="/files/ntia/publications/ianacontract_extension_090901.pdf">Modification 4</a> (September 1, 2009)<br /><a href="/files/ntia/publications/modification5_icann_dnssec_implementation.pdf">Modification 5</a> (July 13, 2010)<br />
+* <a href="/files/ntia/publications/dnssec_requirements_102909.pdf">DoC Testing and Implementation Requirements </a><br />
+* <a href="http://www.root-dnssec.org/wp-content/uploads/2010/06/vrsn-dps-00.txt">DNSSEC Policy &amp; Practice Statement for the Root Zone ZSK Operator </a><br /><a href="/files/ntia/publications/optionperiod4modification_09152010.pdf">Modification 6</a> (October 1, 2010)<br /><a href="/files/ntia/publications/ianamod0007_11302010.pdf">Modification 7</a> (November 30, 2010)<br /><a href="/files/ntia/publications/ianamod0008_07142011.pdf">Modification 8</a> (June 14, 2011)<br /><a href="/files/ntia/publications/sa1301-06-cn-0048_mod_0009.pdf">Modification 9</a> (December 7, 2011)<br /><a href="/files/ntia/publications/sa1301-06-cn-0048_mod_0010_executed.pdf">Modification 10</a> (March 8, 2012)</p>
+<p>IANA Functions Contract Solicitation</p>
+<p>* <a href="/files/ntia/publications/iananotice1.pdf">Presolicitation notice to award purchase order to ICANN</a><br />
+* <a href="/files/ntia/publications/iananotice2.pdf">Modification of Presolicitation notice</a><br />
+* <a href="/files/ntia/publications/ianastatementofwork.pdf">IANA Functions Statement of Work</a></p>
+<p><strong>2003 Contract</strong></p>
+<p><a href="/files/ntia/publications/ianaorder_03142003.pdf"><strong>IANA Functions Contract</strong></a> (March 13, 2003)<br />
+Modifications to contract with ICANN:</p>
+<p class="rteindent1"><a href="/files/ntia/publications/ianamod0001_08282003.pdf">Modification 1</a> (August 28, 2003)<br /><a href="/files/ntia/publications/ianamod0002_09162003.pdf">Modification 2</a> (September 16, 2003)<br /><a href="/files/ntia/publications/dg1335-03-se-0336-m3.pdf">Modification 3</a> (August 30, 2004)<br /><a href="/files/ntia/publications/ianamod0004_09302005.pdf">Modification 4</a> (September29, 2005)<br /><a href="/files/ntia/publications/ianamod0005_03302006.pdf">Modification 5</a> (April 1, 2006)</p>
+<p><strong>2001 Contract</strong></p>
+<p><a href="/files/ntia/publications/sb1335-01-w-0650.pdf"><strong>IANA Functions Contract</strong></a> (March 21, 2001)<br />
+Modifications to contract with ICANN:</p>
+<p class="rteindent1"><a href="/files/ntia/publications/sb1335-01-w-0650-0001.pdf">Modification 1</a> (April, 2002)<br /><a href="/files/ntia/publications/sb1335-01-w-0650-0002.pdf">Modification 2</a> (August 17, 2002).<br /><a href="/files/ntia/publications/sb1335-01-w-0650-0003.pdf">Modification 3</a> (October 1, 2002)</p>
+<p><strong>2000 Contract</strong></p>
+<p><a href="/files/ntia/publications/ianacontract.pdf"><strong>IANA Functions Contract</strong></a> (February 9, 2000)<br />
+Modifications to contract with ICANN:</p>
+<p class="rteindent1"><a href="/files/ntia/publications/modification1.pdf">Modification 1</a> (September 8, 2000)<br /><a href="/files/ntia/publications/modification2.pdf">Modification 2</a> (October 1, 2000).</p>
+</div></div></div>  </div>
+
+  
+  
+</div>
+</div> <!-- end block content -->
+</div> <!-- end block -->
+  </div>
+</div>
+						
+</div> <!-- end content -->
+
+          <div id="sidebar-right" class="column sidebar"><div class="section">
+          <div class="region region-sidebar-second">
+    <div id="block-block-4" class="block block-block">
+
+  <h2 class="block-title">Featured Initiatives</h2>
+
+<div class="content">
+  <div class="button" id="button1">
+<div class="btn_txt"><a href="https://digitalliteracy.gov">Digital Literacy</a></div>
+</div>
+
+<div class="button">
+<div class="btn_txt"><a href="https://www2.ntia.doc.gov">BroadbandUSA</a></div>
+</div>
+
+<div class="button">
+<div class="btn_txt two_line"><a href="/category/internet-policy-task-force">Internet Policy<br />
+Task Force</a></div>
+</div>
+
+<div class="button">
+<div class="btn_txt two_line"><a href="/category/500-mhz-initiative">Wireless Broadband: 500MHz</a></div>
+</div>
+
+<div class="button">
+<div class="btn_txt two_line"><a href="http://www.broadbandmap.gov/">National Broadband Map</a></div>
+</div>
+</div> <!-- end block content -->
+</div> <!-- end block -->
+  </div>
+      </div></div> <!-- end sidebar-second -->
+    <div style="clear:both"></div>
+</div> <!-- end wrapper -->
+
+
+
+
+ 
+<div style="clear:both"></div>
+<div id="footer-wrapper">
+<div id="footer">
+   <div class="region region-footer">
+    <div id="block-block-6" class="block block-block">
+
+
+<div class="content">
+  <p>	<a href="/">National Telecommunications and Information Administration</a> <br />
+	1401 Constitution Ave., NW Washington, DC 20230</p>
+<div id="footer-links">
+	<a href="http://www.commerce.gov">commerce.gov</a> | <a href="/page/2011/ntia-privacy-policy">Privacy Policy</a> | <a href="/web-policies">Web Policies</a> | <a href="/page/2011/foia-information">FOIA</a> | <a href="/page/2011/about-ntias-web-site-accessibility-policy">Accessibility</a> | <a href="http://www.usa.gov">usa.gov</a>
+</div>
+</div> <!-- end block content -->
+</div> <!-- end block -->
+  </div>
+</div>
+</div> <!-- end footer wrapper -->
+
+<div style="clear:both"></div>
+<div id="notice"><p></p></div>
+</div>
+  <script type="text/javascript" src="https://www.ntia.doc.gov/files/ntia/js/js_3nt1sRoiqKAHyrmQV-h0GZ2A1OtHmTfshP9UOZCDAOA.js"></script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Routing Information Protocol (RIP) Parameters</title>
+  </head>
+  <body>
+    <h1>Routing Information Protocol (RIP) Parameters</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2009-11-10</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rip-types.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="rip-types.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="rip-types.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#rip-types-1">RIP Commands</a>
+      </li>
+      <li>
+        <a href="#rip-types-2">RIP Update Headers</a>
+      </li>
+      <li>
+        <a href="#rip-types-3">RIP Address Family Identifiers</a>
+      </li>
+      <li>
+        <a href="#rip-types-4">RIP Authentication Type</a>
+      </li>
+      <li>
+        <a href="#rip-types-5">RIPNG Commands</a>
+      </li>
+      <li>
+        <a href="#rip-types-6">RIPNG Update Headers</a>
+      </li>
+    </ul>
+    <h2><a name="rip-types-1" id="rip-types-1"></a>RIP Commands</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not defined</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1723">RFC1723</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rip-types-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rip-types-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Invalid</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>TraceOn</td>
+          <td>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>TraceOff</td>
+          <td>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Triggered Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc1582">RFC1582</a>]</td>
+          <td>There are widely deployed implementations that don't support Triggered UDP that use value 6 = "Poll Entry" (undocumented)</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Triggered Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc1582">RFC1582</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Triggered Acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc1582">RFC1582</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Update Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc2091">RFC2091</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Update Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc2091">RFC2091</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Update Acknowledge</td>
+          <td>[<a href="http://www.iana.org/go/rfc2091">RFC2091</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12-254</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rip-types-2" id="rip-types-2"></a>RIP Update Headers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not Defined</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rip-types-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rip-types-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>must be discarded</td>
+          <td>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>version 1</td>
+          <td>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>version 2</td>
+          <td>[<a href="http://www.iana.org/go/rfc2453">RFC2453</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3-254</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rip-types-3" id="rip-types-3"></a>RIP Address Family Identifiers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not defined</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rip-types-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rip-types-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>assigned but, unspecified. Associated full route  
+table exchange</td>
+          <td>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc1058">RFC1058</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3-65534</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>65535</td>
+          <td>Authentication present</td>
+          <td>[<a href="http://www.iana.org/go/rfc1388">RFC1388</a>]</td>
+          <td>This is represented in hex as 0xFFFF in Section 3.1</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rip-types-4" id="rip-types-4"></a>RIP Authentication Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not defined</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1388">RFC1388</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rip-types-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rip-types-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>none</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>simple password</td>
+          <td>[<a href="http://www.iana.org/go/rfc1388">RFC1388</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>md5</td>
+          <td>[<a href="http://www.iana.org/go/rfc2082">RFC2082</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4-65534</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rip-types-5" id="rip-types-5"></a>RIPNG Commands</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not defined</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2080">RFC2080</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rip-types-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rip-types-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc2080">RFC2080</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc2080">RFC2080</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rip-types-6" id="rip-types-6"></a>RIPNG Update Headers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not defined</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2080">RFC2080</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rip-types-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rip-types-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td>Must be discarded</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Version 1</td>
+          <td>[<a href="http://www.iana.org/go/rfc2080">RFC2080</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2-254</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

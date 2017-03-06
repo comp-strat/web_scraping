@@ -1,0 +1,700 @@
+<?xml version="1.0"?>
+<lgr xmlns="urn:ietf:params:xml:ns:lgr-1.0">
+	<meta>
+		<version>2</version>
+		<date>2016-06-05</date>
+		<language>ar</language>
+		<scope type="domain">xn--mgberp4a5d4ar</scope>
+		<description type="text/plain">
+			This document provides the IDN (Internationalized Domain Names) Language Table and guideline rules to be used for writing and registering Arabic Domain names under xn--mgberp4a5d4ar (السعودية) IDN ccTLD. These are based on the recommendations outlined in the RFC 5564: "Linguistic Guidelines for the Use of the Arabic Language in Internet Domains", that can be found in the following URL: http://tools.ietf.org/html/rfc5564
+			Authors: 
+				Dr.Abdulaziz Al-Zoman 		(azoman[at]citc.gov.sa) , Saudi Network Information Center
+				Raed Al-Fayez      			(rfayez[at]citc.gov.sa) , Saudi Network Information Center
+				Abdulrahman I. AL-Ghadir	(aghadir[at]citc.gov.sa), Saudi Network Information Center
+		</description>
+		<validity-start>2014-12-07</validity-start>
+		<validity-end>2020-12-07</validity-end>
+		<unicode-version>6.3.0</unicode-version>
+		<references>
+			<reference id="0">The Unicode Standard, Version 6.3.0</reference>
+			<reference id="1">RFC 5564: "Linguistic Guidelines for the Use of the Arabic Language in Internet Domains", http://tools.ietf.org/html/rfc5564</reference>
+			<reference id="2">Guideline Rules for writing Arabic IDNs under the IDN ccTLD (.السعودية), http://nic.net.sa/docs/Guidelines_for_writing_Arabic_IDNs_under_the_IDN_ccTLD_V1.2-en.pdf </reference>
+		</references>		
+	</meta>
+	
+	<data>
+		<char cp="0621" ref="0 1 2" />
+
+		<char cp="0622" ref="0 1 2">
+			<var cp="0623" type="allocate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0623" type="allocate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0625" type="allocate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0625" type="allocate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0627" type="activate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0627" type="activate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0671" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0671" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+			<var cp="0672" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0672" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+			<var cp="0675" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0675" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+		</char>
+
+		<char cp="0623" ref="0 1 2">
+			<var cp="0622" type="allocate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0622" type="allocate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0625" type="allocate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0625" type="allocate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0627" type="activate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0627" type="activate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0671" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0671" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+			<var cp="0672" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0672" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+			<var cp="0675" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0675" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+		</char>
+
+		<char cp="0624" ref="0 1 2">
+			<var cp="0676" type="block" comment="Typo variant"/>
+		</char>
+
+		<char cp="0625" ref="0 1 2">
+			<var cp="0622" type="allocate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0622" type="allocate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0623" type="allocate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0623" type="allocate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0627" type="activate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0627" type="activate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0673" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0673" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+		</char>
+
+		<char cp="0626" ref="0 1 2">
+			<var cp="0678" type="block" comment="Typo variant"/>
+			<var cp="06D3" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06D3" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+		</char>
+
+		<char cp="0627" ref="0 1 2">
+			<var cp="0622" type="allocate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0622" type="allocate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0623" type="allocate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0623" type="allocate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0625" type="allocate" when="arabic-final-right-join" comment="Language variant"/>
+			<var cp="0625" type="allocate" when="arabic-isolated-right-join" comment="Language variant"/>
+			<var cp="0671" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0671" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+			<var cp="0672" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0672" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+			<var cp="0673" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0673" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+			<var cp="0675" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0675" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+			<var cp="0773" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0773" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+			<var cp="0774" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="0774" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+		</char>
+
+		<char cp="0628" ref="0 1 2" />
+
+		<char cp="0629" ref="0 1 2">
+			<var cp="0647" type="allocate" when="arabic-final-dual-join" comment="Language variant"/>
+			<var cp="0647" type="allocate" when="arabic-isolated-dual-join" comment="Language variant"/>
+			<var cp="06BE" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06BE" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+			<var cp="06C1" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06C1" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+			<var cp="06C3" type="activate" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="06C3" type="activate" when="arabic-isolated-right-join" comment="Exact variant"/>
+			<var cp="06D5" type="block" when="arabic-final-right-join" comment="Typo variant"/>
+			<var cp="06D5" type="block" when="arabic-isolated-right-join" comment="Typo variant"/>
+		</char>
+
+		<char cp="062A" ref="0 1 2">
+			<var cp="063E" type="block" when="arabic-initial-dual-join" comment="Exact variant"/>
+			<var cp="063E" type="block" when="arabic-medial-dual-join" comment="Exact variant"/>
+			<var cp="067A" type="block" comment="Typo variant"/>
+		</char>
+
+		<char cp="062B" ref="0 1 2">
+			<var cp="063F" type="block" when="arabic-initial-dual-join" comment="Exact variant"/>
+			<var cp="063F" type="block" when="arabic-medial-dual-join" comment="Exact variant"/>
+			<var cp="067D" type="block" comment="Typo variant"/>
+			<var cp="06BD" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06BD" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+		</char>
+
+		<char cp="062C" ref="0 1 2" />
+
+		<char cp="062D" ref="0 1 2" />
+
+		<char cp="062E" ref="0 1 2" />
+
+		<char cp="062F" ref="0 1 2" />
+
+		<char cp="0630" ref="0 1 2" />
+
+		<char cp="0631" ref="0 1 2" />
+
+		<char cp="0632" ref="0 1 2" />
+
+		<char cp="0633" ref="0 1 2" />
+
+		<char cp="0634" ref="0 1 2" />
+
+		<char cp="0635" ref="0 1 2" />
+
+		<char cp="0636" ref="0 1 2" />
+
+		<char cp="0637" ref="0 1 2" />
+
+		<char cp="0638" ref="0 1 2" />
+
+		<char cp="0639" ref="0 1 2" />
+
+		<char cp="063A" ref="0 1 2" />
+
+		<char cp="0641" ref="0 1 2">
+			<var cp="06A7" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06A7" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+			<var cp="06A7" type="block" when="arabic-initial-dual-join" comment="Exact variant"/>
+			<var cp="06A7" type="block" when="arabic-medial-dual-join" comment="Exact variant"/>
+		</char>
+
+		<char cp="0642" ref="0 1 2" />
+
+		<char cp="0643" ref="0 1 2">
+			<var cp="06A9" type="activate" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06A9" type="activate" when="arabic-isolated-dual-join" comment="Typo variant"/>
+			<var cp="06A9" type="activate" when="arabic-initial-dual-join" comment="Exact variant"/>
+			<var cp="06A9" type="activate" when="arabic-medial-dual-join" comment="Exact variant"/>
+			<var cp="06AA" type="block" comment="Typo variant"/>
+		</char>
+
+		<char cp="0644" ref="0 1 2" />
+
+		<char cp="0645" ref="0 1 2" />
+
+		<char cp="0646" ref="0 1 2">
+			<var cp="06BA" type="block" when="arabic-initial-dual-join" comment="Exact variant"/>
+			<var cp="06BA" type="block" when="arabic-medial-dual-join" comment="Exact variant"/>
+		</char>
+
+		<char cp="0647" ref="0 1 2">
+			<var cp="0629" type="allocate" when="arabic-final-dual-join" comment="Language variant"/>
+			<var cp="0629" type="allocate" when="arabic-isolated-dual-join" comment="Language variant"/>
+			<var cp="06BE" type="activate" when="arabic-initial-dual-join" comment="Exact variant"/>
+			<var cp="06BE" type="activate" when="arabic-medial-dual-join" comment="Exact variant"/>
+			<var cp="06BE" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06BE" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+			<var cp="06C1" type="activate" when="arabic-isolated-dual-join" comment="Exact variant"/>
+			<var cp="06C1" type="activate" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06C1" type="block" when="arabic-initial-dual-join" comment="Typo variant"/>
+			<var cp="06C1" type="block" when="arabic-medial-dual-join" comment="Typo variant"/>
+			<var cp="06C3" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06C3" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+			<var cp="06D5" type="block" when="arabic-final-dual-join" comment="Exact variant"/>
+			<var cp="06D5" type="block" when="arabic-isolated-dual-join" comment="Exact variant"/>
+		</char>
+
+		<char cp="0648" ref="0 1 2" />
+
+		<char cp="0649" ref="0 1 2">
+			<var cp="064A" type="allocate" when="arabic-final-dual-join" comment="Language variant"/>
+			<var cp="064A" type="allocate" when="arabic-isolated-dual-join" comment="Language variant"/>
+			<var cp="066E" type="block" when="arabic-initial-dual-join" comment="Exact variant"/>
+			<var cp="066E" type="block" when="arabic-medial-dual-join" comment="Exact variant"/>
+			<var cp="06CC" type="activate" when="arabic-final-dual-join" comment="Exact variant"/>
+			<var cp="06CC" type="activate" when="arabic-isolated-dual-join" comment="Exact variant"/>
+			<var cp="06CD" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06CD" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+			<var cp="06D2" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06D2" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+		</char>
+
+		<char cp="064A" ref="0 1 2">
+			<var cp="0649" type="allocate" when="arabic-final-dual-join" comment="Language variant"/>
+			<var cp="0649" type="allocate" when="arabic-isolated-dual-join" comment="Language variant"/>
+			<var cp="067B" type="block" when="arabic-initial-dual-join" comment="Typo variant"/>
+			<var cp="067B" type="block" when="arabic-medial-dual-join" comment="Typo variant"/>
+			<var cp="06CC" type="activate" when="arabic-initial-dual-join" comment="Exact variant"/>
+			<var cp="06CC" type="activate" when="arabic-medial-dual-join" comment="Exact variant"/>
+			<var cp="06CC" type="activate" when="arabic-isolated-dual-join" comment="Typo variant"/>
+			<var cp="06CC" type="activate" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06CD" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06CD" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+			<var cp="06D0" type="block" comment="Typo variant"/>
+			<var cp="06D2" type="block" when="arabic-final-dual-join" comment="Typo variant"/>
+			<var cp="06D2" type="block" when="arabic-isolated-dual-join" comment="Typo variant"/>
+		</char>
+
+		<char cp="0660" ref="0 1 2">
+			<var cp="0030" type="activate" comment="Typo variant"/>
+			<var cp="06F0" type="activate" comment="Exact variant"/>
+		</char>
+
+		<char cp="0661" ref="0 1 2">
+			<var cp="0031" type="activate" comment="Typo variant"/>
+			<var cp="06F1" type="activate" comment="Exact variant"/>
+		</char>
+
+		<char cp="0662" ref="0 1 2">
+			<var cp="0032" type="activate" comment="Typo variant"/>
+			<var cp="06F2" type="activate" comment="Exact variant"/>
+		</char>
+
+		<char cp="0663" ref="0 1 2">
+			<var cp="0033" type="activate" comment="Typo variant"/>
+			<var cp="06F3" type="activate" comment="Exact variant"/>
+		</char>
+
+		<char cp="0664" ref="0 1 2">
+			<var cp="0034" type="activate" comment="Typo variant"/>
+			<var cp="06F4" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0665" ref="0 1 2">
+			<var cp="0035" type="activate" comment="Typo variant"/>
+			<var cp="06F5" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0666" ref="0 1 2">
+			<var cp="0036" type="activate" comment="Typo variant"/>
+			<var cp="06F6" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0667" ref="0 1 2">
+			<var cp="0037" type="activate" comment="Typo variant"/>
+			<var cp="06F7" type="activate" comment="Exact variant"/>
+		</char>
+
+		<char cp="0668" ref="0 1 2">
+			<var cp="0038" type="activate" comment="Typo variant"/>
+			<var cp="06F8" type="activate" comment="Exact variant"/>
+		</char>
+
+		<char cp="0669" ref="0 1 2">
+			<var cp="0039" type="activate" comment="Typo variant"/>
+			<var cp="06F9" type="activate" comment="Exact variant"/>
+		</char>
+
+		<char cp="0030" ref="0 1 2">
+			<var cp="0660" type="activate" comment="Typo variant"/>
+			<var cp="06F0" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0031" ref="0 1 2">
+			<var cp="0661" type="activate" comment="Typo variant"/>
+			<var cp="06F1" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0032" ref="0 1 2">
+			<var cp="0662" type="activate" comment="Typo variant"/>
+			<var cp="06F2" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0033" ref="0 1 2">
+			<var cp="0663" type="activate" comment="Typo variant"/>
+			<var cp="06F3" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0034" ref="0 1 2">
+			<var cp="0664" type="activate" comment="Typo variant"/>
+			<var cp="06F4" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0035" ref="0 1 2">
+			<var cp="0665" type="activate" comment="Typo variant"/>
+			<var cp="06F5" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0036" ref="0 1 2">
+			<var cp="0666" type="activate" comment="Typo variant"/>
+			<var cp="06F6" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0037" ref="0 1 2">
+			<var cp="0667" type="activate" comment="Typo variant"/>
+			<var cp="06F7" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0038" ref="0 1 2">
+			<var cp="0668" type="activate" comment="Typo variant"/>
+			<var cp="06F8" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="0039" ref="0 1 2">
+			<var cp="0669" type="activate" comment="Typo variant"/>
+			<var cp="06F9" type="activate" comment="Typo variant"/>
+		</char>
+
+		<char cp="002D" ref="0 1 2" />
+
+
+	</data>
+	<rules>
+		
+		<class name="arabic-language">0621 0622 0623 0624 0625 0626 0627 0628 0629 062A 062B 062C 062D 062E 062F 0630 0631 0632 0633 0634 0635 0636 0637 0638 0639 063A 0641 0642 0643 0644 0645 0646 0647 0648 0649 064A 0660 0661 0662 0663 0664 0665 0666 0667 0668 0669 0030 0031 0032 0033 0034 0035 0036 0037 0038 0039 002D</class>
+		<class name="persian-language">0621 0622 0623 0624 0626 0627 0628 0629 062A 062B 062C 062D 062E 062F 0630 0631 0632 0633 0634 0635 0636 0637 0638 0639 063A 0641 0642 0644 0645 0646 0647 0648 067E 0686 0698 06A9 06AF 06CC 06F0 06F1 06F2 06F3 06F4 06F5 06F6 06F7 06F8 06F9 002D 0030 0031 0032 0033 0034 0035 0036 0037 0038 0039</class>
+		<class name="urdu-language">0621 0622 0623 0624 0627 0628 062A 062B 062C 062D 062E 062F 0630 0631 0632 0633 0634 0635 0636 0637 0638 0639 063A 0641 0642 0644 0645 0646 0648 0679 067E 0686 0688 0691 0698 06A9 06AF 06BA 06BE 06C1 06C2 06C3 06CC 06D2 06D3 06F0 06F1 06F2 06F3 06F4 06F5 06F6 06F7 06F8 06F9 0030 0031 0032 0033 0034 0035 0036 0037 0038 0039 002D</class>
+		<class name="malay-language">0621 0623 0625 0626 0627 0628 0629 062A 062B 062C 062D 062E 062F 0630 0631 0632 0633 0634 0635 0636 0637 0638 0639 063A 0641 0642 0644 0645 0646 0647 0648 0649 064A 0686 06A0 06A4 06A9 06BD 06CF 06F2 0762 0030 0031 0032 0033 0034 0035 0036 0037 0038 0039 002D</class>
+		<class name="pashto-language">0621 0622 0623 0624 0626 0627 0628 0629 062A 062B 062C 062D 062E 062F 0630 0631 0632 0633 0634 0635 0636 0637 0638 0639 063A 0641 0642 0644 0645 0646 0647 0648 064A 0660 0661 0662 0663 0664 0665 0666 0667 0668 0669 067C 067E 0685 0686 0689 0693 0696 0698 069A 06A9 06AF 06BC 06C0 06CC 06CD 06D0 0030 0031 0032 0033 0034 0035 0036 0037 0038 0039 002D</class>
+
+		
+	<union name="supported-code-points">
+			<class by-ref="arabic-language"/>
+			<class by-ref="persian-language"/>
+			<class by-ref="urdu-language"/>
+			<class by-ref="malay-language"/>
+			<class by-ref="pashto-language"/>
+        </union>
+		
+		<union name="digit-set">
+			<class by-ref="arabic-digits"/>
+			<class by-ref="arabic-indic-digits"/>
+			<class by-ref="extended-arabic-indic-digits"/>
+        </union>
+		
+		<difference name="supported-code-points-without-digits">
+			<class by-ref="supported-code-points"/>
+			<class by-ref="digit-set"/>
+		</difference>
+		
+		
+        <class name="transparent" property="jt:T"/>
+        <class name="right-joining" property="jt:R"/>
+        <class name="left-joining" property="jt:L"/>
+        <class name="dual-joining" property="jt:D"/>
+        <class name="non-joining" property="jt:U"/>
+		<class name="join-causing" property="jt:C"/>
+	   
+		<class name="arabic-script" property="sc:Arab"/>
+		<class name="arabic-digits">0030-0039</class>
+		<class name="arabic-indic-digits">0660-0669</class>
+		<class name="extended-arabic-indic-digits">06F0-06F9</class>
+		
+		<class name="word-separator">002D</class>
+
+		<rule name="no-mixing-script" comment="only labels from Arabic script is allowed">
+			<start />
+			<union count="1+">
+				<class by-ref="arabic-script"/>				
+				<class by-ref="arabic-digits"/>
+				<class by-ref="arabic-indic-digits"/>
+				<class by-ref="extended-arabic-indic-digits"/>
+				<class by-ref="word-separator"/>
+			</union>
+			<end />
+		</rule>
+	   
+		<rule name="no-consecutive-hyphen-rule">
+			<any/>
+			<char cp="002D" comment="literal HYPHEN"/>
+			<char cp="002D" comment="literal HYPHEN"/>
+			<any/>
+		</rule>
+	   
+		<rule name="no-hyphen-at-start">
+			<start/>
+			<char cp="002D" comment="literal HYPHEN"/>
+			<any/>
+		</rule>
+	   
+		<rule name="no-hyphen-at-end">
+			<any/>
+			<char cp="002D" comment="literal HYPHEN"/>
+			<end/>
+		</rule>
+
+		<rule name="no-digit-at-start" comment="digits at the beginning is disallowed">
+			<start/>
+			<choice count="1+">
+				<class by-ref="arabic-digits"/>
+				<class by-ref="arabic-indic-digits"/>
+				<class by-ref="extended-arabic-indic-digits"/>
+			</choice>
+			<class by-ref="supported-code-points-without-digits"/>				
+			<any count="0+"/>
+		</rule>
+	   
+		<rule name="no-digit-mixing">
+			<choice count="1+">
+				<rule>
+					<start/>
+					<any count="0+"/>
+					<class by-ref="arabic-digits"/>
+					<any count="0+"/>
+					<choice count="1+">
+						<class by-ref="arabic-indic-digits"/>
+						<class by-ref="extended-arabic-indic-digits"/>
+					</choice>
+					<any count="0+"/>
+					<end/>
+				</rule>
+				
+				<rule>
+					<start/>
+					<any count="0+"/>
+					<class by-ref="arabic-indic-digits"/>
+					<any count="0+"/>
+					<choice count="1+">
+						<class by-ref="arabic-digits"/>
+						<class by-ref="extended-arabic-indic-digits"/>
+					</choice>
+					<any count="0+"/>
+					<end/>
+				</rule>
+				
+				<rule>
+					<start/>
+					<any count="0+"/>
+					<class by-ref="extended-arabic-indic-digits"/>
+					<any count="0+"/>
+					<choice count="1+">
+						<class by-ref="arabic-digits"/>
+						<class by-ref="arabic-indic-digits"/>
+					</choice>
+					<any count="0+"/>
+					<end/>
+				</rule>
+				
+			</choice>
+		</rule>
+	   
+		<rule name="no-mixing-languages" comment="a label can only be written using characters from one of the 5 languages">
+			<choice count="1+">
+				<rule>
+					<start />
+					<class by-ref="arabic-language" count="1+"/>
+					<end />
+				</rule>
+				<rule>
+					<start />
+					<class by-ref="persian-language" count="1+"/>
+					<end />
+				</rule>
+				<rule>
+					<start />
+					<class by-ref="urdu-language" count="1+"/>
+					<end />
+				</rule>	
+				<rule>
+					<start />
+					<class by-ref="pashto-language" count="1+"/>
+					<end />
+				</rule>	
+				<rule>
+					<start />
+					<class by-ref="malay-language" count="1+"/>
+					<end />
+				</rule>	
+			</choice>
+		</rule>
+
+		<rule name="no-connected-alef-maksura" comment="a label which has connected alef maksura is blocked">
+			<start/>
+		    <any count="0+"/>
+		    <char cp="0649" count="1+"/>
+	        <choice count="1+">
+				<class by-ref="right-joining" />
+				<class by-ref="dual-joining" />
+		    </choice>
+			<any count="0+"/>
+			<end/>
+		</rule>
+	   
+		<rule name="no-alef-with-hamzah-or-mada-at-end" comment="a label which has alef hamzah or mada at the end is blocked">
+			<start/>
+			<any count="0+"/>
+			<choice count="1+">
+				<class by-ref="left-joining" />
+				<class by-ref="dual-joining" />
+			</choice>
+			<choice count="1+">
+				<char cp="0625" count="1+"/>
+				<char cp="0622" count="1+"/>
+			</choice>
+			<choice count="1+">
+				<char cp="002D" comment="literal HYPHEN"/>
+				<end/>
+			</choice>			 
+		</rule>
+
+		<rule name="arabic-initial-dual-join">
+			<look-behind>
+				<choice count="1+"> 
+					<start/>
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="non-joining"/>
+					</rule>
+					<rule>
+						<class by-ref="transparent" count="0+"/> 
+						<char cp="002D" comment="literal HYPHEN"/>
+					</rule>	
+					<rule>
+						<class by-ref="transparent" count="0+"/> 
+						<char cp="0629" comment="TEH MARBUTA"/>
+					</rule>
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="right-joining"/>
+					</rule>
+				</choice>
+			</look-behind>
+			<anchor/>
+			<look-ahead>
+				<class by-ref="transparent" count="0+"/>
+				<choice count="1+">
+					<class by-ref="right-joining" />
+					<class by-ref="dual-joining" />
+				</choice>
+			</look-ahead>
+		</rule>
+
+		<rule name="arabic-medial-dual-join">
+			<look-behind>
+				<choice count="1+"> 				 
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="dual-joining"/>
+					</rule>
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="left-joining"/>
+					</rule>
+				</choice>
+			</look-behind>
+			<anchor/>
+			<look-ahead>
+				<class by-ref="transparent" count="0+"/>
+				<choice count="1+">
+					<class by-ref="right-joining" />
+					<class by-ref="dual-joining" />
+				</choice>
+			</look-ahead>
+		</rule>
+
+	   
+		<rule name="arabic-final-dual-join">
+			<look-behind>
+				<choice count="1+">
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="left-joining"/>
+					</rule>
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="dual-joining"/>
+					</rule>		  			 
+				</choice>
+			</look-behind>
+			<anchor/>
+			<look-ahead>
+				<choice count="1+">
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="non-joining"/>
+					</rule>
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<char cp="002D" comment="literal HYPHEN"/>
+					</rule>
+					<end/>
+				</choice>
+			</look-ahead>
+		</rule>	   
+	   
+		<rule name="arabic-isolated-dual-join">
+			<look-behind>
+				<choice count="1+">
+					<start/>
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="non-joining"/>
+					</rule>
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="right-joining"/>
+					</rule>		 
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<char cp="002D" comment="literal HYPHEN"/>
+					</rule>					
+				</choice>
+			</look-behind>
+			<anchor/>
+			<look-ahead>
+				<choice count="1+">
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="non-joining"/>
+					</rule>
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="left-joining"/>
+					</rule>
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<char cp="002D" comment="literal HYPHEN"/>
+					</rule>
+					<end/>
+				</choice>
+			</look-ahead>
+		</rule>
+	   
+		<rule name="arabic-isolated-right-join">
+			<look-behind>
+				<choice count="1+">
+					<start/>
+					<rule>
+						<class by-ref="transparent" count="0+"/>
+						<class by-ref="non-joining"/>
+					</rule>
+					<rule>
+						<class by-ref="transparent" count="0+"/> 
+						<char cp="002D" comment="literal HYPHEN"/>
+					</rule>	
+					<rule>
+						<class by-ref="transparent" count="0+"/> 
+						<char cp="0629" comment="TEH MARBUTA"/>
+					</rule>
+					<rule>
+						<class by-ref="transparent" count="0+"/> 
+						<class by-ref="right-joining"/>
+					</rule>
+				</choice>
+			</look-behind>
+			<anchor/>
+			<look-ahead>
+				<any count="0+"/>
+			</look-ahead> 
+		</rule>
+       
+		<rule name="arabic-final-right-join">
+			<look-behind>
+				<choice count="1+">
+					<class by-ref="left-joining" />
+					<class by-ref="dual-joining" />
+				</choice>
+			</look-behind>
+			<anchor/>
+			<look-ahead>
+				<any count="0+"/>
+			</look-ahead>
+		</rule>
+	   
+		<action disp="invalid" not-match="no-mixing-script" />
+		<action disp="invalid" not-match="no-mixing-languages" />
+		<action disp="invalid" match="no-hyphen-at-start" />
+		<action disp="invalid" match="no-hyphen-at-end" />
+		<action disp="invalid" match="no-consecutive-hyphen-rule" />
+		<action disp="invalid" match="no-connected-alef-maksura" />
+		<action disp="block" match="no-alef-with-hamzah-or-mada-at-end" />
+		<action disp="invalid" match="no-digit-at-start" />	
+		<action disp="invalid" match="no-digit-mixing" />
+		
+	</rules>
+</lgr>

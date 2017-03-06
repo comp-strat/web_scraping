@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Concise Binary Object Representation (CBOR) Simple Values</title>
+  </head>
+  <body>
+    <h1>Concise Binary Object Representation (CBOR) Simple Values</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2013-09-19</dd>
+      <dt>Last Updated</dt>
+      <dd>2013-11-23</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cbor-simple-values.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="cbor-simple-values.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="cbor-simple-values.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registry included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#simple">CBOR Simple Values</a>
+      </li>
+    </ul>
+    <h2><a name="simple" id="simple"></a>CBOR Simple Values</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Carsten Bormann</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="simple.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-simple-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-19</td>
+          <td>Standards Action</td>
+          <td>Assignments should start with value 16 in order to reserve the lower 
+numbers for contiguous blocks (if any).</td>
+        </tr>
+        <tr>
+          <td align="center">32-255</td>
+          <td>Specification Required</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-simple" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Semantics</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0-19</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>False</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>True</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>Null</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>Undefined Value</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>24-31</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>32-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,3014 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Path Computation Element Protocol (PCEP) Numbers</title>
+  </head>
+  <body>
+    <h1>Path Computation Element Protocol (PCEP) Numbers</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2008-12-19</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-09-28</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pcep.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="pcep.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="pcep.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#pcep-messages">PCEP Messages</a>
+      </li>
+      <li>
+        <a href="#pcep-objects">PCEP Objects</a>
+      </li>
+      <li>
+        <a href="#pcep-message-common-header">PCEP Message Common Header Flag Field</a>
+      </li>
+      <li>
+        <a href="#open-object-flag-field">Open Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#rp-object">RP Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#no-path-object-ni-field">NO-PATH Object NI Field</a>
+      </li>
+      <li>
+        <a href="#no-path-object-flag-field">NO-PATH Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#metric-object-ni-field">METRIC Object T Field</a>
+      </li>
+      <li>
+        <a href="#metric-object-flag-field">METRIC Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#lspa-object-flag-field">LSPA Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#iro-subobject">IRO Subobjects</a>
+      </li>
+      <li>
+        <a href="#svec-object-flag-field">SVEC Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#notification-object">Notification Object</a>
+      </li>
+      <li>
+        <a href="#notification-object-flag-field">Notification Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#pcep-error-object">PCEP-ERROR Object Error Types and Values</a>
+      </li>
+      <li>
+        <a href="#pcep-error-object-flag-field">PCEP-ERROR Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#load-balancing-object-flag-field">LOAD-BALANCING Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#close-object-reason-field">CLOSE Object Reason Field</a>
+      </li>
+      <li>
+        <a href="#close-object-flag-field">CLOSE Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#path-key-subobject">PATH-KEY Subobjects</a>
+      </li>
+      <li>
+        <a href="#xro-subobject">XRO Subobjects</a>
+      </li>
+      <li>
+        <a href="#xro-flag-field">XRO Flag Field</a>
+      </li>
+      <li>
+        <a href="#of">Objective Function</a>
+      </li>
+      <li>
+        <a href="#pcep-tlv-type-indicators">PCEP TLV Type Indicators</a>
+      </li>
+      <li>
+        <a href="#no-path-vector-tlv">NO-PATH-VECTOR TLV Flag Field</a>
+      </li>
+      <li>
+        <a href="#monitoring-object">MONITORING Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#proc-time-object">PROC-TIME Object Flag Field</a>
+      </li>
+      <li>
+        <a href="#overload-object">OVERLOAD Object Flag field</a>
+      </li>
+      <li>
+        <a href="#bu-object-type-field">BU Object Type Field</a>
+      </li>
+    </ul>
+    <h2><a name="pcep-messages" id="pcep-messages"></a>PCEP Messages</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pcep-messages.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pcep-messages" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Open</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Keepalive</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Path Computation Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Path Computation Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Close</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Path Computation Monitoring Request (PCMonReq)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Path Computation Monitoring Reply (PCMonRep)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Report (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Update (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Initiate (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pcep-objects" id="pcep-objects"></a>PCEP Objects</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pcep-objects.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pcep-objects" class="sortable">
+      <thead>
+        <tr>
+          <th>Object-Class Value</th>
+          <th>Name</th>
+          <th>Object-Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>1-15: Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>OPEN</td>
+          <td>1: Open</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>RP</td>
+          <td>1: Request Parameters</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>NO-PATH</td>
+          <td>1: No Path</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>END-POINTS</td>
+          <td>1: IPv4 addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: IPv6 addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3: IPv4</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>4: IPv6</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>5-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>BANDWIDTH</td>
+          <td>1: Requested bandwidth</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Bandwidth of an existing TE LSP for which a reoptimization is requested</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>METRIC</td>
+          <td>1: Metric</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>ERO</td>
+          <td>1: Explicit Route</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>RRO</td>
+          <td>1: Recorded Route</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>LSPA</td>
+          <td>1: LSP Attributes</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>IRO</td>
+          <td>1: Include Route</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>SVEC</td>
+          <td>1: Synchronization Vector </td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>NOTIFICATION</td>
+          <td>1: Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>PCEP-ERROR</td>
+          <td>1: PCEP Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>LOAD-BALANCING</td>
+          <td>1: Load Balancing</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>CLOSE</td>
+          <td>1: Close</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>PATH-KEY</td>
+          <td>1: Path Key</td>
+          <td>[<a href="http://www.iana.org/go/rfc5520">RFC5520</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>XRO</td>
+          <td>1: Route exclusion</td>
+          <td>[<a href="http://www.iana.org/go/rfc5521">RFC5521</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Unassigned</td>
+          <td>1-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>MONITORING</td>
+          <td>1: Monitoring</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>PCC-REQ-ID</td>
+          <td>1: IPV4 Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: IPV6 Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>OF</td>
+          <td>1: Objective Function</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>CLASSTYPE</td>
+          <td>1: Class-Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5455">RFC5455</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Unassigned</td>
+          <td>1-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>GLOBAL-CONSTRAINTS</td>
+          <td>1: Global Constraints</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>PCE-ID</td>
+          <td>1: IPV4 Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: IPV6 Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>PROC-TIME</td>
+          <td>1: PROC-TIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>OVERLOAD</td>
+          <td>1: overload</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>UNREACH-DESTINATION</td>
+          <td>1: IPv4</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: IPv6</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>SERO</td>
+          <td>1: SERO</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>SRRO</td>
+          <td>1: SRRO</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>Branch Node Capability Object</td>
+          <td>1: Branch node list</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Non-branch node list</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>LSP (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: LSP (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>SRP (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: SRP (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>VENDOR-INFORMATION</td>
+          <td>0: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: Vendor-Specific Constraints</td>
+          <td>[<a href="http://www.iana.org/go/rfc7470">RFC7470</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>BU</td>
+          <td>0: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: BU</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-15: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">36-255</td>
+          <td>Unassigned</td>
+          <td>1-15: Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pcep-message-common-header" id="pcep-message-common-header"></a>PCEP Message Common Header Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pcep-message-common-header.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pcep-message-common-header" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-4</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="open-object-flag-field" id="open-object-flag-field"></a>Open Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="open-object-flag-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-open-object-flag-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-4</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rp-object" id="rp-object"></a>RP Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rp-object.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rp-object" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-16</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Core-tree computation (C-bit)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7334">RFC7334</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Fragmentation (F-bit)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>P2MP (N-bit)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>ERO-compression (E-bit)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>Make-before-break (M-bit)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>Report the request order (D-bit)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Path Key (P-bit)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5520">RFC5520</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>Supply OF on response</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>VSPT</td>
+          <td>[<a href="http://www.iana.org/go/rfc5441">RFC5441</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>Strict/Loose</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>Bi-directional</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>Reoptimization</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29-31</td>
+          <td>Priority</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="no-path-object-ni-field" id="no-path-object-ni-field"></a>NO-PATH Object NI Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="no-path-object-ni-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-no-path-object-ni-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>No path satisfying the set of constraints could be found</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PCE chain broken</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="no-path-object-flag-field" id="no-path-object-flag-field"></a>NO-PATH Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="no-path-object-flag-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-no-path-object-flag-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unsatisfied constrained indicated</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="metric-object-ni-field" id="metric-object-ni-field"></a>METRIC Object T Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="metric-object-ni-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-metric-object-ni-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IGP metric</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>TE metric</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Hop Counts</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Aggregate bandwidth consumption</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Load of the most loaded link</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Cumulative IGP cost</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Cumulative TE cost</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>P2MP IGP metric</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>P2MP TE metric</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>P2MP hop count metric</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Segment-ID (SID) Depth. (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Path Delay metric</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Path Delay Variation metric</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Path Loss metric</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>P2MP Path Delay metric</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>P2MP Path Delay variation metric</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>P2MP Path Loss metric</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="metric-object-flag-field" id="metric-object-flag-field"></a>METRIC Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="metric-object-flag-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-metric-object-flag-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-5</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Computed metric</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Bound</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="lspa-object-flag-field" id="lspa-object-flag-field"></a>LSPA Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="lspa-object-flag-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-lspa-object-flag-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-6</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Local Protection Desired</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iro-subobject" id="iro-subobject"></a>IRO Subobjects</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5521">RFC5521</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iro-subobject.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iro-subobject" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>IPv4 prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc3209">RFC3209</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPv6 prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc3209">RFC3209</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Unnumbered Interface ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc3477">RFC3477</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>4-byte AS number</td>
+          <td>[<a href="http://www.iana.org/go/rfc7897">RFC7897</a>][<a href="http://www.iana.org/go/rfc7898">RFC7898</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>OSPF Area ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7897">RFC7897</a>][<a href="http://www.iana.org/go/rfc7898">RFC7898</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>IS-IS Area ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7897">RFC7897</a>][<a href="http://www.iana.org/go/rfc7898">RFC7898</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-31</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>Autonomous system number</td>
+          <td>[<a href="http://www.iana.org/go/rfc3209">RFC3209</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>Explicit Exclusion Route subobject (EXRS)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4874">RFC4874</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="svec-object-flag-field" id="svec-object-flag-field"></a>SVEC Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="svec-object-flag-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-svec-object-flag-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-18</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Partial Path Diverse</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Link Direction Diverse</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>SRLG Diverse</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>Node Diverse</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Link Diverse</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="notification-object" id="notification-object"></a>Notification Object</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="notification-object.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-notification-object" class="sortable">
+      <thead>
+        <tr>
+          <th>Notification-type</th>
+          <th>Name</th>
+          <th>Notification-value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>1-255: Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Pending Request cancelled</td>
+          <td>1: PCC cancels a set of pending requests</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: PCE cancels a set of pending requests</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>PCE Congestion</td>
+          <td>1: PCE in congested state</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: PCE no longer in congested state</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Unassigned</td>
+          <td>1-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Stateful PCE resource limit exceeded (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: Entering resource limit exceeded state (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Exiting resource limit exceeded state (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-255: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-255</td>
+          <td>Unassigned</td>
+          <td>1-255: Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="notification-object-flag-field" id="notification-object-flag-field"></a>Notification Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="notification-object-flag-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-notification-object-flag-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pcep-error-object" id="pcep-error-object"></a>PCEP-ERROR Object Error Types and Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pcep-error-object.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pcep-error-object" class="sortable">
+      <thead>
+        <tr>
+          <th>Error-Type</th>
+          <th>Meaning</th>
+          <th>Error-value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>0-255: Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PCEP session establishment failure</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: reception of an invalid Open message or
+        a non Open message.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: no Open message received before the expiration of the OpenWait timer</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3: unacceptable and non negotiable session characteristics</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>4: unacceptable but negotiable session characteristics</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>5: reception of a second Open message with still unacceptable session characteristics</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>6: reception of a PCErr message proposing unacceptable session characteristics</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>7: No Keepalive or PCErr message received before the expiration of the KeepWait timer</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>8: PCEP version not supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>9-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Capability not supported</td>
+          <td>0-255: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Unknown Object</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: Unrecognized object class</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Unrecognized object Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Not supported object</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: Not supported object class</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Not supported object Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>4: Unsupported parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc5441">RFC5441</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>5: Unsupported network performance constraint</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>6-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Policy violation</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: C bit of the METRIC object set (request rejected)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: O bit of the RP object cleared (request rejected)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3: objective function not allowed (request rejected)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>4: OF bit of the RP object set (request rejected)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>5: Global concurrent optimization not allowed</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>6: Monitoring message supported but rejected due to policy violation</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>7: P2MP Path computation is not allowed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>8: Not allowed network performance constraint</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>9-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Mandatory Object missing</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: RP object missing</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: RRO missing for a reoptimization request (R bit of the RP object set)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3: END-POINTS object missing</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>4: MONITORING object missing</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>5-7: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>8: LSP Object missing (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>9: ERO Object missing (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>10: SRP Object missing (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>11: LSP-IDENTIFIERS TLV missing (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>12-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Synchronized path computation request missing</td>
+          <td>0-255: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Unknown request reference</td>
+          <td>0-255: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Attempt to establish a second PCEP session</td>
+          <td>0-255: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Reception of an invalid object</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: reception of an object with P flag not set although the P-flag must be set according to this specification.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Bad label value (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3: Unsupported number of Segment ERO subobjects (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>4: Bad label format (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>5: Non-identical ERO subobjects (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>6: Both SID and NAI are absent in ERO subobject (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>7: Both SID and NAI are absent in RRO subobject (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>8: SYMBOLIC-PATH-NAME TLV missing (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>9: Default MSD is specified for the PCEP session (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>10: Non-identical RRO subjects (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>11: Malformed object (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>12-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Unrecognized EXRS subobject</td>
+          <td>0-255: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5521">RFC5521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Diffserv-aware TE error</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5455">RFC5455</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: Unsupported class-type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5455">RFC5455</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Invalid class-type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5455">RFC5455</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3: Class-Type and setup priority do not form a configured TE-class</td>
+          <td>[<a href="http://www.iana.org/go/rfc5455">RFC5455</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>4-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>BRPC procedure completion failure</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5441">RFC5441</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: BRPC procedure not supported by one or more PCEs along the domain path</td>
+          <td>[<a href="http://www.iana.org/go/rfc5441">RFC5441</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Unassigned</td>
+          <td>0-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Global Concurrent Optimization Error</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: Insufficient memory</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Global concurrent optimization not supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>P2MP Capability Error</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: The PCE cannot satisfy the request due to insufficient memory</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: The PCE is not capable of P2MP computation</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>P2MP END-POINTS Error</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: The PCE cannot satisfy the request due to no END-POINTS with leaf type 2</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: The PCE cannot satisfy the request due to no END-POINTS with leaf type 3</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3: The PCE cannot satisfy the request due to no END-POINTS with leaf type 4
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>4: The PCE cannot satisfy the request due to inconsistent END-POINTS</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>5-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>P2MP Fragmentation Error</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: Fragmented request failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Invalid Operation (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: Attempted LSP Update Request for a non-delegated LSP. 
+        The PCEP-ERROR Object is followed by the LSP Object that identifies the 
+        LSP. (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Attempted LSP Update Request if the stateful PCE 
+        capability was not advertised. (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3: Attempted LSP Update Request for an LSP identified 
+        by an unknown PLSP-ID. (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>4: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>5: Attempted LSP State Report if active 
+        stateful PCE capability was not advertised. (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>6: PCE-initiated LSP limit reached (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>7: Delegation for PCE-initiated LSP cannot be revoked (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>8: Non-zero PLSP-ID in LSP initiation request (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>9: LSP is not PCE-initiated (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>10: PCE-initiated operation-frequency limit reached (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>11-255: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>LSP State synchronization error (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: A PCE indicates to a PCC that it can
+        not process (an otherwise valid) LSP
+        State Report.  The PCEP-ERROR Object is
+        followed by the LSP Object that
+        identifies the LSP. (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2-4: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>5: A PCC indicates to a PCE that it can
+        not complete the state synchronization (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>6-255: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>Invalid traffic engineering path setup type (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-lsp-setup-type">draft-ietf-pce-lsp-setup-type</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: Unsupported path setup type (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-lsp-setup-type">draft-ietf-pce-lsp-setup-type</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Mismatched path setup type (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-lsp-setup-type">draft-ietf-pce-lsp-setup-type</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">22-255</td>
+          <td>Unassigned</td>
+          <td>0-255: Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Bad parameter value (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: SYMBOLIC-PATH-NAME in use (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Speaker identity included for an LSP that is not PCE-initiated (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3-255: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>LSP instantiation error (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>0: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>1: Unacceptable instantiation parameters (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>2: Internal error (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>3: Signaling error (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>4-255: Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pce-initiated-lsp">draft-ietf-pce-pce-initiated-lsp</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25-255</td>
+          <td>Unassigned</td>
+          <td>0-255: Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pcep-error-object-flag-field" id="pcep-error-object-flag-field"></a>PCEP-ERROR Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pcep-error-object-flag-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pcep-error-object-flag-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="load-balancing-object-flag-field" id="load-balancing-object-flag-field"></a>LOAD-BALANCING Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="load-balancing-object-flag-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-load-balancing-object-flag-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="close-object-reason-field" id="close-object-reason-field"></a>CLOSE Object Reason Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="close-object-reason-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-close-object-reason-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>No explanation provided</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>DeadTimer expired</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Reception of a malformed PCEP message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Reception of an unacceptable number of unknown requests/replies</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Reception of an unacceptable number of unrecognized PCEP messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="close-object-flag-field" id="close-object-flag-field"></a>CLOSE Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="close-object-flag-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-close-object-flag-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="path-key-subobject" id="path-key-subobject"></a>PATH-KEY Subobjects</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5520">RFC5520</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="path-key-subobject.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-path-key-subobject" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-63</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">64</td>
+          <td>Path Key with 32-bit PCE ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5520">RFC5520</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65</td>
+          <td>Path Key with 128-bit PCE ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5520">RFC5520</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">66-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="xro-subobject" id="xro-subobject"></a>XRO Subobjects</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5521">RFC5521</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="xro-subobject.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-xro-subobject" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>IPv4 prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc3209">RFC3209</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPv6 prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc3209">RFC3209</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Unnumbered Interface ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc3477">RFC3477</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>4-byte AS number</td>
+          <td>[<a href="http://www.iana.org/go/rfc7897">RFC7897</a>][<a href="http://www.iana.org/go/rfc7898">RFC7898</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>OSPF Area ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7897">RFC7897</a>][<a href="http://www.iana.org/go/rfc7898">RFC7898</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>IS-IS Area ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7897">RFC7897</a>][<a href="http://www.iana.org/go/rfc7898">RFC7898</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-31</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>Autonomous system number</td>
+          <td>[<a href="http://www.iana.org/go/rfc3209">RFC3209</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>SRLG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4874">RFC4874</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35-63</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">64</td>
+          <td>IPv4 Path Key</td>
+          <td>[<a href="http://www.iana.org/go/rfc5520">RFC5520</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65</td>
+          <td>IPv6 Path Key</td>
+          <td>[<a href="http://www.iana.org/go/rfc5520">RFC5520</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">66-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="xro-flag-field" id="xro-flag-field"></a>XRO Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5521">RFC5521</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="xro-flag-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-xro-flag-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Fail (F-bit)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5521">RFC5521</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="of" id="of"></a>Objective Function</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="of.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-of-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-1023</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">1024-32767</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">32768-65535</td>
+          <td>Reserved for Private Use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-of" class="sortable">
+      <thead>
+        <tr>
+          <th>Code Point</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>MCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>MLP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>MBP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>MBC</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>MLL</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>MCC</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>SPT</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>MCT</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Minimum Packet Loss Path (MPLP)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Maximum Under-Utilized Path (MUP)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Maximum Reserved Under-Utilized Path (MRUP)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td>12-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>32768-65535</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pcep-tlv-type-indicators" id="pcep-tlv-type-indicators"></a>PCEP TLV Type Indicators</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pcep-tlv-type-indicators.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pcep-tlv-type-indicators" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>NO-PATH-VECTOR TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>OVERLOAD-DURATION TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>REQ-MISSING TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>OF-List</td>
+          <td>[<a href="http://www.iana.org/go/rfc5541">RFC5541</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Order TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>P2MP capable</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>VENDOR-INFORMATION-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7470">RFC7470</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>STATEFUL-PCE-CAPABILITY (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>SYMBOLIC-PATH-NAME (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>IPV4-LSP-IDENTIFIERS (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>IPV6-LSP-IDENTIFIERS (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>LSP-ERROR-CODE (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>RSVP-ERROR-SPEC (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22-25</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>SR-PCE-CAPABILITY (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-segment-routing">draft-ietf-pce-segment-routing</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>PATH-SETUP-TYPE (TEMPORARY - registered 2015-08-14, extension registered 2016-06-29, expires 2017-08-14)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-lsp-setup-type">draft-ietf-pce-lsp-setup-type</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="no-path-vector-tlv" id="no-path-vector-tlv"></a>NO-PATH-VECTOR TLV Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="no-path-vector-tlv.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-no-path-vector-tlv" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-23</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>P2MP Reachability Problem</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>No GCO solution found</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>No GCO migration path found</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>PKS expansion failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc5520">RFC5520</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>BRPC Path computation chain unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc5441">RFC5441</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>Unknown Source</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>Unknown Destination</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>PCE currently Unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc5440">RFC5440</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="monitoring-object" id="monitoring-object"></a>MONITORING Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="monitoring-object.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-monitoring-object" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-18</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Incomplete</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Overload</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>Processing Time</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>General</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Liveness</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="proc-time-object" id="proc-time-object"></a>PROC-TIME Object Flag Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="proc-time-object.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-proc-time-object" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Estimated</td>
+          <td>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="overload-object" id="overload-object"></a>OVERLOAD Object Flag field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5886">RFC5886</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Bits are numbered from bit 0 as the most significant bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="overload-object.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-overload-object" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="bu-object-type-field" id="bu-object-type-field"></a>BU Object Type Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="bu-object-type-field.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-bu-object-type-field" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>LBU (Link Bandwidth Utilization)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>LRBU (Link Residual Bandwidth Utilization)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-pcep-service-aware-13">RFC-ietf-pce-pcep-service-aware-13</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

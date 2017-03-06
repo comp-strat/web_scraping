@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Operating System Specific Parameters</title>
+  </head>
+  <body>
+    <h1>Operating System Specific Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2003-10-31</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-11-15</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="os-specific-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="os-specific-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="os-specific-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#fact-names">OS Specific Fact Names</a>
+      </li>
+      <li>
+        <a href="#filetypes">OS Specific Filetypes</a>
+      </li>
+    </ul>
+    <h2><a name="fact-names" id="fact-names"></a>OS Specific Fact Names</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3659">RFC3659</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="fact-names.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-fact-names" class="sortable">
+      <thead>
+        <tr>
+          <th>OS Name</th>
+          <th>OS Specific Fact Name</th>
+          <th>Definition of the Syntax of the Fact Value</th>
+          <th>Specification of Semantics</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">Unix</td>
+          <td>Unix.ctime</td>
+          <td>"time-val" from [<a href="http://www.iana.org/go/rfc3659">RFC3659</a>]</td>
+          <td>
+        <p>From IEEE Std 1003.1-2004 XBD 4.7 "File Times Update" [<a href="http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap04.html#tag_04_07">http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap04.html#tag_04_07</a>]: 
+        "st_ctime is associated with the times that the file status is changed."</p>
+        <p>
+        This is clarified in the operations described throughout IEEE Std 
+        1003.1-2004 XSH 3 "System Interfaces."
+        </p>
+        <p>
+        Although IEEE Std 1003.1-2004 only considers st_ctime as having second 
+        resolution, platform-specific extensions exist that provide st_ctime 
+        semantics but with sub-second resolution.  Unix.ctime values from such 
+        platforms MAY use such finer-grain resolution.
+        </p>
+      </td>
+          <td>[<a href="#Paul_Millar">Paul_Millar</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">Unix</td>
+          <td>Unix.atime</td>
+          <td>"time-val" from [<a href="http://www.iana.org/go/rfc3659">RFC3659</a>]</td>
+          <td>
+        <p>From IEEE Std 1003.1-2004 XBD 4.7 "File Times Update" [<a href="http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap04.html#tag_04_07">http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap04.html#tag_04_07</a>]: 
+        "The st_atime field is associated with the times that the file data is accessed."</p>
+        <p>
+        This is clarified in the operations described throughout IEEE Std 
+        1003.1-2004 XSH 3 "System Interfaces."
+        </p>
+        <p>
+        Although IEEE Std 1003.1-2004 only considers st_atime as having second 
+        resolution, platform-specific extensions exist that provide st_atime 
+        semantics but with sub-second resolution.  Unix.atime values from such 
+        platforms MAY use such finer-grain resolution.
+        </p>
+        <p>
+        For performance reasons, some platforms allow operations to delay or 
+        suppress updates to st_atime.  FTP servers on such platforms MAY refrain 
+        from publishing the Unix.atime fact.
+        </p>
+      </td>
+          <td>[<a href="#Paul_Millar">Paul_Millar</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">Unix</td>
+          <td>Unix.ownername</td>
+          <td>"1*RCHAR" from [<a href="http://www.iana.org/go/rfc3659">RFC3659</a>]</td>
+          <td>
+        <p>
+          File owner name, as mapped from the numeric owner ID, by the operating system.
+        </p>
+      </td>
+          <td>[<a href="#TJ_Saunders">TJ_Saunders</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">Unix</td>
+          <td>Unix.groupname</td>
+          <td>"1*RCHAR" from [<a href="http://www.iana.org/go/rfc3659">RFC3659</a>]</td>
+          <td>
+        <p>
+          File group name, as mapped from the numeric group ID, by the operating system.
+        </p>
+      </td>
+          <td>[<a href="#TJ_Saunders">TJ_Saunders</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="filetypes" id="filetypes"></a>OS Specific Filetypes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3659">RFC3659</a>]</dd>
+    </dl>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Paul_Millar" id="Paul_Millar">[Paul_Millar]</a>
+          </td>
+          <td>Paul Millar</td>
+          <td>
+            <a href="mailto:paul.millar&amp;desy.de">mailto:paul.millar&amp;desy.de</a>
+          </td>
+          <td>2014-03-20</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="TJ_Saunders" id="TJ_Saunders">[TJ_Saunders]</a>
+          </td>
+          <td>TJ Saunders</td>
+          <td>
+            <a href="mailto:tj&amp;castaglia.org">mailto:tj&amp;castaglia.org</a>
+          </td>
+          <td>2016-11-15</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

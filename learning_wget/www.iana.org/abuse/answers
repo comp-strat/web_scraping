@@ -1,0 +1,437 @@
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Common questions regarding abuse issues</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+			<div id="main_right">
+
+
+	<h1>Abuse Issues and IP Addresses</h1>
+
+	<h2>Introduction</h2>
+          <p>We receive many reports of spam, apparent hacker activity, and other forms of abuse.
+            Most frequently, people make these reports because they have found an Internet address
+            associated with the abusive activity, and through a bit of research, they find the
+            IANA name associated in some way with that address.</p>
+		<p>In virtually all such cases, the association of the IANA name with a particular address
+          is not actually useful in dealing with the abuse incident. IANA is a set of record-keeping functions
+          we provide, it is not an ISP, and we have no control over the use of any Internet Protocol (IP)
+          addresses except the very few that are directly tied to the iana.org domain name.</p>
+		<p>This document was written to explain our role and to provide some pointers that may be useful
+          in actually resolving abuse cases.</p>
+         
+	<h2>The IANA Role in the Internet</h2>
+	
+          <P>The word "authority" in the IANA name is perhaps a bit misleading:
+            it means that the IANA service keeps authoritative records concerning various
+            numbers for other organizations; the choice of what goes into these 
+            records is determined by a variety of engineering and other considerations. 
+            We serve as a book-keeper in recording the assignments that
+            are made. In Internet terminology, the record-keeping service we
+            perform is called a <B>registration service</B>, and we serve
+            as a <B>registry</B>. </P>
+          <P>In addition to IP addresses, we also serve as a registry for a
+            variety of <B>Protocol Numbers</B> (see <A 
+      href="/numbers/">http://www.iana.org/numbers/</A> and several 
+            other kinds of names and identifiers. </P>
+          <P>It is important to realize that we are not an ISP in any way, and
+            we do not provide <B>any</B> network services to <B>any</B> end
+            users or organizations. We do not control the use of any of the
+            numbers it records, nor, in general, do we have the authority to
+            change the values we record.</P>
+          
+
+	<h2>Structure of IP Addresses</h2>
+          
+	<P>IP addresses are numbers. Currently there are two types of IP addresses 
+            in active use: IP version 4 (IPv4) and IP version 6 (IPv6). IPv4 was 
+            initially deployed on 1 January 1983 and is still the most commonly 
+            used version. </P>
+          <P>IPv4 addresses are 32-bit numbers that range from 0 to 4,294,967,295 but they are almost never used or seen in that form. Instead, they are usually represented by the familiar "dotted decimal" notation, with four decimal numbers separated by periods, for example, 192.0.2.80 or 203.0.13.25. Each individual number in a dotted decimal ranges in value from 0 to 255, and thus, in dotted decimal notation, IP addresses range from 0.0.0.0 to 255.255.255.255.</P>
+          <P>Given that there are over 4 billion individual IPv4 addresses, in 
+            many circumstances it is impractical to deal with them individually, 
+            and instead one deals with ranges (or "blocks") of IPv4 addresses. 
+            For example, one may be interested in the range of 256 IPv4 addresses 
+            from 192.168.51.0 to 192.168.51.255. 
+          <P>Deployment of the IPv6 protocol began in 1999. IPv6 addresses are 128-bit numbers and are conventionally expressed using hexadecimal strings (for example, 2001:db8::abc:587).</p>
+
+	<h2>Allocation of IP Addresses</h2>
+
+          <p>We maintain a high-level registry of IP addresses. It works with the Regional Internet Registries
+            (RIRs) to distribute the large blocks of IP addresses among the RIRs. There are currently five RIRs,
+            distributed around the world:</p>
+			<ul>
+				<li>AfriNIC (Africa and parts of the Indian Ocean)</li>
+				<li>APNIC (Asia/Pacific Region)</li>
+				<li>ARIN (North America and parts of the Caribbean)</li>
+				<li>LACNIC (Latin America and parts of the Caribbean)</li>
+				<li>RIPE NCC (Europe, the Middle East and Central Asia)</li>
+			</ul>
+		<p>The RIRs are the organizations that actually allocate IP addresses to ISPs. These allocations are in
+          smaller blocks of addresses. The web page "Internet Protocol v4 Address Space" documents how the
+          IPv4 address space is distributed among the RIRs.</p>
+		<p>Many of the IP address blocks in our registry are allocated to the RIRs. For example, consider the
+          following line from the page referenced above:</p>
+		<blockquote><pre>123/8   APNIC   2006-01 whois.apnic.net ALLOCATED</pre></blockquote>
+		<p>This means that the IP address block of 123.0.0.0-123.255.255.255 was allocated to APNIC in January 2006.
+          If you are having problems with an IP address that is part of this block, you should go to APNIC's WHOIS
+          service at "whois.apnic.net" (see below for details) to find out who has been assigned that address.</p>
+
+		<p>We keep this top-level list for all of the IPv4 addresses. This includes:</p>
+		<ul>
+			<li>IP addresses that have been allocated to a RIR or other user</li>
+			<li>those that are reserved for a special use, and</li>
+			<li>those that have not yet been allocated by us and are reserved for future allocation and use.</li>
+		</ul>
+		<p>Special-use IP addresses are marked as registered to IANA so that they are reserved for the special use on
+          behalf of the Internet community. This does not mean that the special-use addresses are "used" by us (see further explanation below).
+		Only a very small block of IPv4 addresses (192.0.32.0 to 192.0.47.255) has been "assigned" to us for our
+          operations. Only Internet traffic from this range actually originates from our network.</p>
+
+	<h2>Special-Use Addresses</h2>
+
+          <p>Several address ranges are reserved for "Special Use". These addresses all have restrictions of some sort placed on their use, and in general should not appear in normal use on the public Internet. The overview below briefly explains the purpose of these addresses – in general they are used in specialized technical contexts. They are described in more detail in RFC 6890.</p>
+          <UL>
+            <LI>"Private Use" IP addresses: 
+              <PRE>        10.0.0.0 - 10.255.255.255
+        172.16.0.0 - 172.31.255.255
+        192.168.0.0 - 192.168.255.255
+</PRE>
+              <p>These address blocks are reserved for use on private networks, and should never appear in the public Internet. There are millions of private networks (for example home firewalls often use them). People can use these address blocks without informing us, so we have no record of who uses which of these addresses.</p>
+
+			<p>The point of private address space is to allow many organizations in different places to use the same addresses, and as long as these disconnected or self-contained islands of IP-speaking computers (private networks) are not connected, there is no problem. If you see an apparent attack, or spam, coming from one of these address ranges, then either it is coming from your local environment, your ISP, or the address has been "spoofed".</p>
+              <P>The Private addresses are documented in <A 
+        href="/go/rfc1918">RFC 1918</A>. If you 
+                have further questions about RFC 1918 usage, please contact your 
+                ISP.</P>
+            <LI>"Autoconfiguration" IP Addresses:<BR>
+              <PRE>        169.254.0.0 - 169.254.255.255
+</PRE>
+              <P>Addresses in the range 169.254.0.0 to 169.254.255.255 are used automatically by most network devices when they are configured to use IP, do not have a static IP Address assigned and are unable to obtain an IP address using DHCP.</P>
+              <P>This traffic is intended to be confined to the local network, 
+                so the administrator of the local network should look for misconfigured 
+                hosts. Some ISPs inadvertently also permit this traffic, so you 
+                may also want to contact your ISP. This is documented in <A 
+        href="/go/rfc6890">RFC 6890</A>.</P>
+            <LI>"Loopback" IP addresses:<BR>
+              <PRE>        127.0.0.0 - 127.255.255.255
+</PRE>
+              <p>Each computer on the Internet uses 127.0.0.0/8 to identify itself, to itself. 127.0.0.0 to 127.255.255.255 is earmarked for what is called "loopback". This construct allows a computer to confirm that it can use IP and for different programs running on the same machine to communicate with each other using IP. Most software only uses 127.0.0.1 for loopback purposes (the other addresses in this range are seldom used). All of the addresses within the loopback address are treated with the same levels of restriction in Internet routing, so it is difficult to use any other addresses within this block for anything other than node specific applications, generally bootstraping. This is documented in RFC 6890.</p>
+            <LI>"Unallocated" IP addresses:<BR>
+              <P>The <A href="/assignments/ipv4-address-space/ipv4-address-space.xml">IPv4 Address Registry</A> 
+                and the Whois use the word unallocated (sometimes "reserved") 
+                to mean that the addresses are reserved for future allocation. 
+                No one should be using these addresses now. These addresses will 
+                be assigned for use in the public Internet in the future. If addresses 
+                are needed for private networks then the private-use addresses 
+                mentioned above should be used.</P>
+            <LI>Multicast IP addresses:<BR>
+              <PRE>        224.0.0.0 - 239.255.255.255</PRE>
+              <p>Addresses in the range 224.0.0.0 to 239.255.255.255 are set aside for the special purpose of providing multicast services in the Internet. Multicast services allow a computer to send a single message to many destinations. Examples include the software that keeps computers’ clocks synchronised and television services delivered over IP, typically by cable ISPs. Various addresses in this range are used by routers and others are used by hosts that are listening to multicast sessions.</p>
+              <P>These addresses are available for any host that wants to participate 
+                in multicast, and typically are assigned dynamically. The source 
+                address should not be multicast (without prior agreement). The 
+                destination address may be multicast. For technical background 
+                information please see <A 
+        href="/go/rfc1112">RFC 1112</A> and <A 
+        href="/go/rfc2236">RFC 2236</A>.</P>
+            </LI>
+          </UL>
+
+	<h2>Hints for finding the person responsible for an IPv4 address</h2>
+
+          <p>If you encounter an IPv4 address that does not fit any of the above categories, researching the various information sources to find a person responsible for an IP address may be a challenge. Moreover, even if such a person is found, they may well be halfway around the world, and not share your language or your legal system. Nonetheless, you must decide if it is worth the effort to try. This section outlines the procedure one should follow in finding the contact information for a responsible person.</p> 
+          <P><B>Step 1</B> - Look up the IP address in the Regional Internet Registries 
+            (RIRs) "whois" servers.</P>
+          <P>By using the "Whois" service, look up the IP address in <b>all five</b> 
+            Regional Internet Registries or RIRs.</P>
+          <ul>
+		    <li><B><A HREF="http://www.afrinic.net/">AfriNIC (African Network Information Centre)</A> 
+              -  Africa &amp; parts of the Indian Ocean<br>
+			  Click <A href="http://www.afrinic.net/cgi-bin/whois">here</A> for AfriNIC's WHOIS server.</B></li>
+            <li><B><A href="http://www.apnic.net/">APNIC (Asia Pacific Network 
+              Information Centre)</A> - Asia/Pacific<br/>
+              </B><B>Click <A href="http://wq.apnic.net/apnic-bin/whois.pl">here</A> 
+              for APNIC's WHOIS server.</B></li>
+            <li><B><A href="http://www.arin.net/">ARIN (American Registry for 
+              Internet Numbers)</A> -  Canada, the United States, and several islands in the Caribbean Sea and North Atlantic Ocean<br>
+              </B><B>Click <A href="http://whois.arin.net/ui">here</A> 
+              for ARIN's WHOIS server.</B></li>
+            <li><B><A href="http://www.lacnic.net/">LACNIC (Latin American and 
+              Caribbean IP address Regional Registry)</A> - Latin America and 
+              some Caribbean Islands<br>
+              </B><B>Click <A href="http://lacnic.net/cgi-bin/lacnic/whois">here</A> 
+              for LACNIC's WHOIS server.</B></li>
+            <li><B><A href="http://www.ripe.net/">RIPE NCC (R&eacute;seaux IP Europ&eacute;ens)</A> 
+              - Europe, the Middle East and Central Asia<br>
+              </B><B>Click <A 
+      href="https://apps.db.ripe.net/search/query.html">here</A> 
+              for the RIPE NCC's WHOIS server.</B></li>
+          </ul>
+          <p>If one of the RIRs’ Whois servers does not have information about the IP address you are inquiring about, try the others.</p>
+		<p>If the RIR WHOIS says the IP address is registered to  IANA, make sure you try the other RIRs to verify that they also say the IP addresses are registered to the IANA as some of the RIRs databases may not have caught the latest delegations to other RIRs.</p>
+          <P><B>Step 2</B> - If all RIRs list an address as assigned to  IANA,
+            you should check to see if this address is for "Special Use" or if 
+            it is "Unallocated" (&quot;Reserved&quot;).</P>
+          <P>If the address that you are inquiring about does not 
+            have contact information in one of the RIRs, is not mentioned in the 
+            explanations above, or you have further questions, please send an 
+            e-mail to abuse-filter@iana.org so that we may look into the problem 
+            further.</P>
+          <P>See below for additional information about fabricated IP addresses 
+            and the blackhole servers.</P>
+
+	<h2>Fabricated (or "spoofed") IP addresses</h2>
+
+          <P>It is quite possible that an IP address in an e-mail header could 
+            be fabricated. </P>
+          <p>E-mail protocols are not secure and anyone with the minor technical skills necessary can forge any part of an e-mail. Forgeries are generally trivial to identify. We cannot locate the individuals who forge e-mail headers. In fact, return addresses can be spoofed right down to the packet level. (Just like in postal mail, one can put pretty much anything as a return address, but if there is a problem with the "to" address, the letter can't be delivered.) IP addresses can be spoofed in protocols other than e-mail, as well.</p>
+
+	 <h2>Information about "Blackhole" Servers</h2>
+          
+        <P>Please see the following 8 questions/answers for information regarding 
+          the "blackhole" servers:</P>
+          <P><B>Q1: What are the blackhole servers?</B></P>
+          <blockquote> 
+            <p>A1: The "blackhole" Servers, "blackhole-1.iana.org" and "blackhole-2.iana.org", 
+              are an obscure part of the Internet infrastructure. People are sometimes 
+              puzzled or alarmed to find unexplained references to them in log 
+              files or other places. This FAQ tries to explain what these servers 
+              do, and why you may be seeing them. Specifically, these servers 
+              are part of the Domain Name System (DNS), and respond to inverse 
+              queries to addresses in the the reserved RFC 1918 address ranges:<BR>
+            </p>
+          </blockquote>
+          <PRE>        10.0.0.0 - 10.255.255.255 <BR>
+        172.16.0.0 - 172.31.255.255 <BR>
+        192.168.0.0 - 192.168.255.255</PRE> <blockquote> 
+            <p>See: <A href="/go/rfc1918">RFC 1918</A></p>
+            <p>These addresses are reserved for use on private intranets, and 
+              should never appear on the public internet. The 192.168.0.0 addresses 
+              are especially common, being frequently used in small office or 
+              home networking products like routers, gateways, or firewalls.</p>
+          </blockquote>
+          <P><B>Q2. What is "prisoner"</B></P>
+          <blockquote> 
+            <p>A2. "prisoner" is a blackhole server. A help document, “I'm Being Attacked by PRISONER.IANA.ORG!” has been published as <a href="/go/rfc6305">RFC 6305</a>.</p>
+          </blockquote>
+          <p><B>Q3: What are "inverse queries?</B></p>
+          <blockquote> 
+            <p>A3: With normal ("forward") queries the domain-name system responds 
+              with an address (e.g., "192.0.34.162") when given a name are (e.g., 
+              "www.iana.org"). Inverse ("reverse") queries do the reverse&nbsp;&#150; 
+              the domain name system returns the name ("www.iana.org") when given 
+              the address ("192.0.34.162"). While inverse queries are rare from 
+              a human perspective, some network services automatically do an inverse 
+              lookup whenever they process a request from a particular IP address, 
+              and consequently they form a significant part of DNS network traffic.</p>
+          </blockquote>
+          <P><B>Q4: Why do we need the blackhole servers?</B></P>
+          <blockquote> 
+            <p>A4: Strictly speaking, we don't need the blackhole servers. However, 
+              DNS clients will sometimes remember the results from previous queries 
+              (that is, "good" answers to queries are cached), and the blackhole 
+              servers are configured to return answers that DNS clients can cache. 
+              This allows the clients to rely on their cached answers, instead 
+              of sending another query, which in turn reduces the overall amount 
+              of traffic on the Internet. Since the RFC 1918 addresses should 
+              never be used on the public Internet, there should be no names in 
+              the public DNS that refer to them. Hence, an inverse lookup on one 
+              of these addresses should never work. The blackhole servers
+              respond to these inverse queries, and always return an answer that 
+              says, authoritatively, that "this address does not exist". Because 
+              of the caching noted above, this is far better than simply not responding 
+              at all, so the blackhole servers are provided as a public service. 
+            </p>
+          </blockquote>
+          <P><B>Q5: How busy are the blackhole servers?</B></P>
+          <blockquote> 
+            <p>A5: While rates vary, the blackhole servers generally answer thousands 
+              of queries per second. In the past couple of years the number of 
+              queries to the blackhole servers has increased dramatically. It 
+              is believed that the large majority of those queries occur because 
+              of "leakage" from intranets that are using the RFC 1918 private 
+              addresses. This can happen if the private intranet is internally 
+              using services that automatically do reverse queries, and the local 
+              DNS resolver needs to go outside the intranet to resolve these names. 
+              For well-configured intranets, this shouldn't happen. Users of private 
+              address space should have their local DNS configured to provide 
+              responses to inverse lookups in the private address space. </p>
+          </blockquote>
+          <P><B>Q6: But it looks like the blackhole servers are attacking my network/host. 
+            Could it be that a hacker has taken over the servers, and is attacking 
+            other systems?</B></P>
+          <blockquote> 
+            <p> A6: No system is totally safe from hackers, and the blackhole 
+              servers are no exception. However, the effect you are seeing very 
+              likely has another cause. Because of their special function, there 
+              are a number of reasons why the blackhole servers may appear in 
+              your logs or elsewhere that have nothing to do with hacking. DNS 
+              configuration, especially in an environment where the RFC 1918 addresses 
+              are being used, can be tricky. Firewall configurations can make 
+              things even more complicated. If, for example, your system is configured 
+              to allow all outgoing packets, but to block most incoming packets, 
+              then it may be that your DNS client is in fact sending inverse queries 
+              to the blackhole servers, but blocking (and logging) the returning
+              answers. </p>
+            <p>It is also true that other activities of hackers can make the blackhole 
+              servers show up in your logs. It is possible to construct network 
+              packets with forged source addresses that are in the RFC 1918 ranges. 
+              A hacker, for example, could construct a packet that appears to 
+              come from 192.168.35.35 and send it to your network. Sometimes there 
+              are large-scale denial-of-service attacks that use a flood of such 
+              “spoofed” packets. The result might be a large number of queries
+              coming to the blackhole servers, which may themselves be overloaded 
+              with query traffic. Under conditions of heavy load, the servers 
+              may drop packets, and not respond correctly to some queries. This 
+              may cause odd messages to appear in the error logs of either the 
+              attacking or the attacked host. (In large scale "distributed denial 
+              of service" attacks, many systems are taken over by hackers, and 
+              these systems are used to attack some victim. The owners of the 
+              attacking systems may not even be aware that they have been taken 
+              over by a hacker.) </p>
+          </blockquote>
+          <P><B>Q7: OK, maybe you aren't attacking me. What can I do about the 
+            messages in my logs?</B></P>
+          <blockquote> 
+            <p>A7: The best way solve this problem is to set up DNS on your local 
+              network. Unfortunately, this can be complicated, and may not in 
+              practice be possible. If you are using operating systems from Microsoft, 
+              you might want to look at <a 
+                  href="https://support.microsoft.com/en-us/kb/259922">https://support.microsoft.com/en-us/kb/259922</a>.
+              (Please note that the blackhole servers used to be located at isi.edu).</p>
+          </blockquote>
+          <P><B>Q8: Is there anything more than just logs at issue?</B></P>
+          <blockquote> 
+            <p>A8: Possibly. But you should make every effort to fix the problem 
+              from your end, because episodes of overload to the blackhole servers 
+              are becoming more common, and that can have more serious consequences. 
+            </p>
+          </blockquote>
+
+	  <div id="colophon">Page content last updated 8 September 2016.</div>
+
+
+	
+			</div>
+			
+			<div id="sidebar_left">
+				<div class="navigation_box">
+				<h2>Number Resources</h2>
+				<ul>
+					<li id="nav_num_top"><a href="/numbers">Overview</a></li>
+					<li id="nav_num_abuse"><a href="/abuse">Abuse Issues</a></li>
+					<ul id="nav_num_abuse_sub">
+						<li id="nav_num_abuse_top"><a href="/abuse">Overview</a></li>
+						<li id="nav_num_abuse_answers"><a href="/abuse/answers">Questions and Answers</a></li>
+					</ul>
+				</ul>
+				</div>
+			</div>
+			
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script>
+$(document).ready(function() {
+	$("#nav_num_abuse").addClass("selected")
+	$("#nav_num_abuse_answers").addClass("selected")
+});
+</script>
+
+	
+</body>
+
+</html>

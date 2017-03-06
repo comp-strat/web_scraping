@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Consultation on the IANA Customer Service Complaint Resolution Process</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+<div id="main_right">
+
+
+	<h1>Consultation on the IANA Customer Service Complaint Resolution Process</h1>
+
+    <div class="panel_information icon">
+        This consultation has concluded. A <a href="http://forum.icann.org/lists/iana-complaint-resolution/msg00005.html">report of public comments</a> has been compiled, and the record of submitted
+        comments is published on the <a href="http://www.icann.org/en/news/public-comment/iana-complaint-resolution-27nov12-en.htm">ICANN Public Comment</a> page.
+    </div>
+
+	<h2>Consultation Objective</h2>
+	<p>The Internet Assigned Numbers Authority (IANA) functions contract (SA1301-12-CN-0035) between ICANN and the United States Department of Commerce, National Telecommunications Information Administration (NTIA) to maintain the continuity and stability of services related to certain interdependent Internet technical management functions, known collectively as the Internet Assigned Numbers Authority calls for a public consultation from all interested and affected parties to help satisfy the following objective:</p>
+	<blockquote>C.2.9.2.g The Contractor shall work with NTIA and collaborate with all interested and affected parties as enumerated in Section C.1.3 to establish and implement within six (6) months after date of contract award a process for IANA function customers to submit complaints for timely resolution that follows industry best practice and includes a reasonable timeframe for resolution.</blockquote>
+	<h2>This consultation</h2>
+	<p>This call for consultation presents ICANN’s current complaint resolution process, entitled “IANA-Related Issue Escalation Procedure,” and seeks feedback on whether the process agreed in 2006 meets the needs of the IANA functions users; whether a new and different process is needed; or whether the existing process should be maintained and perhaps enhanced with improvements suggested by the community and/or updates proposed by ICANN.</p>
+	
+	<h2>Background</h2>
+	<p>ICANN’s existing escalation procedure adopted in 2006. ICANN worked with the leadership from the top-level domain manager community and the Internet standards development community to develop the current procedure. It is published on ICANN’s IANA website<a href="#footnotes" class="footnote-ref">1</a> (see Current IANA-Related Issue Escalation Procedure section below), and is referenced in the Supplemental Agreement ICANN reviews and updates<a href="#footnotes" class="footnote-ref">2</a> with the IETF Administrative Oversight Committee each year.</p>
+	<p>In addition to the current “IANA Escalation Procedure,” ICANN provides an Ombudsman<a href="#footnotes" class="footnote-ref">3</a> to help remedy disputes, who reports directly to ICANN’s Board of Directors. The Ombudsman is available to conduct an independent, impartial and neutral review of facts and can also investigate complaints of unfairness using Alternative Dispute Resolution<a href="#footnotes" class="footnote-ref">4</a> techniques.</p>
+
+	<h2>Current IANA-Related Issue Escalation Procedure<a href="#footnotes" class="footnote-ref">5</a></h2>
+	
+	<div class="excerpt">
+	<p>This document provides the current external escalation process for IANA-related issues and when initiating escalation is appropriate. Summarizing, this document suggests escalating requests when one or more of the following conditions hold:</p>
+
+	<ul>
+		<li>ICANN has not processed a request in 1.5 times the average processing time of similar requests as documented on the IANA request statistics pages and has not provided reasonable justification for the delays;</li>
+		<li>ICANN has refused to process the request for reasons the requester feel are inappropriate or in error; and</li>
+		<li>When the requester feels subject to unfair biases or inappropriate actions on the part of ICANN.</li>
+	</ul>
+
+	<p>The escalation steps described in the current process are:</p>
+
+	<ol>
+		<li>Initiate an Escalation Request</li>
+		<li>Communicate directly with responsible IANA staff.</li>
+		<li>Contact with ICANN's IANA Functions Liaison.</li>
+		<li>Contact ICANN's IANA Functions Program Manager.</li>
+		<li>Contact the ICANN President and CEO.</li>
+		<li>Contact the ICANN Ombudsman</li>
+	</ol>
+
+	<p>With the escalation steps documented here, ICANN aims to provide a process to address issues with request processing prior to those issues damaging the relationship between ICANN and the communities it serves.</p>
+
+	<h3>Introduction</h3>
+
+	<p>The many stakeholders of the IANA functions rely on timely responses, appropriate handling of specific requests, and proficient management of ICANN’s overall responsibilities. When a stakeholder perceives a request for a service is not being handled in a timely, reasonable, and/or responsible fashion, the stakeholder should have a means of escalating their concern(s) to higher level oversight, up to the ICANN President and CEO if necessary.</p>
+
+	<p>Because the IANA functions are varied and complex, clearly defined escalation procedures and channels of communication are very important. Ideally, the escalation process would be initiated by the individuals appointed by the leaders of the various organizations that the IANA functions directly serve, including the IAB, IESG, and IETF, the ccNSO, TLD managers, the managers of domains for which ICANN maintains the registry (e.g., .INT), and the RIRs. For example, in the case of issues with a request involving the .INT top-level domain, it would be the Administrative or Technical Contact of the second-level .INT domain who would initiate the escalation.</p>
+
+	<p>The following steps describe the typical path of escalation for IANA Functions-related issues. There are several avenues of contact for each level of escalation, including email, telephone, and fax. The specifics of these communication methods are provided in Appendix A – Escalation Contact Information. It should be noted, however, that any requester may at any time contact the ICANN Ombudsman and <a href="http://ombudsman.icann.org/complaints/">file a complaint</a>. In addition, while unlikely in the context of IANA Functions-related requests, any and all contractual issues relating to ICANN should always go directly to ICANN’s General Counsel.</p>
+
+	<h3>IANA Functions-Related Issue Escalation Procedure</h3>
+
+	<p>In all cases, ICANN makes every attempt to be responsive and efficient in processing requests for the various resources it administers. However, in some cases, a resource requester may feel ICANN has not performed their service to the requester’s expectation. In such cases, and after attempting to resolve the issue with the ICANN staff member with whom they are working, requesters may escalate the problematic request to apply greater management oversight and/or increased priority in the processing of their request. If a requester thinks an escalation request is justified, ICANN will assume the escalation is appropriate and treat follow-ups to the escalation request with higher priority.</p>
+
+	<h3>When is an Escalation Justified?</h3>
+
+	<p>In general, an escalation is justified when one or more of the following hold:</p>
+
+	<ul>
+		<li>ICANN has not processed a request in 1.5 times the average processing time of similar requests as documented on the ICANN's IANA request statistics pages and has not provided reasonable justification for the delays;</li>
+
+		<li>ICANN has refused to process the request for reasons the requester feel are inappropriate or in error;</li>
+
+		<li>When the requester feels subject to unfair biases or inappropriate actions on the part of ICANN.</li>
+	</ul>
+
+	<p>In the event the requester feels an escalation is justified according to any of the above criteria, the steps outlined in the subsequent section should be undertaken.</p>
+
+	<h3>Escalation Steps</h3>
+
+	<p>The IANA Functions-related issue escalation steps are:</p>
+
+	<ol>
+		<li>
+			<h4>Initiate an Escalation Request</h4>
+
+			<p>In order to track an issue escalation, the requester should initiate an escalation request by sending email to <a href="mailto:escalation@iana.org">escalation@iana.org</a>. In either case, the requester should provide as many details relevant to the issue as is possible, including:</p>
+
+			<ul>
+				<li>A short summary of the issue from the requester’s point of view, including a description of the areas in which the ICANN did not perform as expected;</li>
+
+				<li>The date and time of the initial request;</li>
+
+				<li>The ticket number, if known; and</li>
+
+				<li>Any available documentation on the issue such as email exchanges, telephone logs, faxes, etc.</li>
+			</ul>
+
+			<p>All documents provided to ICANN in this context will be considered confidential and will not be released to the general public without explicit written permission of the requester. However, in many cases ICANN will need to publish reports about the issues that have escalated, both to the ICANN Board as well as to the public. Should this become necessary, ICANN will work with the requester to establish which of the materials can be released in full and which need to be redacted for confidentiality reasons.</p>
+
+			<p>Once the initial escalation request is received via email or the form on the web page is filled out and submitted, a time stamped escalation ticket will be issued that will allow the requester to track the status of their escalation request. See the following section for details on how to track an escalation ticket.</p>
+		</li>
+
+		<li>
+			<h4>Communicate directly with responsible IANA staff.</h4>
+
+			<p>To ensure ICANN and the requester both understand the circumstances surrounding the escalation request and the perceived issue, the requester should communicate with ICANN staff any details not provided in the opening of the escalation ticket regarding the status of the original request that triggered the escalation and any particular conditions that may have precipitated the issue using the escalation ticket number. ICANN staff will respond with an acknowledgement within one (1) business day. Within two (2) business days following the acknowledgement, ICANN staff will respond with a description of a proposed remedy. Regular communications will continue between ICANN staff and the requester until the escalation request and the underlying issue is resolved.</p>
+		</li>
+
+		<li>
+			<h4>Contact the IANA Function Liaison.</h4>
+
+			<p>If the requester feels they are not getting an adequate response to their request from ICANN staff, they should contact ICANN's designated IANA Functional Liaison responsible for the specific area, referencing the escalation ticket. There are three functional liaisons for the three main grouping of IANA Functions, namely Technical Protocol Parameters Assignment, Internet Number Resource Allocation, and Root Zone Management.</p>
+
+			<p>The designated IANA Function Liaison will respond with an acknowledgement to the escalation request within one (1) business day. Within two (2) business days following the acknowledgement, the IANA Function Liaison will respond with a description of a proposed remedy. Regular communications will continue between the IANA Function Liaison and/or ICANN staff and the requester until the request is resolved.</p>
+		</li>
+
+		<li>
+			<h4>Contact ICANN's IANA Functions Program Manager</h4>
+
+			<p>If the requester feels they are not getting an adequate response to their escalation to the designated IANA Function Liaison, they should contact ICANN's IANA Functions Program Manager.</p>
+
+			<p>ICANN's IANA Functions Program Manager will respond with an acknowledgement to the escalation request within one (1) business day. Within two (2) business days following the acknowledgement of the escalation, a proposed remedy will be provided that includes a timeline for resolution of the issue when possible. ICANN's IANA Functions Program Manager will coordinate with the designated IANA Function Liaison and ICANN Staff to ensure that communications with the requester are effective and timely until the issue is resolved.</p>
+		</li>
+
+		<li>
+			<h4>Contact the ICANN President and CEO</h4>
+
+			<p>If the requester feels they are not getting an adequate response to their request to the ICANN's IANA Functions Program Manager, they should contact the ICANN President and CEO.</p>
+
+			<p>The ICANN President and CEO will respond with an acknowledgement to the escalation request within three (3) business days. The causes of the ICANN’s inability to fulfil the terms of the request will be reviewed and a determination will be made by ICANN's President and CEO as to whether systemic changes are needed to address this issue and/or potential future instances of the circumstances that resulted in the issue. Within ten (10) business days following the acknowledgement of the escalation, the results of this review will be provided to the requester. Along with the results will be a proposed remedy and a timeline for implementing that remedy. If resolution of the issue takes longer than one calendar week, at least one update on the status of the issue will be provided to the requester by ICANN's IANA Functions Program Manager.</p>
+		</li>
+
+		<li>
+			<h4>Contact the ICANN Ombudsman</h4>
+
+			<p>As the final level of escalation (or at any time the requester feels this escalation procedure is not being followed or is not effective), the requester should contact the ICANN Ombudsman if the requester feels the individual issue or the systemic problems are not resolved.</p>
+
+			<p>The ICANN Ombudsman will respond to the escalation request according to policies and procedures described within the Ombudsman Framework published at <a href="http://www.icann.org/ombudsman/documents/ombuds-frmwrk-eng-20jun05.pdf">http://www.icann.org/ombudsman/documents/ombuds-frmwrk-eng-20jun05.pdf</a>.</p>
+		</li>
+	</ol>
+
+	<p>At any step in this procedure, when the issue is deemed resolved by both the requester and ICANN, the escalation ticket will be marked as resolved and closed.</p>
+
+	<h3>Tracking an Escalation Request</h3>
+
+	<p>At step (1) in the escalation procedure, a ticket will be issued in response to an escalation request. This ticket will allow the requester to track their escalation request through the escalation process as described in this document and will help ICANN staff and management collect and collate data regarding the request and the underlying issue and coordinate responses to the requester.</p>
+
+	<h3>Conclusion</h3>
+
+	<p>This document has described the IANA Functions escalation procedure. We ask that requesters use this procedure when they feel ICANN has not processed their IANA Functions-related request appropriately. In addition to the actual escalation steps, the criteria a requester should use to determine when escalation is appropriate are provided. The aim of this document is to provide a process to address issues with request processing prior to those issues damaging the relationship between ICANN and the communities it serves.</p>
+
+	<h3>Acknowledgements</h3>
+
+	<p>Very useful comments and suggestions for this document were provided by the ICANN Country Code Name Supporting Organization via members of the ccNSO/IANA Working Group chaired by Bernard Turcotte. Significant contributions came from ccNSO/IANA Working Group members including Bernard Turcotte, Olivier Guillard, and Lesley Cowley.</p>
+
+	<h3>Appendix A — Escalation Contact Information</h3>
+
+	<p>Contact information for ICANN staff and the Ombudsman as of November 2012:</p>
+
+	<table class="iana-table">
+		<tr>
+			<th>Role</th>
+			<th>Name</th>
+			<th>Email Address</th>
+		</tr>
+
+		<tr>
+			<td>IANA</td>
+			<td>IANA Staff</td>
+			<td>iana@iana.org</td>
+
+		</tr>
+
+		<tr>
+			<td>IANA Function Liaison for Technical Protocol Parameters Assignment</td>
+			<td>Michelle Cotton</td>
+			<td>michelle.cotton@icann.org</td>
+
+		</tr>
+
+		<tr><td>IANA Function Liaison for Root Zone Management</td><td>Kim Davies</td><td>kim.davies@icann.org</td></tr>
+		<tr><td>IANA Function Liaison for Internet Number Resource Allocation</td><td>Leo Vegoda</td><td>leo.vegoda@icann.org</td></tr>
+
+		<tr>
+			<td>IANA Functions Program Manager</td>
+			<td>Elise Gerich<br/>Vice President, IANA</td>
+			<td>elise.gerich@icann.org</td>
+		</tr>
+
+		<tr>
+			<td>ICANN President and CEO</td>
+			<td>Fadi Chehadé</td>
+			<td>fadi.chehade@icann.org</td>
+		</tr>
+
+		<tr>
+			<td>ICANN Ombudsman</td>
+			<td>Chris LaHatte</td>
+			<td>ombudsman@icann.org</td>
+		</tr>
+	</table>
+
+	<p>Note: Email communications are preferred as it greatly facilitates maintaining a history of the communications.</p>
+
+	<div class="version">Last Modified 2012-11-14</div>
+	
+	</div>
+	
+	<h2>Updates Proposed by ICANN</h2>
+	
+	<p>ICANN is grateful to the people who worked with it to develop the process in 2006. ICANN recognizes that improvements to any process are often possible and desirable. Our experience with this process suggests some ways that the current process could be improved.</p>
+	<ul>
+	<li> ICANN is proposing to update the procedure to include a graphical flowchart.</li>
+	<li> ICANN is proposing to separate the rationale from the process description, to improve the document’s clarity.</p>
+	<li> ICANN is proposing to update the first basis for use of the Customer Service Complaint Resolution Procedure (CSCRP) based on the outcomes of the performance standards consultations (contract section C.2.8) being performed with each of the interested and affected parties for the IANA functions.</li>
+	</ul>
+	<p>The goal of this public consultation is to understand what the community considers an appropriate Customer Service Complaint Resolution Process and to take steps to adopt a process that meets the community’s expectations.</p>
+	<h2>Consultation Questions</h2>
+	<p>ICANN is seeking feedback on the Customer Service Complaint Resolution Process. Comments are welcome on any aspect of this process, and specifically on the following questions:</p>
+	<ol type="1">
+	<li>Should the process developed with the IANA functions users in 2006 be replaced with a new process? If so, please describe with as much detail as possible an alternative process that is effective, reasonable and consistent with industry best practices.</li>
+	<li>Alternatively, should the existing process be maintained? If so, are there improvements that should be made to better meet the needs of IANA functions users? Should ICANN implement the updates proposed above?</li>
+	<li>What if any changes should be made to the existing escalation path for customer complaints?</li>
+	</ol>
+
+
+	<h2>Footnotes</h2>
+	
+	<div id="footnotes">
+	
+	<div id="footnote-1" class="footnote"><span class="footnote-index">1</span>ICANN IANA-Related Issue Escalation Procedure - <a href="http://www.iana.org/procedures/escalation">http://www.iana.org/procedures/escalation</a></div>
+	<div id="footnote-2" class="footnote"><span class="footnote-index">2</span>Supplemental agreements to the 1 March 2000 IETF/ICANN Memorandum of Understanding concerning the Technical Work of the IANA - <a href="https://www.icann.org/en/about/agreements">https://www.icann.org/en/about/agreements</a></div>
+	<div id="footnote-3" class="footnote"><span class="footnote-index">3</span>ICANN Ombudsman - <a href="http://www.icann.org/en/help/ombudsman">http://www.icann.org/en/help/ombudsman</a></div>
+	<div id="footnote-4" class="footnote"><span class="footnote-index">4</span>American Bar Association on dispute resolution mechanisms - <a href="http://www.americanbar.org/groups/dispute_resolution.html">http://www.americanbar.org/groups/dispute_resolution.html</a></div>
+	<div id="footnote-5" class="footnote"><span class="footnote-index">5</span>ICANN’s IANA-Related Issue Escalation Procedure - <a href="http://www.iana.org/procedures/escalation">http://www.iana.org/procedures/escalation</a></div>
+
+	</div>
+
+</div>
+
+<div id="sidebar_left">
+    <div class="navigation_box">
+        <h2>About us</h2>
+        <ul>
+            <li id="nav_about_top"><a href="/about">Introduction</a></li>
+            <li id="nav_about_performance"><a href="/performance">Performance Reporting</a></li>
+            <li id="nav_about_procedures"><a href="/procedures">Procedures</a></li>
+            <li id="nav_about_presentations"><a href="/about/presentations">Presentations</a></li>
+            <li id="nav_about_reports"><a href="/reports">Public Reports</a></li>
+            <li id="nav_about_framework"><a href="/about/framework">Framework Documents</a></li>
+            <li id="nav_about_reviews"><a href="/reviews">Reviews</a></li>
+            <li id="nav_about_audits"><a href="/about/audits">Audits</a></li>
+            <li id="nav_about_excellence"><a href="/about/excellence">Excellence &amp; Quality</a></li>
+            <li id="nav_about_glossary"><a href="/glossary">Glossary of terms</a></li>
+            <li id="nav_about_contact"><a href="/contact">Contact us</a></li>
+        </ul>
+    </div>
+</div>
+
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script>
+$(document).ready(function() {
+	$("#nav_about_reviews").addClass("selected")	
+});
+</script>
+
+	
+</body>
+
+</html>

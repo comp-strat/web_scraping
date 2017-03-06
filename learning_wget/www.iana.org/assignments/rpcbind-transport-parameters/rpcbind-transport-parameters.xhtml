@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>RPCBIND Transport Parameters</title>
+  </head>
+  <body>
+    <h1>RPCBIND Transport Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2006-11-08</dd>
+      <dt>Last Updated</dt>
+      <dd>2011-10-06</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rpcbind-transport-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="rpcbind-transport-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="rpcbind-transport-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#rpcbind-transport-parameters-1">Transport semantics (r_nc_semantics)</a>
+      </li>
+      <li>
+        <a href="#rpcbind-transport-parameters-2">Protocol family (r_nc_protofmly)</a>
+      </li>
+      <li>
+        <a href="#rpcbind-transport-parameters-3">Protocol name (r_nc_proto)</a>
+      </li>
+    </ul>
+    <h2><a name="rpcbind-transport-parameters-1" id="rpcbind-transport-parameters-1"></a>Transport semantics (r_nc_semantics)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This represents the type of transport, and has the following values.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rpcbind-transport-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rpcbind-transport-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Value Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>NC_TPI_CLTS</td>
+          <td>Connectionless</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>NC_TPI_COTS</td>
+          <td>Connection oriented</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>NC_TPI_COTS_ORD</td>
+          <td>Connection oriented with graceful close</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>NC_TPI_RAW</td>
+          <td>Raw transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rpcbind-transport-parameters-2" id="rpcbind-transport-parameters-2"></a>Protocol family (r_nc_protofmly)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This identifies the family to which the protocol belongs.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rpcbind-transport-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rpcbind-transport-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value Name</th>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NC_NOPROTOFMLY</td>
+          <td>"-"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_LOOPBACK</td>
+          <td>"loopback"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_INET</td>
+          <td>"inet"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_IMPLINK</td>
+          <td>"implink"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_PUP</td>
+          <td>"pup"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_CHAOS</td>
+          <td>"chaos"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_NS</td>
+          <td>"ns"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_NBS</td>
+          <td>"nbs"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_ECMA</td>
+          <td>"ecma"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_DATAKIT</td>
+          <td>"datakit"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_CCITT</td>
+          <td>"ccitt"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_SNA</td>
+          <td>"sna"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_DECNET</td>
+          <td>"decnet"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_DLI</td>
+          <td>"dli"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_LAT</td>
+          <td>"lat"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_HYLINK</td>
+          <td>"hylink"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_APPLETALK</td>
+          <td>"appletalk"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_NIT</td>
+          <td>"nit"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_IEEE802</td>
+          <td>"ieee802"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_OSI</td>
+          <td>"osi"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_X25</td>
+          <td>"x25"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_OSINET</td>
+          <td>"osinet"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_GOSIP</td>
+          <td>"gosip"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rpcbind-transport-parameters-3" id="rpcbind-transport-parameters-3"></a>Protocol name (r_nc_proto)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>This identifies a protocol within a family.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rpcbind-transport-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rpcbind-transport-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value Name</th>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NC_NOPROTO</td>
+          <td>"-"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_TCP</td>
+          <td>"tcp"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_UDP</td>
+          <td>"udp"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+        <tr>
+          <td>NC_ICMP</td>
+          <td>"icmp"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

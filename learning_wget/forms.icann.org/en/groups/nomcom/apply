@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://forms.icann.org/sites/all/themes/icann/img/logo-48.png" type="image/png" />
+<link rel="shortlink" href="/en/node/1172287" />
+<link rel="canonical" href="/en/groups/nomcom/apply" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+  <title>ICANN 2017 Nominating Committee Leadership Positions Candidacy Application Request | ICANN</title>
+  <link type="text/css" rel="stylesheet" href="https://forms.icann.org/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://forms.icann.org/sites/default/files/css/css_j3fqdWCfp1T3mWCqNS5YGSs9CEOHok4Wb1mw3a4DqRw.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://forms.icann.org/sites/default/files/css/css_udDiTNXs_g61ZK1afYzdHksyNkXMEoCPgR-8E4ag8oo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://forms.icann.org/sites/default/files/css/css_WGztUvUOHnDKxQYgoMYlRCREZtWPz59tz_f2DEkf8tA.css" media="all" />
+  <script type="text/javascript" src="https://forms.icann.org/sites/default/files/js/js_vJGndrTbAmW0RIFCWCWGXKwRNRHzkrlXQrzG-5l9wFk.js"></script>
+<script type="text/javascript" src="https://forms.icann.org/sites/default/files/js/js_IE1tR0MJwQVLroCSS5Sy4yftAmfwZ4RgT9sBLauhG2o.js"></script>
+<script type="text/javascript" src="https://forms.icann.org/sites/default/files/js/js_3FmigFSHRG8pklWX8A-VVX5wEAzOD3tdNLoBl0PbOrI.js"></script>
+<script type="text/javascript" src="https://forms.icann.org/sites/default/files/js/js_52WJn67o8JrhoM9_t3bvAlHLJB28L94BOHWuFc7DmVo.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-25463847-17", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://forms.icann.org/sites/default/files/js/js_fTkTgOHVBaNe5-bi6k9J5ZBCznsF1llEjNrC-aSPT_g.js"></script>
+<script type="text/javascript" src="https://forms.icann.org/sites/default/files/js/js_byZDYQiYPr3vw2fVWPlKDVDntG4TKrx-ftNt6Dua3_M.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"icannforms","theme_token":"GXmAKe2Ujlxa-7DnzY-1ucZgozLnzq_a-UJv_SaW93w","js":{"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.5\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/beautytips\/js\/jquery.bt.min.js":1,"sites\/all\/modules\/contrib\/beautytips\/js\/beautytips.min.js":1,"sites\/all\/modules\/custom\/icann_acronym_helper\/icann_acronym_helper.js":1,"sites\/all\/modules\/custom\/icann_webform_radio_js\/js\/icann_webform_radio_js.js":1,"sites\/all\/modules\/contrib\/captcha\/captcha.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"misc\/tableheader.js":1,"sites\/all\/modules\/patched\/webform\/js\/webform.js":1,"sites\/all\/modules\/contrib\/captcha\/image_captcha_refresh\/image_captcha_refresh.js":1,"sites\/all\/themes\/icannforms\/assets\/javascript\/languages.js":1,"sites\/all\/themes\/icannforms\/assets\/javascript\/responsive_nav.js":1,"sites\/all\/themes\/icannforms\/assets\/javascript\/footer_mobile_menu.js":1,"sites\/all\/themes\/icannforms\/assets\/javascript\/radio-grid.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/google_appliance\/theme\/google_appliance.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/webform_confirm_email\/webform_confirm_email.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/patched\/webform\/css\/webform.css":1,"sites\/all\/themes\/icannforms\/assets\/stylesheets\/application.css":1}},"beautytips":{"webform_lock":{"cssStyles":[],"cssSelect":".webform-component--section-a--lock-action label[for=edit-submitted-section-a-lock-action]","text":"Locked is a general term that includes all possible statuses that prevent the transfer","width":300,"fill":"rgb(233, 234, 235)","list":["cssStyles","width","fill","cssStyles","width","fill"]},"webform_lock_old":{"cssStyles":[],"cssSelect":".webform-component--lock-action label[for=edit-submitted-lock-action]","text":"Locked is a general term that includes all possible statuses that prevent the transfer","width":300,"fill":"rgb(233, 234, 235)","list":["cssStyles","width","fill"]}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"webform":{"conditionals":{"webform-client-form-1172287":{"ruleGroups":{"rgid_0":{"andor":null,"actions":{"aid_0":{"target":"webform-component--re-type-alternate-e-mail-address","invert":0,"action":"require","argument":""}},"rules":{"rid_0":{"source":"webform-component--alternate-e-mail-address","value":"","callback":"conditionalOperatorStringNotEmpty"}}},"rgid_1":{"andor":null,"actions":{"aid_0":{"target":"webform-component--other","invert":0,"action":"show","argument":""}},"rules":{"rid_0":{"source":"webform-component--how-did-you-hear-about-us","value":"Other","callback":"conditionalOperatorStringEqual"}}}},"sourceMap":{"webform-component--alternate-e-mail-address":{"rgid_0":"rgid_0"},"webform-component--how-did-you-hear-about-us":{"rgid_1":"rgid_1"}},"values":[]}}},"urlIsAjaxTrusted":{"\/en\/groups\/nomcom\/apply":true}});
+//--><!]]>
+</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1172287 node-type-webform i18n-en ltr" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    
+<header class="nav-collapse MainHeader MainHeader--homepage">
+  <div class= "ActionsBar--container">
+    <div class="ActionsBar">
+            <span class="ActionsBar-item">
+          <a href="https://new.icann.org/users/sign_in">Log In</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://new.icann.org/users/sign_up">Sign Up</a>
+      </span>
+    </div>
+  </div>
+  <div class="MainHeader-navigation">
+            <a class="MainHeader-logo" href="http://icann.org" title="Home" rel="home">
+          <img alt="Icann logo" src="/sites/all/themes/icannforms/assets/images/icann_logo.png">
+        </a>
+        
+    <div class="SearchBox--MainHeader">
+      <a class="SearchBox-submit" href="https://new.icann.org/search" id="search-open">&#xf002;</a>
+    </div>
+            
+
+    <div class="menu-button"><span class="touch-button mobile-menu"><i class="navicon fa fa-bars fa-lg"></i></span></div><nav role="navigation"><div class="nav-item"><a href="https://new.icann.org/get-started" class="nav-item-link">Get Started</a><div class="nav-dropdown get-started"><a href="https://new.icann.org/get-started#beginnersguide">Beginners Guide</a><a href="https://new.icann.org/about/participate/newcomers">Newcomers Program</a><a href="https://new.icann.org/about/participate/fellowships">Fellowship Program</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a href="https://new.icann.org/news" class="nav-item-link">News &amp; Media</a><div class="nav-dropdown news-media"><a href="https://new.icann.org/news/announcements">Announcements</a><a href="https://new.icann.org/news/blog">Blog</a><a href="https://new.icann.org/news/multimedia">Multimedia</a><a href="https://new.icann.org/en/news/press">For Journalists</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a href="https://new.icann.org/policy" class="nav-item-link">Policy</a><div class="nav-dropdown policy"><a href="https://www.icann.org/policy#what_is_policy">ICANN Policy</a><a href="https://www.icann.org/policy#how_is_policy_developed">Develop Policy</a><a href="https://www.icann.org/policy#updates">Policy Update</a><a href="https://www.icann.org/policy#participate">Participate</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a href="https://new.icann.org/public-comments" class="nav-item-link">Public Comment</a><div class="nav-dropdown public-comment"><a href="https://new.icann.org/public-comments#open-public">Open</a><a href="https://new.icann.org/public-comments#upcoming-public">Upcoming</a><a href="https://new.icann.org/en/news/public-comment/archive">Archive</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a href="https://new.icann.org/resources" class="nav-item-link">Resources</a><div class="nav-dropdown resources"><a href="https://new.icann.org/resources/pages/board-of-directors-2014-03-19-en">Board</a><a href="https://new.icann.org/resources/pages/accountability-2012-02-25-en">Accountability &amp; Transparency</a><a href="https://new.icann.org/en/resources/registrars">Registrars</a><a href="https://new.icann.org/en/resources/registries">Registries</a><a href="https://new.icann.org/en/resources/compliance">Compliance</a><a href="https://new.icann.org/resources/pages/help">Help</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a href="https://new.icann.org/community" class="nav-item-link">Community</a><div class="nav-dropdown community"><a href="https://new.icann.org/community#groups">Groups</a><a href="https://new.icann.org/community/explore">Explore Profiles</a><a href="https://features.icann.org/calendar">Calendar</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div></nav>        </div>
+</header>
+
+
+<main id="main-content">
+  <section class="TopSection">
+    <div class="l-rail">
+    </div>
+    
+    <div class="l-main-with-rail">
+      <article id="node-1172287" class="TitleBody node node-webform TitleBody clearfix" about="/en/groups/nomcom/apply" typeof="sioc:Item foaf:Document">
+
+      <h1 classes="u-text-xxl">
+      ICANN 2017 Nominating Committee Leadership Positions Candidacy Application Request    </h1>
+  <span property="dc:title" content="ICANN 2017 Nominating Committee Leadership Positions Candidacy Application Request" class="rdf-meta element-hidden"></span>  
+  <div class="content" classes="test-test">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded">[Items with an asterisk (*) are required]
+</div></div></div><form class="webform-client-form webform-client-form-1172287 Form" enctype="multipart/form-data" action="/en/groups/nomcom/apply" method="post" id="webform-client-form-1172287" accept-charset="UTF-8"><div><div  class="form-item webform-component webform-component-markup webform-component--name-header">
+ <b>1) Identification and Contact Information:</b>
+</div>
+<div  class="form-item webform-component webform-component-textfield webform-component--first-name">
+  <label for="edit-submitted-first-name">First or Given <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="Form-input form-text required" size="" type="text" id="edit-submitted-first-name" name="submitted[first_name]" value="" maxlength="128" />
+</div>
+<div  class="form-item webform-component webform-component-textfield webform-component--last-name">
+  <label for="edit-submitted-last-name">Surname or Family <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="Form-input form-text required" size="" type="text" id="edit-submitted-last-name" name="submitted[last_name]" value="" maxlength="128" />
+</div>
+<div  class="form-item webform-component webform-component-markup webform-component--contact-header">
+ 
+</div>
+<div  class="form-item webform-component webform-component-email webform-component--email-address">
+  <label for="edit-submitted-email-address">Contact Email Address: <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="email Form-input form-text form-email required" size="60" type="email" id="edit-submitted-email-address" name="submitted[email_address]" />
+</div>
+<div  class="form-item webform-component webform-component-email webform-component--re-type-email-address">
+  <label for="edit-submitted-re-type-email-address">Re-type Email Address: <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="email Form-input form-text form-email required" size="60" type="email" id="edit-submitted-re-type-email-address" name="submitted[re_type_email_address]" />
+</div>
+<div  class="form-item webform-component webform-component-email webform-component--alternate-e-mail-address">
+  <label for="edit-submitted-alternate-e-mail-address">Alternate E-mail Address: </label>
+ <input class="email Form-input form-text form-email" size="60" type="email" id="edit-submitted-alternate-e-mail-address" name="submitted[alternate_e_mail_address]" />
+</div>
+<div  class="form-item webform-component webform-component-email webform-component--re-type-alternate-e-mail-address">
+  <label for="edit-submitted-re-type-alternate-e-mail-address">Re-type Alternate E-mail Address: </label>
+ <input class="email Form-input form-text form-email" size="60" type="email" id="edit-submitted-re-type-alternate-e-mail-address" name="submitted[re_type_alternate_e_mail_address]" />
+</div>
+<div  class="form-item webform-component webform-component-select webform-component--gender">
+  <label class="" for="edit-submitted-gender">Gender </label>
+ <select class="Form-input form-select" size="4" id="edit-submitted-gender" name="submitted[gender]"><option value="" selected="selected">- Select -</option><option value="Male">Male</option><option value="Female">Female</option><option value="Prefernottodisclose">Prefer not to disclose</option></select>
+</div>
+<div  class="form-item webform-component webform-component-markup webform-component--gender-and-citizenship-header">
+ 
+</div>
+<div  class="form-item webform-component webform-component-textfield webform-component--country-of-citizenship">
+  <label for="edit-submitted-country-of-citizenship">Country of Citizenship: <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="Form-input form-text required" size="" type="text" id="edit-submitted-country-of-citizenship" name="submitted[country_of_citizenship]" value="" maxlength="128" />
+</div>
+<div  class="form-item webform-component webform-component-markup webform-component--positions-header">
+ <p><b>2) Position(s) for which you wish to apply: </b></p>
+
+<p><i>(Note: Please review the specific criteria for each of the <a target="_blank" href="https://www.icann.org/resources/pages/nomcom2017-positions">Leadership Positions</a> before submitting this request form. Indicate below the preference you wish the Nominating Committee (NomCom) to use in evaluating your candidacy for the available position openings).</i></p>
+
+<b>Position Preference Selection:</b><br>
+Select the preference - 1st, 2nd, 3rd or 4th <b>only once</b> - or <b>"N/A"</b> for any position that you do not wish to be considered a candidate.<br><br>
+
+Positions:
+</div>
+<div  class="form-item webform-component webform-component-grid webform-component--positions">
+  <label class="element-invisible" for="edit-submitted-positions">Positions <span class="form-required" title="This field is required.">*</span></label>
+ <table class="webform-grid webform-grid-5 sticky-enabled">
+ <thead><tr><th class="webform-grid-question"></th><th class="checkbox webform-grid-option">1st</th><th class="checkbox webform-grid-option">2nd</th><th class="checkbox webform-grid-option">3rd</th><th class="checkbox webform-grid-option">4th</th><th class="checkbox webform-grid-option">N/A</th> </tr></thead>
+<tbody>
+ <tr class="odd"><td class="webform-grid-question">Board</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-Board">
+  <label class="element-invisible" for="edit-submitted-positions-board-1">Board - 1st </label>
+ <input required="required" type="radio" id="edit-submitted-positions-board-1" name="submitted[positions][Board]" value="1" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-Board">
+  <label class="element-invisible" for="edit-submitted-positions-board-2">Board - 2nd </label>
+ <input required="required" type="radio" id="edit-submitted-positions-board-2" name="submitted[positions][Board]" value="2" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-Board">
+  <label class="element-invisible" for="edit-submitted-positions-board-3">Board - 3rd </label>
+ <input required="required" type="radio" id="edit-submitted-positions-board-3" name="submitted[positions][Board]" value="3" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-Board">
+  <label class="element-invisible" for="edit-submitted-positions-board-4">Board - 4th </label>
+ <input required="required" type="radio" id="edit-submitted-positions-board-4" name="submitted[positions][Board]" value="4" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-Board">
+  <label class="element-invisible" for="edit-submitted-positions-board-5">Board - N/A </label>
+ <input required="required" type="radio" id="edit-submitted-positions-board-5" name="submitted[positions][Board]" value="na" class="form-radio" />
+</div>
+</td> </tr>
+ <tr class="even"><td class="webform-grid-question">GNSO</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-GNSO">
+  <label class="element-invisible" for="edit-submitted-positions-gnso-1">GNSO - 1st </label>
+ <input required="required" type="radio" id="edit-submitted-positions-gnso-1" name="submitted[positions][GNSO]" value="1" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-GNSO">
+  <label class="element-invisible" for="edit-submitted-positions-gnso-2">GNSO - 2nd </label>
+ <input required="required" type="radio" id="edit-submitted-positions-gnso-2" name="submitted[positions][GNSO]" value="2" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-GNSO">
+  <label class="element-invisible" for="edit-submitted-positions-gnso-3">GNSO - 3rd </label>
+ <input required="required" type="radio" id="edit-submitted-positions-gnso-3" name="submitted[positions][GNSO]" value="3" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-GNSO">
+  <label class="element-invisible" for="edit-submitted-positions-gnso-4">GNSO - 4th </label>
+ <input required="required" type="radio" id="edit-submitted-positions-gnso-4" name="submitted[positions][GNSO]" value="4" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-GNSO">
+  <label class="element-invisible" for="edit-submitted-positions-gnso-5">GNSO - N/A </label>
+ <input required="required" type="radio" id="edit-submitted-positions-gnso-5" name="submitted[positions][GNSO]" value="na" class="form-radio" />
+</div>
+</td> </tr>
+ <tr class="odd"><td class="webform-grid-question">ccNSO</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-ccNSO">
+  <label class="element-invisible" for="edit-submitted-positions-ccnso-1">ccNSO - 1st </label>
+ <input required="required" type="radio" id="edit-submitted-positions-ccnso-1" name="submitted[positions][ccNSO]" value="1" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-ccNSO">
+  <label class="element-invisible" for="edit-submitted-positions-ccnso-2">ccNSO - 2nd </label>
+ <input required="required" type="radio" id="edit-submitted-positions-ccnso-2" name="submitted[positions][ccNSO]" value="2" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-ccNSO">
+  <label class="element-invisible" for="edit-submitted-positions-ccnso-3">ccNSO - 3rd </label>
+ <input required="required" type="radio" id="edit-submitted-positions-ccnso-3" name="submitted[positions][ccNSO]" value="3" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-ccNSO">
+  <label class="element-invisible" for="edit-submitted-positions-ccnso-4">ccNSO - 4th </label>
+ <input required="required" type="radio" id="edit-submitted-positions-ccnso-4" name="submitted[positions][ccNSO]" value="4" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-ccNSO">
+  <label class="element-invisible" for="edit-submitted-positions-ccnso-5">ccNSO - N/A </label>
+ <input required="required" type="radio" id="edit-submitted-positions-ccnso-5" name="submitted[positions][ccNSO]" value="na" class="form-radio" />
+</div>
+</td> </tr>
+ <tr class="even"><td class="webform-grid-question">ALAC*</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-ALAC">
+  <label class="element-invisible" for="edit-submitted-positions-alac-1">ALAC* - 1st </label>
+ <input required="required" type="radio" id="edit-submitted-positions-alac-1" name="submitted[positions][ALAC]" value="1" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-ALAC">
+  <label class="element-invisible" for="edit-submitted-positions-alac-2">ALAC* - 2nd </label>
+ <input required="required" type="radio" id="edit-submitted-positions-alac-2" name="submitted[positions][ALAC]" value="2" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-ALAC">
+  <label class="element-invisible" for="edit-submitted-positions-alac-3">ALAC* - 3rd </label>
+ <input required="required" type="radio" id="edit-submitted-positions-alac-3" name="submitted[positions][ALAC]" value="3" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-ALAC">
+  <label class="element-invisible" for="edit-submitted-positions-alac-4">ALAC* - 4th </label>
+ <input required="required" type="radio" id="edit-submitted-positions-alac-4" name="submitted[positions][ALAC]" value="4" class="form-radio" />
+</div>
+</td><td class="checkbox webform-grid-option"><div class="form-item form-type-radio form-item-submitted-positions-ALAC">
+  <label class="element-invisible" for="edit-submitted-positions-alac-5">ALAC* - N/A </label>
+ <input required="required" type="radio" id="edit-submitted-positions-alac-5" name="submitted[positions][ALAC]" value="na" class="form-radio" />
+</div>
+</td> </tr>
+</tbody>
+</table>
+
+</div>
+<div  class="form-item webform-component webform-component-markup webform-component--alac-header">
+ <i><b>*<abbr title="At-Large Advisory Committee">ALAC</abbr> Leadership Positions in 2017 are for citizens of countries from Africa, Asia/Australia/Pacific Islands and Latin America/Caribbean Islands regions</b> (see <a target="_blank" href="https://meetings.icann.org/en/regions"><abbr title="Internet Corporation for Assigned Names and Numbers">ICANN</abbr>'s Geographic Regions for descriptions</a>). If you are not from one of these regions, please do not apply for an <abbr title="At-Large Advisory Committee">ALAC</abbr> Leadership Position this year, but please return to check for vacancies during the 2018 NomCom selection process</i>
+</div>
+<div  class="form-item webform-component webform-component-markup webform-component--consent-header">
+ <p><strong>3) Consent and Authorization:</strong></p>
+</div>
+<div  class="form-item webform-component webform-component-select webform-component--how-did-you-hear-about-us">
+  <label class="" for="edit-submitted-how-did-you-hear-about-us">How did you hear about us? <span class="form-required" title="This field is required.">*</span></label>
+ <select required="required" class="Form-input form-select required" size="5" id="edit-submitted-how-did-you-hear-about-us" name="submitted[how_did_you_hear_about_us]"><option value="" selected="selected">- Select -</option><option value="ICANN Website">ICANN Website</option><option value="ICANN Newsletter">ICANN Newsletter</option><option value="ICANN Meeting">ICANN Meeting</option><option value="ICANN Mailing List">ICANN Mailing List</option><option value="Conference">Conference</option><option value="Facebook">Facebook</option><option value="Twitter">Twitter</option><option value="Other Social Media">Other Social Media</option><option value="Friend">Friend</option><option value="Nominating Committee Member">Nominating Committee Member</option><option value="Other">Other</option></select>
+</div>
+<div  class="form-item webform-component webform-component-textfield webform-component--other">
+  <label for="edit-submitted-other">Other <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="Form-input form-text required" size="" type="text" id="edit-submitted-other" name="submitted[other]" value="" maxlength="128" />
+</div>
+<div  class="form-item webform-component webform-component-markup webform-component--consent-body">
+ <p><em>Under the NomCom's procedures, your candidacy will be treated as confidential unless you give the NomCom your permission to disclose it or unless the NomCom is consulting your references or conducting third-party reference checks from selected sources on a confidential basis. Third party checks may also be required as part of the candidate assessment process conducted by an external consultant and the due diligence process necessary before the NomCom can accept candidates for leadership positions in <abbr title="Internet Corporation for Assigned Names and Numbers">ICANN</abbr>.</em></p>
+
+<p><em>You authorize all pages of your application, and all information contained therein, to be transmitted across jurisdictional borders and to any and all countries around the globe to the extent required for the purposes of the NomCom activities as it relates to your candidacy. This authorization relates to all pieces of the application process and not simply this application request form.</em></p>
+
+<p><em>You also authorize the NomCom to consult with your references and provide them with a copy of your candidate profile and application(s), to investigate other information publicly available about you, and to conduct additional confidential third-party reference checks. You also authorize the NomCom to pass your candidate profile, application(s), and references to an external consultant that may be required as part of the assessment and due diligence processes. You will not be entitled to review or access any of the information received, obtained, generated, or considered by the NomCom regarding any Candidate or Selected Nominee, or any of the NomCom's discussions or deliberations regarding any Candidate or Selected Nominees. Candidates and Selected Nominees have no right to challenge or seek review of the NomCom's selections. The NomCom will not accept unsolicited comments about a candidate from any third party.</em></p>
+ 
+<p><em>Once selections are made, the NomCom will make the identities of only the Selected Nominees public. Although the NomCom will take reasonable steps to ensure that its confidentiality procedures are followed, Candidates and Selected Nominees shall have no claims against <abbr title="Internet Corporation for Assigned Names and Numbers">ICANN</abbr>, the NomCom or affiliated persons in the event information is disclosed despite our adherence to these procedures.</em></p>
+
+
+<p><em>Please indicate Yes that you understand the above statement and agree to become a candidate under the conditions described above:</em></p>
+</div>
+<div  class="form-item webform-component webform-component-checkboxes webform-component--consent">
+  <label class="element-invisible" for="edit-submitted-consent">Consent </label>
+ <div id="edit-submitted-consent" class="form-checkboxes"><p class="u-marginVs"><input type="checkbox" name="submitted[consent][yes]" id="edit-submitted-consent-1-checkbox" value="yes"   class="input-checkbox" /><label class="input-helper input-helper--checkbox option" for="edit-submitted-consent-1-checkbox">Yes</label></p></div>
+</div>
+<div  class="form-item webform-component webform-component-markup webform-component--next-header">
+ <p><b>NEXT STEPS:</b> The 2017 NomCom application process is being conducted within a RESTRICTED <abbr title="Internet Corporation for Assigned Names and Numbers">ICANN</abbr> wiki space. Once you successfully submit this candidacy request form, NomCom Staff will respond to you at your Email address provided above to begin the formal application process. </p>
+<p>You should expect to receive that email communication within 5 business days. If you are not contacted within that time-frame or have any questions about this process, please write to: <a href="mailto:nomcom2017@icann.org">nomcom2017@icann.org</a></p>
+
+<p>For more information about the NomCom, see: <br><a href="https://www.icann.org/nomcom2017">https://www.icann.org/nomcom2017</a></p>
+</div>
+<input type="hidden" name="details[sid]" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<input type="hidden" name="form_build_id" value="form-1tOeZFovWcy2LLmY5L06NO_WAGgCeqa5lg5cuhhmnwo" />
+<input type="hidden" name="form_id" value="webform_client_form_1172287" />
+<fieldset class="captcha form-wrapper"><legend><span class="fieldset-legend u-marginVs">CAPTCHA</span></legend><div class="fieldset-wrapper"><div class="fieldset-description">This question is for testing whether you are a human visitor and to prevent automated spam submissions.</div><input type="hidden" name="captcha_sid" value="8402045" />
+<input type="hidden" name="captcha_token" value="ec11079cb258a8195b786bdef2e33128" />
+<img src="/en/image_captcha?ts=1488140196&amp;sid=8402045" width="216" height="60" alt="Image CAPTCHA" title="Image CAPTCHA" /><div class="reload-captcha-wrapper"><a href="/en/captcha/refresh/webform_client_form_1172287" class="reload-captcha">Generate a new captcha</a></div><div class="form-item form-type-textfield form-item-captcha-response">
+  <label for="edit-captcha-response">What code is in the image? <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-captcha-response" name="captcha_response" value="" size="15" maxlength="128" class="form-text required" />
+<div class="description">Enter the characters shown in the image.</div>
+</div>
+</div></fieldset>
+<div class="form-actions"><input class="webform-submit button-primary button u-text-l u-marginVm form-submit" type="submit" name="op" value="Submit" /></div></div></form>  </div>
+  
+</article>
+    </div>
+  </section>
+</main>
+  
+<footer class="MainFooter" id="main_footer">
+
+  <!-- render footer_social region -->
+        
+
+  <section class="FooterSocial"><ul><li><a href="http://www.youtube.com/icannnews"><i class="fa fa-youtube "></i>YouTube</a></li><li><a href="https://twitter.com/#!/icann/"><i class="fa fa-twitter "></i>Twitter</a></li><li><a href="https://www.linkedin.com/company/icann"><i class="fa fa-linkedin "></i>LinkedIn</a></li><li><a href="http://www.flickr.com/photos/icann/"><i class="fa fa-flickr "></i>Flickr</a></li><li><a href="http://www.facebook.com/icannorg"><i class="fa fa-facebook "></i>Facebook</a></li><li><a href="http://new.icann.org/en/news/rss"><i class="fa fa-rss "></i>RSS Feeds</a></li><li><a href="https://community.icann.org/"><i class="fa fa-user "></i>Community Wiki</a></li><li><a href="http://blog.icann.org/"><i class="icon-wordpress "></i>ICANN Blog</a></li></ul></section>      
+  <!-- render footer region -->
+  <div class="MainFooter-content">
+          <nav class="FooterMenu">
+        
+
+        <div class="FooterMenu-item">
+          <h3 class="FooterMenu-title">Who We Are</h3>
+          <ul class="FooterSubmenu"><li><a href="https://new.icann.org/get-started">Get Started</a></li><li><a href="https://new.icann.org/en/about/learning">Learning</a></li><li><a href="https://new.icann.org/en/about/participate">Participate</a></li><li><a href="https://new.icann.org/resources/pages/board-of-directors-2014-03-19-en">Board</a></li><li><a href="https://new.icann.org/profiles/fadi-chehade">CEO</a></li><li><a href="https://new.icann.org/en/about/staff">Staff</a></li><li><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&amp;cws=37">Careers</a></li><li><a href="https://new.icann.org/en/news/newsletter">Newsletter</a></li></ul>        </div>
+  
+        <div class="FooterMenu-item">
+          <h3 class="FooterMenu-title">Contact Us</h3>
+          <ul class="FooterSubmenu"><li><a href="/en/contact">Offices</a></li><li><a href="https://www.icann.org/resources/pages/customer-support-2015-06-22-en">Customer Service</a></li><li><a href="https://www.icann.org/about/staff/security">Security Team</a></li><li><a href="https://new.icann.org/en/contact/pgp-keys">PGP Keys</a></li><li><a href="https://new.icann.org/contact/certificate-authority">Cerificate Authority</a></li><li><a href="https://new.icann.org/resources/pages/contact-36-2012-02-25-en">Registry Liasion</a></li><li><a href="http://forms.icann.org/en/about/aoc-review/contact">AOC Review</a></li><li><a href="http://forms.icann.org/en/groups/reviews/contact">Organizational Reviews</a></li><li><a href="http://forms.icann.org/en/contact/speakers">Request a Speaker</a></li><li><a href="https://new.icann.org/en/news/press">For Journalists</a></li></ul>        </div>
+  
+        <div class="FooterMenu-item accountability">
+          <h3 class="FooterMenu-title">Accountability &amp; Transparency</h3>
+          <ul class="FooterSubmenu"><li><a href="https://new.icann.org/en/about/governance">Governance</a></li><li><a href="https://new.icann.org/en/about/agreements">Agreements</a></li><li><a href="https://new.icann.org/en/news/in-focus/accountability/mechanisms">Accountability Mechanisms</a></li><li><a href="https://new.icann.org/en/help/irp/irp-questions-19jun10-en.htm">Independent Review Process</a></li><li><a href="https://new.icann.org/groups/board/governance/reconsideration">Request for Reconsideration</a></li><li><a href="https://new.icann.org/help/ombudsman">Ombudsman</a></li><li><a href="https://new.icann.org/en/about/aoc-review/contact">AOC Review</a></li><li><a href="https://new.icann.org/about/annual-report">Annual Report</a></li></ul>        </div>
+  
+        <div class="FooterMenu-item">
+          <h3 class="FooterMenu-title"></h3>
+          <ul class="FooterSubmenu"><li><a href="https://new.icann.org/en/about/financials">Financials</a></li><li><a href="https://new.icann.org/en/about/transparency">Document Disclosure</a></li><li><a href="https://new.icann.org/en/about/planning">Planning</a></li><li><a href="https://new.icann.org/en/news/correspondence">Correspondence</a></li><li><a href="https://charts.icann.org/public/">Dashboard</a></li><li><a href="https://new.icann.org/en/news/rfps">RFPs</a></li><li><a href="https://new.icann.org/en/news/litigation">Litigation</a></li></ul>        </div>
+  
+        <div class="FooterMenu-item">
+          <h3 class="FooterMenu-title">Help</h3>
+          <ul class="FooterSubmenu"><li><a href="https://new.icann.org/en/help/dispute-resolution">Dispute Resolution</a></li><li><a href="https://new.icann.org/en/help/dndr">Domain Name Dispute Resolution</a></li><li><a href="https://new.icann.org/en/help/name-collision">Name Collision</a></li><li><a href="https://new.icann.org/en/news/announcements/announcement-06mar07-en.htm">Registrar Problems</a></li><li><a href="http://whois.icann.org/">Whois</a></li></ul>        </div>
+        </nav>
+        
+    <!-- this is from rails eml but commented out there also -->
+    <!-- <section class="FooterSignUp"> -->
+    <!--   <h2>We use newsletters and emails to share our work and news.</h2> -->
+    <!--   <a href="#" class="button">Sign Up</a> -->
+    <!-- </section> -->
+    <section class="copyright">
+      <p>
+        <span>© 2017 Internet Corporation For Assigned Names and Numbers.</span>
+        <span><a href="https://new.icann.org/help/privacy">Privacy Policy</a></span>
+        <span><a href="https://new.icann.org/help/privacy-cookie-policy">Cookie Policy</a></span>
+      </p>
+    </section>
+  </div>
+  
+</footer>
+  </body>
+</html>

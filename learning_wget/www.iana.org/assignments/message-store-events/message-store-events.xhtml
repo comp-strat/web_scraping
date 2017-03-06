@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Internet Message Store Events</title>
+  </head>
+  <body>
+    <h1>Internet Message Store Events</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2008-12-04</dd>
+      <dt>Last Updated</dt>
+      <dd>2009-03-27</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-store-events.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="message-store-events.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="message-store-events.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#message-store-events-2">Event Names</a>
+      </li>
+      <li>
+        <a href="#message-store-events-4">Event Parameters</a>
+      </li>
+    </ul>
+    <h2><a name="message-store-events-2" id="message-store-events-2"></a>Event Names</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-store-events-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-message-store-events-2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">name starts wth "vnd."; intended for private use</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">name doesn't start with "vnd."; intended for interoperable use</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-message-store-events-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>FlagsClear</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>FlagsSet</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>Login</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>Logout</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MailboxCreate</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MailboxDelete</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MailboxRename</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MailboxSubscribe</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MailboxUnSubscribe</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MessageAppend</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MessageExpire</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MessageExpunge</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MessageNew</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MessageRead</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>MessageTrash</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>QuotaChange</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>QuotaExceed</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>QuotaWithin</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="message-store-events-4" id="message-store-events-4"></a>Event Parameters</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-store-events-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-message-store-events-4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">name starts wth "vnd."; intended for private use</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">name doesn't start with "vnd."; intended for interoperable use</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-message-store-events-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Event Parameter</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>admin</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>bodyStructure</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>clientIP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>clientPort</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>diskQuota</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>diskUsed</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>envelope</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>flagNames</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>mailboxID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>maxMessages</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>messageContent</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>messageSize</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>modseq</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>oldMailboxID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>pid</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>process</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>serverDomain</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>serverFQDN</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>serverPort</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>service</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>tags</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>timestamp</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>uidnext</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>uidset</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>uri</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+        <tr>
+          <td>user</td>
+          <td>[<a href="http://www.iana.org/go/rfc5423">RFC5423</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Next Hop Resolution Protocol (NHRP) Types</title>
+  </head>
+  <body>
+    <h1>Next Hop Resolution Protocol (NHRP) Types</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2009-02-17</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="nhrp-types.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="nhrp-types.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="nhrp-types.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#nhrp-types-1">NHRP Packet Types</a>
+      </li>
+      <li>
+        <a href="#nhrp-types-2">NHRP Extension Types</a>
+      </li>
+    </ul>
+    <h2><a name="nhrp-types-1" id="nhrp-types-1"></a>NHRP Packet Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Luciani</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>When ar$op.version == 1, the NHRP packet type is listed below.
+
+Use of NHRP packet Types in the range 128 to 255 are reserved for
+research or use in other protocol development and will be administered
+by IANA as described in Section 9 of [<a href="http://www.iana.org/go/rfc2332">RFC2332</a>].</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="nhrp-types-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-nhrp-types-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>NHRP Resolution Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>NHRP Resolution Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>NHRP Registration Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>NHRP Registration Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>NHRP Purge Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>NHRP Purge Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>NHRP Error Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="nhrp-types-2" id="nhrp-types-2"></a>NHRP Extension Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jim Luciani</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The NHRP extension Type space is subdivided to encourage use outside
+the IETF.
+
+     0x0000 - 0x0FFF         Reserved for NHRP.
+     0x1000 - 0x11FF         Allocated to the ATM Forum.
+     0x1200 - 0x37FF         Reserved for the IETF.
+     0x3800 - 0x3FFF         Experimental use.
+
+IANA will administer the ranges reserved for the IETF as described in
+Section 9. Values in the 'Experimental use' range have only local
+significance.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="nhrp-types-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-nhrp-types-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>The End of Extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-2</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Responder Address Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>NHRP Forward Transit NHS Record Ext.</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>NHRP Reverse Transit NHS Record Ext.</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>NHRP Authentication Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>NHRP Vendor-Private Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc2332">RFC2332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>NHRP Mobile NHC Authentication Ext.</td>
+          <td>[<a href="http://www.iana.org/go/rfc2520">RFC2520</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

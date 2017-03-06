@@ -1,0 +1,91 @@
+###############################################################
+#
+# TLD:            NET
+# Script:         Carian
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Carian script.
+#
+###############################################################
+U+102A0	# CARIAN LETTER A
+U+102A1	# CARIAN LETTER P2
+U+102A2	# CARIAN LETTER D
+U+102A3	# CARIAN LETTER L
+U+102A4	# CARIAN LETTER UUU
+U+102A5	# CARIAN LETTER R
+U+102A6	# CARIAN LETTER LD
+U+102A7	# CARIAN LETTER A2
+U+102A8	# CARIAN LETTER Q
+U+102A9	# CARIAN LETTER B
+U+102AA	# CARIAN LETTER M
+U+102AB	# CARIAN LETTER O
+U+102AC	# CARIAN LETTER D2
+U+102AD	# CARIAN LETTER T
+U+102AE	# CARIAN LETTER SH
+U+102AF	# CARIAN LETTER SH2
+U+102B0	# CARIAN LETTER S
+U+102B1	# CARIAN LETTER C-18
+U+102B2	# CARIAN LETTER U
+U+102B3	# CARIAN LETTER NN
+U+102B4	# CARIAN LETTER X
+U+102B5	# CARIAN LETTER N
+U+102B6	# CARIAN LETTER TT2
+U+102B7	# CARIAN LETTER P
+U+102B8	# CARIAN LETTER SS
+U+102B9	# CARIAN LETTER I
+U+102BA	# CARIAN LETTER E
+U+102BB	# CARIAN LETTER UUUU
+U+102BC	# CARIAN LETTER K
+U+102BD	# CARIAN LETTER K2
+U+102BE	# CARIAN LETTER ND
+U+102BF	# CARIAN LETTER UU
+U+102C0	# CARIAN LETTER G
+U+102C1	# CARIAN LETTER G2
+U+102C2	# CARIAN LETTER ST
+U+102C3	# CARIAN LETTER ST2
+U+102C4	# CARIAN LETTER NG
+U+102C5	# CARIAN LETTER II
+U+102C6	# CARIAN LETTER C-39
+U+102C7	# CARIAN LETTER TT
+U+102C8	# CARIAN LETTER UUU2
+U+102C9	# CARIAN LETTER RR
+U+102CA	# CARIAN LETTER MB
+U+102CB	# CARIAN LETTER MB2
+U+102CC	# CARIAN LETTER MB3
+U+102CD	# CARIAN LETTER MB4
+U+102CE	# CARIAN LETTER LD2
+U+102CF	# CARIAN LETTER E2
+U+102D0	# CARIAN LETTER UUU3
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

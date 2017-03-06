@@ -1,0 +1,38 @@
+TLD: PL
+Language Tag: it-PL
+Language Description: Italian
+Version: 1.1
+Effective Date: 20 October 2003
+Registry: NASK
+Contact: Krzysztof Olesik kolesik@nask.pl
+Address: Wawozowa 18 Str, 02-796 Warsaw, Poland
+Tel: +48 22 52 31 200 Fax: +48 22 52 31 301
+Website: http://www.nask.pl/nask_en/, http://www.dns.pl/english/
+
+ 
+
+Relevant Policy Document URL: http://www.dns.pl/IDN/idn-registration-policy.txt 
+
+
+This document presents a character table created by NASK (Research and Academic Computer Network - .PL ccTLD registry) for Italian language. The document is intended for informational purpose only and for exclusive use by .PL ccTLD Registry.
+The character set was created on the basis of the following sources: 
+1. http://www.evertype.com/alphabets/index.html
+2. http://www.omniglot.com
+3. http://www.unicode.org/cldr/charts/25/summary/root.html
+The table does not provide neither definition of an alphabet nor language itself. The table may contain additional letters which are used to represent foreign names and words. These letters may not be listed in the alphabet, or may be listed very rarely. Full policy of IDNs registration is presented in the following document "Registering Internationalized Domain Names under .PL" A. Bartosiewicz, K. Olesik (http://www.dns.pl/IDN/idn-registration-policy.txt).
+
+The following characters are given in their Unicode code points in format U+XXXX, where X is a hexadecimal digit. The range of code points is expressed as U+XXXX..U+YYYY, where XXXX and YYYY are the first and last Unicode code point in the range.
+
+U+002D                HYPEN-MINUS
+U+0030..U+0039        DIGIT ZERO .. DIGIT 9
+U+0061..U+007A        LATIN SMALL LETTER A .. LATIN SMALL LETTER Z
+U+00E0                LATIN SMALL LETTER A WITH GRAVE
+U+00E8                LATIN SMALL LETTER E WITH GRAVE
+U+00E9                LATIN SMALL LETTER E WITH ACUTE
+U+00EC                LATIN SMALL LETTER I WITH GRAVE
+U+00ED                LATIN SMALL LETTER I WITH ACUTE
+U+00EF                LATIN SMALL LETTER I WITH DIAERESIS
+U+00F2                LATIN SMALL LETTER O WITH GRAVE
+U+00F9                LATIN SMALL LETTER U WITH GRAVE
+U+00FA                LATIN SMALL LETTER U WITH ACUTE
+

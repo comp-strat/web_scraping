@@ -1,0 +1,2320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Mobile Ad hoc NETwork (MANET) Parameters</title>
+  </head>
+  <body>
+    <h1>Mobile Ad hoc NETwork (MANET) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2008-12-23</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-05-27</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="manet-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="manet-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="manet-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#message-types">Message Types</a>
+      </li>
+      <li>
+        <a href="#tc-message-type-specific-message">TC Message-Type-specific Message TLV Types</a>
+      </li>
+      <li>
+        <a href="#tc-message-type-specific-address-block">TC Message-Type-specific Address Block TLV Types</a>
+      </li>
+      <li>
+        <a href="#packet-tlv-types">Packet TLV Types</a>
+      </li>
+      <li>
+        <a href="#message-tlv-types">Message TLV Types</a>
+      </li>
+      <li>
+        <a href="#interval-time-message-type-extension">Type 0 Message TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#validity-time-message-type-extension">Type 1 Message TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#mpr-willing-message-type-extension">Type 7 Message TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#cont-seq-num-message-type-extension">Type 8 Message TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#message-tlv-hello">HELLO Message-Type-specific Message TLV Types</a>
+      </li>
+      <li>
+        <a href="#address-block-tlv-types">Address Block TLV Types</a>
+      </li>
+      <li>
+        <a href="#interval-time-address-block-tlv-type-extension">Type 0 Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#validity-time-address-block-tlv-type-extension">Type 1 Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#local-if-address-block-tlv-type-extension">Type 2 Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#link-status-address-block-tlv-type-extension">Type 3 Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#other-neighb-address-block-tlv-type-extension">Type 4 Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#link-metric-address-block-tlv-type-extension">LINK_METRIC Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#mpr-address-block-tlv-type-extension">Type 8 Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#nbr-addr-type-address-block-tlv-type-extension">Type 9 Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#gateway-address-block-tlv-type-extension">Type 10 Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#address-tlv-hello">HELLO Message-Type-specific Address Block TLV Types</a>
+      </li>
+      <li>
+        <a href="#icv-packet-tlv-types">ICV Packet TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#timestamp-packet-tlv-types">TIMESTAMP Packet TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#icv-message-tlv-types">ICV Message TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#timestamp-message-tlv-types">TIMESTAMP Message TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#icv-address-tlv-types">ICV Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#timestamp-address-tlv-types">TIMESTAMP Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#hash-functions">Hash Functions</a>
+      </li>
+      <li>
+        <a href="#cryptographic-algorithm">Cryptographic Functions</a>
+      </li>
+      <li>
+        <a href="#smf-type-extensions">SMF_TYPE Message TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#smf-nbr-types">SMF_NBR_TYPE Address Block TLV Type Extensions</a>
+      </li>
+      <li>
+        <a href="#smf-relay-ids">SMF Relay Algorithm IDs</a>
+      </li>
+      <li>
+        <a href="#local_if-tlv">LOCAL_IF TLV Values</a>
+      </li>
+      <li>
+        <a href="#link_status-tlv">LINK_STATUS TLV Values</a>
+      </li>
+      <li>
+        <a href="#other_neighb-tlv">OTHER_NEIGHB TLV Values</a>
+      </li>
+      <li>
+        <a href="#mpr-tlv-bit">MPR TLV BIT Values</a>
+      </li>
+      <li>
+        <a href="#nbr_addr_type-address-block-tlv-bit">NBR_ADDR_TYPE Address Block TLV Bit Values</a>
+      </li>
+    </ul>
+    <h2><a name="message-types" id="message-types"></a>Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-message-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>HELLO : Local signaling</td>
+          <td>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>TC : Topology Control (MANET-wide signaling)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="tc-message-type-specific-message" id="tc-message-type-specific-message"></a>TC Message-Type-specific Message TLV Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="tc-message-type-specific-message.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-tc-message-type-specific-message-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Reserved</td>
+          <td>Common to all Message Types, per [<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128-223</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved</td>
+          <td>Common to all Message Types, per [<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-tc-message-type-specific-message" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="tc-message-type-specific-address-block" id="tc-message-type-specific-address-block"></a>TC Message-Type-specific Address Block TLV Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="tc-message-type-specific-address-block.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-tc-message-type-specific-address-block-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Reserved</td>
+          <td>Common to all Message Types, per [<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128-223</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved</td>
+          <td>Common to all Message Types, per [<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-tc-message-type-specific-address-block" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="packet-tlv-types" id="packet-tlv-types"></a>Packet TLV Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="packet-tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-packet-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-4</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>ICV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>TIMESTAMP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="message-tlv-types" id="message-tlv-types"></a>Message TLV Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-message-tlv-types-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-223</td>
+          <td>Expert Review</td>
+          <td>Reserved for Message Type Specific Message TLVs</td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-message-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-4</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>ICV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>TIMESTAMP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="interval-time-message-type-extension" id="interval-time-message-type-extension"></a>Type 0 Message TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="interval-time-message-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-interval-time-message-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>INTERVAL_TIME</td>
+          <td>The maximum time before another message of the same 
+        type as this message from the same originator should be received</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="validity-time-message-type-extension" id="validity-time-message-type-extension"></a>Type 1 Message TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="validity-time-message-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-validity-time-message-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>VALIDITY_TIME</td>
+          <td>The time from receipt of the message during which the  
+        information contained in the message is to be considered valid</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mpr-willing-message-type-extension" id="mpr-willing-message-type-extension"></a>Type 7 Message TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mpr-willing-message-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mpr-willing-message-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>MPR_WILLING</td>
+          <td>First (most significant) half octet of Value field 
+      specifies the originating router's willingness to act as a 
+      flooding MPR; subsequent half octets specify the originating 
+      router's willingness to act as a routing MPR, either for the link 
+      metric types reported in an MPR_TYPES TLV (in the same order), or (if 
+      no MPR_TYPES TLV is present) for the single administratively agreed 
+      link metric type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>][<a href="http://www.iana.org/go/rfc7722">RFC7722</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>MPR_TYPES</td>
+          <td>The link metric types supported on this OLSRv2 interface of 
+      this router (one octet each)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7722">RFC7722</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="cont-seq-num-message-type-extension" id="cont-seq-num-message-type-extension"></a>Type 8 Message TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cont-seq-num-message-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-cont-seq-num-message-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>CONT_SEQ_NUM (COMPLETE)</td>
+          <td>Specifies a content sequence number for this complete message.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>CONT_SEQ_NUM (INCOMPLETE)</td>
+          <td>Specifies a content sequence number for this incomplete message.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="message-tlv-hello" id="message-tlv-hello"></a>HELLO Message-Type-specific Message TLV Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-tlv-hello.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-message-tlv-hello-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Reserved</td>
+          <td>Common to all Message Types, [<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128-223</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved</td>
+          <td>Common to all Message Types, [<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-message-tlv-hello" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>SMF_TYPE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="address-block-tlv-types" id="address-block-tlv-types"></a>Address Block TLV Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="address-block-tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-address-block-tlv-types-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-223</td>
+          <td>Expert Review</td>
+          <td>Reserved for Message Type Specific Address Block TLVs</td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-address-block-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>ICV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>TIMESTAMP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>LINK_METRIC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Defined by Type Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="interval-time-address-block-tlv-type-extension" id="interval-time-address-block-tlv-type-extension"></a>Type 0 Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="interval-time-address-block-tlv-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-interval-time-address-block-tlv-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>INTERVAL_TIME</td>
+          <td>The maximum time before another message of the same 
+        type as this message from the same originator and containing this address should be received</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="validity-time-address-block-tlv-type-extension" id="validity-time-address-block-tlv-type-extension"></a>Type 1 Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="validity-time-address-block-tlv-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-validity-time-address-block-tlv-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>VALIDITY_TIME</td>
+          <td>The time from receipt of the address during which the  
+        information regarding this address is to be considered valid</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5497">RFC5497</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="local-if-address-block-tlv-type-extension" id="local-if-address-block-tlv-type-extension"></a>Type 2 Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="local-if-address-block-tlv-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-local-if-address-block-tlv-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>LOCAL_IF</td>
+          <td>This value is to be interpreted according to the registry 
+      [<a href="http://www.iana.org/assignments/manet-parameters/manet-parameters.xhtml#local_if-tlv">LOCAL_IF TLV Values</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>][<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="link-status-address-block-tlv-type-extension" id="link-status-address-block-tlv-type-extension"></a>Type 3 Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="link-status-address-block-tlv-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-link-status-address-block-tlv-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>LINK_STATUS</td>
+          <td>This value is to be interpreted according to the registry 
+      [<a href="http://www.iana.org/assignments/manet-parameters/manet-parameters.xhtml#link_status-tlv">LINK_STATUS TLV Values</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>][<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="other-neighb-address-block-tlv-type-extension" id="other-neighb-address-block-tlv-type-extension"></a>Type 4 Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="other-neighb-address-block-tlv-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-other-neighb-address-block-tlv-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>OTHER_NEIGHB</td>
+          <td>This value is to be interpreted according to the registry 
+      [<a href="http://www.iana.org/assignments/manet-parameters/manet-parameters.xhtml#other_neighb-tlv">OTHER_NEIGHB TLV Values</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>][<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="link-metric-address-block-tlv-type-extension" id="link-metric-address-block-tlv-type-extension"></a>LINK_METRIC Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Also see the corresponding MIB at [<a href="http://www.iana.org/assignments/ianaolsrv2linkmetrictype-mib">http://www.iana.org/assignments/ianaolsrv2linkmetrictype-mib</a>].</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="link-metric-address-block-tlv-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-link-metric-address-block-tlv-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-7</td>
+          <td>Link metric meaning assigned by administrative action.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>][<a href="http://www.iana.org/go/rfc7722">RFC7722</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mpr-address-block-tlv-type-extension" id="mpr-address-block-tlv-type-extension"></a>Type 8 Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mpr-address-block-tlv-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mpr-address-block-tlv-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>MPR</td>
+          <td>This value is to be interpreted according to the registry 
+      [<a href="http://www.iana.org/assignments/manet-parameters/manet-parameters.xhtml#mpr-tlv-bit">MPR TLV Bit Values</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>][<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="nbr-addr-type-address-block-tlv-type-extension" id="nbr-addr-type-address-block-tlv-type-extension"></a>Type 9 Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="nbr-addr-type-address-block-tlv-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-nbr-addr-type-address-block-tlv-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>NBR_ADDR_TYPE</td>
+          <td>This value is to be interpreted according to the registry 
+      [<a href="http://www.iana.org/assignments/manet-parameters/manet-parameters.xhtml#nbr_addr_type-address-block-tlv-bit">NBR_ADDR_TYPE Address Block TLV Bit Values</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>][<a href="http://www.iana.org/go/rfc7181">RFC7181</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="gateway-address-block-tlv-type-extension" id="gateway-address-block-tlv-type-extension"></a>Type 10 Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>][<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="gateway-address-block-tlv-type-extension.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-gateway-address-block-tlv-type-extension" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>GATEWAY</td>
+          <td>Specifies that a given network address is reached 
+      via a gateway on the originating router. The number of hops is indicated 
+      by the Value field, one octet per link metric type reported in an 
+      MPR_TYPES Message TLV (in the same order) or (if no MPR_TYPES Message 
+      TLV is present) using a single octet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7181">RFC7181</a>][<a href="http://www.iana.org/go/rfc7722">RFC7722</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-223</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7631">RFC7631</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="address-tlv-hello" id="address-tlv-hello"></a>HELLO Message-Type-specific Address Block TLV Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6130">RFC6130</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="address-tlv-hello.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-address-tlv-hello-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Reserved</td>
+          <td>Common to all Message Types, per [<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128-223</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved</td>
+          <td>Common to all Message Types, per [<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-address-tlv-hello" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>SMF_NBR_TYPE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5444">RFC5444</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icv-packet-tlv-types" id="icv-packet-tlv-types"></a>ICV Packet TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icv-packet-tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icv-packet-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>ICV of a packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>ICV, using a cryptographic function and a hash function, as specified in Section 12 of [<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ICV, using a cryptographic function and a hash function, and including the IP datagram source address, as specified in Section 12 of [<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-251</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">252-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="timestamp-packet-tlv-types" id="timestamp-packet-tlv-types"></a>TIMESTAMP Packet TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="timestamp-packet-tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-timestamp-packet-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unsigned timestamp of arbitrary length, given by the TLV Length field. The MANET routing protocol has to define how to interpret this timestamp</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Unsigned 32-bit timestamp, as specified in [<a href="http://pubs.opengroup.org/onlinepubs/9699919799/">IEEE 1003.1-2008 (POSIX)</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>NTP timestamp format, as defined in [<a href="http://www.iana.org/go/rfc5905">RFC5905</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Signed timestamp of arbitrary length with no constraints such as monotonicity. In particular, it may represent any random value</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-251</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">252-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icv-message-tlv-types" id="icv-message-tlv-types"></a>ICV Message TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icv-message-tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icv-message-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>ICV of a message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>ICV, using a cryptographic function and a hash function, as specified in Section 12 of [<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ICV, using a cryptographic function and a hash function, and including the IP datagram source address, as specified in Section 12 of [<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-251</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">252-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="timestamp-message-tlv-types" id="timestamp-message-tlv-types"></a>TIMESTAMP Message TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="timestamp-message-tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-timestamp-message-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unsigned timestamp of arbitrary length, given by the TLV Length field. The MANET routing protocol has to define how to interpret this timestamp</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Unsigned 32-bit timestamp, as specified in [<a href="http://pubs.opengroup.org/onlinepubs/9699919799/">IEEE 1003.1-2008 (POSIX)</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>NTP timestamp format, as defined in [<a href="http://www.iana.org/go/rfc5905">RFC5905</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Signed timestamp of arbitrary length with no constraints such as monotonicity. In particular, it may represent any random value</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-251</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">252-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icv-address-tlv-types" id="icv-address-tlv-types"></a>ICV Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icv-address-tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icv-address-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>ICV of an object (e.g. an address)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>ICV, using a cryptographic function and a hash function, as specified in Section 12 of [<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ICV, using a cryptographic function and a hash function, and including the IP datagram source address, as specified in Section 12 of [<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-251</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">252-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="timestamp-address-tlv-types" id="timestamp-address-tlv-types"></a>TIMESTAMP Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="timestamp-address-tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-timestamp-address-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unsigned timestamp of arbitrary length, given by the TLV Length field. The MANET routing protocol has to define how to interpret this timestamp</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Unsigned 32-bit timestamp, as specified in [<a href="http://pubs.opengroup.org/onlinepubs/9699919799/">IEEE 1003.1-2008 (POSIX)</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>NTP timestamp format, as defined in [<a href="http://www.iana.org/go/rfc5905">RFC5905</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Signed timestamp of arbitrary length with no constraints such as monotonicity. In particular, it may represent any random value</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-251</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">252-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hash-functions" id="hash-functions"></a>Hash Functions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hash-functions.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hash-functions" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Algorithm</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>none</td>
+          <td>The "identity function": The hash value of an object is the object itself</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>SHA-1</td>
+          <td>[<a href="http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf">NIST-FIPS-180-4</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>SHA-224</td>
+          <td>[<a href="http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf">NIST-FIPS-180-4</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>SHA-256</td>
+          <td>[<a href="http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf">NIST-FIPS-180-4</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>SHA-384</td>
+          <td>[<a href="http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf">NIST-FIPS-180-4</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>SHA-512</td>
+          <td>[<a href="http://csrc.nist.gov/publications/fips/fips180-4/fips-180-4.pdf">NIST-FIPS-180-4</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-251</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">252-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="cryptographic-algorithm" id="cryptographic-algorithm"></a>Cryptographic Functions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cryptographic-algorithm.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-cryptographic-algorithm" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Algorithm</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>none</td>
+          <td>The "identity function": The value of an encrypted hash is the hash itself</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>RSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc3447">RFC3447</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>DSA</td>
+          <td>[<a href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf">NIST-FIPS-186-4</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>HMAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc2104">RFC2104</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>3DES</td>
+          <td>[<a href="http://csrc.nist.gov/publications/nistpubs/800-67-Rev1/SP-800-67-Rev1.pdf">NIST-SP-800-67</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>AES</td>
+          <td>[<a href="http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf">NIST-FIPS-197</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>ECDSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc6090">RFC6090</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>ECCSI</td>
+          <td>ECCSI [<a href="http://www.iana.org/go/rfc6507">RFC6507</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7859">RFC7859</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>ECCSI-ADDR</td>
+          <td>ECCSI [<a href="http://www.iana.org/go/rfc6507">RFC6507</a>] with an address (source 
+      or originator) joined to identity</td>
+          <td>[<a href="http://www.iana.org/go/rfc7859">RFC7859</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-251</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">252-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7182">RFC7182</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="smf-type-extensions" id="smf-type-extensions"></a>SMF_TYPE Message TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Specifies relay algorithm supported by the SMF router, 
+originating the HELLO message, according to Section 11.4.4.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="smf-type-extensions.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-smf-type-extensions" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="smf-nbr-types" id="smf-nbr-types"></a>SMF_NBR_TYPE Address Block TLV Type Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Specifies relay algorithm supported by the SMF router corresponding 
+to the advertised address, according to Section 11.4.4.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="smf-nbr-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-smf-nbr-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Extension</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="smf-relay-ids" id="smf-relay-ids"></a>SMF Relay Algorithm IDs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>A specification requesting an allocation from the 4-127 range from 
+the SMF Relay Algorithm ID Registry MUST specify the interpretation of 
+the &lt;value&gt; field (if any).</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="smf-relay-ids.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-smf-relay-ids" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>CF</td>
+          <td>Section 4</td>
+          <td>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>S-MPR</td>
+          <td>Appendix B</td>
+          <td>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>E-CDS</td>
+          <td>Appendix A</td>
+          <td>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>MPR-CDS</td>
+          <td>Appendix C</td>
+          <td>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-127</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td></td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6621">RFC6621</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="local_if-tlv" id="local_if-tlv"></a>LOCAL_IF TLV Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="local_if-tlv.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-local_if-tlv" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>THIS_IF</td>
+          <td>The network address is associated with this local interface 
+        of the sending router</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>OTHER_IF</td>
+          <td>The network address is associated with another local interface 
+        of the sending router</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-223</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-254</td>
+          <td>Reserved for Experimental Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>UNSPECIFIED</td>
+          <td>No information about this network address is provided</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="link_status-tlv" id="link_status-tlv"></a>LINK_STATUS TLV Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="link_status-tlv.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-link_status-tlv" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>LOST</td>
+          <td>The link on this interface from the router with that network 
+      address has been lost</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>SYMMETRIC</td>
+          <td>The link on this interface from the router with that network 
+      address has the status of symmetric</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>HEARD</td>
+          <td>The link on this interface from the router with that network 
+      address has the status of heard</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-223</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-254</td>
+          <td>Reserved for Experimental Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>UNSPECIFIED</td>
+          <td>No information about this network address is provided</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="other_neighb-tlv" id="other_neighb-tlv"></a>OTHER_NEIGHB TLV Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="other_neighb-tlv.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-other_neighb-tlv" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>LOST</td>
+          <td>The neighbor relationship with the router with that network 
+      address has been lost</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>SYMMETRIC</td>
+          <td>The neighbor relationship with the router with that network 
+      address is symmetric</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-223</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">224-254</td>
+          <td>Reserved for Experimental Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>UNSPECIFIED</td>
+          <td>No information about this network address is provided</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mpr-tlv-bit" id="mpr-tlv-bit"></a>MPR TLV BIT Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mpr-tlv-bit.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mpr-tlv-bit" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">First octet bit 7</td>
+          <td align="center">First octet 0x01</td>
+          <td>Flooding</td>
+          <td>If set, then the neighbor with that network address has been 
+        selected as flooding MPR</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>][<a href="http://www.iana.org/go/rfc7722">RFC7722</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">From first octet bit 6</td>
+          <td align="center">From first octet 0x02</td>
+          <td>Routing</td>
+          <td>If set, then the neighbor with that network address has been 
+        selected as routing MPR, either for the link metric types reported in an 
+        MPR_TYPES TLV (in the same order), or (if no MPR_TYPES TLV is present) 
+        then (first octet bit 6, value 0x02) for the single administratively 
+        agreed link metric type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>][<a href="http://www.iana.org/go/rfc7722">RFC7722</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="nbr_addr_type-address-block-tlv-bit" id="nbr_addr_type-address-block-tlv-bit"></a>NBR_ADDR_TYPE Address Block TLV Bit Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joe Macker, Stan Ratliff</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="nbr_addr_type-address-block-tlv-bit.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-nbr_addr_type-address-block-tlv-bit" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">7</td>
+          <td align="center">0x01</td>
+          <td>ORIGINATOR</td>
+          <td>The network address is an originator address reachable via the 
+      originating router</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td align="center">0x02</td>
+          <td>ROUTABLE</td>
+          <td>The network address is a routable address reachable via the 
+      originating router</td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0-5</td>
+          <td align="center"></td>
+          <td>Unassigned</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7188">RFC7188</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

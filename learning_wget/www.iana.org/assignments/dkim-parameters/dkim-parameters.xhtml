@@ -1,0 +1,544 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>DomainKeys Identified Mail (DKIM) Parameters</title>
+  </head>
+  <body>
+    <h1>DomainKeys Identified Mail (DKIM) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2007-03-08</dd>
+      <dt>Last Updated</dt>
+      <dd>2012-06-25</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dkim-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="dkim-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="dkim-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#dkim-parameters-1">DKIM Signature Tag Specifications</a>
+      </li>
+      <li>
+        <a href="#dkim-parameters-2">DKIM-Signature Query Method</a>
+      </li>
+      <li>
+        <a href="#dkim-parameters-3">DKIM-Signature Canonicalization Header</a>
+      </li>
+      <li>
+        <a href="#dkim-parameters-4">DKIM-Signature Canonicalization Body</a>
+      </li>
+      <li>
+        <a href="#dkim-parameters-5">_domainkey DNS TXT Record Tag Specifications</a>
+      </li>
+      <li>
+        <a href="#dkim-parameters-6">DKIM Key Type</a>
+      </li>
+      <li>
+        <a href="#dkim-parameters-7">DKIM Hash Algorithms</a>
+      </li>
+      <li>
+        <a href="#dkim-parameters-8">DKIM Service Types</a>
+      </li>
+      <li>
+        <a href="#dkim-parameters-9">DKIM Selector Flags</a>
+      </li>
+      <li>
+        <a href="#atps-tag">Authorized Third-Party Signature (ATPS) Tag Registry</a>
+      </li>
+      <li>
+        <a href="#reporting-tag">DKIM Reporting Tag Registry</a>
+      </li>
+    </ul>
+    <h2><a name="dkim-parameters-1" id="dkim-parameters-1"></a>DKIM Signature Tag Specifications</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dkim-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dkim-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">v</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">a</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">b</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">bh</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">c</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">d</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">h</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">i</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">l</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">q</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">s</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">t</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">x</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">z</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">atps</td>
+          <td>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">atpsh</td>
+          <td>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">r</td>
+          <td>[<a href="http://www.iana.org/go/rfc6651">RFC6651</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dkim-parameters-2" id="dkim-parameters-2"></a>DKIM-Signature Query Method</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dkim-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dkim-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Option</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">dns</td>
+          <td>txt</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dkim-parameters-3" id="dkim-parameters-3"></a>DKIM-Signature Canonicalization Header</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dkim-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dkim-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">simple</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">relaxed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dkim-parameters-4" id="dkim-parameters-4"></a>DKIM-Signature Canonicalization Body</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dkim-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dkim-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">simple</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">relaxed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dkim-parameters-5" id="dkim-parameters-5"></a>_domainkey DNS TXT Record Tag Specifications</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dkim-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dkim-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">v</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">g</td>
+          <td>[<a href="http://www.iana.org/go/rfc4871">RFC4871</a>]</td>
+          <td>historic</td>
+        </tr>
+        <tr>
+          <td align="center">h</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">k</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">n</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">p</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">s</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">t</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dkim-parameters-6" id="dkim-parameters-6"></a>DKIM Key Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dkim-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dkim-parameters-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">rsa</td>
+          <td>[<a href="http://www.iana.org/go/rfc3447">RFC3447</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dkim-parameters-7" id="dkim-parameters-7"></a>DKIM Hash Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dkim-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dkim-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">sha1</td>
+          <td>[<a href="http://csrc.nist.gov/publications/fips/fips180-3/fips180-3_final.pdf">FIPS-180-3-2008</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">sha256</td>
+          <td>[<a href="http://csrc.nist.gov/publications/fips/fips180-3/fips180-3_final.pdf">FIPS-180-3-2008</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dkim-parameters-8" id="dkim-parameters-8"></a>DKIM Service Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dkim-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dkim-parameters-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">email</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">*</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dkim-parameters-9" id="dkim-parameters-9"></a>DKIM Selector Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dkim-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dkim-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">y</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">s</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="atps-tag" id="atps-tag"></a>Authorized Third-Party Signature (ATPS) Tag Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="atps-tag.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-atps-tag" class="sortable">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">d</td>
+          <td>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">v</td>
+          <td>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="reporting-tag" id="reporting-tag"></a>DKIM Reporting Tag Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6651">RFC6651</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="reporting-tag.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-reporting-tag" class="sortable">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Reference</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">ra</td>
+          <td>[<a href="http://www.iana.org/go/rfc6651">RFC6651</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">rp</td>
+          <td>[<a href="http://www.iana.org/go/rfc6651">RFC6651</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">rr</td>
+          <td>[<a href="http://www.iana.org/go/rfc6651">RFC6651</a>]</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td align="center">rs</td>
+          <td>[<a href="http://www.iana.org/go/rfc6651">RFC6651</a>]</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+﻿
+IDN Table 
+
+TLD: ДЕТИ 
+Language Tag: ru-RU 
+Language Description: Russian 
+Script or Language Designator: Russian Cyrillic script 
+Version: 1.0 
+Effective Date: 14 March 2011
+
+Registry Operator: The Foundation for Network Initiatives "The Smart Internet" (Smart Internet Foundation)
+Contact name: Irina Danelia 
+Email: adm@dotdeti.ru
+Address: 8, Zoologicheskaya St., Moscow, Russian Federation, 123242
+Telephone: +7 499 254 8894
+Website: http://www.dotdeti.ru
+
+Relevant Policy Document URL:    http://dotdeti.ru/docs/idnpolicy.php
+
+This document presents a character table created by Smart Internet Foundation (.ДЕТИ gTLD Registry Operator) to be used for the registration of domain names in the Russian language. 
+The table presented here is in compliance with the ICANN Guidelines for the Implementation of Internationalized Domain Names and is intended for publication in the IANA Repository of TLD IDN Practices, for informational purpose only. 
+The character set was created on the basis of the following source: http://unicode.org/charts/ 
+The following characters are given in their Unicode code points in format U+XXXX (RFC 4290), where X is a hexadecimal digit. 
+
+U+002D #HYPEN-MINUS
+U+0030 #DIGIT ZERO (0)
+U+0031 #DIGIT ONE (1)
+U+0032 #DIGIT TWO (2)
+U+0033 #DIGIT THREE (3)
+U+0034 #DIGIT FOUR (4)
+U+0035 #DIGIT FIVE (5)
+U+0036 #DIGIT SIX (6)
+U+0037 #DIGIT SEVEN (7)
+U+0038 #DIGIT EIGHT (8)
+U+0039 #DIGIT NINE (9)
+U+0430 #CYRILLIC SMALL LETTER A
+U+0431 #CYRILLIC SMALL LETTER BE
+U+0432 #CYRILLIC SMALL LETTER VE
+U+0433 #CYRILLIC SMALL LETTER GHE
+U+0434 #CYRILLIC SMALL LETTER DE
+U+0435 #CYRILLIC SMALL LETTER IE
+U+0436 #CYRILLIC SMALL LETTER ZHE
+U+0437 #CYRILLIC SMALL LETTER ZE
+U+0438 #CYRILLIC SMALL LETTER I
+U+0439 #CYRILLIC SMALL LETTER SHORT I
+U+043A #CYRILLIC SMALL LETTER KA
+U+043B #CYRILLIC SMALL LETTER EL
+U+043C #CYRILLIC SMALL LETTER EM
+U+043D #CYRILLIC SMALL LETTER EN
+U+043E #CYRILLIC SMALL LETTER O
+U+043F #CYRILLIC SMALL LETTER PE
+U+0440 #CYRILLIC SMALL LETTER ER
+U+0441 #CYRILLIC SMALL LETTER ES
+U+0442 #CYRILLIC SMALL LETTER TE
+U+0443 #CYRILLIC SMALL LETTER U
+U+0444 #CYRILLIC SMALL LETTER EF
+U+0445 #CYRILLIC SMALL LETTER HA
+U+0446 #CYRILLIC SMALL LETTER TSE
+U+0447 #CYRILLIC SMALL LETTER CHE
+U+0448 #CYRILLIC SMALL LETTER SHA
+U+0449 #CYRILLIC SMALL LETTER SHCHA
+U+044A #CYRILLIC SMALL LETTER HARD SIGN
+U+044B #CYRILLIC SMALL LETTER YERU
+U+044C #CYRILLIC SMALL LETTER SOFT SIGN
+U+044D #CYRILLIC SMALL LETTER E
+U+044E #CYRILLIC SMALL LETTER YU
+U+044F #CYRILLIC SMALL LETTER YA
+U+0451 #CYRILLIC SMALL LETTER IO
+

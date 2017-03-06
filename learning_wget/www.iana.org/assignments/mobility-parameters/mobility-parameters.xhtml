@@ -1,0 +1,3031 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Mobile IPv6 parameters</title>
+  </head>
+  <body>
+    <h1>Mobile IPv6 parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2004-02-23</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-05-31</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="mobility-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="mobility-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#mobility-parameters-1">Mobility Header Types - for the MH Type field in the Mobility Header</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-2">Mobility Options</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-3">Status Codes (DNS Update Mobility Option)</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-4">Pseudo Home Address Acknowledgement Status Codes</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-5">Mobile Node Identifier Option Subtypes</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-6">Status Codes</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-7">Enumerating Algorithms</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-8">Subtype field of the MN-HA and MN-AAA authentication mobility options</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-9">Handoff Indicator Option type values</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-10">Access Technology Type Option type values</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-11">Binding Update Flags</a>
+      </li>
+      <li>
+        <a href="#mobility-parameters-12">Binding Acknowledgment Flags</a>
+      </li>
+      <li>
+        <a href="#dsmipv6-home-address-option">Dual Stack MIPv6 (DSMIPv6) IPv4 Home Address Option Status Codes</a>
+      </li>
+      <li>
+        <a href="#binding-revocation-type">Binding Revocation Type</a>
+      </li>
+      <li>
+        <a href="#revocation-trigger-values">Revocation Trigger Values</a>
+      </li>
+      <li>
+        <a href="#binding-revocation-status-codes">Binding Revocation Acknowledgement Status Codes</a>
+      </li>
+      <li>
+        <a href="#home-address-reply">IPv4 Home Address Reply Status Codes</a>
+      </li>
+      <li>
+        <a href="#dhcp-support-mode">IPv4 DHCP Support Mode Flags</a>
+      </li>
+      <li>
+        <a href="#handover-initiate-flags">Handover Initiate Flags</a>
+      </li>
+      <li>
+        <a href="#handover-acknowledge-flags">Handover Acknowledge Flags</a>
+      </li>
+      <li>
+        <a href="#handover-initiate-status">Handover Initiate Status Codes</a>
+      </li>
+      <li>
+        <a href="#handover-acknowledge-status">Handover Acknowledge Status Codes</a>
+      </li>
+      <li>
+        <a href="#flow-id">Flow Identification Mobility Option Status Codes</a>
+      </li>
+      <li>
+        <a href="#flow-id-suboptions">Flow Identification Sub-Options</a>
+      </li>
+      <li>
+        <a href="#traffic-selector">Traffic Selector Format</a>
+      </li>
+      <li>
+        <a href="#mobile-node-group-id-type">Mobile Node Group Identifier Type Registry</a>
+      </li>
+      <li>
+        <a href="#dsmip6-tls-packet-types">DSMIP6-TLS Packet Types Registry</a>
+      </li>
+      <li>
+        <a href="#ani">Access Network Information (ANI) Sub-Option Type Values</a>
+      </li>
+      <li>
+        <a href="#op-id">Operator-Identifier Type Registry</a>
+      </li>
+      <li>
+        <a href="#upn-reasons">Update Notification Reasons Registry</a>
+      </li>
+      <li>
+        <a href="#upa-status">Update Notification Acknowledgement Status Registry</a>
+      </li>
+      <li>
+        <a href="#flow-binding-type">Flow Binding Type</a>
+      </li>
+      <li>
+        <a href="#flow-binding-indication-triggers">Flow Binding Indication Triggers</a>
+      </li>
+      <li>
+        <a href="#flow-binding-ack-status">Flow Binding Acknowledgement Status Codes</a>
+      </li>
+      <li>
+        <a href="#flow-binding-action">Flow Binding Action Values</a>
+      </li>
+      <li>
+        <a href="#qos-attribute">Quality-of-Service Attribute Registry</a>
+      </li>
+    </ul>
+    <h2><a name="mobility-parameters-1" id="mobility-parameters-1"></a>Mobility Header Types - for the MH Type field in the Mobility Header</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Binding Refresh Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Home Test Init</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Care-of Test Init</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Home Test</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Care-of Test</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Binding Update</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Binding Acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Binding Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Fast Binding Update</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Fast Binding Acknowledgment</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Fast Neighbor Advertisement (Deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Experimental Mobility Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc5096">RFC5096</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Home Agent Switch Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5142">RFC5142</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Heartbeat Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5847">RFC5847</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Handover Initiate Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Handover Acknowledge Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Binding Revocation Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Localized Routing Initiation</td>
+          <td>[<a href="http://www.iana.org/go/rfc6705">RFC6705</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Localized Routing Acknowledgment</td>
+          <td>[<a href="http://www.iana.org/go/rfc6705">RFC6705</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Update Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Update Notification Acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>Flow Binding Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>Subscription Query</td>
+          <td>[<a href="http://www.iana.org/go/rfc7161">RFC7161</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Subscription Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7161">RFC7161</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-2" id="mobility-parameters-2"></a>Mobility Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Pad1</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PadN</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Binding Refresh Advice</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Alternate Care-of Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Nonce Indices</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Authorization Data</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Mobile Network Prefix Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3963">RFC3963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Mobility Header Link-Layer Address option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>MN-ID-OPTION-TYPE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4283">RFC4283</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>AUTH-OPTION-TYPE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>MESG-ID-OPTION-TYPE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>CGA Parameters Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4866">RFC4866</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>CGA Parameters</td>
+          <td>[<a href="http://www.iana.org/go/rfc4866">RFC4866</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Signature</td>
+          <td>[<a href="http://www.iana.org/go/rfc4866">RFC4866</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Permanent Home Keygen Token</td>
+          <td>[<a href="http://www.iana.org/go/rfc4866">RFC4866</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Care-of Test Init</td>
+          <td>[<a href="http://www.iana.org/go/rfc4866">RFC4866</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Care-of Test</td>
+          <td>[<a href="http://www.iana.org/go/rfc4866">RFC4866</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>DNS-UPDATE-TYPE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5026">RFC5026</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Experimental Mobility Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5096">RFC5096</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Vendor Specific Mobility Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5094">RFC5094</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Service Selection Mobility Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5149">RFC5149</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>Binding Authorization Data for FMIPv6 (BADF)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>Home Network Prefix Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Handoff Indicator Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>Access Technology Type Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>Mobile Node Link-layer Identifier Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>Link-local Address Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>Timestamp Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>Restart Counter</td>
+          <td>[<a href="http://www.iana.org/go/rfc5847">RFC5847</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>IPv4 Home Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>IPv4 Address Acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>NAT Detection</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>IPv4 Care-of Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>GRE Key Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5845">RFC5845</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>Mobility Header IPv6 Address/Prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>Binding Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc5648">RFC5648</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36</td>
+          <td>IPv4 Home Address Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">37</td>
+          <td>IPv4 Home Address Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">38</td>
+          <td>IPv4 Default-Router Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">39</td>
+          <td>IPv4 DHCP Support Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">40</td>
+          <td>Context Request Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>Local Mobility Anchor Address Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">42</td>
+          <td>Mobile Node Link-local Address Interface Identifier Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">43</td>
+          <td>Transient Binding</td>
+          <td>[<a href="http://www.iana.org/go/rfc6058">RFC6058</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">44</td>
+          <td>Flow Summary Mobility Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">45</td>
+          <td>Flow Identification Mobility Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">46</td>
+          <td>Redirect-Capability Mobility Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6463">RFC6463</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">47</td>
+          <td>Redirect Mobility Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6463">RFC6463</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">48</td>
+          <td>Load Information Mobility Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6463">RFC6463</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">49</td>
+          <td>Alternate IPv4 Care-of Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6463">RFC6463</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">50</td>
+          <td>Mobile Node Group Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc6602">RFC6602</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">51</td>
+          <td>MAG IPv6 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6705">RFC6705</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">52</td>
+          <td>Access Network Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">53</td>
+          <td>IPv4 Traffic Offload Selector</td>
+          <td>[<a href="http://www.iana.org/go/rfc6909">RFC6909</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">54</td>
+          <td>Dynamic IP Multicast Selector</td>
+          <td>[<a href="http://www.iana.org/go/rfc7028">RFC7028</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">55</td>
+          <td>Delegated Mobile Network Prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc7148">RFC7148</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">56</td>
+          <td>Active Multicast Subscription IPv4</td>
+          <td>[<a href="http://www.iana.org/go/rfc7161">RFC7161</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">57</td>
+          <td>Active Multicast Subscription IPv6</td>
+          <td>[<a href="http://www.iana.org/go/rfc7161">RFC7161</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">58</td>
+          <td>Quality-of-Service</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">59</td>
+          <td>LMA User-Plane Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc7389">RFC7389</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">60</td>
+          <td>Multicast Mobility Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7411">RFC7411</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">61</td>
+          <td>Multicast Acknowledgement Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7411">RFC7411</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-3" id="mobility-parameters-3"></a>Status Codes (DNS Update Mobility Option)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5026">RFC5026</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>DNS update performed</td>
+          <td>[<a href="http://www.iana.org/go/rfc5026">RFC5026</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Reason unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc5026">RFC5026</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc5026">RFC5026</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>DNS Update Failed</td>
+          <td>[<a href="http://www.iana.org/go/rfc5026">RFC5026</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-4" id="mobility-parameters-4"></a>Pseudo Home Address Acknowledgement Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5726">RFC5726</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc5726">RFC5726</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Failure, reason unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc5726">RFC5726</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc5726">RFC5726</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Incorrect pseudo home address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5726">RFC5726</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Invalid pseudo home address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5726">RFC5726</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>Dynamic pseudo home address assignment not available</td>
+          <td>[<a href="http://www.iana.org/go/rfc5726">RFC5726</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-5" id="mobility-parameters-5"></a>Mobile Node Identifier Option Subtypes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4283">RFC4283</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>NAI</td>
+          <td>[<a href="http://www.iana.org/go/rfc4283">RFC4283</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-6" id="mobility-parameters-6"></a>Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>][<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Binding Update accepted/Proxy Binding Update accepted</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>][<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Accepted but prefix discovery necessary</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>GRE_KEY_OPTION_NOT_REQUIRED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5845">RFC5845</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>GRE_TUNNELING_BUT_TLV_HEADER_NOT_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5845">RFC5845</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>MCOA NOTCOMPLETE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5648">RFC5648</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>MCOA RETURNHOME WO/NDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5648">RFC5648</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>PBU_ACCEPTED_TB_IGNORED_SETTINGSMISMATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc6058">RFC6058</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Reason unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Insufficient resources</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Home registration not supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>Not home subnet</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133</td>
+          <td>Not home agent for this mobile node</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">134</td>
+          <td>Duplicate Address Detection failed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">135</td>
+          <td>Sequence number out of window</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">136</td>
+          <td>Expired home nonce index</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">137</td>
+          <td>Expired care-of nonce index</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">138</td>
+          <td>Expired nonces</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">139</td>
+          <td>Registration type change disallowed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">140</td>
+          <td>Mobile Router Operation not permitted</td>
+          <td>[<a href="http://www.iana.org/go/rfc3963">RFC3963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">141</td>
+          <td>Invalid Prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc3963">RFC3963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">142</td>
+          <td>Not Authorized for Prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc3963">RFC3963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">143</td>
+          <td>Forwarding Setup failed</td>
+          <td>[<a href="http://www.iana.org/go/rfc3963">RFC3963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">144</td>
+          <td>MIPV6-ID-MISMATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">145</td>
+          <td>MIPV6-MESG-ID-REQD</td>
+          <td>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">146</td>
+          <td>MIPV6-AUTH-FAIL</td>
+          <td>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">147</td>
+          <td>Permanent home keygen token unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc4866">RFC4866</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">148</td>
+          <td>CGA and signature verification failed</td>
+          <td>[<a href="http://www.iana.org/go/rfc4866">RFC4866</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">149</td>
+          <td>Permanent home keygen token exists</td>
+          <td>[<a href="http://www.iana.org/go/rfc4866">RFC4866</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>Non-null home nonce index expected</td>
+          <td>[<a href="http://www.iana.org/go/rfc4866">RFC4866</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">151</td>
+          <td>SERVICE_AUTHORIZATION_FAILED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5149">RFC5149</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">152</td>
+          <td>PROXY_REG_NOT_ENABLED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">153</td>
+          <td>NOT_LMA_FOR_THIS_MOBILE_NODE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">154</td>
+          <td>MAG_NOT_AUTHORIZED_FOR_PROXY_REG</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">155</td>
+          <td>NOT_AUTHORIZED_FOR_HOME_NETWORK_PREFIX</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">156</td>
+          <td>TIMESTAMP_MISMATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">157</td>
+          <td>TIMESTAMP_LOWER_THAN_PREV_ACCEPTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">158</td>
+          <td>MISSING_HOME_NETWORK_PREFIX_OPTION</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">159</td>
+          <td>BCE_PBU_PREFIX_SET_DO_NOT_MATCH</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">160</td>
+          <td>MISSING_MN_IDENTIFIER_OPTION</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">161</td>
+          <td>MISSING_HANDOFF_INDICATOR_OPTION</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">162</td>
+          <td>MISSING_ACCESS_TECH_TYPE_OPTION</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">163</td>
+          <td>GRE_KEY_OPTION_REQUIRED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5845">RFC5845</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">164</td>
+          <td>MCOA MALFORMED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5648">RFC5648</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">165</td>
+          <td>MCOA NON-MCOA BINDING EXISTS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5648">RFC5648</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">166</td>
+          <td>MCOA PROHIBITED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5648">RFC5648</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">167</td>
+          <td>MCOA UNKNOWN COA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5648">RFC5648</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">168</td>
+          <td>MCOA BULK REGISTRATION PROHIBITED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5648">RFC5648</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">169</td>
+          <td>MCOA SIMULTANEOUS HOME AND FOREIGN PROHIBITED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5648">RFC5648</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">170</td>
+          <td>NOT_AUTHORIZED_FOR_IPV4_MOBILITY_SERVICE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">171</td>
+          <td>NOT_AUTHORIZED_FOR_IPV4_HOME_ADDRESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">172</td>
+          <td>NOT_AUTHORIZED_FOR_IPV6_MOBILITY_SERVICE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">173</td>
+          <td>MULTIPLE_IPV4_HOME_ADDRESS_ASSIGNMENT_NOT_SUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">174</td>
+          <td>Invalid Care-of Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">175</td>
+          <td>INVALID_MOBILE_NODE_GROUP_IDENTIFIER</td>
+          <td>[<a href="http://www.iana.org/go/rfc6602">RFC6602</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">176</td>
+          <td>REINIT_SA_WITH_HAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc6618">RFC6618</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">177</td>
+          <td>NOT_AUTHORIZED_FOR_DELEGATED_MNP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7148">RFC7148</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">178</td>
+          <td>REQUESTED_DMNP_IN_USE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7148">RFC7148</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">179</td>
+          <td>CANNOT_MEET_QOS_SERVICE_REQUEST</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-7" id="mobility-parameters-7"></a>Enumerating Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved (not available for assignment)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>HMAC_SHA1_SPI</td>
+          <td>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Reserved for use by 3GPP2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-8" id="mobility-parameters-8"></a>Subtype field of the MN-HA and MN-AAA authentication mobility options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>MN-HA authentication mobility option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>MN-AAA authentication mobility option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4285">RFC4285</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-9" id="mobility-parameters-9"></a>Handoff Indicator Option type values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Sri Gundavelli and Jouni Korhonen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Attachment over a new interface</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Handoff between two different interfaces of the mobile node</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Handoff between mobile access gateways for the same interface</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Handoff state unknown</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Handoff state not changed (Re-registration)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Attachment over a new interface sharing prefixes</td>
+          <td>[<a href="http://www.iana.org/go/rfc7864">RFC7864</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-10" id="mobility-parameters-10"></a>Access Technology Type Option type values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Sri Gundavelli and Jouni Korhonen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-10" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Registration Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Virtual</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>PPP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IEEE 802.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>IEEE 802.11a/b/g</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>IEEE 802.16e</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>3GPP GERAN</td>
+          <td>[<a href="http://www.3gpp.org/specs/specs.htm">3GPP TS 29.275</a>][<a href="#Julien_Laganier">Julien_Laganier</a>]</td>
+          <td>2008-07-30</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>3GPP UTRAN</td>
+          <td>[<a href="http://www.3gpp.org/specs/specs.htm">3GPP TS 29.275</a>][<a href="#Julien_Laganier">Julien_Laganier</a>]</td>
+          <td>2008-07-30</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>3GPP E-UTRAN</td>
+          <td>[<a href="http://www.3gpp.org/specs/specs.htm">3GPP TS 29.275</a>][<a href="#Julien_Laganier">Julien_Laganier</a>]</td>
+          <td>2008-07-30</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>3GPP2 eHRPD</td>
+          <td>[<a href="http://www.3gpp2.org/public_html/specs/index.cfm">3GPP2 X.P0057</a>][<a href="#Kuntal_Chowdhury">Kuntal_Chowdhury</a>]</td>
+          <td>2008-08-21</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>3GPP2 HRPD</td>
+          <td>[<a href="http://www.3gpp2.org/public_html/specs/index.cfm">3GPP2 X.P0061</a>][<a href="#Kuntal_Chowdhury">Kuntal_Chowdhury</a>]</td>
+          <td>2008-08-21</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>3GPP2 1xRTT</td>
+          <td>[<a href="http://www.3gpp2.org/public_html/specs/index.cfm">3GPP2 X.S0011</a>][<a href="#Kuntal_Chowdhury">Kuntal_Chowdhury</a>]</td>
+          <td>2008-08-21</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>3GPP2 UMB</td>
+          <td>[<a href="http://www.3gpp2.org/public_html/specs/index.cfm">3GPP2 X.S0054</a>][<a href="#Kuntal_Chowdhury">Kuntal_Chowdhury</a>]</td>
+          <td>2008-08-21</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>3GPP NB-IOT</td>
+          <td>[<a href="http://www.3gpp.org/specs/specs.htm">3GPP TS 29.275</a>][<a href="#Kimmo_Kymalainen">Kimmo_Kymalainen</a>]</td>
+          <td>2016-05-31</td>
+        </tr>
+        <tr>
+          <td align="center">14-255</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-11" id="mobility-parameters-11"></a>Binding Update Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">A</td>
+          <td align="center" style="font-family:monospace">0x8000</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">H</td>
+          <td align="center" style="font-family:monospace">0x4000</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">L</td>
+          <td align="center" style="font-family:monospace">0x2000</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">K</td>
+          <td align="center" style="font-family:monospace">0x1000</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">M</td>
+          <td align="center" style="font-family:monospace">0x0800</td>
+          <td>[<a href="http://www.iana.org/go/rfc4140">RFC4140</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">R</td>
+          <td align="center" style="font-family:monospace">0x0400</td>
+          <td>[<a href="http://www.iana.org/go/rfc3963">RFC3963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P</td>
+          <td align="center" style="font-family:monospace">0x0200</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">F</td>
+          <td align="center" style="font-family:monospace">0x0100</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">T</td>
+          <td align="center" style="font-family:monospace">0x0080</td>
+          <td>[<a href="http://www.iana.org/go/rfc5845">RFC5845</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">B</td>
+          <td align="center" style="font-family:monospace">0x0040</td>
+          <td>[<a href="http://www.iana.org/go/rfc6602">RFC6602</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">S</td>
+          <td align="center" style="font-family:monospace">0x0020</td>
+          <td>[<a href="http://www.iana.org/go/rfc7161">RFC7161</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobility-parameters-12" id="mobility-parameters-12"></a>Binding Acknowledgment Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobility-parameters-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobility-parameters-12" class="sortable">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">K</td>
+          <td align="center" style="font-family:monospace">0x80</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">R</td>
+          <td align="center" style="font-family:monospace">0x40</td>
+          <td>[<a href="http://www.iana.org/go/rfc3963">RFC3963</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P</td>
+          <td align="center" style="font-family:monospace">0x20</td>
+          <td>[<a href="http://www.iana.org/go/rfc5213">RFC5213</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">T</td>
+          <td align="center" style="font-family:monospace">0x10</td>
+          <td>[<a href="http://www.iana.org/go/rfc5845">RFC5845</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">B</td>
+          <td align="center" style="font-family:monospace">0x08</td>
+          <td>[<a href="http://www.iana.org/go/rfc6602">RFC6602</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">S</td>
+          <td align="center" style="font-family:monospace">0x04</td>
+          <td>[<a href="http://www.iana.org/go/rfc7161">RFC7161</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dsmipv6-home-address-option" id="dsmipv6-home-address-option"></a>Dual Stack MIPv6 (DSMIPv6) IPv4 Home Address Option Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dsmipv6-home-address-option.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dsmipv6-home-address-option" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Failure, reason unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Incorrect IPv4 home address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Invalid IPv4 address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>Dynamic IPv4 home address assignment not available</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133</td>
+          <td>Prefix allocation unauthorized</td>
+          <td>[<a href="http://www.iana.org/go/rfc5555">RFC5555</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">134-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="binding-revocation-type" id="binding-revocation-type"></a>Binding Revocation Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="binding-revocation-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-binding-revocation-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Binding Revocation Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Binding Revocation Acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="revocation-trigger-values" id="revocation-trigger-values"></a>Revocation Trigger Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="revocation-trigger-values.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-revocation-trigger-values" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Administrative Reason</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Inter-MAG Handover - same Access Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Inter-MAG Handover - different Access Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Inter-MAG Handover - Unknown</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>User Initiated Session(s) Termination</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Access Network Session(s) Termination</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Possible Out-of Sync BCE State</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Per-Peer Policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Revoking Mobility Node Local Policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130-249</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">250-255</td>
+          <td>Reserved for Testing Purposes Only</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="binding-revocation-status-codes" id="binding-revocation-status-codes"></a>Binding Revocation Acknowledgement Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="binding-revocation-status-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-binding-revocation-status-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>success</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>partial success</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Binding Does NOT Exist</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>IPv4 Home Address Option Required</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Global Revocation NOT Authorized</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Revoked Mobile Nodes Identity Required</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>Revocation Failed - MN is Attached</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133</td>
+          <td>Revocation Trigger NOT Supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">134</td>
+          <td>Revocation Function NOT Supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">135</td>
+          <td>Proxy Binding Revocation NOT Supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc5846">RFC5846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">136-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="home-address-reply" id="home-address-reply"></a>IPv4 Home Address Reply Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Sri Gundavelli and Jouni Korhonen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="home-address-reply.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-home-address-reply" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Failure, Reason Unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Incorrect IPv4 home address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Invalid IPv4 address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>Dynamic IPv4 home address assignment not available</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dhcp-support-mode" id="dhcp-support-mode"></a>IPv4 DHCP Support Mode Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Sri Gundavelli and Jouni Korhonen</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dhcp-support-mode.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dhcp-support-mode" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x1</td>
+          <td>(S) flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc5844">RFC5844</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="handover-initiate-flags" id="handover-initiate-flags"></a>Handover Initiate Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="handover-initiate-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-handover-initiate-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">S</td>
+          <td>0x80</td>
+          <td>Assigned Address Configuration flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">U</td>
+          <td>0x40</td>
+          <td>Buffer flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P</td>
+          <td>0x20</td>
+          <td>Proxy flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">F</td>
+          <td>0x10</td>
+          <td>Forwarding flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="handover-acknowledge-flags" id="handover-acknowledge-flags"></a>Handover Acknowledge Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="handover-acknowledge-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-handover-acknowledge-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">U</td>
+          <td>0x80</td>
+          <td>Buffer flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P</td>
+          <td>0x40</td>
+          <td>Proxy flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">F</td>
+          <td>0x20</td>
+          <td>Forwarding flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="handover-initiate-status" id="handover-initiate-status"></a>Handover Initiate Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="handover-initiate-status.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-handover-initiate-status" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>FBU with the PCoA as source IP address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>FBU whose source IP address is not PCoA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Indicate the completion of forwarding</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>All available context transferred</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="handover-acknowledge-status" id="handover-acknowledge-status"></a>Handover Acknowledge Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="handover-acknowledge-status.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-handover-acknowledge-status" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Handover Accepted or Successful (when 'P' flag is set)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td>Handover Accepted with NCoA valid</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Handover Accepted, NCoA not valid</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Handover Accepted, NCoA assigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Handover Accepted, use PCoA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Message sent unsolicited</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Context Transfer Accepted or Successful</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>All available Context Transferred</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Handover Not Accepted, reason unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Insufficient resources</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Requested Context Not Available</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>Forwarding Not Available</td>
+          <td>[<a href="http://www.iana.org/go/rfc5949">RFC5949</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="flow-id" id="flow-id"></a>Flow Identification Mobility Option Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="flow-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-flow-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Flow binding successful</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-127</td>
+          <td>Unassigned; available for success codes</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Flow binding rejected, reason unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Flow identification mobility option malformed</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>BID not found</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>FID not found</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133</td>
+          <td>Traffic selector format not supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">134-250</td>
+          <td>Unassigned; available for reject codes</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">251-255</td>
+          <td>Reserved for experimental use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="flow-id-suboptions" id="flow-id-suboptions"></a>Flow Identification Sub-Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="flow-id-suboptions.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-flow-id-suboptions" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Pad</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PadN</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>BID Reference</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Traffic Selector</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Flow Binding Action</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Target Care-of Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-250</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">251-255</td>
+          <td>Reserved for experimental use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="traffic-selector" id="traffic-selector"></a>Traffic Selector Format</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="traffic-selector.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-traffic-selector" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IPv4 Binary Traffic Selector</td>
+          <td>[<a href="http://www.iana.org/go/rfc6088">RFC6088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPv6 Binary Traffic Selector</td>
+          <td>[<a href="http://www.iana.org/go/rfc6088">RFC6088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-250</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">251-255</td>
+          <td>Reserved for experimental use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6089">RFC6089</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobile-node-group-id-type" id="mobile-node-group-id-type"></a>Mobile Node Group Identifier Type Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6602">RFC6602</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobile-node-group-id-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobile-node-group-id-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6602">RFC6602</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Bulk Binding Update Group</td>
+          <td>[<a href="http://www.iana.org/go/rfc6602">RFC6602</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6602">RFC6602</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dsmip6-tls-packet-types" id="dsmip6-tls-packet-types"></a>DSMIP6-TLS Packet Types Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6618">RFC6618</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dsmip6-tls-packet-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dsmip6-tls-packet-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>non-encrypted IP packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc6618">RFC6618</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>encrypted IP packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc6618">RFC6618</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>mobility header</td>
+          <td>[<a href="http://www.iana.org/go/rfc6618">RFC6618</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ani" id="ani"></a>Access Network Information (ANI) Sub-Option Type Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jouni Korhonen and Sri Gundavelli</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ani.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ani" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Network-Identifier sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Geo-Location sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Operator-Identifier sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Civic-Location sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7563">RFC7563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>MAG-Group-Identifier sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7563">RFC7563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>ANI Update-Timer sub-option</td>
+          <td>[<a href="http://www.iana.org/go/rfc7563">RFC7563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="op-id" id="op-id"></a>Operator-Identifier Type Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="op-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-op-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Operator-Identifier as a variable-length Private Enterprise Number (PEN)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Realm of the Operator</td>
+          <td>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6757">RFC6757</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="upn-reasons" id="upn-reasons"></a>Update Notification Reasons Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Sri Gundavelli, Marco Liebsch</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="upn-reasons.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-upn-reasons" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>FORCE-REREGISTRATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>UPDATE-SESSION-PARAMETERS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>VENDOR-SPECIFIC-REASON</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>ANI-PARAMS-REQUESTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>QOS_SERVICE_REQUEST</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>PGW-TRIGGERED-PCSCF-RESTORATION-PCO</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/29275.htm">3GPP TS 29.275</a>][<a href="#Kimmo_Kymalainen">Kimmo_Kymalainen</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>PGW-TRIGGERED-PCSCF-RESTORATION-DHCP</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/29275.htm">3GPP TS 29.275</a>][<a href="#Kimmo_Kymalainen">Kimmo_Kymalainen</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>FLOW-MOBILITY</td>
+          <td>[<a href="http://www.iana.org/go/rfc7864">RFC7864</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="upa-status" id="upa-status"></a>Update Notification Acknowledgement Status Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Sri Gundavelli, Marco Liebsch</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Codes between 0 and 127 signify successful processing of the Update 
+Notification message, while codes between 128 and 255 signify that an 
+error occurred during processing of the Update Notification message.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="upa-status.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-upa-status" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>SUCCESS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>FAILED-TO-UPDATE-SESSION-PARAMETERS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>MISSING-VENDOR-SPECIFIC-OPTION</td>
+          <td>[<a href="http://www.iana.org/go/rfc7077">RFC7077</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>CANNOT_MEET_QOS_SERVICE_REQUEST</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Reason unspecified.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7864">RFC7864</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>MN not attached.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7864">RFC7864</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="flow-binding-type" id="flow-binding-type"></a>Flow Binding Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="flow-binding-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-flow-binding-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Flow Binding Indication</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Flow Binding Acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="flow-binding-indication-triggers" id="flow-binding-indication-triggers"></a>Flow Binding Indication Triggers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="flow-binding-indication-triggers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-flow-binding-indication-triggers" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Administrative Reason</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Possible Out-of-Sync BCE State</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-249</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">250-255</td>
+          <td>Reserved for Testing Purposes Only</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="flow-binding-ack-status" id="flow-binding-ack-status"></a>Flow Binding Acknowledgement Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="flow-binding-ack-status.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-flow-binding-ack-status" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Binding (target CoA) Does NOT Exist</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Action NOT Authorized</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="flow-binding-action" id="flow-binding-action"></a>Flow Binding Action Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="flow-binding-action.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-flow-binding-action" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-10</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Add a flow binding</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Delete a flow binding</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Modify a flow binding</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Refresh a flow binding</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Move a flow binding</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Revoke a flow binding</td>
+          <td>[<a href="http://www.iana.org/go/rfc7109">RFC7109</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="qos-attribute" id="qos-attribute"></a>Quality-of-Service Attribute Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Jouni Korhonen and Sri Gundavelli</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="qos-attribute.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-qos-attribute" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Per-MN-Agg-Max-DL-Bit-Rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Per-MN-Agg-Max-UL-Bit-Rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Per-Session-Agg-Max-DL-Bit-Rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Per-Session-Agg-Max-UL-Bit-Rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Allocation-Retention-Priority</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Aggregate-Max-DL-Bit-Rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Aggregate-Max-UL-Bit-Rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Guaranteed-DL-Bit-Rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Guaranteed-UL-Bit-Rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>QoS-Traffic-Selector</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>QoS-Vendor-Specific-Attribute</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7222">RFC7222</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Julien_Laganier" id="Julien_Laganier">[Julien_Laganier]</a>
+          </td>
+          <td>Julien Laganier</td>
+          <td>
+            <a href="mailto:julien.ietf&amp;laposte.net">mailto:julien.ietf&amp;laposte.net</a>
+          </td>
+          <td>2008-07-30</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Kimmo_Kymalainen" id="Kimmo_Kymalainen">[Kimmo_Kymalainen]</a>
+          </td>
+          <td>Kimmo Kymalainen</td>
+          <td>
+            <a href="mailto:kimmo.kymalainen&amp;etsi.org">mailto:kimmo.kymalainen&amp;etsi.org</a>
+          </td>
+          <td>2016-05-31</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Kuntal_Chowdhury" id="Kuntal_Chowdhury">[Kuntal_Chowdhury]</a>
+          </td>
+          <td>Kuntal Chowdhury</td>
+          <td>
+            <a href="mailto:kchowdhury&amp;starentnetworks.com">mailto:kchowdhury&amp;starentnetworks.com</a>
+          </td>
+          <td>2008-08-21</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,1023 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Realm Specific IP (RSIP) Parameters</title>
+  </head>
+  <body>
+    <h1>Realm Specific IP (RSIP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2001-04-20</dd>
+      <dt>Last Updated</dt>
+      <dd>2009-07-29</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rsip-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="rsip-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="rsip-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#rsip-parameters-1">RSIP Parameters</a>
+      </li>
+      <li>
+        <a href="#rsip-parameters-2">RSIP address types</a>
+      </li>
+      <li>
+        <a href="#rsip-parameters-3">RSIP Tunnel Types</a>
+      </li>
+      <li>
+        <a href="#rsip-parameters-4">RSIP Methods</a>
+      </li>
+      <li>
+        <a href="#rsip-parameters-5">RSIP Local Flow Policies</a>
+      </li>
+      <li>
+        <a href="#rsip-parameters-9">RSIP Remote Flow Policies</a>
+      </li>
+      <li>
+        <a href="#rsip-parameters-6">RSIP Vendor ID's</a>
+      </li>
+      <li>
+        <a href="#rsip-parameters-7">RSIP Message Types</a>
+      </li>
+      <li>
+        <a href="#rsip-parameters-8">RSIP Error Codes</a>
+      </li>
+    </ul>
+    <h2><a name="rsip-parameters-1" id="rsip-parameters-1"></a>RSIP Parameters</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>RSIP Parameters was defined in section 8 of [<a href="http://www.iana.org/go/rfc3103">RFC3103</a>], unless
+otherwise stated.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rsip-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-rsip-parameters-1-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+        </tr>
+        <tr>
+          <td align="center">1-240</td>
+          <td>Specification required</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-rsip-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Parameter</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Ports</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Lease Time</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Client ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Bind ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Tunnel Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>RSIP Method</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Flow Policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Indicator</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Message Counter</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Vendor Specific Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13-21</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>SPI</td>
+          <td>[<a href="http://www.iana.org/go/rfc3104">RFC3104</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23-240</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rsip-parameters-2" id="rsip-parameters-2"></a>RSIP address types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rsip-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-rsip-parameters-2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+        </tr>
+        <tr>
+          <td align="center">1-240</td>
+          <td>Specification required</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-rsip-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Addrtype</th>
+          <th>Length of value field (in bytes)</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>0</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IPv4</td>
+          <td>4</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPv4 netmask</td>
+          <td>4</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IPv6</td>
+          <td>16</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>FQDN</td>
+          <td>varies</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-240</td>
+          <td>Unassigned</td>
+          <td>-</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">240-255</td>
+          <td>Reserved for private use</td>
+          <td>-</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rsip-parameters-3" id="rsip-parameters-3"></a>RSIP Tunnel Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rsip-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-rsip-parameters-3-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+        </tr>
+        <tr>
+          <td align="center">1-240</td>
+          <td>Specification required</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-rsip-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Tunnel Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>IP-IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>GRE</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>L2TP</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-240</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rsip-parameters-4" id="rsip-parameters-4"></a>RSIP Methods</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rsip-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-rsip-parameters-4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+        </tr>
+        <tr>
+          <td align="center">1-240</td>
+          <td>Specification required</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-rsip-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>RSIP method</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>RSA-IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>RSAP-IP</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>RSIP with IPsec (RSIPSEC)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3104">RFC3104</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-240</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rsip-parameters-5" id="rsip-parameters-5"></a>RSIP Local Flow Policies</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rsip-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-rsip-parameters-5-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+        </tr>
+        <tr>
+          <td align="center">1-240</td>
+          <td>Specification required</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-rsip-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Local Flow Policy</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Macro flows</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Micro flows</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-240</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rsip-parameters-9" id="rsip-parameters-9"></a>RSIP Remote Flow Policies</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rsip-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-rsip-parameters-9-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+        </tr>
+        <tr>
+          <td align="center">1-240</td>
+          <td>Specification required</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-rsip-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Remote Flow Policy</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Macro flows</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Micro flows</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>No policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-240</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rsip-parameters-6" id="rsip-parameters-6"></a>RSIP Vendor ID's</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rsip-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-rsip-parameters-6-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+        </tr>
+        <tr>
+          <td align="center">1-240</td>
+          <td>Specification required</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-rsip-parameters-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Vendor ID</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-240</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rsip-parameters-7" id="rsip-parameters-7"></a>RSIP Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rsip-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rsip-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Message</th>
+          <th>Implementation</th>
+          <th>Status</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>ERROR_RESPONSE</td>
+          <td>gateway</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>REGISTER_REQUEST</td>
+          <td>host</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>REGISTER_RESPONSE</td>
+          <td>gateway</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>DE-REGISTER_REQUEST</td>
+          <td>host</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>DE-REGISTER_RESPONSE</td>
+          <td>gateway</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>ASSIGN_REQUEST_RSA-IP</td>
+          <td>host</td>
+          <td>optional</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>ASSIGN_RESPONSE_RSA-IP</td>
+          <td>gateway</td>
+          <td>optional</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>ASSIGN_REQUEST_RSAP-IP</td>
+          <td>host</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>ASSIGN_RESPONSE_RSAP-IP</td>
+          <td>gateway</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>EXTEND_REQUEST</td>
+          <td>host</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>EXTEND_RESPONSE</td>
+          <td>gateway</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>FREE_REQUEST</td>
+          <td>host</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>FREE_RESPONSE</td>
+          <td>gateway</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>QUERY_REQUEST</td>
+          <td>host</td>
+          <td>optional</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>QUERY_RESPONSE</td>
+          <td>gateway</td>
+          <td>mandatory</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>LISTEN_REQUEST</td>
+          <td>host</td>
+          <td>optional</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>LISTEN_RESPONSE</td>
+          <td>gateway</td>
+          <td>optional</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18-21</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>ASSIGN_REQUEST_RSIPSEC</td>
+          <td>host</td>
+          <td>optional</td>
+          <td>[<a href="http://www.iana.org/go/rfc3104">RFC3104</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>ASSIGN_RESPONSE_RSIPSEC</td>
+          <td>gateway</td>
+          <td>optional</td>
+          <td>[<a href="http://www.iana.org/go/rfc3104">RFC3104</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24-240</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">241-255</td>
+          <td>Reserved for private use</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rsip-parameters-8" id="rsip-parameters-8"></a>RSIP Error Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>100's  General errors
+200's  Parameter and message errors.  The gateway uses these errors
+       when it detects that a parameter or message is malformed, as
+       well as when it does not understand a parameter or message.
+300's  Permission, resource, and policy errors.  The gateway uses these
+       errors when a host has attempted to do something that it is
+       not permitted to do, or something that violated gateway policy.
+400's  IPsec errors.  All errors specific to RSIP / IPsec operation.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rsip-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rsip-parameters-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">101</td>
+          <td>UNKNOWN_ERROR.  An error that cannot be identified has occurred.           
+This error should be used when all other error messages are
+inappropriate.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">102</td>
+          <td>USE_TCP.  A host has attempted to use UDP on a server that                 
+only supports TCP.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">103</td>
+          <td>FLOW_POLICY_VIOLATION: A host has not specified address or                 
+port information in enough detail for its assigned flow policy.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">104</td>
+          <td>INTERNAL_SERVER_ERROR: An RSIP server application has detected             
+an unrecoverable error within itself or the RSIP gateway.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">105</td>
+          <td>MESSAGE_COUNTER_REQUIRED: An RSIP host did not use a message               
+counter parameter in a situation in which it should have.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">106</td>
+          <td>UNSUPPORTED_RSIP_VERSION: An RSIP host sent a message with                 
+a version number that is not supported by the RSIP gateway.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">201</td>
+          <td>MISSING_PARAM. The request does not contain a required parameter.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">202</td>
+          <td>DUPLICATE_PARAM. The request contains an illegal duplicate parameter.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">203</td>
+          <td>EXTRA_PARAM. The request contains a parameter that it should not.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">204</td>
+          <td>ILLEGAL_PARAM. The gateway does not understand a parameter type.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">205</td>
+          <td>BAD_PARAM. A parameter is malformed.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">206</td>
+          <td>ILLEGAL_MESSAGE. The gateway does not understand the message               
+type.  The message type is neither mandatory nor optional.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">207</td>
+          <td>BAD_MESSAGE. A message is malformed and gateway parsing failed.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">208</td>
+          <td>UNSUPPORTED_MESSAGE: The host has transmitted an optional message          
+that the gateway does not support.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">301</td>
+          <td>REGISTER_FIRST. The RSIP host has attempted to request or use              
+resources without registering.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">302</td>
+          <td>ALREADY_REGISTERED. The host has attempted to register again               
+without first de-registering.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">303</td>
+          <td>ALREADY_UNREGISTERED. The host has attempted to de-register but it         
+is already in the unregistered state.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">304</td>
+          <td>REGISTRATION_DENIED. The gateway will not allow the host to register.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">305</td>
+          <td>BAD_CLIENT_ID. The host has referred to itself with the wrong client ID.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">306</td>
+          <td>BAD_BIND_ID. The request refers to a bind ID that is not valid for         
+the host.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">307</td>
+          <td>BAD_TUNNEL_TYPE. The request refers to a tunnel type that is               
+not valid for the host.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">308</td>
+          <td>LOCAL_ADDR_UNAVAILABLE. The gateway is currently not able to               
+allocate ANY local address, but the host may try again later.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">309</td>
+          <td>LOCAL_ADDRPORT_UNAVAILABLE.  The gateway is currently not able to          
+allocate ANY local IP address / port tuple of the requested magnitude
+(i.e., number of ports), but the host may try again later.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">310</td>
+          <td>LOCAL_ADDR_INUSE. The gateway was not able to allocate the requested       
+local address because it is currently used by another entity.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">311</td>
+          <td>LOCAL_ADDRPORT_INUSE.  The gateway was not able to allocate the            
+requested local address / port tuple because it is currently used
+by another entity.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">312</td>
+          <td>LOCAL_ADDR_UNALLOWED. The gateway will not let the host use                
+the specified local IP address due to policy.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">313</td>
+          <td>LOCAL_ADDRPORT_UNALLOWED. The gateway will not let the host                
+use the specified local address / port pair due to policy.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">314</td>
+          <td>REMOTE_ADDR_UNALLOWED.  The gateway will not allow the host                
+to establish a session to the specified remote address.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">315</td>
+          <td>REMOTE_ADDRPORT_UNALLOWED.  The gateway will not allow the host to         
+establish a session to the specified remote address /  port tuple.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3103">RFC3103</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">401</td>
+          <td>IPSEC_UNALLOWED.  The server will not allow the client                     
+to use end-to-end IPsec.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3104">RFC3104</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">402</td>
+          <td>IPSEC_SPI_UNAVAILABLE. The server does not have an SPI                     
+available for client use.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3104">RFC3104</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">403</td>
+          <td>IPSEC_SPI_INUSE.  The client has requested an SPI that                     
+another client is currently using.</td>
+          <td>[<a href="http://www.iana.org/go/rfc3104">RFC3104</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

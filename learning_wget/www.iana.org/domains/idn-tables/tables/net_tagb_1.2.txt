@@ -1,0 +1,60 @@
+###############################################################
+#
+# TLD:            NET
+# Script:         Tagbanwa
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Tagbanwa script.
+#
+###############################################################
+U+1760	# TAGBANWA LETTER A
+U+1761	# TAGBANWA LETTER I
+U+1762	# TAGBANWA LETTER U
+U+1763	# TAGBANWA LETTER KA
+U+1764	# TAGBANWA LETTER GA
+U+1765	# TAGBANWA LETTER NGA
+U+1766	# TAGBANWA LETTER TA
+U+1767	# TAGBANWA LETTER DA
+U+1768	# TAGBANWA LETTER NA
+U+1769	# TAGBANWA LETTER PA
+U+176A	# TAGBANWA LETTER BA
+U+176B	# TAGBANWA LETTER MA
+U+176C	# TAGBANWA LETTER YA
+U+176E	# TAGBANWA LETTER LA
+U+176F	# TAGBANWA LETTER WA
+U+1770	# TAGBANWA LETTER SA
+U+1772	# TAGBANWA VOWEL SIGN I
+U+1773	# TAGBANWA VOWEL SIGN U
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

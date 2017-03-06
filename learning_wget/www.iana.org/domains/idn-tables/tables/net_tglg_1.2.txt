@@ -1,0 +1,62 @@
+###############################################################
+#
+# TLD:            NET
+# Script:         Tagalog
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Tagalog script.
+#
+###############################################################
+U+1700	# TAGALOG LETTER A
+U+1701	# TAGALOG LETTER I
+U+1702	# TAGALOG LETTER U
+U+1703	# TAGALOG LETTER KA
+U+1704	# TAGALOG LETTER GA
+U+1705	# TAGALOG LETTER NGA
+U+1706	# TAGALOG LETTER TA
+U+1707	# TAGALOG LETTER DA
+U+1708	# TAGALOG LETTER NA
+U+1709	# TAGALOG LETTER PA
+U+170A	# TAGALOG LETTER BA
+U+170B	# TAGALOG LETTER MA
+U+170C	# TAGALOG LETTER YA
+U+170E	# TAGALOG LETTER LA
+U+170F	# TAGALOG LETTER WA
+U+1710	# TAGALOG LETTER SA
+U+1711	# TAGALOG LETTER HA
+U+1712	# TAGALOG VOWEL SIGN I
+U+1713	# TAGALOG VOWEL SIGN U
+U+1714	# TAGALOG SIGN VIRAMA
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

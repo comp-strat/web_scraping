@@ -1,0 +1,5887 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Lightweight Directory Access Protocol (LDAP) Parameters</title>
+  </head>
+  <body>
+    <h1>Lightweight Directory Access Protocol (LDAP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2003-08-27</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-07-07</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ldap-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ldap-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ldap-parameters-1">Internet Directory Numbers (iso.org.dod.internet.directory [1.3.6.1.1.])</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-2">Protocol Mechanisms</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-3">Object Identifier Descriptors</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-4">Attribute Description Options</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-5">LDAPMessage types</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-6">resultCode values</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-7">Bind Authentication Method</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-8">LDAP Syntaxes</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-9">LDAP Search Scopes</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-10">LDAP Filter Choices</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-11">LDAP ModifyRequest Operations</a>
+      </li>
+      <li>
+        <a href="#ldap-parameters-12">LDAP authzid prefixes</a>
+      </li>
+    </ul>
+    <h2><a name="ldap-parameters-1" id="ldap-parameters-1"></a>Internet Directory Numbers (iso.org.dod.internet.directory [1.3.6.1.1.])</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review with Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Rolf Sonneveld, Andrew Findlay</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>][<a href="http://www.iana.org/go/rfc2578">RFC2578</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Directory OIDs are assigned to RFCs for their use in identifying
+directory (and possibly other) objects in accordance with BCP 64 [RFC 4520].
+The referenced RFC should be consulted for information about
+these assignments.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Decimal</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>Reserved for future use</td>
+          <td>[IANA]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>nisSchema</td>
+          <td>Network Info Service Schema</td>
+          <td>[<a href="http://www.iana.org/go/rfc2307">RFC2307</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>NameForm</td>
+          <td>Naming Plan</td>
+          <td>[<a href="http://www.iana.org/go/rfc2377">RFC2377</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>AuxObject</td>
+          <td>Auxiliary Object Class</td>
+          <td>[<a href="http://www.iana.org/go/rfc2377">RFC2377</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>vendorName</td>
+          <td>Vendor Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc3045">RFC3045</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>vendorVersion</td>
+          <td>Vendor Version</td>
+          <td>[<a href="http://www.iana.org/go/rfc3045">RFC3045</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>pcimSchema</td>
+          <td>Policy Core Information Model LDAP Schema</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>LCUP</td>
+          <td>LDAP Client Update Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc3928">RFC3928</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>cancelOp</td>
+          <td>LDAP Cancel Operation</td>
+          <td>[<a href="http://www.iana.org/go/rfc3909">RFC3909</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>pcelsSchema</td>
+          <td>PCELS Schema</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>uddi</td>
+          <td>Universal Description, Discovery &amp; Integration</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>vPIM</td>
+          <td>Voice Messaging Directory Service</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>assertion</td>
+          <td>Assertion Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc4528">RFC4528</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>ReadEntry</td>
+          <td>Read Entry Controls</td>
+          <td>[<a href="http://www.iana.org/go/rfc4527">RFC4527</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>increment</td>
+          <td>LDAP Modify-Increment</td>
+          <td>[<a href="http://www.iana.org/go/rfc4525">RFC4525</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>x509</td>
+          <td>x.509 Certificates</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>uuid</td>
+          <td>entryUUID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4530">RFC4530</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>LBURP</td>
+          <td>LDAP Bulk Update/Replication Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc4373">RFC4373</a>]</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>ASN1 module</td>
+          <td>LDAP ASN.1 Module</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>turn</td>
+          <td>LDAP Turn Operation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4531">RFC4531</a>]</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>entryDN</td>
+          <td>LDAP entryDN Operational Attribute</td>
+          <td>[<a href="http://www.iana.org/go/rfc5020">RFC5020</a>]</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>txn</td>
+          <td>LDAP Transactions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5805">RFC5805</a>]</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>dontUseCopy</td>
+          <td>LDAP Don't Use Copy Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc6171">RFC6171</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-2" id="ldap-parameters-2"></a>Protocol Mechanisms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Legend:
+C =&gt; Control
+E =&gt; Extension
+F =&gt; Feature
+N =&gt; Unsolicited Notice</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Object Identifier</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.2.826.0.1.3344810.2.3</td>
+          <td>C</td>
+          <td>Matched Values Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc3876">RFC3876</a>]</td>
+        </tr>
+        <tr>
+          <td>1.2.840.113556.1.4.319</td>
+          <td>C</td>
+          <td>LDAP Simple Paged Results Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc2696">RFC2696</a>]</td>
+        </tr>
+        <tr>
+          <td>1.2.840.113556.1.4.473</td>
+          <td>C</td>
+          <td>Sort Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc2891">RFC2891</a>]</td>
+        </tr>
+        <tr>
+          <td>1.2.840.113556.1.4.474</td>
+          <td>C</td>
+          <td>Sort Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc2891">RFC2891</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.7.1</td>
+          <td>C</td>
+          <td>LCUP Sync Request Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc3928">RFC3928</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.7.2</td>
+          <td>C</td>
+          <td>LCUP Sync Update Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc3928">RFC3928</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.7.3</td>
+          <td>C</td>
+          <td>LCUP Sync Done Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc3928">RFC3928</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.8</td>
+          <td>E</td>
+          <td>Cancel Operation</td>
+          <td>[<a href="http://www.iana.org/go/rfc3909">RFC3909</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.12</td>
+          <td>C</td>
+          <td>Assertion Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc4528">RFC4528</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.13.1</td>
+          <td>C</td>
+          <td>LDAP Pre-read Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc4527">RFC4527</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.13.2</td>
+          <td>C</td>
+          <td>LDAP Post-read Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc4527">RFC4527</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.14</td>
+          <td>F</td>
+          <td>Modify-Increment</td>
+          <td>[<a href="http://www.iana.org/go/rfc4525">RFC4525</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.21.1</td>
+          <td>E</td>
+          <td>Start Transaction Extended Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5805">RFC5805</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.21.2</td>
+          <td>C</td>
+          <td>Transaction Specification Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc5805">RFC5805</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.21.3</td>
+          <td>E</td>
+          <td>End Transaction Extended Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5805">RFC5805</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.21.4</td>
+          <td>N</td>
+          <td>Aborted Transaction Notice</td>
+          <td>[<a href="http://www.iana.org/go/rfc5805">RFC5805</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.101.119.1</td>
+          <td>E</td>
+          <td>Dynamic Refresh</td>
+          <td>[<a href="http://www.iana.org/go/rfc2589">RFC2589</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.20037</td>
+          <td>E</td>
+          <td>StartTLS</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>][<a href="http://www.iana.org/go/rfc4513">RFC4513</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.4203.1.5.1</td>
+          <td>F</td>
+          <td>All Op Attrs</td>
+          <td>[<a href="http://www.iana.org/go/rfc3673">RFC3673</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.4203.1.5.2</td>
+          <td>F</td>
+          <td>OC AD Lists</td>
+          <td>[<a href="http://www.iana.org/go/rfc4529">RFC4529</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.4203.1.5.3</td>
+          <td>F</td>
+          <td>True/False filters</td>
+          <td>[<a href="http://www.iana.org/go/rfc4526">RFC4526</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.4203.1.5.4</td>
+          <td>F</td>
+          <td>Language Tag Options</td>
+          <td>[<a href="http://www.iana.org/go/rfc3866">RFC3866</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.4203.1.5.5</td>
+          <td>F</td>
+          <td>Language Range Options</td>
+          <td>[<a href="http://www.iana.org/go/rfc3866">RFC3866</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.4203.1.9.1.1</td>
+          <td>C</td>
+          <td>LDAP Content Synchronization Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc4533">RFC4533</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.4203.1.10.1</td>
+          <td>C</td>
+          <td>Subentries</td>
+          <td>[<a href="http://www.iana.org/go/rfc3672">RFC3672</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.4203.1.11.1</td>
+          <td>E</td>
+          <td>Modify Password</td>
+          <td>[<a href="http://www.iana.org/go/rfc3062">RFC3062</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.4203.1.11.3</td>
+          <td>E</td>
+          <td>Who am I?</td>
+          <td>[<a href="http://www.iana.org/go/rfc4532">RFC4532</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.17.1</td>
+          <td>E</td>
+          <td>StartLBURPRequest LDAP ExtendedRequest message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4373">RFC4373</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.17.2</td>
+          <td>E</td>
+          <td>StartLBURPResponse LDAP ExtendedResponse message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4373">RFC4373</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.17.3</td>
+          <td>E</td>
+          <td>EndLBURPRequest LDAP ExtendedRequest message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4373">RFC4373</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.17.4</td>
+          <td>E</td>
+          <td>EndLBURPResponse LDAP ExtendedResponse message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4373">RFC4373</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.17.5</td>
+          <td>E</td>
+          <td>LBURPUpdateRequest LDAP ExtendedRequest message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4373">RFC4373</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.17.6</td>
+          <td>E</td>
+          <td>LBURPUpdateResponse LDAP ExtendedResponse message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4373">RFC4373</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.17.7</td>
+          <td>F</td>
+          <td>LBURP Incremental Update style OID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4373">RFC4373</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.19</td>
+          <td>E</td>
+          <td>LDAP Turn Operation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4531">RFC4531</a>]</td>
+        </tr>
+        <tr>
+          <td>2.16.840.1.113730.3.4.2</td>
+          <td>C</td>
+          <td>ManageDsaIT</td>
+          <td>[<a href="http://www.iana.org/go/rfc3296">RFC3296</a>]</td>
+        </tr>
+        <tr>
+          <td>2.16.840.1.113730.3.4.15</td>
+          <td>C</td>
+          <td>Authorization Identity Response Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc3829">RFC3829</a>]</td>
+        </tr>
+        <tr>
+          <td>2.16.840.1.113730.3.4.16</td>
+          <td>C</td>
+          <td>Authorization Identity Request Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc3829">RFC3829</a>]</td>
+        </tr>
+        <tr>
+          <td>2.16.840.1.113730.3.4.18</td>
+          <td>C</td>
+          <td>Proxy Authorization Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc4370">RFC4370</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.1.22</td>
+          <td>C</td>
+          <td>LDAP Don't Use Copy Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc6171">RFC6171</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-3" id="ldap-parameters-3"></a>Object Identifier Descriptors</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>x-  Private Use (can not be registered)
+e-  Reserved for Experiments, First Come First Served
+All others:  Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Rolf Sonneveld, Andrew Findlay</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Legend:
+A =&gt; Attribute Type
+C =&gt; DIT Content Rule
+E =&gt; LDAP URL Extension
+F =&gt; Family
+M =&gt; Matching Rule
+N =&gt; Name Form
+O =&gt; Object Class
+R =&gt; Administrative Role
+* =&gt; The registration is historic in nature</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>OID</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>accessControlInnerArea</td>
+          <td>R</td>
+          <td>2.5.23.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc3672">RFC3672</a>]</td>
+        </tr>
+        <tr>
+          <td>accessControlSpecificArea</td>
+          <td>R</td>
+          <td>2.5.23.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc3672">RFC3672</a>]</td>
+        </tr>
+        <tr>
+          <td>account</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>add</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>administrativeRole</td>
+          <td>A</td>
+          <td>2.5.18.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc3672">RFC3672</a>]</td>
+        </tr>
+        <tr>
+          <td>administratorsAddress</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.1466.101.120.1</td>
+          <td>[<a href="#Mark_Wahl">Mark_Wahl</a>]</td>
+        </tr>
+        <tr>
+          <td>algorithmIdentifierMatch</td>
+          <td>M</td>
+          <td>2.5.13.40</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>alias</td>
+          <td>O</td>
+          <td>2.5.6.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>aliasedEntryName</td>
+          <td>A</td>
+          <td>2.5.4.1</td>
+          <td>[X.501]</td>
+        </tr>
+        <tr>
+          <td>aliasedObjectName</td>
+          <td>A</td>
+          <td>2.5.4.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>allComponentsMatch</td>
+          <td>M</td>
+          <td>1.2.36.79672281.1.13.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc3687">RFC3687</a>]</td>
+        </tr>
+        <tr>
+          <td>altServer</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.1466.101.120.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>applicationEntity</td>
+          <td>O</td>
+          <td>2.5.6.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc2256">RFC2256</a>]</td>
+        </tr>
+        <tr>
+          <td>applicationProcess</td>
+          <td>O</td>
+          <td>2.5.6.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>aRecord</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.26</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>associatedDomain</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.37</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>associatedInternetGateway</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.453.7.2.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc2164">RFC2164</a>]</td>
+        </tr>
+        <tr>
+          <td>associatedName</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.38</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>associatedORAddress</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.453.7.2.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc2164">RFC2164</a>]</td>
+        </tr>
+        <tr>
+          <td>associatedX400Gateway</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.453.7.2.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc2164">RFC2164</a>]</td>
+        </tr>
+        <tr>
+          <td>attributeMap</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>attributeTypes</td>
+          <td>A</td>
+          <td>2.5.21.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>audio</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.55</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>authenticationMethod</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>authorityRevocationList</td>
+          <td>A</td>
+          <td>2.5.4.38</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>autonomousArea</td>
+          <td>R</td>
+          <td>2.5.23.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3672">RFC3672</a>]</td>
+        </tr>
+        <tr>
+          <td>bindTimeLimit</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>bitStringMatch</td>
+          <td>M</td>
+          <td>2.5.13.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>booleanMatch</td>
+          <td>M</td>
+          <td>2.5.13.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>buildingName</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.48</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>businessCategory</td>
+          <td>A</td>
+          <td>2.5.4.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>c</td>
+          <td>A</td>
+          <td>2.5.4.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>c-FacsimileTelephoneNumber</td>
+          <td>A</td>
+          <td>2.5.4.23.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-InternationalISDNNumber</td>
+          <td>A</td>
+          <td>2.5.4.25.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-l</td>
+          <td>A</td>
+          <td>2.5.4.7.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-PhysicalDeliveryOffice</td>
+          <td>A</td>
+          <td>2.5.4.19.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-PostalAddress</td>
+          <td>A</td>
+          <td>2.5.4.16.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-PostalCode</td>
+          <td>A</td>
+          <td>2.5.4.17.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-PostOfficeBox</td>
+          <td>A</td>
+          <td>2.5.4.18.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-o</td>
+          <td>A</td>
+          <td>2.5.4.10.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-ou</td>
+          <td>A</td>
+          <td>2.5.4.11.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-st</td>
+          <td>A</td>
+          <td>2.5.4.8.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-street</td>
+          <td>A</td>
+          <td>2.5.4.9.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-TelephoneNumber</td>
+          <td>A</td>
+          <td>2.5.4.20.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>c-TelexNumber</td>
+          <td>A</td>
+          <td>2.5.4.21.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>cACertificate</td>
+          <td>A</td>
+          <td>2.5.4.37</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>calCalAdrURI</td>
+          <td>A</td>
+          <td>1.2.840.113556.1.4.481</td>
+          <td>[<a href="http://www.iana.org/go/rfc2739">RFC2739</a>]</td>
+        </tr>
+        <tr>
+          <td>calCalURI</td>
+          <td>A</td>
+          <td>1.2.840.113556.1.4.478</td>
+          <td>[<a href="http://www.iana.org/go/rfc2739">RFC2739</a>]</td>
+        </tr>
+        <tr>
+          <td>calCAPURI</td>
+          <td>A</td>
+          <td>1.2.840.113556.1.4.480</td>
+          <td>[<a href="http://www.iana.org/go/rfc2739">RFC2739</a>]</td>
+        </tr>
+        <tr>
+          <td>calEntry</td>
+          <td>O</td>
+          <td>1.2.840.113556.1.5.87</td>
+          <td>[<a href="http://www.iana.org/go/rfc2739">RFC2739</a>]</td>
+        </tr>
+        <tr>
+          <td>calFBURL</td>
+          <td>A</td>
+          <td>1.2.840.113556.1.4.479</td>
+          <td>[<a href="http://www.iana.org/go/rfc2739">RFC2739</a>]</td>
+        </tr>
+        <tr>
+          <td>calOtherCalAdrURIs</td>
+          <td>A</td>
+          <td>1.2.840.113556.1.4.485</td>
+          <td>[<a href="http://www.iana.org/go/rfc2739">RFC2739</a>]</td>
+        </tr>
+        <tr>
+          <td>calOtherCalURIs</td>
+          <td>A</td>
+          <td>1.2.840.113556.1.4.482</td>
+          <td>[<a href="http://www.iana.org/go/rfc2739">RFC2739</a>]</td>
+        </tr>
+        <tr>
+          <td>calOtherCAPURIs</td>
+          <td>A</td>
+          <td>1.2.840.113556.1.4.484</td>
+          <td>[<a href="http://www.iana.org/go/rfc2739">RFC2739</a>]</td>
+        </tr>
+        <tr>
+          <td>calOtherFBURLs</td>
+          <td>A</td>
+          <td>1.2.840.113556.1.4.483</td>
+          <td>[<a href="http://www.iana.org/go/rfc2739">RFC2739</a>]</td>
+        </tr>
+        <tr>
+          <td>caseExactIA5Match</td>
+          <td>M</td>
+          <td>1.3.6.1.4.1.1466.109.114.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>caseExactMatch</td>
+          <td>M</td>
+          <td>2.5.13.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>caseExactOrderingMatch</td>
+          <td>M</td>
+          <td>2.5.13.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>caseExactSubstringsMatch</td>
+          <td>M</td>
+          <td>2.5.13.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>caseIgnoreIA5Match</td>
+          <td>M</td>
+          <td>1.3.6.1.4.1.1466.109.114.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>caseIgnoreIA5SubstringsMatch</td>
+          <td>M</td>
+          <td>1.3.6.1.4.1.1466.109.114.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>caseIgnoreListMatch</td>
+          <td>M</td>
+          <td>2.5.13.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>caseIgnoreListSubstringsMatch</td>
+          <td>M</td>
+          <td>2.5.13.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>caseIgnoreMatch</td>
+          <td>M</td>
+          <td>2.5.13.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>caseIgnoreOrderingMatch</td>
+          <td>M</td>
+          <td>2.5.13.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>caseIgnoreSubstringsMatch</td>
+          <td>M</td>
+          <td>2.5.13.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>certificateExactMatch</td>
+          <td>M</td>
+          <td>2.5.13.34</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>certificateListExactMatch</td>
+          <td>M</td>
+          <td>2.5.13.38</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>certificateListMatch</td>
+          <td>M</td>
+          <td>2.5.13.39</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>certificateMatch</td>
+          <td>M</td>
+          <td>2.5.13.35</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>certificatePairExactMatch</td>
+          <td>M</td>
+          <td>2.5.13.36</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>certificatePairMatch</td>
+          <td>M</td>
+          <td>2.5.13.37</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>certificateRevocationList</td>
+          <td>A</td>
+          <td>2.5.4.39</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>certificationAuthority</td>
+          <td>O</td>
+          <td>2.5.6.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>certificationAuthority-V2</td>
+          <td>O</td>
+          <td>2.5.6.16.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>changetype</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>cn</td>
+          <td>A</td>
+          <td>2.5.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>cNAMERecord</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.31</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>co</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.43</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>collectiveAttributeInnerArea</td>
+          <td>R</td>
+          <td>2.5.23.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc3672">RFC3672</a>]</td>
+        </tr>
+        <tr>
+          <td>collectiveAttributeSpecificArea</td>
+          <td>R</td>
+          <td>2.5.23.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc3672">RFC3672</a>]</td>
+        </tr>
+        <tr>
+          <td>collectiveAttributeSubentries</td>
+          <td>A</td>
+          <td>2.5.18.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>collectiveAttributeSubentry</td>
+          <td>O</td>
+          <td>2.5.20.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>collectiveExclusions</td>
+          <td>A</td>
+          <td>2.5.18.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc3671">RFC3671</a>]</td>
+        </tr>
+        <tr>
+          <td>commonName</td>
+          <td>A</td>
+          <td>2.5.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>componentFilterMatch</td>
+          <td>M</td>
+          <td>1.2.36.79672281.1.13.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc3687">RFC3687</a>]</td>
+        </tr>
+        <tr>
+          <td>control</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>country</td>
+          <td>O</td>
+          <td>2.5.6.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>countryName</td>
+          <td>A</td>
+          <td>2.5.4.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>createTimestamp</td>
+          <td>A</td>
+          <td>2.5.18.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>creatorsName</td>
+          <td>A</td>
+          <td>2.5.18.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>credentialLevel</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>cRLDistributionPoint</td>
+          <td>O</td>
+          <td>2.5.6.19</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>crossCertificatePair</td>
+          <td>A</td>
+          <td>2.5.4.40</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>DC</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.25</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>dcObject</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.1466.344</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>defaultServerList</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.0</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>defaultSearchBase</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>defaultSearchScope</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>delete</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>deleteoldrdn</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>deltaCRL</td>
+          <td>O</td>
+          <td>2.5.6.23</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>deltaRevocationList</td>
+          <td>A</td>
+          <td>2.5.4.53</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>dereferenceAliases</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>description</td>
+          <td>A</td>
+          <td>2.5.4.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>destinationIndicator</td>
+          <td>A</td>
+          <td>2.5.4.27</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>device</td>
+          <td>O</td>
+          <td>2.5.6.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>directoryComponentsMatch</td>
+          <td>M</td>
+          <td>1.2.36.79672281.1.13.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc3687">RFC3687</a>]</td>
+        </tr>
+        <tr>
+          <td>directoryStringFirstComponentMatch</td>
+          <td>M</td>
+          <td>2.5.13.31</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>distinguishedName</td>
+          <td>A</td>
+          <td>2.5.4.49</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>distinguishedNameMatch</td>
+          <td>M</td>
+          <td>2.5.13.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>distinguishedNameTableEntry</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.453.7.1.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc2293">RFC2293</a>]</td>
+        </tr>
+        <tr>
+          <td>distinguishedNameTableKey</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.453.7.2.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc2293">RFC2293</a>]</td>
+        </tr>
+        <tr>
+          <td>dITContentRules</td>
+          <td>A</td>
+          <td>2.5.21.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>dITRedirect</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.54</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>dITStructureRules</td>
+          <td>A</td>
+          <td>2.5.21.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>dmd</td>
+          <td>O</td>
+          <td>2.5.6.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc2256">RFC2256</a>]</td>
+        </tr>
+        <tr>
+          <td>dmdName</td>
+          <td>A</td>
+          <td>2.5.4.54</td>
+          <td>[<a href="http://www.iana.org/go/rfc2256">RFC2256</a>]</td>
+        </tr>
+        <tr>
+          <td>dn</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>dnQualifier</td>
+          <td>A</td>
+          <td>2.5.4.46</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>dNSDomain</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>document</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>documentAuthor</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>documentIdentifier</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>documentLocation</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>documentPublisher</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.56</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>documentSeries</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>documentTitle</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>documentVersion</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>domain</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>domainComponent</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.25</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>domainNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.4.1.1466.345</td>
+          <td>[<a href="http://www.iana.org/go/rfc2247">RFC2247</a>]</td>
+        </tr>
+        <tr>
+          <td>domainRelatedObject</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.17</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>drink</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>dSA</td>
+          <td>O</td>
+          <td>2.5.6.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc2256">RFC2256</a>]</td>
+        </tr>
+        <tr>
+          <td>dSAQuality</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.49</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>DUAConfigProfile</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.11.1.3.1.2.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>dynamicObject</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.1466.101.119.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc2589">RFC2589</a>]</td>
+        </tr>
+        <tr>
+          <td>dynamicSubtrees</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.1466.101.119.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc2589">RFC2589</a>]</td>
+        </tr>
+        <tr>
+          <td>e-com-seafreeze-*</td>
+          <td>F</td>
+          <td>N/A</td>
+          <td>[<a href="#Allen_Williams">Allen_Williams</a>]</td>
+        </tr>
+        <tr>
+          <td>e-com-westjet-*</td>
+          <td>F</td>
+          <td>N/A</td>
+          <td>[<a href="#Matthew_Key">Matthew_Key</a>]</td>
+        </tr>
+        <tr>
+          <td>email</td>
+          <td>A</td>
+          <td>1.2.840.113549.1.9.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3280">RFC3280</a>]</td>
+        </tr>
+        <tr>
+          <td>emailAddress</td>
+          <td>A</td>
+          <td>1.2.840.113549.1.9.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3280">RFC3280</a>]</td>
+        </tr>
+        <tr>
+          <td>enhancedSearchGuide</td>
+          <td>A</td>
+          <td>2.5.4.47</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>entryDN</td>
+          <td>A</td>
+          <td>1.3.6.1.1.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc5020">RFC5020</a>]</td>
+        </tr>
+        <tr>
+          <td>entryTtl</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.1466.101.119.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc2589">RFC2589</a>]</td>
+        </tr>
+        <tr>
+          <td>entryUUID</td>
+          <td>A</td>
+          <td>1.3.6.1.1.16.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4530">RFC4530</a>]</td>
+        </tr>
+        <tr>
+          <td>extensibleObject</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.1466.101.120.111</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>facsimileTelephoneNumber</td>
+          <td>A</td>
+          <td>2.5.4.23</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>favouriteDrink</td>
+          <td>A*</td>
+          <td>0.9.2342.19200300.100.1.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsAnnotation</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsDescr</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsFsl</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.31103.1.1003</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsFslHost</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsFslPort</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsFslTTL</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsFslUuid</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsFsn</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.31103.1.1002</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsFsnTTL</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsFsnUuid</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNceDN</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNcePrefix</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNetAddr</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNetPort</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsClassChange</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.112</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsClassFileid</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.110</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsClassHandle</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.109</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsClassReaddir</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.113</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsClassSimul</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.108</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsClassWritever</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.111</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsCurrency</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.103</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsFsl</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.31103.1.1004</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsGenFlagGoing</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.105</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsGenFlagSplit</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.106</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsGenFlagWritable</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.104</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsMajorVer</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.101</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsMinorVer</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.102</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsPath</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.100</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsReadOrder</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.115</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsReadRank</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.114</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsTransFlagRdma</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.107</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsURI</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.120</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsValidFor</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.119</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsVarSub</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.118</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsWriteOrder</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.117</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNfsWriteRank</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.116</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNsdbContainerInfo</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.31103.1.1001</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNsdbName</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsNsdbPort</td>
+          <td>A*</td>
+          <td>1.3.6.1.4.1.31103.1.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>fedfsUuid</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.31103.1.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7532">RFC7532</a>]</td>
+        </tr>
+        <tr>
+          <td>followReferrals</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>friendlyCountry</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.18</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>friendlyCountryName</td>
+          <td>A*</td>
+          <td>0.9.2342.19200300.100.1.43</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>generalizedTimeMatch</td>
+          <td>M</td>
+          <td>2.5.13.27</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>generalizedTimeOrderingMatch</td>
+          <td>M</td>
+          <td>2.5.13.28</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>generationQualifier</td>
+          <td>A</td>
+          <td>2.5.4.44</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>givenName</td>
+          <td>A</td>
+          <td>2.5.4.42</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>GN</td>
+          <td>A</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>governingStructureRule</td>
+          <td>A</td>
+          <td>2.5.21.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>groupOfNames</td>
+          <td>O</td>
+          <td>2.5.6.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>groupOfUniqueNames</td>
+          <td>O</td>
+          <td>2.5.6.17</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>homePhone</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>homePostalAddress</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.39</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>homeTelephone</td>
+          <td>A*</td>
+          <td>0.9.2342.19200300.100.1.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>host</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>houseIdentifier</td>
+          <td>A</td>
+          <td>2.5.4.51</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>increment</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc4525">RFC4525</a>]</td>
+        </tr>
+        <tr>
+          <td>info</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>initials</td>
+          <td>A</td>
+          <td>2.5.4.43</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>integerFirstComponentMatch</td>
+          <td>M</td>
+          <td>2.5.13.29</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>integerMatch</td>
+          <td>M</td>
+          <td>2.5.13.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>integerOrderingMatch</td>
+          <td>M</td>
+          <td>2.5.13.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>internationaliSDNNumber</td>
+          <td>A</td>
+          <td>2.5.4.25</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>janetMailbox</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.46</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>jpegPhoto</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.60</td>
+          <td>[<a href="http://www.iana.org/go/rfc2798">RFC2798</a>]</td>
+        </tr>
+        <tr>
+          <td>keywordMatch</td>
+          <td>M</td>
+          <td>2.5.13.33</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>knowledgeInformation</td>
+          <td>A</td>
+          <td>2.5.4.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc2256">RFC2256</a>]</td>
+        </tr>
+        <tr>
+          <td>L</td>
+          <td>A</td>
+          <td>2.5.4.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>labeledURI</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.250.1.57</td>
+          <td>[<a href="http://www.iana.org/go/rfc2079">RFC2079</a>]</td>
+        </tr>
+        <tr>
+          <td>labeledURIObject</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.250.3.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc2079">RFC2079</a>]</td>
+        </tr>
+        <tr>
+          <td>lastModifiedBy</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.24</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>lastModifiedTime</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.23</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>ldapSyntaxes</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.1466.101.120.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>LDIFLocationURL</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.16572.2.2.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc6109">RFC6109</a>]</td>
+        </tr>
+        <tr>
+          <td>LDIFLocationURLObject</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.16572.2.1.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc6109">RFC6109</a>]</td>
+        </tr>
+        <tr>
+          <td>locality</td>
+          <td>O</td>
+          <td>2.5.6.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>localityName</td>
+          <td>A</td>
+          <td>2.5.4.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>mail</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>mailPreferenceOption</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.47</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>mailReceipt</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.16572.2.2.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc6109">RFC6109</a>]</td>
+        </tr>
+        <tr>
+          <td>manager</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>managedDomains</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.16572.2.2.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc6109">RFC6109</a>]</td>
+        </tr>
+        <tr>
+          <td>matchingRules</td>
+          <td>A</td>
+          <td>2.5.21.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>matchingRuleUse</td>
+          <td>A</td>
+          <td>2.5.21.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>mcgamTables</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.453.7.2.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc2164">RFC2164</a>]</td>
+        </tr>
+        <tr>
+          <td>mDRecord</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.27</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>member</td>
+          <td>A</td>
+          <td>2.5.4.31</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>mixerGateway</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.453.7.1.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc2164">RFC2164</a>]</td>
+        </tr>
+        <tr>
+          <td>mobile</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.41</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>mobileTelephoneNumber</td>
+          <td>A*</td>
+          <td>0.9.2342.19200300.100.1.41</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>moddn</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>modifiersName</td>
+          <td>A</td>
+          <td>2.5.18.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>modify</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>modrdn</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>modifyTimestamp</td>
+          <td>A</td>
+          <td>2.5.18.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>mXRecord</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.28</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>A</td>
+          <td>2.5.4.41</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>nameForms</td>
+          <td>A</td>
+          <td>2.5.21.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>namingContexts</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.1466.101.120.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>newrdn</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>newsuperior</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>nSRecord</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.29</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>numericStringMatch</td>
+          <td>M</td>
+          <td>2.5.13.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>numericStringOrderingMatch</td>
+          <td>M</td>
+          <td>2.5.13.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>numericStringSubstringsMatch</td>
+          <td>M</td>
+          <td>2.5.13.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>o</td>
+          <td>A</td>
+          <td>2.5.4.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>objectClass</td>
+          <td>A</td>
+          <td>2.5.4.0</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>objectClasses</td>
+          <td>A</td>
+          <td>2.5.21.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>objectclassMap</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>objectIdentifierFirstComponentMatch</td>
+          <td>M</td>
+          <td>2.5.13.30</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>objectIdentifierMatch</td>
+          <td>M</td>
+          <td>2.5.13.0</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>octetStringMatch</td>
+          <td>M</td>
+          <td>2.5.13.17</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>octetStringOrderingMatch</td>
+          <td>M</td>
+          <td>2.5.13.18</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>omittedORAddressComponent</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.453.7.1.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc2164">RFC2164</a>]</td>
+        </tr>
+        <tr>
+          <td>oRAddressComponentType</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.453.7.2.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc2164">RFC2164</a>]</td>
+        </tr>
+        <tr>
+          <td>organization</td>
+          <td>O</td>
+          <td>2.5.6.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>organizationalPerson</td>
+          <td>O</td>
+          <td>2.5.6.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>organizationalRole</td>
+          <td>O</td>
+          <td>2.5.6.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>organizationalStatus</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.45</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>organizationalUnit</td>
+          <td>O</td>
+          <td>2.5.6.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>organizationalUnitName</td>
+          <td>A</td>
+          <td>2.5.4.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>organizationName</td>
+          <td>A</td>
+          <td>2.5.4.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>otherMailbox</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.22</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>ou</td>
+          <td>A</td>
+          <td>2.5.4.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>owner</td>
+          <td>A</td>
+          <td>2.5.4.32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>pager</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.42</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>pagerTelephoneNumber</td>
+          <td>A*</td>
+          <td>0.9.2342.19200300.100.1.42</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>pcels8021Filter</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.54</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcels8021HdrDestMACAddress</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.50</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcels8021HdrDestMACMask</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.51</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcels8021HdrPriority</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.53</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcels8021HdrProtocolID</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.52</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcels8021HdrSourceMACAddress</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.48</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcels8021HdrSourceMACMask</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.49</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcels8021HdrVLANID</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.54</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsActionAssociation</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsActionList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsBitStringList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.24</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsBitStringValueAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.45</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsBoolean</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.26</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsBooleanValueAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.47</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsCompoundActionAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsCompoundConditionAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsCompoundFilterConditionAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsConditionAssociation</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsConditionList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsConditionListType</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsCoSVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.33</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsDecisionStrategy</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsDestinationIPv4VariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.21</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsDestinationIPv6VariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.22</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsDestinationMACVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.31</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsDestinationPortVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.24</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsDestinationSAPVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.36</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsDSCPVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.28</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsElementList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.31</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsEthertypeVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.34</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsExecutionStrategy</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsExpectedValueList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsExpectedValueTypes</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.18</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsExplicitVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.17</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsFilterDirection</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.56</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsFilterEntryBase</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.52</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsFilterEntryList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.57</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsFilterIsNegated</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.33</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsFilterListAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.55</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsFilterListName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.55</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsFilterName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsFlowDirectionVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.39</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsFlowIdVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.29</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsGroup</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsGroupAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsGroupInstance</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsImplicitVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.18</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIntegerList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.25</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIntegerValueAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.46</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrDestAddress</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.38</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrDestAddressEndOfRange</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.39</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrDestMask</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.40</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrDestPortEnd</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.45</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrDestPortStart</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.44</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrDSCPList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.46</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrFlowLabel</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.47</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrProtocolID</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.41</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrSourceAddress</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.35</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrSourceAddressEndOfRange</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.36</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrSourceMask</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.37</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrSourcePortEnd</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.43</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrSourcePortStart</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.42</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHdrVersion</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.34</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPHeadersFilter</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.53</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPProtocolVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.25</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPToSVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.27</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPv4AddrList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPv4AddrValueAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.41</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPv6AddrList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.21</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPv6AddrValueAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.42</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIPVersionVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.26</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsIsMirrored</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsMACAddrList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.22</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsMACAddrValueAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.43</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsPolicySet</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsPolicySetAssociation</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsPolicySetDN</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsPolicySetList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsPolicySetName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsPriority</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsReusableContainer</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.48</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsReusableContainerAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.49</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsReusableContainerInstance</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.50</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsReusableContainerList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.28</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsReusableContainerName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.27</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsRole</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.29</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsRoleCollection</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.51</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsRoleCollectionName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.30</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsRule</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsRuleAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsRuleInstance</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsRuleValidityPeriodList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.62</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsSequencedActions</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsSimpleActionAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsSimpleConditionAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsSNAPOUIVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.37</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsSNAPTypeVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.38</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsSourceIPv4VariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.19</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsSourceIPv6VariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsSourceMACVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.30</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsSourcePortVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.23</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsSourceSAPVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.35</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsStringList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.23</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsStringValueAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.44</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsValueAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.40</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsValueDN</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsValueName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.19</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVariable</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVariableDN</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVariableModelClass</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVariableModelProperty</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.17</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVariableName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVendorValueAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.57</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVendorValueData</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.60</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVendorValueEncoding</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.61</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVendorVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.56</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVendorVariableData</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.58</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVendorVariableEncoding</td>
+          <td>A</td>
+          <td>1.3.6.1.1.9.2.59</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcelsVLANVariableAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.9.1.32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4104">RFC4104</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimPolicy</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimGroup</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimGroupAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimGroupInstance</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRule</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleInstance</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleConditionAssociation</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleValidityAssociation</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleActionAssociation</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimConditionAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimTPCAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimConditionVendorAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimActionAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimActionVendorAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimPolicyInstance</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimElementAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.17</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRepository</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.18</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRepositoryAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.19</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRepositoryInstance</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimSubtreesPtrAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.21</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimGroupContainmentAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.22</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleContainmentAuxClass</td>
+          <td>O</td>
+          <td>1.3.6.1.1.6.1.23</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimKeywords</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimGroupName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleEnabled</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleConditionListType</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleConditionList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleActionList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleValidityPeriodList</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleUsage</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRulePriority</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleMandatory</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRuleSequencedActions</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRoles</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimConditionGroupNumber</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimConditionNegated</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.17</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimConditionName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.18</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimConditionDN</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.19</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimValidityConditionName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimTimePeriodConditionDN</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.21</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimActionName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.22</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimActionOrder</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.23</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimActionDN</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.24</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimTPCTime</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.25</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimTPCMonthOfYearMask</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.26</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimTPCDayOfMonthMask</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.27</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimTPCDayOfWeekMask</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.28</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimTPCTimeOfDayMask</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.29</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimTPCLocalOrUtcTime</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.30</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimVendorConstraintData</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.31</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimVendorConstraintEncoding</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.32</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimVendorActionData</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.33</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimVendorActionEncoding</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.34</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimPolicyInstanceName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.35</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRepositoryName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.36</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimSubtreesAuxContainedSet</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.37</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimGroupsAuxContainedSet</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.38</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>pcimRulesAuxContainedSet</td>
+          <td>A</td>
+          <td>1.3.6.1.1.6.2.39</td>
+          <td>[<a href="http://www.iana.org/go/rfc3703">RFC3703</a>]</td>
+        </tr>
+        <tr>
+          <td>person</td>
+          <td>O</td>
+          <td>2.5.6.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>personalSignature</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.53</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>personalTitle</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.40</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>photo</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>physicalDeliveryOfficeName</td>
+          <td>A</td>
+          <td>2.5.4.19</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>pilotDSA</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.21</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>pilotObject</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>pilotOrganization</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>pilotPerson</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>pkiCA</td>
+          <td>O</td>
+          <td>2.5.6.22</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>pkiUser</td>
+          <td>O</td>
+          <td>2.5.6.21</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>postalAddress</td>
+          <td>A</td>
+          <td>2.5.4.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>postalCode</td>
+          <td>A</td>
+          <td>2.5.4.17</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>postOfficeBox</td>
+          <td>A</td>
+          <td>2.5.4.18</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>preferredDeliveryMethod</td>
+          <td>A</td>
+          <td>2.5.4.28</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>preferredServerList</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>presentationAddress</td>
+          <td>A</td>
+          <td>2.5.4.29</td>
+          <td>[<a href="http://www.iana.org/go/rfc2256">RFC2256</a>]</td>
+        </tr>
+        <tr>
+          <td>presentationAddressMatch</td>
+          <td>M</td>
+          <td>2.5.13.22</td>
+          <td>[<a href="http://www.iana.org/go/rfc2252">RFC2252</a>]</td>
+        </tr>
+        <tr>
+          <td>presentMatch</td>
+          <td>M</td>
+          <td>1.2.36.79672281.1.13.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc3687">RFC3687</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-aliases</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1108</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-charge-info</td>
+          <td>A</td>
+          <td>1.3.18.0.2.24.46.1.105</td>
+          <td>[<a href="http://www.iana.org/go/rfc7612">RFC7612</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-charge-info-uri</td>
+          <td>A</td>
+          <td>1.3.18.0.2.24.46.1.106</td>
+          <td>[<a href="http://www.iana.org/go/rfc7612">RFC7612</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-charset-configured</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1109</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-charset-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1131</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-color-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1129</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-compression-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1128</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-copies-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1118</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-current-operator</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1112</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-delivery-orientation-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1114</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-device-id</td>
+          <td>A</td>
+          <td>1.3.18.0.2.24.46.1.101</td>
+          <td>[<a href="http://www.iana.org/go/rfc7612">RFC7612</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-device-service-count</td>
+          <td>A</td>
+          <td>1.3.18.0.2.24.46.1.102</td>
+          <td>[<a href="http://www.iana.org/go/rfc7612">RFC7612</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-document-format-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1130</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-finishings-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1125</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-generated-natural-language-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1137</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-geo-location</td>
+          <td>A</td>
+          <td>1.3.18.0.2.24.46.1.107</td>
+          <td>[<a href="http://www.iana.org/go/rfc7612">RFC7612</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-info</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1139</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-ipp-features-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.24.46.1.108</td>
+          <td>[<a href="http://www.iana.org/go/rfc7612">RFC7612</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-ipp-versions-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1133</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-job-priority-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1110</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-job-k-octets-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1111</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-location</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1136</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-make-and-model</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1138</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-media-local-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1117</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-media-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1122</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-more-info</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1134</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-multiple-document-jobs-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1132</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-name</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1135</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-natural-language-configured</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1119</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-number-up-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1124</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-output-features-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1116</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-pages-per-minute</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1127</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-pages-per-minute-color</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1126</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-print-quality-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1120</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-resolution-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1121</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-service-person</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1113</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-sides-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1123</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-stacking-order-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1115</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-uri</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1140</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-uuid</td>
+          <td>A</td>
+          <td>1.3.18.0.2.24.46.1.104</td>
+          <td>[<a href="http://www.iana.org/go/rfc7612">RFC7612</a>]</td>
+        </tr>
+        <tr>
+          <td>printer-xri-supported</td>
+          <td>A</td>
+          <td>1.3.18.0.2.4.1107</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printerAbstract</td>
+          <td>O</td>
+          <td>1.3.18.0.2.6.258</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printerIPP</td>
+          <td>O</td>
+          <td>1.3.18.0.2.6.256</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printerLPR</td>
+          <td>O</td>
+          <td>1.3.18.0.2.6.253</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printerService</td>
+          <td>O</td>
+          <td>1.3.18.0.2.6.255</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>printerServiceAuxClass</td>
+          <td>O</td>
+          <td>1.3.18.0.2.6.257</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>profileTTL</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>protocolInformation</td>
+          <td>A</td>
+          <td>2.5.4.48</td>
+          <td>[<a href="http://www.iana.org/go/rfc2256">RFC2256</a>]</td>
+        </tr>
+        <tr>
+          <td>protocolInformationMatch</td>
+          <td>M</td>
+          <td>2.5.13.24</td>
+          <td>[<a href="http://www.iana.org/go/rfc2252">RFC2252</a>]</td>
+        </tr>
+        <tr>
+          <td>provider</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.16572.2.1.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc6109">RFC6109</a>]</td>
+        </tr>
+        <tr>
+          <td>providerCertificate</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.16572.2.2.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc6109">RFC6109</a>]</td>
+        </tr>
+        <tr>
+          <td>providerCertificateHash</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.16572.2.2.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc6109">RFC6109</a>]</td>
+        </tr>
+        <tr>
+          <td>providerName</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.16572.2.2.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc6109">RFC6109</a>]</td>
+        </tr>
+        <tr>
+          <td>providerUnit</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.16572.2.2.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc6109">RFC6109</a>]</td>
+        </tr>
+        <tr>
+          <td>pseudonym</td>
+          <td>A</td>
+          <td>2.5.4.65</td>
+          <td>[<a href="http://www.iana.org/go/rfc3280">RFC3280</a>]</td>
+        </tr>
+        <tr>
+          <td>qualityLabelledData</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.22</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>rdnMatch</td>
+          <td>M</td>
+          <td>1.2.36.79672281.1.13.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc3687">RFC3687</a>]</td>
+        </tr>
+        <tr>
+          <td>ref</td>
+          <td>A</td>
+          <td>2.16.840.1.113730.3.1.34</td>
+          <td>[<a href="http://www.iana.org/go/rfc3296">RFC3296</a>]</td>
+        </tr>
+        <tr>
+          <td>referral</td>
+          <td>0</td>
+          <td>2.16.840.1.113730.3.2.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc3296">RFC3296</a>]</td>
+        </tr>
+        <tr>
+          <td>registeredAddress</td>
+          <td>A</td>
+          <td>2.5.4.26</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>replace</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>residentialPerson</td>
+          <td>O</td>
+          <td>2.5.6.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>RFC822LocalPart</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>RFC822Mailbox</td>
+          <td>A*</td>
+          <td>0.9.2342.19200300.100.1.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>rFC822ToX400Mapping</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.453.7.1.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc2164">RFC2164</a>]</td>
+        </tr>
+        <tr>
+          <td>roleOccupant</td>
+          <td>A</td>
+          <td>2.5.4.33</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>room</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>roomNumber</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>searchGuide</td>
+          <td>A</td>
+          <td>2.5.4.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>searchTimeLimit</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>secretary</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.21</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>seeAlso</td>
+          <td>A</td>
+          <td>2.5.4.34</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>serialNumber</td>
+          <td>A</td>
+          <td>2.5.4.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>serviceAuthenticationMethod</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>serviceCredentialLevel</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>serviceSearchDescriptor</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.11.1.3.1.1.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc4876">RFC4876</a>]</td>
+        </tr>
+        <tr>
+          <td>simpleSecurityObject</td>
+          <td>O</td>
+          <td>0.9.2342.19200300.100.4.19</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>singleLevelQuality</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.50</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>slpServicePrinter</td>
+          <td>O</td>
+          <td>1.3.18.0.2.6.254</td>
+          <td>[<a href="http://www.iana.org/go/rfc3712">RFC3712</a>]</td>
+        </tr>
+        <tr>
+          <td>sn</td>
+          <td>A</td>
+          <td>2.5.4.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>sOARecord</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.30</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>st</td>
+          <td>A</td>
+          <td>2.5.4.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>stateOrProvinceName</td>
+          <td>A</td>
+          <td>2.5.4.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc2256">RFC2256</a>]</td>
+        </tr>
+        <tr>
+          <td>storedPrefixMatch</td>
+          <td>M</td>
+          <td>2.5.13.41</td>
+          <td>[<a href="http://www.iana.org/go/rfc3698">RFC3698</a>]</td>
+        </tr>
+        <tr>
+          <td>street</td>
+          <td>A</td>
+          <td>2.5.4.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>streetAddress</td>
+          <td>A</td>
+          <td>2.5.4.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc2256">RFC2256</a>]</td>
+        </tr>
+        <tr>
+          <td>strongAuthenticationUser</td>
+          <td>O</td>
+          <td>2.5.6.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>structuralObjectClass</td>
+          <td>A</td>
+          <td>2.5.21.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>subentry</td>
+          <td>O</td>
+          <td>2.5.17.0</td>
+          <td>[<a href="http://www.iana.org/go/rfc3672">RFC3672</a>]</td>
+        </tr>
+        <tr>
+          <td>subschema</td>
+          <td>O</td>
+          <td>2.5.20.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>subschemaAdminSpecificArea</td>
+          <td>R</td>
+          <td>2.5.23.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc3672">RFC3672</a>]</td>
+        </tr>
+        <tr>
+          <td>subschemaSubentry</td>
+          <td>A</td>
+          <td>2.5.18.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>subtree</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.453.7.1.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc2293">RFC2293</a>]</td>
+        </tr>
+        <tr>
+          <td>subtreeMaximumQuality</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.52</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>subtreeMinimumQuality</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.51</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>subtreeSpecification</td>
+          <td>A</td>
+          <td>2.5.18.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc3672">RFC3672</a>]</td>
+        </tr>
+        <tr>
+          <td>supportedAlgorithms</td>
+          <td>A</td>
+          <td>2.5.4.52</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>supportedApplicationContext</td>
+          <td>A</td>
+          <td>2.5.4.30</td>
+          <td>[<a href="http://www.iana.org/go/rfc2256">RFC2256</a>]</td>
+        </tr>
+        <tr>
+          <td>supportedControl</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.1466.101.120.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>supportedExtension</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.1466.101.120.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>supportedFeatures</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.4203.1.3.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>supportedLDAPVersion</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.1466.101.120.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>supportedSASLMechanisms</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.1466.101.120.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>surname</td>
+          <td>A</td>
+          <td>2.5.4.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>table</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.453.7.1.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc2293">RFC2293</a>]</td>
+        </tr>
+        <tr>
+          <td>tableEntry</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.453.7.1.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc2293">RFC2293</a>]</td>
+        </tr>
+        <tr>
+          <td>telephoneNumber</td>
+          <td>A</td>
+          <td>2.5.4.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>telephoneNumberMatch</td>
+          <td>M</td>
+          <td>2.5.13.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>telephoneNumberSubstringsMatch</td>
+          <td>M</td>
+          <td>2.5.13.21</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>teletexTerminalIdentifier</td>
+          <td>A</td>
+          <td>2.5.4.22</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>telexNumber</td>
+          <td>A</td>
+          <td>2.5.4.21</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>textEncodedORAddress</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc1274">RFC1274</a>]</td>
+        </tr>
+        <tr>
+          <td>textTableEntry</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.453.7.1.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc2293">RFC2293</a>]</td>
+        </tr>
+        <tr>
+          <td>textTableKey</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.453.7.2.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc2293">RFC2293</a>]</td>
+        </tr>
+        <tr>
+          <td>textTableValue</td>
+          <td>A</td>
+          <td>1.3.6.1.4.1.453.7.2.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc2293">RFC2293</a>]</td>
+        </tr>
+        <tr>
+          <td>title</td>
+          <td>A</td>
+          <td>2.5.4.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>top</td>
+          <td>O</td>
+          <td>2.5.6.0</td>
+          <td>[<a href="http://www.iana.org/go/rfc4512">RFC4512</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiAccessPoint</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.19</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiAddress</td>
+          <td>O</td>
+          <td>1.3.6.1.1.10.6.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiAddressLine</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.13</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiAddressNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.1.10.15.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiAuthorizedName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiBindingKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.18</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiBindingTemplate</td>
+          <td>O</td>
+          <td>1.3.6.1.1.10.6.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiBindingTemplateNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.1.10.15.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiBusinessEntity</td>
+          <td>O</td>
+          <td>1.3.6.1.1.10.6.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiBusinessEntityNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.1.10.15.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiBusinessKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiBusinessService</td>
+          <td>O</td>
+          <td>1.3.6.1.1.10.6.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiBusinessServiceNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.1.10.15.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiCategoryBag</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.15</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiContact</td>
+          <td>O</td>
+          <td>1.3.6.1.1.10.6.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiContactNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.1.10.15.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiDescription</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiDiscoveryURLs</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiEMail</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiFromKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.25</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiHostingRedirector</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.20</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiIdentifierBag</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.14</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiInstanceDescription</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.21</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiInstanceParms</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.22</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiIsHidden</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.28</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiIsProjection</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.29</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiKeyedReference</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiLang</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.30</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiOperator</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiOverviewDescription</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.23</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiOverviewURL</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.24</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiPersonName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiPhone</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiPublisherAssertion</td>
+          <td>O</td>
+          <td>1.3.6.1.1.10.6.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiPublisherAssertionNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.1.10.15.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiServiceKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.17</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiSortCode</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.11</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiTModel</td>
+          <td>O</td>
+          <td>1.3.6.1.1.10.6.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiTModelInstanceInfo</td>
+          <td>O</td>
+          <td>1.3.6.1.1.10.6.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiTModelInstanceInfoNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.1.10.15.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiTModelKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.12</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiTModelNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.1.10.15.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiToKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.26</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiUseType</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiUUID</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.27</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3BindingKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.33</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3BriefResponse</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.43</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3BusinessKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.31</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3DigitalSignature</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.35</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3EntityCreationTime</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.45</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3EntityDeletionTime</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.46</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3EntityKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.44</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3EntityModificationTime</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.37</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3EntityObituary</td>
+          <td>O</td>
+          <td>1.3.6.1.1.10.6.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3EntityObituaryNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.1.10.15.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3ExpiresAfter</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.42</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3MaxEntities</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.41</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3NodeId</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.36</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3NotificationInterval</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.40</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3ServiceKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1. 10.4.32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3Subscription</td>
+          <td>O</td>
+          <td>1.3.6.1.1.10.6.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3SubscriptionFilter</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.39</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3SubscriptionKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.38</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3SubscriptionNameForm</td>
+          <td>N</td>
+          <td>1.3.6.1.1.10.15.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uddiv3TmodelKey</td>
+          <td>A</td>
+          <td>1.3.6.1.1.10.4.34</td>
+          <td>[<a href="http://www.iana.org/go/rfc4403">RFC4403</a>]</td>
+        </tr>
+        <tr>
+          <td>uid</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>uidObject</td>
+          <td>O</td>
+          <td>1.3.6.1.1.3.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>uniqueIdentifier</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.44</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>uniqueMember</td>
+          <td>A</td>
+          <td>2.5.4.50</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>uniqueMemberMatch</td>
+          <td>M</td>
+          <td>2.5.13.23</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>userCertificate</td>
+          <td>A</td>
+          <td>2.5.4.36</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>userClass</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4524">RFC4524</a>]</td>
+        </tr>
+        <tr>
+          <td>userId</td>
+          <td>A</td>
+          <td>0.9.2342.19200300.100.1.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>userPassword</td>
+          <td>A</td>
+          <td>2.5.4.35</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>userSecurityInformation</td>
+          <td>O</td>
+          <td>2.5.6.18</td>
+          <td>[<a href="http://www.iana.org/go/rfc4523">RFC4523</a>]</td>
+        </tr>
+        <tr>
+          <td>uuidMatch</td>
+          <td>M</td>
+          <td>1.3.6.1.1.16.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4530">RFC4530</a>]</td>
+        </tr>
+        <tr>
+          <td>uuidOrderingMatch</td>
+          <td>M</td>
+          <td>1.3.6.1.1.16.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4530">RFC4530</a>]</td>
+        </tr>
+        <tr>
+          <td>version</td>
+          <td>A</td>
+          <td>Reserved for LDIF</td>
+          <td>[<a href="http://www.iana.org/go/rfc2849">RFC2849</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMUser</td>
+          <td>O</td>
+          <td>1.3.6.1.1.11.1.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMRfc822Mailbox</td>
+          <td>A</td>
+          <td>1.3.6.1.1.11.2.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMTelephoneNumber</td>
+          <td>A</td>
+          <td>1.3.6.1.1.11.2.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMSpokenName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.11.2.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMSupportedUABehaviors</td>
+          <td>A</td>
+          <td>1.3.6.1.1.11.2.4</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMSupportedAudioMediaTypes</td>
+          <td>A</td>
+          <td>1.3.6.1.1.11.2.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMSupportedMessageContext</td>
+          <td>A</td>
+          <td>1.3.6.1.1.11.2.6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMTextName</td>
+          <td>A</td>
+          <td>1.3.6.1.1.11.2.7</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMExtendedAbsenceStatus</td>
+          <td>A</td>
+          <td>1.3.6.1.1.11.2.8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMMaxMessageSize</td>
+          <td>A</td>
+          <td>1.3.6.1.1.11.2.9</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>vPIMSubMailboxes</td>
+          <td>A</td>
+          <td>1.3.6.1.1.11.2.10</td>
+          <td>[<a href="http://www.iana.org/go/rfc4237">RFC4237</a>]</td>
+        </tr>
+        <tr>
+          <td>wordMatch</td>
+          <td>M</td>
+          <td>2.5.13.32</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>x121Address</td>
+          <td>A</td>
+          <td>2.5.4.24</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+        <tr>
+          <td>x400ToRFC822Mapping</td>
+          <td>O</td>
+          <td>1.3.6.1.4.1.453.7.1.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc2164">RFC2164</a>]</td>
+        </tr>
+        <tr>
+          <td>x500UniqueIdentifier</td>
+          <td>A</td>
+          <td>2.5.4.45</td>
+          <td>[<a href="http://www.iana.org/go/rfc4519">RFC4519</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-4" id="ldap-parameters-4"></a>Attribute Description Options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>x-  Private Use (can not be registered)
+e-  Reserved for Experiments, First Come First Served
+All others: Standards Action or Expert Review with Specification</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Rolf Sonneveld, Andrew Findlay</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Option</th>
+          <th>Owner</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>binary</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4522">RFC4522</a>]</td>
+        </tr>
+        <tr>
+          <td>lang- (See [<a href="#note1">1</a>])</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc3866">RFC3866</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-5" id="ldap-parameters-5"></a>LDAPMessage types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Code</th>
+          <th>Owner</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>bindRequest</td>
+          <td>0</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4513">RFC4513</a>][<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>bindResponse</td>
+          <td>1</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4513">RFC4513</a>][<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>unbindRequest</td>
+          <td>2</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>searchRequest</td>
+          <td>3</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>searchResEntry</td>
+          <td>4</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>searchResDone</td>
+          <td>5</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>modifyRequest</td>
+          <td>6</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>modifyResponse</td>
+          <td>7</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>addRequest</td>
+          <td>8</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>addResponse</td>
+          <td>9</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>delRequest</td>
+          <td>10</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>delResponse</td>
+          <td>11</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>modDNRequest</td>
+          <td>12</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>modDNResponse</td>
+          <td>13</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>compareRequest</td>
+          <td>14</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>compareResponse</td>
+          <td>15</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>abandonRequest</td>
+          <td>16</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>reserved</td>
+          <td>17-18</td>
+          <td>IESG</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>searchResRef</td>
+          <td>19</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>reserved</td>
+          <td>20-22</td>
+          <td>IESG</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>extendedReq</td>
+          <td>23</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>extendedResp</td>
+          <td>24</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>intermediateResponse</td>
+          <td>25</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-6" id="ldap-parameters-6"></a>resultCode values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>0-1023      Standards Action (can not start with e- or x-)
+1024-4095   Expert Review with Specification Required (can not start with e- or x-)
+4096-16383  First Come First Served (Shall start with e-)
+16384 and higher Private Use (Shall start with x-)</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Rolf Sonneveld, Andrew Findlay</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Code</th>
+          <th>Owner</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>success</td>
+          <td>0</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>operationsError</td>
+          <td>1</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>protocolError</td>
+          <td>2</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>timeLimitExceeded</td>
+          <td>3</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>sizeLimitExceeded</td>
+          <td>4</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>compareFalse</td>
+          <td>5</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>compareTrue</td>
+          <td>6</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>authMethodNotSupported</td>
+          <td>7</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>strongerAuthRequired</td>
+          <td>8</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>reserved (partialResults)</td>
+          <td>9</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>referral</td>
+          <td>10</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>adminLimitExceeded</td>
+          <td>11</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>unavailableCriticalExtension</td>
+          <td>12</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>confidentialityRequired</td>
+          <td>13</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>saslBindInProgress</td>
+          <td>14</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>noSuchAttribute</td>
+          <td>16</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>undefinedAttributeType</td>
+          <td>17</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>inappropriateMatching</td>
+          <td>18</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>constraintViolation</td>
+          <td>19</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>attributeOrValueExists</td>
+          <td>20</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>invalidAttributeSyntax</td>
+          <td>21</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>noSuchObject</td>
+          <td>32</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>aliasProblem</td>
+          <td>33</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>invalidDNSyntax</td>
+          <td>34</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>reserved (isLeaf)</td>
+          <td>35</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>aliasDereferencingProblem</td>
+          <td>36</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>reserved</td>
+          <td>37-47</td>
+          <td>IESG</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>inappropriateAuthentication</td>
+          <td>48</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>invalidCredentials</td>
+          <td>49</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>insufficientAccessRights</td>
+          <td>50</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>busy</td>
+          <td>51</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>unavailable</td>
+          <td>52</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>unwillingToPerform</td>
+          <td>53</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>loopDetect</td>
+          <td>54</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>reserved</td>
+          <td>55-63</td>
+          <td>IESG</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>namingViolation</td>
+          <td>64</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>objectClassViolation</td>
+          <td>65</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>notAllowedOnNonLeaf</td>
+          <td>66</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>notAllowedOnRDN</td>
+          <td>67</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>entryAlreadyExists</td>
+          <td>68</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>objectClassModsProhibited</td>
+          <td>69</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>reserved (resultsTooLarge)</td>
+          <td>70</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>reserved</td>
+          <td>71-79</td>
+          <td>IESG</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>other</td>
+          <td>80</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>reserved (APIs)</td>
+          <td>81-90</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>reserved (LDAP APIs)</td>
+          <td>91-112</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>lcupResourcesExhausted</td>
+          <td>113</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc3928">RFC3928</a>]</td>
+        </tr>
+        <tr>
+          <td>lcupSecurityViolation</td>
+          <td>114</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc3928">RFC3928</a>]</td>
+        </tr>
+        <tr>
+          <td>lcupInvalidData</td>
+          <td>115</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc3928">RFC3928</a>]</td>
+        </tr>
+        <tr>
+          <td>lcupUnsupportedScheme</td>
+          <td>116</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc3928">RFC3928</a>]</td>
+        </tr>
+        <tr>
+          <td>lcupReloadRequired</td>
+          <td>117</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc3928">RFC3928</a>]</td>
+        </tr>
+        <tr>
+          <td>canceled</td>
+          <td>118</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc3909">RFC3909</a>]</td>
+        </tr>
+        <tr>
+          <td>noSuchOperation</td>
+          <td>119</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc3909">RFC3909</a>]</td>
+        </tr>
+        <tr>
+          <td>tooLate</td>
+          <td>120</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc3909">RFC3909</a>]</td>
+        </tr>
+        <tr>
+          <td>cannotCancel</td>
+          <td>121</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc3909">RFC3909</a>]</td>
+        </tr>
+        <tr>
+          <td>assertionFailed</td>
+          <td>122</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4528">RFC4528</a>]</td>
+        </tr>
+        <tr>
+          <td>authorizationDenied</td>
+          <td>123</td>
+          <td>WELTMAN</td>
+          <td>[<a href="http://www.iana.org/go/rfc4370">RFC4370</a>]</td>
+        </tr>
+        <tr>
+          <td>First Come, First Serve Range</td>
+          <td>4096-16383</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>e-syncRefreshRequired</td>
+          <td>4096</td>
+          <td>
+        [<a href="#Kurt_Zeilenga">Kurt_Zeilenga</a>]
+        [<a href="#Jong_Hyuk_Choi">Jong_Hyuk_Choi</a>]
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc4533">RFC4533</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-7" id="ldap-parameters-7"></a>Bind Authentication Method</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>0-1023      Standards Action (can not start with e- or x-)
+1024-4095   Expert Review with Specification Required (can not start with e- or x-)
+4096-16383  First Come First Served (Shall start with e-)
+16384 and higher Private Use (Shall start with x-)</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Rolf Sonneveld, Andrew Findlay</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Value</th>
+          <th>Owner</th>
+          <th>Usage</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>simple</td>
+          <td>0</td>
+          <td>IESG</td>
+          <td>LIMITED USE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4513">RFC4513</a>][<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>krbv42LDAP</td>
+          <td>1</td>
+          <td>IESG</td>
+          <td>OBSOLETE (See [<a href="#note2">2</a>])</td>
+          <td>[<a href="http://www.iana.org/go/rfc1777">RFC1777</a>]</td>
+        </tr>
+        <tr>
+          <td>krbv42DSA</td>
+          <td>2</td>
+          <td>IESG</td>
+          <td>OBSOLETE (See [<a href="#note2">2</a>])</td>
+          <td>[<a href="http://www.iana.org/go/rfc1777">RFC1777</a>]</td>
+        </tr>
+        <tr>
+          <td>sasl</td>
+          <td>3</td>
+          <td>IESG</td>
+          <td>COMMON</td>
+          <td>[<a href="http://www.iana.org/go/rfc4513">RFC4513</a>][<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-8" id="ldap-parameters-8"></a>LDAP Syntaxes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>While a specification is required, it will not be subject to expert review.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Object Identifier</th>
+          <th>Syntax</th>
+          <th>Owner</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1.3.6.1.1.16.1</td>
+          <td>UUID</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4530">RFC4530</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.3</td>
+          <td>Attribute Type Description</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.6</td>
+          <td>Bit String</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.7</td>
+          <td>Boolean</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.11</td>
+          <td>Country String</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.12</td>
+          <td>DN</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.14</td>
+          <td>Delivery Method</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.15</td>
+          <td>Directory String</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.16</td>
+          <td>DIT Content Rule Description</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.17</td>
+          <td>DIT Structure Rule Description</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.21</td>
+          <td>Enhanced Guide</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.22</td>
+          <td>Facsimile Telephone Number</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.23</td>
+          <td>Fax</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.24</td>
+          <td>Generalized Time</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.25</td>
+          <td>Guide</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.26</td>
+          <td>IA5 String</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.27</td>
+          <td>Integer</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.28</td>
+          <td>JPEG</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.30</td>
+          <td>Matching Rule Description</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.31</td>
+          <td>Matching Rule Use Description</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.34</td>
+          <td>Name And Optional UID</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.35</td>
+          <td>Name Form Description</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.36</td>
+          <td>Numeric String</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.37</td>
+          <td>Object Class Description</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.38</td>
+          <td>OID</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.39</td>
+          <td>Other Mailbox</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.40</td>
+          <td>Octet String</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.41</td>
+          <td>Postal Address</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.44</td>
+          <td>Printable String</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.50</td>
+          <td>Telephone Number</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.51</td>
+          <td>Teletex Terminal Identifier</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.52</td>
+          <td>Telex Number</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.53</td>
+          <td>UTC Time</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.54</td>
+          <td>LDAP Syntax Description</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+        <tr>
+          <td>1.3.6.1.4.1.1466.115.121.1.58</td>
+          <td>Substring Assertion</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4517">RFC4517</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-9" id="ldap-parameters-9"></a>LDAP Search Scopes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>0-1023      Standards Action (can not start with e- or x-)
+1024-4095   Expert Review with Specification Required (can not start with e- or x-)
+4096-16383  First Come First Served (Shall start with e-)
+16384 and higher Private Use (Shall start with x-)</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Rolf Sonneveld, Andrew Findlay</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>URLString</th>
+          <th>Value</th>
+          <th>Owner</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>baseObject</td>
+          <td>base</td>
+          <td>0</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>][<a href="http://www.iana.org/go/rfc4516">RFC4516</a>]</td>
+        </tr>
+        <tr>
+          <td>singleLevel</td>
+          <td>one</td>
+          <td>1</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>][<a href="http://www.iana.org/go/rfc4516">RFC4516</a>]</td>
+        </tr>
+        <tr>
+          <td>wholeSubtree</td>
+          <td>sub</td>
+          <td>2</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>][<a href="http://www.iana.org/go/rfc4516">RFC4516</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-10" id="ldap-parameters-10"></a>LDAP Filter Choices</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-10" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Owner</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>and</td>
+          <td>0</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>or</td>
+          <td>1</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>not</td>
+          <td>2</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>equalityMatch</td>
+          <td>3</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>substrings</td>
+          <td>4</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>greaterOrEqual</td>
+          <td>5</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>lessOrEqual</td>
+          <td>6</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>present</td>
+          <td>7</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>approxMatch</td>
+          <td>8</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>extensibleMatch</td>
+          <td>9</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-11" id="ldap-parameters-11"></a>LDAP ModifyRequest Operations</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>0-1023      Standards Action (can not start with e- or x-)
+1024-4095   Expert Review with Specification Required (can not start with e- or x-)
+4096-16383  First Come First Served (Shall start with e-)
+16384 and higher Private Use (Shall start with x-)</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Rolf Sonneveld, Andrew Findlay</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+          <th>Owner</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>add</td>
+          <td>0</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>delete</td>
+          <td>1</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>replace</td>
+          <td>2</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4511">RFC4511</a>]</td>
+        </tr>
+        <tr>
+          <td>increment</td>
+          <td>3</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4525">RFC4525</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldap-parameters-12" id="ldap-parameters-12"></a>LDAP authzid prefixes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>x- Private Use
+e- Reserved for Experiments, First Come First Served
+All others, Standards Action or Expert Review with Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Rolf Sonneveld, Andrew Findlay</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4520">RFC4520</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldap-parameters-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldap-parameters-12" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Prefix</th>
+          <th>Owner</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>dnAuthzId</td>
+          <td>dn:</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4513">RFC4513</a>]</td>
+        </tr>
+        <tr>
+          <td>uAuthzId</td>
+          <td>u:</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4513">RFC4513</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Allen_Williams" id="Allen_Williams">[Allen_Williams]</a>
+          </td>
+          <td>Allen Williams</td>
+          <td>
+            <a href="mailto:allenwilliams&amp;seafreeze.com">mailto:allenwilliams&amp;seafreeze.com</a>
+          </td>
+          <td>2009-04-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jong_Hyuk_Choi" id="Jong_Hyuk_Choi">[Jong_Hyuk_Choi]</a>
+          </td>
+          <td>Jong Hyuk Choi</td>
+          <td>
+            <a href="mailto:jongchoi&amp;us.ibm.com">mailto:jongchoi&amp;us.ibm.com</a>
+          </td>
+          <td>2005-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Kurt_Zeilenga" id="Kurt_Zeilenga">[Kurt_Zeilenga]</a>
+          </td>
+          <td>Kurt Zeilenga</td>
+          <td>
+            <a href="mailto:Kurt&amp;openldap.org">mailto:Kurt&amp;openldap.org</a>
+          </td>
+          <td>2005-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Mark_Wahl" id="Mark_Wahl">[Mark_Wahl]</a>
+          </td>
+          <td>Mark Wahl</td>
+          <td>
+            <a href="mailto:Mark.Wahl&amp;informed-control.com">mailto:Mark.Wahl&amp;informed-control.com</a>
+          </td>
+          <td>2006-11-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Matthew_Key" id="Matthew_Key">[Matthew_Key]</a>
+          </td>
+          <td>Matthew Key</td>
+          <td>
+            <a href="mailto:mkey&amp;westjet.com">mailto:mkey&amp;westjet.com</a>
+          </td>
+          <td>2011-12-05</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Footnotes</h1>
+    <table class="fn">
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note1" id="note1">[1]</a>
+        </td>
+        <td class="fn">
+          <pre>family of options</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note2" id="note2">[2]</a>
+        </td>
+        <td class="fn">
+          <pre>These LDAPv2-only mechanisms were deprecated in favor of the LDAPv3 SASL authentication method, specifically the GSSAPI mechanism.</pre>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

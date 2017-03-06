@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Internet Message Access Protocol (IMAP) LIST EXTENDED Registry</title>
+  </head>
+  <body>
+    <h1>Internet Message Access Protocol (IMAP) LIST EXTENDED Registry</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2006-10-19</dd>
+      <dt>Last Updated</dt>
+      <dd>2013-03-18</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="imap-list-extended.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="imap-list-extended.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="imap-list-extended.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#imap-list-extended-1">LIST-EXTENDED options</a>
+      </li>
+      <li>
+        <a href="#imap-list-extended-2">LIST-EXTENDED response</a>
+      </li>
+    </ul>
+    <h2><a name="imap-list-extended-1" id="imap-list-extended-1"></a>LIST-EXTENDED options</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>FCFS; IANA approval template in [<a href="http://www.iana.org/go/rfc5258">RFC5258</a>] section 9.3</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="imap-list-extended-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-imap-list-extended-1" class="sortable">
+      <thead>
+        <tr>
+          <th>LIST-EXTENDED option name</th>
+          <th>LIST-EXTENDED option type</th>
+          <th>Implied return option(s)</th>
+          <th>LIST-EXTENDED option description</th>
+          <th>Published specification</th>
+          <th>Security considerations</th>
+          <th>Intended usage</th>
+          <th>Person and email address to contact for further information</th>
+          <th>Owner/Change controller</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SUBSCRIBED</td>
+          <td>SELECTION</td>
+          <td>SUBSCRIBED</td>
+          <td>Causes the LIST command to list subscribed mailboxes, rather than the actual mailboxes.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 3.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 8.</td>
+          <td>COMMON</td>
+          <td>
+        [<a href="#Alexey_Melnikov">Alexey_Melnikov</a>]
+      </td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>REMOTE</td>
+          <td>SELECTION</td>
+          <td>(none)</td>
+          <td>Causes the LIST command to return remote mailboxes as well as local ones, as described in RFC 2193.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 3.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 8.</td>
+          <td>COMMON</td>
+          <td>
+        [<a href="#Alexey_Melnikov">Alexey_Melnikov</a>]
+      </td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>SUBSCRIBED</td>
+          <td>RETURN</td>
+          <td></td>
+          <td>Causes the LIST command to return subscription state.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 3.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 8.</td>
+          <td>COMMON</td>
+          <td>
+        [<a href="#Alexey_Melnikov">Alexey_Melnikov</a>]
+      </td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>RECURSIVEMATCH</td>
+          <td>SELECTION</td>
+          <td>(none)</td>
+          <td>Requests that CHILDINFO extended data item (childinfo-extended-item) is to be returned.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 3.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 8.</td>
+          <td>COMMON</td>
+          <td>
+        [<a href="#Alexey_Melnikov">Alexey_Melnikov</a>]
+      </td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>CHILDREN</td>
+          <td>RETURN</td>
+          <td></td>
+          <td>Requests mailbox child information.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 3 and Section 4.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 8.</td>
+          <td>COMMON</td>
+          <td>
+        [<a href="#Alexey_Melnikov">Alexey_Melnikov</a>]
+      </td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>UTF8</td>
+          <td>SELECTION</td>
+          <td>UTF8</td>
+          <td>Causes the LIST response to include mailboxes that mandate the UTF8 SELECT/EXAMINE parameter.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5738">RFC5738</a>], Section 3.4.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5738">RFC5738</a>], Section 11</td>
+          <td>COMMON</td>
+          <td>see Authors' Addresses at the end of [<a href="http://www.iana.org/go/rfc5738">RFC5738</a>]</td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>UTF8ONLY</td>
+          <td>SELECTION</td>
+          <td>UTF8</td>
+          <td>Causes the LIST response to include mailboxes that mandate the UTF8 SELECT/EXAMINE parameter and exclude mailboxes that do not support the UTF8 SELECT/EXAMINE parameter.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5738">RFC5738</a>], Section 3.4.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5738">RFC5738</a>], Section 11</td>
+          <td>COMMON</td>
+          <td>see Authors' Addresses at the end of [<a href="http://www.iana.org/go/rfc5738">RFC5738</a>]</td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>UTF8</td>
+          <td>RETURN</td>
+          <td>none</td>
+          <td>Causes the LIST response to include \NoUTF8 and \UTF8Only mailbox attributes.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5738">RFC5738</a>], Section 3.4.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc5738">RFC5738</a>], Section 11</td>
+          <td>COMMON</td>
+          <td>see Authors' Addresses at the end of [<a href="http://www.iana.org/go/rfc5738">RFC5738</a>]</td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>STATUS</td>
+          <td>RETURN</td>
+          <td></td>
+          <td>Causes the LIST command to return STATUS responses in addition to LIST responses.</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5819">RFC5819</a>]
+      </td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc5819">RFC5819</a>]
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="#Alexey_Melnikov">Alexey_Melnikov</a>]
+      </td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>SPECIAL-USE</td>
+          <td>SELECTION</td>
+          <td>SPECIAL-USE</td>
+          <td>Limit the list to special-use mailboxes only</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc6154">RFC6154</a>]
+      </td>
+          <td>
+        [none]
+      </td>
+          <td>COMMON</td>
+          <td>Authors' Addresses at the end of [<a href="http://www.iana.org/go/rfc6154">RFC6154</a>]</td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>SPECIAL-USE</td>
+          <td>RETURN</td>
+          <td></td>
+          <td>Request special-use mailbox information</td>
+          <td>
+        [<a href="http://www.iana.org/go/rfc6154">RFC6154</a>]
+      </td>
+          <td>
+        [none]
+      </td>
+          <td>COMMON</td>
+          <td>Authors' Addresses at the end of [<a href="http://www.iana.org/go/rfc6154">RFC6154</a>]</td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="imap-list-extended-2" id="imap-list-extended-2"></a>LIST-EXTENDED response</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IANA approval template in [<a href="http://www.iana.org/go/rfc5258">RFC5258</a>] section 9.3</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="imap-list-extended-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-imap-list-extended-2" class="sortable">
+      <thead>
+        <tr>
+          <th>LIST-EXTENDED extended data item tag</th>
+          <th>LIST-EXTENDED extended data item description</th>
+          <th>Which LIST-EXTENDED option(s) (and their types) causes this extended data item to be returned (if any)</th>
+          <th>Published specification</th>
+          <th>Security considerations</th>
+          <th>Intended usage</th>
+          <th>Person and email address to contact for further information</th>
+          <th>Owner/Change controller</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CHILDINFO</td>
+          <td>The CHILDINFO extended data item describes the selection criteria that has caused it to be returned and indicates that the mailbox has one or more child mailboxes that match the selection criteria.</td>
+          <td>RECURSIVEMATCH selection option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 3.5.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5258">RFC5258</a>], Section 8.</td>
+          <td>COMMON</td>
+          <td>
+        [<a href="#Alexey_Melnikov">Alexey_Melnikov</a>]
+      </td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+        <tr>
+          <td>OLDNAME</td>
+          <td>The OLDNAME extended data item describes the old mailbox name for the mailbox identified by the LIST response.</td>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc5465">RFC5465</a>], Section 5.4.</td>
+          <td>
+        [none]
+      </td>
+          <td>COMMON</td>
+          <td>
+        [<a href="#Alexey_Melnikov">Alexey_Melnikov</a>]
+      </td>
+          <td>
+        [<a href="#IESG">IESG</a>]
+      </td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Alexey_Melnikov" id="Alexey_Melnikov">[Alexey_Melnikov]</a>
+          </td>
+          <td>Alexey Melnikov</td>
+          <td>
+            <a href="mailto:Alexey.Melnikov&amp;isode.com">mailto:Alexey.Melnikov&amp;isode.com</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="IESG" id="IESG">[IESG]</a>
+          </td>
+          <td>IESG</td>
+          <td>
+            <a href="mailto:iesg&amp;ietf.org">mailto:iesg&amp;ietf.org</a>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,1467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Real-Time Streaming Protocol (RTSP) 2.0 Parameters</title>
+  </head>
+  <body>
+    <h1>Real-Time Streaming Protocol (RTSP) 2.0 Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2014-02-21</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-12-29</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtspv2-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="rtspv2-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="rtspv2-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#feature-tags">Feature-tags</a>
+      </li>
+      <li>
+        <a href="#methods">RTSP 2.0 Methods</a>
+      </li>
+      <li>
+        <a href="#status-codes">RTSP 2.0 Status Codes</a>
+      </li>
+      <li>
+        <a href="#headers">RSTP 2.0 Headers</a>
+      </li>
+      <li>
+        <a href="#accept-credentials-policies">Accept-Credentials Policies</a>
+      </li>
+      <li>
+        <a href="#accept-credentials-hash">Accept-Credentials Hash Algorithms</a>
+      </li>
+      <li>
+        <a href="#cache-control-directive">Cache-Control Cache Directive Extensions</a>
+      </li>
+      <li>
+        <a href="#media-properties">Media Properties</a>
+      </li>
+      <li>
+        <a href="#notify-reason">Notify-Reason Values</a>
+      </li>
+      <li>
+        <a href="#range-header">Range Header Formats</a>
+      </li>
+      <li>
+        <a href="#redirect-reasons">Terminate-Reason Redirect Reasons</a>
+      </li>
+      <li>
+        <a href="#terminate-reason-params">Terminate-Reason Header Parameters</a>
+      </li>
+      <li>
+        <a href="#rtp-info">RTP-Info Header Parameters</a>
+      </li>
+      <li>
+        <a href="#seek-style">Seek-Style Policies</a>
+      </li>
+      <li>
+        <a href="#transport-protocol-id">Transport Protocol Identifier</a>
+      </li>
+      <li>
+        <a href="#transport-modes">Transport Modes</a>
+      </li>
+      <li>
+        <a href="#transport-params">Transport Parameters</a>
+      </li>
+    </ul>
+    <h2><a name="feature-tags" id="feature-tags"></a>Feature-tags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Proprietary feature-tags should begin with a vendor "prefix" followed by a "."
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="feature-tags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-feature-tags" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>play.basic</td>
+          <td>The implementation for delivery and playback operations
+         according to the core RTSP specification, as defined in this
+         memo. Applies for clients, servers, and proxies. See
+         Section 11.1 of [<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>play.scale</td>
+          <td>Support of scale operations for media playback. Applies
+         only for servers. See Section 18.46 of [<a href="http://www.iana.org/go/rfc7826">RFC7826</a>].</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>play.speed</td>
+          <td>Support of the speed functionality for media delivery.
+        Applies only for servers.  See Section 18.50 of [<a href="http://www.iana.org/go/rfc7826">RFC7826</a>].</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>setup.rtp.rtcp.mux</td>
+          <td>Support of the RTP and RTCP multiplexing as
+        discussed in Appendix C.1.6.4 of [<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]. Applies for both client and
+         servers and any media caching proxy.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>setup.ice-d-m</td>
+          <td>A feature tag representing the support of the ICE-based 
+establishment of datagram media transport that is capable of
+transport establishment through NAT and firewalls. This feature
+tag applies to clients, servers, and proxies and indicates support
+of all the mandatory functions of this specification.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="methods" id="methods"></a>RTSP 2.0 Methods</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="methods.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-methods" class="sortable">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Directionality</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DESCRIBE</td>
+          <td>C-&gt;S</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>GET_PARAMETER</td>
+          <td>C-&gt;S, S-&gt;C</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>OPTIONS</td>
+          <td>C-&gt;S, S-&gt;C</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>PAUSE</td>
+          <td>C-&gt;S</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>PLAY</td>
+          <td>C-&gt;S</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>PLAY_NOTIFY</td>
+          <td>S-&gt;C</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>REDIRECT</td>
+          <td>S-&gt;C</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>SETUP</td>
+          <td>C-&gt;S</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>SET_PARAMETER</td>
+          <td>C-&gt;S, S-&gt;C</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>TEARDOWN</td>
+          <td>C-&gt;S, S-&gt;C</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="status-codes" id="status-codes"></a>RTSP 2.0 Status Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>For every set of 100 values (e.g. 100-199, 200-299, etc.), values x50-x99 should 
+be assigned first, except when adopting an HTTP extension to RTSP.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="status-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-status-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">100</td>
+          <td>Continue</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>Server still working on ICE connectivity checks</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">200</td>
+          <td>OK</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">301</td>
+          <td>Moved Permanently</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">302</td>
+          <td>Found</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">303</td>
+          <td>See Other</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">304</td>
+          <td>Not Modified</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">305</td>
+          <td>Use Proxy</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">400</td>
+          <td>Bad Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">401</td>
+          <td>Unauthorized</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">402</td>
+          <td>Payment Required</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">403</td>
+          <td>Forbidden</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">404</td>
+          <td>Not Found</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">405</td>
+          <td>Method Not Allowed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">406</td>
+          <td>Not Acceptable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">407</td>
+          <td>Proxy Authentication Required</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">408</td>
+          <td>Request Time-Out</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">410</td>
+          <td>Gone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">412</td>
+          <td>Precondition Failed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">413</td>
+          <td>Request Message Body Too Large</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">414</td>
+          <td>Request-URI Too Large</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">415</td>
+          <td>Unsupported Media Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">451</td>
+          <td>Parameter Not Understood</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">452</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">453</td>
+          <td>Not Enough Bandwidth</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">454</td>
+          <td>Session Not Found</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">455</td>
+          <td>Method Not Valid in This State</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">456</td>
+          <td>Header Field Not Valid for Resource</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">457</td>
+          <td>Invalid Range</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">458</td>
+          <td>Parameter Is Read-Only</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">459</td>
+          <td>Aggregate operation not allowed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">460</td>
+          <td>Only aggregate operation allowed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">461</td>
+          <td>Unsupported Transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">462</td>
+          <td>Destination Unreachable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">463</td>
+          <td>Destination Prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">464</td>
+          <td>Data Transport Not Ready Yet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">465</td>
+          <td>Notification Reason Unknown</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">466</td>
+          <td>Key Management Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">470</td>
+          <td>Connection Authorization Required</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">471</td>
+          <td>Connection Credentials not accepted</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">472</td>
+          <td>Failure to establish secure connection</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">480</td>
+          <td>ICE Connectivity check failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">500</td>
+          <td>Internal Server Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">501</td>
+          <td>Not Implemented</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">502</td>
+          <td>Bad Gateway</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">503</td>
+          <td>Service Unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">504</td>
+          <td>Gateway Time-out</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">505</td>
+          <td>RTSP Version not supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">551</td>
+          <td>Option not supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="headers" id="headers"></a>RSTP 2.0 Headers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Stiemerling</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="headers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-headers" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>3GPP-Adaptation</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26234.htm">TS-26234</a>][<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>3GPP-Link-Char</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26234.htm">TS-26234</a>][<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>3GPP-QoE-Feedback</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26234.htm">TS-26234</a>][<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>3GPP-QoE-Metrics</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26234.htm">TS-26234</a>][<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>3gpp-videopostdecbufsize</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26234.htm">TS-26234</a>][<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Accept</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Accept-Credentials</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Accept-Encoding</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Accept-Language</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Accept-Ranges</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Allow</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Authentication-Info</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Authorization</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Bandwidth</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Blocksize</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Cache-Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Connection</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Connection-Credentials</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Content-Base</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Content-Encoding</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Content-Language</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Content-Length</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Content-Location</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Content-Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>CSeq</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Date</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Expires</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>From</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>If-Match</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>If-None-Match</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Last-Modified</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Media-Properties</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Media-Range</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>MTag</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Notify-Reason</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Pipelined-Requests</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Proxy-Authenticate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Proxy-Authorization</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Proxy-Require</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Proxy-Supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Public</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Range</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Referrer</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Request-Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Require</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Retry-After</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP-Info</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Scale</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Seek-Style</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Server</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Session</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Speed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Terminate-Reason</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Timestamp</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Transport</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Unsupported</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>User-Agent</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Via</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>WWW-Authenticate</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>x-initpredecbufperiod</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26234.htm">TS-26234</a>][<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>x-predecbufsize</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26234.htm">TS-26234</a>][<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>x-wap-profile</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26234.htm">TS-26234</a>][<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>x-wap-profile-diff</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26234.htm">TS-26234</a>][<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>x-wap-profile-warning</td>
+          <td>[<a href="http://www.3gpp.org/DynaReport/26234.htm">TS-26234</a>][<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="accept-credentials-policies" id="accept-credentials-policies"></a>Accept-Credentials Policies</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="accept-credentials-policies.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-accept-credentials-policies" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Any</td>
+          <td>A policy requiring the proxy to accept any received certificate.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Proxy</td>
+          <td>A policy where the proxy applies its own policies to 
+       determine which certificates are accepted.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>User</td>
+          <td>A policy where the certificate is required to be forwarded down
+         the proxy chain to the client, thus allowing the user to
+         decided to accept or refuse a certificate.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="accept-credentials-hash" id="accept-credentials-hash"></a>Accept-Credentials Hash Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="accept-credentials-hash.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-accept-credentials-hash" class="sortable">
+      <thead>
+        <tr>
+          <th>Hash Alg. ID</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>sha-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="cache-control-directive" id="cache-control-directive"></a>Cache-Control Cache Directive Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cache-control-directive.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-cache-control-directive" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>no-cache:</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>public:</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>private:</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>no-transform:</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>only-if-cached:</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>max-stale:</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>min-fresh:</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>must-revalidate:</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>proxy-revalidate:</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>max-age:</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="media-properties" id="media-properties"></a>Media Properties</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Stiemerling</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="media-properties.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-media-properties" class="sortable">
+      <thead>
+        <tr>
+          <th>Property Group</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Random Access</td>
+          <td>Random-Access</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Random Access</td>
+          <td>Beginning-Only</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Random Access</td>
+          <td>No-Seeking</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Retention</td>
+          <td>Unlimited</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Retention</td>
+          <td>Time-Limited</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Retention</td>
+          <td>Time-Duration</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Supported Scale</td>
+          <td>Scales</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="notify-reason" id="notify-reason"></a>Notify-Reason Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Stiemerling</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="notify-reason.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-notify-reason" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>end-of-stream</td>
+          <td>This Notify-Reason value indicates the end of a media
+      stream.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>media-properties-update</td>
+          <td>This Notify-Reason value allows the server
+      to indicate that the properties of the media have changed during
+      the playout.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>scale-change</td>
+          <td>This Notify-Reason value allows the server to notify
+      the client about a change in the Scale of the media.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>ice-restart</td>
+          <td>This Notify-Reason value allows the server to notify
+      the client about the need for an ICE restart. See Section 4.6 of 
+      [<a href="http://www.iana.org/go/rfc7825">RFC7825</a>].</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="range-header" id="range-header"></a>Range Header Formats</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Stiemerling</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="range-header.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-range-header" class="sortable">
+      <thead>
+        <tr>
+          <th>Identifier</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>npt</td>
+          <td>Normal Play Time</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>clock</td>
+          <td>UTC Absolute Time format</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>smpte</td>
+          <td>SMPTE Timestamps</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>smpte-30-drop</td>
+          <td>SMPTE Timestamps 29.97 Frames/sec (30 Hz with Drop)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>smpte-25</td>
+          <td>SMPTE Timestamps 25 Frames/sec</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="redirect-reasons" id="redirect-reasons"></a>Terminate-Reason Redirect Reasons</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Stiemerling</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="redirect-reasons.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-redirect-reasons" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Session-Timeout</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Server-Admin</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Internal-Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="terminate-reason-params" id="terminate-reason-params"></a>Terminate-Reason Header Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Stiemerling</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="terminate-reason-params.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-terminate-reason-params" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>time</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>user-msg</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rtp-info" id="rtp-info"></a>RTP-Info Header Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Stiemerling</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtp-info.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtp-info" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>url</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>ssrc</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>seq</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>rtptime</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="seek-style" id="seek-style"></a>Seek-Style Policies</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Stiemerling</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="seek-style.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-seek-style" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>RAP</td>
+          <td>Using the closest Random Access Point prior to or at the
+      requested start position.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>CoRAP</td>
+          <td>Conditional Random Access Point is like RAP, but only if
+      the RAP is closer prior to the requested start position than
+      current pause point.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>First-Prior</td>
+          <td>The first-prior policy will start delivery with the
+      media unit that has a playout time first prior to the requested
+      start position.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>Next</td>
+          <td>The next media units after the provided start position.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="transport-protocol-id" id="transport-protocol-id"></a>Transport Protocol Identifier</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Stiemerling</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="transport-protocol-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-transport-protocol-id" class="sortable">
+      <thead>
+        <tr>
+          <th>ID String</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>RTP/AVP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/AVP/UDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/AVPF</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/AVPF/UDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/SAVP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/SAVP/UDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/SAVPF</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/SAVPF/UDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/AVP/TCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/AVPF/TCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/SAVP/TCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/SAVPF/TCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/AVP/D-ICE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/AVPF/D-ICE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/SAVP/D-ICE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+        <tr>
+          <td>RTP/SAVPF/D-ICE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="transport-modes" id="transport-modes"></a>Transport Modes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="transport-modes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-transport-modes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>PLAY</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="transport-params" id="transport-params"></a>Transport Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Stiemerling</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="transport-params.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-transport-params" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>unicast</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>multicast</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>interleaved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>ttl</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>layers</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>ssrc</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>dest_addr</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>src_addr</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>setup</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>connection</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>RTCP-mux</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>MIKEY</td>
+          <td>[<a href="http://www.iana.org/go/rfc7826">RFC7826</a>]</td>
+        </tr>
+        <tr>
+          <td>candidates</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+        <tr>
+          <td>ICE-Password</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+        <tr>
+          <td>ICE-ufrag</td>
+          <td>[<a href="http://www.iana.org/go/rfc7825">RFC7825</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Network News Transfer Protocol (NNTP) Parameters</title>
+  </head>
+  <body>
+    <h1>Network News Transfer Protocol (NNTP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2005-07-12</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-02-15</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="nntp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="nntp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="nntp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#nntp-parameters-1">NNTP Capability Labels</a>
+      </li>
+      <li>
+        <a href="#compression-algorithms">NNTP Compression Algorithms</a>
+      </li>
+    </ul>
+    <h2><a name="nntp-parameters-1" id="nntp-parameters-1"></a>NNTP Capability Labels</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Labels beginning with X are reserved for private use. 
+All others: Standards Track RFC or an IESG-approved experimental protocol.</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>All capability labels in the registry MUST consist only of US-ASCII
+letters, digits, and the characters dot (".") and dash ("-"), and
+MUST begin with a letter other than X.  They MUST be at least
+three characters.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="nntp-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-nntp-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Label</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AUTHINFO</td>
+          <td>Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4643">RFC4643</a>]</td>
+        </tr>
+        <tr>
+          <td>COMPRESS</td>
+          <td>Supported compression algorithms</td>
+          <td>[<a href="http://www.iana.org/go/rfc8054">RFC8054</a>]</td>
+        </tr>
+        <tr>
+          <td>HDR</td>
+          <td>Batched header retrieval</td>
+          <td>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>]</td>
+        </tr>
+        <tr>
+          <td>IHAVE</td>
+          <td>IHAVE command available</td>
+          <td>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>]</td>
+        </tr>
+        <tr>
+          <td>IMPLEMENTATION</td>
+          <td>Server implementation-specific information</td>
+          <td>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>]</td>
+        </tr>
+        <tr>
+          <td>LIST</td>
+          <td>LIST command variants</td>
+          <td>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>][<a href="http://www.iana.org/go/rfc6048">RFC6048</a>]</td>
+        </tr>
+        <tr>
+          <td>MODE-READER</td>
+          <td>Mode-switching server and MODE                
+READER command available</td>
+          <td>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>]</td>
+        </tr>
+        <tr>
+          <td>NEWNEWS</td>
+          <td>NEWNEWS command available</td>
+          <td>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>]</td>
+        </tr>
+        <tr>
+          <td>OVER</td>
+          <td>Overview support</td>
+          <td>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>]</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>POST command available</td>
+          <td>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>]</td>
+        </tr>
+        <tr>
+          <td>READER</td>
+          <td>Reader commands available</td>
+          <td>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>]</td>
+        </tr>
+        <tr>
+          <td>SASL</td>
+          <td>Supported SASL mechanisms</td>
+          <td>[<a href="http://www.iana.org/go/rfc4643">RFC4643</a>]</td>
+        </tr>
+        <tr>
+          <td>STARTTLS</td>
+          <td>Transport layer security</td>
+          <td>[<a href="http://www.iana.org/go/rfc4642">RFC4642</a>][<a href="http://www.iana.org/go/draft-elie-nntp-tls-recommendations-05">RFC-elie-nntp-tls-recommendations-05</a>]</td>
+        </tr>
+        <tr>
+          <td>STREAMING</td>
+          <td>Streaming feeds</td>
+          <td>[<a href="http://www.iana.org/go/rfc4644">RFC4644</a>]</td>
+        </tr>
+        <tr>
+          <td>VERSION</td>
+          <td>Supported NNTP versions</td>
+          <td>[<a href="http://www.iana.org/go/rfc3977">RFC3977</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="compression-algorithms" id="compression-algorithms"></a>NNTP Compression Algorithms</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc8054">RFC8054</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>NNTP compression algorithms are named by strings from 1 to 20 
+characters in length consisting of uppercase letters, digits, 
+hyphens, and/or underscores.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="compression-algorithms.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-compression-algorithms" class="sortable">
+      <thead>
+        <tr>
+          <th>Algorithm Name</th>
+          <th>Intended Usage</th>
+          <th>Comment</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DEFLATE</td>
+          <td>COMMON</td>
+          <td>Mandatory to implement</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc8054">RFC8054</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

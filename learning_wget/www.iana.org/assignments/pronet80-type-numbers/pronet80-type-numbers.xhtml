@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Pronet 80 Type Numbers</title>
+  </head>
+  <body>
+    <h1>Pronet 80 Type Numbers</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2001-06-29</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pronet80-type-numbers.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="pronet80-type-numbers.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="pronet80-type-numbers.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registry included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#pronet80-type-numbers-1">Pronet 80 Type Numbers</a>
+      </li>
+    </ul>
+    <h2><a name="pronet80-type-numbers-1" id="pronet80-type-numbers-1"></a>Pronet 80 Type Numbers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IANA does not assign</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[Not IETF]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Below is the current list of PRONET 80 Type Numbers.  A protocol
+that is on this list does not necessarily mean that there is any
+implementation of it on ProNET.
+
+Of these, protocols 1, 14, and 20 are the only ones that have ever
+been seen in ARP packets.
+
+For reference, the header is (one byte/line):
+
+        destination hardware address
+        source hardware address
+        data link header version (2)
+        data link header protocol number
+        data link header reserved (0)
+        data link header reserved (0)
+
+Some protocols have been known to tuck stuff in the reserved fields.
+
+Those who need a protocol number on ProNET-10/80 should contact
+Avri Doria &lt;avri&amp;proteon.com&gt;.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pronet80-type-numbers-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pronet80-type-numbers-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>IP</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>IP with trailing headers</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Address Resolution Protocol</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Proteon HDLC</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>VAX Debugging Protocol (MIT)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Novell NetWare (IPX and pre-IPX) (old format,
+3 byte trailer)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Vianetix</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>PUP</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Watstar protocol (University of Waterloo)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>XNS</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Diganostics</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Echo protocol (link level)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Banyan Vines</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>DECnet (DEUNA Emulation)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>Chaosnet</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>IEEE 802.2 or ISO 8802/2 Data Link</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>Reverse Address Resolution Protocol</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>TokenVIEW-10</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>AppleTalk LAP Data Packet</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>33</td>
+          <td>Cornell Boot Server Location Protocol</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>34</td>
+          <td>Novell NetWare IPX (new format, no trailer,
+new XOR checksum)</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

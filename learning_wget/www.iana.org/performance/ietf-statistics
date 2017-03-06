@@ -1,0 +1,1189 @@
+<!doctype html>
+<html>
+<head>
+	<title>IANA — IETF Statistics Reporting</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+			<div id="main_right">
+
+
+	<h1 id="top">Statistics for IETF-related Requests</h1>
+
+	<h2>Reports</h2>
+	
+	<table class="iana-table">
+		<tr>
+			<th>Year</th>
+			<th colspan=12>Monthly Reports</th>
+		</tr>
+	
+		<tr>
+			<td>2017</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2017-01">Jan</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td>2016</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-01">Jan</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-02">Feb</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-03">Mar</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-04">Apr</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-05">May</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-06">Jun</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-07">Jul</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-08">Aug</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-09">Sep</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-10">Oct</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-11">Nov</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2016-12">Dec</a>
+				
+				
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td>2015</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-01">Jan</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-02">Feb</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-03">Mar</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-04">Apr</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-05">May</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-06">Jun</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-07">Jul</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-08">Aug</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-09">Sep</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-10">Oct</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-11">Nov</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2015-12">Dec</a>
+				
+				
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td>2014</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-01">Jan</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-02">Feb</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-03">Mar</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-04">Apr</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-05">May</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-06">Jun</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-07">Jul</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-08">Aug</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-09">Sep</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-10">Oct</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-11">Nov</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2014-12">Dec</a>
+				
+				
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td>2013</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-01">Jan</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-02">Feb</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-03">Mar</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-04">Apr</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-05">May</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-06">Jun</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-07">Jul</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-08">Aug</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-09">Sep</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-10">Oct</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-11">Nov</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2013-12">Dec</a>
+				
+				
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td>2012</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-01">Jan</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-02">Feb</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-03">Mar</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-04">Apr</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-05">May</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-06">Jun</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-07">Jul</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-08">Aug</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-09">Sep</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-10">Oct</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-11">Nov</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2012-12">Dec</a>
+				
+				
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td>2011</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-01">Jan</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-02">Feb</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-03">Mar</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-04">Apr</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-05">May</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-06">Jun</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-07">Jul</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-08">Aug</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-09">Sep</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-10">Oct</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-11">Nov</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2011-12">Dec</a>
+				
+				
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td>2010</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-01">Jan</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-02">Feb</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-03">Mar</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-04">Apr</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-05">May</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-06">Jun</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-07">Jul</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-08">Aug</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-09">Sep</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-10">Oct</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-11">Nov</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2010-12">Dec</a>
+				
+				
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td>2009</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-01">Jan</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-02">Feb</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-03">Mar</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-04">Apr</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-05">May</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-06">Jun</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-07">Jul</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-08">Aug</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-09">Sep</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-10">Oct</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-11">Nov</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2009-12">Dec</a>
+				
+				
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td>2008</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-01">Jan</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-02">Feb</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-03">Mar</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-04">Apr</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-05">May</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-06">Jun</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-07">Jul</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-08">Aug</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-09">Sep</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-10">Oct</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-11">Nov</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2008-12">Dec</a>
+				
+				
+			</td>
+			
+		</tr>
+	
+		<tr>
+			<td>2007</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				&nbsp;
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2007-05">May</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2007-06">Jun</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2007-07">Jul</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2007-08">Aug</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2007-09">Sep</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2007-10">Oct</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2007-11">Nov</a>
+				
+				
+			</td>
+			
+			<td>
+				
+				<a href="/about/performance/ietf-statistics/2007-12">Dec</a>
+				
+				
+			</td>
+			
+		</tr>
+	
+	</table>
+	
+	<h2>Methodology</h2>
+	<p>The statistics presented on this website were gathered by extracting data from our ticketing system queues
+        into daily logs for each queue that are then concatenated into monthly logs for each queue.</p>
+	<p>The logs were then processed extract the transaction history for each ticket in each queue, from the date the
+        ticket was opened until the date the ticket was closed, or the end of the monthly log for tickets not yet closed.</p>
+	<p>The number of open tickets, closed tickets, the amount of time spent in each of IANA processing, Other, and
+        Requestor related states (for which transaction data is available), and the total elapsed time from ticket
+        open to close (or the end of the present reporting period), as well as the mean processing time, median processing,
+        and standard deviation from the mean processing time is presented.</p>
+
+	<h2>Definitions</h2>
+	<p>Below are tables containing the definitions for the queues in which we track IETF-related requests.</p>
+
+	<h3>Definitions for Internet Draft Processing</h3>
+
+	<p>This refers to queues for Internet Drafts in Last Call (drafts-lastcall), Evaluation (drafts-eval), Approved by the IESG (drafts-approved), and drafts requiring references to be updated (drafts-update-refs).</p>
+	<p>
+	<table class="iana-table">
+	<thead>
+		<tr><th>State</th><th>Description</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>Created</td><td>A request is created when we receive either a notification from the IETF Secretariat
+            that a document has been approved by the IESG for publication as an RFC OR when the RFC-Editor notifies
+            us that they intend to publish a document as an RFC.</td></tr>
+		<tr><td>Resolved</td><td>A request is resolved when the RFC-Editor confirms that they have received our
+            notification of completed actions for the document OR when we confirm that there are no IANA Considerations.</td></tr>
+		<tr><td>Processing&nbsp;Time</td><td>The number of calendar days between the date the ticket was Created and
+            Resolved.  If a ticket is not yet resolved, Processing Time is the number of workdays between the date the
+            ticket was created and the last date of the reporting period.</td>
+	</tbody>
+	</table> 
+	</p>
+
+	<h3>Definitions for Protocol Assignments</h3> 
+	<p>This refers to queues for New Port Assignments (iana-ports), Modifications to Port Assignments (port-modifications), Multicast IP Address registrations (iana-multicast), IANA TRIP ITAD Registrations (iana-trip), Media Type Registrations (iana-mime), and all other protocol parameters (iana-prot-param).</p>
+
+	<p>
+        <table class="iana-table">
+        <thead>
+                <tr><th>State</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+		<tr><td>Created</td><td>A request is created when the user has submitted a template, web form or email.</td></tr>
+		<tr><td>Resolved</td><td>A request is resolved when the ticket is closed either because the requested resource has been assigned, the resource registration has been modified or deleted as requested or the ticket has either been administratively closed or withdrawn by the requester. </td></tr> 
+		<tr><td>Rejected</td><td>The request was inappropriate or could not be met for policy reasons.</td></tr>
+		<tr><td>Processing&nbsp;Time</td><td>The number of calendar days between the date the ticket was Created and Resolved.  If a ticket is not yet resolved, Processing Time is the number of workdays between the date the ticket was created and the last date of the reporting period.</td></tr>
+	</tbody>
+	</table>
+	</p>
+	
+
+ 	<h3>Attribution of responsibility</h3>
+	<p>In our processing, we attribute time to various responsible parties, divided into these categories.</p>
+	<p>
+	<table class="iana-table">
+	<thead>
+		<tr><th>State</th><th>Description</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>IANA</td><td>This includes the time we spent working on the request</td></tr>
+		<tr><td>Third&nbsp;party</td><td>This includes time spent with the designated expert, IESG, Authors, Working Group Chairs, RFC-Editor or other outside party</td></tr>
+		<tr><td>Requestor</td><td>This includes the time the request is with the requester. For the case of drafts-lastcall, drafts-eval, drafts-approval and drafts-update-refs queues,  the requestor is either the IESG or the RFC-Editor so there is no “requestor time”.</td></tr>
+		<tr><td>Zombie</td><td>This state appears if the ticket was created prior to January 1, 2007 and no state was known or given at the time these statistics were being tracked.  Those with this state do not exist as all tickets created before January 1 have been resolved.</td></tr>
+	</tbody>
+	</table>
+	</p>
+
+
+			</div>
+			
+			<div id="sidebar_left">
+				<div class="navigation_box">
+				<h2>Protocol Registries</h2>
+				<ul>
+					<li id="nav_prot_reg"><a href="/protocols">Protocol Registries</a></li>
+					<li id="nav_prot_tz"><a href="/time-zones">Time Zone Database</a></li>
+					<li id="nav_prot_performance"><a href="/performance/ietf-statistics">Performance</a></li>
+					<li id="nav_prot_status"><a href="/performance/ietf-draft-status">IETF Draft Status</a></li>
+					
+				</ul>
+				</div>
+			</div>
+			
+		
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script>
+$(document).ready(function() {
+	$("#nav_prot_performance").addClass("selected")
+});
+</script>
+
+	
+</body>
+
+</html>

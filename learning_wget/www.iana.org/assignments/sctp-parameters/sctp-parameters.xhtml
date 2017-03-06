@@ -1,0 +1,2437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Stream Control Transmission Protocol (SCTP) Parameters</title>
+  </head>
+  <body>
+    <h1>Stream Control Transmission Protocol (SCTP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2000-10</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-11-17</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sctp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="sctp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="sctp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#sctp-parameters-1">Chunk Types</a>
+      </li>
+      <li>
+        <a href="#sctp-parameters-2">Chunk Parameter Types</a>
+      </li>
+      <li>
+        <a href="#sctp-parameters-3">Chunk Flags</a>
+        <ul>
+          <li>
+            <a href="#sctp-parameters-4">DATA Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-5">INIT Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-6">INIT ACK Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-7">SACK Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-8">HEARTBEAT Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-9">HEARTBEAT ACK Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-10">ABORT Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-11">SHUTDOWN Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-12">SHUTDOWN ACK Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-13">ERROR Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-14">COOKIE ECHO Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-15">COOKIE ACK Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-16">ECNE Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-17">CWR Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-18">SHUTDOWN COMPLETE Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-19">AUTH Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-20">ASCONF-ACK Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#re-config-chunk-flags">RE-CONFIG Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-21">PAD Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-22">FORWARD TSN Chunk Flags</a>
+          </li>
+          <li>
+            <a href="#sctp-parameters-23">ASCONF Chunk Flags</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#sctp-parameters-24">Error Cause Codes</a>
+      </li>
+      <li>
+        <a href="#sctp-parameters-25">SCTP Payload Protocol Identifiers</a>
+      </li>
+      <li>
+        <a href="#sctp-parameters-26">Hashed Message Authentication Code (HMAC) Identifiers</a>
+      </li>
+      <li>
+        <a href="#sctp-parameters-27">Adaptation Code Points</a>
+      </li>
+    </ul>
+    <h2><a name="sctp-parameters-1" id="sctp-parameters-1"></a>Chunk Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>][<a href="http://www.iana.org/go/rfc6096">RFC6096</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sctp-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sctp-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>ID Value</th>
+          <th>Chunk Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Payload Data (DATA)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Initiation (INIT)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Initiation Acknowledgement (INIT ACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Selective Acknowledgement (SACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Heartbeat Request (HEARTBEAT)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Heartbeat Acknowledgement (HEARTBEAT ACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Abort (ABORT)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Shutdown (SHUTDOWN)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Shutdown Acknowledgement (SHUTDOWN ACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Operation Error (ERROR)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>State Cookie (COOKIE ECHO)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Cookie Acknowledgement (COOKIE ACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Reserved for Explicit Congestion Notification Echo (ECNE)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Reserved for Congestion Window Reduced (CWR)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Shutdown Complete (SHUTDOWN COMPLETE)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Authentication Chunk (AUTH)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4895">RFC4895</a>]</td>
+        </tr>
+        <tr>
+          <td>16-62</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>63</td>
+          <td>Reserved for IETF-defined Chunk Extensions</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>64-126</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>127</td>
+          <td>Reserved for IETF-defined Chunk Extensions</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128</td>
+          <td>Address Configuration Acknowledgment (ASCONF-ACK)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>129</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>130</td>
+          <td>Re-configuration Chunk (RE-CONFIG)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6525">RFC6525</a>]</td>
+        </tr>
+        <tr>
+          <td>131</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>132</td>
+          <td>Padding Chunk (PAD)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4820">RFC4820</a>]</td>
+        </tr>
+        <tr>
+          <td>133-190</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>191</td>
+          <td>Reserved for IETF-defined Chunk Extensions</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>192</td>
+          <td>Forward TSN</td>
+          <td>[<a href="http://www.iana.org/go/rfc3758">RFC3758</a>]</td>
+        </tr>
+        <tr>
+          <td>193</td>
+          <td>Address Configuration Change Chunk (ASCONF)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>194-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved for IETF-defined Chunk Extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sctp-parameters-2" id="sctp-parameters-2"></a>Chunk Parameter Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sctp-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sctp-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>ID Value</th>
+          <th>Chunk Parameter Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Heartbeat Info</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>2-4</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>IPv4 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>IPv6 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>State Cookie</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Unrecognized Parameters</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Cookie Preservative</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Host Name Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Supported Address Types</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Outgoing SSN Reset Request Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc6525">RFC6525</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Incoming SSN Reset Request Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc6525">RFC6525</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>SSN/TSN Reset Request Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc6525">RFC6525</a>]</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Re-configuration Response Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc6525">RFC6525</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Add Outgoing Streams Request Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc6525">RFC6525</a>]</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>Add Incoming Streams Request Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc6525">RFC6525</a>]</td>
+        </tr>
+        <tr>
+          <td>19-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>32768</td>
+          <td>Reserved for ECN Capable (0x8000)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>32770</td>
+          <td>Random  (0x8002)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4805">RFC4805</a>]</td>
+        </tr>
+        <tr>
+          <td>32771</td>
+          <td>Chunk List  (0x8003)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4895">RFC4895</a>]</td>
+        </tr>
+        <tr>
+          <td>32772</td>
+          <td>Requested HMAC Algorithm Parameter  (0x8004)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4895">RFC4895</a>]</td>
+        </tr>
+        <tr>
+          <td>32773</td>
+          <td>Padding  (0x8005)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>32776</td>
+          <td>Supported Extensions (0x8008)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>32777-49151</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>49152</td>
+          <td>Forward TSN supported  (0xC000)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3758">RFC3758</a>]</td>
+        </tr>
+        <tr>
+          <td>49153</td>
+          <td>Add IP Address  (0xC001)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>49154</td>
+          <td>Delete IP Address  (0xC002)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>49155</td>
+          <td>Error Cause Indication  (0xC003)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>49156</td>
+          <td>Set Primary Address  (0xC004)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>49157</td>
+          <td>Success Indication  (0xC005)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>49158</td>
+          <td>Adaptation Layer Indication  (0xC006)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sctp-parameters-3" id="sctp-parameters-3"></a>Chunk Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6096">RFC6096</a>]</dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="sctp-parameters-4" id="sctp-parameters-4"></a>DATA Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-4" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>E bit</td>
+            <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>B bit</td>
+            <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>U bit</td>
+            <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>I bit</td>
+            <td>[<a href="http://www.iana.org/go/rfc7053">RFC7053</a>]</td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-5" id="sctp-parameters-5"></a>INIT Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-5" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-6" id="sctp-parameters-6"></a>INIT ACK Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-6" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-7" id="sctp-parameters-7"></a>SACK Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-7" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-8" id="sctp-parameters-8"></a>HEARTBEAT Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-8" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-9" id="sctp-parameters-9"></a>HEARTBEAT ACK Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-9" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-10" id="sctp-parameters-10"></a>ABORT Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-10" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>T bit</td>
+            <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-11" id="sctp-parameters-11"></a>SHUTDOWN Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-11" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-12" id="sctp-parameters-12"></a>SHUTDOWN ACK Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-12" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-13" id="sctp-parameters-13"></a>ERROR Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-13" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-14" id="sctp-parameters-14"></a>COOKIE ECHO Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-14" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-15" id="sctp-parameters-15"></a>COOKIE ACK Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-15" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-16" id="sctp-parameters-16"></a>ECNE Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-16.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-16" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-17" id="sctp-parameters-17"></a>CWR Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-17" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-18" id="sctp-parameters-18"></a>SHUTDOWN COMPLETE Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-18.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-18" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>T bit</td>
+            <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-19" id="sctp-parameters-19"></a>AUTH Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-19.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-19" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-20" id="sctp-parameters-20"></a>ASCONF-ACK Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-20.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-20" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="re-config-chunk-flags" id="re-config-chunk-flags"></a>RE-CONFIG Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="re-config-chunk-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-re-config-chunk-flags" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-21" id="sctp-parameters-21"></a>PAD Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-21.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-21" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-22" id="sctp-parameters-22"></a>FORWARD TSN Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-22.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-22" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="sctp-parameters-23" id="sctp-parameters-23"></a>ASCONF Chunk Flags</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="sctp-parameters-23.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-sctp-parameters-23" class="sortable">
+        <thead>
+          <tr>
+            <th>Chunk Flag Value</th>
+            <th>Chunk Flag Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0x01</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x02</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x04</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x08</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x10</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x20</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x40</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>0x80</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="sctp-parameters-24" id="sctp-parameters-24"></a>Error Cause Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sctp-parameters-24.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sctp-parameters-24" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Cause Code</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Invalid Stream Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Missing Mandatory Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Stale Cookie Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Out of Resource</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Unresolvable Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Unrecognized Chunk Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Invalid Mandatory Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Unrecognized Parameters</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>No User Data</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Cookie Received While Shutting Down</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Restart of an Association with New Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>User Initiated Abort</td>
+          <td>[<a href="http://www.iana.org/go/rfc4460">RFC4460</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Protocol Violation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4460">RFC4460</a>]</td>
+        </tr>
+        <tr>
+          <td>14-159</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>160</td>
+          <td>Request to Delete Last Remaining IP Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>161</td>
+          <td>Operation Refused Due to Resource Shortage</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>162</td>
+          <td>Request to Delete Source IP Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>163</td>
+          <td>Association Aborted due to illegal ASCONF-ACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>164</td>
+          <td>Request refused - no authorization</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>165-260</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>261</td>
+          <td>Unsupported HMAC Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc4895">RFC4895</a>]</td>
+        </tr>
+        <tr>
+          <td>262-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sctp-parameters-25" id="sctp-parameters-25"></a>SCTP Payload Protocol Identifiers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sctp-parameters-25.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sctp-parameters-25" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>SCTP Payload Protocol Identifier</th>
+          <th>Reference</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved by SCTP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>IUA</td>
+          <td>[<a href="http://www.iana.org/go/rfc4233">RFC4233</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>M2UA</td>
+          <td>[<a href="http://www.iana.org/go/rfc3331">RFC3331</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>M3UA</td>
+          <td>[<a href="http://www.iana.org/go/rfc4666">RFC4666</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>SUA</td>
+          <td>[<a href="http://www.iana.org/go/rfc3868">RFC3868</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>M2PA</td>
+          <td>[<a href="http://www.iana.org/go/rfc4165">RFC4165</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>V5UA</td>
+          <td>[<a href="http://www.iana.org/go/rfc3807">RFC3807</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>H.248</td>
+          <td>[ITU-T Recommendation H.248 Annex H, "Transport over SCTP",
+November 2000.]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>BICC/Q.2150.3</td>
+          <td>[ITU-T Recommendation Q.1902.1, "Bearer Independent Call
+Control protocol (Capability Set 2): Functional description",
+July 2001.][ITU-T Recommendation Q.2150.3, "Signalling Transport Converter
+On SCTP", to be published.]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>TALI</td>
+          <td>[<a href="http://www.iana.org/go/rfc3094">RFC3094</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>DUA</td>
+          <td>[<a href="http://www.iana.org/go/rfc4129">RFC4129</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>ASAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5352">RFC5352</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>ENRP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5353">RFC5353</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>H.323</td>
+          <td>[<a href="http://standard.pictel.com/ftp/avc-site/0206_Bru/AVD-2198.zip">http://standard.pictel.com/ftp/avc-site/0206_Bru/AVD-2198.zip</a>][H.323 over SCTP October 2002.]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Q.IPC/Q.2150.3</td>
+          <td>[ITU-T Recommendation Q.2631.1 "IP Connection Control Signaling
+Protocol - Capability Set 1", to be published.][ITU-T Recommendation Q.2150.3, "Signalling Transport Converter
+On SCTP", to be published.]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>SIMCO &lt;draft-kiesel-midcom-simco-sctp-00.txt&gt;</td>
+          <td>[<a href="#Sebastian_Kiesel">Sebastian_Kiesel</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>DDP Segment Chunk</td>
+          <td>[<a href="http://www.iana.org/go/rfc5043">RFC5043</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>DDP Stream Session Control</td>
+          <td>[<a href="http://www.iana.org/go/rfc5043">RFC5043</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>S1 Application Protocol (S1AP)</td>
+          <td>[<a href="http://www.3gpp.org/ftp/Specs/latest/Rel-8/23_series/23401-840.zip">http://www.3gpp.org/ftp/Specs/latest/Rel-8/23_series/23401-840.zip</a>][<a href="http://www.3gpp.org/Specification-Numbering">http://www.3gpp.org/Specification-Numbering</a>][<a href="#Rajeev_Koodli">Rajeev_Koodli</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>RUA</td>
+          <td>[<a href="http://www.3gpp.org/Specification-Numbering">http://www.3gpp.org/Specification-Numbering</a>][<a href="http://www.3gpp.org/Specification-Numbering">http://www.3gpp.org/Specification-Numbering</a>][<a href="#John_Meredith">John_Meredith</a>]</td>
+          <td>2009-05-28</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>HNBAP</td>
+          <td>[<a href="http://www.3gpp.org/Specification-Numbering">http://www.3gpp.org/Specification-Numbering</a>][TS 25.469][<a href="#John_Meredith">John_Meredith</a>]</td>
+          <td>2009-05-28</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>ForCES-HP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5811">RFC5811</a>]</td>
+          <td>2009-08-04</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>ForCES-MP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5811">RFC5811</a>]</td>
+          <td>2009-08-04</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>ForCES-LP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5811">RFC5811</a>]</td>
+          <td>2009-08-04</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>SBc-AP</td>
+          <td>[<a href="http://www.3gpp.org/Specification-Numbering">http://www.3gpp.org/Specification-Numbering</a>][<a href="#Kimmo_Kymalainen">Kimmo_Kymalainen</a>]</td>
+          <td>2009-08-20</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>NBAP</td>
+          <td>[<a href="http://www.3gpp.org/Specification-Numbering">http://www.3gpp.org/Specification-Numbering</a>][<a href="#Kimmo_Kymalainen">Kimmo_Kymalainen</a>]</td>
+          <td>2009-08-28</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td>X2AP</td>
+          <td>[<a href="http://www.3gpp.org/Specification-Numbering">http://www.3gpp.org/Specification-Numbering</a>][<a href="#Kimmo_Kymalainen">Kimmo_Kymalainen</a>]</td>
+          <td>2009-08-28</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>IRCP - Inter Router Capability Protocol</td>
+          <td>[<a href="#Randall_Stewart">Randall_Stewart</a>]</td>
+          <td>2010-04-13</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>LCS-AP</td>
+          <td>[<a href="http://www.3gpp.org/Specification-Numbering">http://www.3gpp.org/Specification-Numbering</a>][<a href="#Kimmo_Kymalainen">Kimmo_Kymalainen</a>]</td>
+          <td>2010-06-03</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>MPICH2</td>
+          <td>[<a href="#Michael_Tuexen">Michael_Tuexen</a>][<a href="http://www.mcs.anl.gov/research/projects/mpich2/">http://www.mcs.anl.gov/research/projects/mpich2/</a>]</td>
+          <td>2010-06-14</td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>Service Area Broadcast Protocol (SABP)</td>
+          <td>[<a href="http://www.3gpp.org/Specification-Numbering">http://www.3gpp.org/Specification-Numbering</a>][<a href="http://www.3gpp.org/Specification-Numbering">http://www.3gpp.org/Specification-Numbering</a>][<a href="#John_Meredith">John_Meredith</a>]</td>
+          <td>2010-09-29</td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>Fractal Generator Protocol (FGP)</td>
+          <td>[<a href="#Thomas_Dreibholz">Thomas_Dreibholz</a>][<a href="http://tdrwww.iem.uni-due.de/dreibholz/rserpool/">http://tdrwww.iem.uni-due.de/dreibholz/rserpool/</a>]</td>
+          <td>2011-01-31</td>
+        </tr>
+        <tr>
+          <td>33</td>
+          <td>Ping Pong Protocol (PPP)</td>
+          <td>[<a href="#Thomas_Dreibholz">Thomas_Dreibholz</a>][<a href="http://tdrwww.iem.uni-due.de/dreibholz/rserpool/">http://tdrwww.iem.uni-due.de/dreibholz/rserpool/</a>]</td>
+          <td>2011-01-31</td>
+        </tr>
+        <tr>
+          <td>34</td>
+          <td>CalcApp Protocol (CALCAPP)</td>
+          <td>[<a href="#Thomas_Dreibholz">Thomas_Dreibholz</a>][<a href="http://tdrwww.iem.uni-due.de/dreibholz/rserpool/">http://tdrwww.iem.uni-due.de/dreibholz/rserpool/</a>]</td>
+          <td>2011-01-31</td>
+        </tr>
+        <tr>
+          <td>35</td>
+          <td>Scripting Service Protocol (SSP)</td>
+          <td>[<a href="#Thomas_Dreibholz">Thomas_Dreibholz</a>][<a href="http://tdrwww.iem.uni-due.de/dreibholz/rserpool/">http://tdrwww.iem.uni-due.de/dreibholz/rserpool/</a>]</td>
+          <td>2011-01-31</td>
+        </tr>
+        <tr>
+          <td>36</td>
+          <td>NetPerfMeter Protocol Control Channel (NPMP-CONTROL)</td>
+          <td>[<a href="#Thomas_Dreibholz">Thomas_Dreibholz</a>][<a href="http://www.iem.uni-due.de/~dreibh/netperfmeter/">http://www.iem.uni-due.de/~dreibh/netperfmeter/</a>]</td>
+          <td>2011-01-31</td>
+        </tr>
+        <tr>
+          <td>37</td>
+          <td>NetPerfMeter Protocol Data Channel (NPMP-DATA)</td>
+          <td>[<a href="#Thomas_Dreibholz">Thomas_Dreibholz</a>][<a href="http://www.iem.uni-due.de/~dreibh/netperfmeter/">http://www.iem.uni-due.de/~dreibh/netperfmeter/</a>]</td>
+          <td>2011-01-31</td>
+        </tr>
+        <tr>
+          <td>38</td>
+          <td>Echo (ECHO)</td>
+          <td>[<a href="#Thomas_Dreibholz">Thomas_Dreibholz</a>][<a href="http://tdrwww.iem.uni-due.de/dreibholz/rserpool/">http://tdrwww.iem.uni-due.de/dreibholz/rserpool/</a>]</td>
+          <td>2011-02-02</td>
+        </tr>
+        <tr>
+          <td>39</td>
+          <td>Discard (DISCARD)</td>
+          <td>[<a href="#Thomas_Dreibholz">Thomas_Dreibholz</a>][<a href="http://tdrwww.iem.uni-due.de/dreibholz/rserpool/">http://tdrwww.iem.uni-due.de/dreibholz/rserpool/</a>]</td>
+          <td>2011-02-02</td>
+        </tr>
+        <tr>
+          <td>40</td>
+          <td>Daytime (DAYTIME)</td>
+          <td>[<a href="#Thomas_Dreibholz">Thomas_Dreibholz</a>][<a href="http://tdrwww.iem.uni-due.de/dreibholz/rserpool/">http://tdrwww.iem.uni-due.de/dreibholz/rserpool/</a>]</td>
+          <td>2011-02-02</td>
+        </tr>
+        <tr>
+          <td>41</td>
+          <td>Character Generator (CHARGEN)</td>
+          <td>[<a href="#Thomas_Dreibholz">Thomas_Dreibholz</a>][<a href="http://tdrwww.iem.uni-due.de/dreibholz/rserpool/">http://tdrwww.iem.uni-due.de/dreibholz/rserpool/</a>]</td>
+          <td>2011-02-02</td>
+        </tr>
+        <tr>
+          <td>42</td>
+          <td>3GPP RNA</td>
+          <td>[Tonesi][<a href="http://www.3gpp.org/ftp/specs/html-info/25471.htm">http://www.3gpp.org/ftp/specs/html-info/25471.htm</a>]</td>
+          <td>2011-02-04</td>
+        </tr>
+        <tr>
+          <td>43</td>
+          <td>3GPP M2AP</td>
+          <td>[Tonesi][<a href="http://www.3gpp.org/ftp/specs/html-info/36442.htm">http://www.3gpp.org/ftp/specs/html-info/36442.htm</a>][<a href="http://www.3gpp.org/ftp/specs/html-info/36443.htm">http://www.3gpp.org/ftp/specs/html-info/36443.htm</a>]</td>
+          <td>2011-02-04</td>
+        </tr>
+        <tr>
+          <td>44</td>
+          <td>3GPP M3AP</td>
+          <td>[Tonesi][<a href="http://www.3gpp.org/ftp/specs/html-info/36442.htm">http://www.3gpp.org/ftp/specs/html-info/36442.htm</a>][<a href="http://www.3gpp.org/ftp/specs/html-info/36444.htm">http://www.3gpp.org/ftp/specs/html-info/36444.htm</a>]</td>
+          <td>2011-02-04</td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td>SSH over SCTP</td>
+          <td>[<a href="#Michael_Tuexen">Michael_Tuexen</a>]</td>
+          <td>2011-03-14</td>
+        </tr>
+        <tr>
+          <td>46</td>
+          <td>Diameter in a SCTP DATA chunk</td>
+          <td>[<a href="http://www.iana.org/go/rfc6733">RFC6733</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>47</td>
+          <td>Diameter in a DTLS/SCTP DATA chunk</td>
+          <td>[<a href="http://www.iana.org/go/rfc6733">RFC6733</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>48</td>
+          <td>R14P. BER Encoded ASN.1 over SCTP</td>
+          <td>[<a href="#Josip_Djuricic">Josip_Djuricic</a>][<a href="http://www.release14.org/wp-content/uploads/2012/07/r14p.asn">http://www.release14.org/wp-content/uploads/2012/07/r14p.asn</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>49</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>50</td>
+          <td>WebRTC DCEP</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-rtcweb-data-protocol-09">RFC-ietf-rtcweb-data-protocol-09</a>]</td>
+          <td>2013-09-20</td>
+        </tr>
+        <tr>
+          <td>51</td>
+          <td>WebRTC String</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-rtcweb-data-channel-13">RFC-ietf-rtcweb-data-channel-13</a>]</td>
+          <td>2013-09-20</td>
+        </tr>
+        <tr>
+          <td>52</td>
+          <td>WebRTC Binary Partial (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-rtcweb-data-channel-13">RFC-ietf-rtcweb-data-channel-13</a>]</td>
+          <td>2013-09-20</td>
+        </tr>
+        <tr>
+          <td>53</td>
+          <td>WebRTC Binary</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-rtcweb-data-channel-13">RFC-ietf-rtcweb-data-channel-13</a>]</td>
+          <td>2013-09-20</td>
+        </tr>
+        <tr>
+          <td>54</td>
+          <td>WebRTC String Partial (deprecated)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-rtcweb-data-channel-13">RFC-ietf-rtcweb-data-channel-13</a>]</td>
+          <td>2013-09-20</td>
+        </tr>
+        <tr>
+          <td>55</td>
+          <td>3GPP PUA</td>
+          <td>[<a href="#Dario_S_Tonesi">Dario_S_Tonesi</a>][<a href="http://www.3gpp.org/DynaReport/25470.htm">http://www.3gpp.org/DynaReport/25470.htm</a>][<a href="http://www.3gpp.org/DynaReport/25467.htm">http://www.3gpp.org/DynaReport/25467.htm</a>]</td>
+          <td>2014-01-03</td>
+        </tr>
+        <tr>
+          <td>56</td>
+          <td>WebRTC String Empty</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-rtcweb-data-channel-13">RFC-ietf-rtcweb-data-channel-13</a>]</td>
+          <td>2014-08-22</td>
+        </tr>
+        <tr>
+          <td>57</td>
+          <td>WebRTC Binary Empty</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-rtcweb-data-channel-13">RFC-ietf-rtcweb-data-channel-13</a>]</td>
+          <td>2014-08-22</td>
+        </tr>
+        <tr>
+          <td>58</td>
+          <td>3GPP XwAP</td>
+          <td>[<a href="http://www.3gpp.org/dynareport/36462.htm">
+        3GPP TS 36.462</a>][<a href="#KIMBA_DIT_ADAMOU_Boubacar">KIMBA_DIT_ADAMOU_Boubacar</a>]</td>
+          <td>2015-10-19</td>
+        </tr>
+        <tr>
+          <td>59</td>
+          <td>3GPP Xw-Control Plane</td>
+          <td>[<a href="http://www.3gpp.org/dynareport/36462.htm">
+        3GPP TS 36.462</a>][<a href="#KIMBA_DIT_ADAMOU_Boubacar">KIMBA_DIT_ADAMOU_Boubacar</a>]</td>
+          <td>2015-11-17</td>
+        </tr>
+        <tr>
+          <td>60-4294967295</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sctp-parameters-26" id="sctp-parameters-26"></a>Hashed Message Authentication Code (HMAC) Identifiers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4895">RFC4895</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sctp-parameters-26.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sctp-parameters-26" class="sortable">
+      <thead>
+        <tr>
+          <th>HMAC Identifier</th>
+          <th>Message Digest Algorithm</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4895">RFC4895</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>SHA-1</td>
+          <td>[<a href="http://www.iana.org/go/rfc4895">RFC4895</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4895">RFC4895</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>SHA-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc4895">RFC4895</a>]</td>
+        </tr>
+        <tr>
+          <td>4-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sctp-parameters-27" id="sctp-parameters-27"></a>Adaptation Code Points</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sctp-parameters-27.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sctp-parameters-27" class="sortable">
+      <thead>
+        <tr>
+          <th>Code Point (32-bit number)</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000001</td>
+          <td>DDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5043">RFC5043</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000002-0xffffffff</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5061">RFC5061</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Dario_S_Tonesi" id="Dario_S_Tonesi">[Dario_S_Tonesi]</a>
+          </td>
+          <td>Dario S Tonesi</td>
+          <td>
+            <a href="mailto:dario.tonesi&amp;nsn.com">mailto:dario.tonesi&amp;nsn.com</a>
+          </td>
+          <td>2014-01-03</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="John_Meredith" id="John_Meredith">[John_Meredith]</a>
+          </td>
+          <td>John Meredith</td>
+          <td>
+            <a href="mailto:john.meredith&amp;etsi.org">mailto:john.meredith&amp;etsi.org</a>
+          </td>
+          <td>2010-09-29</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Josip_Djuricic" id="Josip_Djuricic">[Josip_Djuricic]</a>
+          </td>
+          <td>Josip Djuricic</td>
+          <td>
+            <a href="mailto:jd&amp;release14.org">mailto:jd&amp;release14.org</a>
+          </td>
+          <td>2012-06-08</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="KIMBA_DIT_ADAMOU_Boubacar" id="KIMBA_DIT_ADAMOU_Boubacar">[KIMBA_DIT_ADAMOU_Boubacar]</a>
+          </td>
+          <td>KIMBA DIT ADAMOU, Boubacar</td>
+          <td>
+            <a href="mailto:jinba&amp;chinamobile.com">mailto:jinba&amp;chinamobile.com</a>
+          </td>
+          <td>2015-11-17</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Kimmo_Kymalainen" id="Kimmo_Kymalainen">[Kimmo_Kymalainen]</a>
+          </td>
+          <td>Kimmo Kymalainen</td>
+          <td>
+            <a href="mailto:kimmo.kymalainen&amp;etsi.org">mailto:kimmo.kymalainen&amp;etsi.org</a>
+          </td>
+          <td>2010-06-03</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Michael_Tuexen" id="Michael_Tuexen">[Michael_Tuexen]</a>
+          </td>
+          <td>Michael Tuexen</td>
+          <td>
+            <a href="mailto:tuexen&amp;fh-muenster.de">mailto:tuexen&amp;fh-muenster.de</a>
+          </td>
+          <td>2013-09-20</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Rajeev_Koodli" id="Rajeev_Koodli">[Rajeev_Koodli]</a>
+          </td>
+          <td>Rajeev Koodli</td>
+          <td>
+            <a href="mailto:rkoodli&amp;starentnetworks.com">mailto:rkoodli&amp;starentnetworks.com</a>
+          </td>
+          <td>2008-12-19</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Randall_Stewart" id="Randall_Stewart">[Randall_Stewart]</a>
+          </td>
+          <td>Randall Stewart</td>
+          <td>
+            <a href="mailto:rrs&amp;lakerest.net">mailto:rrs&amp;lakerest.net</a>
+          </td>
+          <td>2010-04-13</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Sebastian_Kiesel" id="Sebastian_Kiesel">[Sebastian_Kiesel]</a>
+          </td>
+          <td>Sebastian Kiesel</td>
+          <td>
+            <a href="mailto:kiesel&amp;ikr.uni-stuttgart.de">mailto:kiesel&amp;ikr.uni-stuttgart.de</a>
+          </td>
+          <td>2006-03-22</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Thomas_Dreibholz" id="Thomas_Dreibholz">[Thomas_Dreibholz]</a>
+          </td>
+          <td>Thomas Dreibholz</td>
+          <td>
+            <a href="mailto:dreibh&amp;iem.uni-due.de">mailto:dreibh&amp;iem.uni-due.de</a>
+          </td>
+          <td>2011-01-31</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

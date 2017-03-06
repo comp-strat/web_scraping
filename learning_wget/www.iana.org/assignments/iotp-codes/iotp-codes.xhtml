@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Internet Open Trading Protocol (IOTP) Codes</title>
+  </head>
+  <body>
+    <h1>Internet Open Trading Protocol (IOTP) Codes</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2000-04</dd>
+      <dt>Last Updated</dt>
+      <dd>2012-02-02</dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>David Burdett</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="iotp-codes.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="iotp-codes.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#iotp-codes-1">Algorithm/Name</a>
+      </li>
+      <li>
+        <a href="#iotp-codes-2">Brand/BrandId</a>
+      </li>
+      <li>
+        <a href="#iotp-codes-3">CurrencyAmount/CurrCode</a>
+      </li>
+      <li>
+        <a href="#iotp-codes-4">CurrencyAmount/CurrCodeType</a>
+      </li>
+      <li>
+        <a href="#iotp-codes-5">DeliveryData/DelivMethod</a>
+      </li>
+      <li>
+        <a href="#iotp-codes-6">PackagedContent/Content</a>
+      </li>
+      <li>
+        <a href="#iotp-codes-7">RelatedTo/RelationshipType</a>
+      </li>
+      <li>
+        <a href="#iotp-codes-8">Status/StatusType</a>
+      </li>
+      <li>
+        <a href="#iotp-codes-9">TradingRole/Trading Role</a>
+      </li>
+      <li>
+        <a href="#iotp-codes-10">TransId/IotpTransType</a>
+      </li>
+      <li>
+        <a href="#iotp-codes-11">Attribute/Content</a>
+      </li>
+    </ul>
+    <h2><a name="iotp-codes-1" id="iotp-codes-1"></a>Algorithm/Name</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>When Algorithm is a child of an AuthReq Component.
+Further information see Section 12.1 in the RFC.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iotp-codes-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Values</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"sha1"</td>
+          <td>Indicates that a [SHA1] authentication will apply</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"signature"</td>
+          <td>Indicates that authentication consists of the generation       
+of a digital signature.</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"Pay:ppp"</td>
+          <td>Where "ppp" may be set to any valid value for "iotpbrand"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iotp-codes-2" id="iotp-codes-2"></a>Brand/BrandId</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served (FCFS)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>IETF Trade mailing list for three weeks</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iotp-codes-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Brand/BrandID</th>
+          <th>Organization</th>
+          <th>Contact Person/E-mail address</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"Amex"</td>
+          <td>American Express</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"Dankort"</td>
+          <td>Dankort</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"JCB"</td>
+          <td>JCB</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"Maestro"</td>
+          <td>Maestro</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"MasterCard"</td>
+          <td>MasterCard</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"NICOS"</td>
+          <td>NICOS</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"VISA"</td>
+          <td>Visa</td>
+          <td>[<a href="#Tony_Lewis">Tony_Lewis</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"atCredits"</td>
+          <td>@UK PLC</td>
+          <td>[<a href="#Ronald_Duncan_ukplc">Ronald_Duncan_ukplc</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"EZpay"</td>
+          <td>ITI Services</td>
+          <td>[<a href="#Admin_itinternet_net">Admin_itinternet_net</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"GeldKarte"</td>
+          <td>GeldKarte</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"Mondex"</td>
+          <td>Mondex</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"paybox"</td>
+          <td>paybox.net AG</td>
+          <td>[<a href="#guillaume_taglang_pa">guillaume_taglang_pa</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iotp-codes-3" id="iotp-codes-3"></a>CurrencyAmount/CurrCode</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served (FCFS)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>IETF Trade mailing list for three weeks</pre>
+      </dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Currency codes are dependent on CurrCodeType (see below).</pre>
+      </dd>
+    </dl>
+    <table>
+      <thead>
+        <tr>
+          <th>CurrencyAmount/CurrCode</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iotp-codes-4" id="iotp-codes-4"></a>CurrencyAmount/CurrCodeType</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>New values of CurrCodeType attribute are allocated following
+review on the IETF Trade mailing list and by the Designated Expert.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iotp-codes-4" class="sortable">
+      <thead>
+        <tr>
+          <th>CurrencyAmount/CurrCodeType</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"ISO4217-A"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"IOTP"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iotp-codes-5" id="iotp-codes-5"></a>DeliveryData/DelivMethod</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iotp-codes-5" class="sortable">
+      <thead>
+        <tr>
+          <th>DeliveryData/DelivMethod</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"Post"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"Web"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"Email"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iotp-codes-6" id="iotp-codes-6"></a>PackagedContent/Content</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iotp-codes-6" class="sortable">
+      <thead>
+        <tr>
+          <th>PackagedContent/Content</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"PCDATA"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"MIME"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"MIME:mimetype" (where mimetype must be the same as content-type  
+                 as defined by [MIME] )</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"XML"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iotp-codes-7" id="iotp-codes-7"></a>RelatedTo/RelationshipType</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iotp-codes-7" class="sortable">
+      <thead>
+        <tr>
+          <th>RelatedTo/RelationshipType</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"IotpTransaction"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"Reference"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iotp-codes-8" id="iotp-codes-8"></a>Status/StatusType</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iotp-codes-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Status/StatusType</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Offer</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>Payment</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>Delivery</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>Unidentified</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iotp-codes-9" id="iotp-codes-9"></a>TradingRole/Trading Role</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iotp-codes-9" class="sortable">
+      <thead>
+        <tr>
+          <th>TradingRole/Trading Role</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"Consumer"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"Merchant"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"PaymentHandler"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"DeliveryHandler"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"DelivTo"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"CustCare"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iotp-codes-10" id="iotp-codes-10"></a>TransId/IotpTransType</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iotp-codes-10" class="sortable">
+      <thead>
+        <tr>
+          <th>TransId/IOtpTransType</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"BaselineAuthentication"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"BaselineDeposit"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"BaselinePurchase"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"BaselineRefund"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"BaselineWithdrawal"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"BaselineValueExchange"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"BaselineInquiry"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"BaselinePing"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="iotp-codes-11" id="iotp-codes-11"></a>Attribute/Content</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>see Signature Component</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iotp-codes-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iotp-codes-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Attribute/Content</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"OfferResponse"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"PaymentResponse"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"DeliveryResponse"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"AuthenticationRequest"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"AuthenticationResponse"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"PingRequest"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+        <tr>
+          <td>"PingResponse"</td>
+          <td>[<a href="http://www.iana.org/go/rfc2801">RFC2801</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Admin_itinternet_net" id="Admin_itinternet_net">[Admin_itinternet_net]</a>
+          </td>
+          <td></td>
+          <td>
+            <a href="mailto:Admin&amp;itinternet.net">mailto:Admin&amp;itinternet.net</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Ronald_Duncan_ukplc" id="Ronald_Duncan_ukplc">[Ronald_Duncan_ukplc]</a>
+          </td>
+          <td></td>
+          <td>
+            <a href="mailto:Ronald.Duncan&amp;ukplc.net">mailto:Ronald.Duncan&amp;ukplc.net</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Tony_Lewis" id="Tony_Lewis">[Tony_Lewis]</a>
+          </td>
+          <td>Tony Lewis</td>
+          <td>
+            <a href="mailto:TLewis&amp;visa.com">mailto:TLewis&amp;visa.com</a>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a name="guillaume_taglang_pa" id="guillaume_taglang_pa">[guillaume_taglang_pa]</a>
+          </td>
+          <td></td>
+          <td>
+            <a href="mailto:guillaume.taglang&amp;paybox.net">mailto:guillaume.taglang&amp;paybox.net</a>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

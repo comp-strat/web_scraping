@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Emergency Call Metadata/Control Data</title>
+  </head>
+  <body>
+    <h1>Emergency Call Metadata/Control Data</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2017-02-24</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-02-24</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="emergency-call-metadata-control-data.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="emergency-call-metadata-control-data.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="emergency-call-metadata-control-data.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#emergency-call-action">Emergency Call Action</a>
+      </li>
+      <li>
+        <a href="#emergency-call-action-failure-reason">Emergency Call Action Failure Reason</a>
+      </li>
+    </ul>
+    <h2><a name="emergency-call-action" id="emergency-call-action"></a>Emergency Call Action</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-ecrit-ecall-27">RFC-ietf-ecrit-ecall-27</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="emergency-call-action.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-emergency-call-action" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>send-data</td>
+          <td>See Section 9.1.3.1 of [<a href="http://www.iana.org/go/draft-ietf-ecrit-ecall-27">RFC-ietf-ecrit-ecall-27</a>]</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ecrit-ecall-27">RFC-ietf-ecrit-ecall-27</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="emergency-call-action-failure-reason" id="emergency-call-action-failure-reason"></a>Emergency Call Action Failure Reason</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-ecrit-ecall-27">RFC-ietf-ecrit-ecall-27</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="emergency-call-action-failure-reason.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-emergency-call-action-failure-reason" class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>damaged</td>
+          <td>Required components are damaged.</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ecrit-ecall-27">RFC-ietf-ecrit-ecall-27</a>]</td>
+        </tr>
+        <tr>
+          <td>data-unsupported</td>
+          <td>The data item referenced in a 'send-data' 
+        request is not supported.</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ecrit-ecall-27">RFC-ietf-ecrit-ecall-27</a>]</td>
+        </tr>
+        <tr>
+          <td>security-failure</td>
+          <td>The authenticity of the request or the 
+        authority of the requestor could not be verified.</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ecrit-ecall-27">RFC-ietf-ecrit-ecall-27</a>]</td>
+        </tr>
+        <tr>
+          <td>unable</td>
+          <td>The action could not be accomplished (a 
+        generic error for use when no other code is appropriate).</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ecrit-ecall-27">RFC-ietf-ecrit-ecall-27</a>]</td>
+        </tr>
+        <tr>
+          <td>unsupported</td>
+          <td>The 'action' value is not supported.</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ecrit-ecall-27">RFC-ietf-ecrit-ecall-27</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

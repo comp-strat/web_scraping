@@ -1,0 +1,446 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8" /><title>Community - ICANN</title><meta content="width=device-width, initial-scale=1.0" name="viewport" /><meta content="" name="description" /><meta content="" name="author" /><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><!--HTML5 shim, for IE6-8 support of HTML5 elements--><!--[if lt IE 9]
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>--><link rel="stylesheet" media="all" href="/assets/application-eccb7764fba4611b8b3b9b494ecc5732.css" />
+<!--[if lte IE 9]>
+<link rel="stylesheet" media="all" href="/assets/application_split2-16669b8b605095677cca2e25e7411b89.css" />
+<![endif]--><meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="IkT3uyjgzAkMlmPMF3/KGcfwoFDtj+oWN3pmCVoECYnwsEpLgEDcKBAOhhkc1RuyzbP/cKJpBH94lG7bHeFC/w==" /><script type="text/javascript">(function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+{
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-25463847-1', 'auto');
+
+// Send pageview hit for all pages expect /search page
+// The /search pageview hit will be generated in the AngularJs doSearch(). See search_filter_ctrl.js.coffee
+if(document.location.pathname != '/search' && document.location.pathname != '/search/') {
+  ga('send', 'pageview');
+}</script><style type="text/css">body { display : none;} </style><base href="/community/explore" /></head><body><span external-links=""><a class="u-hiddenAndAccessible u-hiddenAndAccessible-shownOnFocus" href="#main-content">Skip to main content</a></span><header class="nav-collapse MainHeader" external_links=""><div class="ActionsBar--container"><div class="ActionsBar"><div class="i-alert"><svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewbox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M256,35.11L0,476.89h512L256,35.11z M256,93.484l205.216,354.138H50.786L256,93.484z M231.901,423.156h48.2v-46.583h-48.2  V423.156z M230.772,186.359v60.228l13.379,110.803h24.019l13.06-110.803v-60.228H230.772L230.772,186.359z" /></svg><div class="label">Pages under review </div></div><div id="alert"><span class="close"><svg enable-background="new 0 0 51.2 51.2" style="text-align: right; float: right; position: relative; width: 16px; top: 1%; right: 1%;" version="1.1" viewbox="0 0 51.2 51.2" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><switch><foreignobject height="1" requiredextensions="http://ns.adobe.com/AdobeIllustrator/10.0/" width="1" x="0" y="0" /><path d="M44.8 6.4C44.8 6.4 44.8 6.4 44.8 6.4l0 38.4c0 0 0 0 0 0H6.4c0 0 0 0 0 0V6.4c0 0 0 0 0 0H44.8zM44.8 0H6.4C2.9 0 0 2.9 0 6.4v38.4c0 3.5 2.9 6.4 6.4 6.4h38.4c3.5 0 6.4-2.9 6.4-6.4V6.4C51.2 2.9 48.3 0 44.8 0L44.8 0zM44.8 0 33.6 12.8l-8 8 -8-8 -4.8 4.8 8 8 -8 8 4.8 4.8 8-8 8 8 4.8-4.8 -8-8 8-8L33.6 12.8zM33.6 12.8" /></switch></svg></span><p class="title">Pages under review</p><p>As a result of the IANA Stewardship Transition, you may find some site content that is out of date. Please use the “Feedback” button in the bottom right corner of the page if you have questions or discover content that requires updating. </p></div><nav class="ActionsBar-primary"><ul class="Languages-list"><li class="Languages-item"><a href="/translations">English</a></li><li class="Languages-item"><a lang="ar" href="/ar">العربية</a></li><li class="Languages-item"><a lang="es" href="/es">Español</a></li><li class="Languages-item"><a lang="fr" href="/fr">Français</a></li><li class="Languages-item"><a lang="ru" href="/ru">Pусский</a></li><li class="Languages-item"><a lang="zh" href="/zh">中文</a></li></ul><ul class="Search"><li><div class="searchbox" ng-app="icannApp"><form ng-controller="SearchBarCtrl"><label class="hidden" for="search_text">Search ICANN.org</label><input type="search" name="search_text" id="search_text" value="" placeholder="Search ICANN.org" class="SearchBox-textField" ng-model="params.searchText" /><input type="submit" name="commit" value="&#xf002;" class="SearchBox-submit" ng-click="doSearch()" /></form></div></li></ul></nav><nav class="ActionsBar-secondary"><ul class="Actions"><li><a href="/users/sign_in">Log In</a></li><li><a href="/users/sign_up">Sign Up</a></li></ul></nav></div></div><div class="MainHeader-navigation" external-links=""><a class="MainHeader-logo" href="/"><img src="/assets/icann_logo-52672386035a35504af59606040687c8.png" alt="Icann logo" /></a><div class="menu-button"><span class="touch-button mobile-menu"><i class="navicon fa fa-bars fa-lg"></i></span></div><nav role="navigation"><div class="nav-item"><a class="nav-item-link" href="/get-started">Get Started</a><div class="nav-dropdown"><a href="/resources/pages/beginners-guides-2012-03-06-en">Beginner&#39;s Guide</a><a href="/en/about/participate/newcomers">Newcomers Program</a><a href="/en/about/participate/fellowships">Fellowship Program</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/news">News &amp; Media</a><div class="nav-dropdown"><a href="/news/announcements">Announcements</a><a href="/news/blog">Blog</a><a href="/news/multimedia">Multimedia</a><a href="/en/news/press">For Journalists</a><a href="/resources/pages/global-newsletter">Global Newsletters</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/policy">Policy</a><div class="nav-dropdown policy"><a href="/policy#what_is_policy">ICANN Policy</a><a href="/policy#how_is_policy_developed">Develop Policy</a><a href="/policy/implementation">Implement Policy</a><a href="/policy#updates">Policy Update</a><a href="/policy#participate">Participate</a><a href="/policy#staff">Team</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/public-comments">Public Comment</a><div class="nav-dropdown"><a href="/public-comments#open-public">Open</a><a href="/public-comments#closed-public">Recently Closed</a><a href="/resources/pages/upcoming-2012-02-25-en">Upcoming</a><a href="/public-comments/archive">Archive</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/resources">Resources</a><div class="nav-dropdown"><a href="/resources/pages/board-of-directors-2014-03-19-en">Board</a><a href="/resources/pages/accountability-2012-02-25-en">Accountability &amp; Transparency</a><a href="/en/resources/registrars">Registrars</a><a href="/en/resources/registries">Registries</a><a href="/en/resources/compliance">Contractual Compliance</a><a href="/resources/pages/help-2012-02-03-en">Help</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link active" href="/community">Community</a><div class="nav-dropdown"><a href="/community#groups">Groups</a><a class="active" href="/community/explore">Explore Profiles</a><a href="https://features.icann.org/calendar">Calendar</a><a href="/community/demographics">Demographics</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link stewardship" href="/stewardship-accountability">IANA Stewardship<br />&amp; Accountability          </a><div class="nav-dropdown"><a href="/iana-transition-fact-sheet">Fact Sheet</a><a href="/stewardship">IANA Stewardship Transition</a><a href="https://community.icann.org/display/acctcrosscomm/WS1+-+Enhancing+ICANN+Accountability">Enhancing ICANN Accountability</a><a href="/stewardship-implementation">Implementation</a><a href="/csc">Customer Standing Committee</a><a href="/rzerc">Root Zone Evolution Review Committee</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div></nav></div></header><main id="main-content"><section class="UnderlinedSection exploreProfiles"><h1>Explore profiles</h1><div class="l-container js-floatableContainer l-rail js-floatable profile-search" data-float-stop="1072"><div class="SearchBox--Container"><form class="SearchBox" id="new_profile_search" action="/community/explore" accept-charset="UTF-8" data-remote="true" method="get"><input name="utf8" type="hidden" value="&#x2713;" /><input placeholder="Explore" class="SearchBox-textField" type="search" name="profile_search[search_text]" id="profile_search_search_text" /><input type="submit" name="commit" value="" class="SearchBox-submit" id="Search-submit" /><a class="reset_link" href="/community/explore">Reset</a><div class="SearchBox-filters"><li><input class="input-checkbox" type="checkbox" value="community_badge" name="profile_search[badge_filters][]" id="profile_search_badge_filters_community_badge" /><label class="input-helper input-helper--checkbox" for="profile_search_badge_filters_community_badge">Community</label></li><li><input class="input-checkbox" type="checkbox" value="staff_badge" checked="checked" name="profile_search[badge_filters][]" id="profile_search_badge_filters_staff_badge" /><label class="input-helper input-helper--checkbox" for="profile_search_badge_filters_staff_badge">Staff</label></li><li><input class="input-checkbox" type="checkbox" value="board_badge" name="profile_search[badge_filters][]" id="profile_search_badge_filters_board_badge" /><label class="input-helper input-helper--checkbox" for="profile_search_badge_filters_board_badge">Board</label></li><input type="hidden" name="profile_search[badge_filters][]" value="" /><li><label for="profile_search_country_filters">Country</label></li><input name="profile_search[country_filters][]" type="hidden" value="" /><select class="explore_filter" multiple="multiple" placeholder="Select Country" name="profile_search[country_filters][]" id="profile_search_country_filters"><option value="">not specified</option>
+<option value="AF">Afghanistan</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="AS">American Samoa</option>
+<option value="AD">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AI">Anguilla</option>
+<option value="AQ">Antarctica</option>
+<option value="AG">Antigua and Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AW">Aruba</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BS">Bahamas</option>
+<option value="BH">Bahrain</option>
+<option value="BD">Bangladesh</option>
+<option value="BB">Barbados</option>
+<option value="BY">Belarus</option>
+<option value="BE">Belgium</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BM">Bermuda</option>
+<option value="BT">Bhutan</option>
+<option value="BO">Bolivia</option>
+<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+<option value="BA">Bosnia and Herzegovina</option>
+<option value="BW">Botswana</option>
+<option value="BV">Bouvet Island</option>
+<option value="BR">Brazil</option>
+<option value="IO">British Indian Ocean Territory</option>
+<option value="VG">British Virgin Islands</option>
+<option value="BN">Brunei</option>
+<option value="BG">Bulgaria</option>
+<option value="BF">Burkina Faso</option>
+<option value="BI">Burundi</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CV">Cape Verde</option>
+<option value="KY">Cayman Islands</option>
+<option value="CF">Central African Republic</option>
+<option value="TD">Chad</option>
+<option value="CL">Chile</option>
+<option value="CN">China</option>
+<option value="CX">Christmas Island</option>
+<option value="CC">Cocos (Keeling) Islands</option>
+<option value="CO">Colombia</option>
+<option value="KM">Comoros</option>
+<option value="CG">Congo</option>
+<option value="CD">Congo (Dem. Rep.)</option>
+<option value="CK">Cook Islands</option>
+<option value="CR">Costa Rica</option>
+<option value="HR">Croatia</option>
+<option value="CU">Cuba</option>
+<option value="CW">Curaçao</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Republic</option>
+<option value="CI">Côte D&#39;Ivoire</option>
+<option value="DK">Denmark</option>
+<option value="DJ">Djibouti</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="TL">East Timor</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="EE">Estonia</option>
+<option value="ET">Ethiopia</option>
+<option value="FK">Falkland Islands</option>
+<option value="FO">Faroe Islands</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="GF">French Guiana</option>
+<option value="PF">French Polynesia</option>
+<option value="TF">French Southern Territories</option>
+<option value="GA">Gabon</option>
+<option value="GM">Gambia</option>
+<option value="GE">Georgia</option>
+<option value="DE">Germany</option>
+<option value="GH">Ghana</option>
+<option value="GI">Gibraltar</option>
+<option value="GR">Greece</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GP">Guadeloupe</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GG">Guernsey and Alderney</option>
+<option value="GN">Guinea</option>
+<option value="GW">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HT">Haiti</option>
+<option value="HM">Heard and McDonald Islands</option>
+<option value="HN">Honduras</option>
+<option value="HK">Hong Kong</option>
+<option value="HU">Hungary</option>
+<option value="IS">Iceland</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IR">Iran</option>
+<option value="IQ">Iraq</option>
+<option value="IE">Ireland</option>
+<option value="IM">Isle of Man</option>
+<option value="IL">Israel</option>
+<option value="IT">Italy</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JE">Jersey</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KI">Kiribati</option>
+<option value="KP">Korea (North)</option>
+<option value="KR">Korea (South)</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Laos</option>
+<option value="LV">Latvia</option>
+<option value="LB">Lebanon</option>
+<option value="LS">Lesotho</option>
+<option value="LR">Liberia</option>
+<option value="LY">Libya</option>
+<option value="LI">Liechtenstein</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MO">Macao</option>
+<option value="MK">Macedonia</option>
+<option value="MG">Madagascar</option>
+<option value="MW">Malawi</option>
+<option value="MY">Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MT">Malta</option>
+<option value="MH">Marshall Islands</option>
+<option value="MQ">Martinique</option>
+<option value="MR">Mauritania</option>
+<option value="MU">Mauritius</option>
+<option value="YT">Mayotte</option>
+<option value="MX">Mexico</option>
+<option value="FM">Micronesia</option>
+<option value="MD">Moldova</option>
+<option value="MC">Monaco</option>
+<option value="MN">Mongolia</option>
+<option value="ME">Montenegro</option>
+<option value="MS">Montserrat</option>
+<option value="MA">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="MM">Myanmar</option>
+<option value="NA">Namibia</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="NL">Netherlands</option>
+<option value="AN">Netherlands Antilles</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand</option>
+<option value="NI">Nicaragua</option>
+<option value="NE">Niger</option>
+<option value="NG">Nigeria</option>
+<option value="NU">Niue</option>
+<option value="NF">Norfolk Island</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="NO">Norway</option>
+<option value="OM">Oman</option>
+<option value="PK">Pakistan</option>
+<option value="PW">Palau</option>
+<option value="PS">Palestine</option>
+<option value="PA">Panama</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PN">Pitcairn</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="PR">Puerto Rico</option>
+<option value="QA">Qatar</option>
+<option value="RO">Romania</option>
+<option value="RU">Russian Federation</option>
+<option value="RW">Rwanda</option>
+<option value="RE">Réunion</option>
+<option value="BL">Saint Barthélemy</option>
+<option value="SH">Saint Helena</option>
+<option value="KN">Saint Kitts and Nevis</option>
+<option value="LC">Saint Lucia</option>
+<option value="MF">Saint Martin</option>
+<option value="PM">Saint Pierre and Miquelon</option>
+<option value="VC">Saint Vincent and the Grenadines</option>
+<option value="WS">Samoa</option>
+<option value="SM">San Marino</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="RS">Serbia</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SX">Sint Maarten</option>
+<option value="SK">Slovakia</option>
+<option value="SI">Slovenia</option>
+<option value="SB">Solomon Islands</option>
+<option value="SO">Somalia</option>
+<option value="ZA">South Africa</option>
+<option value="GS">South Georgia and the South Sandwich Islands</option>
+<option value="SS">South Sudan</option>
+<option value="ES">Spain</option>
+<option value="LK">Sri Lanka</option>
+<option value="SD">Sudan</option>
+<option value="SR">Suriname</option>
+<option value="SJ">Svalbard and Jan Mayen</option>
+<option value="SZ">Swaziland</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syria</option>
+<option value="ST">São Tomé and Príncipe</option>
+<option value="TW">Taiwan</option>
+<option value="TJ">Tajikistan</option>
+<option value="TZ">Tanzania</option>
+<option value="TH">Thailand</option>
+<option value="TG">Togo</option>
+<option value="TK">Tokelau</option>
+<option value="TO">Tonga</option>
+<option value="TT">Trinidad and Tobago</option>
+<option value="TN">Tunisia</option>
+<option value="TR">Turkey</option>
+<option value="TM">Turkmenistan</option>
+<option value="TC">Turks and Caicos Islands</option>
+<option value="TV">Tuvalu</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="AE">United Arab Emirates</option>
+<option value="GB">United Kingdom</option>
+<option value="UM">United States Minor Outlying Islands</option>
+<option value="US">United States of America</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="VA">Vatican City</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Vietnam</option>
+<option value="VI">Virgin Islands of the United States</option>
+<option value="WF">Wallis and Futuna</option>
+<option value="EH">Western Sahara</option>
+<option value="YE">Yemen</option>
+<option value="ZM">Zambia</option>
+<option value="ZW">Zimbabwe</option>
+<option value="AX">Åland Islands</option></select><li><label for="profile_search_language_filters">Language</label></li><input name="profile_search[language_filters][]" type="hidden" value="" /><select class="explore_filter" multiple="multiple" placeholder="Select Language" name="profile_search[language_filters][]" id="profile_search_language_filters"><option value="af">Afrikaans</option>
+<option value="sq">Albanian</option>
+<option value="ar">Arabic</option>
+<option value="hy">Armenian</option>
+<option value="eu">Basque</option>
+<option value="bn">Bengali</option>
+<option value="bg">Bulgarian</option>
+<option value="ca">Catalan</option>
+<option value="zh">Chinese</option>
+<option value="hr">Croatian</option>
+<option value="cs">Czech</option>
+<option value="da">Danish</option>
+<option value="nl">Dutch</option>
+<option value="en">English</option>
+<option value="et">Estonian</option>
+<option value="fi">Finnish</option>
+<option value="fr">French</option>
+<option value="ka">Georgian</option>
+<option value="de">German</option>
+<option value="el">Greek</option>
+<option value="gu">Gujarati</option>
+<option value="he">Hebrew</option>
+<option value="hi">Hindi</option>
+<option value="is">Icelandic</option>
+<option value="id">Indonesian</option>
+<option value="ga">Irish</option>
+<option value="it">Italian</option>
+<option value="ja">Japanese</option>
+<option value="ko">Korean</option>
+<option value="la">Latin</option>
+<option value="lv">Latvian</option>
+<option value="lt">Lithuanian</option>
+<option value="mk">Macedonian</option>
+<option value="ms">Malay</option>
+<option value="ml">Malayalam</option>
+<option value="mr">Marathi</option>
+<option value="ne">Nepali</option>
+<option value="no">Norwegian</option>
+<option value="pa">Panjabi</option>
+<option value="fa">Persian</option>
+<option value="pl">Polish</option>
+<option value="pt">Portuguese</option>
+<option value="ro">Romanian</option>
+<option value="ru">Russian</option>
+<option value="sr">Serbian</option>
+<option value="sk">Slovak</option>
+<option value="sl">Slovenian</option>
+<option value="es">Spanish</option>
+<option value="sw">Swahili</option>
+<option value="sv">Swedish</option>
+<option value="ta">Tamil</option>
+<option value="te">Telugu</option>
+<option value="th">Thai</option>
+<option value="bo">Tibetan</option>
+<option value="tr">Turkish</option>
+<option value="uk">Ukrainian</option>
+<option value="ur">Urdu</option>
+<option value="uz">Uzbek</option>
+<option value="vi">Vietnamese</option>
+<option value="cy">Welsh</option>
+<option value="xh">Xhosa</option></select><li><label for="profile_search_interest_filters">Interests</label></li><input name="profile_search[interest_filters][]" type="hidden" value="" /><select class="explore_filter" multiple="multiple" placeholder="Select Interests" name="profile_search[interest_filters][]" id="profile_search_interest_filters"><option value="Government">Government</option>
+<option value="Technology">Technology</option>
+<option value="DNS Marketplace">DNS Marketplace</option>
+<option value="Civil Society">Civil Society</option>
+<option value="Developing World">Developing World</option></select><li><label for="profile_search_membership_filters">Membership</label></li><input name="profile_search[membership_filters][]" type="hidden" value="" /><select class="explore_filter" multiple="multiple" placeholder="Select Memberships" name="profile_search[membership_filters][]" id="profile_search_membership_filters"><option value="ASO">ASO</option>
+<option value="GNSO">GNSO</option>
+<option value="ccNSO">ccNSO</option>
+<option value="SSAC">SSAC</option>
+<option value="RSSAC">RSSAC</option>
+<option value="TLG">TLG</option>
+<option value="IETF">IETF</option>
+<option value="GAC">GAC</option>
+<option value="ALAC">ALAC</option>
+<option value="SSR">SSR</option></select><li><label for="profile_search_profile_filter">Recent Profiles</label></li><select class="explore_filter single_select" placeholder="Select Month" name="profile_search[profile_filter]" id="profile_search_profile_filter"><option value=""></option>
+<option value="1">1 month</option>
+<option value="2">2 months</option>
+<option value="3">3 months</option>
+<option value="4">4 months</option>
+<option value="5">5 months</option></select><h2>Level of experience</h2><li><label for="profile_search_icann_experience_filter">With ICANN</label></li><select class="explore_filter single_select" placeholder="Select Experience" name="profile_search[icann_experience_filter]" id="profile_search_icann_experience_filter"><option value=""></option>
+<option value="0">No Experience</option>
+<option value="1">Little Experience</option>
+<option value="2">Some Experience</option>
+<option value="3">Very Experienced</option>
+<option value="4">Expert</option></select><li><label for="profile_search_ig_experience_filter">With Internet Governance</label></li><select class="explore_filter single_select" placeholder="Select Experience" name="profile_search[ig_experience_filter]" id="profile_search_ig_experience_filter"><option value=""></option>
+<option value="0">No Experience</option>
+<option value="1">Little Experience</option>
+<option value="2">Some Experience</option>
+<option value="3">Very Experienced</option>
+<option value="4">Expert</option></select></div></form></div></div><div class="profiles"><div id="profile-list">
+  <div class="pagination ">
+    <ul>
+    
+    
+        <li class="page active">
+  <a data-remote="true" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">1</a>
+</li>
+
+        <li class="page">
+  <a rel="next" data-remote="true" href="/community/explore?page=2&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">2</a>
+</li>
+
+        <li class="page">
+  <a data-remote="true" href="/community/explore?page=3&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">3</a>
+</li>
+
+        <li class="page">
+  <a data-remote="true" href="/community/explore?page=4&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">4</a>
+</li>
+
+        <li class="page">
+  <a data-remote="true" href="/community/explore?page=5&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">5</a>
+</li>
+
+        <li class="page gap disabled"><a href="#" onclick="return false;">&hellip;</a></li>
+    <li class="next_page">
+  <a rel="next" data-remote="true" href="/community/explore?page=2&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Next &rsaquo;</a>
+</li>
+
+    <li class="last next">
+  <a data-remote="true" href="/community/explore?page=8&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Last &raquo;</a>
+</li>
+
+    </ul>
+  </div>
+<div class="profile-box-container js-floatableAnchor"><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Corinna Ace" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/corinna-ace">Corinna Ace</a></p><p>United States</p><p>Associate Product Manager</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Charmayne Adams" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/charmayne-adams">Charmayne Adams</a></p><p></p><p>Sr. Payroll Administrator</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Terri Agnew" src="https://www.filepicker.io/api/file/yiWS87acTHCmjC3HfUaY/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/terri-agnew">Terri Agnew</a></p><p>United States</p><p>Secretariat Services Coordinator, GNSO &amp; At-Large</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Eleeza Agopian" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/eleeza-agopian">Eleeza Agopian</a></p><p>United States</p><p>Manager, Operations and Policy Research</p><p class="interests"><a class="" href="/community/explore?search_text=Civil+Society">Civil Society</a><a class="" href="/community/explore?search_text=DNS+Marketplace">DNS Marketplace</a><a class="" href="/community/explore?search_text=Developing+World">Developing World</a><a class="" href="/community/explore?search_text=Government">Government</a><a class="" href="/community/explore?search_text=Technology">Technology</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Yan Agranonik" src="https://www.filepicker.io/api/file/TywkU6h8T72qicrvmvzW/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/yan-agranonik">Yan Agranonik</a></p><p>United States</p><p>Sr. Manager, Contractual Compliance Risk and Audit</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Brian Aitchison " src="https://www.filepicker.io/api/file/pd6kOBJCSnGN0wJaI1FW/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/brian-aitchison">Brian Aitchison </a></p><p>United States</p><p>Lead Researcher, GDD, Operations and Policy Research</p><p class="interests"><a class="" href="/community/explore?search_text=Civil+Society">Civil Society</a><a class="" href="/community/explore?search_text=DNS+Marketplace">DNS Marketplace</a><a class="" href="/community/explore?search_text=Developing+World">Developing World</a><a class="" href="/community/explore?search_text=Government">Government</a><a class="" href="/community/explore?search_text=Technology">Technology</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Seda Akbulut" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/seda-akbulut">Seda Akbulut</a></p><p>Turkey</p><p>Lead Global Support Analyst</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Adiel Akplogan" src="https://www.filepicker.io/api/file/LgsxWz8R8S3I7gGh1ND5/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/adiel-akplogan-d4e938a3-41a2-43c8-8fd2-e932ffe209e7">Adiel Akplogan</a></p><p>Canada</p><p>VP Technical Engagement</p><p class="interests"><a class="" href="/community/explore?search_text=DNS+Marketplace">DNS Marketplace</a><a class="" href="/community/explore?search_text=Developing+World">Developing World</a><a class="" href="/community/explore?search_text=Technology">Technology</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Sawsan Aldawodi" src="https://www.filepicker.io/api/file/yok9MwWpQdaAe0ztoYir/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/sawsan-aldawodi">Sawsan Aldawodi</a></p><p>United States</p><p>Language Expert - Head Interpreter</p><p class="interests"><a class="" href="/community/explore?search_text=Civil+Society">Civil Society</a><a class="" href="/community/explore?search_text=Developing+World">Developing World</a><a class="" href="/community/explore?search_text=Government">Government</a><a class="" href="/community/explore?search_text=Technology">Technology</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Ali Alkhudairi" src="https://www.filepicker.io/api/file/GN6mXPrJRuuNY9946qwv/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/ali-alkhudairi">Ali Alkhudairi</a></p><p></p><p>Sr. Salesforce Administrator</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Steve Allison" src="https://www.filepicker.io/api/file/6fCHeFtJQviMMH8DrBSV/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/stephen-allison">Steve Allison</a></p><p>United States</p><p>Sr. Product Manager</p><p class="interests"><a class="" href="/community/explore?search_text=Civil+Society">Civil Society</a><a class="" href="/community/explore?search_text=DNS+Marketplace">DNS Marketplace</a><a class="" href="/community/explore?search_text=Developing+World">Developing World</a><a class="" href="/community/explore?search_text=Government">Government</a><a class="" href="/community/explore?search_text=Technology">Technology</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Kimberly Alston" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/kimberly-alston">Kimberly Alston</a></p><p>United States</p><p>Operations Specialist III</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Eduardo Alvarez" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/eduardo-alvarez">Eduardo Alvarez</a></p><p>United States</p><p>Technical Services Sr. Manager</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Pablo Alvarez" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/pablo-alvarez">Pablo Alvarez</a></p><p></p><p>Senior Systems Engineer</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Shaunte Anderson" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/shaunte-anderson">Shaunte Anderson</a></p><p>United States</p><p>Information Security Audit Associate</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Elizabeth Andrews" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/elizabeth-andrews">Elizabeth Andrews</a></p><p>United States</p><p>Academic Specialist and Sr Research Analyst</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Roy Arends" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/roy-arends">Roy Arends</a></p><p>United Kingdom</p><p>Principal Research Scientist</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Francisco Arias" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/francisco-arias-correa">Francisco Arias</a></p><p></p><p>Sr. Director, GDD Technical Services</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Akram Atallah" src="https://www.filepicker.io/api/file/jdFy3gHjQy2V9VX6AFOR/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/akram-atallah">Akram Atallah</a></p><p>United States</p><p>President, Global Domains Division</p><p class="interests"><a class="" href="/community/explore?search_text=Civil+Society">Civil Society</a><a class="" href="/community/explore?search_text=DNS+Marketplace">DNS Marketplace</a><a class="" href="/community/explore?search_text=Developing+World">Developing World</a><a class="" href="/community/explore?search_text=Government">Government</a><a class="" href="/community/explore?search_text=Technology">Technology</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Yaovi Atohoun" src="https://www.filepicker.io/api/file/TbjzwGMvRkGn0CotuAGD/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/yaovi-atohoun">Yaovi Atohoun</a></p><p></p><p>Stakeholder Engagement &amp; Ops Mngr - Africa</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Fiona Aw" src="https://www.filepicker.io/api/file/HIb9SbNPQviGzxDXerZT/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/fiona-aw">Fiona Aw</a></p><p>Singapore</p><p>Global Communications Coordinator</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Amanda Baber" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/amanda-baber">Amanda Baber</a></p><p>United States</p><p>IANA Lead Specialist</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Emily Barabas" src="https://www.filepicker.io/api/file/JUqYK9NsSU697Ig2ON5o/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/emily-barabas">Emily Barabas</a></p><p>Netherlands</p><p>Policy Specialist </p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Christopher Bare" src="https://www.filepicker.io/api/file/BGmOKzMOTiJMDZtAzU0A/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/christopher-bare">Christopher Bare</a></p><p>United States</p><p>Sr. Manager, GDD Operations</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Connor Barthold" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/connor-barthold">Connor Barthold</a></p><p></p><p>Information Security Engineer</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Ted Bartles" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/ted-bartles">Ted Bartles</a></p><p>United States</p><p>Meeting Production Operations Sr. Manager</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Fahd Batayneh" src="http://m.c.lnkd.licdn.com/mpr/mprx/0_vJv4JCrHDLDK7joCvxQwJ3CoD_RrSYVCBgTbJ3A9-Qf3tVDGJ05qBT54iDUaaMRmNVB69QftTacG" /><p><a class="u-text-l" href="/profiles/fahd-batayneh">Fahd Batayneh</a></p><p>Jordan</p><p>Stakeholder Engagement Manager - Middle East</p><p class="interests"><a class="" href="/community/explore?search_text=DNS+Marketplace">DNS Marketplace</a><a class="" href="/community/explore?search_text=Developing+World">Developing World</a><a class="" href="/community/explore?search_text=Technology">Technology</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Joshua Baulch" src="https://www.filepicker.io/api/file/nMgq4wfeSeij6gUMMnrl/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/joshua-baulch">Joshua Baulch</a></p><p>United States</p><p>Sr. Manager, Meeting Planning Operations</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Andrea Beccalli" src="/assets/default_avatar.png" /><p><a class="u-text-l" href="/profiles/andrea-beccalli">Andrea Beccalli</a></p><p></p><p>Stakeholder Engagement Sr. Manager - Europe</p><p class="interests"><a class="" href="/community/explore?search_text=Civil+Society">Civil Society</a><a class="" href="/community/explore?search_text=DNS+Marketplace">DNS Marketplace</a><a class="" href="/community/explore?search_text=Developing+World">Developing World</a><a class="" href="/community/explore?search_text=Government">Government</a><a class="" href="/community/explore?search_text=Technology">Technology</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Laura Bengford" src="https://www.filepicker.io/api/file/dGhDbr4dT68rklE08hx3/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/laura-bengford-7054b270-f2ab-4d9d-8f10-795328d8d828">Laura Bengford</a></p><p>United States</p><p>Director, Product Managment for Community Services</p><p class="interests"><a class="" href="/community/explore?search_text=Developing+World">Developing World</a><a class="" href="/community/explore?search_text=Technology">Technology</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Susanna Bennett" src="https://www.filepicker.io/api/file/OTUynYlGTTmuyzjKae1z/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/susanna-bennett">Susanna Bennett</a></p><p></p><p>Chief Operating Officer</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Fabien Betremieux" src="https://www.filepicker.io/api/file/bjOBcyUJSVaYZ5oXvg62/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/fabien-betremieux-088e5ecf-79af-4a74-bb55-fdcfe36af747">Fabien Betremieux</a></p><p>France</p><p>GAC Relations Advisor</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Geoff Bickers" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/geoff-bickers">Geoff Bickers</a></p><p></p><p>Director Security</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Amy Bivins" src="http://m.c.lnkd.licdn.com/mpr/mprx/0_z4FpDFTdjOa-i9zwvM9_DkT4xYEKf9zwBJ1_Dk-Z8UY8rtGIMOcr_XQnlro7uAqbqRLGGi8OMy93" /><p><a class="u-text-l" href="/profiles/amy-bivins">Amy Bivins</a></p><p>United States</p><p>Registrar Policy Services Manager</p><p class="interests"><a class="" href="/community/explore?search_text=DNS+Marketplace">DNS Marketplace</a><a class="" href="/community/explore?search_text=Developing+World">Developing World</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for John Bond" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/john-bond">John Bond</a></p><p></p><p>DNS Operations Manager</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Jonathan Boswell" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/jonathan-boswell">Jonathan Boswell</a></p><p></p><p>Lead Technical Writer</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Bart Boswinkel" src="https://www.filepicker.io/api/file/y0zR5R5sQ5OR7bFBy4dX/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/bart-boswinkel">Bart Boswinkel</a></p><p></p><p>Sr Director, ccNSO Policy Development Support</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Joke Braeken" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/joke-braeken">Joke Braeken</a></p><p>Germany</p><p>Policy Advisor</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a><a class="badge community" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=community_badge">Community</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Mike Brennan" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/mike-brennan">Mike Brennan</a></p><p>United States</p><p>Meetings Technical Services Specialist I</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Brenda Brewer" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/brenda-brewer">Brenda Brewer</a></p><p>United States</p><p>Projects and Operations Assistant</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Michelle Bright" src="https://www.filepicker.io/api/file/2VSlBhFRGfLDUMjH0yuw/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/michelle-bright">Michelle Bright</a></p><p></p><p>Board Operations Content Manager</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Duncan Burns" src="https://www.filepicker.io/api/file/M3c0QxwsSgezrLa1jTCN/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/duncan-burns">Duncan Burns</a></p><p>United States</p><p>SVP, Global Communications</p><p class="interests"><a class="" href="/community/explore?search_text=Civil+Society">Civil Society</a><a class="" href="/community/explore?search_text=DNS+Marketplace">DNS Marketplace</a><a class="" href="/community/explore?search_text=Developing+World">Developing World</a><a class="" href="/community/explore?search_text=Government">Government</a><a class="" href="/community/explore?search_text=Technology">Technology</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Desiree Cabrera" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/desiree-cabrera">Desiree Cabrera</a></p><p>United States</p><p>Executive Assistant</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Jeanette Caldera" src="https://www.filepicker.io/api/file/1UnzjlXsQv6Oj14FFSV9/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/jeanette-caldera-254f5a7d-a6f4-44d2-ae4f-61c684f3c2cb">Jeanette Caldera</a></p><p>United States</p><p>HR Development &amp; Learning Manager</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Xavier Calvez" src="https://www.filepicker.io/api/file/ncx52OURga3elLbDDzTv/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/xavier-calvez">Xavier Calvez</a></p><p>United States</p><p>CFO</p><p class="interests"><a class="" href="/community/explore?search_text=DNS+Marketplace">DNS Marketplace</a></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Dongmei Cao" src="https://www.filepicker.io/api/file/4ICsaPv2Q0ubbJJpsFbY/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/dongmei-cao">Dongmei Cao</a></p><p></p><p>Sr Engineering Team Lead</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Gwen Carlson" src="/assets/default_avatar-1013a26012888a22e8c0f7ae13b87245.png" /><p><a class="u-text-l" href="/profiles/gwen-carlson">Gwen Carlson</a></p><p>United States</p><p>Senior Director, GDD Communications</p><p class="interests"></p></div><div class="profile-box"><div class="badges"><a class="badge staff" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Staff</a></div><img class="img-circle-80 u-marginVl u-border-white u-centerBlock img-circle-80" alt="Profile image for Kimberly Carlson" src="https://www.filepicker.io/api/file/nEgvHvjIQveOggp3Ccto/convert?w=100&amp;h=100&amp;fit=crop&amp;cache=true" /><p><a class="u-text-l" href="/profiles/kimberly-carlson">Kimberly Carlson</a></p><p>United States</p><p>Coordinator, SO/AC Support </p><p class="interests"></p></div></div>
+  <div class="pagination ">
+    <ul>
+    
+    
+        <li class="page active">
+  <a data-remote="true" href="/community/explore?profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">1</a>
+</li>
+
+        <li class="page">
+  <a rel="next" data-remote="true" href="/community/explore?page=2&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">2</a>
+</li>
+
+        <li class="page">
+  <a data-remote="true" href="/community/explore?page=3&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">3</a>
+</li>
+
+        <li class="page">
+  <a data-remote="true" href="/community/explore?page=4&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">4</a>
+</li>
+
+        <li class="page">
+  <a data-remote="true" href="/community/explore?page=5&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">5</a>
+</li>
+
+        <li class="page gap disabled"><a href="#" onclick="return false;">&hellip;</a></li>
+    <li class="next_page">
+  <a rel="next" data-remote="true" href="/community/explore?page=2&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Next &rsaquo;</a>
+</li>
+
+    <li class="last next">
+  <a data-remote="true" href="/community/explore?page=8&amp;profile_search%5Bbadge_filters%5D%5B%5D=staff_badge">Last &raquo;</a>
+</li>
+
+    </ul>
+  </div>
+</div></div></section></main><footer class="MainFooter" external_links="" id="main_footer"><section class="FooterDisclaimer" style="display: block">ICANN is not responsible for profile content or verification of user details.</section><section class="FooterSocial"><ul><li><a href="http://www.youtube.com/icannnews"><i class="fa fa-youtube"></i>You Tube</a></li><li><a href="https://www.twitter.com/icann"><i class="fa fa-twitter"></i>Twitter</a></li><li><a href="https://www.linkedin.com/company/icann"><i class="fa fa-linkedin"></i>LinkedIn</a></li><li><a href="http://www.flickr.com/photos/icann"><i class="fa fa-flickr"></i>Flickr</a></li><li><a href="http://www.facebook.com/icannorg"><i class="fa fa-facebook"></i>Facebook</a></li><li><a href="/en/news/rss"><i class="fa fa-rss"></i>RSS Feeds</a></li><li><a href="https://community.icann.org"><i class="fa fa-user"></i>Community Wiki</a></li><li><a href="/news/blog"><i class="fa fa-pencil"></i>ICANN Blog </a></li></ul></section><div class="MainFooter-content"><nav class="FooterMenu"><div class="FooterMenu-item"><h3 class="FooterMenu-title">Who We Are</h3><ul class="FooterSubmenu"><li><a href="/get-started">Get Started</a></li><li><a href="/en/about/learning">Learning</a></li><li><a href="/en/about/participate">Participate</a></li><li><a href="https://www.icann.org/resources/pages/groups-2012-02-06-en">Groups</a></li><li><a href="/resources/pages/board-of-directors-2014-03-19-en">Board</a></li><li><a href="/presidents-corner">President&#39;s Corner</a></li><li><a href="/en/about/staff">Staff</a></li><li><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&amp;cws=37">Careers</a></li><li><a href="/en/news/newsletter">Newsletter</a></li><li><a href="https://www.icann.org/development-and-public-responsibility">Development and Public Responsibility</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Contact Us</h3><ul class="FooterSubmenu"><li><a href="https://forms.icann.org/en/contact">Offices</a></li><li><a href="/resources/pages/customer-support-2015-06-22-en">Global Support</a></li><li><a href="/about/staff/security">Security Team</a></li><li><a href="/en/contact/pgp-keys">PGP Keys</a></li><li><a href="/contact/certificate-authority">Certificate Authority</a></li><li><a href="/resources/pages/contact-f2-2012-02-25-en">Registry Liaison</a></li><li><a href="https://forms.icann.org/en/about/aoc-review/contact">Specific Reviews</a></li><li><a href="http://forms.icann.org/en/groups/reviews/contact">Organizational Reviews</a></li><li><a href="http://forms.icann.org/en/contact/speakers">Request a Speaker</a></li><li><a href="/en/news/press">For Journalists</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Accountability &amp; Transparency</h3><ul class="FooterSubmenu"><li><a href="/en/news/in-focus/accountability/mechanisms">Accountability Mechanisms</a></li><li><a href="/resources/pages/irp-2012-02-25-en">Independent Review Process</a></li><li><a href="/groups/board/governance/reconsideration">Request for Reconsideration</a></li><li><a href="/help/ombudsman">Ombudsman</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Governance</h3><ul class="FooterSubmenu"><li><a href="/en/about/governance">Documents</a></li><li><a href="/en/about/agreements">Agreements</a></li><li><a href="/resources/reviews/aoc">Specific Reviews</a></li><li><a href="/about/annual-report">Annual Report</a></li><li><a href="/en/about/financials">Financials</a></li><li><a href="/en/about/transparency">Document Disclosure</a></li><li><a href="/en/about/planning">Planning</a></li><li><a href="/progress">KPI Dashboard</a></li><li><a href="/en/news/rfps">RFPs</a></li><li><a href="/en/news/litigation">Litigation</a></li><li><a href="/en/news/correspondence">Correspondence</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Help</h3><ul class="FooterSubmenu"><li><a href="/en/help/dispute-resolution">Dispute Resolution</a></li><li><a href="/en/help/dndr">Domain Name Dispute Resolution</a></li><li><a href="/en/help/name-collision">Name Collision</a></li><li><a href="/en/news/announcements/announcement-06mar07-en.htm">Registrar Problems</a></li><li><a href="http://whois.icann.org/">WHOIS</a></li></ul></div></nav></div><section class="copyright"><p><span>© 2016 Internet Corporation For Assigned Names and Numbers.</span><span><a href="/en/help/privacy">Privacy Policy</a></span><span><a href="/en/help/tos">Terms of Service</a></span><span><a href="/en/help/privacy-cookie-policy">Cookie Policy</a></span></p></section></footer><script src="/assets/application-94c6aceae2068177e83af77b024547c1.js"></script><script type="text/javascript">if (self == top) {
+ var theBody = document.getElementsByTagName('body')[0];
+ theBody.style.display = "block"
+} else {
+ top.location = self.location
+} </script><script src="/glossary_terms.js"></script><div class="cookie-notification"><div class="wrapper"><h4>A note about tracking cookies:</h4><p>This site uses cookies to deliver an efficient user experience and to help us see how the site is used. If you would like to read more about the use of cookies, <a href='/en/help/privacy-cookie-policy'>click here</a></p><p class="cookie-notification-notice">This notice is intended to appear only the first time you visit the site on any computer.<span class="js-close-cookie-notification"><i class="close-icon fa fa-times"></i>OK</span></p></div></div><div class="acronym-helper"><div class="wrapper"><div class="acronym-helper-term">Domain Name System</div><div class="acronym-helper-definition">Internationalized Domain Name ,IDN,"IDNs are domain names that include characters used in the local representation of languages that are not written with the twenty-six letters of the basic Latin alphabet ""a-z"". An IDN can contain Latin letters with diacritical marks, as required by many European languages, or may consist of characters from non-Latin scripts such as Arabic or Chinese. Many languages also use other types of digits than the European ""0-9"". The basic Latin alphabet together with the European-Arabic digits are, for the purpose of domain names, termed ""ASCII characters"" (ASCII = American Standard Code for Information Interchange). These are also included in the broader range of ""Unicode characters"" that provides the basis for IDNs. The ""hostname rule"" requires that all domain names of the type under consideration here are stored in the DNS using only the ASCII characters listed above, with the one further addition of the hyphen ""-"". The Unicode form of an IDN therefore requires special encoding before it is entered into the DNS. The following terminology is used when distinguishing between these forms: A domain name consists of a series of ""labels"" (separated by ""dots""). The ASCII form of an IDN label is termed an ""A-label"". All operations defined in the DNS protocol use A-labels exclusively. The Unicode form, which a user expects to be displayed, is termed a ""U-label"". The difference may be illustrated with the Hindi word for ""test"" — परीका — appearing here as a U-label would (in the Devanagari script). A special form of ""ASCII compatible encoding"" (abbreviated ACE) is applied to this to produce the corresponding A-label: xn--11b5bs1di. A domain name that only includes ASCII letters, digits, and hyphens is termed an ""LDH label"". Although the definitions of A-labels and LDH-labels overlap, a name consisting exclusively of LDH labels, such as""icann.org"" is not an IDN."</div></div></div><script type="text/javascript">$(document).ready(function(){
+    $('#new_profile_search').submit();
+    NProgress.start();
+});</script><script type="text/javascript">$('a').on('click', function(event) {
+  el = $(this);
+  var filetypes = /\.(zip|exe|dmg|pdf|csv|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+  href = (typeof(el.attr('href')) != 'undefined' ) ? el.attr('href') :"";
+  var is_same_domain = href.match(document.domain.split('.').reverse()[0]);
+  console.log("clicked a link");
+  if(href.match("www.icann.org") && href.match(filetypes))
+  {
+    ga('send', 'event', 'File', 'download', event.target.href);
+  }
+});</script></body></html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Alert URNs</title>
+  </head>
+  <body>
+    <h1>Alert URNs</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2014-11-24</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-03-25</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="alert-urns.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="alert-urns.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="alert-urns.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#identifiers">Alert URN Identifiers</a>
+      </li>
+      <li>
+        <a href="#providers">Alert URN Providers</a>
+      </li>
+    </ul>
+    <h2><a name="identifiers" id="identifiers"></a>Alert URN Identifiers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="identifiers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-identifiers" class="sortable">
+      <thead>
+        <tr>
+          <th>&lt;alert-category&gt;/&lt;alert-identifier&gt;</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>service</td>
+          <td>Specific telephony service used in this call</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>service:normal</td>
+          <td>Normal ring/ringback rendering (default value)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>service:call-waiting</td>
+          <td>Call waiting was initiated at the other side of the call</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>service:forward</td>
+          <td>Call has been forwarded</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>service:recall:callback</td>
+          <td>Recall due to callback</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>service:recall:hold</td>
+          <td>Recall due to call hold</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>service:recall:transfer</td>
+          <td>Recall due to transfer</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>source</td>
+          <td>Classification of the other party to the call</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>source:unclassified</td>
+          <td>Unclassified ring/ringback rendering (default value)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>source:internal</td>
+          <td>User at the other side of the call is internal to the enterprise or PBX system</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>source:external</td>
+          <td>User at the other side of the call is external to the enterprise or PBX system</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>source:friend</td>
+          <td>User at the other side of the call is a friend</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>source:family</td>
+          <td>User at the other side of the call is a family member</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>priority</td>
+          <td>Priority of the call</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>priority:normal</td>
+          <td>Normal ring/ringback rendering (default value)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>priority:low</td>
+          <td>Low priority call</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>priority:high</td>
+          <td>High priority call</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>duration</td>
+          <td>Duration of alerting signal</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>duration:normal</td>
+          <td>Normal ring/ringback rendering (default value)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>duration:short</td>
+          <td>Shorter than normal</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>duration:long</td>
+          <td>Longer than normal</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>delay</td>
+          <td>Delay of rendering of alerting signal</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>delay:none</td>
+          <td>Immediate alerting (default value)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>delay:yes</td>
+          <td>Delayed alerting</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>locale</td>
+          <td>Location-specific alerting signals</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>locale:default</td>
+          <td>Alerting not location-specific (default value)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+        <tr>
+          <td>locale:country:&lt;ISO 3166-1 country code&gt;</td>
+          <td>Alerting according to the conventions of the specified country</td>
+          <td>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="providers" id="providers"></a>Alert URN Providers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7462">RFC7462</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="providers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-providers" class="sortable">
+      <thead>
+        <tr>
+          <th>&lt;provider&gt;</th>
+          <th>Registrant</th>
+          <th>Contact URI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>example</td>
+          <td>IETF</td>
+          <td>mailto:rai-ads&amp;tools.ietf.org</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

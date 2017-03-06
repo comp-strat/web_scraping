@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>vCard Elements</title>
+  </head>
+  <body>
+    <h1>vCard Elements</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2011-06-10</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-08-02</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>A Standards Track RFC is required for registration of vCard elements that modify vCard elements previously documented in a Standards Track RFC.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="vcard-elements.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="vcard-elements.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="vcard-elements.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#properties">vCard Properties</a>
+      </li>
+      <li>
+        <a href="#parameters">vCard Parameters</a>
+      </li>
+      <li>
+        <a href="#value-data-types">vCard Value Data Types</a>
+      </li>
+      <li>
+        <a href="#property-values">vCard Property Values</a>
+      </li>
+      <li>
+        <a href="#parameter-values">vCard Parameter Values</a>
+      </li>
+    </ul>
+    <h2><a name="properties" id="properties"></a>vCard Properties</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Primary: Simon Perreault; Backups: Cyrus Daboo, Peter Saint-Andre</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="properties.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-properties-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">No namespace specified</td>
+          <td>Expert Review and RFC Required</td>
+        </tr>
+        <tr>
+          <td align="center">Vendor namespace specified</td>
+          <td>First Come First Served</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-properties" class="sortable">
+      <thead>
+        <tr>
+          <th>Namespace</th>
+          <th>Property</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"></td>
+          <td>SOURCE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.1.3</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>KIND</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.1.4</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>XML</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.1.5</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>FN</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.2.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.2.2</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>NICKNAME</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.2.3</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>PHOTO</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.2.4</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>BDAY</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.2.5</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>ANNIVERSARY</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.2.6</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>GENDER</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.2.7</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>ADR</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.3.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>TEL</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>EMAIL</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.2</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>IMPP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.3</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>LANG</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.4</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>TZ</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.5.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>GEO</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.5.2</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>TITLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>ROLE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.2</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>LOGO</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.3</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>ORG</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.4</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>MEMBER</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.5</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>RELATED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>CATEGORIES</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.7.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>NOTE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.7.2</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>PRODID</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.7.3</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>REV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.7.4</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>SOUND</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.7.5</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>UID</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.7.6</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>CLIENTPIDMAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.7.7</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>URL</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.7.8</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>VERSION</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.7.9</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>KEY</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.8.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>FBURL</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.9.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>CALADRURI</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.9.2</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>CALURI</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.9.3</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>BIRTHPLACE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6474">RFC6474</a>], Section 2.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>DEATHPLACE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6474">RFC6474</a>], Section 2.2</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>DEATHDATE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6474">RFC6474</a>], Section 2.3</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>EXPERTISE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 2.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>HOBBY</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 2.2</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>INTEREST</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 2.3</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>ORG-DIRECTORY</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 2.4 [<a href="http://www.rfc-editor.org/errata_search.php?eid=3341">RFC Errata 
+          3341</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="parameters" id="parameters"></a>vCard Parameters</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Primary: Simon Perreault; Backups: Cyrus Daboo, Peter Saint-Andre</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="parameters.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-parameters-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">No namespace specified</td>
+          <td>Expert Review and RFC Required</td>
+        </tr>
+        <tr>
+          <td align="center">Vendor namespace specified</td>
+          <td>First Come First Served</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-parameters" class="sortable">
+      <thead>
+        <tr>
+          <th>Namespace</th>
+          <th>Parameter</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center"></td>
+          <td>LANGUAGE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>VALUE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.2</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>PREF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.3</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>ALTID</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.4</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>PID</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.5</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>TYPE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.6</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>MEDIATYPE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.7</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>CALSCALE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.8</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>SORT-AS</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.9</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>GEO</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.10</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>TZ</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.11</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>INDEX</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.1</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>LEVEL</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.2</td>
+        </tr>
+        <tr>
+          <td align="center"></td>
+          <td>GROUP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7095">RFC7095</a>], Section 8.1</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="value-data-types" id="value-data-types"></a>vCard Value Data Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review and RFC Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Primary: Simon Perreault; Backups: Cyrus Daboo, Peter Saint-Andre</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>A Standards Track RFC is required for registration of new value data types that modify existing properties.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="value-data-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-value-data-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Value Data Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>BOOLEAN</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.4</td>
+        </tr>
+        <tr>
+          <td>DATE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.3.1</td>
+        </tr>
+        <tr>
+          <td>DATE-AND-OR-TIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.3.4</td>
+        </tr>
+        <tr>
+          <td>DATE-TIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.3.3</td>
+        </tr>
+        <tr>
+          <td>FLOAT</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.6</td>
+        </tr>
+        <tr>
+          <td>INTEGER</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.5</td>
+        </tr>
+        <tr>
+          <td>LANGUAGE-TAG</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.8</td>
+        </tr>
+        <tr>
+          <td>TEXT</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.1</td>
+        </tr>
+        <tr>
+          <td>TIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.3.2</td>
+        </tr>
+        <tr>
+          <td>TIMESTAMP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.3.5</td>
+        </tr>
+        <tr>
+          <td>UNKNOWN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7095">RFC7095</a>], Section 8.2</td>
+        </tr>
+        <tr>
+          <td>URI</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.2</td>
+        </tr>
+        <tr>
+          <td>UTC-OFFSET</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 4.7</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="property-values" id="property-values"></a>vCard Property Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review and RFC Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Primary: Simon Perreault; Backups: Cyrus Daboo, Peter Saint-Andre</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="property-values.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-property-values" class="sortable">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>BEGIN</td>
+          <td>VCARD</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.1.1</td>
+        </tr>
+        <tr>
+          <td>END</td>
+          <td>VCARD</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.1.2</td>
+        </tr>
+        <tr>
+          <td>KIND</td>
+          <td>individual</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.1.4</td>
+        </tr>
+        <tr>
+          <td>KIND</td>
+          <td>group</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.1.4</td>
+        </tr>
+        <tr>
+          <td>KIND</td>
+          <td>org</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.1.4</td>
+        </tr>
+        <tr>
+          <td>KIND</td>
+          <td>location</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.1.4</td>
+        </tr>
+        <tr>
+          <td>KIND</td>
+          <td>application</td>
+          <td>[<a href="http://www.iana.org/go/rfc6473">RFC6473</a>], Section 3</td>
+        </tr>
+        <tr>
+          <td>KIND</td>
+          <td>device</td>
+          <td>[<a href="http://www.iana.org/go/rfc6869">RFC6869</a>], Section 3</td>
+        </tr>
+        <tr>
+          <td>VERSION</td>
+          <td>4.0</td>
+          <td>[<a href="http://www.rfc-editor.org/errata_search.php?eid=3000">RFC Errata 
+          3000</a>][<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.7.9 </td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="parameter-values" id="parameter-values"></a>vCard Parameter Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review and RFC Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Primary: Simon Perreault; Backups: Cyrus Daboo, Peter Saint-Andre</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="parameter-values.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-parameter-values" class="sortable">
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Parameter</th>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>FN, NICKNAME, PHOTO, ADR, TEL, EMAIL, IMPP, LANG, TZ, GEO, TITLE, ROLE, LOGO, ORG, 
+      RELATED, CATEGORIES, NOTE, SOUND, URL, KEY, FBURL, CALADRURI, and CALURI</td>
+          <td>TYPE</td>
+          <td>work</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.6</td>
+        </tr>
+        <tr>
+          <td>FN, NICKNAME, PHOTO, ADR, TEL, EMAIL, IMPP, LANG, TZ, GEO, TITLE, ROLE, LOGO, ORG, 
+        RELATED, CATEGORIES, NOTE, SOUND, URL, KEY, FBURL, CALADRURI, and CALURI</td>
+          <td>TYPE</td>
+          <td>home</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.6</td>
+        </tr>
+        <tr>
+          <td>TEL</td>
+          <td>TYPE</td>
+          <td>text</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.1</td>
+        </tr>
+        <tr>
+          <td>TEL</td>
+          <td>TYPE</td>
+          <td>voice</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.1</td>
+        </tr>
+        <tr>
+          <td>TEL</td>
+          <td>TYPE</td>
+          <td>fax</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.1</td>
+        </tr>
+        <tr>
+          <td>TEL</td>
+          <td>TYPE</td>
+          <td>cell</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.1</td>
+        </tr>
+        <tr>
+          <td>TEL</td>
+          <td>TYPE</td>
+          <td>video</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.1</td>
+        </tr>
+        <tr>
+          <td>TEL</td>
+          <td>TYPE</td>
+          <td>pager</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.1</td>
+        </tr>
+        <tr>
+          <td>TEL</td>
+          <td>TYPE</td>
+          <td>textphone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.4.1</td>
+        </tr>
+        <tr>
+          <td>TEL</td>
+          <td>TYPE</td>
+          <td>main-number</td>
+          <td>[<a href="http://www.iana.org/go/rfc7852">RFC7852</a>]</td>
+        </tr>
+        <tr>
+          <td>BDAY, ANNIVERSARY</td>
+          <td>CALSCALE</td>
+          <td>gregorian</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 5.8</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>contact</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>acquaintance</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>friend</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>met</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>co-worker</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>colleague</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>co-resident</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>neighbor</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>child</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>parent</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>sibling</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>spouse</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>kin</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>muse</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>crush</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>date</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>sweetheart</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>me</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>agent</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>emergency</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>RELATED</td>
+          <td>TYPE</td>
+          <td>emergency</td>
+          <td>[<a href="http://www.iana.org/go/rfc6350">RFC6350</a>], Section 6.6.6</td>
+        </tr>
+        <tr>
+          <td>EXPERTISE</td>
+          <td>LEVEL</td>
+          <td>beginner</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.2</td>
+        </tr>
+        <tr>
+          <td>EXPERTISE</td>
+          <td>LEVEL</td>
+          <td>average</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.2</td>
+        </tr>
+        <tr>
+          <td>EXPERTISE</td>
+          <td>LEVEL</td>
+          <td>expert</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.2</td>
+        </tr>
+        <tr>
+          <td>HOBBY</td>
+          <td>LEVEL</td>
+          <td>high</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.2</td>
+        </tr>
+        <tr>
+          <td>HOBBY</td>
+          <td>LEVEL</td>
+          <td>medium</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.2</td>
+        </tr>
+        <tr>
+          <td>HOBBY</td>
+          <td>LEVEL</td>
+          <td>low</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.2</td>
+        </tr>
+        <tr>
+          <td>INTEREST</td>
+          <td>LEVEL</td>
+          <td>high</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.2</td>
+        </tr>
+        <tr>
+          <td>INTEREST</td>
+          <td>LEVEL</td>
+          <td>medium</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.2</td>
+        </tr>
+        <tr>
+          <td>INTEREST</td>
+          <td>LEVEL</td>
+          <td>low</td>
+          <td>[<a href="http://www.iana.org/go/rfc6715">RFC6715</a>], Section 3.2</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Hypertext Transfer Protocol version 2 (HTTP/2) Parameters</title>
+  </head>
+  <body>
+    <h1>Hypertext Transfer Protocol version 2 (HTTP/2) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2015-02-20</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-04-08</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="http2-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="http2-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="http2-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#frame-type">HTTP/2 Frame Type</a>
+      </li>
+      <li>
+        <a href="#settings">HTTP/2 Settings</a>
+      </li>
+      <li>
+        <a href="#error-code">HTTP/2 Error Code</a>
+      </li>
+    </ul>
+    <h2><a name="frame-type" id="frame-type"></a>HTTP/2 Frame Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7540">RFC7540</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="frame-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-frame-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Frame Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0</td>
+          <td>DATA</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x1</td>
+          <td>HEADERS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x2</td>
+          <td>PRIORITY</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3</td>
+          <td>RST_STREAM</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.4</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x4</td>
+          <td>SETTINGS</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.5</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x5</td>
+          <td>PUSH_PROMISE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.6</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x6</td>
+          <td>PING</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x7</td>
+          <td>GOAWAY</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.8</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x8</td>
+          <td>WINDOW_UPDATE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x9</td>
+          <td>CONTINUATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.10</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xa</td>
+          <td>ALTSVC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7838">RFC7838, Section 4</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xb-0xef</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xf0-0xff</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="settings" id="settings"></a>HTTP/2 Settings</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Thomson (primary), Julian Reschke (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7540">RFC7540</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="settings.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-settings" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Initial Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x1</td>
+          <td>HEADER_TABLE_SIZE</td>
+          <td>4096</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.5.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x2</td>
+          <td>ENABLE_PUSH</td>
+          <td>1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.5.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3</td>
+          <td>MAX_CONCURRENT_STREAMS</td>
+          <td>(infinite)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.5.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x4</td>
+          <td>INITIAL_WINDOW_SIZE</td>
+          <td>65535</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.5.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x5</td>
+          <td>MAX_FRAME_SIZE</td>
+          <td>16384</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.5.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x6</td>
+          <td>MAX_HEADER_LIST_SIZE</td>
+          <td>(infinite)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 6.5.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x7-0xf</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x10</td>
+          <td>TLS_RENEG_PERMITTED</td>
+          <td>0x00</td>
+          <td>[<a href="http://download.microsoft.com/download/C/6/C/C6C3C6F1-E84A-44EF-82A9-49BD3AAD8F58/Windows/%5BMS-HTTP2E-Preview%5D.pdf">MS-HTTP2E</a>][<a href="#Mike_Bishop">Mike_Bishop</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x11-0xefff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xf000-0xffff</td>
+          <td>Reserved for Experimental Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="error-code" id="error-code"></a>HTTP/2 Error Code</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Martin Thomson (primary), Julian Reschke (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7540">RFC7540</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="error-code.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-error-code" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0</td>
+          <td>NO_ERROR</td>
+          <td>Graceful shutdown</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x1</td>
+          <td>PROTOCOL_ERROR</td>
+          <td>Protocol error detected</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x2</td>
+          <td>INTERNAL_ERROR</td>
+          <td>Implementation fault</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3</td>
+          <td>FLOW_CONTROL_ERROR</td>
+          <td>Flow-control limits exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x4</td>
+          <td>SETTINGS_TIMEOUT</td>
+          <td>Settings not acknowledged</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x5</td>
+          <td>STREAM_CLOSED</td>
+          <td>Frame received for closed stream</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x6</td>
+          <td>FRAME_SIZE_ERROR</td>
+          <td>Frame size incorrect</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x7</td>
+          <td>REFUSED_STREAM</td>
+          <td>Stream not processed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x8</td>
+          <td>CANCEL</td>
+          <td>Stream cancelled</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x9</td>
+          <td>COMPRESSION_ERROR</td>
+          <td>Compression state not updated</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xa</td>
+          <td>CONNECT_ERROR</td>
+          <td>TCP connection error for CONNECT method</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xb</td>
+          <td>ENHANCE_YOUR_CALM</td>
+          <td>Processing capacity exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xc</td>
+          <td>INADEQUATE_SECURITY</td>
+          <td>Negotiated TLS parameters not acceptable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xd</td>
+          <td>HTTP_1_1_REQUIRED</td>
+          <td>Use HTTP/1.1 for the request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7540">RFC7540, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xe-0xffffffff</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Mike_Bishop" id="Mike_Bishop">[Mike_Bishop]</a>
+          </td>
+          <td>Mike Bishop</td>
+          <td>
+            <a href="mailto:michael.bishop&amp;microsoft.com">mailto:michael.bishop&amp;microsoft.com</a>
+          </td>
+          <td>2015-06-01</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

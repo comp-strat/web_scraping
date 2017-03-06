@@ -1,0 +1,1356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Extensible Authentication Protocol (EAP) Registry</title>
+  </head>
+  <body>
+    <h1>Extensible Authentication Protocol (EAP) Registry</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2004-04-09</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-02-18</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-numbers.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="eap-numbers.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="eap-numbers.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#eap-numbers-1">Packet Codes</a>
+      </li>
+      <li>
+        <a href="#eap-numbers-2">EAP Initiate and Finish Attributes</a>
+      </li>
+      <li>
+        <a href="#eap-numbers-4">Method Types</a>
+      </li>
+      <li>
+        <a href="#eap-numbers-5">EAP-FAST TLV Types (Value 43)</a>
+      </li>
+      <li>
+        <a href="#eap-numbers-6">EAP-FAST (value 43) Error-TLV (value 5) Error-Codes</a>
+      </li>
+      <li>
+        <a href="#eap-numbers-7">EAP-FAST (value 43) Request-Action TLV (value 19) Action Codes</a>
+      </li>
+      <li>
+        <a href="#eap-numbers-8">Message Types</a>
+      </li>
+      <li>
+        <a href="#eap-numbers-9">Re-authentication Cryptosuites</a>
+      </li>
+      <li>
+        <a href="#eap-numbers-10">EAP-TTLS AVP Usage</a>
+      </li>
+      <li>
+        <a href="#eap-initiate-re-auth-start-flags">EAP Initiate/Re-auth-Start Flags</a>
+      </li>
+      <li>
+        <a href="#eap-initiate-re-auth-flags">EAP Initiate/Re-auth Flags</a>
+      </li>
+      <li>
+        <a href="#eap-finish-re-auth-flags">EAP Finish/Re-auth Flags</a>
+      </li>
+      <li>
+        <a href="#eap-lower-layers">EAP Lower Layers</a>
+      </li>
+    </ul>
+    <h2><a name="eap-numbers-1" id="eap-numbers-1"></a>Packet Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-numbers-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eap-numbers-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Initiate</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Finish</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eap-numbers-2" id="eap-numbers-2"></a>EAP Initiate and Finish Attributes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-numbers-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eap-numbers-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Payload Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>keyName-NAI</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>rRK Lifetime</td>
+          <td>TV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>rMSK Lifetime</td>
+          <td>TV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Domain name</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Cryptosuite list</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Authorization Indication</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Sequence number</td>
+          <td>TV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>ERP/AAK-Key</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>pRK Lifetime</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>pMSK Lifetime</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>CAP-Identifier</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12-127</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Called-Station-Id</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Calling-Station-Id</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>NAS-Identifier</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>NAS-IP-Address</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>NAS-IPv6-Address</td>
+          <td>TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133-191</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">192-255</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eap-numbers-4" id="eap-numbers-4"></a>Method Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-numbers-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-eap-numbers-4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-191</td>
+          <td>Designated Expert with Specification Required</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">192-255</td>
+          <td>Standards Action</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">256-4294967295</td>
+          <td>Designated Expert with Specification Required</td>
+          <td>Allocated after 1-191, on the advice of a designated expert, with specification required.  Expert-EAP Working Group Chair or person designated by EAP Chair</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-eap-numbers-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Identity</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Legacy Nak</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>MD5-Challenge</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>One-Time Password (OTP)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Generic Token Card (GTC)</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Allocated</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Allocated</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>RSA Public Key Authentication</td>
+          <td>[<a href="#William_Whelan">William_Whelan</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>DSS Unilateral</td>
+          <td>[<a href="#William_Nace">William_Nace</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>KEA</td>
+          <td>[<a href="#William_Nace">William_Nace</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>KEA-VALIDATE</td>
+          <td>[<a href="#William_Nace">William_Nace</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>EAP-TLS</td>
+          <td>[[Aboba]]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Defender Token (AXENT)</td>
+          <td>[<a href="#Michael_Rosselli">Michael_Rosselli</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>RSA Security SecurID EAP</td>
+          <td>[<a href="#Magnus_Nystrom">Magnus_Nystrom</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Arcot Systems EAP</td>
+          <td>[<a href="#Rob_Jerdonek">Rob_Jerdonek</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>EAP-Cisco Wireless</td>
+          <td>[<a href="#Stuart_Norman">Stuart_Norman</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>GSM Subscriber Identity Modules (EAP-SIM)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4186">RFC4186</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>SRP-SHA1</td>
+          <td>[<a href="#James_Carlson">James_Carlson</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>EAP-TTLS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>Remote Access Service</td>
+          <td>[<a href="#Steven_Fields">Steven_Fields</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>EAP-AKA Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4187">RFC4187</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>EAP-3Com Wireless</td>
+          <td>[<a href="#Albert_Young">Albert_Young</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>PEAP</td>
+          <td>[<a href="#Ashwin_Palekar">Ashwin_Palekar</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>MS-EAP-Authentication</td>
+          <td>[<a href="#Ashwin_Palekar">Ashwin_Palekar</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>Mutual Authentication w/Key Exchange (MAKE)</td>
+          <td>[<a href="#Romain_Berrendonner">Romain_Berrendonner</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>CRYPTOCard</td>
+          <td>[<a href="#Stephen_M_Webb">Stephen_M_Webb</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>EAP-MSCHAP-V2</td>
+          <td>[<a href="#Darran_Potter">Darran_Potter</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>DynamID</td>
+          <td>[<a href="#Pascal_Merlin">Pascal_Merlin</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>Rob EAP</td>
+          <td>[<a href="#Sana_Ullah">Sana_Ullah</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>Protected One-Time Password</td>
+          <td>[<a href="http://www.iana.org/go/rfc4793">RFC4793</a>][<a href="#Magnus_Nystrom">Magnus_Nystrom</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>MS-Authentication-TLV</td>
+          <td>[<a href="#Ashwin_Palekar">Ashwin_Palekar</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>SentriNET</td>
+          <td>[<a href="#Joe_Kelleher">Joe_Kelleher</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>EAP-Actiontec Wireless</td>
+          <td>[<a href="#Victor_Chang">Victor_Chang</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36</td>
+          <td>Cogent Systems Biometrics Authentication EAP</td>
+          <td>[<a href="#John_Xiong">John_Xiong</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">37</td>
+          <td>AirFortress EAP</td>
+          <td>[<a href="#Richard_Hibbard">Richard_Hibbard</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">38</td>
+          <td>EAP-HTTP Digest</td>
+          <td>[<a href="#Oliver_K_Tavakoli">Oliver_K_Tavakoli</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">39</td>
+          <td>SecureSuite EAP</td>
+          <td>[<a href="#Matt_Clements">Matt_Clements</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">40</td>
+          <td>DeviceConnect EAP</td>
+          <td>[<a href="#David_Pitard">David_Pitard</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>EAP-SPEKE</td>
+          <td>[<a href="#Don_Zick">Don_Zick</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">42</td>
+          <td>EAP-MOBAC</td>
+          <td>[<a href="#Tom_Rixom">Tom_Rixom</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">43</td>
+          <td>EAP-FAST</td>
+          <td>[<a href="http://www.iana.org/go/rfc4851">RFC4851</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">44</td>
+          <td>ZoneLabs EAP (ZLXEAP)</td>
+          <td>[<a href="#Darrin_Bogue">Darrin_Bogue</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">45</td>
+          <td>EAP-Link</td>
+          <td>[<a href="#Don_Zick">Don_Zick</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">46</td>
+          <td>EAP-PAX</td>
+          <td>[<a href="#T_Charles_Clancy">T_Charles_Clancy</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">47</td>
+          <td>EAP-PSK</td>
+          <td>[<a href="http://www.iana.org/go/rfc4764">RFC4764</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">48</td>
+          <td>EAP-SAKE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4763">RFC4763</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">49</td>
+          <td>EAP-IKEv2</td>
+          <td>[<a href="http://www.iana.org/go/rfc5106">RFC5106</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">50</td>
+          <td>EAP-AKA'</td>
+          <td>[<a href="http://www.iana.org/go/rfc5448">RFC5448</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">51</td>
+          <td>EAP-GPSK</td>
+          <td>[<a href="http://www.iana.org/go/rfc5433">RFC5433</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">52</td>
+          <td>EAP-pwd</td>
+          <td>[<a href="http://www.iana.org/go/rfc5931">RFC5931</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">53</td>
+          <td>EAP-EKE Version 1</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">54</td>
+          <td>EAP Method Type for PT-EAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7171">RFC7171</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">55</td>
+          <td>TEAP</td>
+          <td>[<a href="http://www.iana.org/go/rfc7170">RFC7170</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">56-191</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">192-253</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">254</td>
+          <td>Reserved for the Expanded Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc3748">RFC3748</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">256-4294967295</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eap-numbers-5" id="eap-numbers-5"></a>EAP-FAST TLV Types (Value 43)</h2>
+    <dl>
+      <dt>Note</dt>
+      <dd>
+        <pre>See http://www.iana.org/assignments/eap-fast-parameters/eap-fast-parameters.xhtml</pre>
+      </dd>
+    </dl>
+    <h2><a name="eap-numbers-6" id="eap-numbers-6"></a>EAP-FAST (value 43) Error-TLV (value 5) Error-Codes</h2>
+    <dl>
+      <dt>Note</dt>
+      <dd>
+        <pre>See http://www.iana.org/assignments/eap-fast-parameters/eap-fast-parameters.xhtml</pre>
+      </dd>
+    </dl>
+    <h2><a name="eap-numbers-7" id="eap-numbers-7"></a>EAP-FAST (value 43) Request-Action TLV (value 19) Action Codes</h2>
+    <dl>
+      <dt>Note</dt>
+      <dd>
+        <pre>See http://www.iana.org/assignments/eap-fast-parameters/eap-fast-parameters.xhtml</pre>
+      </dd>
+    </dl>
+    <h2><a name="eap-numbers-8" id="eap-numbers-8"></a>Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-numbers-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eap-numbers-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Re-auth-Start, applies to Initiate Code only</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Re-auth, applies to Initiate and Finish Codes</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-191</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">192-255</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eap-numbers-9" id="eap-numbers-9"></a>Re-authentication Cryptosuites</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-numbers-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eap-numbers-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>HMAC-SHA256-64</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>HMAC-SHA256-128</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>HMAC-SHA256-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-191</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">192-255</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eap-numbers-10" id="eap-numbers-10"></a>EAP-TTLS AVP Usage</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The following table lists whether the AVP may appear in a
+packet from server to client ("Request") and/or in a packet from
+client to server ("Response"), and whether the AVP MUST be
+implemented ("MI").</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-numbers-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eap-numbers-10" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Request</th>
+          <th>Response</th>
+          <th>MI</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>User-Name</td>
+          <td></td>
+          <td>X</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>User-Password</td>
+          <td></td>
+          <td>X</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>CHAP-Password</td>
+          <td></td>
+          <td>X</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>Reply-Message</td>
+          <td>X</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>CHAP-Challenge</td>
+          <td></td>
+          <td>X</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>EAP-Message</td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>MS-CHAP-Response</td>
+          <td></td>
+          <td>X</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>MS-CHAP-Error</td>
+          <td>X</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>MS-CHAP-NT-Enc-PW</td>
+          <td></td>
+          <td>X</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>MS-CHAP-Domain</td>
+          <td>X</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>MS-CHAP-Challenge</td>
+          <td></td>
+          <td>X</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>MS-CHAP2-Response</td>
+          <td></td>
+          <td>X</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>MS-CHAP2-Success</td>
+          <td>X</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+        <tr>
+          <td>MS-CHAP2-CPW</td>
+          <td></td>
+          <td>X</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc5281">RFC5281</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eap-initiate-re-auth-start-flags" id="eap-initiate-re-auth-start-flags"></a>EAP Initiate/Re-auth-Start Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-initiate-re-auth-start-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eap-initiate-re-auth-start-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(E)</td>
+          <td>0x80</td>
+          <td>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eap-initiate-re-auth-flags" id="eap-initiate-re-auth-flags"></a>EAP Initiate/Re-auth Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-initiate-re-auth-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eap-initiate-re-auth-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(E)</td>
+          <td>0x10</td>
+          <td>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</td>
+        </tr>
+        <tr>
+          <td>(L)</td>
+          <td>0x20</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td>(B)</td>
+          <td>0x40</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td>(R)</td>
+          <td>0x80</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eap-finish-re-auth-flags" id="eap-finish-re-auth-flags"></a>EAP Finish/Re-auth Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-finish-re-auth-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eap-finish-re-auth-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(E)</td>
+          <td>0x10</td>
+          <td>[<a href="http://www.iana.org/go/rfc6630">RFC6630</a>]</td>
+        </tr>
+        <tr>
+          <td>(L)</td>
+          <td>0x20</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td>(B)</td>
+          <td>0x40</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+        <tr>
+          <td>(R)</td>
+          <td>0x80</td>
+          <td>[<a href="http://www.iana.org/go/rfc6696">RFC6696</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eap-lower-layers" id="eap-lower-layers"></a>EAP Lower Layers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-lower-layers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eap-lower-layers" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Lower Layer</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Wired IEEE 802.1X</td>
+          <td>[<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IEEE 802.11 (no-pre-auth)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IEEE 802.11 (pre-authentication)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>IEEE 802.16e</td>
+          <td>[<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>IKEv2</td>
+          <td>[<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>PPP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>PANA (no pre-authentication)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5191">RFC5191</a>][<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>GSS-API</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>][<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>PANA (pre-authentication)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5873">RFC5873</a>][<a href="http://www.iana.org/go/rfc6677">RFC6677</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Albert_Young" id="Albert_Young">[Albert_Young]</a>
+          </td>
+          <td>Albert Young</td>
+          <td>
+            <a href="mailto:albert_young&amp;3com.com">mailto:albert_young&amp;3com.com</a>
+          </td>
+          <td>2001-12</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Ashwin_Palekar" id="Ashwin_Palekar">[Ashwin_Palekar]</a>
+          </td>
+          <td>Ashwin Palekar</td>
+          <td>
+            <a href="mailto:ashwinp&amp;microsoft.com">mailto:ashwinp&amp;microsoft.com</a>
+          </td>
+          <td>2002-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Darran_Potter" id="Darran_Potter">[Darran_Potter]</a>
+          </td>
+          <td>Darran Potter</td>
+          <td>
+            <a href="mailto:dpotter&amp;cisco.com">mailto:dpotter&amp;cisco.com</a>
+          </td>
+          <td>2002-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Darrin_Bogue" id="Darrin_Bogue">[Darrin_Bogue]</a>
+          </td>
+          <td>Darrin Bogue</td>
+          <td>
+            <a href="mailto:dbogue&amp;zonelabs.com">mailto:dbogue&amp;zonelabs.com</a>
+          </td>
+          <td>2004-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="David_Pitard" id="David_Pitard">[David_Pitard]</a>
+          </td>
+          <td>David Pitard</td>
+          <td>
+            <a href="mailto:david_pitard&amp;phoenix.com">mailto:david_pitard&amp;phoenix.com</a>
+          </td>
+          <td>2003-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Don_Zick" id="Don_Zick">[Don_Zick]</a>
+          </td>
+          <td>Don Zick</td>
+          <td>
+            <a href="mailto:dzick&amp;interlinknetworks.com">mailto:dzick&amp;interlinknetworks.com</a>
+          </td>
+          <td>2004-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="James_Carlson" id="James_Carlson">[James_Carlson]</a>
+          </td>
+          <td>James Carlson</td>
+          <td>
+            <a href="mailto:james.d.carlson&amp;east.sun.com">mailto:james.d.carlson&amp;east.sun.com</a>
+          </td>
+          <td>2001-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Joe_Kelleher" id="Joe_Kelleher">[Joe_Kelleher]</a>
+          </td>
+          <td>Joe Kelleher</td>
+          <td>
+            <a href="mailto:joe.kelleher&amp;informer.co.uk">mailto:joe.kelleher&amp;informer.co.uk</a>
+          </td>
+          <td>2002-04</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="John_Xiong" id="John_Xiong">[John_Xiong]</a>
+          </td>
+          <td>John Xiong</td>
+          <td>
+            <a href="mailto:johnxiong&amp;cogentsystems.com">mailto:johnxiong&amp;cogentsystems.com</a>
+          </td>
+          <td>2002-06</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Magnus_Nystrom" id="Magnus_Nystrom">[Magnus_Nystrom]</a>
+          </td>
+          <td>Magnus Nystr&#246;m</td>
+          <td>
+            <a href="mailto:mnystrom&amp;microsoft.com">mailto:mnystrom&amp;microsoft.com</a>
+          </td>
+          <td>2006-04-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Matt_Clements" id="Matt_Clements">[Matt_Clements]</a>
+          </td>
+          <td>Matt Clements</td>
+          <td>
+            <a href="mailto:matt&amp;iosoftware.com">mailto:matt&amp;iosoftware.com</a>
+          </td>
+          <td>2003-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Michael_Rosselli" id="Michael_Rosselli">[Michael_Rosselli]</a>
+          </td>
+          <td>Michael Rosselli</td>
+          <td>
+            <a href="mailto:mrosselli&amp;axent.com">mailto:mrosselli&amp;axent.com</a>
+          </td>
+          <td>1998-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Oliver_K_Tavakoli" id="Oliver_K_Tavakoli">[Oliver_K_Tavakoli]</a>
+          </td>
+          <td>Oliver K. Tavakoli</td>
+          <td>
+            <a href="mailto:radagast&amp;funk.com">mailto:radagast&amp;funk.com</a>
+          </td>
+          <td>2003-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Pascal_Merlin" id="Pascal_Merlin">[Pascal_Merlin]</a>
+          </td>
+          <td>Pascal Merlin</td>
+          <td>
+            <a href="mailto:pmerlin&amp;scrypto.fr">mailto:pmerlin&amp;scrypto.fr</a>
+          </td>
+          <td>2002-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Richard_Hibbard" id="Richard_Hibbard">[Richard_Hibbard]</a>
+          </td>
+          <td>Richard Hibbard</td>
+          <td>
+            <a href="mailto:rhibbard&amp;fortresstech.com">mailto:rhibbard&amp;fortresstech.com</a>
+          </td>
+          <td>2003-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Rob_Jerdonek" id="Rob_Jerdonek">[Rob_Jerdonek]</a>
+          </td>
+          <td>Rob Jerdonek</td>
+          <td>
+            <a href="mailto:rob&amp;arcot.com">mailto:rob&amp;arcot.com</a>
+          </td>
+          <td>2000-05</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Romain_Berrendonner" id="Romain_Berrendonner">[Romain_Berrendonner]</a>
+          </td>
+          <td>Romain Berrendonner</td>
+          <td>
+            <a href="mailto:romain.berrendonner&amp;sagem.com">mailto:romain.berrendonner&amp;sagem.com</a>
+          </td>
+          <td>2001-12</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Sana_Ullah" id="Sana_Ullah">[Sana_Ullah]</a>
+          </td>
+          <td>Sana Ullah</td>
+          <td>
+            <a href="mailto:palash78&amp;globalctg.net">mailto:palash78&amp;globalctg.net</a>
+          </td>
+          <td>2002-02</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Stephen_M_Webb" id="Stephen_M_Webb">[Stephen_M_Webb]</a>
+          </td>
+          <td>Stephen M. Webb</td>
+          <td>
+            <a href="mailto:stephenw&amp;cryptocard.com">mailto:stephenw&amp;cryptocard.com</a>
+          </td>
+          <td>2002-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Steven_Fields" id="Steven_Fields">[Steven_Fields]</a>
+          </td>
+          <td>Steven Fields</td>
+          <td>
+            <a href="mailto:sfields&amp;identix.com">mailto:sfields&amp;identix.com</a>
+          </td>
+          <td>2001-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Stuart_Norman" id="Stuart_Norman">[Stuart_Norman]</a>
+          </td>
+          <td>Stuart Norman</td>
+          <td>
+            <a href="mailto:snorm&amp;cisco.com">mailto:snorm&amp;cisco.com</a>
+          </td>
+          <td>2000-11</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="T_Charles_Clancy" id="T_Charles_Clancy">[T_Charles_Clancy]</a>
+          </td>
+          <td>T. Charles Clancy</td>
+          <td>
+            <a href="mailto:clancy&amp;cs.umd.edu">mailto:clancy&amp;cs.umd.edu</a>
+          </td>
+          <td>2005-06</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Tom_Rixom" id="Tom_Rixom">[Tom_Rixom]</a>
+          </td>
+          <td>Tom Rixom</td>
+          <td>
+            <a href="mailto:tom.rixom&amp;alfa-ariss.com">mailto:tom.rixom&amp;alfa-ariss.com</a>
+          </td>
+          <td>2003-05</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Victor_Chang" id="Victor_Chang">[Victor_Chang]</a>
+          </td>
+          <td>Victor Chang</td>
+          <td>
+            <a href="mailto:vchang&amp;actiontec.com">mailto:vchang&amp;actiontec.com</a>
+          </td>
+          <td>2002-06</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="William_Nace" id="William_Nace">[William_Nace]</a>
+          </td>
+          <td>William Nace</td>
+          <td>
+            <a href="mailto:wanace&amp;missi.ncsc.mil">mailto:wanace&amp;missi.ncsc.mil</a>
+          </td>
+          <td>1997-12</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="William_Whelan" id="William_Whelan">[William_Whelan]</a>
+          </td>
+          <td>William Whelan</td>
+          <td>
+            <a href="mailto:bwhelan&amp;nei.com">mailto:bwhelan&amp;nei.com</a>
+          </td>
+          <td>1997-12</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

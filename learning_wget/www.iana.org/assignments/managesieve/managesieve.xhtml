@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>ManageSieve Registries</title>
+  </head>
+  <body>
+    <h1>ManageSieve Registries</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2009-01-29</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-05-27</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="managesieve.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="managesieve.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="managesieve.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#capability">ManageSieve Capabilities</a>
+      </li>
+      <li>
+        <a href="#response">ManageSieve Response Codes</a>
+      </li>
+    </ul>
+    <h2><a name="capability" id="capability"></a>ManageSieve Capabilities</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Track or IESG-Approved Experimental RFC</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="capability.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-capability" class="sortable">
+      <thead>
+        <tr>
+          <th>Capability name</th>
+          <th>Description</th>
+          <th>Relevant publications</th>
+          <th>Person and email address to contact for further information</th>
+          <th>Author/Change controller</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">IMPLEMENTATION</td>
+          <td>Its value contains name of server implementation and
+        its version.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>], 
+        Section 1.8.</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">SASL</td>
+          <td>Its value contains a space separated list of SASL
+        mechanisms supported by server.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>], Section 1.8 
+        and Section 2.1.</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">SIEVE</td>
+          <td>Its value contains a space separated list of
+        supported SIEVE extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>], Section 1.8. 
+        Also [<a href="http://www.iana.org/go/rfc5228">RFC5228</a>].</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">STARTTLS</td>
+          <td>This capability is returned if server supports TLS
+        (STARTTLS command).</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>], Section 1.8 
+        and Section 2.2.</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">NOTIFY</td>
+          <td>This capability is returned if server supports
+        'enotify' [<a href="http://www.iana.org/go/rfc5435">RFC5435</a>] 
+        Sieve extension.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>], Section 1.8.</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">MAXREDIRECTS</td>
+          <td>This capability returns the limit on the number of
+        Sieve "redirect" actions a script can perform during a single
+        evaluation.  The value is a non-negative number represented as a
+        ManageSieve string.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>], Section 1.8.</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">LANGUAGE</td>
+          <td>The language (&lt;Language-Tag&gt; from [<a href="http://www.iana.org/go/rfc4646">RFC4646</a>])
+        currently used for human readable error messages.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>], Section 1.8.</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">OWNER</td>
+          <td>Its value contains UTF-8 encoded name of the
+        currently logged in user ("authorization identity" according to
+        [<a href="http://www.iana.org/go/rfc4422">RFC4422</a>]).</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>], Section 1.8.</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">VERSION</td>
+          <td>This capability is returned if the server is
+        compliant with [<a href="http://www.iana.org/go/rfc5804">RFC5804</a>], i.e. that 
+        it supports RENAMESCRIPT, CHECKSCRIPT and NOOP commands.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>], Section 2.11.</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">EXTLISTS</td>
+          <td>This capability is returned if the server supports the 
+        "extlists" [<a href="http://www.iana.org/go/rfc6134">RFC6134</a>] 
+      Sieve extension.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6134">RFC6134</a>], Section 2.8.</td>
+          <td>Sieve mailing list (sieve@ietf.org)</td>
+          <td>IESG</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="response" id="response"></a>ManageSieve Response Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Track or IESG-Approved Experimental RFC</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="response.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-response" class="sortable">
+      <thead>
+        <tr>
+          <th>Response code</th>
+          <th>Arguments (use ABNF to specify syntax, or the word NONE if none can be specified)</th>
+          <th>Purpose</th>
+          <th>Published specification(s)</th>
+          <th>Person and email address to contact for further information</th>
+          <th>Author/Change controller</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">AUTH-TOO-WEAK</td>
+          <td>NONE</td>
+          <td>This response code is returned in the NO response from an
+        AUTHENTICATE command.  It indicates that site security policy
+        forbids the use of the requested mechanism for the specified
+        authentication identity.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">ENCRYPT-NEEDED</td>
+          <td>NONE</td>
+          <td>This response code is returned in the NO response from an
+        AUTHENTICATE command.  It indicates that site security policy
+        requires the use of a strong encryption mechanism for the
+        specified authentication identity and mechanism.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">QUOTA</td>
+          <td>NONE</td>
+          <td>If this response code is returned in the NO/BYE response,
+        it means that the command would have placed the user above the
+        site-defined quota constraints.  If this response code is returned
+        in the OK response, it can mean that the user is near its quota or
+        that the user exceeded its quota, but the server supports soft
+        quotas.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">QUOTA/MAXSCRIPTS</td>
+          <td>NONE</td>
+          <td>If this response code is returned in the NO/BYE response,
+        it means that the command would have placed the user above the
+        site-defined limit on the number of Sieve scripts.  If this
+        response code is returned in the OK response, it can mean that the
+        user is near its quota or that the user exceeded its quota, but
+        the server supports soft quotas.  This response code is a more
+        specific version of the QUOTA response code.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">QUOTA/MAXSIZE</td>
+          <td>NONE</td>
+          <td>If this response code is returned in the NO/BYE response,
+        it means that the command would have placed the user above the
+        site-defined maximum script size.  If this response code is
+        returned in the OK response, it can mean that the user is near its
+        quota or that the user exceeded its quota, but the server supports
+        soft quotas.  This response code is a more specific version of the
+        QUOTA response code.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">REFERRAL</td>
+          <td>&lt;sieveurl&gt;</td>
+          <td>This response code may be returned with a BYE result from
+        any command, and includes a mandatory parameter that indicates
+        what server to access to manage this user's sieve scripts.  The
+        server will be specified by a Sieve URL (see Section 3).  The
+        scriptname portion of the URL MUST NOT be specified.  The client
+        should authenticate to the specified server and use it for all
+        further commands in the current session.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">SASL</td>
+          <td>&lt;string&gt;</td>
+          <td>This response code can occur in the OK response to a
+        successful AUTHENTICATE command and includes the optional final
+        server response data from the server as specified by 
+        [<a href="http://www.iana.org/go/rfc4422">RFC4422</a>].</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">TRANSITION-NEEDED</td>
+          <td>NONE</td>
+          <td>This response code occurs in a NO response of an
+        AUTHENTICATE command.  It indicates that the user name is valid,
+        but the entry in the authentication database needs to be updated
+        in order to permit authentication with the specified mechanism.
+        This is typically done by establishing a secure channel using TLS,
+        followed by authenticating once using the PLAIN [<a href="http://www.iana.org/go/rfc4616">RFC4616</a>] 
+        authentication mechanism.  The selected mechanism SHOULD then work for
+        authentications in subsequent sessions.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">TRYLATER</td>
+          <td>NONE</td>
+          <td>A command failed due to a temporary server failure.  The
+        client MAY continue using local information and try the command
+        later.  This response code only make sense when returned in a NO/
+        BYE response.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">ACTIVE</td>
+          <td>NONE</td>
+          <td>A command failed because it is not allowed on the active
+        script.  For example DELETESCRIPT on the active script.  This
+        response code only makes sense when returned in a NO/BYE response.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">NONEXISTENT
+      </td>
+          <td>NONE</td>
+          <td>A command failed because the referenced script name
+        doesn't exist.  This response code only makes sense when returned
+        in a NO/BYE response.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">ALREADYEXISTS
+      </td>
+          <td>NONE</td>
+          <td>A command failed because the referenced script name
+        already exists.  This response code only makes sense when returned
+        in a NO/BYE response.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">WARNINGS
+      </td>
+          <td>NONE</td>
+          <td>This response code MAY be returned by the server in the
+        OK response (but it might be returned with the NO/BYE response as
+        well) and signals the client that even though the script is
+        syntactically valid, it might contain errors not intended by the
+        script writer.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+        <tr>
+          <td align="center">TAG
+      </td>
+          <td>string</td>
+          <td>This response code name is followed by a string specified
+        in the command that caused this response.  It is typically used
+        for client state synchronization.</td>
+          <td>[<a href="http://www.iana.org/go/rfc5804">RFC5804</a>]</td>
+          <td>Alexey Melnikov (alexey.melnikov@isode.com)</td>
+          <td>IESG</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

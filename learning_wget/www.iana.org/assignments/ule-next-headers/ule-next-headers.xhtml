@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Unidirectional Lightweight Encapsulation (ULE) Next-Header Registry</title>
+  </head>
+  <body>
+    <h1>Unidirectional Lightweight Encapsulation (ULE) Next-Header Registry</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2005-09-13</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-08-07</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Mandatory Extension Header range in the ULE Next-Header registry
+is used to allocate integer values in the range 0-255 (decimal).
+These values are used to identify mandatory extension headers.  The
+registered value corresponds to the 16-bit Type value for the
+mandatory extension header or the specified protocol.
+
+The Optional Extension Header range in the ULE Next-Header registry
+is used to allocate integer values in the range 256-511 (decimal).
+These values are used to identify optional extension headers.  The
+registered value corresponds to the 16-bit Type value that would be
+used for an optional extension header with a header length (H-LEN) of
+1.
+  </pre>
+      </dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The range 512-1535 is also assigned for Optional Extension Headers.
+IANA does not allocate numbers in this range. The values are derived
+from the combination of a registry entry in the range 256-511, and the
+corresponding H-LEN values specified in each registry entry [<a href="http://www.iana.org/go/rfc4326">RFC4326</a>].
+  </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ule-next-headers.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ule-next-headers.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ule-next-headers.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ule-next-headers-1">Mandatory Extension Headers (or link-dependent type fields) for ULE (Range 0-255 decimal)</a>
+      </li>
+      <li>
+        <a href="#ule-next-headers-2">Optional Extension Headers for ULE (Range 256-511 decimal)</a>
+      </li>
+    </ul>
+    <h2><a name="ule-next-headers-1" id="ule-next-headers-1"></a>Mandatory Extension Headers (or link-dependent type fields) for ULE (Range 0-255 decimal)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Gorry Fairhurst</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4326">RFC4326</a>][<a href="http://www.iana.org/go/rfc7280">RFC7280</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ule-next-headers-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ule-next-headers-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Test-SNDU</td>
+          <td>[<a href="http://www.iana.org/go/rfc4326">RFC4326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Bridged-SNDU</td>
+          <td>[<a href="http://www.iana.org/go/rfc4326">RFC4326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>TS-Concat</td>
+          <td>[<a href="http://www.iana.org/go/rfc5163">RFC5163</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>PDU-Concat</td>
+          <td>[<a href="http://www.iana.org/go/rfc5163">RFC5163</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-128</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>LL_GSE_NCR</td>
+          <td>[<a href="http://www.etsi.org">EN 301 545-2</a>][<a href="#Hans-Peter_Lexow">Hans-Peter_Lexow</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>LL_RCS_L2S</td>
+          <td>[<a href="http://www.etsi.org">EN 301 545-2</a>][<a href="#Hans-Peter_Lexow">Hans-Peter_Lexow</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>LL_RCS_DCP</td>
+          <td>[<a href="http://www.etsi.org">TS 101 545-3</a>][<a href="#Hans-Peter_Lexow">Hans-Peter_Lexow</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>LL_RCS_1</td>
+          <td>[<a href="http://www.etsi.org">EN 301 545-2</a>][<a href="#Gorry_Fairhurst">Gorry_Fairhurst</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133</td>
+          <td>LL_RCS_TRANSEC_SYS</td>
+          <td>[<a href="http://www.etsi.org">EN 301 545-1</a>][<a href="#Gorry_Fairhurst">Gorry_Fairhurst</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">134</td>
+          <td>LL_RCS_TRANSEC_PAY</td>
+          <td>[<a href="http://www.etsi.org">EN 301 545-1</a>][<a href="#Gorry_Fairhurst">Gorry_Fairhurst</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">135</td>
+          <td>DVB-GSE_LLC</td>
+          <td>[<a href="http://www.etsi.org/deliver/etsi_ts/102600_102699/10260602/01.01.01_60/ts_10260602v010101p.pdf">ETSI TS 102 606-2</a>][<a href="#Alexander_Adolf">Alexander_Adolf</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">136-143</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">144-159</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7280">RFC7280</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">160-199</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">200</td>
+          <td>LL_RCS_FEC_FDT</td>
+          <td>[<a href="http://www.etsi.org">EN 301 790 V1.5.1</a>][<a href="#Laurence_Duquerroy">Laurence_Duquerroy</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">201-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ule-next-headers-2" id="ule-next-headers-2"></a>Optional Extension Headers for ULE (Range 256-511 decimal)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Gorry Fairhurst</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4326">RFC4326</a>][<a href="http://www.iana.org/go/rfc7280">RFC7280</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ule-next-headers-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ule-next-headers-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>H-LEN</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">256</td>
+          <td>Extension-Padding</td>
+          <td align="center">1-5</td>
+          <td>[<a href="http://www.iana.org/go/rfc4326">RFC4326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">257</td>
+          <td>Time-Stamp</td>
+          <td align="center">3</td>
+          <td>[<a href="http://www.iana.org/go/rfc5163">RFC5163</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">258-449</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">450</td>
+          <td>LL_RCS_FEC_ADT</td>
+          <td align="center">4</td>
+          <td>[<a href="http://www.etsi.org">EN 301 790 V1.5.1</a>][<a href="#Laurence_Duquerroy">Laurence_Duquerroy</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">451</td>
+          <td>LL_CRC32</td>
+          <td align="center">3</td>
+          <td>[<a href="http://www.etsi.org">EN 301 790 V1.5.1</a>][<a href="#Laurence_Duquerroy">Laurence_Duquerroy</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">452-511</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Alexander_Adolf" id="Alexander_Adolf">[Alexander_Adolf]</a>
+          </td>
+          <td>Alexander Adolf</td>
+          <td>
+            <a href="mailto:alexander.adolf&amp;condition-alpha.com">mailto:alexander.adolf&amp;condition-alpha.com</a>
+          </td>
+          <td>2013-12-18</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Gorry_Fairhurst" id="Gorry_Fairhurst">[Gorry_Fairhurst]</a>
+          </td>
+          <td>Gorry Fairhurst</td>
+          <td>
+            <a href="mailto:gorry&amp;erg.abdn.ac.uk">mailto:gorry&amp;erg.abdn.ac.uk</a>
+          </td>
+          <td>2013-02-06</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Hans-Peter_Lexow" id="Hans-Peter_Lexow">[Hans-Peter_Lexow]</a>
+          </td>
+          <td>Hans-Peter Lexow</td>
+          <td>
+            <a href="mailto:hlexow&amp;stmi.com">mailto:hlexow&amp;stmi.com</a>
+          </td>
+          <td>2013-02-06</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Laurence_Duquerroy" id="Laurence_Duquerroy">[Laurence_Duquerroy]</a>
+          </td>
+          <td>Laurence Duquerroy</td>
+          <td>
+            <a href="mailto:Laurence.Duquerroy&amp;esa.int">mailto:Laurence.Duquerroy&amp;esa.int</a>
+          </td>
+          <td>2008-08-28</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

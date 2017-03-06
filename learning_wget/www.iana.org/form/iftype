@@ -1,0 +1,185 @@
+<html>
+<head>
+    <title>IANA | Application for IANA IfType</title>
+	<style type="text/css">
+	.form_error {
+		background: #900;
+		color: #fff;
+		padding: 2px;
+	}
+	</style>
+</head>
+
+<body bgcolor="#ffffff">
+
+<p>
+<center>
+<img src="/_img/iana-logo-large.png" align="bottom">
+</center>
+</p>
+
+<p>
+<center>
+    <font size="+1">
+        <i><b>Dedicated to preserving the central
+        coordinating functions of the global<br>
+        Internet for the public good.</b></i>
+    </font>
+</center>
+</p>
+
+<center><table width="90%"><tr><td> 
+
+<hr width="100%">
+
+<center>
+<font size="+1">
+    <b>Application for IANA IfType</b>
+</font>
+</center>
+ 
+<hr width="100%">  
+
+<p> Please complete the following application to register an IANA
+IfType. </p>
+
+<p>The IANA IfType-MIB was originally defined in 
+
+<a href="http://www.rfc-editor.org/rfc/rfc1573.txt">RFC1573</a> 
+
+as a separate
+MIB module together with the IF-MIB.  The IF-MIB has been updated and is
+currently specified in 
+
+<a href="http://www.rfc-editor.org/rfc/rfc2863.txt">RFC2863</a>,
+
+ but this latest IF-MIB RFC no longer
+contains the IANA IfType-MIB.  Instead, the IANA IfType-MIB is now
+maintained as a separate module.</p>
+
+<p>For further information regarding the use of IANA IfTypes
+please see the IF-MIB document, currently</p>
+
+<blockquote>
+<a href="http://www.rfc-editor.org/rfc/rfc2863.txt">RFC 2863 - The
+Interfaces Group MIB</a>
+</blockquote>
+
+<p> For the current IANA IfType registries please see the following:</p>
+
+<ul>
+<li>
+<a href="http://www.iana.org/assignments/ianaiftype-mib">
+&lt;http://www.iana.org/assignments/ianaiftype-mib&gt;</a></li>
+
+<li>
+<a href="http://www.iana.org/assignments/smi-numbers">
+&lt;http://www.iana.org/assignments/smi-numbers&gt;</a>
+</li>
+</ul>
+
+<p>Please note that you should include answers to the following
+questions in your explanation of the proposed use of the IANA
+IfType:
+<ul>
+<li> How would IP run over your ifType ?
+<li> Would there be another interface sublayer between your ifType and IP ?
+<li> Would your ifType be vendor-specific or proprietary? (If so, the label should
+  start with a string that shows that. For example, if your company's name or
+  acronym is xxx, then the ifType label would be something like xxxSomeIfTypeLabel.)
+</ul>
+</p>
+
+
+<hr>
+
+<form action="/form/iftype" method=post>
+
+	
+<ul>
+
+    <li>
+    <b>Your Name:</b><br>
+    <input value="" size=40 name="contact_name">
+	
+
+
+    <p>
+    <li>
+    <b>Your Email Address:</b><br>
+    <input value="" size=40 name="contact_email">
+	
+
+
+    <p>
+    <li>
+    <b>Your Organization:</b><br>
+    <input value="" size=40 name="organization">
+
+</ul>
+<p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+
+<ol>
+
+	<li> <b>Name of IANA IfType requested:</b><br>
+	<input type="text" name="fullname" value="" size="40" maxlength="60">
+	
+
+	<li> <b>Label for IANA IfType requested:</b><br>
+	<input type="text" name="shortname" value="" size="40" maxlength="60">
+	
+
+<br>
+
+<small>
+[A label for a named-number enumeration must consist of one or more letters or digits, up to a maximum of 64 characters, and the initial character must be a lower-case letter. (However, labels longer than 32 characters are not recommended.) Note that hyphens are not allowed. (Text from <a href="http://www.rfc-editor.org/rfc/rfc2578.txt">RFC 2578</a>, section 7.1.1)]</small>
+    <p>
+    <li><b>Description of the proposed use of the IANA IfType:</b>
+    <p>
+	
+	
+    <textarea name="proposed_use" rows="4" cols="60"></textarea>
+
+    <p>
+    <li><b>Reference, Internet-Draft, or Specification (required - provide 
+link):</b>
+    <p>
+    <textarea name="reference" rows="4" cols="60"></textarea>
+
+    <p>
+    <li><b>Additional information or comments:</b>
+    <p>
+    <textarea name="additional_info" rows="4" cols="60"></textarea>
+</ul>
+
+<hr width="100%">
+<center>
+
+Please check once again to be sure that all fields have been completed.
+<p>
+  <input type="submit" value="submit application">
+  <input type="reset" value="clear entries">
+</p>
+</center>
+</form>
+
+<p>
+
+<center>
+  <hr>
+  <font size="-1">
+  Please send comments on this web site to:
+  <a href="mailto:webmaster@iana.org">webmaster@iana.org</a><br>
+  Page Updated January 03, 2002. <br>
+  </font>
+
+  <font size="-2">(c) 1998-2000&nbsp; The Internet Assigned
+  Numbers Authority.  All rights reserved.
+  </font>
+</center>
+
+</td></tr></table></center>
+</body>
+</html>

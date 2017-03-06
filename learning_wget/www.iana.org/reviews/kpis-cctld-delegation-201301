@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Consultation on ccTLD Delegation and Redelegation Performance Standards</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+<div id="main_right">
+
+
+	<h1>Consultation on ccTLD Delegation and Redelegation Performance Standards</h1>
+
+    <div class="panel_information icon">
+        This consultation has concluded. A <a href="http://www.icann.org/en/news/public-comment/report-comments-cctld-drd-06aug13-en.pdf">report of public comments</a> has been compiled, and the record of submitted
+        comments is published on the <a href="http://www.icann.org/en/news/public-comment/cctld-drd-15jan13-en.htm">ICANN Public Comment</a> page.
+    </div>
+
+	<h2>Consultation Objective</h2>
+	<p>The Internet Assigned Numbers Authority (IANA) functions contract (SA1301-12-CN-0035) between ICANN and the United States Department of Commerce, National Telecommunications Information Administration (NTIA) to maintain the continuity and stability of services related to certain interdependent Internet technical management functions, known collectively as the Internet Assigned Numbers Authority calls for a public consultation from all interested and affected parties to help satisfy the following objective:</p>
+	<blockquote>C.2.8 Performance Standards — Within six (6) months of award, the Contractor shall develop performance standards, in collaboration with all interested and affected parties as enumerated in Section C.1.3, for each of the IANA functions as set forth at C.2.9 to C.2.9.4 and post via a website.</blockquote>
+	<p>This consultation involves the Delegation and Redelegation of Country Code Top Level Domain (ccTLD) requests described in the IANA functions contract as the following:</p>
+	<blockquote>C.2.9.2.c Delegation and Redelegation of a Country Code Top Level Domain (ccTLD) — The Contractor shall apply existing policy frameworks in processing requests related to the delegation and redelegation of a ccTLD, such as RFC 1591 Domain Name System Structure and Delegation, the Governmental Advisory Committee (GAC) Principles And Guidelines For The Delegation And Administration Of Country Code Top Level Domains, and any further clarification of these policies by interested and affected parties as enumerated in Section C.1.3. If a policy framework does not exist to cover a specific instance, the Contractor will consult with the interested and affected parties, as enumerated in Section C.1.3; relevant public authorities; SA1301-12-CN-00358 and governments on any recommendation that is not within or consistent with an existing policy framework. In making its recommendations, the Contractor shall also take into account the relevant national frameworks and applicable laws of the jurisdiction that the TLD registry serves. The Contractor shall submit its recommendations to the COR via a Delegation and Redelegation Report.</blockquote>
+	<h2>This consultation</h2>
+	<p>This consultation requests input from the community on what indicates good performance for performing the delegation and redelegation of a ccTLD. The consultation is about key performance indicators and not about ccTLD policy development.</p>
+	
+	<h2>Background</h2>
+	<p>Country-code Top-level Domains are top-level domains designated for a particular country or territory to service their community.</p>
+
+        <h3>Delegation of new ccTLDs</h3>
+	<p>The ISO 3166-1 standard is used to determine which countries are eligible for ccTLDs, and is published by the ISO 3166 Maintenance Agency (<a href="http://www.iso.org/iso/country_codes">http://www.iso.org/iso/country_codes</a>). Countries listed in the ISO 3166-1 standard are eligible for their "alpha-2" code represented in that standard. Certain countries may also be eligible for non-Latin IDN country-code top-level domains through the ICANN’s IDN Fast Track process.</p>
+        <p>Once a country code is assigned in ISO 3166-1, and/or string eligibility has been determined through the ICANN’s IDN Fast Track process, prospective managers of the domain may apply to ICANN for delegation.</p>
+
+        <h3>Redelegation of existing ccTLDs</h3>
+        <p>The process for changing the designated manager(s) of a ccTLD is known as redelegation. This process is conducted according to a number of principles found in documents such as RFC 1591 (http://www.rfc-editor.org/rfc/rfc1591.txt). For a simplified summary of the process that is followed in implementing these principles, see the ccTLD Delegation and Redelegation Step-by-Step Overview (<a href="http://www.iana.org/domains/root/delegation-guide">http://www.iana.org/domains/root/delegation-guide/</a>).</p>
+
+        <h3>Processes for ccTLD Delegations and Redelegations</h3>
+        <p>The steps for delegation and redelegation involve preparation of an initial request via a Change Request Template. In addition to the Change Request Template, supplementary information is required to show that the request meets the eligibility criteria. ICANN uses this information to corroborate the delegation or redelegation request. This documentation includes:</p>
+        <ul>
+            <li>Information showing the request serves the local interest in the country;</li>
+            <li>Documentation demonstrating the technical and administrative capabilities of the
+            organization receiving the delegation;</li>
+            <li>A description of the legal status of the organization;</li>
+            <li>The names of contacts in any in-country government agencies who have a say in the
+            delegation/redelegation;</li>
+            <li>A detailed description of how existing ccTLD operations will be transferred to the
+            proposed new operator, in the case of a redelegation;</li>
+            <li>Documentation showing that the new operator will operate the domain in a fair and
+            equitable manner; and,</li>
+            <li>The approvals of the current contacts for the TLD, in the case of a redelegation.</li>
+        </ul>
+        <p>Each of these requirements is described in more detail at the following website:</p>
+        <p><a href="http://www.iana.org/domains/root/delegation-guide">http://www.iana.org/domains/root/delegation-guide</a></p>
+
+        <h3>Existing measures of processing ccTLD Delegation and Redelegation requests</h3>
+        <p>In the performance of the IANA functions to date, ICANN has collected data that can be compiled for statistical analysis purposes on the process steps used for processing delegations and redelegations of ccTLDs. Distributed statistics derived from this data have included:</p>
+        <ul>
+            <li>Statistics published as part of the IANA-related measurements published on the “ICANN Dashboard”</li>
+            <li>Analysis included in the monthly contractual reporting transmitted to NTIA.</li>
+
+        </ul>
+
+       <h2>Proposed performance indicators for ccTLD Delegations and
+           Redelegations</h2>
+
+
+       <p>ICANN tracks the life cycle of each ccTLD delegation and redelegation request in its ticket tracking system. This includes all communications exchanged during each request, and the status of the request at any given time. This data can be used to derive measurements such as the end-to-end processing time of a request, plus the amount of time a given request was within a specific processing state. Historically there has been an expectation of confidentiality relating to pending root zone delegation and redelegation requests. This is an opportunity for interested and affected parties to express their level of comfort with increased or reduced transparency of root zone requests.</p>
+           <p>Some areas for performance indicators that ICANN has considered related to the ccTLD delegation and redelegation function are listed below, and ICANN is offering these as potential areas for Key Performance Indicators (KPI) in order to encourage discussion.</p>
+           <p>Aspects of performance standards that ICANN has identified as candidates for discussion are:</p>
+	<table class="iana-table">
+		<tr>
+			<th>Area</th>
+			<th>KPI</th>
+			<th>ICANN’s Internal Target</th>
+		</tr>
+		<tr>
+			<td>Timeliness</td>
+			<td>End-to-end processing times for the following categories:<ul><li>Delegations</li><li>Redelegations</li></ul></td>
+			<td>Meet target timelines for 80% of requests<ul><li>Sixty (60) business days for Delegations</li><li>Sixty (60) business days for
+                Redelegations</li></ul></td>
+		</tr>
+		<tr>
+			<td>Accuracy</td>
+			<td>Number of requests processed accurately 100% monthly for delegations and redelegations</td>
+			<td>100%</td>
+		</tr>
+	</table>
+        <p>In addition to the targets for measuring ICANN’s own performance. ICANN is proposing to publish a full set of measurements for ccTLD Delegations and Redelegations. This would include statistical averages for the performance for all parties involved in the process.</p>
+
+	<h2>Consultation Questions</h2>
+	<p>ICANN is seeking feedback on key performance standards for the IANA Function related to ccTLD Delegation and Redelegations. Please reference the table above for proposed metrics. Comments are welcome on any aspect of the key performance standards, and specifically on the following questions:</p>
+	<ol>
+		<li>What are the key performance standards that would be meaningful for delivering the ccTLD Delegation and Redelegation service?</li>
+		<li>What do you consider KPIs for successful performance of the ccTLD Delegation and Redelegation service?</li>
+		<li>In what formats would you like the results reported to the community?</li>
+        <li>Do you have additional input on suitable performance standards for the ccTLD Delegation and Redelegation service?</li>
+	</ol>
+	
+
+
+</div>
+
+<div id="sidebar_left">
+    <div class="navigation_box">
+        <h2>About us</h2>
+        <ul>
+            <li id="nav_about_top"><a href="/about">Introduction</a></li>
+            <li id="nav_about_performance"><a href="/performance">Performance Reporting</a></li>
+            <li id="nav_about_procedures"><a href="/procedures">Procedures</a></li>
+            <li id="nav_about_presentations"><a href="/about/presentations">Presentations</a></li>
+            <li id="nav_about_reports"><a href="/reports">Public Reports</a></li>
+            <li id="nav_about_framework"><a href="/about/framework">Framework Documents</a></li>
+            <li id="nav_about_reviews"><a href="/reviews">Reviews</a></li>
+            <li id="nav_about_audits"><a href="/about/audits">Audits</a></li>
+            <li id="nav_about_excellence"><a href="/about/excellence">Excellence &amp; Quality</a></li>
+            <li id="nav_about_glossary"><a href="/glossary">Glossary of terms</a></li>
+            <li id="nav_about_contact"><a href="/contact">Contact us</a></li>
+        </ul>
+    </div>
+</div>
+
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script xmlns="http://www.w3.org/1999/html">
+$(document).ready(function() {
+	$("#nav_about_reviews").addClass("selected")	
+});
+</script>
+
+	
+</body>
+
+</html>

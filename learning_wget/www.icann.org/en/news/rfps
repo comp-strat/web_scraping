@@ -1,0 +1,1830 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8" /><title>ICANN Requests for Proposals (RFPs) - ICANN</title><meta content="width=device-width, initial-scale=1.0" name="viewport" /><meta content="" name="description" /><meta content="" name="author" /><meta content="1151265" name="dnid" /><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><!--HTML5 shim, for IE6-8 support of HTML5 elements--><!--[if lt IE 9]
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>--><link rel="stylesheet" media="all" href="/assets/application-eccb7764fba4611b8b3b9b494ecc5732.css" />
+<!--[if lte IE 9]>
+<link rel="stylesheet" media="all" href="/assets/application_split2-16669b8b605095677cca2e25e7411b89.css" />
+<![endif]--><meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="MtrSwtr8begbPgHQYU0ZwvcajU+HKTQDiwa06acP42fgLm8yclx9yQem5AVq58hp/VnSb8jP2mrE6Lw74OqoEQ==" /><script type="text/javascript">(function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+{
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-25463847-1', 'auto');
+
+// Send pageview hit for all pages expect /search page
+// The /search pageview hit will be generated in the AngularJs doSearch(). See search_filter_ctrl.js.coffee
+if(document.location.pathname != '/search' && document.location.pathname != '/search/') {
+  ga('send', 'pageview');
+}</script><style type="text/css">body { display : none;} </style><base href="/resources/pages/rfps-2012-02-25-en" /></head><body><span external-links=""><a class="u-hiddenAndAccessible u-hiddenAndAccessible-shownOnFocus" href="#main-content">Skip to main content</a></span><header class="nav-collapse MainHeader" external_links=""><div class="ActionsBar--container"><div class="ActionsBar"><div class="i-alert"><svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewbox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M256,35.11L0,476.89h512L256,35.11z M256,93.484l205.216,354.138H50.786L256,93.484z M231.901,423.156h48.2v-46.583h-48.2  V423.156z M230.772,186.359v60.228l13.379,110.803h24.019l13.06-110.803v-60.228H230.772L230.772,186.359z" /></svg><div class="label">Pages under review </div></div><div id="alert"><span class="close"><svg enable-background="new 0 0 51.2 51.2" style="text-align: right; float: right; position: relative; width: 16px; top: 1%; right: 1%;" version="1.1" viewbox="0 0 51.2 51.2" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><switch><foreignobject height="1" requiredextensions="http://ns.adobe.com/AdobeIllustrator/10.0/" width="1" x="0" y="0" /><path d="M44.8 6.4C44.8 6.4 44.8 6.4 44.8 6.4l0 38.4c0 0 0 0 0 0H6.4c0 0 0 0 0 0V6.4c0 0 0 0 0 0H44.8zM44.8 0H6.4C2.9 0 0 2.9 0 6.4v38.4c0 3.5 2.9 6.4 6.4 6.4h38.4c3.5 0 6.4-2.9 6.4-6.4V6.4C51.2 2.9 48.3 0 44.8 0L44.8 0zM44.8 0 33.6 12.8l-8 8 -8-8 -4.8 4.8 8 8 -8 8 4.8 4.8 8-8 8 8 4.8-4.8 -8-8 8-8L33.6 12.8zM33.6 12.8" /></switch></svg></span><p class="title">Pages under review</p><p>As a result of the IANA Stewardship Transition, you may find some site content that is out of date. Please use the “Feedback” button in the bottom right corner of the page if you have questions or discover content that requires updating. </p></div><nav class="ActionsBar-primary"><ul class="Languages-list"><li class="Languages-item"><a href="/translations">English</a></li><li class="Languages-item"><a lang="ar" href="/ar">العربية</a></li><li class="Languages-item"><a lang="es" href="/es">Español</a></li><li class="Languages-item"><a lang="fr" href="/fr">Français</a></li><li class="Languages-item"><a lang="ru" href="/ru">Pусский</a></li><li class="Languages-item"><a lang="zh" href="/zh">中文</a></li></ul><ul class="Search"><li><div class="searchbox" ng-app="icannApp"><form ng-controller="SearchBarCtrl"><label class="hidden" for="search_text">Search ICANN.org</label><input type="search" name="search_text" id="search_text" value="" placeholder="Search ICANN.org" class="SearchBox-textField" ng-model="params.searchText" /><input type="submit" name="commit" value="&#xf002;" class="SearchBox-submit" ng-click="doSearch()" /></form></div></li></ul></nav><nav class="ActionsBar-secondary"><ul class="Actions"><li><a href="/users/sign_in">Log In</a></li><li><a href="/users/sign_up">Sign Up</a></li></ul></nav></div></div><div class="MainHeader-navigation" external-links=""><a class="MainHeader-logo" href="/"><img src="/assets/icann_logo-52672386035a35504af59606040687c8.png" alt="Icann logo" /></a><div class="menu-button"><span class="touch-button mobile-menu"><i class="navicon fa fa-bars fa-lg"></i></span></div><nav role="navigation"><div class="nav-item"><a class="nav-item-link" href="/get-started">Get Started</a><div class="nav-dropdown"><a href="/resources/pages/beginners-guides-2012-03-06-en">Beginner&#39;s Guide</a><a href="/en/about/participate/newcomers">Newcomers Program</a><a href="/en/about/participate/fellowships">Fellowship Program</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/news">News &amp; Media</a><div class="nav-dropdown"><a href="/news/announcements">Announcements</a><a href="/news/blog">Blog</a><a href="/news/multimedia">Multimedia</a><a href="/en/news/press">For Journalists</a><a href="/resources/pages/global-newsletter">Global Newsletters</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/policy">Policy</a><div class="nav-dropdown policy"><a href="/policy#what_is_policy">ICANN Policy</a><a href="/policy#how_is_policy_developed">Develop Policy</a><a href="/policy/implementation">Implement Policy</a><a href="/policy#updates">Policy Update</a><a href="/policy#participate">Participate</a><a href="/policy#staff">Team</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/public-comments">Public Comment</a><div class="nav-dropdown"><a href="/public-comments#open-public">Open</a><a href="/public-comments#closed-public">Recently Closed</a><a href="/resources/pages/upcoming-2012-02-25-en">Upcoming</a><a href="/public-comments/archive">Archive</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link active" href="/resources">Resources</a><div class="nav-dropdown"><a href="/resources/pages/board-of-directors-2014-03-19-en">Board</a><a href="/resources/pages/accountability-2012-02-25-en">Accountability &amp; Transparency</a><a href="/en/resources/registrars">Registrars</a><a href="/en/resources/registries">Registries</a><a href="/en/resources/compliance">Contractual Compliance</a><a href="/resources/pages/help-2012-02-03-en">Help</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/community">Community</a><div class="nav-dropdown"><a href="/community#groups">Groups</a><a href="/community/explore">Explore Profiles</a><a href="https://features.icann.org/calendar">Calendar</a><a href="/community/demographics">Demographics</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link stewardship" href="/stewardship-accountability">IANA Stewardship<br />&amp; Accountability          </a><div class="nav-dropdown"><a href="/iana-transition-fact-sheet">Fact Sheet</a><a href="/stewardship">IANA Stewardship Transition</a><a href="https://community.icann.org/display/acctcrosscomm/WS1+-+Enhancing+ICANN+Accountability">Enhancing ICANN Accountability</a><a href="/stewardship-implementation">Implementation</a><a href="/csc">Customer Standing Committee</a><a href="/rzerc">Root Zone Evolution Review Committee</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div></nav></div></header><main id="main-content"><section class="TopSection"><div class="l-rail"><div class="ResourcesMenu"><div class="resource-menu-title js-resource-menu-title">Resources<i class="navicon fa fa-chevron-down fa-lg"></i></div><ul selectable="a"><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/welcome-2012-02-25-en">About ICANN</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/learning-2012-02-25-en">Learning</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/factsheets-2012-02-25-en">Factsheets</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/beginners-guides-2012-03-06-en">Beginner&#39;s Guides</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/glossary-2014-02-03-en">Glossary</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/podcasts-2013-11-05-en">Podcasts</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-2013-11-05-en">Archive</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/participate-2012-02-25-en">Participate</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/what-2012-02-25-en">What ICANN Does</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/effect-2012-02-25-en">Effect on the Internet</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/now-2012-02-25-en">What&#39;s Going On Now</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/how-2012-02-25-en">How to Participate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/newcomers-2012-06-18-en">Newcomers Program</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/fellowships-2012-02-25-en">Fellowships</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/committee-2012-02-25-en">Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/terms-conditions-2012-02-25-en">Terms &amp; Conditions</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/presidents-corner">President&#39;s Corner </a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/management-organization-chart">ICANN Management Organization Chart</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/community/explore?profile_search[badge_filters][]=staff_badge">Staff</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&amp;cws=37">Careers</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/in-focus-2012-02-25-en">In Focus</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/continuity-2012-02-25-en">Continuity</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/dnssec-2012-02-25-en">DNSSEC</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/standards-2012-02-25-en">Standards</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://www.iana.org/dnssec">IANA DNSSEC Root Information</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://stats.research.icann.org/dns/tld_report/">TLD DNSSEC Report</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://stats.research.icann.org/dns/tld_report/">Root Deployment</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/deployment-2012-02-25-en">Registrar Deployment</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/deployment-tlds-2012-02-25-en">Deployment Map</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/deployment-graph-2012-02-25-en">Deployment Graph</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/tools-2012-02-25-en">Tools</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/training-2012-02-25-en">Training</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://www.iana.org/dnssec/ceremonies">Key Ceremony</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/news-2012-02-25-en">News</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/blog-posts-2012-02-25-en">Blog Posts</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/presentations-ed-2012-02-25-en">Presentations</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/related-2012-02-25-en">Related Sites</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://gnso.icann.org/en/group-activities/inactive/2012/improvements">GNSO Improvements</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/travel-support-2012-02-25-en">Travel Support</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/whois-recommendations-implementation-2013-04-26-en">WHOIS Policy Review Team Recommendations - Implementation</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/press-2014-03-17-en">For Journalists</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/materials-2014-03-20-en">Releases &amp; Advisories</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/resources-2013-06-26-en">Resources</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/board-of-directors">Board</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/documents-2014-03-24-en">Board Activity</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://features.icann.org/resolutions">Resolutions</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://features.icann.org/board-advice">Recommendations to the Board</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/2017-board-meetings-2017-01-23-en">Board Meetings</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2017-board-meetings-2017-01-23-en">2017</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2016-board-meetings">2016</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/meetings-2014-01-06-en">2015</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2014-2015-01-28-en">2014</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2013-51-2012-02-25-en">2013</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2012-2012-12-10-en">2012</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2011-b4-2012-02-25-en">2011</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2010-2012-02-25-en">2010</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2009-2012-02-25-en">2009</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2008-2012-02-25-en">2008</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2007-2012-02-25-en">2007</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2006-2012-02-25-en">2006</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2005-2012-02-25-en">2005</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2004-2012-02-25-en">2004</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2003-2012-02-25-en">2003</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2002-2012-02-25-en">2002</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2001-2012-02-25-en">2001</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2000-2012-02-25-en">2000</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/1999-2012-02-25-en">1999</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/1998-2012-02-25-en">1998</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/audit-committee-2014-03-21-en">Audit Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/compensation-committee-2014-03-21-en">Compensation Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/executive-committee-2014-03-21-en">Executive Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/finance-committee-2014-03-21-en">Finance Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/governance-committee-2014-03-21-en">Governance Committee</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/organizational-effectiveness-committee-2014-03-21-en">Organizational Effectiveness Committee</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/new-gtld-2012-10-05-en">Impact of the New gTLD Program</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/risk-committee-2014-03-21-en">Risk Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/past-committees-2015-11-18-en">Past Committees</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/accountability">Accountability</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/mechanisms-2014-03-20-en">Accountability Mechanisms</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/reconsideration-2012-02-25-en">Reconsideration</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/ombudsman-2012-02-25-en">Ombudsman</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/about-2012-02-25-en">About</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/program-2012-02-25-en">Program</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/framework-2012-02-25-en">Framework</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/odr-standards-of-practice-2012-02-25-en">Standards of Practice</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/respectful-communication-2012-02-25-en">Respectful Communication</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/reports-96-2012-02-25-en">Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/speeches-2012-02-25-en">Speeches</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/links-2012-02-25-en">Links</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/questions-2012-02-25-en">Questions</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/irp-2012-02-25-en">Independent Review</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/transparency-2012-02-25-en">Document Disclosure</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/didp-2012-02-25-en">Disclosure Policy</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/en/system/files/files/didp-response-process-29oct13-en.pdf">DIDP Response Process</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/reviews">Reviews</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/reviews/org">Organizational Reviews</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/alac">ALAC</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/aso">ASO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/board">Board</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/ccnso">ccNSO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/gnso">GNSO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/nomcom">Nominating Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/rssac">RSSAC</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/ssac">SSAC</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/tlg">Technical Liaison Group</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/reviews/specific-reviews">Specific Reviews</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/specific-reviews/atrt">Accountability &amp; Transparency </a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/specific-reviews/whois">Registration Directory Service</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/specific-reviews/ssr">Security, Stability, and Resiliency</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/specific-reviews/cct">Competition, Consumer Trust &amp; Consumer Choice</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/cct-metrics-2016-06-27-en">CCT Metrics</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/expected-standards-2016-06-28-en">Expected Standards of Behavior</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://community.icann.org/x/ogDxAg">Enhancing ICANN Accountability and Governance</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu arrow-expanded "></div><a class=" is-selected is-opened" href="/resources/pages/governance-2012-02-25-en">Governance</a></div><ul class="u-marginLl"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/governance-2012-02-25-en">Governance Documents</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/guidelines-2012-05-15-en">Guidelines</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/governance/articles-en">Articles of Incorporation</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/governance/articles-en">Current</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/articles-2012-02-25-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/governance/bylaws-en">Bylaws</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/governance/bylaws-en">Current Bylaws</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-bc-2012-02-25-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/code-of-conduct-2012-05-15-en">Board Code of Conduct</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/coi-2012-02-25-en">Board Conflicts of Interest Policy</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/sois-2012-02-25-en">Board Statements of Interest</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/lobbying-disclosures-contributions-2015-11-18-en">Lobbying Disclosures &amp; Contribution Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/files/summary-ethics-review-2013-05-13-en">Summary of Conflicts of Interest and Ethics Practices Review</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/agreements-2012-02-25-en">Agreements</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/transition-2014-03-23-en">NTIA IANA Functions&#39; Stewardship Transition</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/draft-proposal-2014-04-08-en">Call for Public Input: Draft Process to Develop the Proposal (8 April-8 May 2014</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/process-next-steps-2014-06-06-en">Process to Develop the Proposal and Next Steps</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://forms.icann.org/en/icg">Selected Coordination Group Members - Submission form</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/registries-2012-02-25-en">Registry</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-54-2012-02-25-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/aoc-2012-02-25-en">Affirmation of Commitments</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://aoctracking.icann.org/">AOC Tracking</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/cctlds-2012-02-25-en">ccTLD</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/partnership-mous-2012-02-25-en">Partnership Memorandums of Understanding</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/registrars-2012-02-25-en">Registrar</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-59-2012-02-25-en">Archive</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/annual-report-2012-02-25-en">Annual Reports</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/financials-2012-02-25-en">Financials</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/current-2012-02-25-en">Financial Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/general-2014-01-06-en">Policies, Guidelines and Procedures</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/planning-2012-02-25-en">Planning</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/strategic-engagement-2013-10-10-en">Strategic Plan</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/introduction-2013-06-14-en">Five-Year Operating Plan</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/operating-plan-budget-2015-06-12-en">Annual Operating Plan &amp; Budget</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/achievement-progress-reporting-2015-08-07-en">Achievement and Progress Reporting</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/continuous-improvement">Continuous Improvement</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/progress">Dashboard Beta</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://features.icann.org/plan">Portfolio Management System</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/planning-historical-2014-11-06-en">Historical</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/planning-calendar-2017-02-14-en">Community Roles and Responsibilities</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-a1-2012-02-25-en">Presentations</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light is-selected is-opened" href="/resources/pages/rfps-2012-02-25-en">RFPs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/litigation-2012-02-25-en">Litigation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/newsletter-2014-03-18-en">Newsletter</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/correspondence-2012-09-24-en">Correspondence</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/correspondence-2012-09-24-en">2017</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/correspondence-2016-2017-01-06-en">2016</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/correspondence-2015-2016-01-13-en">2015</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2014-2014-01-24-en">2014</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2013-2014-01-24-en">2013</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2012-2013-01-10-en">2012</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2011-2012-02-25-en">2011</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2010-2012-10-11-en">2010</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2009-2012-10-11-en">2009</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2008-2012-10-11-en">2008</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2007-2012-10-11-en">2007</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2006-2012-10-11-en">2006</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2005-2012-10-11-en">2005</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2004-2012-10-11-en">2004</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2003-2012-10-11-en">2003</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2002-2012-10-11-en">2002</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2001-2012-10-11-en">2001</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2000-2012-10-11-en">2000</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/1999-2012-10-11-en">1999</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/1998-2012-10-11-en">1998</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/quarterly-reports-2014-11-13-en">Quarterly Reports</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/groups-2012-02-06-en">Groups</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/rssac-4c-2012-02-25-en">RSSAC</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/charter-2013-07-14-en">Charter</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/ssac-2012-02-25-en">SSAC</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/charter-1f-2012-02-25-en">Charter</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ssac-correspondence-2016-01-08-en">Correspondence</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/documents-2012-02-25-en">Documents</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/discussions-2012-02-25-en">Discussions</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/documents-by-category-2012-02-25-en">Documents by Category and Charter Task</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/projects-2012-02-25-en">Projects</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/reading-2012-02-25-en">Reading</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/workplan-activities-2012-02-25-en">Workplan &amp; Activities</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://gacweb.icann.org/display/gacweb/Governmental+Advisory+Committee">GAC</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://atlarge.icann.org/">At-Large</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://aso.icann.org/">ASO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://ccnso.icann.org/">ccNSO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://gnso.icann.org/en/">GNSO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/tlg-73-2012-02-25-en">Technical Liaison Group</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/nomcom-2013-12-13-en">NomCom</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/nomcom2017-2016-12-13-en">2017 NomCom</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-conduct-2016-12-13-en">Code of Conduct</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-guidelines-2016-12-13-en">Guidelines</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-procedures-2017-02-07-en">Operating Procedures</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="https://forms.icann.org/en/groups/nomcom/apply">Apply – ICANN</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-invitation-2017-01-11-en">Invitation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-positions-2017-01-11-en">Positions</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="https://forms.icann.org/en/groups/nomcom/apply-pti">Apply – PTI</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-pti-invitation-2017-02-07-en">Invitation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-pti-positions-2017-02-07-en">Positions</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://forms.icann.org/en/groups/nomcom/suggest">Suggest a Candidate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom-archive-2014-05-05-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://www.icann.org/csc">Customer Standing Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://www.icann.org/rzerc">Root Zone Evaluation Review Committee (RZERC)</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><a class=" " href="/resources/pages/business">Business</a></div></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><a class=" " href="/resources/pages/civil-society-2016-05-24-en">Civil Society</a></div></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/compliance-2012-02-25-en">Contractual Compliance</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/about-2014-10-10-en">About</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/compliance-programs">Programs</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/approach-processes-2012-02-25-en">Approach &amp; Process</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/gtld-2012-02-25-en">gTLD Registry Compliance</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-2012-02-25-en">Accredited Registrar Compliance</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/audits-2012-02-25-en">Audit</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/faqs-84-2012-02-25-en">General Questions</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/complaints-2013-03-22-en">Complaint Submission &amp; Learn More</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/compliance-reporting-performance">Reporting &amp; Performance Measurement</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/compliance/notices">Notices</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-8c-2012-02-25-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://features.icann.org/compliance">Performance Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/compliance-reports-2016-04-15-en">Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/compliance/outreach">Outreach</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/registrars-0d-2012-02-25-en">Registrars</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/updates-2012-02-25-en">Changes to Existing Accreditation</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/renewing-2013-07-08-en">Renewing an Existing Accreditation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/terminating-2013-07-08-en">Terminating an Accreditation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/transferring-2013-07-08-en">Transferring (Assigning) an ICANN Accreditation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/purchasing-2013-07-08-en">Purchasing an ICANN-Accredited Registrar</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/name-change-2013-07-08-en">Registrar Name Changes</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/merger-2013-07-08-en">Registrar Mergers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-contact-updates-2015-09-22-en">Registrar Primary Contact Updates</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/retention-2013-09-13-en">Data Retention Waiver</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/application-2012-02-25-en">Application</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/accreditation-2012-02-25-en">How to Become a Registrar</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-training-resources-2015-09-23-en">Registrar Training</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrars-2012-02-25-en">Accreditation Agreement</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/instructions-2014-02-05-en">Instructions</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/advisories-2012-02-25-en">Advisories</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/consensus-policies-2012-02-25-en">Consensus Policies</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/agreements-policies-2012-02-25-en">Agreements &amp; Policies</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/policy-statement-2012-02-25-en">Policy Statement</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/transfers-2012-02-25-en">Domain Name Transfers</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/policy-transfers-2014-07-02-en">Policy</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/name-holder-faqs-2012-02-25-en">Domain Name Holder FAQs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-faqs-2004-11-03-en">Registrar FAQs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/text-2012-02-25-en">Inter-Registrar Transfer Information</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/registrant-rights-2013-09-16-en">Registrant Rights</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/educational-2012-02-25-en">Registrant Educational Materials</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/benefits-2013-09-16-en">Registrants&#39; Benefits and Responsibilities</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/history-2012-02-25-en">History</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/whois-policies-provisions-2013-04-15-en">Whois-Related Policies and Provisions</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/more-2013-07-08-en">Resources for Registrars</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/gtld-lifecycle-2012-02-25-en">gTLD Lifecycle</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://www.icann.org/registrar-reports/accreditation-qualified-list.html">Contact List</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/whois-privacy-conflicts-procedure-2008-01-17-en">Whois/Privacy Law Conflicts</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-data-escrow-2015-12-01-en">Registrar Data Escrow</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-compliance-certificate-2015-12-09-en">Annual Registrar Compliance Certificate</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/registries-46-2012-02-25-en">Registries</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/registries-2012-02-25-en">Agreements</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-54-2012-02-25-en">Archived Registry Agreements</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/global-amendment-base-new-gtld-registry-agreement-2017-01-23-en">Global Amendment to the Base New gTLD Registry Agreement </a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/terminated-registry-agreements-2016-03-02-en">Terminated Registry Agreements</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/advisories-2012-02-25-en">Advisories</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/assignments">Assignments</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/change-of-control">Change of Control of Registry Operator</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registry-agreement-assignment-direct-changes-of-control-2017-01-27-en">List of Completed Direct Changes of Control</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/material-subcontracting-arrangement">Material Subcontracting Arrangement</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/consensus-policies-2012-02-25-en">Consensus Policies</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/contact-f2-2012-02-25-en">Contact</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/coi-2015-09-28-en">Continued Operations Instrument (COI)</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/coi-amend-service-faqs-2015-09-28-en">Amendment Service FAQ</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/continuity-77-2012-02-25-en">Continuity</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-57-2012-02-25-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/czds-2014-03-03-en">CZDS</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/ebero-2013-04-02-en">Emergency Back-end Registry Operator</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/faqs-2013-04-02-en">FAQs</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/ersr-2012-02-25-en">Expedited Registry Security Request Process</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://www.icann.org/en/resources/registries/ersr/contact">Contact</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/listing-2012-02-25-en">List of Registries</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/tlds-2012-02-25-en">List of Top-Level Domains</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registry-reports-2016-03-22-en">Monthly Registry Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://newgtlds.icann.org/en/">New gTLDs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/pddrp-2014-01-09-en">PDDRP</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/picdrp-2014-01-09-en">PICDRP</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/poc-2012-02-25-en">Proof of Concept Reports</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/aero-2012-02-25-en">.aero</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/biz-2012-02-25-en">.biz</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/coop-2012-02-25-en">.coop</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/info-2012-02-25-en">.info</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/museum-2012-02-25-en">.museum</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/name-2012-02-25-en">.name</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/pro-2012-02-25-en">.pro</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rrdrp-2014-01-09-en">RRDRP</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registries-faqs-2014-08-08-en">Registries FAQs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/gtld-registry-agreement-termination-2015-10-09-en">Registry Agreement Termination Information Page</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registry-operator-name-change-2015-12-23-en">Registry Operator Name Change</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/rsep-2014-02-19-en">Registry Service Evaluation Process</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/announcements-2012-02-25-en">Announcements</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/policy-bd-2012-02-25-en">Policy</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/workflow-2012-02-25-en">Workflow</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/reconciliation-2012-02-25-en">Reconciliation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/prelim-competition-issues-2012-02-25-en">Preliminary Determination Of Competition Issues</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/technical-evaluation-panel-2012-02-25-en">Techical Evaluation Panel</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/implementation-notes-2012-02-25-en">Implementation Notes</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/transition-processes-2013-04-22-en">Registry Transition Processes</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-2013-04-23-en">EBERO Temporary Transition Process</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-communicate-2013-04-23-en">EBERO Transition Process - Communicate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-dns-2013-04-23-en">EBERO Transition Process - DNS</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-data-escrow-2013-04-23-en">EBERO Transition Process - Data Escrow</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-rdds-2013-04-23-en">EBERO Transition Process - RDDS</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-srs-2013-04-23-en">EBERO Transition Process - SRS</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/prospective-evaluation-2013-04-22-en">Prospective Registry Evaluation Matrix</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/proposed-successor-check-support-2013-04-23-en">Registry Transition Process with Proposed Successor - Check Support</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/proposed-successor-communicate-2013-04-23-en">Registry Transition Process with Proposed Successor - Communicate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/proposed-successor-evaluate-2013-04-23-en">Registry Transition Process with Proposed Successor - Evaluate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/proposed-successor-2013-04-23-en">Registry Transition Process with Proposed Successor</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfp-check-support-2013-04-23-en">Registry Transition Process with Request for Proposals - Check Support</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfp-communicate-2013-04-23-en">Registry Transition Process with Request for Proposals - Communicate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfp-evaluate-2013-04-23-en">Registry Transition Process with Request for Proposals - Evaluate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfp2-2013-04-23-en">Registry Transition Process with Request for Proposals - RFP</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfp-2013-04-23-en">Registry Transition Process with Request for Proposals</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/removal-cross-ownership-2012-02-28-en">Removal of Cross-Ownership Restrictions</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/reserved-2013-07-08-en">Reserved Names</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/two-character-labels-2016-12-13-en">Two-Character ASCII Labels</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/country-territory-names-2015-10-12-en">Country &amp; Territory Names</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://www.icann.org/resources/two-character-labels-archive">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rra-amendment-procedure-2015-04-06-en">RRA Amendment Procedure</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/tmch-requirements-2014-01-09-en">Trademark Clearinghouse Requirements</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/urs-2014-01-09-en">URS</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><a class=" " href="/resources/pages/metrics-gdd-2015-01-30-en">GDD Metrics</a></div></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/is-ssr-2014-11-24-en">Identifier Systems Security, Stability and Resiliency (IS-SSR)</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/security-awareness-resource-2014-12-04-en">Security Awareness</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/security-2012-02-25-en">Security Team</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/is-ssr-blogs-2015-12-16-en">Security Team Blogs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/security-terminology-2015-09-16-en">Security Terminology</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-2012-10-05-en">Document Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/cctlds-21-2012-02-25-en">ccTLDs</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/background-2012-02-25-en">Background Materials</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/cctlds-2012-02-25-en">Agreements</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources">Delegation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://www.iana.org/domains/root/db">Root Zone Database</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/model-mous-2012-02-25-en">Model MOU</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/workshops-2012-02-25-en">Workshops</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/icann-iso-3166-2012-05-09-en">ICANN and ISO</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/idn-2012-02-25-en">Internationalized Domain Names</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/root-zone-lgr-2015-06-21-en">Root Zone Label Generation Rules (LGR)</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/generation-panel-2015-06-21-en">Generation Panel Update</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/msr-2015-06-21-en">Maximal Starting Repertoire</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/lgr-toolset-2015-06-21-en">LGR Toolset</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/fast-track-2012-02-25-en">IDN ccTLD Fast Track</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/implementation-guidelines-2012-02-25-en">IDN Implementation Guidelines</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/second-level-lgr-2015-06-21-en">Second-Level LGR Reference</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/more-2012-05-08-en">Resources</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfcs-2012-02-25-en">RFCs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/video-2012-02-26-en">Videos</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://blog.icann.org/category/idns/">Blog Posts</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/committees-wgs-2012-02-25-en">Committees &amp; Working Groups</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/presentations-cd-2012-02-25-en">Presentations</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/fora-2012-02-25-en">Fora</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/announcements-2014-02-19-en">Announcements</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/universal-acceptance-2012-02-25-en">Universal Acceptance Initiative</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/universal-acceptance-faqs-2014-09-26-en">Frequently Asked Questions: Universal Acceptance</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/universal-acceptance-initiative-2014-10-03-en">Roadmap</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/policy-01-2012-02-25-en">Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/mission-2012-08-27-en">Policy Mission</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/staff-goals-2012-08-27-en">Policy Staff Goals</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/presentations-2012-08-27-en">Presentations</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/global-addressing-2012-02-25-en">Global Addressing</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/allocation-ipv6-rirs-2012-02-25-en">IPv6 Allocation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/global-policy-asn-blocks-2010-09-21-en">ASN Allocation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/allocation-ipv4-post-exhaustion-2012-05-08-en">Post Exhaustion IPv4 Allocation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/new-rirs-criteria-2012-02-25-en">New RIRs Criteria</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/review-procedures-2012-02-25-en">Review Procedures</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/update-2014-02-20-en">Policy Updates</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/public-comments">Public Comment</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/public-comments#open-public">Open</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/public-comments#upcoming-public">Upcoming</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://www.icann.org/public-comments/archive">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><a class=" " href="/resources/pages/ksk-rollover-2016-05-06-en">Root Zone KSK Rollover</a></div></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/technical-functions-2015-10-15-en">Technical Functions</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/tech-day-archive-2015-10-15-en">Tech Day Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/contact">Contact</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://forms.icann.org/en/contact">Contact Form</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/security-2012-02-25-en">Security Team</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/pgp-keys-2012-02-25-en">PGP Keys</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/certificate-authority-2012-02-25-en">Certificate Authority</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/contact-f2-2012-02-25-en">Registry Liaison</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/contact-2012-02-25-en">Ombudsman</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/help-2012-02-03-en">Help</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/dispute-resolution-2012-02-25-en">Dispute Resolution</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/dndr-2012-02-25-en">Domain Name Dispute Resolution</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/cedrp-2012-02-25-en">Charter Eligibility Dispute Resolution Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-b7-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-fd-2012-02-25-en">Rules</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/erdrp-2012-02-25-en">Eligibility Requirements Dispute Resolution Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-65-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-c0-2012-02-25-en">Rules</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/ipdrcp-2012-02-25-en">Intellectual Property Defensive Registration Challenge Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-41-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-4d-2012-02-25-en">Rules</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/proqcp-2012-02-25-en">Qualification Challenge Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-2012-02-25-en">Rules</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/rdrp-2012-02-25-en">Restrictions Dispute Resolution Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-85-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-4b-2012-02-25-en">Rules</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/tdrp-2012-02-25-en">Transfer Dispute Resolution Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-fc-2012-02-25-en">Providers</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/udrp-2012-02-25-en">Uniform Domain Name Dispute Resolution Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/policy-2012-02-25-en">Policy Document</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-6d-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/provider-approval-process-2012-02-25-en">Provider Approval Process</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-be-2012-02-25-en">Rules</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/principal-2012-02-25-en">Principal Documents</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/proceedings-2012-02-25-en">Proceedings</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/historical-2f-2012-02-25-en">Historical Documents</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/schedule-2012-02-25-en">Timeline</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/name-collision-2013-12-06-en">Name Collision</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/name-collision-it-pros-faqs-2014-08-01-en">FAQ: IT Professionals</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/name-collision-ro-faqs-2014-08-01-en">FAQ: Registries</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/mitigation-2013-12-17-en">Guide for IT Professionals</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/cctld-mitigation-2014-10-02-en">Recommendations for New ccTLDs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://www.icann.org/en/help/name-collision/report-problems">Report a Problem</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/news/announcement-2007-03-06-en">Registrar Problems</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/dispute-resolution-2012-02-25-en">Whois Data Correction</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/irp-questions-2010-06-19-en">Independent Review Process</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/reconsideration-2012-02-25-en">Request for Reconsideration</a></div></li></ul></li></ul></div></div><div class="l-main-with-rail resources-landingPage"><div><section dir="ltr" external_links=""><h1 class="LibraryIntro">ICANN Requests for Proposals (RFPs)</h1><div class="EmbeddedHTML"><html><body>
+<h3>2017 Open RFPs</h3>
+<p><a href="/en/announcement-19jan17-en">Request for Proposal: NomCom Review</a> (19 January 17)<br>
+	<a href="/en/system/files/files/rfp-nomcom-review-19jan17-en.pdf">RFP Overview</a> [PDF, 548 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking a provider to conduct an independent assessment of its Nominating Committee (<a href="/nomcom2016">NomCom</a>).</p>
+<p>The Nominating Committee (NomCom) is an independent committee tasked with selecting members of the Board of Directors as well as other key positions within ICANN's structure.</p>
+<p>It is designed to function independently from the ICANN Board, Supporting Organizations, and Advisory Committees. NomCom members act only on behalf of the interests of the global Internet community and within the scope of the ICANN mission and responsibilities assigned to it by the ICANN Bylaws.</p>
+<p>NomCom members contribute understanding of the broad interests of the Internet community as a whole, and knowledge and experience of specific Internet constituencies who have appointed them.</p>
+<p>The objective of this RFP is to identify an independent assessor to conduct a comprehensive assessment of the NomCom including (but not limited to) the continued purpose of the NomCom within the ICANN structure; how effectively the NomCom fulfills its purpose and whether any change in structure or operations is needed; and the extent to which the NomCom as a whole is accountable to the wider ICANN community.</p>
+<p>The Review is scheduled to take place from 17 April 2017 through 31 May 2018.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Estimated Dates</strong></th>
+		<th><strong>Lead</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>19 January 2017</td>
+		<td>ICANN Procurement Department + Multistakeholder Strategy and Strategic Initiatives ("MSSI") Staff</td>
+	</tr>
+	<tr>
+		<td><strong>Participants to indicate interest in submitting RFP proposal</strong></td>
+		<td><strong>30 January 2017</strong></td>
+		<td><strong>RFP Candidates</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any RFP-related questions to ICANN</strong></td>
+		<td><strong>3 February 2017 by 23:59 PST</strong></td>
+		<td><strong>RFP Candidates</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions</td>
+		<td>10 February 2017</td>
+		<td>ICANN Organization</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Proposals due date</strong></span></td>
+		<td><span style="color: #f00;"><strong>17 February 2017 by 23:59 PST</strong></span></td>
+		<td><span style="color: #f00;"><strong>RFP Candidates</strong></span></td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>20-28 February 2017</td>
+		<td>ICANN Organization</td>
+	</tr>
+	<tr>
+		<td>Target for participant presentations (finalists)</td>
+		<td>6-10 March 2017</td>
+		<td>RFP Candidates/ICANN Organization</td>
+	</tr>
+	<tr>
+		<td>Target for final evaluations, contracting and award</td>
+		<td>7 April 2017</td>
+		<td>ICANN Organization</td>
+	</tr>
+	<tr>
+		<td><strong>Start of Review</strong></td>
+		<td><strong>17 April 2017</strong></td>
+		<td><strong>Independent Examiner/MSSI Staff</strong></td>
+	</tr>
+	<tr>
+		<td>Draft Report for Review Working Party consideration</td>
+		<td>8 January 2018</td>
+		<td>Independent Examiner</td>
+	</tr>
+	<tr>
+		<td>Draft Report for Public Comment</td>
+		<td>22 January 2018</td>
+		<td>ICANN Organization</td>
+	</tr>
+	<tr>
+		<td>Provide Self-Evaluation of 2007/8 Review recommendations</td>
+		<td>5 March 2018</td>
+		<td>NomCom Working Party</td>
+	</tr>
+	<tr>
+		<td>Final Report for discussion with the Review Working Party</td>
+		<td>28 April 2018</td>
+		<td>Independent Examiner</td>
+	</tr>
+	<tr>
+		<td><strong>Final Report issued and posted</strong></td>
+		<td><strong>31 May 2018</strong></td>
+		<td><strong>Independent Examiner/ ICANN Organization</strong></td>
+	</tr>
+</table>
+<p>Indications of interest are to be received by emailing <a href="mailto:NomComReview-RFP@icann.org">NomComReview-RFP@icann.org</a>. Proposals should be electronically submitted by 23:59 PST on 17 February 2017 using ICANN's sourcing tool, access to which may be requested via the same email address above.</p>
+<p><strong>Opened:</strong> 19 January 2017<br>
+	<strong>Deadline:</strong> 17 February 2017</p>
+<hr>
+<p><a href="/news/announcement-2017-01-09-en">Request for Proposal: Assessment of the ICANN Office of Ombudsman</a> (9 January 17)<br>
+	<a href="/en/system/files/files/rfp-ombudsman-assessment-09jan17-en.pdf">RFP Overview</a> [PDF, 589 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking a provider to conduct an independent assessment of the Office of the Ombudsman (<a href="/ombudsman">Ombudsman</a>).</p>
+<p>The Ombudsman serves an important function; he acts as an informal dispute resolution office for the ICANN community, who may wish to lodge a complaint about ICANN staff, board or problems in supporting organizations. The purpose of the office is to ensure that the members of the ICANN community have been treated fairly.</p>
+<p>The objective of this RFP is to identify an independent assessor to conduct a comprehensive assessment of the current Office of the Ombudsman charter and operations, including its unique role in the ICANN community, against relevant best practices and provide recommendations necessary to ensure that the Office of the Ombudsman has the tools, independence, and authority needed to be an effective voice for ICANN stakeholders.</p>
+<p>The Review is scheduled to take place from 1 March 2017 through 15 April 2017.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Estimated Dates</strong></th>
+		<th><strong>Lead</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published </td>
+		<td>9 January 2017</td>
+		<td>Multistakeholder Strategy and Strategic Initiatives Staff (MSSI)</td>
+	</tr>
+	<tr>
+		<td>Participants submit any RFP-related questions to ICANN </td>
+		<td><strong>20 January 2017 by 23:59 PST</strong></td>
+		<td>RFP Candidates</td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions </td>
+		<td><strong>25 January 2017</strong></td>
+		<td>ICANN Organization </td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>RFP due date</strong></span></td>
+		<td><span style="color: #f00;"><strong>31 January 2017 by 23:59 PST</strong></span></td>
+		<td><strong>RFP Candidates</strong></td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>1 February-8 February 2017</td>
+		<td>ICANN Organization, with input from the IOO-DT</td>
+	</tr>
+	<tr>
+		<td>Target for final evaluations, contracting and award</td>
+		<td>20 February 2017</td>
+		<td>ICANN Organization, with input from the IOO-DT</td>
+	</tr>
+	<tr>
+		<td><strong>Start of Review</strong></td>
+		<td><strong>1 March 2017</strong></td>
+		<td><strong>Independent Examiner/MSSI Staff</strong></td>
+	</tr>
+	<tr>
+		<td>Final Report for discussion with the Ombudsman Subgroup</td>
+		<td>1 April</td>
+		<td>Independent Examiner</td>
+	</tr>
+	<tr>
+		<td><strong>Final Report issued and posted</strong></td>
+		<td><strong>15 April 2017</strong></td>
+		<td><strong>Independent Examiner/ ICANN Organization </strong></td>
+	</tr>
+</table>
+<p>Indications of interest are to be received by emailing <a href="mailto:OmbudsmanAssessment-RFP@icann.org">OmbudsmanAssessment-RFP@icann.org</a>. Proposals should be electronically submitted by 23:59 PST on 31 January 2017 using ICANN's sourcing tool, access to which may be requested via the same email address above.</p>
+<p><strong>Opened:</strong> 9 January 2017<br>
+	<strong>Deadline:</strong> 31 January 2017</p>
+<hr>
+<h3>2016 Open RFPs</h3>
+<p><a href="/news/announcement-2-2016-12-12-en">Request for Proposal: Real-time Transcription Services</a> (9 December 16)<br>
+	<a href="/en/system/files/files/rfp-rtt-project-overview-09dec16-en.pdf">RFP Overview</a> [PDF, 244 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is soliciting proposals from various vendors to identify one or more additional suppliers qualified to provide Real-Time Transcription (RTT) service (also referred to as Computer Assisted Real-Time Translation - CART). The services shall be provided both remotely from the supplier's location as well as on-site at ICANN's World Headquarters in Los Angeles, CA. Providers shall also be required to provide corrected post-meeting transcripts. The service serves ICANN's Board and other select community meetings and are published as the meeting minutes of record.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<colgroup>
+	<col style="width: 60%;">
+	<col style="width: 40%;">
+	</colgroup>
+	<tr>
+		<td><p align="center"><strong>Activity</strong></p></td>
+		<td><p align="center"><strong>Dates</strong></p></td>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>9 December 2016</td>
+	</tr>
+	<tr>
+		<td><strong>Participants to indicate interest in submitting RFP proposal</strong></td>
+		<td><strong>16 December 2016 by 23:59 PST</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any questions to ICANN</strong></td>
+		<td><strong>16 December 2016 by 23:59 PST</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions</td>
+		<td>20 December 2016</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participant RFP proposals due by</strong></span></td>
+		<td><span style="color: #f00;"><strong>9 January 2017 by 23:59 PST</strong></span></td>
+	</tr>
+	<tr>
+		<td>Initial evaluation of responses</td>
+		<td>10 January to 3 February</td>
+	</tr>
+	<tr>
+		<td>Final evaluations, contracting and award</td>
+		<td> 6 February to 17 February</td>
+	</tr>
+</table>
+<p>Indications of interest are to be received by 23:59 PST on 16 December 2016 by emailing <a href="mailto:RealtimeTranscription-RFP@icann.org">RealtimeTranscription-RFP@icann.org</a>. Proposals should be electronically submitted by 23:59 PST on 9 January 2017 using ICANN's sourcing tool, access to which may be requested via the same email address above. Submissions should be provided using supplied templates, supplemented by additional information, as necessary.</p>
+<p><strong>Opened:</strong> 9 December 2016<br>
+	<strong>Deadline:</strong> 9 January 2017</p>
+<hr>
+<h3>2016 Closed RFPs</h3>
+<p><a href="/news/announcement-2016-08-02-en">Request for Proposal: DNS Abuse Study</a> (2 August 16)<br>
+	<a href="/en/system/files/files/rfp-dns-abuse-study-02aug16-en.pdf">RFP Overview</a> [PDF, 244 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers' ("ICANN") New Generic Top-Level Domain (gTLD) Program has enabled hundreds of new generic top-level domains to enter into the domain name system (DNS) since the first delegations occurred in October 2013.</p>
+<p>A number of safeguards were built into the Program that were intended to mitigate rates of abusive, malicious, and criminal activity in these new gTLDs, such as <strong>phishing, spam, malware distribution, and botnet command-and-control</strong>. ICANN is currently engaged in a review of these safeguards and their effects on rates of DNS abuse, and <strong>is seeking a provider to conduct a study examining rates of malicious and abusive behavior in the global DNS</strong>.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<colgroup>
+	<col style="width: 60%;">
+	<col style="width: 40%;">
+	</colgroup>
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>2 August 2016</td>
+	</tr>
+	<tr>
+		<td><strong>Participants to indicate interest and submit any questions to ICANN via the ICANN Sourcing tool</strong></td>
+		<td><strong>12 August 2016 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions</td>
+		<td>19 August 2016</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participant RFP proposals due by</strong></span></td>
+		<td><span style="color: #f00;"><strong>25 August 2016 by 23:59 UTC</strong></span></td>
+	</tr>
+	<tr>
+		<td>Initial evaluation of responses</td>
+		<td>26 August thru 10 September 2016</td>
+	</tr>
+	<tr>
+		<td>Supplier presentations including Q&amp;A via conference call/remote participation with shortlisted candidates</td>
+		<td>13 thru 16 September 2016</td>
+	</tr>
+	<tr>
+		<td>Final evaluations and selection of supplier (includes negotiations, contracting and award)</td>
+		<td> 19 September thru 14 October 2016 </td>
+	</tr>
+	<tr>
+		<td><strong>Estimated start of study</strong></td>
+		<td><strong>17 October 2016</strong></td>
+	</tr>
+</table>
+<p>Indications of interest are to be received by 23:59 UTC on <strong>12 August 2016</strong> by emailing <a href="mailto:DNSAbuse-Study-RFP@icann.org">DNSAbuse-Study-RFP@icann.org</a>. <strong>Proposals should be electronically submitted by 23:59 UTC on 25 August 2016 using ICANN's sourcing tool, access to which can be requested via the same email address.</strong> Submissions should be provided using supplied templates, supplemented by additional information, as necessary.</p>
+<p><strong>Opened:</strong> 2 August 2016<br>
+	<strong>Deadline:</strong> 25 August 2016<br>
+	<strong>Awarded to:</strong> SIDN</p>
+<hr>
+<p><strong>Content Strategy RFP (14 Apr 16)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers (ICANN) seeks a vendor to create and deliver a content strategy for icann.org. In seeking a comprehensive proposal for these services, ICANN places emphasis on several key components of value including: expertise with similar processes, demonstrated practices, and the ability to work within the guidelines established in this RFP.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>14 April 2016</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participant proposals due by (via ICANN sourcing tool)</strong></span></td>
+		<td><span style="color: #f00;"><strong>25 April 2016 by 12:00 noon PST</strong></span></td>
+	</tr>
+	<tr>
+		<td><strong>Target for final evaluations, client reference calls, contracting and award</strong></td>
+		<td><strong>2-6 May 2016</strong></td>
+	</tr>
+</table>
+<p><strong>Opened:</strong> 14 April 2016<br>
+	<strong>Deadline:</strong> 25 April 2016<br>
+	<strong>Awarded to:</strong> Asteroideqa Ventures LLC DBA Formative</p>
+<hr>
+<p><strong>LA Copiers RFQ (7 Apr 16)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking a provider to facilitate the purchase or lease of Ricoh multifunction copiers including service agreement for the Los Angeles office. The copiers purchased or leased are intended to replace the current copiers for copy, print, and scanning needs in the Los Angeles office.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>7 April 2016</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participant RFQ proposals due (via ICANN sourcing tool)</strong></span></td>
+		<td><span style="color: #f00;"><strong>15 April 2016 by 5:00 PM PST</strong></span></td>
+	</tr>
+	<tr>
+		<td><strong>Target date for selection of vendor</strong></td>
+		<td><strong>20 April 2016</strong></td>
+	</tr>
+</table>
+<p><strong>Opened:</strong> 7 April 2016<br>
+	<strong>Deadline:</strong> 15 April 2016<br>
+	<strong>Awarded to:</strong> Integrus dba Advanced Office</p>
+<hr>
+<p><a href="/news/announcement-2-2016-02-29-en">Request for Quotation: Router Refresh</a> (29 February 16)<br>
+	<a href="/en/system/files/files/rfq-router-refresh-29feb16-en.zip">RFQ</a> [ZIP, 578 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking one or more providers to facilitate the sourcing for network equipment for our global network infrastructure.</p>
+<p>The network equipment is intended to replace or augment existing systems and services provided by the ICANN DNS Engineering Department.</p>
+<p><em>RFQ timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFQ published</td>
+		<td>29 February 2016</td>
+	</tr>
+	<tr>
+		<td><strong>Participants to indicate interest in submitting RFQ</strong></td>
+		<td><strong>3 of March 2016 by 5:00 PM PST</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any questions on the RFQ to ICANN (use Excel Q&amp;A template in the RFQ packet)</strong></td>
+		<td><strong>4 of March 2016 by 5:00 PM PST</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions</td>
+		<td>8 of March 2016</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participant RFQ proposals due by</strong></span></td>
+		<td><span style="color: #f00;"><strong>14 March 2016 by 5:00 PM PST</strong></span></td>
+	</tr>
+	<tr>
+		<td>Evaluation of responses</td>
+		<td>Week of 14 March 2016</td>
+	</tr>
+	<tr>
+		<td>Target date for selection of vendor</td>
+		<td>21 March 2016</td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFQ should be addressed to <a href="mailto:EquipmentRefresh-RFQ@icann.org">EquipmentRefresh-RFQ@icann.org</a></p>
+<p><strong>Opened:</strong> 29 February 2016<br>
+	<strong>Deadline:</strong> 14 March 2016<br>
+	<strong>Awarded to:</strong> Fusionstorm</p>
+<hr>
+<p><strong>Document Management System RFP (19 Feb 16)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers (ICANN) is soliciting proposals from various vendors to find a Document Management System (DMS). The objective of this RFP is to identify, evaluate and select a Document Management System (DMS) that meets the needs of ICANN. The organization requires a tool that can be used by staff in different locations and departments to collaborate, provide standardized workflows as well as provide a centralized document management system. The tool will provide a single platform to share organizational and departmental data.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>19 February 2016</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participants submit proposals due by</strong></span></td>
+		<td><span style="color: #f00;"><strong>By 2 pm on Friday, 11 March 2016</strong></span></td>
+	</tr>
+	<tr>
+		<td><strong>Target dates for contracting and award</strong></td>
+		<td><strong>April 18 2016 thru April 29 2016</strong></td>
+	</tr>
+</table>
+<p><strong>Opened:</strong> 19 February 2016<br>
+	<strong>Deadline:</strong> 11 March 2016<br>
+	<strong>Awarded to:</strong> Alfresco, with partner (reseller) Zia Consulting</p>
+<hr>
+<p><strong>Print Services RFP (3 Feb 16)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking one or more providers from licensed independent contractors with demonstrated professional competence and experience to provide Printing and Binding services (including letterhead, envelopes, business cards, other business stationery and various print collateral).</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>3 February 2016</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participant Samples of work to be received by ICANN by</strong></span></td>
+		<td><span style="color: #f00;"><strong>17 February 2016 by 5PM PST</strong></span></td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participant RFP proposals emailed to ICANN by</strong></span></td>
+		<td><span style="color: #f00;"><strong>17 February 2016 by 5PM PST</strong></span></td>
+	</tr>
+	<tr>
+		<td><strong>Target date for selection of vendor(s)</strong></td>
+		<td><strong>9 March 2016</strong></td>
+	</tr>
+</table>
+<p><strong>Opened:</strong> 3 February 2016<br>
+	<strong>Deadline:</strong> 17 February 2016<br>
+	<strong>Awarded to:</strong> Dual Graphics and David M. Guerra DBA Phantom Lithography</p>
+<hr>
+<p><a href="/news/announcement-2016-01-21-en">Request for Proposal: Review of the At-Large Community</a> (5 January 16) <br>
+	<a href="/en/system/files/files/rfp-atlarge-review-21jan16-en.zip">RFP</a> [ZIP, 972 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking a provider to conduct an independent review of the <a href="https://newatlarge.icann.org/view_about_pdf">At-Large Community</a> ("At-Large"), as mandated by ICANN's <a href="/en/about/governance/bylaws">Bylaws</a>.</p>
+<p>The objective of this RFP is to identify an independent reviewer to assess effectiveness of: (1) improvements resulting from recommendations from the previous Review, (2) components of the At-Large Community – ALAC, Regional At-Large Organizations (RALOs) and At-Large Structures (ALSes) in accordance with the ICANN-provided objective and quantifiable criteria. The Review is scheduled to take place from April 2016 through March 2017.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Milestone</strong></th>
+		<th><strong>Date</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>5 January 2016</td>
+	</tr>
+	<tr>
+		<td><strong>Participants to indicate interest in submitting RFP proposal</strong></td>
+		<td><strong>12 January 2016</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any questions to ICANN (see Excel template in RFP packet)</strong></td>
+		<td><strong>12 January 2016 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions</td>
+		<td>15 January 2016</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participant proposals due by</strong></span></td>
+		<td><span style="color: #f00;"><strong>28 January 2016 by 07:59 UTC</strong></span></td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>28 January -12 Feb</td>
+	</tr>
+	<tr>
+		<td>Target for participant presentations (finalists)</td>
+		<td>15-16 February</td>
+	</tr>
+	<tr>
+		<td>Target for final evaluations, contracting and award</td>
+		<td>25 March 2016</td>
+	</tr>
+	<tr>
+		<td>Estimated start of Review</td>
+		<td>1 April 2016</td>
+	</tr>
+	<tr>
+		<td>Draft Report for Review Working Party consideration</td>
+		<td>30 November 2016</td>
+	</tr>
+	<tr>
+		<td>Draft Report for Public Comment</td>
+		<td>20 December 2016</td>
+	</tr>
+	<tr>
+		<td>Final Report for discussion with the Review Working Party</td>
+		<td>28 February 2017</td>
+	</tr>
+	<tr>
+		<td>Final Report issued and posted</td>
+		<td>31 March 2017</td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:AtLargeReview-rfp@icann.org">AtLargeReview-rfp@icann.org</a></p>
+<p><strong>Opened:</strong> 5 January 2016<br>
+	<strong>Deadline:</strong> 28 January 2016<br>
+	<strong>Awarded to:</strong> Items International</p>
+<hr>
+<h3>2015 Closed RFPs</h3>
+<p><strong>Oracle Cloud Implementation Services RFP (14 Dec 15)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers (ICANN) is soliciting proposals from Oracle partners for support with implementing Oracle's Cloud ERP and Cloud HCM platforms. This initiative will be a time and materials project. The objective of this RFP is mainly to solicit resource resumes (as defined in the RFP packet) for further evaluation and subsequent selection.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>14 December 2015</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participant proposals due</strong></span></td>
+		<td><span style="color: #f00;"><strong>By 2 pm on Wed, 30 December 2015</strong></span></td>
+	</tr>
+	<tr>
+		<td><strong>Evaluation / Resource interviews</strong></td>
+		<td><strong>31 December 2015 thru 8 January 2016</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Target dates for contracting and award</strong></td>
+		<td><strong>16 January 2016 thru 22 January 2016</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Target start date of implementation</strong></td>
+		<td><strong>1 February 2016</strong></td>
+	</tr>
+</table>
+<p><strong>Opened:</strong> 14 December 2015<br>
+	<strong>Deadline:</strong> 30 December 2015<br>
+	<strong>Awarded to:</strong> Zensar Technologies, Inc., Infovity Inc., Emtec Consulting Services LLC</p>
+<hr>
+<p><a href="/news/announcement-2015-11-30-en">Request for Proposal: Study About the Domain Name System (DNS) Industry and Business in Africa</a> (10 December 15)<br>
+	<a href="https://community.icann.org/download/attachments/56149375/ICANN%20Africa%20DNS%20Market%20Study%20RFP.zip?version=1&amp;modificationDate=1449766612000&amp;api=v2">RFP</a> [ZIP, 509 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers (ICANN) is seeking a provider to conduct a study on the domain name industry in Africa.</p>
+<p>The goal of this study is to identify and define the strengths and weaknesses in the industry ecosystem within the region and develop recommendations on how to advance the industry and bring it closer to the opportunities available.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Milestone</strong></th>
+		<th><strong>Date</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>10 December, 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any questions to ICANN (use Q&amp;A Excel template in RFP packet)</strong></td>
+		<td><strong>16 December, 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td><strong>ICANN responds to questions</strong></td>
+		<td><strong>22 December, 2015</strong></td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participants submit complete proposals</strong></span></td>
+		<td><span style="color: #f00;"><strong>4 January, 2016 by 23:59 UTC</strong></span></td>
+	</tr>
+	<tr>
+		<td>Initial evaluation</td>
+		<td>15 January, 2016</td>
+	</tr>
+	<tr>
+		<td>Target dates for participant presentations</td>
+		<td>Week of 18 January, 2016</td>
+	</tr>
+	<tr>
+		<td>Target dates for final evaluation, contracting and award</td>
+		<td>Weeks of Jan 25, Feb 1, Feb 8 2016</td>
+	</tr>
+	<tr>
+		<td>Target start date of implementation</td>
+		<td>15 February, 2016</td>
+	</tr>
+	<tr>
+		<td>Vendor delivers first draft of the study</td>
+		<td>15 April, 2016</td>
+	</tr>
+	<tr>
+		<td>ICANN provides feedback on the first draft after seeking feedback from community</td>
+		<td>6 May, 2016</td>
+	</tr>
+	<tr>
+		<td>Vendor delivers the final report of the study</td>
+		<td>17 June, 2016</td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:AfricaDNSStudy-rfp@icann.org">AfricaDNSStudy-rfp@icann.org</a><br>
+	<strong>Opened:</strong> 10 December 2015<br>
+	<strong>Deadline:</strong> 4 January 2016<br>
+	<strong>Awarded to:</strong> South African Communications Forum (SACF)</p>
+<hr>
+<p><a href="/news/announcement-4-2015-09-25-en">Request for Proposal for Latin America and Caribbean DNS Marketplace Study</a> (25 September 15)<br>
+	<a href="/en/system/files/files/rfp-lac-dns-study-25sep15-en.zip">RFP</a> [ZIP, 407 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking a provider to conduct a study on the domain name industry in the Latin America and the Caribbean region. The goal of this study is to identify and define the strengths and weaknesses in the industry ecosystem within the region, and develop recommendations on how to advance the industry and bring it closer to the opportunities available.</p>
+<p>The ICANN's Latin America and the Caribbean Strategic Plan defined four key areas of interest as strategic focus for the region. Two of those, namely Capacity Building and Outreach; and Economic Issues contemplate aspects to further develop the domain name industry.</p>
+<p>The study at a minimum will investigate the current state of the Internet and the domain name industry in the region, define best practices that have made an impact in domain name market growth, look at the broader ecosystem of the Internet infrastructure and online services and describe the impact of such elements on the overall evolution of the domain name industry, describe the business potential in the domain name industry in this region, and provide suggestions on how to develop the industry and what business models can be adopted in the entire industry chain. The study will include data, analysis, and recommendations.</p>
+<p>The final report of the study is to be delivered no later than 23rd May 2016.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Date</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>25 September 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participants provide an intent to bid email</strong></td>
+		<td><strong>9 October 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any questions to ICANN (use Q&amp;A Excel template in RFP packet)</strong></td>
+		<td><strong>16 October 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participants questions by </td>
+		<td>23 October 2015</td>
+	</tr>
+	<tr>
+		<td><span style="color: #f00;"><strong>Participants submit proposals due by</strong></span></td>
+		<td><span style="color: #f00;"><strong>2 November 2015 by 23:59 UTC</strong></span></td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>6 November 2015</td>
+	</tr>
+	<tr>
+		<td>Target dates for participant presentations (finalists) </td>
+		<td>Week of 9 November 2015</td>
+	</tr>
+	<tr>
+		<td>Target dates for evaluation, contracting and award</td>
+		<td>Weeks of 16 November &amp; 23 November 2015</td>
+	</tr>
+	<tr>
+		<td>Target start date of implementation </td>
+		<td>7 December 2015</td>
+	</tr>
+	<tr>
+		<td>Vendor delivers first draft of the study </td>
+		<td>28 March 2016</td>
+	</tr>
+	<tr>
+		<td>ICANN provides feedback on the first draft after seeking feedback from community</td>
+		<td>18 April 2016</td>
+	</tr>
+	<tr>
+		<td>Vendor delivers the final report of the study</td>
+		<td>23 May 2016</td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:LAC-DNS-Study-RFP@icann.org">LAC-DNS-Study-RFP@icann.org</a><br>
+	<strong>Opened:</strong> 25 September 2015<br>
+	<strong>Deadline:</strong> 2 November 2015<br>
+	<strong>Awarded to:</strong> Oxford Information Labs Limited</p>
+<hr>
+<p><a href="/news/announcement-2015-08-07-en">Request for Proposal for Trademark Clearinghouse Independent Review</a> (7 August 15)<br>
+	<a href="/en/system/files/files/rfp-tmch-independent-review-07aug15-en.zip">RFP</a> [ZIP, 612 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking one or more provider(s) to conduct an independent review of the Trademark Clearinghouse to assess the effectiveness of three key areas related to the Clearinghouse in meeting its intended objectives and to identify considerations for future application rounds of the New gTLD Program. The three key areas for examination in this review include: (a) Trademark Clearinghouse Guidelines and Verification Process; (b) Sunrise Period; and (c) Trademark Claims Service. The selected provider(s) will design and execute a study to create a meaningful report of quantitative and qualitative data on the specified areas for examination. The draft Report will be posted for comment and updated based on the feedback received. The final report will be published and provided to the Governmental Advisory Committee (GAC) for review and consideration. ICANN is seeking one or more qualified providers to manage this complex exercise in a timely and efficient manner.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>7 August 2015</td>
+	</tr>
+	<tr>
+		<td>
+<strong>Participants to indicate interest in</strong><br>
+			<strong>submitting RFP</strong>
+</td>
+		<td><strong>14 August 2015, by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>
+<strong>Participants submit any questions to</strong><br>
+			<strong> ICANN (use template in RFP packet)</strong>
+</td>
+		<td><strong>17 August 2015, by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions</td>
+		<td>21 August 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participant RFP proposals due by</strong></td>
+		<td><strong>28 August 2015, by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>4 September 2015</td>
+	</tr>
+	<tr>
+		<td>Target for participant presentations (finalists)</td>
+		<td>Week of 14 September 2015</td>
+	</tr>
+	<tr>
+		<td>Target for Final evaluations and selection of <br>
+			vendor (includes negotiations, contracting and award to participant)</td>
+		<td>28 September 2015</td>
+	</tr>
+	<tr>
+		<td>Estimated start of implementation</td>
+		<td>5 October 2015</td>
+	</tr>
+	<tr>
+		<td>Deliver Draft Report to ICANN</td>
+		<td>18 December 2015</td>
+	</tr>
+	<tr>
+		<td>Updated Report delivered based on comments/feedback</td>
+		<td>19 February 2016</td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:TMCHIndependentReview-RFP@icann.org">TMCHIndependentReview-RFP@icann.org</a><br>
+	<strong>Opened:</strong> 7 August 2015<br>
+	<strong>Deadline:</strong> 28 August 2015<br>
+	<strong>Awarded to:</strong> Analysis Group, Inc.</p>
+<hr>
+<p>Enterprise Resource Planning (ERP) RFP (30 June 15)</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") recently issued a Request for Proposal (RFP) to select a cloud-based enterprise resource planning (ERP) solution.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>30 June 2015</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>22 July 2015</td>
+	</tr>
+	<tr>
+		<td>Selection of firm</td>
+		<td>30 November 2015</td>
+	</tr>
+</table>
+<p><br>
+	<strong>Opened:</strong> 30 June 2015<br>
+	<strong>Deadline:</strong> 22 July 2015<br>
+	<strong>Awarded to:</strong> Oracle America Inc</p>
+<hr>
+<p><strong>Procurement Application RFP (30 June 15)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is issuing a Request for Proposal (RFP) to identify and select a suitable cloud-based end-to-end procurement solution. The end-to-end procurement solution will ideally integrate with an enterprise resource planning (ERP) solution that ICANN is also seeking to implement (a separate RFP).</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>30 June 2015</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>22 July 2015</td>
+	</tr>
+	<tr>
+		<td>Selection of firm</td>
+		<td>30 November 2015</td>
+	</tr>
+</table>
+<p><br>
+	<strong>Opened:</strong> 30 June 2015<br>
+	<strong>Deadline:</strong> 22 July 2015<br>
+	<strong>Awarded to:</strong> Oracle America Inc and SciQuest, Inc</p>
+<hr>
+<p><a href="/news/announcement-3-2015-06-05-en">Request for Proposal for Reference LGRs for the Second Level</a> (5 June 15)<br>
+	<a href="/en/system/files/files/reference-lgr-second-level-rfp-05jun15-en.zip">RFP</a> [ZIP, 974 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking provider(s) to develop Label Generation Rules (LGRs) for multiple languages (and scripts) for use at the second level, based on a new machine readable formal representation available at <a href="https://tools.ietf.org/html/draft-davies-idntables">https://tools.ietf.org/html/draft-davies-idntables</a>.</p>
+<p>In the new gTLD program, during Pre-Delegation Testing (PDT) ICANN has noted a large number of IDN table submissions. The IDN tables submitted by the new gTLD registries varied in the repertoire of characters included and the contextual rules. In order to improve consistency of testing and stability of registry operations of new gTLDs, ICANN has approved the development of reference LGRs for the second level for use in Pre-Delegation Testing (PDT) and the Registry Service Evaluation Process (RSEP).These tables will be developed based on authoritative sources, validated by experts and then finalized based on community feedback. Once finalized, these will be published openly by ICANN.</p>
+<p>ICANN intends to use these reference LGRs for the second level for internal operations and will make them available for the community.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP released to providers on</td>
+		<td>5 June, 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participants provide an intent to bid email</strong></td>
+		<td><strong>12 June 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any questions to ICANN (use Excel Q&amp;A template in RFP packet)</strong></td>
+		<td><strong>12 June 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions by</td>
+		<td>19 June 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Provider RFP proposals due by</strong></td>
+		<td><strong>30 June, 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>8 July 2015</td>
+	</tr>
+	<tr>
+		<td>Target for participant presentations (finalists)</td>
+		<td>Week of 13 July 2015</td>
+	</tr>
+	<tr>
+		<td>Target for Final evaluations and selection of provider (includes contracting and award to participant)</td>
+		<td>Weeks of 20 July &amp; 27 July 2015</td>
+	</tr>
+	<tr>
+		<td>Estimated start of implementation</td>
+		<td>15 August, 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Batch 1 Delivery to ICANN</strong></td>
+		<td><strong>15 November, 2015</strong></td>
+	</tr>
+	<tr>
+		<td>Public Comment Report on Batch 1 to ICANN</td>
+		<td>30 January, 2016</td>
+	</tr>
+	<tr>
+		<td>Batch 1 Final Delivery to ICANN</td>
+		<td>1 March, 2016</td>
+	</tr>
+	<tr>
+		<td><strong>Batch 2 Delivery to ICANN</strong></td>
+		<td><strong>1 February, 2015</strong></td>
+	</tr>
+	<tr>
+		<td>Public Comment Report on Batch 2 to ICANN</td>
+		<td>1 April, 2016</td>
+	</tr>
+	<tr>
+		<td><strong>Batch 2 Final Delivery to ICANN</strong></td>
+		<td><strong>1 May, 2016</strong></td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:ReferenceLGR2ndLevel-RFP@icann.org">ReferenceLGR2ndLevel-RFP@icann.org</a><br>
+	<strong>Opened:</strong> 5 June 2015<br>
+	<strong>Deadline:</strong> 30 June 2015<br>
+	<strong>Awarded to:</strong> Sheypa LLC</p>
+<hr>
+<p><a href="/news/announcement-2-2015-06-05-en">Request for Proposal for Root Stability Study</a> (5 June 15)<br>
+	<a href="/en/system/files/files/root-stability-study-rfp-05jun15-en.zip">RFP</a> [ZIP, 983 KB]</p>
+<p> The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking one or more providers to conduct a technical study examining the impact of the New gTLD Program (the Program) on the DNS root system. Consistent with its mission supporting the security and stability of the Internet's system of unique identifiers, ICANN will undertake an examination of the Program's impact on the DNS root system. The selected provider(s) will design and execute one or more studies incorporating the collection and analysis of data from root server operators, historical performance data, data gathered from previous studies, and other tools and measures. ICANN is seeking one or more qualified providers to manage this complex exercise in a timely and efficient manner.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>5 June 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participants to indicate their intent to bid</strong></td>
+		<td><strong>12 June 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any questions on the RFP to ICANN (use Excel Q&amp;A template in RFP packet)</strong></td>
+		<td><strong>12 June 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions</td>
+		<td>19 June 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participant RFP proposals due by</strong></td>
+		<td><strong>2 July 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>10 July 2015</td>
+	</tr>
+	<tr>
+		<td>Target for participant presentations (finalists)</td>
+		<td>Week of 13 July 2015</td>
+	</tr>
+	<tr>
+		<td>Target for final evaluations and selection of vendor (includes Board approval of contract, contracting and award to participant)</td>
+		<td>Weeks 20th and 27th July 2015</td>
+	</tr>
+	<tr>
+		<td>Estimated project start date</td>
+		<td>10 August 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Draft Report Due</strong></td>
+		<td><strong>10 May 2016</strong></td>
+	</tr>
+	<tr>
+		<td>Public comment period</td>
+		<td>1 June thru 11 July 2016</td>
+	</tr>
+	<tr>
+		<td>Analysis &amp; incorporation of public comments due</td>
+		<td>25 July 2016</td>
+	</tr>
+	<tr>
+		<td><strong>Final Report</strong></td>
+		<td><strong>25 April 2017</strong></td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:RootStabilityStudy-RFP@icann.org">RootStabilityStudy-RFP@icann.org</a><br>
+	<strong>Opened:</strong> 5 June 2015<br>
+	<strong>Deadline:</strong> 2 July 2015<br>
+	<strong>Awarded to:</strong> Netherlands Organisation for Applied Scientific Research (TNO)</p>
+<hr>
+<p><strong>Singapore Office Fit Out RFP (19 May 15)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") recently issued a Request for Proposal (RFP) to select a contractor to fit out the interior of South Beach Tower (SBT), Level 3, Unit 11 (#03-11).</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>19 May 2015</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>29 May 2015 by 1800h (SGT)</td>
+	</tr>
+	<tr>
+		<td>Selection of firm and estimated start of Design &amp; Development Phase</td>
+		<td>11 June 2015</td>
+	</tr>
+	<tr>
+		<td>ICANN Official move in</td>
+		<td>1 October 2015</td>
+	</tr>
+</table>
+<p> <strong>Opened:</strong> 19 May 2015<br>
+	<strong>Deadline:</strong> 29 May 2015<br>
+	<strong>Awarded to:</strong> ID21 Pte Ltd</p>
+<hr>
+<p><strong>Meetings Microphone Request for Quotation (RFQ) (14 May 15)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") recently issued an RFQ to select one or more providers for a bulk microphone purchase for our global tri-annual ICANN meeting conferences. These new microphone systems are intended to be used throughout the world and keep our community participants using the same high quality system anywhere in the world.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>14 May 2015</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>22 May 2015 by 23:59 UTC</td>
+	</tr>
+	<tr>
+		<td>Target date for selection of vendor</td>
+		<td>8 June 2015</td>
+	</tr>
+</table>
+<p> <strong>Opened:</strong> 14 May 2015<br>
+	<strong>Deadline:</strong> 22 May 2015<br>
+	<strong>Awarded to:</strong> Congress Rental</p>
+<hr>
+<p><strong>KMF Security System Upgrade RFQ (8 May 15)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") recently issued a Request for Quotation (RFQ) to select a qualified vendor to provide consultation and installation services to upgrade its security systems including Access Control System ("ACS"), Video Surveillance System ("VSS") and Intrusion Detection System ("IDS") on two of its identical remote facilities; One in El Segundo, CA and the other in Culpeper, VA.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>8 May 2015</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>26 May 2015 by 23:59 UTC</td>
+	</tr>
+	<tr>
+		<td>Estimated start date for implementation</td>
+		<td>15 June 2015</td>
+	</tr>
+</table>
+<p> <strong>Opened:</strong> 8 May 2015<br>
+	<strong>Deadline:</strong> 26 May 2015<br>
+	<strong>Awarded to:</strong> Ollivier Corporation</p>
+<hr>
+<p><a href="/news/announcement-2015-04-10-en">Request for Quotation for Equipment Refresh</a> (10 Apr 15)<br>
+	<a href="/en/system/files/files/rfq-equipment-refresh-10apr15-en.zip">RFQ</a> [ZIP, 598 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is issuing a Request for Quotation (RFQ) to select one or more providers to facilitate the sourcing and pre-configuration tasks for servers and network equipment for our global network infrastructure. The new servers and network equipment is intended to replace or augment existing systems and services provided by the ICANN DNS Engineering Department.</p>
+<p><em>RFQ timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th>Activity</th>
+		<th>Dates</th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>10 April 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participants to indicate interest in submitting RFQ</strong></td>
+		<td><strong>15 April 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any questions to ICANN (use Q&amp;A Excel template in RFQ packet)</strong></td>
+		<td><strong>16 April 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions</td>
+		<td>20 April 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participant RFQ proposals due by</strong></td>
+		<td><strong>24 April 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>Evaluation of responses</td>
+		<td>Week of April 27th</td>
+	</tr>
+	<tr>
+		<td>Target date for selection of vendor</td>
+		<td>4 May 2015</td>
+	</tr>
+	<tr>
+		<td>Estimated start of implementation</td>
+		<td>5 May 2015</td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFQ should be addressed to <a href="mailto:EquipmentRefresh-RFQ@icann.org">EquipmentRefresh-RFQ@icann.org</a><br>
+	<strong>Opened:</strong> 10 April 2015<br>
+	<strong>Deadline:</strong> 24 April 2015<br>
+	<strong>Awarded to:</strong> ePlus Technologies Inc.</p>
+<hr>
+<p><strong>Intranet Portal Application RFP (4 April 15)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") recently issued a RFP to select a vendor solution for an intranet portal application. The vendor will share responsibility for the technical aspects of the Intranet, CMS, and related hosting. The scope of services include providing all software, cloud infrastructure, and services required to implement, support, and host the solution.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>4 April 2015</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>20 April 2015 by 23:59 UTC</td>
+	</tr>
+	<tr>
+		<td>Estimated start date for implementation</td>
+		<td>18 May 2015</td>
+	</tr>
+</table>
+<p> <strong>Opened:</strong> 4 April 2015<br>
+	<strong>Deadline:</strong> 20 April 2015<br>
+	<strong>Awarded to:</strong> Jive Software Inc</p>
+<hr>
+<p><strong>Insurance Brokerage RFP (31 March 15)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") recently issued a RFP to select a vendor to provide ICANN with insurance related services such as: casualty, professional indemnity and other risk management related insurance options.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>31 March 2015</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>19 April 2015 by 23:59 UTC</td>
+	</tr>
+	<tr>
+		<td>Estimated start date for implementation</td>
+		<td>1 September 2015</td>
+	</tr>
+</table>
+<p> <strong>Opened:</strong> 31 March 2015<br>
+	<strong>Deadline:</strong> 19 April 2015<br>
+	<strong>Awarded to:</strong> Arthur J. Gallagher Insurance Brokers of California, Inc.</p>
+<hr>
+<p><a href="/news/announcement-2-2015-03-19-en">Request for Proposal for LGR Toolset</a> (19 Mar 15)<br>
+	<a href="/en/system/files/files/rfp-lgr-toolset-19mar15-en.zip">RFP</a> [ZIP, 994 KB]</p>
+<p>By issuing this Request for Proposal ("RFP"), the Internet Corporation of Assigned Names and Numbers ("ICANN") is seeking a provider to develop a LGR (Label Generation Rulesets) Toolset. In seeking a comprehensive proposal for this service, ICANN is placing maximum emphasis on several key components of value including expertise with similar processes, demonstrated practices, and the ability to work within the guidelines established in this RFP.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th>Activity</th>
+		<th>Dates</th>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>19 March 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participants provide intent to bid by</strong></td>
+		<td><strong>25 March 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any questions to ICANN<br>
+			(use Q&amp;A Excel template in RFP packet)</strong></td>
+		<td><strong>25 March 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to questions by</td>
+		<td>31 March 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participant RFP proposals due by</strong></td>
+		<td><strong>8 April 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>Week of April 6<sup>th</sup>
+</td>
+	</tr>
+	<tr>
+		<td>Target for participant presentations</td>
+		<td>Week of April 13<sup>th</sup>
+</td>
+	</tr>
+	<tr>
+		<td>Target for Final evaluations and selection of Provider (includes contracting and award to participant)</td>
+		<td>Weeks of April 20th &amp; 27<sup>th</sup>
+</td>
+	</tr>
+	<tr>
+		<td>Estimated start of implementation</td>
+		<td>5 May 2015</td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:LGRToolset-rfp@icann.org">LGRToolset-rfp@icann.org</a><br>
+	<strong>Opened:</strong> 19 March 2015<br>
+	<strong>Deadline:</strong> 8 April 2015<br>
+	<strong>Awarded to:</strong> Viagenie</p>
+<hr>
+<p><a href="/news/announcement-2-2015-03-16-en">Request for Proposal for Middle East DNS Study</a> (16 Mar 15)<br>
+	<a href="/en/system/files/files/rfp-middle-east-dns-study-16mar15-en.zip">RFP</a> [ZIP, 409 KB]</p>
+<p>By issuing this Request for Proposal ("RFP"), the Internet Corporation of Assigned Names and Numbers ("ICANN") is requesting your best offer to conduct a study on the domain name industry in the Middle East and Adjoining Countries ("MEAC Region"). In seeking a comprehensive proposal for these services, ICANN is placing maximum emphasis on several key components of value including expertise with similar processes, demonstrated practices, and the ability to work within the guidelines established in this RFP. </p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<td class="floatcenter">Activity</td>
+		<td class="floatcenter">Dates</td>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>16 March 2015</td>
+	</tr>
+	<tr>
+		<td>Participants submit any questions to ICANN (use Q&amp;A Excel template in RFP packet)</td>
+		<td>23 March 2015 by 23:59 UTC</td>
+	</tr>
+	<tr>
+		<td>ICANN responds to questions</td>
+		<td>30 March 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit complete proposals </strong></td>
+		<td><strong>13 April 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>Target dates for participant presentations</td>
+		<td>27 – 30 April 2015</td>
+	</tr>
+	<tr>
+		<td>Target dates for evaluation, contracting and award </td>
+		<td>1 - 22 May 2015</td>
+	</tr>
+	<tr>
+		<td>Target start date of implementation </td>
+		<td>28 May 2015</td>
+	</tr>
+	<tr>
+		<td>Vendor delivers first draft of the study </td>
+		<td>14 August 2015</td>
+	</tr>
+	<tr>
+		<td>ICANN provides feedback on the first draft after seeking feedback from community</td>
+		<td>4 September 2015</td>
+	</tr>
+	<tr>
+		<td>Vendor delivers the final report of the study</td>
+		<td>9 October 2015</td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:MEDNSStudy-rfp@icann.org">MEDNSStudy-rfp@icann.org</a><br>
+	<strong>Opened:</strong> 16 March 2015<br>
+	<strong>Deadline:</strong> 13 April 2015<br>
+	<strong>Awarded to:</strong> European Registry for Internet Domains</p>
+<hr>
+<h3>2014 Closed RFPs</h3>
+<p><a href="/news/announcement-2014-12-23-en">Request for Proposal for Web Accessibility Assessment for ICANN.org</a> (23 Dec 14)<br>
+	<a href="/en/system/files/files/rfp-web-accessibility-23dec14-en.zip">RFP</a> [ZIP, 741 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking one or more providers to conduct an assessment of website accessibility including ICANN.org and possibly the related subsidiary websites. The selected provider(s) will provide an initial assessment of ICANN's websites for meeting internationally recognized W3C Web Content Accessibility Guidelines (WCAG) v2.0 Level AA and include an identification of tools, best practices, processes, and strategy for implementation.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<td class="floatcenter">Activity</td>
+		<td class="floatcenter">Dates</td>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>23 December 2014</td>
+	</tr>
+	<tr>
+		<td>Participants to indicate interest in submitting RFP</td>
+		<td>9 January 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participants submit any questions to ICANN </strong></td>
+		<td><strong>12 January 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions</td>
+		<td>16 January 2015</td>
+	</tr>
+	<tr>
+		<td><strong>Participant RFP proposals due by</strong></td>
+		<td><strong>20 January 2015 by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>Target date for selection of vendor</td>
+		<td>7 February 2015</td>
+	</tr>
+	<tr>
+		<td>Target start date for implementation</td>
+		<td>21 February 2015</td>
+	</tr>
+	<tr>
+		<td>Complete Assessment (Draft, Final) – Target</td>
+		<td>31 March 2015 – 30 April 2015</td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:webaccessibility-rfp@icann.org">webaccessibility-rfp@icann.org</a><br>
+	<strong>Opened:</strong> 23 December 2014<br>
+	<strong>Deadline:</strong> 20 January 2015<br>
+	<strong>Awarded to:</strong> Simply Accessible Inc</p>
+<hr>
+<p><a href="/news/announcement-2-2014-09-09-en">Request for Proposal for Performance of Secretariat Function for the IANA Stewardship Transition Coordination Group</a> (9 Sept 14)<br>
+	<a href="/en/system/files/files/rfp-icg-secretariat-09sep14-en.zip">RFP</a> [ZIP, 606 KB]</p>
+<p>The IANA Stewardship Transition Coordination Group (ICG) is seeking one or more providers, through ICANN's RFP process, to perform its secretariat function.</p>
+<p>Established in response to the announcement by the U.S. National Telecommunication and Information Administration Department (NTIA) of its intent to transition key internet domain name functions to the global multistakeholder community, the ICG is comprised of representatives from different stakeholder groups to coordinate and deliver a single transition proposal.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<td><strong>Activity</strong></td>
+		<td><strong>Dates</strong></td>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>9 September 2014</td>
+	</tr>
+	<tr>
+		<td>Participants to indicate Expression of Interest (EoI)</td>
+		<td>12 September 2014 by 23:59 UTC<br>
+			[This date has been revised from an<br>
+			earlier announced date of 7 September 2014]</td>
+	</tr>
+	<tr>
+		<td>Participants submit any questions to ICG<br>
+			(use Participant Q&amp;A template in RFP packet)</td>
+		<td>13 September 2014, by 23:59 UTC</td>
+	</tr>
+	<tr>
+		<td>ICG responds to participant questions</td>
+		<td>20 September 2014</td>
+	</tr>
+	<tr>
+		<td><strong>Participant RFP proposals due by</strong></td>
+		<td><strong>23 September 2014, by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>24 thru 27 September 2014</td>
+	</tr>
+	<tr>
+		<td>Final participant presentations and reference calls </td>
+		<td>27 September thru 4 October 2014</td>
+	</tr>
+	<tr>
+		<td>Contracting and award to contractor </td>
+		<td>6 thru 10 October 2014</td>
+	</tr>
+	<tr>
+		<td>Target start date in the role </td>
+		<td>15 October 2014 at ICANN 51 meeting in Los Angeles</td>
+	</tr>
+</table>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:SecretariatForICG-rfp@icann.org">SecretariatForICG-rfp@icann.org</a>.</p>
+<p><strong>Opened:</strong> 9 September 2014<br>
+	<strong>Deadline:</strong> 23 September 2014<br>
+	<strong>Awarded to:</strong> Internet Society Singapore Chapter</p>
+<hr>
+<p><a href="/news/announcement-2014-09-08-en">Request for Proposal for Economic Study</a> (8 Sept 14)<br>
+	<a href="/en/system/files/files/rfp-economic-study-08sep14-en.zip">RFP</a> [ZIP, 799 KB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking one or more providers to conduct an economic study examining pricing trends and other competition indicators in the global domain name system (DNS) market. The selected provider(s) will design and execute an initial study to create a meaningful baseline of data on multiple factors of competition and will perform a follow-on study one year later, to generate and analyze a set of comparison data.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<td><strong>Activity</strong></td>
+		<td><strong>Dates</strong></td>
+	</tr>
+	<tr>
+		<td>RFP published</td>
+		<td>8 September 2014</td>
+	</tr>
+	<tr>
+		<td>Participants to indicate interest in responding to RFP</td>
+		<td>15 September 2014, by 23:59 UTC</td>
+	</tr>
+	<tr>
+		<td>Participants submit any questions to ICANN<br>
+			(use Participant Q&amp;A template in RFP packet)</td>
+		<td>15 September 2014, by 23:59 UTC</td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions</td>
+		<td>22 September 2014</td>
+	</tr>
+	<tr>
+		<td><strong>Participant RFP proposals due by</strong></td>
+		<td><strong>29 September 2014, by 23:59 UTC</strong></td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>6 October 2014</td>
+	</tr>
+	<tr>
+		<td>Target date for participant presentations (finalists)</td>
+		<td>Week of 20 October 2014</td>
+	</tr>
+	<tr>
+		<td>Target for Final evaluations and selection of vendor<br>
+			(includes Board approval of contract, contracting and award)</td>
+		<td>27 October 2014</td>
+	</tr>
+	<tr>
+		<td>Estimated start of implementation</td>
+		<td>10 November 2014</td>
+	</tr>
+	<tr>
+		<td>Draft Baseline Report</td>
+		<td>15 December 2014</td>
+	</tr>
+	<tr>
+		<td>Final Baseline Report</td>
+		<td>22 December 2014</td>
+	</tr>
+	<tr>
+		<td>Begin Second-round survey – Target date</td>
+		<td>2 November 2015</td>
+	</tr>
+	<tr>
+		<td>Draft Report 2 – Target date</td>
+		<td>7 December 2015</td>
+	</tr>
+	<tr>
+		<td>Final Report – Target date</td>
+		<td>29 January 2016</td>
+	</tr>
+</table>
+<p> </p>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:economicstudy-rfp@icann.org">economicstudy-rfp@icann.org</a>.</p>
+<p><strong>Opened:</strong> 8 September 2014<br>
+	<strong>Deadline:</strong> 29 September 2014<br>
+	<strong>Awarded to:</strong> Analysis Group, Inc.</p>
+<hr>
+<p><strong>Office Supplies RFP (3 Sep 14)</strong></p>
+<p>ICANN recently issued a Request for Proposal (RFP) to select one or more providers to provide Office Supplies to ICANN offices.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>3 September 2014</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>22 September 2014</td>
+	</tr>
+	<tr>
+		<td>Selection of firm and estimated start of implementation by</td>
+		<td>17 November 2014</td>
+	</tr>
+</table>
+<p> <strong>Opened:</strong> 3 September 2014<br>
+	<strong>Deadline:</strong> 22 September 2014<br>
+	<strong>Awarded to:</strong> Office Depot</p>
+<hr>
+<p><strong>IT Services Outsourcing RFP (11 Aug 14)</strong></p>
+<p>ICANN recently issued a Request for Proposal (RFP) to identify one or more providers to provide outsourced development and testing resources for the Information Technology department.</p>
+<p>The specific technical areas are the following:</p>
+<ul>
+	<li>
+		<p>Web development</p>
+	</li>
+	<li>
+		<p>Web content management</p>
+	</li>
+	<li>
+		<p>Salesforce.com/Force.com (SFDC) development</p>
+	</li>
+	<li>
+		<p>Quality testing of applications, both web and SFDC. Testing is both automatic &amp; manual.</p>
+	</li>
+</ul>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<th><strong>Activity</strong></th>
+		<th><strong>Dates</strong></th>
+	</tr>
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>11 August 2014</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>2 September 2014</td>
+	</tr>
+	<tr>
+		<td>Selection of firm and estimated start of implementation by</td>
+		<td>3 November 2014</td>
+	</tr>
+</table>
+<p><strong>Opened:</strong> 11 August 2014<br>
+	<strong>Deadline:</strong> 2 September 2014<br>
+	<strong>Awarded to:</strong> Zensar Technologies, Inc.</p>
+<hr>
+<p><a href="/news/announcement-2-2014-07-16-en">Request for Proposal for Global Consumer Survey</a> (16 July 14)<br>
+	<a href="/en/system/files/files/rfp-global-consumer-survey-16jul14-en.zip">RFP</a> [ZIP, 1.08 MB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking one or more providers to conduct a global survey assessing aspects of consumer trust and perceived consumer choice and the Internet domain name system (DNS). The selected provider(s) will design and execute an initial survey to create a meaningful baseline of data on consumer attitudes and will perform a follow-on survey one year later, to generate a set of comparison data.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<td><strong>Activity</strong></td>
+		<td><strong>Dates</strong></td>
+	</tr>
+	<tr>
+		<td>RFP published </td>
+		<td>16 July 2014</td>
+	</tr>
+	<tr>
+		<td>Participants to indicate interest in responding to RFP</td>
+		<td>22 July 2014</td>
+	</tr>
+	<tr>
+		<td>Participants submit any questions to ICANN</td>
+		<td>23 July 2014 by 23:59 UTC</td>
+	</tr>
+	<tr>
+		<td>ICANN responds to participant questions </td>
+		<td>29 July 2014</td>
+	</tr>
+	<tr>
+		<td>Participant RFP proposals due by</td>
+		<td>6 August 2014 by 23:59 UTC</td>
+	</tr>
+	<tr>
+		<td>Preliminary evaluation of responses</td>
+		<td>20 August 2014</td>
+	</tr>
+	<tr>
+		<td>Target date for participant presentations (finalists)</td>
+		<td>Week of 2 September 2014</td>
+	</tr>
+	<tr>
+		<td>Target date for selection of vendor </td>
+		<td>10 September 2014</td>
+	</tr>
+	<tr>
+		<td>Target start date for implementation</td>
+		<td>24 September 2014</td>
+	</tr>
+	<tr>
+		<td>Draft Baseline Report – Target</td>
+		<td>10 November 2014</td>
+	</tr>
+	<tr>
+		<td>Final Baseline Report – Target </td>
+		<td>1 December 2014</td>
+	</tr>
+	<tr>
+		<td>Begin Second-round survey – Target </td>
+		<td>One year after baseline survey is launched.</td>
+	</tr>
+</table>
+<p> </p>
+<p>All email correspondence related to this RFP should be addressed to <a href="mailto:globalconsumersurvey-rfp@icann.org">globalconsumersurvey-rfp@icann.org</a>.</p>
+<p><strong>Opened:</strong> 16 July 2014<br>
+	<strong>Deadline:</strong> 6 August 2014<br>
+	<strong>Awarded to:</strong> Nielsen Consumer Insights NA (fka Harris Interactive)</p>
+<hr>
+<p><strong>IANA Customer Satisfaction Survey RFP (23 Jun 14)</strong></p>
+<p>ICANN recently issued a Request for Proposal (RFP) to identify one or more provider(s) to execute the 2014 customer survey for customers of the IANA functions.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>23 June 2014</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>7 July 2014</td>
+	</tr>
+	<tr>
+		<td>Selection of firm and estimated start of implementation by</td>
+		<td>16 August 2014</td>
+	</tr>
+</table>
+<p><strong>Opened:</strong> 23 June 2014<br>
+	<strong>Deadline:</strong> 7 July 2014<br>
+	<strong>Awarded to:</strong> Ebiquity</p>
+<hr>
+<p><a href="/en/news/announcements/announcement-16may14-en.htm">Request for Proposal for the WHOIS Online Accuracy Reporting System</a> (16 May 14)<br>
+	<a href="http://whois.icann.org/sites/default/files/files/online-accuracy-reporting-rfp-20may14-en.zip">RFP</a> [ZIP, 2.1 MB]</p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") is seeking one or more providers to assist ICANN in the development, operation, and maintenance of the WHOIS Online Accuracy Reporting System.</p>
+<p>The objective of this RFP is to identify vendors to provide services, software or data to support ICANN's development of the WHOIS Online Accuracy Reporting System, to provide the following:</p>
+<ul>
+	<li><strong>WHOIS Parser</strong></li>
+	<li><strong>Global Validation and Verification of Contact Data</strong></li>
+	<li><strong>Statistical Study Design and Delivery of Reports</strong></li>
+	<li><strong>Visual Communication Services</strong></li>
+</ul>
+<p>Key Dates:</p>
+<ul>
+	<li>Participants to provide intent to respond to RFP by emailing <a href="mailto:whois-rfp@icann.org">whois-rfp@icann.org</a> by 23:59 UTC on 21 May 2014</li>
+	<li>Participant RFP proposals for Lots A, E, F and G due by: 6 June 23:59 UTC</li>
+	<li>Participant RFP proposals for Lots B, C and D due by: 27 June 23:59 UTC</li>
+	<li>Target for evaluation and vendor presentations: Mid June</li>
+	<li>Target for contract finalization (includes contracting and award to participant): July</li>
+	<li>Target for Project Kick-off Meeting in ICANN's Los Angeles Offices: July 15</li>
+</ul>
+<p><strong>Opened:</strong> 16 May 2014<br>
+	<strong>Deadline:</strong> 6 June 2014 for Lots: A,E,F,G. 27 June 2014 for Lots: B,C,D.<br>
+	<strong>Awarded to:</strong> Whibse, StrikeIron, Inc, Digicert, Inc., Universal Postal Union, and NORC at the University of Chicago</p>
+<hr>
+<p><a href="/en/news/announcements/announcement-22apr14-en.htm">Request for Proposal for Review of Generic Names Supporting Organization (GNSO)</a> (22 Apr 14)<br>
+	<a href="/en/news/rfps/rfp-gnso-review-22apr14-en.zip">RFP</a> [ZIP, 672 KB]</p>
+<p>Dates:</p>
+<ul>
+	<li>Participants to indicate interest in submitting RFP – 30 April</li>
+	<li>Proposals due – 13 May</li>
+	<li>Participants presentations (finalists) – May 19-23</li>
+	<li>Final evaluation and selection – 10 June</li>
+</ul>
+<p><strong>Opened:</strong> 22 April 2014<br>
+	<strong>Deadline:</strong> 13 May 2014<br>
+	<strong>Awarded to:</strong> Westlake Consulting Limited</p>
+<hr>
+<p><strong>Information Security Assessment RFP (23 Apr 14)</strong></p>
+<p>ICANN recently issued a Request for Proposal (RFP) to identify one or more provider to perform a comprehensive assessment of its corporate information security controls, processes, policies and systems.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<td>RFP issued to selected firms by ICANN</td>
+		<td>23 April 2014</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>2 May 2014</td>
+	</tr>
+	<tr>
+		<td>Selection of firm and estimated start of implementation by</td>
+		<td>28 May 2014</td>
+	</tr>
+</table>
+<p><strong>Opened:</strong> 23 April 2014<br>
+	<strong>Deadline:</strong> 2 May 2014<br>
+	<strong>Awarded to:</strong> Leidos, Inc.</p>
+<hr>
+<p><strong>Letter of Credit Management RFP (14 Mar 14)</strong></p>
+<p>ICANN recently issued a Request for Proposal (RFP) to identify one or more financial institutions to manage Letters of Credits that were submitted to ICANN by entities applying to operate a new generic top-level domain (gTLD).</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<td>RFP issued to select firms by ICANN</td>
+		<td>14 March 2014</td>
+	</tr>
+	<tr>
+		<td>Proposals due by</td>
+		<td>4 April 2014</td>
+	</tr>
+	<tr>
+		<td>Selection of firm and estimated start of implementation by</td>
+		<td>2 June 2014</td>
+	</tr>
+</table>
+<p><strong>Opened:</strong> 14 March 2014<br>
+	<strong>Deadline:</strong> 4 April 2014<br>
+	<strong>Awarded to:</strong> Bank of America Merrill Lynch</p>
+<hr>
+<p><a href="/en/news/announcements/announcement-18mar14-en.htm">Annual Independent Audit RFP</a> (18 Mar 14)<br>
+	<a href="/en/news/rfps/annual-audit-18mar14-en.pdf">RFP</a> [PDF, 548 KB]<br>
+	<strong>Opened:</strong> 18 March 2014<br>
+	<strong>Deadline:</strong> 2 April 2014<br>
+	<strong>Awarded to:</strong> BDO USA, LLP</p>
+<hr>
+<h3>2013 Closed RFPs</h3>
+<p><strong>Name Collision Occurrence Mitigation Framework RFP (17 Oct 13)</strong></p>
+<p>ICANN issued a Request for Proposal (RFP) to select provider(s) to develop the Name Collision Occurrence Assessment Framework described in section 3.1 of the Plan for New gTLD Collision Occurrence Management.</p>
+<p><strong>Opened:</strong> 17 October 2013<br>
+	<strong>Deadline:</strong> 6 November 2013</p>
+<hr>
+<p><a href="/en/news/announcements/announcement-2-30apr13-en.htm">Post-Delegation Dispute Resolution Procedures for New gTLDs: ICANN Seeks Service Providers for Registry Restriction DRP and Trademark PDDRP</a> (30 Apr 13)<br>
+	<a href="/en/news/rfps/rrdrp-30apr13-en.pdf">RFP – RRDRP</a> [PDF, 157 KB]<br>
+	<a href="/en/news/rfps/tm-pddrp-30apr13-en.pdf">RFP – TM PDDRP</a> [PDF, 158 KB]<br>
+	<strong>Opened:</strong> 30 April 2013<br>
+	<strong>Deadline:</strong> 31 May 2013</p>
+<hr>
+<h3>2012 Closed RFPs &amp; EOIs</h3>
+<p><a href="/en/news/announcements/announcement-8-24sep12-en.htm">Uniform Rapid Suspension System for New gTLDs: ICANN Seeks Service Providers for Uniform Rapid Suspension</a> (24 Sep 12)<br>
+	<a href="/en/news/rfps/urs-24sep12-en.pdf">RFI</a> [PDF, 112 KB]<br>
+	<strong>Opened:</strong> 24 September 2012<br>
+	<strong>Deadline:</strong> 20 November 2012</p>
+<hr>
+<p><a href="/en/news/announcements/announcement-30oct12-en.htm">Pre-Delegation Testing Provider for New gTLDs – Request for Proposals</a> (30 Oct 12)<br>
+	<a href="/en/news/rfps/pre-delegation-testing-30oct12-en.pdf">RFP</a> [PDF, 361 KB]<br>
+	<strong>Opened:</strong> 30 October 2012<br>
+	<strong>Deadline:</strong> 20 November 2012</p>
+<hr>
+<p><strong>Request for Proposal for Registrar and Registry Contractual Compliance Audit Services (13 Jun 12)</strong></p>
+<p>The Internet Corporation for Assigned Names and Numbers ("ICANN") has issued a Request for Proposal (RFP) to identify a provider to provide contractual compliance audit services that will ensure a successful examination of the Registrar Audit Plan and Registry Audit Plan. This was a private (closed) RFP since the specific skillset and capabilities required for this service was found in only five potential vendors in the marketplace during a pre-selection process.</p>
+<p><em>RFP timeline at a glance:</em></p>
+<table class="convey">
+	<tr>
+		<td>RFP released to Vendors</td>
+		<td>13 June 2012</td>
+	</tr>
+	<tr>
+		<td>Deadline for Vendor RFP questions to ICANN</td>
+		<td>29 June 2012</td>
+	</tr>
+	<tr>
+		<td>ICANN Response to Vendor Questions</td>
+		<td>13 July 2012</td>
+	</tr>
+	<tr>
+		<td>Proposal Delivery deadline</td>
+		<td>27 July 2012</td>
+	</tr>
+	<tr>
+		<td>ICANN Proposal questions to Vendors</td>
+		<td>17 August 2012</td>
+	</tr>
+	<tr>
+		<td>Responses to ICANN questions Due</td>
+		<td>31 August 2012</td>
+	</tr>
+	<tr>
+		<td>ICANN RFP Review and evaluation, vendor presentations and selection of finalist proposals</td>
+		<td>28 September 2012</td>
+	</tr>
+	<tr>
+		<td>Anticipated Vendor selection announcement</td>
+		<td>8 October 2012</td>
+	</tr>
+	<tr>
+		<td>Anticipated project start</td>
+		<td>5 November 2012</td>
+	</tr>
+</table>
+<p><strong>Opened:</strong> 13 June 2012<br>
+	<strong>Deadline:</strong> 27 July 2012</p>
+<hr>
+<p><a href="/en/news/announcements/announcement-3-16may12-en.htm">Open-Source Reference Implementation of a Domain Name RESTful Whois Server - Request for Proposals</a> (16 May 12)<br>
+	<a href="/en/news/rfps/restful-whois-16may12-en.pdf">RFP</a> [PDF, 183 KB]<br>
+	<strong>Opened:</strong> 16 May 2012<br>
+	<strong>Deadline:</strong> 15 June 2012</p>
+<p><a href="/en/news/announcements/announcement-3-03feb12-en.htm">ICANN Seeks Evaluators for the Support Applicant Review Panel (SARP) - Request for Expressions of Interest (EOI)</a> (3 Feb 12)<br>
+	<a href="http://newgtlds.icann.org/en/applicants/candidate-support/sarp-eoi-request-03feb12-en.pdf">EOI</a> [PDF, 172 KB]<br>
+	<a href="http://newgtlds.icann.org/ar/applicants/candidate-support/sarp-eoi-request-03feb12-ar.pdf">العربية</a> <span dir="rtl"><span dir="rtl">[PDF,</span> 94 كيلو بايت]</span><br>
+	<a href="http://newgtlds.icann.org/zh/applicants/candidate-support/sarp-eoi-request-03feb12-zh.pdf">中文</a> [PDF, 211 KB]<br>
+	<a href="http://newgtlds.icann.org/fr/applicants/candidate-support/sarp-eoi-request-03feb12-fr.pdf">Français</a> [PDF, 126 KB]<br>
+	<a href="http://newgtlds.icann.org/es/applicants/candidate-support/sarp-eoi-request-03feb12-es.pdf">Español</a> [PDF, 143 KB]<br>
+	<a href="http://newgtlds.icann.org/ru/applicants/candidate-support/sarp-eoi-request-03feb12-ru.pdf">Русский</a> [PDF, 181 KB]<br>
+	<strong>Opened:</strong> 3 February 2012<br>
+	<strong>Deadline:</strong> 31 March 2012</p>
+<hr>
+<h3>2011 Closed RFPs</h3>
+<p><a href="/en/news/announcements/announcement-2-14sep11-en.htm">Safe and Secure New gTLDs: ICANN Seeks Back-up Registry Operators (Emergency Back-End Registry Operators or "EBEROs")</a> (14 Sept 11)<br>
+	<a href="/en/news/rfps/ebero-rfi-14sep11-en.pdf">RFI</a> [PDF, 660 KB]<br>
+	<a href="/en/news/rfps/ebero-rfi-qanda-29nov11-en.pdf">RFI Q&amp;A</a> [PDF, 411 KB]<br>
+	<strong>Issued:</strong> 14 September 2011<br>
+	<strong>Deadline:</strong> <del>30 November 2011</del> Extended to 5 December 2011</p>
+<p><a href="/en/news/announcements/announcement-5-03oct11-en.htm">Protecting Trademark Rights for New gTLDs: ICANN Seeks Service Providers for Trademark Clearinghouse Operation</a><br>
+	<a href="/en/topics/new-gtlds/trademark-clearinghouse-rfi-03oct11-en.pdf">RFI</a> [PDF, 243 KB]<br>
+	<strong>Trademark Clearinghouse RFI Questions and Answers (10 Nov 2011)</strong><br>
+	<a href="/en/topics/new-gtlds/trademark-clearinghouse-rfi-qanda-10nov11-en.pdf">RFI Q&amp;A</a> [PDF, 530 KB]<br>
+	<a href="/en/topics/new-gtlds/tmc-rfi-additional-qanda-17nov11-en.pdf">Additional RFI Q&amp;A</a> [PDF, 62 KB]<br>
+	<strong>Opened:</strong> 3 October 2011<br>
+	<strong>Deadline:</strong> <del>25 November 2011</del> Extended to 28 November 2011</p>
+<p><a href="/en/news/announcements/announcement-30aug11-en.htm">Safe, Stable and Secure New gTLDs: ICANN Seeks Global Background Screening Services Provider</a> (30 Aug 11)<br>
+	<a href="/en/topics/new-gtlds/background-screening-rfp-30aug11-en.pdf">RFP</a> [PDF, 286 KB]<br>
+	<strong>Background Screening RFP Question and Answers (22 Sept)</strong><br>
+	<a href="/en/topics/new-gtlds/background-screening-rfp-qanda-22sep11-en.pdf">RFP Q&amp;A</a> [PDF, 129 KB]<br>
+	<strong>Issued</strong>: 30 August 2011<br>
+	<strong>Deadline</strong>: 04 October 2011</p>
+<p><a href="/en/news/announcements/announcement-10jun11-en.htm">Contact Center Services Provider</a><br>
+	<a href="/en/topics/new-gtlds/rfp-asc-10jun11-en.pdf">RFP</a> [PDF, 1.15 MB]<br>
+	<strong>Issued</strong>: 10 June 2011<br>
+	<strong>Deadline</strong>: 15 July 2011</p>
+<p><a href="/en/news/announcements/announcement-10jul11-en.htm">WHOIS Consumer Trust Research</a><br>
+	<strong>Issued</strong>: 10 July 2011<br>
+	<strong>Deadline</strong>: 25 July 2011</p>
+<p><a href="/en/news/announcements/announcement-05jul11-en.htm">New gTLD Global Awareness Campaign</a><br>
+	<a href="/en/topics/new-gtlds/rfp-new-gtld-global-awareness-campaign-05jul11-en.pdf">RFP</a> [PDF, 633 KB]<br>
+	<strong>Issued</strong>: 5 July 2011<br>
+	<strong>Deadline</strong>: 18 July 2011</p>
+<p><a href="/en/news/announcements/announcement-10jun11-en.htm">Contact Center Platform Solution Provider</a><br>
+	<a href="/en/topics/new-gtlds/rfp-asc-10jun11-en.pdf">RFP</a> [PDF, 1.15 MB]<br>
+	<strong>Issued</strong>: 10 June 2011<br>
+	<strong>Deadline</strong>: 15 July 2011</p>
+<hr>
+<h3>2010 Closed RFPs</h3>
+<p><a href="/en/news/announcements/announcement-2-18may10-en.htm">Independent Researchers to Respond to Request for Proposal on WHOIS Privacy and Proxy Abuse Study</a><br>
+	<strong>Issued</strong>: 18 May 2010<br>
+	<strong>Deadline</strong>: 20 July 2010</p>
+<p><a href="/en/news/announcements/announcement-2-02jun10-en.htm">AoC Accountability and Transparency Review: Independent Expert</a><br>
+	<a href="/en/about/aoc-review/atrt/rpf-atrt-02jun10-en.pdf">RFP</a> [PDF, 46 KB]<br>
+	<strong>Issued</strong>: 2 June 2010<br>
+	<strong>Deadline</strong>: 12 June 2010</p>
+<p><a href="/en/news/announcements/announcement-29sep10-en.htm">WHOIS Proxy/Privacy Relay and Reveal Studies</a><br>
+	<strong>Issued</strong>: 29 September 2010<br>
+	<strong>Deadline</strong>: 30 November 2010</p>
+<p><a href="/en/news/announcements/announcement-11oct10-en.htm">DNS Operations/L-root Contingency Exercise Consultant</a><br>
+	<a href="/en/about/staff/security/dns-ops-l-root-contingency-rfp-07oct10-en.pdf">RFP</a> [PDF, 358 KB]<br>
+	<strong>Issued</strong>: 11 October 2010<br>
+	<strong>Deadline</strong>: 5 November 2010</p>
+<hr>
+<h3>2009 Closed RFPs</h3>
+<p><a href="/en/news/announcements/announcement-2-26jan09-en.htm">Host Sought for 2010 Europe Meeting</a></p>
+<p><a href="/en/news/announcements/announcement-12jan09-en.htm">Host Sought for 2010 Latin America Meeting</a></p>
+<p><a href="/en/news/announcements/announcement-25feb09-en.htm">New gTLDs: Call for Applicant Evaluation Panel Expressions of Interest</a></p>
+<p><a href="/en/news/announcements/announcement-2-02apr09-en.htm">Deadline for Independent Evaluator Applications Extended</a></p>
+<p><a href="/en/news/announcements/announcement-2-31jul09-en.htm">New gTLD Program: Update on Independent Evaluators Search</a></p>
+<p><a href="/en/news/announcements/announcement-3-17aug09-en.htm">August 2009: Review of the Country Code Names Supporting Organization (ccNSO)</a><br>
+	<a href="/en/groups/reviews/ccnso/rfp-review-ccnso-17aug09-en.pdf">RFP</a> [PDF, 169 KB]</p>
+<p><a href="/en/news/announcements/announcement-28sep09-en.htm">WHOIS Misuse Studies</a></p>
+<p><a href="/en/news/announcements/announcement-23oct09-en.htm">Costs and Feasibility to Conduct WHOIS Registrant Identification Studies</a></p>
+<hr>
+<h3>2008 Closed RFPs</h3>
+<p><a href="/en/news/announcements/announcement-31mar08-en.htm">ICANN Calls for Expressions of Interest to Host 2009 Meeting</a></p>
+<p><a href="/en/groups/reviews/board/rfp-evaluator-21apr08-en.htm">Independent Evaluator for the ICANN Board of Directors</a><br>
+	Related announcement: <a href="/en/news/announcements/announcement-21apr08-en.htm">http://www.icann.org/en/news/announcements/announcement-21apr08-en.htm</a></p>
+<p><a href="/en/news/announcements/announcement-11jul08-en.htm">July 2008: Independent Evaluator for the ICANN Root Server Stability Advisory Committee</a><br>
+	<a href="/en/groups/reviews/rssac/rfp-tor-request-11jul08-en.htm">RFP</a><br>
+	Related announcement: <a href="/en/groups/reviews/rssac/rfp-tor-request-11jul08-en.htm">http://www.icann.org/en/groups/reviews/rssac/rfp-tor-request-11jul08-en.htm</a></p>
+<p><a href="/en/news/announcements/announcement-16sep08-en.htm">Independent Review of SSAC Posted</a><br>
+	<a href="/en/groups/reviews/ssac/ssac-rfp-tor-16sep08-en.pdf">RFP</a> [PDF, 147 KB]</p>
+<p><a href="/en/news/announcements/announcement-03oct08-en.htm">European Hosts Sought for October 2009 Meeting</a></p>
+<hr>
+<h3>2007 Closed RFPs</h3>
+<p><a href="/en/news/announcements/announcement-2-15mar07-en.htm">Independent Evaluator for Nominating Committee Review, and Final Terms of Reference for This Review</a></p>
+<p><a href="/en/news/announcements/announcement-3-17may07-en.htm">Registrar Data Escrow</a><br>
+	<a href="/en/announcements/rfp-registrar-data-escrow-svs-17may07.pdf">RFP</a> [PDF, 82 KB]<br>
+	Related announcements: <a href="/en/news/announcements/announcement-2-01jun07-en.htm">http://www.icann.org/en/news/announcements/announcement-2-01jun07-en.htm</a></p>
+<p><a href="/en/news/announcements/announcement-23may07-en.htm">ICANN Calls for Proposals to Host 2008 Meetings</a></p>
+<p><a href="/en/groups/reviews/alac/rfp-20jun07-en.pdf">Independent Evaluator for At-Large Advisory Committee (ALAC)</a> [PDF, 21 KB]</p>
+<hr>
+<h3>2006 Closed RFPs</h3>
+<p><a href="/en/meetings/rfp/rfp-2006.htm">Host an ICANN Meeting</a></p>
+<p><a href="/en/news/announcements/announcement-25jun06-en.htm">ICANN Calls for Proposals to Host 2007 Meetings</a></p>
+<p><a href="/en/news/announcements/announcement-14dec05-en.htm">Independent Evaluator for GNSO Review</a></p>
+<hr>
+<h3>2004 Closed RFPs</h3>
+<p>.NET RFP<br>
+	<a href="/en/news/announcements/announcement-15dec04-en.htm">http://www.icann.org/en/news/announcements/announcement-15dec04-en.htm</a><br>
+	<a href="/en/news/announcements/announcement-01dec04-en.htm">http://www.icann.org/en/news/announcements/announcement-01dec04-en.htm</a><br>
+	<a href="/en/news/announcements/announcement-17dec04-en.htm">http://www.icann.org/en/news/announcements/announcement-17dec04-en.htm</a><br>
+	<a href="/en/news/announcements/announcement-3-12nov04-en.htm">http://www.icann.org/en/news/announcements/announcement-3-12nov04-en.htm</a></p>
+<p><a href="/en/news/announcements/announcement-29nov02-en.htm">Call for Proposals to Host 2004 ICANN Meetings</a></p>
+<p><a href="/en/news/announcements/announcement-05apr04-en.htm">ICANN Calls for Proposals to Host Meetings in 2005 and 2006</a></p>
+<p><a href="/en/news/announcements/announcement-01apr04-en.htm">Sponsored Top Level Domain Names</a></p>
+<hr>
+<h3>2003 Closed RFPs</h3>
+<p><a href="/en/tlds/new-stld-rfp/new-stld-rfp-24jun03.htm">Establishment of new sTLDs</a></p>
+<p><a href="/en/news/announcements/announcement-31jul02-en.htm">Call for Proposals to Host 2003 ICANN Meetings</a></p>
+<p><a href="/en/news/announcements/announcement-15dec03-en.htm">Sponsored Top Level Domain Names</a></p>
+<hr>
+<h3>2002 Closed RFPs</h3>
+<p><a href="/en/tlds/org/rfp-20may02.htm">.org Reassignment</a><br>
+	Related announcements: <a href="/en/tlds/org/index-01may02.htm">.org Reassignment: Draft Request for Proposals</a></p>
+<hr>
+<h3>2001 Closed RFPs</h3>
+<p><a href="/en/general/meeting-spec.htm">ICANN Meetings in Year 2001</a></p>
+</body></html></div></section></div></div></section></main><footer class="MainFooter" external_links="" id="main_footer"><section class="FooterDisclaimer" style="display: none">ICANN is not responsible for profile content or verification of user details.</section><section class="FooterSocial"><ul><li><a href="http://www.youtube.com/icannnews"><i class="fa fa-youtube"></i>You Tube</a></li><li><a href="https://www.twitter.com/icann"><i class="fa fa-twitter"></i>Twitter</a></li><li><a href="https://www.linkedin.com/company/icann"><i class="fa fa-linkedin"></i>LinkedIn</a></li><li><a href="http://www.flickr.com/photos/icann"><i class="fa fa-flickr"></i>Flickr</a></li><li><a href="http://www.facebook.com/icannorg"><i class="fa fa-facebook"></i>Facebook</a></li><li><a href="/en/news/rss"><i class="fa fa-rss"></i>RSS Feeds</a></li><li><a href="https://community.icann.org"><i class="fa fa-user"></i>Community Wiki</a></li><li><a href="/news/blog"><i class="fa fa-pencil"></i>ICANN Blog </a></li></ul></section><div class="MainFooter-content"><nav class="FooterMenu"><div class="FooterMenu-item"><h3 class="FooterMenu-title">Who We Are</h3><ul class="FooterSubmenu"><li><a href="/get-started">Get Started</a></li><li><a href="/en/about/learning">Learning</a></li><li><a href="/en/about/participate">Participate</a></li><li><a href="https://www.icann.org/resources/pages/groups-2012-02-06-en">Groups</a></li><li><a href="/resources/pages/board-of-directors-2014-03-19-en">Board</a></li><li><a href="/presidents-corner">President&#39;s Corner</a></li><li><a href="/en/about/staff">Staff</a></li><li><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&amp;cws=37">Careers</a></li><li><a href="/en/news/newsletter">Newsletter</a></li><li><a href="https://www.icann.org/development-and-public-responsibility">Development and Public Responsibility</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Contact Us</h3><ul class="FooterSubmenu"><li><a href="https://forms.icann.org/en/contact">Offices</a></li><li><a href="/resources/pages/customer-support-2015-06-22-en">Global Support</a></li><li><a href="/about/staff/security">Security Team</a></li><li><a href="/en/contact/pgp-keys">PGP Keys</a></li><li><a href="/contact/certificate-authority">Certificate Authority</a></li><li><a href="/resources/pages/contact-f2-2012-02-25-en">Registry Liaison</a></li><li><a href="https://forms.icann.org/en/about/aoc-review/contact">Specific Reviews</a></li><li><a href="http://forms.icann.org/en/groups/reviews/contact">Organizational Reviews</a></li><li><a href="http://forms.icann.org/en/contact/speakers">Request a Speaker</a></li><li><a href="/en/news/press">For Journalists</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Accountability &amp; Transparency</h3><ul class="FooterSubmenu"><li><a href="/en/news/in-focus/accountability/mechanisms">Accountability Mechanisms</a></li><li><a href="/resources/pages/irp-2012-02-25-en">Independent Review Process</a></li><li><a href="/groups/board/governance/reconsideration">Request for Reconsideration</a></li><li><a href="/help/ombudsman">Ombudsman</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Governance</h3><ul class="FooterSubmenu"><li><a href="/en/about/governance">Documents</a></li><li><a href="/en/about/agreements">Agreements</a></li><li><a href="/resources/reviews/aoc">Specific Reviews</a></li><li><a href="/about/annual-report">Annual Report</a></li><li><a href="/en/about/financials">Financials</a></li><li><a href="/en/about/transparency">Document Disclosure</a></li><li><a href="/en/about/planning">Planning</a></li><li><a href="/progress">KPI Dashboard</a></li><li><a href="/en/news/rfps">RFPs</a></li><li><a href="/en/news/litigation">Litigation</a></li><li><a href="/en/news/correspondence">Correspondence</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Help</h3><ul class="FooterSubmenu"><li><a href="/en/help/dispute-resolution">Dispute Resolution</a></li><li><a href="/en/help/dndr">Domain Name Dispute Resolution</a></li><li><a href="/en/help/name-collision">Name Collision</a></li><li><a href="/en/news/announcements/announcement-06mar07-en.htm">Registrar Problems</a></li><li><a href="http://whois.icann.org/">WHOIS</a></li></ul></div></nav></div><section class="copyright"><p><span>© 2016 Internet Corporation For Assigned Names and Numbers.</span><span><a href="/en/help/privacy">Privacy Policy</a></span><span><a href="/en/help/tos">Terms of Service</a></span><span><a href="/en/help/privacy-cookie-policy">Cookie Policy</a></span></p></section></footer><script src="/assets/application-94c6aceae2068177e83af77b024547c1.js"></script><script type="text/javascript">if (self == top) {
+ var theBody = document.getElementsByTagName('body')[0];
+ theBody.style.display = "block"
+} else {
+ top.location = self.location
+} </script><script src="/glossary_terms.js"></script><div class="cookie-notification"><div class="wrapper"><h4>A note about tracking cookies:</h4><p>This site uses cookies to deliver an efficient user experience and to help us see how the site is used. If you would like to read more about the use of cookies, <a href='/en/help/privacy-cookie-policy'>click here</a></p><p class="cookie-notification-notice">This notice is intended to appear only the first time you visit the site on any computer.<span class="js-close-cookie-notification"><i class="close-icon fa fa-times"></i>OK</span></p></div></div><div class="acronym-helper"><div class="wrapper"><div class="acronym-helper-term">Domain Name System</div><div class="acronym-helper-definition">Internationalized Domain Name ,IDN,"IDNs are domain names that include characters used in the local representation of languages that are not written with the twenty-six letters of the basic Latin alphabet ""a-z"". An IDN can contain Latin letters with diacritical marks, as required by many European languages, or may consist of characters from non-Latin scripts such as Arabic or Chinese. Many languages also use other types of digits than the European ""0-9"". The basic Latin alphabet together with the European-Arabic digits are, for the purpose of domain names, termed ""ASCII characters"" (ASCII = American Standard Code for Information Interchange). These are also included in the broader range of ""Unicode characters"" that provides the basis for IDNs. The ""hostname rule"" requires that all domain names of the type under consideration here are stored in the DNS using only the ASCII characters listed above, with the one further addition of the hyphen ""-"". The Unicode form of an IDN therefore requires special encoding before it is entered into the DNS. The following terminology is used when distinguishing between these forms: A domain name consists of a series of ""labels"" (separated by ""dots""). The ASCII form of an IDN label is termed an ""A-label"". All operations defined in the DNS protocol use A-labels exclusively. The Unicode form, which a user expects to be displayed, is termed a ""U-label"". The difference may be illustrated with the Hindi word for ""test"" — परीका — appearing here as a U-label would (in the Devanagari script). A special form of ""ASCII compatible encoding"" (abbreviated ACE) is applied to this to produce the corresponding A-label: xn--11b5bs1di. A domain name that only includes ASCII letters, digits, and hyphens is termed an ""LDH label"". Although the definitions of A-labels and LDH-labels overlap, a name consisting exclusively of LDH labels, such as""icann.org"" is not an IDN."</div></div></div><script src="/assets/resource_pages-b62e0da66a9e2914e4761737fc1c05aa.js"></script><script type="text/javascript">$(document).on("click", ".js-expand-menu", function() {
+  $this = $(this);
+  $ul = $this.closest("li").find("ul").first();
+  $link = $this.siblings().first()
+
+  if ($link.hasClass('is-opened')) {
+    $ul.slideUp('fast', 'easeInOutQuart')
+    $this.removeClass("js-collapsibleCollapsed")
+    $link.removeClass('is-opened')
+    $this.toggleClass('arrow-expanded')
+  } else {
+    // need to have a native hide call and remove the hidden class so sliding works
+    $ul.hide()
+    $ul.removeClass('hidden')
+    $this.addClass("js-collapsibleCollapsed")
+    $link.addClass('is-opened')
+    $this.toggleClass('arrow-expanded')
+    $ul.slideDown('fast', 'easeInOutQuart')
+  }
+});</script><script type="text/javascript">$('a').on('click', function(event) {
+  el = $(this);
+  var filetypes = /\.(zip|exe|dmg|pdf|csv|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+  href = (typeof(el.attr('href')) != 'undefined' ) ? el.attr('href') :"";
+  var is_same_domain = href.match(document.domain.split('.').reverse()[0]);
+  console.log("clicked a link");
+  if(href.match("www.icann.org") && href.match(filetypes))
+  {
+    ga('send', 'event', 'File', 'download', event.target.href);
+  }
+});</script></body></html>

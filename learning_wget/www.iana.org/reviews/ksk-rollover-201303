@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+<head>
+	<title>IANA — ￼Consultation on Root Zone KSK Rollover</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+<div id="main_right">
+
+
+	<h1>Consultation on Root Zone KSK Rollover</h1>
+
+	<h2>Consultation Objective</h2>
+	<p>The Internet Assigned Numbers Authority (IANA) Functions contract (SA1301-12-CN-0035) between ICANN and the United States Department of Commerce, National Telecommunications Information Administration (NTIA) to maintain the continuity and stability of services related to certain interdependent Internet technical management functions, known collectively as the Internet Assigned Numbers Authority calls for a public consultation from all interested and affected parties to help satisfy the following objective:</p>
+	<blockquote>C.2.9.2.f Root Domain Name System Security Extensions (DNSSEC) Key Management –The Contractor shall be responsible for the management of the root zone Key Signing Key (KSK), including generation, publication, and use for signing the Root Keyset. As delineated in the Requirements at Appendix 2 entitled Baseline Requirements for DNSSEC in the Authoritative Root Zone that is incorporated by reference herein as if fully set forth. The Contractor shall work collaboratively with NTIA and the Root Zone Maintainer, in the performance of this function.<a href="#footnotes" class="footnote-ref">1</a></blockquote>
+	<p>More specifically, this consultation involves “Appendix 2: Baseline Requirements for DNSSEC in the Authoritative Root Zone,” that articulates the contract requirement to perform a scheduled root zone KSK rollover.<a href="#footnotes" class="footnote-ref">2</a></p>
+	<p>The consultation is being conducted using the ICANN Public Comment Process, consistent with the contract requirements. The feedback received during this consultation will inform the Root Zone Management Partners on the subject of KSK rollover, so that a schedule and a detailed implementation plan for KSK rollovers can be established.</p>
+	<h2>This consultation</h2>
+	<p>This consultation requests input from the community regarding the scheduling and implementation of future KSK rollovers.</p>
+	
+	<h2>Background and Context</h2>
+	<p>The following subsections are intended to provide background and context for commenters in considering the issue of scheduling and implementing root KSK rollovers. More extensive documentation on the processes and systems involved in the use of DNSSEC in the root zone has been published<a href="#footnotes" class="footnote-ref">3</a> and may provide further useful insight.</p> 
+
+	<h3>DNSSEC Deployment in the Root Zone and KSK Generation</h3>
+	<p>ICANN, Verisign and NTIA (the Root Zone Management Partners) concluded a successful collaboration to deploy DNSSEC in the root zone of the DNS in July 2010. ICANN and Verisign each published details of how their respective duties are performed in the documents "DNSSEC Practice Statement for the Root Zone KSK Operator"<a href="#footnotes" class="footnote-ref">4</a> and "DNSSEC Practice Statement for the Root Zone ZSK Operator"<a href="#footnotes" class="footnote-ref">5</a>, respectively.</p>
+	<p>The active KSK was generated during KSK Ceremony 1 on 2010-06-17 at KMF-East<a href="#footnotes" class="footnote-ref">6</a>. Secure transport of the key materials to KMF-West<a href="#footnotes" class="footnote-ref">7</a> concluded during KSK Ceremony 2, following which the KSK was designated to be in full production. All subsequent KSK Ceremonies have made use of that same KSK.</p>
+	<h3>Scheduled KSK Rollover</h3>
+	<p>No KSK rollover has been executed since the active KSK was designated to be in full production. However, the IANA Functions Contract specifies a high-level requirement to perform KSK rollover in the root zone “as required or after five years.”</p>
+	<p>The IANA Functions Contract<a href="#footnotes" class="footnote-ref">8</a> specifies:</p>
+	<blockquote>
+		<p>1.2.9.2.f.3.9.3 Root Zone KSK Rollover</p>
+		<p>Root Zone KSK rollover will be executed as required or after five years of operation. Cryptographic algorithm rollover will also be taken into account when planning a [Root Zone] KSK rollover.</p>
+		<p>The [Root Zone] KSK rollover will be scheduled to facilitate automatic updates of the Trust Anchors in the DNS resolvers as described in RFC 5011. This rollover will allow seamless transition from the old Trust Anchor to the new Trust Anchor without jeopardising the chain of trust. After a [Root Zone] KSK has been removed from the key set, it will be retained after its operational period until the next scheduled key ceremony, which is when the private component will be destroyed in a secure manner.</p>
+	</blockquote>
+	<p>At the time that the active KSK was generated, software available to perform DNSSEC validation was considered relatively immature. Therefore, detailed scheduling of KSK￼rollover was deferred until the reaction of such software to a KSK rollover was better understood.</p>
+	<h3>Existing KSK Management Software</h3>
+	<p>The software used during KSK Ceremonies is capable of generating a new key and of managing a KSK rollover.</p>
+	<p>The ability of the software and related processes to generate a new KSK and transport it securely between KMFs was demonstrated during KSK Ceremonies 1 and 2.</ps>
+	<p>The KSK rollover capability of the software was tested during public, pre-production testing and an independent report published prior to full production confirmed that all key transitions were observed to follow RFC 5011 semantics.</p>
+	<h3>Impact on Human Resources</h3>
+	<p>The impact on human resources (and other associated costs) is an important consideration for the scheduling and implementation of KSK rollovers.</p>
+	<p>Currently, KSK Ceremonies are scheduled four times per year, and involve both ICANN staff and TCRs. TCRs are volunteers chosen from all ICANN regions who travel without funding from ICANN.</p>
+	<p>It is important to note that a KSK rollover would require specific actions to be taken at a KSK Ceremony and has the potential (depending on schedule and frequency) to significantly impact the human resources involved and other associated costs, such as travel for the TCRs who need to participate in the KSK Ceremonies.</p>
+	<p>An aggressive KSK rollover schedule that required more frequent KSK Ceremonies to be scheduled would increase the time and travel commitment for those involved in KSK Ceremonies.</p>
+	<h3>Operational Lifetime of Hardware Security Modules (HSMs)</h3>
+	<p>It is important to note that the lifetime of HSMs has implications for the KSK and should be considered with respect to a KSK rollover schedule and implementation.</p>
+	<p>Existing processes for KSK rollover involve the generation of an incoming KSK on a newly-accepted HSM. The HSM containing the outgoing KSK is retained until the operational period of the outgoing KSK has passed, and is subsequently destroyed in a secure manner.</p>
+	<p>The effective operational lifetime of the HSMs in use is determined by the lifetime of the HSMs internal batteries. The vendor of the HSMs in use guarantees the batteries for five years of operation. There are therefore some efficiencies in adopting a KSK rollover schedule with a period less than or equal to five years, since the HSM replacement required for the KSK rollover can coincide with the HSM replacement that would otherwise be needed to ensure battery life.</p>
+	<h3>Publication of the Root Zone Trust Anchor</h3>
+	<p>The set of current DNSSEC trust anchors for the root zone are published<a href="#footnotes" class="footnote-ref">9</a> in a way that accommodates the retirement of an active KSK and the promotion of a newly-published KSK to active. Retired trust anchors will continue to be published, but will be specified as having a validity period in the past.</p>
+	<p>There is no change to the publication of DNSSEC trust anchors for the root zone required to accommodate a KSK rollover.</p>
+	
+	<h2>Consultation Questions</h2>
+	
+	<p>ICANN, consistent with the terms of the IANA functions contract, is committed to executing a KSK rollover in the root zone and now seeks public feedback with respect to developing a detailed scheduling and implementation plan.</p>
+	<p>Comments are welcome on any aspect of KSK management related to KSK rollover, and specifically on the following questions:</p>
+	<ol>
+	<li>What prerequisites need to be considered prior to a first scheduled KSK rollover?</li>
+	<li>When should the first scheduled KSK rollover take place?</li>
+	<li>What should the IANA Functions Operator (ICANN) and the other Root Zone Management Partners do to gauge the technical and end-user impact of a KSK rollover following the first scheduled KSK rollover?></li>
+	<li>How often should a scheduled KSK rollover take place, following the first one?</li>
+	<li>How far should the published calendar for scheduled KSK rollovers extend into the future?</li>
+	<li>What public notification should take place in advance of a scheduled KSK rollover?</li>
+	<li>What other considerations are necessary for the Root Zone Management Partners to take into consideration prior, during, and after a planned key roll over?</li>
+	</ol>
+	<p>
+		<div class="button-well">
+			<a href="http://www.icann.org/en/news/public-comment/root-zone-consultation-08mar13-en.htm" class="button arrow">Lodge Comment</a>
+		</div>
+	</p>
+
+	<h2>Footnotes</h2>
+	<div id="footnotes">
+	
+	<div id="footnote-1" class="footnote"><span class="footnote-index">1</span>See page 8 of the IANA functions contract, section C.2.9.2.f, http://www.ntia.doc.gov/files/ntia/publications/sf_26_pg_1-2- final_award_and_sacs.pdf.</div>
+	<div id="footnote-2" class="footnote"><span class="footnote-index">2</span>See page 20 of the IANA functions contract, Appendix 2, section c) Root Zone KSK Rollover, http://www.ntia.doc.gov/files/ntia/publications/sf_26_pg_1-2- final_award_and_sacs.pdf.</div>
+	<div id="footnote-3" class="footnote"><span class="footnote-index">3</span>http://www.root-dnssec.org/</div>
+	<div id="footnote-4" class="footnote"><span class="footnote-index">4</span>https://www.iana.org/dnssec/icann-dps.txt</div>
+	<div id="footnote-5" class="footnote"><span class="footnote-index">5</span>http://www.verisigninc.com/assets/dnssec-practice-statement-root-zone-zsk- operator.pdf</div>
+	<div id="footnote-6" class="footnote"><span class="footnote-index">6</span>Key Management Facility (KMF)-East is located in Culpeper, VA, USA.</div>
+	<div id="footnote-7" class="footnote"><span class="footnote-index">7</span>KMF-West is located in El Segundo, CA, USA.</div>
+	<div id="footnote-8" class="footnote"><span class="footnote-index">8</span>http://www.ntia.doc.gov/page/iana-functions-purchase-order</div>
+	
+	<div id="footnote-9" class="footnote"><span class="footnote-index">9</span>J. Abley, J. Schlyter, "DNSSEC Trust Anchor Publication for the Root Zone", May 7, 2010, http://www.root-dnssec.org/wp-content/uploads/2010/07/draft-icann-dnssec-trust- anchor-01.txt</div>
+
+	</div>
+	
+	<h2>Glossary</h2>
+	<p>This document makes frequent use of specialised terminology. Such specialised terms are listed here rather than being expanded at first use, in the interests of making the document easier to read by a technical audience.</p>
+	<table class="iana-table">
+		<tr>
+			<th>Term</th>
+			<th>Meaning in this document</th>
+		</tr>
+		<tr>
+			<td>DNS</td>
+			<td>Domain Name System, as originally specified in RFC 1034.</td>
+		</tr>
+		<tr>
+			<td>DNSSEC</td>
+			<td>DNS Security Extensions, as specified in RFC 4033.</td>
+		</tr>
+		<tr>
+			<td>DNSSEC Validation</td>
+			<td>The cryptographic verification of DNSSEC signatures attached to RRSets, by which the authenticity of DNS responses can be determined.</td>
+		</tr>
+		<tr>
+			<td>DPS</td>
+			<td>￼DNSSEC Policy and Practice Statement, a public document describing how
+			DNSSEC is implemented and maintained. For the root zone, Verisign and ICANN each publish a DPS which documents their respective
+			￼￼responsibilities.</td>
+		<tr>
+			<td>IANA functions</td>
+			<td>A set of technical functions specified in the IANA Functions Contract administered by NTIA and currently awarded to ICANN.</td>
+		</tr>
+		<tr>
+			<td>ICANN</td>
+			<td>Internet Corporation for Assigned Names and Numbers, the current IANA Functions Operator.</td>
+		</tr>
+		<tr>
+			<td>IETF</td>
+			<td>Internet Engineering Task Force, the standards body responsible for Internet- related protocols.
+			</td>
+		</tr>
+		<tr>
+			<td>KMF</td>
+			<td>Key Management Facility, the secure facility where the KSK is stored and
+			exercised during KSK Ceremonies. The two active KMFs are located in
+			￼￼Culpeper, VA, USA ("KMF-East") and El Segundo, CA, USA ("KMF-West").
+			￼</td>
+		</tr>
+		<tr>
+			<td>KSK</td>
+			<td>The Root Zone Key Signing Key, a DNSSEC key-pair. The private component of the KSK is used to generate signatures over the DNSKEY RRSet; the public component provides a means to validate signatures made with the private component. Validators test the integrity of the observed public component of the KSK using a pre-configured trust anchor.</td>
+		</tr>
+		<tr>
+			<td>KSK Ceremony</td>
+			<td>A set of procedures carried out under secure conditions by which the KSK is
+			generated and exercised. Ceremonies are scheduled to take place for times
+			each calendar year.
+			￼</td>
+		</tr>
+		<tr>
+			<td>KSK Rollover</td>
+			<td>The replacement of an active KSK with a successor. Following the KSK Rollover procedure, the previously-active KSK is retired and plays no further role.</td>
+		</tr>
+		<tr>
+			<td>NTIA</td>
+			<td>National Telecommunications and Information Administration.</td>
+		</tr>
+		<tr>
+			<td>RFC</td>
+			<td>Request for Comments, the name of a document series produced and maintained by the IETF.</td>
+		</tr>
+		<tr>
+			<td>Root Zone</td>
+			<td>An infrastructural zone in the DNS namespace which facilitates referrals from root servers to DNS servers that are authoritative for TLDs.</td>
+		</tr>
+		<tr>
+			<td>RRSet</td>
+			<td>A set of one or more DNS resource records published in a zone.</td>
+		</tr>
+		<tr>
+			<td>TCR</td>
+			<td>Trusted Community Representative, non-affiliated representatives of the
+			global technical community who assist ICANN in managing the KSK during
+			￼￼KSK Ceremonies.
+			￼</td>
+		</tr>
+		<tr>
+			<td>TLD</td>
+			<td>Top-Level Domain, the right-most label in a domain name.</td>
+		</tr>
+		<tr>
+			<td>Trust Anchor</td>
+			<td>A hash (digest) of the public component of the KSK, used by validators to verify the integrity of the observed public component of the KSK.</td>
+		</tr>
+		<tr>
+			<td>Validator</td>
+			<td>An iterative resolver that performs DNSSEC validation.</td>
+		</tr>
+		<tr>
+			<td>Verisign</td>
+			<td>The party currently carrying out the role of Root Zone Maintainer under a cooperative agreement administered by NTIA.</td>
+		</tr>
+	</table>
+	
+
+			
+
+</div>
+
+<div id="sidebar_left">
+    <div class="navigation_box">
+        <h2>About us</h2>
+        <ul>
+            <li id="nav_about_top"><a href="/about">Introduction</a></li>
+            <li id="nav_about_performance"><a href="/performance">Performance Reporting</a></li>
+            <li id="nav_about_procedures"><a href="/procedures">Procedures</a></li>
+            <li id="nav_about_presentations"><a href="/about/presentations">Presentations</a></li>
+            <li id="nav_about_reports"><a href="/reports">Public Reports</a></li>
+            <li id="nav_about_framework"><a href="/about/framework">Framework Documents</a></li>
+            <li id="nav_about_reviews"><a href="/reviews">Reviews</a></li>
+            <li id="nav_about_audits"><a href="/about/audits">Audits</a></li>
+            <li id="nav_about_excellence"><a href="/about/excellence">Excellence &amp; Quality</a></li>
+            <li id="nav_about_glossary"><a href="/glossary">Glossary of terms</a></li>
+            <li id="nav_about_contact"><a href="/contact">Contact us</a></li>
+        </ul>
+    </div>
+</div>
+
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+<script xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+$(document).ready(function() {
+	$("#nav_about_reviews").addClass("selected")	
+});
+</script>
+
+	
+</body>
+
+</html>

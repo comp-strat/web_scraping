@@ -1,0 +1,79 @@
+###############################################################
+#
+# TLD:            xn--eckvdtc9d
+# Script:         Russian
+# Language Tag:   ru
+# Version Number: 1.0
+# Effective Date: October 1, 2013
+# Registry:       Amazon Registry Services, Inc.
+# Address:        410 Terry Avenue N., Seattle, WA 98109 USA
+# Telephone:      + 1 206 266 1000
+# Email:          amazon@valideus.com
+# URL:            
+#
+###############################################################
+Version 1 20130101 
+October 1, 2013
+Reference 1 ICANN Guidelines for the Implementation of Internationalized Domain Names
+################################################################
+# Relevant Policy Document URL: 
+# This document describes the Internationalized Domain Names (IDN) Character Table used by Amazon Registry Services, Inc. within the xn--eckvdtc9d registry for the registration of xn--eckvdtc9d domains in the Russian language. 
+# We advise registrants to carefully consider the potential confusion over the perception of equivalence between an accented Latin character and another sequence of Latin characters, with 
+# or without accents.  There exists no equivalence rule that can be applied universally as any such mappings are generally dependent on the language, culture and context in which an IDN is used. 
+# {Application}'s Russian IDN implementation has a feature that mitigates homographic attacks due to Han variants by blocking a name from being registered if a similar name is already registered.  
+# The mechanism by which this works is that every registered domain name has a computed canonical string associated with it.  This canonical string is only used internally to block similar names 
+# from being registered.  
+# Note: as opposed to most other IDN languages supported in xn--eckvdtc9d, the character table for the Russian language IDNs does not include US ASCII letters a to z.
+# The table is an adaptation of RFC 3743's table format.  The format is as follows:
+# VALID CODE POINT; CANONICAL CODE POINT [;OTHER VARIANTS]
+# The first column is VALID CODE POINT which is available for registration.
+# The second column is CANONICAL CODE POINT.  This provides blocking across any language that xn--eckvdtc9d supports or will support.  This code point may not appear as VALID CODE POINT as some characters 
+# are confusing similar to another character in a different language which may not be supported by xn--eckvdtc9d.  This should not affect registrars as the second column is only used internally by the 
+# registry and provided as a reference. 
+# The third column is empty for this language.
+# This table is in compliance with the ICANN Guidelines for the Implementation of Internationalized Domain Names and is intended for publication in the IANA IDN Character Table Registry.
+#
+U+002D;U+002D # HYPHEN-MINUS -;-
+U+0030;U+0030 # DIGIT ZERO 0;0
+U+0031;U+0031 # DIGIT ONE 1;1
+U+0032;U+0032 # DIGIT TWO 2;2
+U+0033;U+0033 # DIGIT THREE 3;3
+U+0034;U+0034 # DIGIT FOUR 4;4
+U+0035;U+0035 # DIGIT FIVE 5;5
+U+0036;U+0036 # DIGIT SIX 6;6
+U+0037;U+0037 # DIGIT SEVEN 7;7
+U+0038;U+0038 # DIGIT EIGHT 8;8
+U+0039;U+0039 # DIGIT NINE 9;9
+U+0430;U+0061 # CYRILLIC SMALL LETTER A а;a
+U+0431;U+0431 # CYRILLIC SMALL LETTER BE б;б
+U+0432;U+0062 # CYRILLIC SMALL LETTER VE в;b
+U+0433;U+0072 # CYRILLIC SMALL LETTER GHE г;r
+U+0434;U+0434 # CYRILLIC SMALL LETTER DE д;д
+U+0435;U+0065 # CYRILLIC SMALL LETTER E е;e
+U+0436;U+0436 # CYRILLIC SMALL LETTER ZHE ж;ж
+U+0437;U+0437 # CYRILLIC SMALL LETTER ZE з;з
+U+0438;U+0075 # CYRILLIC SMALL LETTER I и;u
+U+0439;U+0439 # CYRILLIC SMALL LETTER SHORT I й;й
+U+043A;U+006B # CYRILLIC SMALL LETTER KA к;k
+U+043B;U+043B # CYRILLIC SMALL LETTER EL л;л
+U+043C;U+006D # CYRILLIC SMALL LETTER EM м;m
+U+043D;U+0068 # CYRILLIC SMALL LETTER EN н;h
+U+043E;U+006F # CYRILLIC SMALL LETTER O о;o
+U+043F;U+006E # CYRILLIC SMALL LETTER PE п;n
+U+0440;U+0070 # CYRILLIC SMALL LETTER ER р;p
+U+0441;U+0063 # CYRILLIC SMALL LETTER ES с;c
+U+0442;U+0074 # CYRILLIC SMALL LETTER TE т;t
+U+0443;U+0079 # CYRILLIC SMALL LETTER U у;y
+U+0444;U+0444 # CYRILLIC SMALL LETTER EF ф;ф
+U+0445;U+0078 # CYRILLIC SMALL LETTER HA х;x
+U+0446;U+0446 # CYRILLIC SMALL LETTER TSE ц;ц
+U+0447;U+0447 # CYRILLIC SMALL LETTER CHE ч;ч
+U+0448;U+0448 # CYRILLIC SMALL LETTER SHA ш;ш
+U+0449;U+0449 # CYRILLIC SMALL LETTER SHCHA щ;щ
+U+044A;U+044A # CYRILLIC SMALL LETTER HARD SIGN ъ;ъ
+U+044B;U+044B # CYRILLIC SMALL LETTER YERU ы;ы
+U+044C;U+044C # CYRILLIC SMALL LETTER SOFT SIGN ь;ь
+U+044D;U+044D # CYRILLIC SMALL LETTER E э;э
+U+044E;U+044E # CYRILLIC SMALL LETTER YU ю;ю
+U+044F;U+044F # CYRILLIC SMALL LETTER YA я;я
+U+0451;U+00EB # CYRILLIC SMALL LETTER YO ё;ë

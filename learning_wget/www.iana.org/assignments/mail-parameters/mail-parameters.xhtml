@@ -1,0 +1,682 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>MAIL Parameters</title>
+  </head>
+  <body>
+    <h1>MAIL Parameters</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2014-07-07</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mail-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="mail-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="mail-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#mail-parameters-2">SMTP Service Extensions</a>
+        <ul>
+          <li>
+            <a href="#mail-parameters-3">SMTP Service Extension Parameters</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#mail-parameters-5">Mail Transmission Types</a>
+        <ul>
+          <li>
+            <a href="#mail-parameters-6">VIA link types</a>
+          </li>
+          <li>
+            <a href="#mail-parameters-7">WITH protocol types</a>
+          </li>
+          <li>
+            <a href="#mail-parameters-8">Additional-registered-clauses</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#mail-parameters-9">SMTP PRIORITY extension Priority Assignment Policy</a>
+      </li>
+      <li>
+        <a href="#mail-parameters-10">Registered-states</a>
+      </li>
+    </ul>
+    <h2><a name="mail-parameters-2" id="mail-parameters-2"></a>SMTP Service Extensions</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards-Track or IESG-Approved Experimental RFC</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5321">RFC5321, Section 2.2</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Simple Mail Transfer Protocol [<a href="http://www.iana.org/go/rfc5321">RFC5321</a>] specifies a set of commands
+or services and a general procedure for extending that set. The table
+below lists SMTP service extensions. Both message submission [<a href="http://www.iana.org/go/rfc6409">RFC6409</a>]
+and mail transfer [<a href="http://www.iana.org/go/rfc5321">RFC5321</a>] may use these extensions unless otherwise
+specified.
+
+As specified in [<a href="http://www.iana.org/go/rfc5321">RFC5321</a>] Section 2.2.2, no entry may be made in this
+registry that starts in an "X". Entries may be made only for service
+extensions (and associated keywords, parameters, or verbs) that are
+defined in Standards-Track or Experimental RFCs specifically approved
+by the IESG for this purpose.
+
+The server response to a client EHLO command includes a keyword for
+each service extension the server implements.  Some of these keywords
+have parameters, which are listed in the "SMTP Service Extension
+Parameters" registry.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mail-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mail-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>EHLO Keyword</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">SEND</td>
+          <td>Send as mail</td>
+          <td>[<a href="http://www.iana.org/go/rfc821">RFC821</a>]</td>
+          <td>The description of SEND was updated by
+[<a href="http://www.iana.org/go/rfc1123">RFC1123</a>] and then its actual use was
+deprecated in [<a href="http://www.iana.org/go/rfc2821">RFC2821</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">SOML</td>
+          <td>Send as mail or to terminal</td>
+          <td>[<a href="http://www.iana.org/go/rfc821">RFC821</a>]</td>
+          <td>The description of SOML was updated by
+[<a href="http://www.iana.org/go/rfc1123">RFC1123</a>] and then its actual use was
+deprecated in [<a href="http://www.iana.org/go/rfc2821">RFC2821</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">SAML</td>
+          <td>Send as mail and to terminal</td>
+          <td>[<a href="http://www.iana.org/go/rfc821">RFC821</a>]</td>
+          <td>The description of SAML was updated by
+[<a href="http://www.iana.org/go/rfc1123">RFC1123</a>] and then its actual use was
+deprecated in [<a href="http://www.iana.org/go/rfc2821">RFC2821</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">EXPN</td>
+          <td>Expand the mailing list</td>
+          <td>[<a href="http://www.iana.org/go/rfc821">RFC821</a>]</td>
+          <td>Command description updated by [<a href="http://www.iana.org/go/rfc5321">RFC5321</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">HELP</td>
+          <td>Supply helpful information</td>
+          <td>[<a href="http://www.iana.org/go/rfc821">RFC821</a>]</td>
+          <td>Command description updated by [<a href="http://www.iana.org/go/rfc5321">RFC5321</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">TURN</td>
+          <td>Interchange the client and server   
+roles</td>
+          <td>[<a href="http://www.iana.org/go/rfc821">RFC821</a>]</td>
+          <td>The actual use of TURN was deprecated in
+[<a href="http://www.iana.org/go/rfc2821">RFC2821</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8BITMIME</td>
+          <td>SMTP and Submit transport of 8bit   
+MIME content</td>
+          <td>[<a href="http://www.iana.org/go/rfc6152">RFC6152</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">SIZE</td>
+          <td>Message size declaration</td>
+          <td>[<a href="http://www.iana.org/go/rfc1870">RFC1870</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">VERB</td>
+          <td>Verbose</td>
+          <td>[Eric Allman]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">ONEX</td>
+          <td>One message transaction only</td>
+          <td>[Eric Allman]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">CHUNKING</td>
+          <td>Chunking</td>
+          <td>[<a href="http://www.iana.org/go/rfc3030">RFC3030</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">BINARYMIME</td>
+          <td>Binary MIME</td>
+          <td>[<a href="http://www.iana.org/go/rfc3030">RFC3030</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">CHECKPOINT</td>
+          <td>Checkpoint/Restart</td>
+          <td>[<a href="http://www.iana.org/go/rfc1845">RFC1845</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">DELIVERBY</td>
+          <td>Deliver By</td>
+          <td>[<a href="http://www.iana.org/go/rfc2852">RFC2852</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">PIPELINING</td>
+          <td>Command Pipelining</td>
+          <td>[<a href="http://www.iana.org/go/rfc2920">RFC2920</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">DSN</td>
+          <td>Delivery Status Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc3461">RFC3461</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">ETRN</td>
+          <td>Extended Turn</td>
+          <td>[<a href="http://www.iana.org/go/rfc1985">RFC1985</a>]</td>
+          <td>SMTP [<a href="http://www.iana.org/go/rfc5321">RFC5321</a>] only. Not for use on Submit port 587.</td>
+        </tr>
+        <tr>
+          <td align="center">ENHANCEDSTATUSCODES</td>
+          <td>Enhanced Status Codes</td>
+          <td>[<a href="http://www.iana.org/go/rfc2034">RFC2034</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">STARTTLS</td>
+          <td>Start TLS</td>
+          <td>[<a href="http://www.iana.org/go/rfc3207">RFC3207</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">NO-SOLICITING</td>
+          <td>Notification of no soliciting</td>
+          <td>[<a href="http://www.iana.org/go/rfc3865">RFC3865</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">MTRK</td>
+          <td>Message Tracking</td>
+          <td>[<a href="http://www.iana.org/go/rfc3885">RFC3885</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">SUBMITTER</td>
+          <td>SMTP Responsible Submitter</td>
+          <td>[<a href="http://www.iana.org/go/rfc4405">RFC4405</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">ATRN</td>
+          <td>Authenticated TURN</td>
+          <td>[<a href="http://www.iana.org/go/rfc2645">RFC2645</a>]</td>
+          <td>SMTP [<a href="http://www.iana.org/go/rfc5321">RFC5321</a>] only. Not for use on Submit port 587.</td>
+        </tr>
+        <tr>
+          <td align="center">AUTH</td>
+          <td>Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">BURL</td>
+          <td>Remote Content</td>
+          <td>[<a href="http://www.iana.org/go/rfc4468">RFC4468</a>]</td>
+          <td>Submit [<a href="http://www.iana.org/go/rfc6409">RFC6409</a>] only. Not for use with SMTP on port 25.</td>
+        </tr>
+        <tr>
+          <td align="center">FUTURERELEASE</td>
+          <td>Future Message Release</td>
+          <td>[<a href="http://www.iana.org/go/rfc4865">RFC4865</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">UTF8SMTP</td>
+          <td>Internationalized email address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5336">RFC5336</a>]</td>
+          <td>Experimental; deprecated in [<a href="http://www.iana.org/go/rfc6531">RFC6531</a>].</td>
+        </tr>
+        <tr>
+          <td align="center">CONPERM</td>
+          <td>Content Conversion Permission</td>
+          <td>[<a href="http://www.iana.org/go/rfc4141">RFC4141</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">CONNEG</td>
+          <td>Content Conversion Negotiation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4141">RFC4141</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">SMTPUTF8</td>
+          <td>Internationalized email address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6531">RFC6531</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">MT-PRIORITY</td>
+          <td>Priority Message Handling</td>
+          <td>[<a href="http://www.iana.org/go/rfc6710">RFC6710</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">RRVS</td>
+          <td>Require Recipient Valid Since</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>]</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="mail-parameters-3" id="mail-parameters-3"></a>SMTP Service Extension Parameters</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Standards-Track or IESG-Approved Experimental RFC</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5321">RFC5321, Section 2.2</a>]</dd>
+        <dt>Note</dt>
+        <dd>
+          <pre>Some of the keywords in the "SMTP Service Extensions" registry have
+parameters.  These are listed here (those keywords not listed here
+have no parameters).</pre>
+        </dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mail-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mail-parameters-3" class="sortable">
+        <thead>
+          <tr>
+            <th>EHLO Keyword</th>
+            <th>Parameters</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">SIZE</td>
+            <td>number</td>
+            <td>[<a href="http://www.iana.org/go/rfc1870">RFC1870</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">NO-SOLICITING</td>
+            <td>Soliciting-keywords</td>
+            <td>[<a href="http://www.iana.org/go/rfc3865">RFC3865</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">AUTH</td>
+            <td>SASL mechanism names</td>
+            <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">BURL</td>
+            <td>Permitted URL prefixes</td>
+            <td>[<a href="http://www.iana.org/go/rfc4468">RFC4468</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">MT-PRIORITY</td>
+            <td>Name of the Priority Assignment Policy (optional)</td>
+            <td>[<a href="http://www.iana.org/go/rfc6710">RFC6710</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="mail-parameters-5" id="mail-parameters-5"></a>Mail Transmission Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards-Track or IESG-Approved Experimental RFC</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc821">RFC821</a>][<a href="http://www.iana.org/go/rfc822">RFC822</a>][<a href="http://www.iana.org/go/rfc5321">RFC5321</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Simple Mail Transfer Protocol [<a href="http://www.iana.org/go/rfc821">RFC821</a>][<a href="http://www.iana.org/go/rfc5321">RFC5321</a>] and the Standard for
+the Format of ARPA Internet Text Messages [<a href="http://www.iana.org/go/rfc822">RFC822</a>] specify that a set of
+"Received" lines will be prepended to the headers of electronic mail
+messages as they are transported through the Internet.
+These received line may optionally include either or both a "via" phrase
+and/or a "with" phrase.  The legal values for the phrases are listed here.
+The via phrase is intended to indicate the link or physical medium over
+which the message was transferred.  The with phrase is intended to
+indicate the protocol or logical process that was used to transfer the
+message.</pre>
+      </dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="mail-parameters-6" id="mail-parameters-6"></a>VIA link types</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mail-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mail-parameters-6" class="sortable">
+        <thead>
+          <tr>
+            <th>VIA link types</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">UUCP</td>
+            <td>Unix-to-Unix Copy Program</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">TCP</td>
+            <td>TCP</td>
+            <td>[<a href="http://www.iana.org/go/rfc5321">RFC5321</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mail-parameters-7" id="mail-parameters-7"></a>WITH protocol types</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mail-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mail-parameters-7" class="sortable">
+        <thead>
+          <tr>
+            <th>WITH protocol types</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">SMTP</td>
+            <td>Simple Mail Transfer Protocol</td>
+            <td>[<a href="http://www.iana.org/go/rfc5321">RFC5321</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">ESMTP</td>
+            <td>SMTP with Service Extensions</td>
+            <td>[<a href="http://www.iana.org/go/rfc5321">RFC5321</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">ESMTPA</td>
+            <td>ESMTP with AUTH</td>
+            <td>[<a href="http://www.iana.org/go/rfc3848">RFC3848</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">ESMTPS</td>
+            <td>ESMTP with STARTTLS</td>
+            <td>[<a href="http://www.iana.org/go/rfc3848">RFC3848</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">ESMTPSA</td>
+            <td>ESMTP with both STARTTLS and AUTH</td>
+            <td>[<a href="http://www.iana.org/go/rfc3848">RFC3848</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">LMTP</td>
+            <td>Local Mail Transfer Protocol</td>
+            <td>[<a href="http://www.iana.org/go/rfc3848">RFC3848</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">LMTPA</td>
+            <td>LMTP with AUTH</td>
+            <td>[<a href="http://www.iana.org/go/rfc3848">RFC3848</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">LMTPS</td>
+            <td>LMTP with STARTTLS</td>
+            <td>[<a href="http://www.iana.org/go/rfc3848">RFC3848</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">LMTPSA</td>
+            <td>LMTP with both STARTTLS and AUTH</td>
+            <td>[<a href="http://www.iana.org/go/rfc3848">RFC3848</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">MMS</td>
+            <td>Multimedia Messaging Service</td>
+            <td>[<a href="http://www.iana.org/go/rfc4356">RFC4356</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">UTF8SMTP</td>
+            <td>ESMTP with SMTPUTF8</td>
+            <td>[<a href="http://www.iana.org/go/rfc6531">RFC6531</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">UTF8SMTPA</td>
+            <td>ESMTP with SMTPUTF8 and AUTH</td>
+            <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>][<a href="http://www.iana.org/go/rfc6531">RFC6531</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">UTF8SMTPS</td>
+            <td>ESMTP with SMTPUTF8 and STARTTLS</td>
+            <td>[<a href="http://www.iana.org/go/rfc3207">RFC3207</a>][<a href="http://www.iana.org/go/rfc6531">RFC6531</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">UTF8SMTPSA</td>
+            <td>ESMTP with SMTPUTF8 and both STARTTLS and  
+AUTH</td>
+            <td>[<a href="http://www.iana.org/go/rfc3207">RFC3207</a>][<a href="http://www.iana.org/go/rfc4954">RFC4954</a>][<a href="http://www.iana.org/go/rfc6531">RFC6531</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">UTF8LMTP</td>
+            <td>LMTP with SMTPUTF8</td>
+            <td>[<a href="http://www.iana.org/go/rfc6531">RFC6531</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">UTF8LMTPA</td>
+            <td>LMTP with SMTPUTF8 and AUTH</td>
+            <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>][<a href="http://www.iana.org/go/rfc6531">RFC6531</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">UTF8LMTPS</td>
+            <td>LMTP with SMTPUTF8 and STARTTLS</td>
+            <td>[<a href="http://www.iana.org/go/rfc3207">RFC3207</a>][<a href="http://www.iana.org/go/rfc6531">RFC6531</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">UTF8LMTPSA</td>
+            <td>LMTP with SMTPUTF8 and both STARTTLS and   
+AUTH</td>
+            <td>[<a href="http://www.iana.org/go/rfc3207">RFC3207</a>][<a href="http://www.iana.org/go/rfc4954">RFC4954</a>][<a href="http://www.iana.org/go/rfc6531">RFC6531</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mail-parameters-8" id="mail-parameters-8"></a>Additional-registered-clauses</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Standards-Track or IESG-Approved Experimental RFC</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5321">RFC5321</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mail-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mail-parameters-8" class="sortable">
+        <thead>
+          <tr>
+            <th>Clause Name</th>
+            <th>Description</th>
+            <th>Syntax Summary</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">PRIORITY</td>
+            <td>Records the value of the MT-PRIORITY  
+parameter specified in the MAIL FROM
+command</td>
+            <td>See Section 7 of RFC</td>
+            <td>[<a href="http://www.iana.org/go/rfc6710">RFC6710</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">state</td>
+            <td>Indicates entry into a special        
+queue state</td>
+            <td>state &lt;state-name&gt;</td>
+            <td>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="mail-parameters-9" id="mail-parameters-9"></a>SMTP PRIORITY extension Priority Assignment Policy</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6710">RFC6710</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mail-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mail-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Policy Name</th>
+          <th>Comment</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">MIXER</td>
+          <td>Default policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc6710">RFC6710, Appendix B</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">STANAG4406</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6710">RFC6710, Appendix A</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">NSEP</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6710">RFC6710, Appendix C</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mail-parameters-10" id="mail-parameters-10"></a>Registered-states</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mail-parameters-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mail-parameters-10" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">auth</td>
+          <td>Held for message authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td align="center">content</td>
+          <td>Held for message content analysis</td>
+          <td>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td align="center">convert</td>
+          <td>Held for message content conversion</td>
+          <td>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td align="center">moderation</td>
+          <td>Held for list moderation</td>
+          <td>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td align="center">normal</td>
+          <td>Message is not being held other than to    
+accommodate typical relaying handling</td>
+          <td>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td align="center">other</td>
+          <td>Held for causes not covered by other       
+registered state keywords</td>
+          <td>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td align="center">outbound</td>
+          <td>Message placed in outbound queue</td>
+          <td>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td align="center">quarantine</td>
+          <td>Held for operator action due to content    
+analysis or local policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</td>
+          <td>current</td>
+        </tr>
+        <tr>
+          <td align="center">timed</td>
+          <td>Held to accommodate a specific requested   
+delivery window</td>
+          <td>[<a href="http://www.iana.org/go/rfc6729">RFC6729</a>]</td>
+          <td>current</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,1565 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Constrained RESTful Environments (CoRE) Parameters</title>
+  </head>
+  <body>
+    <h1>Constrained RESTful Environments (CoRE) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2012-06-08</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-02-10</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="core-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="core-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="core-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#rt-link-target-att-value">Resource Type (rt=) Link Target Attribute Values</a>
+      </li>
+      <li>
+        <a href="#if-link-target-att-value">Interface Description (if=) Link Target Attribute Values</a>
+      </li>
+      <li>
+        <a href="#codes">CoAP Codes</a>
+        <ul>
+          <li>
+            <a href="#method-codes">CoAP Method Codes</a>
+          </li>
+          <li>
+            <a href="#response-codes">CoAP Response Codes</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#option-numbers">CoAP Option Numbers</a>
+      </li>
+      <li>
+        <a href="#content-formats">CoAP Content-Formats</a>
+      </li>
+    </ul>
+    <h2><a name="rt-link-target-att-value" id="rt-link-target-att-value"></a>Resource Type (rt=) Link Target Attribute Values</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Christian Groves (primary), Carsten Bormann (secondary), Jaime Jimenez (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6690">RFC6690</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rt-link-target-att-value.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-rt-link-target-att-value-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">value starts with "core"</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">all other values</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-rt-link-target-att-value" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>core.gp</td>
+          <td>Group Configuration resource.  This resource is used to
+   query/manage the group membership of a CoAP server.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7390">RFC7390, Section 2.6.2</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>core.hc</td>
+          <td>HTTP to CoAP mapping base resource.</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-core-http-mapping-17">RFC-ietf-core-http-mapping-17, Section 5.5</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.airconditioner</td>
+          <td>Air Conditioner device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.airpurifier</td>
+          <td>Air Purifier device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.blind</td>
+          <td>Blind device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.camera</td>
+          <td>Camera device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.dishwasher</td>
+          <td>Dishwasher device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.door</td>
+          <td>Door device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.dryer</td>
+          <td>Dryer device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.fan</td>
+          <td>Fan device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.garagedoor</td>
+          <td>Garage Door device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.light</td>
+          <td>Light device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.multifunctionprinter</td>
+          <td>Printer Multi-Function device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.oven</td>
+          <td>Oven device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.printer</td>
+          <td>Printer device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.receiver</td>
+          <td>Receiver device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.refrigerator</td>
+          <td>Refrigerator device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.robotcleaner</td>
+          <td>Robot Cleaner device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.scanner</td>
+          <td>Scanner device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.securitypanel</td>
+          <td>Security Panel device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.sensor</td>
+          <td>Generic Sensor device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.smartlock</td>
+          <td>Smart Lock device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.smartplug</td>
+          <td>Smart Plug device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.switch</td>
+          <td>Switch device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.thermostat</td>
+          <td>Thermostat device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.tv</td>
+          <td>Television device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.washer</td>
+          <td>Washer device.  This is a clothes washer device.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.d.watervalve</td>
+          <td>Water Valve device</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_SmartHome_Device_Specification_v1.1.0.pdf">OIC_SmartHomeDevice_Specification_v1.1.0 section 10.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.airflow</td>
+          <td>Air Flow resource.  This resource describes the properties associated with air flow.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.1</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.airflowcontrol</td>
+          <td>Air Flow Control resource. This resource describes the attributes associated with control of air flow, for example as modelled by a Thermostat (fan), Room A/C or other device.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.2</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.altimeter</td>
+          <td>Altimeter resource. This resource describes properties associated with the height of the position.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.58</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.audio</td>
+          <td>Audio Controls resource. This resource defines basic audio control functions.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.25</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.autofocus</td>
+          <td>Auto Focus resource. This resource describes whether an auto focus feature is on or off.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.26</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.automaticdocumentfeeder</td>
+          <td>Automatic Document Feeder resource. This resource describes the state of an automatic document feeder, typically used with a scanner.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.27</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.button</td>
+          <td>Button Switch resource. This resource describes the operation of a button style switch.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.28</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.clock</td>
+          <td>Clock resource. This resource describes the properties associated with clock and time.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.59</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.colour.autowhitebalance</td>
+          <td>Auto White Balance resource. This resource describes whether an auto balance feature is on or off.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.31</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.colour.chroma</td>
+          <td>Colour Chroma resource. This resource describes the colour using chroma conventions.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.6</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.colour.rgb</td>
+          <td>Colour RGB resource. This resource specifies the actual colour in the RGB space.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.7</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.colour.saturation</td>
+          <td>Colour Saturation resource. This resource describes a Colour saturation value.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.32</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.door</td>
+          <td>Door resource. This resource describes the open state of a door.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.9</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.energy.battery</td>
+          <td>Battery resource.  This resource represents the charge state of a battery.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.3</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.energy.consumption</td>
+          <td>Energy Consumption resource. This resource describes the energy consumed by the device since power up  and the instantaneous power draw of the device at the time the resource was queried.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.10</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.energy.drlc</td>
+          <td>Demand Response Load Control (DRLC) resource. This resource describes any to be applied or currently being applied DRLC signal.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.34</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.energy.overload</td>
+          <td>Energy Overload/Circuit Breaker resource. This resource describes whether an energy overload detector/circuit breaker has been tripped.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.35</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.energy.usage</td>
+          <td>Energy Usage resource. This resource describes a cumulative time-based energy usage query.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.11</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.height</td>
+          <td>Height resource. This resource describes the properties associated with height of an object's physical size.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.61</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.humidity</td>
+          <td>Humidity resource. This resource describes a sensed or desired humidity.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.12</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.icemaker</td>
+          <td>Ice Maker resource. This resource describes the operational state of an ice maker.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.13</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.light.brightness</td>
+          <td>Brightness resource. This resource describes the brightness of a light or lamp.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.5</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.light.dimming</td>
+          <td>Dimming resource. This resource describes a dimming function.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.8</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.light.ramptime</td>
+          <td>Ramp Time resource. This resource describes the Ramp Time of a dimming function.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.19</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.lock.code</td>
+          <td>Lock Code resource. This resource describes a lock code.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.15</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.lock.status</td>
+          <td>Lock resource. This resource describes whether a lock is locked or unlocked.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.14</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.media</td>
+          <td>Media resource. This resource specifies the media that a server supports.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.41</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.media.input</td>
+          <td>Media Source Input resource.  This resource provides the list of input media sources available on the device.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.42</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.media.output</td>
+          <td>Media Source Output resource. This resource provides the list of output media sources available on the device.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.43</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.mode</td>
+          <td>Mode resource. This resource describes the modes of operation that a device can provide.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.16</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.movement.linear</td>
+          <td>Movement resource. This resource describes linear movement.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.54</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.nightmode</td>
+          <td>Night Mode resource. This resource describes whether a night mode feature is on or off.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.45</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.openlevel</td>
+          <td>Open Level resource. This resource describes how open or ajar an entity such as a window, door, blind or shutter is.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.17</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.operational.state</td>
+          <td>Operational State resource. This resource describes the operational and job states on a device.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.18</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.ptz</td>
+          <td>Pan Tilt Zoom Movement resource. This resource specifies the pan tilt and zoom capabilities of a device.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.47</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.refrigeration</td>
+          <td>Refrigeration resource. This resource describes a refrigeration function.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.20</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor</td>
+          <td>Generic Sensor resource. This resource describes whether some value or property or entity has been sensed or not.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.36</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.acceleration</td>
+          <td>Acceleration Sensor resource. This resource provides a measure of proper acceleration (g force).</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.53</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.activity.count</td>
+          <td>Activity Count resource. This resource specifies an activity count.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.23</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.atmosphericpressure</td>
+          <td>Atmospheric Pressure resource. This resource provides a measurement of Mean Sea Level Pressure experienced at the measuring point expressed in millibars.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.24</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.carbondioxide</td>
+          <td>Carbon Dioxide Sensor resource. This resource describes whether carbon dioxide has been sensed or not.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.29</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.carbonmonoxide</td>
+          <td>Carbon Monoxide Sensor resource. This resource describes whether carbon monoxide has been sensed or not.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.30</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.contact</td>
+          <td>Contact Sensor resource. This resource describes whether a contact sensor has been tripped or not.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.33</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.geolocation</td>
+          <td>Geolocation Sensor resource. This resource describes the properties associated with the current geolocation coordinate.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.60</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.glassbreak</td>
+          <td>Glass Break Sensor resource. This resource describes a glass break sensor.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.37</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.heart.zone</td>
+          <td>Heart Rate Zone Sensor resource. This resource describes a measured heart rate by the current Zone using the Zoladz method.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.38</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.illuminance</td>
+          <td>Illuminance Sensor resource. This resource describes an illuminance sensor.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.39</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.magneticfielddirection</td>
+          <td>Magnetic Field Direction resource. This resource describes the direction of the Earth's magnetic field at the observer's current point in space.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.40</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.motion</td>
+          <td>Motion Sensor resource. This resource describes whether motion has been sensed or not.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.43</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.presence</td>
+          <td>Presence Sensor resource. This resource describes whether presence has been sensed or not.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.45</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.radiation.uv</td>
+          <td>UV Radiation resource. This resource describes an ultraviolet radiation measurement.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.51</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.sleep</td>
+          <td>Sleep Sensor resource. This resource describes whether human sleep has been sensed or not.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.55</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.smoke</td>
+          <td>Smoke Sensor resource. This resource describes whether smoke has been sensed or not.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.56</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.threeaxis</td>
+          <td>Three Axis Sensor resource. This resource provides a representation of the measurement from a three-axis sensor.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.57</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.touch</td>
+          <td>Touch Sensor resource. This resource describes whether touch has been sensed or not.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.50</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.sensor.water</td>
+          <td>Water Sensor resource. This resource describes whether water has been sensed or not.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.52</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.signalstrength</td>
+          <td>Signal Strength resource. This resource describes the strength of a signal by means of Link Quality Indicator and Received Signal Strength Indicator.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.48</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.speech.tts</td>
+          <td>Speech Synthesis resource. This resource is capable of rendering speech and allows a client to provide an SSML document with text to render.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.49</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.switch.binary</td>
+          <td>Binary switch resource.  This resource describes a binary switch (on/off).</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.4</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.temperature</td>
+          <td>Temperature resource. This resource describes a sensed or actuated Temperature value.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.21</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.time.period</td>
+          <td>Time Period resource. This resource describes the time period over which any additionally provided information is derived or bounded.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.22</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.r.weight</td>
+          <td>Weight resource. This resource describes the properties associated with weight of an object.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Resource_Type_Specification_v1.1.0.pdf">OIC_Resource_Type_Specification_v1.1.0 section 6.62</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oma.lwm2m</td>
+          <td>OMA LwM2M Resource. This Resource type indicates that 
+        the resource and all of its sub-resources support the OMA Lightweight 
+        M2M protocol, i.e. contain OMA LwM2M objects and resources.</td>
+          <td>[<a href="http://www.openmobilealliance.org/tech/extref/OMA-TS-LightweightM2M-V1_0.zip">OMA-TS-LightweightM2M-V1_0</a>]</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="if-link-target-att-value" id="if-link-target-att-value"></a>Interface Description (if=) Link Target Attribute Values</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Christian Groves (primary), Carsten Bormann (secondary), Jaime Jimenez (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6690">RFC6690</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="if-link-target-att-value.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-if-link-target-att-value-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">value starts with "core"</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">all other values</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-if-link-target-att-value" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>oic.if.baseline</td>
+          <td>The baseline Interface defines a view into all Properties of a 
+        Resource including the Meta Properties. This Interface is used to operate 
+        on the full Representation of a Resource.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Core_Specification_v1.1.0.pdf">OIC_Core_Specification_v1.1.0 section 7.5.3</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.if.ll</td>
+          <td>The 'links list' Interface provides a view into Links in a 
+        Collection (Resource).
+        Since Links represent relationships to other Resources, the links list 
+        interfaces may be used to discover Resources with respect to a context. 
+        The discovery is done by retrieving Links to these Resources.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Core_Specification_v1.1.0.pdf">OIC_Core_Specification_v1.1.0 section 7.5.3</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.if.b</td>
+          <td>The batch Interface is used to interact with a collection of 
+        Resources at the same time. This also removes the need for the Client to 
+        first discover the Resources it is manipulating - the Server forwards the 
+        requests and aggregates the responses.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Core_Specification_v1.1.0.pdf">OIC_Core_Specification_v1.1.0 section 7.5.3</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.if.r</td>
+          <td>The read-only Interface exposes the Properties of a Resource 
+        that may be 'read'. This Interface does not provide methods to update 
+        Properties or a Resource and so can only be used to 'read' Property Values.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Core_Specification_v1.1.0.pdf">OIC_Core_Specification_v1.1.0 section 7.5.3</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.if.rw</td>
+          <td>The read-write Interface exposes only those Properties that 
+        may be both 'read' and 'written' and provides methods to read and write 
+        the Properties of a Resource.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Core_Specification_v1.1.0.pdf">OIC_Core_Specification_v1.1.0 section 7.5.3</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.if.a</td>
+          <td>The actuator Interface is used to read or write the Properties 
+        of an actuator Resource.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Core_Specification_v1.1.0.pdf">OIC_Core_Specification_v1.1.0 section 7.5.3</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>oic.if.s</td>
+          <td>The sensor Interface is used to read the Properties of a 
+        sensor Resource.</td>
+          <td>[<a href="https://openconnectivity.org/specs/OIC_Core_Specification_v1.1.0.pdf">OIC_Core_Specification_v1.1.0 section 7.5.3</a>]</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="codes" id="codes"></a>CoAP Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Reserved ranges may be allocated in accordance with section 4.3 of [<a href="http://www.iana.org/go/rfc5226">RFC5226</a>].</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7252">RFC7252, Section 12.1</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0.00</td>
+          <td>Indicates an Empty message.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252, section 4.1</a>]</td>
+        </tr>
+        <tr>
+          <td>0.01-0.31</td>
+          <td>Indicates a request.  Values in this range are assigned by the 
+      [<a href="http://www.iana.org/assignments/core-parameters/core-parameters.xhtml#method-codes">CoAP Method Codes</a>] sub-registry.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252, section 12.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td>1.00-1.31</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>2.00-5.31</td>
+          <td>Indicates a response.  Values in this range are assigned by the 
+      [<a href="http://www.iana.org/assignments/core-parameters/core-parameters.xhtml#response-codes">CoAP Response Codes</a>] sub-registry.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252, section 12.1.2</a>]</td>
+        </tr>
+        <tr>
+          <td>6.00-7.31</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="method-codes" id="method-codes"></a>CoAP Method Codes</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF Review or IESG Approval</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7252">RFC7252, Section 12.1.1</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="method-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-method-codes" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0.01</td>
+            <td>GET</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>0.02</td>
+            <td>POST</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>0.03</td>
+            <td>PUT</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>0.04</td>
+            <td>DELETE</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>0.05</td>
+            <td>FETCH</td>
+            <td>[<a href="http://www.iana.org/go/draft-ietf-core-etch-04">RFC-ietf-core-etch-04</a>]</td>
+          </tr>
+          <tr>
+            <td>0.06</td>
+            <td>PATCH</td>
+            <td>[<a href="http://www.iana.org/go/draft-ietf-core-etch-04">RFC-ietf-core-etch-04</a>]</td>
+          </tr>
+          <tr>
+            <td>0.07</td>
+            <td>iPATCH</td>
+            <td>[<a href="http://www.iana.org/go/draft-ietf-core-etch-04">RFC-ietf-core-etch-04</a>]</td>
+          </tr>
+          <tr>
+            <td>0.08-0.31</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="response-codes" id="response-codes"></a>CoAP Response Codes</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF Review or IESG Approval</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7252">RFC7252, Section 12.1.2</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="response-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-response-codes" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2.00</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.01</td>
+            <td>Created</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>2.02</td>
+            <td>Deleted</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>2.03</td>
+            <td>Valid</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>2.04</td>
+            <td>Changed</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>2.05</td>
+            <td>Content</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>2.06-2.30</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.31</td>
+            <td>Continue</td>
+            <td>[<a href="http://www.iana.org/go/rfc7959">RFC7959</a>]</td>
+          </tr>
+          <tr>
+            <td>3.00-3.31</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>4.00</td>
+            <td>Bad Request</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>4.01</td>
+            <td>Unauthorized</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>4.02</td>
+            <td>Bad Option</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>4.03</td>
+            <td>Forbidden</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>4.04</td>
+            <td>Not Found</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>4.05</td>
+            <td>Method Not Allowed</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>4.06</td>
+            <td>Not Acceptable</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>4.07</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4.08</td>
+            <td>Request Entity Incomplete</td>
+            <td>[<a href="http://www.iana.org/go/rfc7959">RFC7959</a>]</td>
+          </tr>
+          <tr>
+            <td>4.09</td>
+            <td>Conflict</td>
+            <td>[<a href="http://www.iana.org/go/draft-ietf-core-etch-04">RFC-ietf-core-etch-04</a>]</td>
+          </tr>
+          <tr>
+            <td>4.10-4.11</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4.12</td>
+            <td>Precondition Failed</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>4.13</td>
+            <td>Request Entity Too Large</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>][<a href="http://www.iana.org/go/rfc7959">RFC7959</a>]</td>
+          </tr>
+          <tr>
+            <td>4.14</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4.15</td>
+            <td>Unsupported Content-Format</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>4.16-4.21</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>4.22</td>
+            <td>Unprocessable Entity</td>
+            <td>[<a href="http://www.iana.org/go/draft-ietf-core-etch-04">RFC-ietf-core-etch-04</a>]</td>
+          </tr>
+          <tr>
+            <td>4.23-4.31</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>5.00</td>
+            <td>Internal Server Error</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>5.01</td>
+            <td>Not Implemented</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>5.02</td>
+            <td>Bad Gateway</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>5.03</td>
+            <td>Service Unavailable</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>5.04</td>
+            <td>Gateway Timeout</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>5.05</td>
+            <td>Proxying Not Supported</td>
+            <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+          </tr>
+          <tr>
+            <td>5.06-5.31</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="option-numbers" id="option-numbers"></a>CoAP Option Numbers</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Zach Shelby</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7252">RFC7252, Section 12.2</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="option-numbers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-option-numbers-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-255</td>
+          <td>IETF Review or IESG Approval</td>
+        </tr>
+        <tr>
+          <td align="center">256-2047</td>
+          <td>Specification Required</td>
+        </tr>
+        <tr>
+          <td align="center">2048-64999</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">65000-65535</td>
+          <td>Experimental use (no operational use)</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-option-numbers" class="sortable">
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>If-Match</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Uri-Host</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ETag</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>If-None-Match</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Observe</td>
+          <td>[<a href="http://www.iana.org/go/rfc7641">RFC7641</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Uri-Port</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Location-Path</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>9-10</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Uri-Path</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Content-Format</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Max-Age</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Uri-Query</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>Accept</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>18-19</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>Location-Query</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>21-22</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>Block2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7959">RFC7959</a>]</td>
+        </tr>
+        <tr>
+          <td>24-26</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td>Block1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7959">RFC7959</a>]</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>Size2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7959">RFC7959</a>]</td>
+        </tr>
+        <tr>
+          <td>29-34</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>35</td>
+          <td>Proxy-Uri</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>36-38</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>39</td>
+          <td>Proxy-Scheme</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>40-59</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>60</td>
+          <td>Size1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>61-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>129-131</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>132</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>133-135</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>136</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>137-139</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>140</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+        <tr>
+          <td>141-257</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>258</td>
+          <td>No-Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7967">RFC7967</a>]</td>
+        </tr>
+        <tr>
+          <td>259-64999</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>65000-65535</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="content-formats" id="content-formats"></a>CoAP Content-Formats</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Zach Shelby</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7252">RFC7252, Section 12.3</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="content-formats.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-content-formats-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-255</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">256-9999</td>
+          <td>IETF Review or IESG Approval</td>
+        </tr>
+        <tr>
+          <td align="center">10000-64999</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">65000-65535</td>
+          <td>Experimental use (no operational use)</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-content-formats" class="sortable">
+      <thead>
+        <tr>
+          <th>Media Type</th>
+          <th>Encoding</th>
+          <th>ID</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>text/plain; charset=utf-8</td>
+          <td></td>
+          <td>0</td>
+          <td>[<a href="http://www.iana.org/go/rfc2046">RFC2046</a>][<a href="http://www.iana.org/go/rfc3676">RFC3676</a>][<a href="http://www.iana.org/go/rfc5147">RFC5147</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>1-15</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>application/cose; cose-type="cose-encrypt0"</td>
+          <td></td>
+          <td>16</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>application/cose; cose-type="cose-mac0"</td>
+          <td></td>
+          <td>17</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>application/cose; cose-type="cose-sign1"</td>
+          <td></td>
+          <td>18</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>19-39</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>application/link-format</td>
+          <td></td>
+          <td>40</td>
+          <td>[<a href="http://www.iana.org/go/rfc6690">RFC6690</a>]</td>
+        </tr>
+        <tr>
+          <td>application/xml</td>
+          <td></td>
+          <td>41</td>
+          <td>[<a href="http://www.iana.org/go/rfc3023">RFC3023</a>]</td>
+        </tr>
+        <tr>
+          <td>application/octet-stream</td>
+          <td></td>
+          <td>42</td>
+          <td>[<a href="http://www.iana.org/go/rfc2045">RFC2045</a>][<a href="http://www.iana.org/go/rfc2046">RFC2046</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>43-46</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>application/exi</td>
+          <td></td>
+          <td>47</td>
+          <td>[<a href="http://www.w3.org/TR/2014/REC-exi-20140211/#mediaTypeRegistration">"Efficient XML Interchange (EXI) Format 1.0 (Second Edition)", February 2014</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>48-49</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>application/json</td>
+          <td></td>
+          <td>50</td>
+          <td>[<a href="http://www.iana.org/go/rfc4627">RFC4627</a>]</td>
+        </tr>
+        <tr>
+          <td>application/json-patch+json"</td>
+          <td></td>
+          <td>51</td>
+          <td>[<a href="http://www.iana.org/go/rfc6902">RFC6902</a>]</td>
+        </tr>
+        <tr>
+          <td>application/merge-patch+json"</td>
+          <td></td>
+          <td>52</td>
+          <td>[<a href="http://www.iana.org/go/rfc7396">RFC7396</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>53-59</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>application/cbor</td>
+          <td></td>
+          <td>60</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>61-95</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>application/cose; cose-type="cose-encrypt"</td>
+          <td></td>
+          <td>96</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>application/cose; cose-type="cose-mac"</td>
+          <td></td>
+          <td>97</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>application/cose; cose-type="cose-sign"</td>
+          <td></td>
+          <td>98</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>99-100</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>application/cose-key</td>
+          <td></td>
+          <td>101</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>application/cose-key-set</td>
+          <td></td>
+          <td>102</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>103-255</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>application/coap-group+json</td>
+          <td>UTF-8</td>
+          <td>256</td>
+          <td>[<a href="http://www.iana.org/go/rfc7390">RFC7390</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>257-1541</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Reserved, do not use</td>
+          <td></td>
+          <td>1542-1543</td>
+          <td>[<a href="http://www.openmobilealliance.org/tech/extref/OMA-TS-LightweightM2M-V1_0.zip">OMA-TS-LightweightM2M-V1_0</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>1544-11541</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>application/vnd.oma.lwm2m+tlv</td>
+          <td></td>
+          <td>11542</td>
+          <td>[<a href="http://www.openmobilealliance.org/tech/extref/OMA-TS-LightweightM2M-V1_0.zip">OMA-TS-LightweightM2M-V1_0</a>]</td>
+        </tr>
+        <tr>
+          <td>application/vnd.oma.lwm2m+json</td>
+          <td></td>
+          <td>11543</td>
+          <td>[<a href="http://www.openmobilealliance.org/tech/extref/OMA-TS-LightweightM2M-V1_0.zip">OMA-TS-LightweightM2M-V1_0</a>]</td>
+        </tr>
+        <tr>
+          <td>Unassigned</td>
+          <td></td>
+          <td>11544-64999</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Reserved for Experimental Use</td>
+          <td></td>
+          <td>65000-65535</td>
+          <td>[<a href="http://www.iana.org/go/rfc7252">RFC7252</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

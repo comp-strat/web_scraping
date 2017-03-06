@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>System for Cross-domain Identity Management (SCIM) Schema URIs</title>
+  </head>
+  <body>
+    <h1>System for Cross-domain Identity Management (SCIM) Schema URIs</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2015-06-22</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-10-01</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="scim.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="scim.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="scim.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#data-resources">SCIM Schema URIs for Data Resources</a>
+      </li>
+      <li>
+        <a href="#server-related">SCIM Server-Related Schema URIs</a>
+      </li>
+    </ul>
+    <h2><a name="data-resources" id="data-resources"></a>SCIM Schema URIs for Data Resources</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Phil Hunt, Kelly Grizzle, Morteza Ansari</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7643">RFC7643</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="data-resources.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-data-resources" class="sortable">
+      <thead>
+        <tr>
+          <th>Schema URI</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>urn:ietf:params:scim:schemas:core:2.0:User</td>
+          <td>User Resource</td>
+          <td>[<a href="http://www.iana.org/go/rfc7643">RFC7643, Section 4.1</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:scim:schemas:extension:enterprise:2.0:User</td>
+          <td>Enterprise User Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc7643">RFC7643, Section 4.3</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:scim:schemas:core:2.0:Group</td>
+          <td>Group Resource</td>
+          <td>[<a href="http://www.iana.org/go/rfc7643">RFC7643, Section 4.2</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:scim:api:messages:2.0:ListResponse</td>
+          <td>List/Query Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7644">RFC7644, Section 3.4.2</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:scim:api:messages:2.0:SearchRequest</td>
+          <td>POST Query Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7644">RFC7644, Section 3.4.3</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:scim:api:messages:2.0:PatchOp</td>
+          <td>PATCH Operation</td>
+          <td>[<a href="http://www.iana.org/go/rfc7644">RFC7644, Section 3.5.2</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:scim:api:messages:2.0:BulkRequest</td>
+          <td>Bulk Operations Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7644">RFC7644, Section 3.7</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:scim:api:messages:2.0:BulkResponse</td>
+          <td>Bulk Operations Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7644">RFC7644, Section 3.7</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:scim:api:messages:2.0:Error</td>
+          <td>Error Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7644">RFC7644, Section 3.12</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="server-related" id="server-related"></a>SCIM Server-Related Schema URIs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Phil Hunt, Kelly Grizzle, Morteza Ansari</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7643">RFC7643</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="server-related.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-server-related" class="sortable">
+      <thead>
+        <tr>
+          <th>Schema URI</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig</td>
+          <td>Service Provider Configuration Schema</td>
+          <td>[<a href="http://www.iana.org/go/rfc7643">RFC7643, Section 5</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:scim:schemas:core:2.0:ResourceType</td>
+          <td>Resource Type Configuration</td>
+          <td>[<a href="http://www.iana.org/go/rfc7643">RFC7643, Section 6</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:scim:schemas:core:2.0:Schema</td>
+          <td>Schema Definitions Schema</td>
+          <td>[<a href="http://www.iana.org/go/rfc7643">RFC7643, Section 7</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

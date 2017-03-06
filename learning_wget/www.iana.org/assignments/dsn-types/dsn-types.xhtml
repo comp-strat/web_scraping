@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Delivery Status Notification (DSN) Types</title>
+  </head>
+  <body>
+    <h1>Delivery Status Notification (DSN) Types</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2002-11-07</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-05-20</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dsn-types.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="dsn-types.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="dsn-types.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#dsn-types-1">Address Types</a>
+      </li>
+      <li>
+        <a href="#dsn-types-2">Diagnostic Types</a>
+      </li>
+      <li>
+        <a href="#dsn-types-3">MTA Name Types</a>
+      </li>
+    </ul>
+    <h2><a name="dsn-types-1" id="dsn-types-1"></a>Address Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3461">RFC3461</a>][<a href="http://www.iana.org/go/rfc3464">RFC3464</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dsn-types-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dsn-types-1" class="sortable">
+      <thead>
+        <tr>
+          <th>address-type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>rfc822</td>
+          <td>Internet Mail</td>
+          <td>[<a href="http://www.iana.org/go/rfc3461">RFC3461</a>]</td>
+        </tr>
+        <tr>
+          <td>x400</td>
+          <td>X.400 Mail</td>
+          <td>[<a href="http://www.iana.org/go/rfc2156">RFC2156</a>]</td>
+        </tr>
+        <tr>
+          <td>UTF-8</td>
+          <td>UTF-8 mail address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6533">RFC6533</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dsn-types-2" id="dsn-types-2"></a>Diagnostic Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3461">RFC3461</a>][<a href="http://www.iana.org/go/rfc3464">RFC3464</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dsn-types-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dsn-types-2" class="sortable">
+      <thead>
+        <tr>
+          <th>diagnostic-type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>smtp</td>
+          <td>Internet Mail</td>
+          <td>[<a href="http://www.iana.org/go/rfc3461">RFC3461</a>][<a href="http://www.iana.org/go/rfc3464">RFC3464</a>][<a href="http://www.iana.org/go/rfc6533">RFC6533</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="dsn-types-3" id="dsn-types-3"></a>MTA Name Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3461">RFC3461</a>][<a href="http://www.iana.org/go/rfc3464">RFC3464</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="dsn-types-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-dsn-types-3" class="sortable">
+      <thead>
+        <tr>
+          <th>MTA-name-type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>dns</td>
+          <td>Internet Mail</td>
+          <td>[<a href="http://www.iana.org/go/rfc3461">RFC3461</a>]</td>
+        </tr>
+        <tr>
+          <td>x400</td>
+          <td>X.400 Mail</td>
+          <td>[<a href="http://www.iana.org/go/rfc2156">RFC2156</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

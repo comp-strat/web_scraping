@@ -1,0 +1,1572 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,100,100italic,700,700italic&subset=latin,greek-ext,greek,vietnamese,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+
+    <title>Career Center</title>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script type="application/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+</script>
+
+<style type="text/css">
+
+    .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+    }
+    body {
+        top: 0px !important;
+    }
+    .goog-te-gadget-icon{
+        background:none !important;
+    }
+    .goog-te-gadget-simple{
+        border: none !important;
+    }
+    .goog-te-gadget{
+        font-size: 10px !important;
+    }
+</style>
+
+
+
+
+    <link href="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/css/CwsV2/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link href="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/css/CwsV2/jquery-ui-1.11.3.min.css" rel="stylesheet" media="screen">
+
+    <link href="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/css/CwsV2/jquery-ui.theme.min.css" rel="stylesheet" media="screen">
+
+    <link href="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/css/CwsV2/font-awesome.min.css" rel="stylesheet" media="screen">
+
+    <link href="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/css/CwsV2/main.css" rel="stylesheet" media="screen">
+
+    <link href="https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/servlet/dynamic/css/theme_107_R17-02-01-14-41-15-17.A1_prod.css?lastUploaded=1480633881000&org=ICANN" rel="stylesheet" media="screen">
+
+
+    <script src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/js/UIv9/lib/jquery-2.1.1.min.js"></script>
+
+    <script src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/js/UIv9/lib/jquery.validate.min.js"></script>
+
+    <script src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/js/CwsV2/libs/jquery-ui-1.11.3.min.js"></script>
+
+    <script src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/js/CwsV2/libs/bootstrap.min.js"></script>
+
+    <script src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/js/CwsV2/libs/dropbox-integration.js"></script>
+
+    <script src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/js/CwsV2/libs/main.js"></script>
+
+    <script src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/js/CwsV2/libs/jquery.jscroll.min.js"></script>
+
+    <script src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/js/UIv8/tbe-util-scripts.js"></script>
+
+    <script src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/js/UIv8/rollingEntity.js"></script>
+
+    <script src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/js/UIv8/password123.js"></script>
+
+
+
+</head>
+<body>
+
+
+<div id="oracletaleocwsv2-wrapper" class="cws-v2" >
+<header>
+<div class="container-fluid">
+<div class="oracletaleocwsv2-logo">
+<a href="https://www.icann.org/">
+<img src="https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/servlet/dynamic/images/imge_1046.png?lastUploaded=1480621645000&org=ICANN" alt="ICANN Logo">
+</a>
+</div>
+</div>
+</header>
+</div>
+
+<div id="oracletaleocwsv2-wrapper" class="cws-v2">
+
+    
+    
+
+
+<section class="oracletaleocwsv2-navigation">
+    <div class="container-fluid">
+        <nav class="oracletaleocwsv2-main-nav clearfix">
+            <div class="oracletaleocwsv2-btn-grouped oracletaleocwsv2-units-4">
+                <div class="oracletaleocwsv2-btn-grouped-unit">
+                    <a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/jobSearch?org=ICANN&cws=37"
+                       
+                            class="btn btn-default oracletaleocwsv2-btn-square oracletaleocwsv2-btn-fa fa-search">New Search
+                       
+                    </a>
+                </div>
+
+                <div class="oracletaleocwsv2-btn-grouped-unit oracletaleocwsv2-last">
+                    
+                    <a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/candidateLogin?org=ICANN&cws=37"
+                       
+                            class="btn btn-default oracletaleocwsv2-btn-square oracletaleocwsv2-btn-fa fa-sign-in">Login Page
+                       
+                    </a>
+                    <!--/.login-portal-->
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--/.container-fluid-->
+</section>
+    
+
+
+
+<section>
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12 col-sm-12">
+<h2>
+Search Result
+</h2>
+<p>
+</p>
+</div>
+<!--/.col-xs-12-->
+</div>
+<!--/.row-->
+</div>
+<!--/.container-fluid-->
+</section><section>
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12">
+<div class="panel panel-default oracletaleocwsv2-panel-small oracletaleocwsv2-panel-heading-right oracletaleocwsv2-job-alert">
+<div class="panel-heading">
+<div class="checkbox oracletaleocwsv2-custom-checkbox oracletaleocwsv2-ckbx-bell">
+<label>
+<span class="sr-only">Set a Job Alert</span>
+<input name="exampleCheckbox" value="1" type="checkbox"
+onclick="$('#create-job-alert-error').toggle();"
+>
+<span class="fa-stack fa-3x">
+<i class="fa"></i>
+<p class="fa-stack-1x oracletaleocwsv2-job-alert-save">Save</p>
+</span>
+</label>
+</div>
+<!--/.checkbox-->
+</div>
+<!--/.panel-heading-->
+<div class="panel-body">
+<h4>Set a Job Alert</h4>
+Creating a Job Alert allows you to be notified by email of new opportunities that match this search criteria.
+</div>
+<!--/.panel-body-->
+</div>
+<!--/.panel-->
+<div class="oracletaleocwsv2-error-text" id="create-job-alert-error">
+<label class="text-danger">At least one search criteria is required to create a job alert.</label></div>
+</div>
+<!--/.col-xs-12-->
+</div>
+<!--/.row-->
+</div>
+<!--/.container-fluid-->
+</section> <!-- End section-->
+<script>
+$('#create-job-alert-error').toggle();
+</script><section>
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12 col-lg-12">
+<div class="panel panel-default oracletaleocwsv2-totals-callout">
+<div class="panel-body">
+<h3>Positions Matched</h3>
+<span class="oracletaleocwsv2-panel-number">29</span>
+<div class="oracletaleocwsv2-rss">
+<label>
+<a title="RSS" href="https://chj.tbe.taleo.net/chj06/ats/servlet/Rss?org=ICANN&amp;cws=37&amp;WebPage=SRCHR_V2&amp;WebVersion=0&amp;_rss_version=2" target="_blank">
+<i class="fa fa-rss fa-lg"></i>
+</a>
+</label>
+</div>
+</div>
+<!--panel-body -->
+</div>
+<!--panel panel-default totals-callout-->
+</div>
+<!--col-xs-12 col-sm-3-->
+</div>
+<!--/.row-->
+</div>
+<!--/.container-fluid-->
+</section> <!-- End section--><section>
+<div class="container-fluid">
+<div class="row">
+<div class="col-xs-12 col-sm-12">
+<p>
+</p>
+</div>
+<!--/.col-xs-12-->
+</div>
+<!--/.row-->
+</div>
+<!--/.container-fluid-->
+</section><section>
+<div class="container-fluid">
+<div class="oracletaleocwsv2-accordion-group oracletaleocwsv2-has-footer">
+<div class="oracletaleocwsv2-accordion-group-head">
+<div class="form-group oracletaleocwsv2-search-results-filter">
+<label for="sel1">Sort by:</label>
+<select class="form-control orderbyPicker" id="sel1">
+<option value="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&cws=37&act=sort&sortColumn=0" selected>Job Title</option>
+<option value="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&cws=37&act=sort&sortColumn=1">Department</option>
+<option value="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&cws=37&act=sort&sortColumn=2">Primary Location</option>
+<option value="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&cws=37&act=sort&sortColumn=3">Possible Hiring Locations</option>
+</select>
+</div>
+<!--/.form-group-->
+<div class="form-group oracletaleocwsv2-search-results-filter">
+<label for="sel2">Order:</label>
+<select class="form-control sortOrderbyPicker" id="sel2">
+<option value="sortOrder=A" selected>Ascending</option>
+<option value="sortOrder=D">Descending</option>
+</select>
+</div>
+<!--/.form-group-->
+</div><!--accordion-group-head -->
+<div class="scroll">
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block">
+<div class="oracletaleocwsv2-accordion-head">
+<div class="oracletaleocwsv2-accordion-checkbox checkbox custom-checkbox ckbx-star">
+<label>
+<input type="checkbox" name="" value=""> <i class="fa"></i>
+</label>
+</div>
+<!--/.checkbox-->
+<div class="oracletaleocwsv2-accordion-head-info">
+<h4 class="oracletaleocwsv2-head-title"><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1064">Administrative Assistant</a></h4>
+<div>1050 - Administrative Support</div>
+<div>Washington DC</div>
+<div>Washington DC</div>
+</div>
+<!--/.accordion-head-info -->
+</div>
+<!--/.accordion-head -->
+<div class="oracletaleocwsv2-accordion-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="mailto:?subject=This Administrative%20Assistant position might interest you&amp;body=I found this position that I wanted to pass along to you:%0D%0A%0D%0ATitle: Administrative%20Assistant%0D%0ACompany: Internet Corporation for Assigned Names and Numbers%0D%0A%0D%0A%0D%0AClick the link below to see the details of the position:%0D%0Ahttps%3A%2F%2Fchj.tbe.taleo.net%2Fdispatcher%2Fservlet%2FDispatcherServlet%3Forg%3DICANN%26act%3DredirectCws%26cws%3D37%26redirectUrl%3D%252Fats%252Fcareers%252Frequisition.jsp%253Frid%253D1064%2526org%253DICANN%2526cws%253D37%0D%0A"
+class="btn btn-secondary oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-envelope">Email</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1064"
+class="btn btn-default oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-eye">View</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1064"
+class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check"
+>Apply</a>
+</div>
+</div>
+<!--/.btn-grouped-->
+</div>
+<!--/.accordion-content-->
+</div>
+<!--/.accordion-block-->
+</div><!--/.accordion-->
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block">
+<div class="oracletaleocwsv2-accordion-head">
+<div class="oracletaleocwsv2-accordion-checkbox checkbox custom-checkbox ckbx-star">
+<label>
+<input type="checkbox" name="" value=""> <i class="fa"></i>
+</label>
+</div>
+<!--/.checkbox-->
+<div class="oracletaleocwsv2-accordion-head-info">
+<h4 class="oracletaleocwsv2-head-title"><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1151">Administrative Assistant, Global Stakeholder Engagement - EMEA</a></h4>
+<div>0310 - GSE - Executive</div>
+<div>Belgium</div>
+<div>Belgium</div>
+</div>
+<!--/.accordion-head-info -->
+</div>
+<!--/.accordion-head -->
+<div class="oracletaleocwsv2-accordion-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="mailto:?subject=This Administrative%20Assistant%2C%20Global%20Stakeholder%20Engagement%20-%20EMEA position might interest you&amp;body=I found this position that I wanted to pass along to you:%0D%0A%0D%0ATitle: Administrative%20Assistant%2C%20Global%20Stakeholder%20Engagement%20-%20EMEA%0D%0ACompany: Internet Corporation for Assigned Names and Numbers%0D%0A%0D%0A%0D%0AClick the link below to see the details of the position:%0D%0Ahttps%3A%2F%2Fchj.tbe.taleo.net%2Fdispatcher%2Fservlet%2FDispatcherServlet%3Forg%3DICANN%26act%3DredirectCws%26cws%3D37%26redirectUrl%3D%252Fats%252Fcareers%252Frequisition.jsp%253Frid%253D1151%2526org%253DICANN%2526cws%253D37%0D%0A"
+class="btn btn-secondary oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-envelope">Email</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1151"
+class="btn btn-default oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-eye">View</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1151"
+class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check"
+>Apply</a>
+</div>
+</div>
+<!--/.btn-grouped-->
+</div>
+<!--/.accordion-content-->
+</div>
+<!--/.accordion-block-->
+</div><!--/.accordion-->
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block">
+<div class="oracletaleocwsv2-accordion-head">
+<div class="oracletaleocwsv2-accordion-checkbox checkbox custom-checkbox ckbx-star">
+<label>
+<input type="checkbox" name="" value=""> <i class="fa"></i>
+</label>
+</div>
+<!--/.checkbox-->
+<div class="oracletaleocwsv2-accordion-head-info">
+<h4 class="oracletaleocwsv2-head-title"><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1186">Communications Manager - GDD</a></h4>
+<div>0210 - Communications</div>
+<div>Los Angeles</div>
+<div>Los Angeles</div>
+</div>
+<!--/.accordion-head-info -->
+</div>
+<!--/.accordion-head -->
+<div class="oracletaleocwsv2-accordion-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="mailto:?subject=This Communications%20Manager%20-%20GDD position might interest you&amp;body=I found this position that I wanted to pass along to you:%0D%0A%0D%0ATitle: Communications%20Manager%20-%20GDD%0D%0ACompany: Internet Corporation for Assigned Names and Numbers%0D%0A%0D%0A%0D%0AClick the link below to see the details of the position:%0D%0Ahttps%3A%2F%2Fchj.tbe.taleo.net%2Fdispatcher%2Fservlet%2FDispatcherServlet%3Forg%3DICANN%26act%3DredirectCws%26cws%3D37%26redirectUrl%3D%252Fats%252Fcareers%252Frequisition.jsp%253Frid%253D1186%2526org%253DICANN%2526cws%253D37%0D%0A"
+class="btn btn-secondary oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-envelope">Email</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1186"
+class="btn btn-default oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-eye">View</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1186"
+class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check"
+>Apply</a>
+</div>
+</div>
+<!--/.btn-grouped-->
+</div>
+<!--/.accordion-content-->
+</div>
+<!--/.accordion-block-->
+</div><!--/.accordion-->
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block">
+<div class="oracletaleocwsv2-accordion-head">
+<div class="oracletaleocwsv2-accordion-checkbox checkbox custom-checkbox ckbx-star">
+<label>
+<input type="checkbox" name="" value=""> <i class="fa"></i>
+</label>
+</div>
+<!--/.checkbox-->
+<div class="oracletaleocwsv2-accordion-head-info">
+<h4 class="oracletaleocwsv2-head-title"><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1082">Complaints Officer</a></h4>
+<div>0715 - Complaints</div>
+<div>Los Angeles</div>
+<div>Los Angeles</div>
+</div>
+<!--/.accordion-head-info -->
+</div>
+<!--/.accordion-head -->
+<div class="oracletaleocwsv2-accordion-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="mailto:?subject=This Complaints%20Officer position might interest you&amp;body=I found this position that I wanted to pass along to you:%0D%0A%0D%0ATitle: Complaints%20Officer%0D%0ACompany: Internet Corporation for Assigned Names and Numbers%0D%0A%0D%0A%0D%0AClick the link below to see the details of the position:%0D%0Ahttps%3A%2F%2Fchj.tbe.taleo.net%2Fdispatcher%2Fservlet%2FDispatcherServlet%3Forg%3DICANN%26act%3DredirectCws%26cws%3D37%26redirectUrl%3D%252Fats%252Fcareers%252Frequisition.jsp%253Frid%253D1082%2526org%253DICANN%2526cws%253D37%0D%0A"
+class="btn btn-secondary oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-envelope">Email</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1082"
+class="btn btn-default oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-eye">View</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1082"
+class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check"
+>Apply</a>
+</div>
+</div>
+<!--/.btn-grouped-->
+</div>
+<!--/.accordion-content-->
+</div>
+<!--/.accordion-block-->
+</div><!--/.accordion-->
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block">
+<div class="oracletaleocwsv2-accordion-head">
+<div class="oracletaleocwsv2-accordion-checkbox checkbox custom-checkbox ckbx-star">
+<label>
+<input type="checkbox" name="" value=""> <i class="fa"></i>
+</label>
+</div>
+<!--/.checkbox-->
+<div class="oracletaleocwsv2-accordion-head-info">
+<h4 class="oracletaleocwsv2-head-title"><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1152">Contractual Compliance Analyst</a></h4>
+<div>1110 - Contractual Compliance</div>
+<div>Singapore</div>
+<div>Singapore</div>
+</div>
+<!--/.accordion-head-info -->
+</div>
+<!--/.accordion-head -->
+<div class="oracletaleocwsv2-accordion-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="mailto:?subject=This Contractual%20Compliance%20Analyst position might interest you&amp;body=I found this position that I wanted to pass along to you:%0D%0A%0D%0ATitle: Contractual%20Compliance%20Analyst%0D%0ACompany: Internet Corporation for Assigned Names and Numbers%0D%0A%0D%0A%0D%0AClick the link below to see the details of the position:%0D%0Ahttps%3A%2F%2Fchj.tbe.taleo.net%2Fdispatcher%2Fservlet%2FDispatcherServlet%3Forg%3DICANN%26act%3DredirectCws%26cws%3D37%26redirectUrl%3D%252Fats%252Fcareers%252Frequisition.jsp%253Frid%253D1152%2526org%253DICANN%2526cws%253D37%0D%0A"
+class="btn btn-secondary oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-envelope">Email</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1152"
+class="btn btn-default oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-eye">View</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1152"
+class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check"
+>Apply</a>
+</div>
+</div>
+<!--/.btn-grouped-->
+</div>
+<!--/.accordion-content-->
+</div>
+<!--/.accordion-block-->
+</div><!--/.accordion-->
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block">
+<div class="oracletaleocwsv2-accordion-head">
+<div class="oracletaleocwsv2-accordion-checkbox checkbox custom-checkbox ckbx-star">
+<label>
+<input type="checkbox" name="" value=""> <i class="fa"></i>
+</label>
+</div>
+<!--/.checkbox-->
+<div class="oracletaleocwsv2-accordion-head-info">
+<h4 class="oracletaleocwsv2-head-title"><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1122">Contractual Compliance Analyst</a></h4>
+<div>1110 - Contractual Compliance</div>
+<div>Los Angeles</div>
+<div>Los Angeles</div>
+</div>
+<!--/.accordion-head-info -->
+</div>
+<!--/.accordion-head -->
+<div class="oracletaleocwsv2-accordion-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="mailto:?subject=This Contractual%20Compliance%20Analyst position might interest you&amp;body=I found this position that I wanted to pass along to you:%0D%0A%0D%0ATitle: Contractual%20Compliance%20Analyst%0D%0ACompany: Internet Corporation for Assigned Names and Numbers%0D%0A%0D%0A%0D%0AClick the link below to see the details of the position:%0D%0Ahttps%3A%2F%2Fchj.tbe.taleo.net%2Fdispatcher%2Fservlet%2FDispatcherServlet%3Forg%3DICANN%26act%3DredirectCws%26cws%3D37%26redirectUrl%3D%252Fats%252Fcareers%252Frequisition.jsp%253Frid%253D1122%2526org%253DICANN%2526cws%253D37%0D%0A"
+class="btn btn-secondary oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-envelope">Email</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1122"
+class="btn btn-default oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-eye">View</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1122"
+class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check"
+>Apply</a>
+</div>
+</div>
+<!--/.btn-grouped-->
+</div>
+<!--/.accordion-content-->
+</div>
+<!--/.accordion-block-->
+</div><!--/.accordion-->
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block">
+<div class="oracletaleocwsv2-accordion-head">
+<div class="oracletaleocwsv2-accordion-checkbox checkbox custom-checkbox ckbx-star">
+<label>
+<input type="checkbox" name="" value=""> <i class="fa"></i>
+</label>
+</div>
+<!--/.checkbox-->
+<div class="oracletaleocwsv2-accordion-head-info">
+<h4 class="oracletaleocwsv2-head-title"><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1121">Contractual Compliance Auditor</a></h4>
+<div>1110 - Contractual Compliance</div>
+<div>Los Angeles</div>
+<div>Los Angeles</div>
+</div>
+<!--/.accordion-head-info -->
+</div>
+<!--/.accordion-head -->
+<div class="oracletaleocwsv2-accordion-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="mailto:?subject=This Contractual%20Compliance%20Auditor position might interest you&amp;body=I found this position that I wanted to pass along to you:%0D%0A%0D%0ATitle: Contractual%20Compliance%20Auditor%0D%0ACompany: Internet Corporation for Assigned Names and Numbers%0D%0A%0D%0A%0D%0AClick the link below to see the details of the position:%0D%0Ahttps%3A%2F%2Fchj.tbe.taleo.net%2Fdispatcher%2Fservlet%2FDispatcherServlet%3Forg%3DICANN%26act%3DredirectCws%26cws%3D37%26redirectUrl%3D%252Fats%252Fcareers%252Frequisition.jsp%253Frid%253D1121%2526org%253DICANN%2526cws%253D37%0D%0A"
+class="btn btn-secondary oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-envelope">Email</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1121"
+class="btn btn-default oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-eye">View</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1121"
+class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check"
+>Apply</a>
+</div>
+</div>
+<!--/.btn-grouped-->
+</div>
+<!--/.accordion-content-->
+</div>
+<!--/.accordion-block-->
+</div><!--/.accordion-->
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block">
+<div class="oracletaleocwsv2-accordion-head">
+<div class="oracletaleocwsv2-accordion-checkbox checkbox custom-checkbox ckbx-star">
+<label>
+<input type="checkbox" name="" value=""> <i class="fa"></i>
+</label>
+</div>
+<!--/.checkbox-->
+<div class="oracletaleocwsv2-accordion-head-info">
+<h4 class="oracletaleocwsv2-head-title"><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1174">Director, Consumer Safeguards</a></h4>
+<div>1120 - Consumer Safeguards</div>
+<div>Los Angeles</div>
+<div>Washington DC</div>
+</div>
+<!--/.accordion-head-info -->
+</div>
+<!--/.accordion-head -->
+<div class="oracletaleocwsv2-accordion-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="mailto:?subject=This Director%2C%20Consumer%20Safeguards position might interest you&amp;body=I found this position that I wanted to pass along to you:%0D%0A%0D%0ATitle: Director%2C%20Consumer%20Safeguards%0D%0ACompany: Internet Corporation for Assigned Names and Numbers%0D%0A%0D%0A%0D%0AClick the link below to see the details of the position:%0D%0Ahttps%3A%2F%2Fchj.tbe.taleo.net%2Fdispatcher%2Fservlet%2FDispatcherServlet%3Forg%3DICANN%26act%3DredirectCws%26cws%3D37%26redirectUrl%3D%252Fats%252Fcareers%252Frequisition.jsp%253Frid%253D1174%2526org%253DICANN%2526cws%253D37%0D%0A"
+class="btn btn-secondary oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-envelope">Email</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1174"
+class="btn btn-default oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-eye">View</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1174"
+class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check"
+>Apply</a>
+</div>
+</div>
+<!--/.btn-grouped-->
+</div>
+<!--/.accordion-content-->
+</div>
+<!--/.accordion-block-->
+</div><!--/.accordion-->
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block">
+<div class="oracletaleocwsv2-accordion-head">
+<div class="oracletaleocwsv2-accordion-checkbox checkbox custom-checkbox ckbx-star">
+<label>
+<input type="checkbox" name="" value=""> <i class="fa"></i>
+</label>
+</div>
+<!--/.checkbox-->
+<div class="oracletaleocwsv2-accordion-head-info">
+<h4 class="oracletaleocwsv2-head-title"><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1119">Director, Front Office Software Engineer &amp; Delivery</a></h4>
+<div>0940 - IT Admin</div>
+<div>Los Angeles</div>
+<div>Los Angeles</div>
+</div>
+<!--/.accordion-head-info -->
+</div>
+<!--/.accordion-head -->
+<div class="oracletaleocwsv2-accordion-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="mailto:?subject=This Director%2C%20Front%20Office%20Software%20Engineer%20%26%20Delivery position might interest you&amp;body=I found this position that I wanted to pass along to you:%0D%0A%0D%0ATitle: Director%2C%20Front%20Office%20Software%20Engineer%20%26%20Delivery%0D%0ACompany: Internet Corporation for Assigned Names and Numbers%0D%0A%0D%0A%0D%0AClick the link below to see the details of the position:%0D%0Ahttps%3A%2F%2Fchj.tbe.taleo.net%2Fdispatcher%2Fservlet%2FDispatcherServlet%3Forg%3DICANN%26act%3DredirectCws%26cws%3D37%26redirectUrl%3D%252Fats%252Fcareers%252Frequisition.jsp%253Frid%253D1119%2526org%253DICANN%2526cws%253D37%0D%0A"
+class="btn btn-secondary oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-envelope">Email</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1119"
+class="btn btn-default oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-eye">View</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1119"
+class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check"
+>Apply</a>
+</div>
+</div>
+<!--/.btn-grouped-->
+</div>
+<!--/.accordion-content-->
+</div>
+<!--/.accordion-block-->
+</div><!--/.accordion-->
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block">
+<div class="oracletaleocwsv2-accordion-head">
+<div class="oracletaleocwsv2-accordion-checkbox checkbox custom-checkbox ckbx-star">
+<label>
+<input type="checkbox" name="" value=""> <i class="fa"></i>
+</label>
+</div>
+<!--/.checkbox-->
+<div class="oracletaleocwsv2-accordion-head-info">
+<h4 class="oracletaleocwsv2-head-title"><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1084">Director, Security IANA Services</a></h4>
+<div>0910 - IANA</div>
+<div>Los Angeles</div>
+<div>Los Angeles</div>
+</div>
+<!--/.accordion-head-info -->
+</div>
+<!--/.accordion-head -->
+<div class="oracletaleocwsv2-accordion-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="mailto:?subject=This Director%2C%20Security%20IANA%20Services position might interest you&amp;body=I found this position that I wanted to pass along to you:%0D%0A%0D%0ATitle: Director%2C%20Security%20IANA%20Services%0D%0ACompany: Internet Corporation for Assigned Names and Numbers%0D%0A%0D%0A%0D%0AClick the link below to see the details of the position:%0D%0Ahttps%3A%2F%2Fchj.tbe.taleo.net%2Fdispatcher%2Fservlet%2FDispatcherServlet%3Forg%3DICANN%26act%3DredirectCws%26cws%3D37%26redirectUrl%3D%252Fats%252Fcareers%252Frequisition.jsp%253Frid%253D1084%2526org%253DICANN%2526cws%253D37%0D%0A"
+class="btn btn-secondary oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-envelope">Email</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/viewRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1084"
+class="btn btn-default oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square fa-eye">View</a>
+</div>
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37&rid=1084"
+class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check"
+>Apply</a>
+</div>
+</div>
+<!--/.btn-grouped-->
+</div>
+<!--/.accordion-content-->
+</div>
+<!--/.accordion-block-->
+</div><!--/.accordion-->
+<!--/chj06/ats/careers/v2/searchResults?next&rowFrom=10&act=null&sortColumn=null&sortOrder=null&currentTime=1488140102523-->
+<a href="/chj06/ats/careers/v2/searchResults?next&rowFrom=10&act=null&sortColumn=null&sortOrder=null&currentTime=1488140102523" class="jscroll-next">next</a>
+</div><!--scroll -->
+</div><!--accordion-group has-footer -->
+</div><!--container-fluid -->
+</section><!--section-->
+<section>
+<div class="container-fluid oracletaleocwsv2-container-fluid-poster">
+<div class="oracletaleocwsv2-accordion oracletaleocwsv2-accordion-expandable clearfix">
+<div class="oracletaleocwsv2-accordion-block oracletaleocwsv2-active">
+<div class="oracletaleocwsv2-accordion-head oracletaleocwsv2-poster">
+<h2 class="oracletaleocwsv2-poster-h2">Just want to submit your resume?</h2>
+<p>If you are unable to find an opportunity that interests you, you can submit your resume for general consideration.</p>
+</div>
+<div class="oracletaleocwsv2-accordion-content oracletaleocwsv2-accordion-auto-open oracletaleocwsv2-button-content">
+<div class="oracletaleocwsv2-btn-grouped">
+<div class="oracletaleocwsv2-btn-grouped-unit">
+<a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/applyRequisition;jsessionid=F81152BAF57D89B48C14BFAB71B8D713?org=ICANN&cws=37" class="btn oracletaleocwsv2-btn-fa oracletaleocwsv2-btn-square btn-primary fa-check">Apply</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+
+<div id="oracletaleocwsv2-wrapper" class="cws-v2">
+<footer>
+<div class="container-fluid">
+</div>
+</footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script type='text/javascript' src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/dwr-cws/engine.js"></script>
+<script type="text/javascript"
+        src="//staticchj.tbe.taleo.net/chj06/ats/cacheable/R17-02-01-14-41-15-17.A1_prod/dwr-cws/interface/CwsDWRFacade.js"></script>
+<script type='text/javascript'>
+    CwsDWRFacade._path = 'https://chj.tbe.taleo.net/chj06/ats/dwr-cws';
+    var DWRFacade = CwsDWRFacade;
+</script>
+
+
+
+<script type="text/javascript">
+    $(function () {
+        if (typeof moveToNextStep !== 'undefined') {
+            $('.oracletaleocwsv2-arrow-nav-next').trigger('click');
+        }
+    });
+    $("[data-toggle='modal']").click(function () {
+        var d_tar = $(this).attr('data-target');
+        $(d_tar).show();
+        var modal_he = $(d_tar).find('.modal-dialog .modal-content').height();
+        var win_height = $(window).height();
+        var marr = win_height - modal_he;
+        $('.modal-dialog').css('margin-top', marr / 2);
+    });
+</script>
+
+<script type="text/javascript">
+    // This is needed for fixing beforeShow
+//    (function ($) {
+//        $.extend($.datepicker, {
+//
+//            // Reference the orignal function so we can override it and call it later
+//            _inlineDatepicker2: $.datepicker._inlineDatepicker,
+//
+//            // Override the _inlineDatepicker method
+//            _inlineDatepicker: function (target, inst) {
+//
+//                // Call the original
+//                this._inlineDatepicker2(target, inst);
+//
+//                var beforeShow = $.datepicker._get(inst, 'beforeShow');
+//
+//                if (beforeShow) {
+//                    beforeShow.apply(target, [target, inst]);
+//                }
+//            }
+//        });
+//    }(jQuery));
+
+    // The following needed to re-purpose Today button for Clean behavior
+    (function ($) {
+        $.extend($.datepicker, {
+            // Reference the orignal function so we can override it and call it later if needed
+            _gotoToday2: $.datepicker._gotoToday,
+
+            // Override the _gotoToday method - clean and close
+            _gotoToday: function (target, inst) {
+                $(target).closest('.form-group').find('.input-group input').val('');
+                $(target).fadeOut();
+            }
+        });
+    }(jQuery));
+</script>
+
+<script type="text/javascript">
+    //jQuery Calendar
+    jQuery(document).ready(function($) {
+	$('.oracletaleocwsv2-datepicker.oracletaleocwsv2-datepicker-single').datepicker({
+beforeShowDay:function(date) {
+            try {
+            var thisDate = $.datepicker.parseDate('m/d/y', $(this).closest('.form-group').find('.input-group input').val());
+            return [true, thisDate && date.getTime() == thisDate.getTime() ? "oracletaleocwsv2-dp-highlight" : ""];
+            } catch (e) {}
+            return [true, ''];},
+onSelect:function(dateText, inst) {
+            $(this).closest('.form-group').find('.input-group input').val(dateText).change();
+            $(this).datepicker();
+            $(this).fadeOut();
+    },
+altField:'',altFormat:'',appendText:'',changeMonth:true,changeYear:true,closeText:'\'Close\'',constrainInput:true,currentText:'Clear',dateFormat:'m/d/y',monthYearDateFormat:'MM/yy',dayNames:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],dayNamesShort:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],dayNamesMin:['Su','Mo','Tu','We','Th','Fr','Sa'],defaultDate:null,duration:'normal',firstDay:0,gotoCurrent:false,hideIfNoPrevNext:false,isRTL:false,maxDate:null,minDate:null,monthNames:['January','February','March','April','May','June','July','August','September','October','November','December'],monthNamesShort:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],navigationAsDateFormat:false,nextText:'Next',numberOfMonths:1,prevText:'Previous',shortYearCutoff:'+10',showAnim:'show',showButtonPanel:true,showCurrentAtPos:0,showMonthAfterYear:false,showOptions:{},showOtherMonths:false,stepMonths:1,yearRange:'1920:2030'});});
+</script>
+
+<script type="text/javascript">
+    //jQuery Calendar
+    jQuery(document).ready(function($) {
+	$('.oracletaleocwsv2-datepicker.oracletaleocwsv2-datepicker-range').datepicker({
+beforeShowDay:function(date) {
+            try {
+            var date1 = $.datepicker.parseDate('m/d/y', $(this).closest('.form-group').find('.form-inline .input-group .oracletaleocwsv2-to-field').val());
+            var date2 = $.datepicker.parseDate('m/d/y', $(this).closest('.form-group').find('.form-inline .input-group .oracletaleocwsv2-from-field').val());
+            return [true, date1 && ((date.getTime() == date1.getTime()) || (date2 && date >= date1 && date <= date2)) ? "oracletaleocwsv2-dp-highlight" : ""];
+            } catch (e) {}
+            return [true, ''];},
+onSelect:function(dateText, inst) {
+                    //populate the appropriate text boxes based on datepicker selection
+                    var date1 = "";
+                    var date2 = "";
+                    try {
+                    date1 = $.datepicker.parseDate('m/d/y', $(this).closest('.form-group').find('.form-inline .input-group .oracletaleocwsv2-to-field').val());
+                    date2 = $.datepicker.parseDate('m/d/y', $(this).closest('.form-group').find('.form-inline .input-group .oracletaleocwsv2-from-field').val());
+                    } catch (e) {}
+                    if (!date1 || date2) {
+                        $(this).closest('.form-group').find('.form-inline .input-group .oracletaleocwsv2-to-field').val(dateText);
+                        $(this).closest('.form-group').find('.form-inline .input-group .oracletaleocwsv2-from-field').val("");
+                        $(this).datepicker();
+                    } else {
+                        $(this).closest('.form-group').find('.form-inline .input-group .oracletaleocwsv2-from-field').val(dateText);
+                        $(this).datepicker();
+                        $(this).fadeOut();
+                    }
+                },
+altField:'',altFormat:'',appendText:'',changeMonth:true,changeYear:true,closeText:'\'Close\'',constrainInput:true,currentText:'Clear',dateFormat:'m/d/y',monthYearDateFormat:'MM/yy',dayNames:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],dayNamesShort:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],dayNamesMin:['Su','Mo','Tu','We','Th','Fr','Sa'],defaultDate:null,duration:'normal',firstDay:0,gotoCurrent:false,hideIfNoPrevNext:false,isRTL:false,maxDate:null,minDate:null,monthNames:['January','February','March','April','May','June','July','August','September','October','November','December'],monthNamesShort:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],navigationAsDateFormat:false,nextText:'Next',numberOfMonths:1,prevText:'Previous',shortYearCutoff:'+10',showAnim:'show',showButtonPanel:true,showCurrentAtPos:0,showMonthAfterYear:false,showOptions:{},showOtherMonths:false,stepMonths:1,yearRange:'1920:2030'});});
+</script>
+
+<script type="text/javascript">
+    //Org today's date
+    function getOrgTodayDate() {
+        var todayDay = 26
+        var todayMonth = 1
+        var todayYear = 2017
+        var todayDate =  new Date(todayYear, todayMonth, todayDay);
+        return todayDate;
+    }
+</script>
+
+<script type="text/javascript">
+
+function checkForm(buttonElement, formElement, spinnerId) {
+    var snapVal = $("div.snapshotContentDiv").html();
+    $('input#snapshotContent').val(snapVal);
+
+    if (!validateFormInput(formElement)) {
+        return false;
+    }
+    $(buttonElement).attr('disabled', true);
+    $('#' + spinnerId).css('display', 'inline-block');
+    $(formElement).submit(); //chrome and safari needs this
+    return false; //since we are submitting form above return false to prevent browser onclick submit
+}
+
+// Overriding standard messages
+jQuery.extend(jQuery.validator.messages, {
+    required: "Required field",
+    email: "Enter valid email",
+    email_valid: "Enter valid email",
+    date: "Enter valid date",
+    equalTo: "Value does not match",
+    number: "Enter valid number"
+});
+
+// Overriding standard required method to check for -1's
+jQuery.validator.methods.required = function(value, element, param) {
+    if ("select" === element.nodeName.toLowerCase()) {
+        var val = $(element).val();
+        return (val && val.length > 0 && val != "-1") || $(element).is(":disabled");
+    }
+    return checkable(element) ? getLength(value, element) > 0 : $.trim(value).length > 0;
+}
+
+function getLength(value, element) {
+    switch (element.nodeName.toLowerCase()) {
+        case "select":
+            return $("option:selected", element).length;
+        case "input":
+            if (checkable(element)) {
+                return findByName(element.name).filter(":checked").length;
+            }
+    }
+    return value.length;
+}
+
+function findByName(name) {
+    return $('#oracletaleocwsv2-wrapper').find("[name='" + name + "']");
+}
+
+function checkable(element) {
+    return /radio|checkbox/i.test(element.type);
+}
+
+// field itself checks for maxlength
+jQuery.validator.methods.maxlength = function(value, element, param) {
+    return true;
+}
+
+function validateFormInput(elementToValidate) {
+    // if elementToValidate is not form, need to call initialize on the parent form
+    var formElement = elementToValidate;
+    if (!$(formElement).is('form')) {
+        formElement = $(elementToValidate).closest('form');
+    }
+
+    var validator = $(formElement).validate({
+        rules: {
+            required: true,
+            cwsPassword_2: {
+                equalTo: '#cwsPassword'
+            },
+            newPassword2: {
+                equalTo: '#newPassword1'
+            },
+            email: {
+                email_valid: true
+            },
+            cwsv2_profile_picture_upload_content_required: {
+                profile_picture_upload_required: true
+            },
+            cwsv2_resume_upload_content_required: {
+                resume_upload_required: true
+            },
+            cwsv2_work_history: {
+                min_work_history: true
+            },
+            cwsv2_education_history: {
+                min_education_history: true
+            },
+            cwsv2_residence_history: {
+                min_residence_history: true
+            },
+            cwsv2_reference: {
+                min_reference: true
+            },
+            cwsv2_certificate: {
+                min_cert_and_license: true
+            },
+            cc305Date: {
+                cc305_date: true
+            },
+            cwsPassword: {
+                minlength: 6,
+                cwsPassword_valid: true
+            },
+            newPassword1: {
+                minlength: 6,
+                cwsPassword_valid: true
+            }
+        },
+        messages: {
+            email: {
+                email_valid: "Enter valid email"
+            },
+            cc305Date: {
+                cc305_date: "Invalid date"
+            },
+            cwsv2_work_history: {
+                min_work_history: "Additional Work History is required"
+            },
+            cwsv2_education_history: {
+                min_education_history: "Additional Education History is required"
+            },
+            cwsv2_residence_history: {
+                min_residence_history: "Additional Residence History is required"
+            },
+            cwsv2_reference: {
+                min_reference: "Additional Reference is required"
+            },
+            cwsv2_certificate: {
+                min_cert_and_license: "Additional Certificate and License is required"
+            },
+            cwsv2_profile_picture_upload_content_required: {
+                profile_picture_upload_required: "Required field"
+            },
+            cwsv2_resume_upload_content_required: {
+                resume_upload_required: "Required field"
+            },
+            cwsPassword: {
+                minlength: "Must be at least 6 characters",
+                cwsPassword_startsWithLetter: "Must start with letter",
+                cwsPassword_valid: "Invalid characters"
+            },
+            newPassword1: {
+                minlength: "Must be at least 6 characters",
+                cwsPassword_startsWithLetter: "Must start with letter",
+                cwsPassword_valid: "Invalid characters"
+            }
+        },
+        ignoreTitle: true,
+        ignore: ":hidden:not('#cwsv2_work_history, #cwsv2_education_history, #cwsv2_residence_history, #cwsv2_reference, #cwsv2_certificate, #cwsv2_profile_picture_upload_content_required, #cwsv2_resume_upload_content_required, .cwsv2_validate_rlent_date, .cwsv2_validate_rlent_date_from_to, .cwsv2_work_history_instance, .cwsv2_education_history_instance, .cwsv2_residence_history_instance, .cwsv2_reference_instance, .cwsv2_certificate_instance, .cwsv2_double_entry_field_container, .cwsv2_encrypted_integer_container, .cwsv2_required_checkbox_container, .cwsv2_force_validation'),.cwsv2_ignore_validation",
+        errorClass: "text-danger",
+        errorElement: 'label',
+        focusInvalid: false,
+        errorPlacement: function (label, elem) {
+            label.attr("for", elem);
+            var siblingPlaceholder = elem.nextAll('.oracletaleocwsv2-error-text:first');
+            siblingPlaceholder.css("display", "block");
+            if (siblingPlaceholder.length > 0) {
+                siblingPlaceholder.html(label);
+            } else {
+                var parentPlaceholder = elem.parent().nextAll('.oracletaleocwsv2-error-text:first');
+                parentPlaceholder.css("display", "block");
+                if (parentPlaceholder.length > 0) {
+                    parentPlaceholder.html(label);
+                } else {
+                    label.insertAfter(elem);
+                }
+            }
+        },
+        invalidHandler: function (form, validator) {
+            if (!validator.numberOfInvalids())
+                return;
+            var errorElement = $(validator.errorList[0].element);
+            var displayElement = errorElement;
+            // if error element is hidden, scroll to its last sibling button or instance
+            if (errorElement.is(":visible")) {
+                displayElement = errorElement.parent();
+            } else {
+                displayElement = errorElement.siblings('.btn:last');
+            }
+
+            if (!displayElement.is(":visible")) {
+                displayElement = errorElement.closest('.oracletaleocwsv2-instance');
+            }
+            if (!displayElement.is(":visible")) {
+                displayElement = errorElement.closest(":visible");
+            }
+            $('html, body').animate({
+                scrollTop: displayElement.offset().top
+            }, 1000);
+        }
+    });
+
+    jQuery.validator.addMethod("email_valid", function(value, element) {
+        if (this.optional(element)) {
+            return true;
+        }
+        for (var k = 0; k < value.length; k++) {
+            var ch = value.charAt(k);
+            if (" \r\n\t[]".indexOf(ch) >= 0) {
+                return false;
+            }
+        }
+        var index = value.indexOf('@');
+        if (index <= 0) {
+            return false;
+        }
+        var index2 = value.indexOf('.', index);
+        if (index2 <= index) {
+            return false;
+        }
+        return true;
+    });
+
+    jQuery.validator.addMethod("cwsPassword_valid", function(value, element) {
+        return this.optional(element) || (/^[a-zA-Z0-9_]*$/).test(value) || (/^[*]{10,10}$/).test(value);
+    });
+
+    jQuery.validator.addMethod("cwsPassword_startsWithLetter", function(value, element) {
+        return this.optional(element) || (/^[a-zA-Z].*/).test(value) || (/^[*]{10,10}$/).test(value);
+    });
+
+    jQuery.validator.addMethod("min_education_history", function(value, element) {
+        var educationContent = $('.oracletaleocwsv2-step.oracletaleocwsv2-active').children('.oracletaleocwsv2-dynamic-content-education');
+        if (educationContent.length > 0) {
+            var educationLength = $('.oracletaleocwsv2-instance[data-type=education]').length;
+            var minEducation = $('[name=cwsMinEducationCount]').val();
+            if (educationLength >= minEducation) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    });
+
+    jQuery.validator.addMethod("min_work_history", function(value, element) {
+        var workContent = $('.oracletaleocwsv2-step.oracletaleocwsv2-active').children('.oracletaleocwsv2-dynamic-content-work');
+        if (workContent.length > 0) {
+            var workLength = $('.oracletaleocwsv2-instance[data-type=work]').length;
+            var minWork = $('[name=cwsMinWorkCount]').val();
+            if (workLength >= minWork) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    });
+
+    function hasRequiredFields(element, classSelector) {
+        var containsRequired;
+        $(element).siblings(classSelector).children('.well').find('input, select, textarea').each(function(i) {
+            if ($(this).prop('required')) {
+                containsRequired = true;
+                return false;
+            }
+        });
+        return containsRequired;
+    }
+
+    jQuery.validator.addMethod("min_residence_history", function(value, element) {
+        var residenceContent = $('.oracletaleocwsv2-step.oracletaleocwsv2-active').children('.oracletaleocwsv2-dynamic-content-residence');
+        if (residenceContent.length > 0) {
+            var residenceLength = $('.oracletaleocwsv2-instance[data-type=residence]').length;
+            var minResidence = $('[name=cwsMinResidenceCount]').val();
+            if (residenceLength >= minResidence) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    });
+
+    jQuery.validator.addMethod("min_reference", function(value, element) {
+        var referenceContent = $('.oracletaleocwsv2-step.oracletaleocwsv2-active').children('.oracletaleocwsv2-dynamic-content-reference');
+        if (referenceContent.length > 0) {
+            var referenceLength = $('.oracletaleocwsv2-instance[data-type=reference]').length;
+            var minReference = $('[name=cwsMinReferenceCount]').val();
+            if (referenceLength >= minReference) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    });
+
+    jQuery.validator.addMethod("min_cert_and_license", function(value, element) {
+        var certContent = $('.oracletaleocwsv2-step.oracletaleocwsv2-active').children('.oracletaleocwsv2-dynamic-content-certificate');
+        if (certContent.length > 0) {
+            var certLength = $('.oracletaleocwsv2-instance[data-type=certificate]').length;
+            var minCert = $('[name=cwsMinCertificateCount]').val();
+            if (certLength >= minCert) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    });
+
+    jQuery.validator.addMethod("validate_date_no_future", function(value, element) {
+        var isValid = true;
+        var monthYear = $(element).val();
+        var delimiterPos = monthYear.search("/");
+        var month = monthYear.substring(0, delimiterPos);
+        var year = monthYear.substring(delimiterPos + 1, monthYear.length);
+        var d = new Date();
+        //incrementing month as it is 0 based
+        var currentMonth = d.getMonth() + 1;
+        var currentYear = d.getFullYear();
+        var elementId = $(element).attr("id");
+        if ((month > currentMonth && year >= currentYear) && !((elementId == "workDateTo" || elementId == "dateTo") && year == 9000)) {
+            isValid = false;
+        }
+        return isValid;
+    }, "Cannot be future date");
+
+    jQuery.validator.addMethod("validate_from_less_than_to_date", function(value, element) {
+        var isValid = true;
+        if ($(element).attr("id").search("ateFrom") > 0) {
+            return isValid;
+        }
+        var toDateVal = $(element).val();
+        if (!toDateVal) {
+            return isValid;
+        }
+        var delimiterPos = toDateVal.search("/");
+        var toMonth = toDateVal.substring(0, delimiterPos);
+        var toYear = toDateVal.substring(delimiterPos + 1, toDateVal.length);
+
+        var fromDateVal = $(element).parents('.well').find("input[type='hidden'][id*='ateFrom']").val();
+        if (fromDateVal) {
+            var delimiterPosFrom = fromDateVal.search("/");
+            if (delimiterPosFrom > 0) {
+                var fromMonth = fromDateVal.substring(0, delimiterPosFrom);
+                var fromYear = fromDateVal.substring(delimiterPosFrom + 1, fromDateVal.length);
+                var fromDate = new Date();
+                fromDate.setMonth(fromMonth - 1);
+                fromDate.setYear(fromYear);
+                fromDate.setDate(15);
+                fromDate.setHours(0);
+                fromDate.setMinutes(0);
+                fromDate.setSeconds(0);
+                var toDate = new Date();
+                toDate.setMonth(toMonth - 1);
+                toDate.setYear(toYear);
+                toDate.setDate(15);
+                toDate.setHours(0);
+                toDate.setMinutes(0);
+                toDate.setSeconds(0);
+                if (fromDate > toDate) {
+                    isValid = false;
+                }
+            }
+        }
+        return isValid;
+    }, "Start date cannot be after the end date");
+
+    jQuery.validator.addMethod("resume_upload_required", function(value, element) {
+        var resumeContent = $(element).closest('.oracletaleocwsv2-dynamic-content-resume');
+        if (resumeContent.length > 0 && resumeContent.is(':visible')) {
+            var resumeLength = $('.oracletaleocwsv2-instance[data-type=resume]').length;
+            if (resumeLength >= 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    });
+
+    jQuery.validator.addMethod("profile_picture_upload_required", function(value, element) {
+        var profilePictureContent = $(element).closest('.oracletaleocwsv2-dynamic-content-profile_picture');
+        if (profilePictureContent.length > 0 && profilePictureContent.is(':visible')) {
+            var profilePictureLength = $('.oracletaleocwsv2-instance[data-type=profile_picture]').length;
+            if (profilePictureLength >= 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    });
+
+    jQuery.validator.addMethod("cc305_date", function(value, element) {
+        var noIssue = true;
+        if ($(element).val().trim() == "") {
+            noIssue = false;
+        }
+        var oldVal = $(element).val();
+        $(element).datepicker("setDate", $(element).val());
+        if (oldVal != $(element).val()) {
+            $(element).val(oldVal);
+            noIssue = false;
+        }
+
+        return this.optional( element ) || noIssue;
+    });
+
+    jQuery.validator.addMethod("todays_date", function(value, element) {
+        if ($(element).val().trim() == "") {
+            return true;
+        }
+        var currentVal = $(element).val();
+        var todayDate = $.datepicker.formatDate('m/d/y', getOrgTodayDate());
+        if (currentVal != todayDate) {
+            return false;
+        }
+        return true;
+    });
+
+    jQuery.validator.addMethod("valid_date", function(value, element) {
+        if ($(element).val().trim() == "") {
+            return true;
+        }
+        var parsedDate = undefined;
+        try {
+            parsedDate = $.datepicker.parseDate('m/d/y', $(element).val());
+        } catch (e) {
+        }
+        if (parsedDate == undefined) {
+            return false;
+        }
+        return true;
+    });
+
+    jQuery.validator.addMethod("education_history_required_instance", function(value, element) {
+        var educationInstanceContent = $('.oracletaleocwsv2-step.oracletaleocwsv2-active').find('.cwsv2_education_history_instance');
+        var isValid = true;
+        if (educationInstanceContent.length > 0) {
+            $(element).closest('.oracletaleocwsv2-instance').children('.well').find('input, select, textarea').each(function(i) {
+                if ($(this).prop('required')) {
+                    var element = this;
+                    var value = $(this).val();
+                    if ("select" === element.nodeName.toLowerCase()) {
+                        var val = $(element).val();
+                        isValid = (val && val.length > 0 && val != "-1") || $(element).is(":disabled");
+                    } else {
+                        isValid = checkable(element) ? getLength(value, element) > 0 : $.trim(value).length > 0;
+                    }
+                    if (!isValid) {
+                        return false;
+                    }
+                }
+            });
+        }
+        return isValid;
+    }, "Required fields missing");
+
+    jQuery.validator.addMethod("work_history_required_instance", function(value, element) {
+        var workInstanceContent = $('.oracletaleocwsv2-step.oracletaleocwsv2-active').find('.cwsv2_work_history_instance');
+        var isValid = true;
+        if (workInstanceContent.length > 0) {
+            $(element).closest('.oracletaleocwsv2-instance').children('.well').find('input, select, textarea').each(function(i) {
+                if ($(this).prop('required')) {
+                    var element = this;
+                    var value = $(this).val();
+                    if ("select" === element.nodeName.toLowerCase()) {
+                        var val = $(element).val();
+                        isValid = (val && val.length > 0 && val != "-1") || $(element).is(":disabled");
+                    } else {
+                        isValid = checkable(element) ? getLength(value, element) > 0 : $.trim(value).length > 0;
+                    }
+                    if (!isValid) {
+                        return false;
+                    }
+                }
+            });
+        }
+        return isValid;
+    }, "Required fields missing");
+
+
+    jQuery.validator.addMethod("residence_history_required_instance", function(value, element) {
+        var residenceInstanceContent = $('.oracletaleocwsv2-step.oracletaleocwsv2-active').find('.cwsv2_residence_history_instance');
+        var isValid = true;
+        if (residenceInstanceContent.length > 0) {
+            $(element).closest('.oracletaleocwsv2-instance').children('.well').find('input, select, textarea').each(function(i) {
+                if ($(this).prop('required')) {
+                    var element = this;
+                    var value = $(this).val();
+                    if ("select" === element.nodeName.toLowerCase()) {
+                        var val = $(element).val();
+                        isValid = (val && val.length > 0 && val != "-1") || $(element).is(":disabled");
+                    } else {
+                        isValid = checkable(element) ? getLength(value, element) > 0 : $.trim(value).length > 0;
+                    }
+                    if (!isValid) {
+                        return false;
+                    }
+                }
+            });
+        }
+        return isValid;
+    }, "Required fields missing");
+
+    jQuery.validator.addMethod("reference_required_instance", function(value, element) {
+        var referenceInstanceContent = $('.oracletaleocwsv2-step.oracletaleocwsv2-active').find('.cwsv2_reference_instance');
+        var isValid = true;
+        if (referenceInstanceContent.length > 0) {
+            isValid = validateRequiredFields(element);
+        }
+        return isValid;
+    }, "Required fields missing");
+
+    jQuery.validator.addMethod("cert_and_license_required_instance", function(value, element) {
+        var certInstanceContent = $('.oracletaleocwsv2-step.oracletaleocwsv2-active').find('.cwsv2_certificate_instance');
+        var isValid = true;
+        if (certInstanceContent.length > 0) {
+            isValid = validateRequiredFields(element);
+        }
+        return isValid;
+    }, "Required fields missing");
+
+    var validateRequiredFields = function(element) {
+        var isValid = true;
+        $(element).closest('.oracletaleocwsv2-instance').children('.well').find('input, select, textarea').each(function(i) {
+            if ($(this).prop('required')) {
+                var element = this;
+                var value = $(this).val();
+                if ("select" === element.nodeName.toLowerCase()) {
+                    var val = $(element).val();
+                    isValid = (val && val.length > 0 && val != "-1") || $(element).is(":disabled");
+                } else {
+                    isValid = checkable(element) ? getLength(value, element) > 0 : $.trim(value).length > 0;
+                }
+                if (!isValid) {
+                    return false;
+                }
+            }
+        });
+        return isValid;
+    };
+
+    jQuery.validator.addMethod("cwsv2_double_entry_field_validation", function(value, element) {
+        var divContainer = $(element).parent();
+        if (divContainer.is(':visible')) {
+            var isChanged = divContainer.find('[id*="_CHANGED"]');
+            if (isChanged.val() == "true") {
+                var isValidationValue = divContainer.find('[id*="_validated"]');
+                if (isValidationValue.length < 1) {
+                    var maskedId = "[id*=\"masked_\"]";
+                    var fieldToValidate = divContainer.find(".cwsv2_double_entry_field:not('" + maskedId + "')");
+                    var checkField = $(element).siblings("#" + $(fieldToValidate).attr('id') + "_checkField:not('" + maskedId + "')");
+                    if (checkField.length > 0) {
+                        return $(fieldToValidate).val() == $(checkField).val();
+                    }
+                }
+            }
+        }
+        return true;
+    }, "Value does not match");
+
+    jQuery.validator.addMethod("cwsv2_encrypted_integer_validation", function(value, element) {
+        var divContainer = $(element).parent();
+        if (divContainer.is(':visible')) {
+            var isChanged = divContainer.find('[id*="_CHANGED"]');
+            if (isChanged.val() == "true") {
+                var isValidationValue = divContainer.find('[id*="_validated"]');
+                if (isValidationValue.length < 1) {
+                    var maskedId = "[id*=\"masked_\"]";
+                    var fieldToValidate = divContainer.find(".cwsv2_encrypted_integer:not('" + maskedId + "')");
+                    if (fieldToValidate.length > 0) {
+                        return this.optional(fieldToValidate.get(0)) || /^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test(fieldToValidate.val());
+                    }
+                }
+            }
+        }
+        return true;
+    }, "Enter valid number");
+
+    jQuery.validator.addMethod("cwsv2_required_checkbox_validation", function(value, element) {
+        var checkboxElementContainer = $(element).parent();
+        if (checkboxElementContainer.is(':visible')) {
+            var checkboxElement = $(checkboxElementContainer).find('input[type="checkbox"]');
+            if (checkboxElement.length > 0) {
+                return $(checkboxElement).is(':checked');
+            }
+        }
+        return true;
+    }, "This box must be checked");
+
+    jQuery.validator.addClassRules({
+        cwsv2_work_history_instance: {
+            work_history_required_instance: true
+        },
+        cwsv2_validate_rlent_date: {
+            validate_date_no_future: true
+        },
+        cwsv2_validate_rlent_date_from_to: {
+            validate_from_less_than_to_date: true
+        },
+        cwsv2_education_history_instance: {
+            education_history_required_instance: true
+        },
+        cwsv2_residence_history_instance: {
+            residence_history_required_instance: true
+        },
+        cwsv2_reference_instance: {
+            reference_required_instance: true
+        },
+        cwsv2_certificate_instance: {
+            cert_and_license_required_instance: true
+        },
+        cwsv2_double_entry_field_container: {
+            cwsv2_double_entry_field_validation: true
+        },
+        cwsv2_decimal: {
+            number: true
+        },
+        cwsv2_integer: {
+            number: true
+        },
+        cwsv2_encrypted_integer_container: {
+            cwsv2_encrypted_integer_validation: true
+        },
+        cwsv2_required_checkbox_container: {
+            cwsv2_required_checkbox_validation: true
+        },
+        cwsv2_email: {
+            email_valid: true
+        }
+    });
+
+    // if element is form, use full form validation, if element is section, validate only its contents
+    if ($(elementToValidate).is('form')) {
+        if (!$(elementToValidate).valid()) {
+            return false;
+        }
+    } else {
+        var status = true;
+        $(elementToValidate).find("input, select, textarea").each(function () {
+            if (!validator.element($(this))) {
+                status = false;
+            }
+        });
+        return status;
+    }
+    return true;
+}
+</script>
+
+
+
+
+<script>
+    // Same code as in csrfInclude.jsp
+    var TBE_OBJ ={};
+    TBE_OBJ.CSRF={};
+    TBE_OBJ.CSRF.enabled=false;
+    
+
+        TBE_OBJ.CSRF.tokenParam = '_csrf';
+        TBE_OBJ.CSRF.tokenValue = 'v1:;1488140102614:;ioSJtjWF6mq0+fwDx+AW6z3EVrgbAgiE6FSP6W0uVek=';
+        TBE_OBJ.CSRF.enabled=true;
+        var jq = $;
+        if (typeof $ == 'undefined') {
+            jq = jQuery;
+        }
+        if(typeof jq !=='undefined') {
+            jq(document).ready(function () {
+                appendCsrfTokenToForms(TBE_OBJ.CSRF.tokenParam, TBE_OBJ.CSRF.tokenValue,'chj.tbe.taleo.net');
+            });
+        }
+    
+
+</script>
+
+
+<script>
+    $('.scroll').jscroll({
+        nextSelector: 'a.jscroll-next:last',
+        loadingHtml: ""
+    });
+
+    // if two jscroll objects on one page, they should be initialized separately
+    $('.scroll-my-jobs').jscroll({
+        nextSelector: 'a.jscroll-next:last',
+        autoTrigger: false,
+        loadingHtml: ""
+    });
+
+    $('.scroll-suggested-jobs').jscroll({
+        nextSelector: 'a.jscroll-next:last',
+        autoTrigger: false,
+        loadingHtml: ""
+    });
+
+    $(function () {
+        $('.orderbyPicker').on('change', function () {
+            var colSelected = $(this).find("option:selected").val();
+            var sortSelected = $('.sortOrderbyPicker').find("option:selected").val();
+            location.href = colSelected + "&" + sortSelected;
+        });
+    });
+
+    $(function () {
+        $('.sortOrderbyPicker').on('change', function () {
+            var sortSelected = $('.orderbyPicker').find("option:selected").val();
+            var selected = $(this).find("option:selected").val();
+            location.href = sortSelected + "&" + selected;
+        });
+    });
+
+</script>
+
+<script type='text/javascript'>
+  var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-2009958-1']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setCustomVar', 1, 'Section', 'CWS', 3]);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+<script src="https://apis.google.com/js/client.js"></script>
+
+
+</body>
+</html>
+

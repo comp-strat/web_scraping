@@ -1,0 +1,61 @@
+###############################################################
+#
+# TLD:            NET
+# Script:         Inscriptional Pahlavi
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Inscriptional Pahlavi script.
+#
+###############################################################
+U+10B60	# INSCRIPTIONAL PAHLAVI LETTER ALEPH
+U+10B61	# INSCRIPTIONAL PAHLAVI LETTER BETH
+U+10B62	# INSCRIPTIONAL PAHLAVI LETTER GIMEL
+U+10B63	# INSCRIPTIONAL PAHLAVI LETTER DALETH
+U+10B64	# INSCRIPTIONAL PAHLAVI LETTER HE
+U+10B65	# INSCRIPTIONAL PAHLAVI LETTER WAW-AYIN-RESH
+U+10B66	# INSCRIPTIONAL PAHLAVI LETTER ZAYIN
+U+10B67	# INSCRIPTIONAL PAHLAVI LETTER HETH
+U+10B68	# INSCRIPTIONAL PAHLAVI LETTER TETH
+U+10B69	# INSCRIPTIONAL PAHLAVI LETTER YODH
+U+10B6A	# INSCRIPTIONAL PAHLAVI LETTER KAPH
+U+10B6B	# INSCRIPTIONAL PAHLAVI LETTER LAMEDH
+U+10B6C	# INSCRIPTIONAL PAHLAVI LETTER MEM-QOPH
+U+10B6D	# INSCRIPTIONAL PAHLAVI LETTER NUN
+U+10B6E	# INSCRIPTIONAL PAHLAVI LETTER SAMEKH
+U+10B6F	# INSCRIPTIONAL PAHLAVI LETTER PE
+U+10B70	# INSCRIPTIONAL PAHLAVI LETTER SADHE
+U+10B71	# INSCRIPTIONAL PAHLAVI LETTER SHIN
+U+10B72	# INSCRIPTIONAL PAHLAVI LETTER TAW
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

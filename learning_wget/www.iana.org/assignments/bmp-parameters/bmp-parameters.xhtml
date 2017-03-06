@@ -1,0 +1,838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>BGP Monitoring Protocol (BMP) Parameters</title>
+  </head>
+  <body>
+    <h1>BGP Monitoring Protocol (BMP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2016-04-14</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-06-10</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="bmp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="bmp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="bmp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#message-types">BMP Message Types</a>
+      </li>
+      <li>
+        <a href="#peer-types">BMP Peer Types</a>
+      </li>
+      <li>
+        <a href="#peer-flags">BMP Peer Flags</a>
+      </li>
+      <li>
+        <a href="#statistics-types">BMP Statistics Types</a>
+      </li>
+      <li>
+        <a href="#initiation-message-tlvs">BMP Initiation Message TLVs</a>
+      </li>
+      <li>
+        <a href="#termination-message-tlvs">BMP Termination Message TLVs</a>
+      </li>
+      <li>
+        <a href="#termination-message-reason-codes">BMP Termination Message Reason Codes</a>
+      </li>
+      <li>
+        <a href="#peer-down-reason-codes">BMP Peer Down Reason Codes</a>
+      </li>
+      <li>
+        <a href="#route-mirroring-tlvs">BMP Route Mirroring TLVs</a>
+      </li>
+      <li>
+        <a href="#route-mirroring-information-codes">BMP Route Mirroring Information Codes</a>
+      </li>
+    </ul>
+    <h2><a name="message-types" id="message-types"></a>BMP Message Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="message-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-message-types-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">128-250</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-message-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Route Monitoring</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Statistics Report</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peer Down Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Peer Up Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Initiation</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Termination</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Route Mirroring</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>7-250</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>251-254</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="peer-types" id="peer-types"></a>BMP Peer Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="peer-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-peer-types-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">128-250</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-peer-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Peer Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Global Instance Peer</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>RD Instance Peer</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Local Instance Peer</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>3-250</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>251-254</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="peer-flags" id="peer-flags"></a>BMP Peer Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="peer-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-peer-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>V flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>L flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>A flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>3-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="statistics-types" id="statistics-types"></a>BMP Statistics Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="statistics-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-statistics-types-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-32767</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">32768-65530</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-statistics-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Stat Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Number of prefixes rejected by inbound policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Number of (known) duplicate prefix advertisements</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Number of (known) duplicate withdraws</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Number of updates invalidated due to CLUSTER_LIST loop</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Number of updates invalidated due to AS_PATH loop</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Number of updates invalidated due to ORIGINATOR_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Number of updates invalidated due to a loop found in 
+        AS_CONFED_SEQUENCE or AS_CONFED_SET</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Number of routes in Adj-RIBs-In</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Number of routes in Loc-RIB</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Number of routes in per-AFI/SAFI Adj-RIB-In</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Number of routes in per-AFI/SAFI Loc-RIB</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Number of updates subjected to treat-as-withdraw</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Number of prefixes subjected to treat-as-withdraw</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Number of duplicate update messages received</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>14-65530</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>65531-65534</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="initiation-message-tlvs" id="initiation-message-tlvs"></a>BMP Initiation Message TLVs</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="initiation-message-tlvs.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-initiation-message-tlvs-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-32767</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">32768-65530</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-initiation-message-tlvs" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>String</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>sysDescr</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>sysName</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>3-65530</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>65531-65534</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="termination-message-tlvs" id="termination-message-tlvs"></a>BMP Termination Message TLVs</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="termination-message-tlvs.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-termination-message-tlvs-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-32767</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">32768-65530</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-termination-message-tlvs" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>String</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Reason</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>2-65530</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>65531-65534</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="termination-message-reason-codes" id="termination-message-reason-codes"></a>BMP Termination Message Reason Codes</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="termination-message-reason-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-termination-message-reason-codes-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-32767</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">32768-65530</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-termination-message-reason-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Administratively closed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Unspecified reason</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Out of resources</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Redundant connection</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Permanently administratively closed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>5-65530</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>65531-65534</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="peer-down-reason-codes" id="peer-down-reason-codes"></a>BMP Peer Down Reason Codes</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="peer-down-reason-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-peer-down-reason-codes-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-32767</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">32768-65530</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-peer-down-reason-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Local system closed, NOTIFICATION PDU follows</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Local system closed, FSM Event follows</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Remote system closed, NOTIFICATION PDU follows</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Remote system closed, no data</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Peer de-configured</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>6-65530</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>65531-65534</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="route-mirroring-tlvs" id="route-mirroring-tlvs"></a>BMP Route Mirroring TLVs</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="route-mirroring-tlvs.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-route-mirroring-tlvs-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-32767</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">32768-65530</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-route-mirroring-tlvs" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>BGP Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>2-65530</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>65531-65534</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="route-mirroring-information-codes" id="route-mirroring-information-codes"></a>BMP Route Mirroring Information Codes</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="route-mirroring-information-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-route-mirroring-information-codes-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-32767</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">32768-65530</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-route-mirroring-information-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Errored PDU</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Messages Lost</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>2-65530</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>65531-65534</td>
+          <td>Experimental</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+        <tr>
+          <td>65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7854">RFC7854</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

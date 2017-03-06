@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>ONC RPC Network Identifiers (netids)</title>
+  </head>
+  <body>
+    <h1>ONC RPC Network Identifiers (netids)</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2009-02-06</dd>
+      <dt>Last Updated</dt>
+      <dd>2010-01-15</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rpc-netids.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="rpc-netids.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="rpc-netids.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#rpc-netids-1">ONC RPC Netids (First Come First Served)</a>
+      </li>
+      <li>
+        <a href="#rpc-netids-2">ONC RPC Netids (Standards Action)</a>
+      </li>
+    </ul>
+    <h2><a name="rpc-netids-1" id="rpc-netids-1"></a>ONC RPC Netids (First Come First Served)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5665">RFC5665</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rpc-netids-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rpc-netids-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Netid</th>
+          <th>Constant Name</th>
+          <th>Description and/or Reference</th>
+          <th>Point of Contact</th>
+          <th>Cross Reference to Uaddr Format Registry</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"-"</td>
+          <td>NC_NOPROTO</td>
+          <td>[<a href="http://www.iana.org/go/rfc1833">RFC1833</a>], Section 4.2.3.2 of 
+        [<a href="http://www.iana.org/go/rfc5665">RFC5665</a>]</td>
+          <td></td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>"ticlts"</td>
+          <td>NC_TICLTS</td>
+          <td>The loop back connectionless transport used in System V Release
+        4 and other operating systems. Although this assignment is made on a 
+        First Come First Served basis and is fewer than nine characters long, the 
+        exception is authorized. See American Telephone and Telegraph Company, "UNIX 
+        System V, Release 4 Programmer's Guide: Networking Interfaces, ISBN 
+        0139470786", 1990.</td>
+          <td></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>"ticots"</td>
+          <td>NC_TICOTS</td>
+          <td>The loop back connection-oriented transport used in System V Release
+        4 and other operating systems. See American Telephone and Telegraph Company, 
+        "UNIX System V, Release 4 Programmer's Guide: Networking Interfaces, ISBN 
+        0139470786", 1990. Although this assignment is made on a First Come First Served 
+        basis and is fewer than nine characters long, the exception is authorized. </td>
+          <td></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>"ticotsord"</td>
+          <td>NC_TICOTSORD</td>
+          <td>The loop back connection-oriented with orderly-release transport 
+        used in System V Release 4 and other operating systems. See American Telephone and 
+        Telegraph Company, "UNIX System V, Release 4 Programmer's Guide: Networking Interfaces, 
+        ISBN 0139470786", 1990.</td>
+          <td></td>
+          <td>0</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rpc-netids-2" id="rpc-netids-2"></a>ONC RPC Netids (Standards Action)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5665">RFC5665</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rpc-netids-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rpc-netids-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Netid</th>
+          <th>Constant Name</th>
+          <th>RFC(s) and Description (if needed)</th>
+          <th>Point of Contact</th>
+          <th>Cross Reference to Uaddr Format Registry</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"rdma"</td>
+          <td>NC_RDMA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5666">RFC5666</a>][<a href="http://www.iana.org/go/rfc791">RFC791</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>"rdma6"</td>
+          <td>NC_RDMA6</td>
+          <td>[<a href="http://www.iana.org/go/rfc5666">RFC5666</a>][<a href="http://www.iana.org/go/rfc2460">RFC2460</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>"sctp"</td>
+          <td>NC_SCTP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>][<a href="http://www.iana.org/go/rfc791">RFC791</a>] 
+        Section 2 of [<a href="http://www.iana.org/go/rfc5665">RFC5665</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>"sctp6"</td>
+          <td>NC_SCTP6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4960">RFC4960</a>][<a href="http://www.iana.org/go/rfc2460">RFC2460</a>] 
+        Section 2 of [<a href="http://www.iana.org/go/rfc5665">RFC5665</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>"tcp"</td>
+          <td>NC_TCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc793">RFC793</a>][<a href="http://www.iana.org/go/rfc791">RFC791</a>]  
+        Section 10 of [<a href="http://www.iana.org/go/rfc1831">RFC1831</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>"tcp6"</td>
+          <td>NC_TCP6</td>
+          <td>[<a href="http://www.iana.org/go/rfc793">RFC793</a>][<a href="http://www.iana.org/go/rfc2460">RFC2460</a>] 
+        Section 10 of [<a href="http://www.iana.org/go/rfc1831">RFC1831</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>"udp"</td>
+          <td>NC_UDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc768">RFC768</a>][<a href="http://www.iana.org/go/rfc791">RFC791</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>"udp6"</td>
+          <td>NC_UDP6</td>
+          <td>[<a href="http://www.iana.org/go/rfc768">RFC768</a>][<a href="http://www.iana.org/go/rfc2460">RFC2460</a>]</td>
+          <td>[<a href="#IESG">IESG</a>]</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="IESG" id="IESG">[IESG]</a>
+          </td>
+          <td>IESG</td>
+          <td>
+            <a href="mailto:iesg&amp;ietf.org">mailto:iesg&amp;ietf.org</a>
+          </td>
+          <td>2009-02-06</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

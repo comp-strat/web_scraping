@@ -1,0 +1,418 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>IANA IPv4 Special-Purpose Address Registry</title>
+  </head>
+  <body>
+    <h1>IANA IPv4 Special-Purpose Address Registry</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2009-08-19</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-02-23</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iana-ipv4-special-registry.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="iana-ipv4-special-registry.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="iana-ipv4-special-registry.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registry included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#iana-ipv4-special-registry-1">IANA IPv4 Special-Purpose Address Registry</a>
+      </li>
+    </ul>
+    <h2><a name="iana-ipv4-special-registry-1" id="iana-ipv4-special-registry-1"></a>IANA IPv4 Special-Purpose Address Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5736">RFC5736</a>][<a href="http://www.iana.org/go/rfc6890">RFC6890</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The IETF has reserved the address block of 192.0.0.0/24 for use for
+special purposes relating to protocol assignments. This registry
+contains the current assignments made by the IETF from this address
+block.
+
+Address prefixes listed in the Special-Purpose Address Registry are
+not guaranteed routability in any particular local or global context.
+
+The IPv4 and IPv6 Special-Purpose Address Registries maintain the
+   following information regarding each entry:
+
+   o  Address Block - A block of IPv4 or IPv6 addresses that has been
+      registered for a special purpose.
+
+   o  Name - A descriptive name for the special-purpose address block.
+
+   o  RFC - The RFC through which the special-purpose address block was
+      requested.
+
+   o  Allocation Date - The date upon which the special-purpose address
+      block was allocated.
+
+   o  Termination Date - The date upon which the allocation is to be
+      terminated.  This field is applicable for limited-use allocations
+      only.
+
+   o  Source - A boolean value indicating whether an address from the
+      allocated special-purpose address block is valid when used as the
+      source address of an IP datagram that transits two devices.
+
+   o  Destination - A boolean value indicating whether an address from
+      the allocated special-purpose address block is valid when used as
+      the destination address of an IP datagram that transits two
+      devices.
+
+   o  Forwardable - A boolean value indicating whether a router may
+      forward an IP datagram whose destination address is drawn from the
+      allocated special-purpose address block between external
+      interfaces.
+
+   o  Global - A boolean value indicating whether an IP datagram whose
+      destination address is drawn from the allocated special-purpose
+      address block is forwardable beyond a specified administrative
+      domain.
+
+   o  Reserved-by-Protocol - A boolean value indicating whether the
+      special-purpose address block is reserved by IP, itself.  This
+      value is "TRUE" if the RFC that created the special-purpose
+      address block requires all compliant IP implementations to behave
+      in a special way when processing packets either to or from
+      addresses contained by the address block.
+
+   If the value of "Destination" is FALSE, the values of "Forwardable"
+   and "Global" must also be false.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="iana-ipv4-special-registry-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-iana-ipv4-special-registry-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Address Block</th>
+          <th>Name</th>
+          <th>RFC</th>
+          <th>Allocation Date</th>
+          <th>Termination Date</th>
+          <th>Source</th>
+          <th>Destination</th>
+          <th>Forwardable</th>
+          <th>Global</th>
+          <th>Reserved-by-Protocol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0.0.0.0/8</td>
+          <td>"This host on this network"</td>
+          <td>[<a href="http://www.iana.org/go/rfc1122">RFC1122</a>], section 3.2.1.3</td>
+          <td>1981-09</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>10.0.0.0/8</td>
+          <td>Private-Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc1918">RFC1918</a>]</td>
+          <td>1996-02</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>100.64.0.0/10</td>
+          <td>Shared Address Space</td>
+          <td>[<a href="http://www.iana.org/go/rfc6598">RFC6598</a>]</td>
+          <td>2012-04</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>127.0.0.0/8</td>
+          <td>Loopback</td>
+          <td>[<a href="http://www.iana.org/go/rfc1122">RFC1122</a>], section 3.2.1.3</td>
+          <td>1981-09</td>
+          <td>N/A</td>
+          <td>False[<a href="#note1">1</a>]</td>
+          <td>False[<a href="#note1">1</a>]</td>
+          <td>False[<a href="#note1">1</a>]</td>
+          <td>False[<a href="#note1">1</a>]</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>169.254.0.0/16</td>
+          <td>Link Local</td>
+          <td>[<a href="http://www.iana.org/go/rfc3927">RFC3927</a>]</td>
+          <td>2005-05</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>172.16.0.0/12</td>
+          <td>Private-Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc1918">RFC1918</a>]</td>
+          <td>1996-02</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>192.0.0.0/24[<a href="#note2">2</a>]</td>
+          <td>IETF Protocol Assignments</td>
+          <td>[<a href="http://www.iana.org/go/rfc6890">RFC6890</a>], section 2.1</td>
+          <td>2010-01</td>
+          <td>N/A</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>192.0.0.0/29</td>
+          <td>IPv4 Service Continuity Prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc7335">RFC7335</a>]</td>
+          <td>2011-06</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>192.0.0.8/32</td>
+          <td>IPv4 dummy address</td>
+          <td>[<a href="http://www.iana.org/go/rfc7600">RFC7600</a>]</td>
+          <td>2015-03</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>192.0.0.9/32</td>
+          <td>Port Control Protocol Anycast</td>
+          <td>[<a href="http://www.iana.org/go/rfc7723">RFC7723</a>]</td>
+          <td>2015-10</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>192.0.0.10/32</td>
+          <td>Traversal Using Relays around NAT Anycast</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-tram-turn-server-discovery-12">RFC-ietf-tram-turn-server-discovery-12</a>]</td>
+          <td>2017-02</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>192.0.0.170/32, 192.0.0.171/32</td>
+          <td>NAT64/DNS64 Discovery</td>
+          <td>[<a href="http://www.iana.org/go/rfc7050">RFC7050</a>], section 2.2</td>
+          <td>2013-02</td>
+          <td>N/A</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>192.0.2.0/24</td>
+          <td>Documentation (TEST-NET-1)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5737">RFC5737</a>]</td>
+          <td>2010-01</td>
+          <td>N/A</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>192.31.196.0/24</td>
+          <td>AS112-v4</td>
+          <td>[<a href="http://www.iana.org/go/rfc7535">RFC7535</a>]</td>
+          <td>2014-12</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>192.52.193.0/24</td>
+          <td>AMT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7450">RFC7450</a>]</td>
+          <td>2014-12</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>192.88.99.0/24</td>
+          <td>Deprecated (6to4 Relay Anycast)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7526">RFC7526</a>]</td>
+          <td>2001-06</td>
+          <td>2015-03</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>192.168.0.0/16</td>
+          <td>Private-Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc1918">RFC1918</a>]</td>
+          <td>1996-02</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>192.175.48.0/24</td>
+          <td>Direct Delegation AS112 Service</td>
+          <td>[<a href="http://www.iana.org/go/rfc7534">RFC7534</a>]</td>
+          <td>1996-01</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>198.18.0.0/15</td>
+          <td>Benchmarking</td>
+          <td>[<a href="http://www.iana.org/go/rfc2544">RFC2544</a>]</td>
+          <td>1999-03</td>
+          <td>N/A</td>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>198.51.100.0/24</td>
+          <td>Documentation (TEST-NET-2)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5737">RFC5737</a>]</td>
+          <td>2010-01</td>
+          <td>N/A</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>203.0.113.0/24</td>
+          <td>Documentation (TEST-NET-3)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5737">RFC5737</a>]</td>
+          <td>2010-01</td>
+          <td>N/A</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>240.0.0.0/4</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc1112">RFC1112</a>], section 4</td>
+          <td>1989-08</td>
+          <td>N/A</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>255.255.255.255/32</td>
+          <td>Limited Broadcast</td>
+          <td>[<a href="http://www.iana.org/go/rfc919">RFC919</a>], section 7</td>
+          <td>1984-10</td>
+          <td>N/A</td>
+          <td>False</td>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Footnotes</h1>
+    <table class="fn">
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note1" id="note1">[1]</a>
+        </td>
+        <td class="fn">
+          <pre>Several protocols have been granted exceptions to this rule. 
+For examples, see [<a href="http://www.iana.org/go/draft-ietf-mpls-rfc4379bis-09">RFC-ietf-mpls-rfc4379bis-09</a>] and [<a href="http://www.iana.org/go/rfc5884">RFC5884</a>].</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note2" id="note2">[2]</a>
+        </td>
+        <td class="fn">
+          <pre>Not useable unless by virtue of a more specific reservation.</pre>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

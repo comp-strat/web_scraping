@@ -1,0 +1,1749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Internet Control Message Protocol version 6 (ICMPv6) Parameters</title>
+  </head>
+  <body>
+    <h1>Internet Control Message Protocol version 6 (ICMPv6) Parameters</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2017-01-27</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmpv6-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="icmpv6-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="icmpv6-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#icmpv6-parameters-2">ICMPv6 "type" Numbers</a>
+      </li>
+      <li>
+        <a href="#icmpv6-parameters-3">ICMPv6 "Code" Fields</a>
+        <ul>
+          <li>
+            <a href="#icmpv6-parameters-codes-1">Type 0 - Reserved</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-2">Type 1 - Destination Unreachable</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-3">Type 2 - Packet Too Big</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-4">Type 3 - Time Exceeded</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-5">Type 4 - Parameter Problem</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-6">Type 128 - Echo Request</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-7">Type 129 - Echo Reply</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-8">Type 130 - Multicast Listener Query</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-9">Type 131 - Multicast Listener Report</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-10">Type 132 - Multicast Listener Done</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-11">Type 133 - Router Solicitation</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-12">Type 134 - Router Advertisement</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-13">Type 135 - Neighbor Solicitation</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-14">Type 136 - Neighbor Advertisement</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-15">Type 137 - Redirect Message</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-16">Type 138 - Router Renumbering</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-17">Type 139 - ICMP Node Information Query</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-18">Type 140 - ICMP Node Information Response</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-19">Type 141 - Inverse Neighbor Discovery</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-20">Type 142 - Inverse Neighbor Discovery</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-21">Type 144 - Home Agent Address Discovery</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-22">Type 145 - Home Agent Address Discovery</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-23">Type 146 - Mobile Prefix Solicitation</a>
+          </li>
+          <li>
+            <a href="#icmpv6-parameters-codes-24">Type 147 - Mobile Prefix Advertisement</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#icmpv6-parameters-4">FMIPv6 Message Types (Value 154)</a>
+      </li>
+      <li>
+        <a href="#icmpv6-parameters-5">IPv6 Neighbor Discovery Option Formats</a>
+      </li>
+      <li>
+        <a href="#icmpv6-parameters-6">Trust Anchor option (Type 15) Name Type field</a>
+      </li>
+      <li>
+        <a href="#icmpv6-parameters-7">Certificate option  (Type 16) Cert Type field</a>
+      </li>
+      <li>
+        <a href="#icmpv6-parameters-8">Option-Code for Handover Assist Information Option (Type 29)</a>
+      </li>
+      <li>
+        <a href="#icmpv6-parameters-9">Option-Code for Mobile Node Identifier Option (Type 30)</a>
+      </li>
+      <li>
+        <a href="#icmpv6-parameters-10">Qtypes</a>
+      </li>
+      <li>
+        <a href="#icmpv6-parameters-11">IPv6 ND Router Advertisement flags</a>
+      </li>
+      <li>
+        <a href="#address-registration">Address Registration Option Status Values</a>
+      </li>
+      <li>
+        <a href="#sixlowpan-capability-bits">6LoWPAN capability Bits</a>
+      </li>
+    </ul>
+    <h2><a name="icmpv6-parameters-2" id="icmpv6-parameters-2"></a>ICMPv6 "type" Numbers</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmpv6-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-icmpv6-parameters-2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127 (Error messages)</td>
+          <td>IETF RFC Publication (Standards track, informational or experimental)</td>
+        </tr>
+        <tr>
+          <td align="center">128-255 (Informational messages)</td>
+          <td>IETF RFC Publication (Standards track, informational or experimental)</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-icmpv6-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Destination Unreachable</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Packet Too Big</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Time Exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Parameter Problem</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">100</td>
+          <td>Private experimentation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">101</td>
+          <td>Private experimentation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">102-126</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">127</td>
+          <td>Reserved for expansion of ICMPv6 error messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Echo Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>Echo Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Multicast Listener Query</td>
+          <td>[<a href="http://www.iana.org/go/rfc2710">RFC2710</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Multicast Listener Report</td>
+          <td>[<a href="http://www.iana.org/go/rfc2710">RFC2710</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>Multicast Listener Done</td>
+          <td>[<a href="http://www.iana.org/go/rfc2710">RFC2710</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133</td>
+          <td>Router Solicitation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">134</td>
+          <td>Router Advertisement</td>
+          <td>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">135</td>
+          <td>Neighbor Solicitation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">136</td>
+          <td>Neighbor Advertisement</td>
+          <td>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">137</td>
+          <td>Redirect Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">138</td>
+          <td>Router Renumbering</td>
+          <td>[<a href="#Matt_Crawford">Matt_Crawford</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">139</td>
+          <td>ICMP Node Information Query</td>
+          <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">140</td>
+          <td>ICMP Node Information Response</td>
+          <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">141</td>
+          <td>Inverse Neighbor Discovery Solicitation Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3122">RFC3122</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">142</td>
+          <td>Inverse Neighbor Discovery Advertisement Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3122">RFC3122</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">143</td>
+          <td>Version 2 Multicast Listener Report</td>
+          <td>[<a href="http://www.iana.org/go/rfc3810">RFC3810</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">144</td>
+          <td>Home Agent Address Discovery Request Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">145</td>
+          <td>Home Agent Address Discovery Reply Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">146</td>
+          <td>Mobile Prefix Solicitation</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">147</td>
+          <td>Mobile Prefix Advertisement</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">148</td>
+          <td>Certification Path Solicitation Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">149</td>
+          <td>Certification Path Advertisement Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>ICMP messages utilized by experimental           
+mobility protocols such as Seamoby</td>
+          <td>[<a href="http://www.iana.org/go/rfc4065">RFC4065</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">151</td>
+          <td>Multicast Router Advertisement</td>
+          <td>[<a href="http://www.iana.org/go/rfc4286">RFC4286</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">152</td>
+          <td>Multicast Router Solicitation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4286">RFC4286</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">153</td>
+          <td>Multicast Router Termination</td>
+          <td>[<a href="http://www.iana.org/go/rfc4286">RFC4286</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">154</td>
+          <td>FMIPv6 Messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">155</td>
+          <td>RPL Control Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6550">RFC6550</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">156</td>
+          <td>ILNPv6 Locator Update Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6743">RFC6743</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">157</td>
+          <td>Duplicate Address Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6775">RFC6775</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">158</td>
+          <td>Duplicate Address Confirmation</td>
+          <td>[<a href="http://www.iana.org/go/rfc6775">RFC6775</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">159</td>
+          <td>MPL Control Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7731">RFC7731</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">160-199</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">200</td>
+          <td>Private experimentation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">201</td>
+          <td>Private experimentation</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved for expansion of ICMPv6 informational   
+messages</td>
+          <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icmpv6-parameters-3" id="icmpv6-parameters-3"></a>ICMPv6 "Code" Fields</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards action or IESG approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="icmpv6-parameters-codes-1" id="icmpv6-parameters-codes-1"></a>Type 0 - Reserved</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-2" id="icmpv6-parameters-codes-2"></a>Type 1 - Destination Unreachable</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-2" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td align="center">no route to destination</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td align="center">communication with destination administratively prohibited</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td align="center">beyond scope of source address</td>
+            <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td align="center">address unreachable</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td align="center">port unreachable</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td align="center">source address failed ingress/egress policy</td>
+            <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td align="center">reject route to destination</td>
+            <td>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td align="center">Error in Source Routing Header</td>
+            <td>[<a href="http://www.iana.org/go/rfc6550">RFC6550</a>][<a href="http://www.iana.org/go/rfc6554">RFC6554</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-3" id="icmpv6-parameters-codes-3"></a>Type 2 - Packet Too Big</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-3" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-4" id="icmpv6-parameters-codes-4"></a>Type 3 - Time Exceeded</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-4" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td align="center">hop limit exceeded in transit</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td align="center">fragment reassembly time exceeded</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-5" id="icmpv6-parameters-codes-5"></a>Type 4 - Parameter Problem</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-5" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td align="center">erroneous header field encountered</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td align="center">unrecognized Next Header type encountered</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td align="center">unrecognized IPv6 option encountered</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td align="center">IPv6 First Fragment has incomplete IPv6 Header Chain</td>
+            <td>[<a href="http://www.iana.org/go/rfc7112">RFC7112</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-6" id="icmpv6-parameters-codes-6"></a>Type 128 - Echo Request</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-6" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-7" id="icmpv6-parameters-codes-7"></a>Type 129 - Echo Reply</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4443">RFC4443</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-7" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-8" id="icmpv6-parameters-codes-8"></a>Type 130 - Multicast Listener Query</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2710">RFC2710</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-8" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-9" id="icmpv6-parameters-codes-9"></a>Type 131 - Multicast Listener Report</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2710">RFC2710</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-9" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-10" id="icmpv6-parameters-codes-10"></a>Type 132 - Multicast Listener Done</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc2710">RFC2710</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-10" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-11" id="icmpv6-parameters-codes-11"></a>Type 133 - Router Solicitation</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-11" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-12" id="icmpv6-parameters-codes-12"></a>Type 134 - Router Advertisement</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-12" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-13" id="icmpv6-parameters-codes-13"></a>Type 135 - Neighbor Solicitation</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-13" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-14" id="icmpv6-parameters-codes-14"></a>Type 136 - Neighbor Advertisement</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-14" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-15" id="icmpv6-parameters-codes-15"></a>Type 137 - Redirect Message</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-15" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-16" id="icmpv6-parameters-codes-16"></a>Type 138 - Router Renumbering</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="#Matt_Crawford">Matt_Crawford</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-16.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-16" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td align="center">Router Renumbering Command</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td align="center">Router Renumbering Result</td>
+          </tr>
+          <tr>
+            <td align="center">255</td>
+            <td align="center">Sequence Number Reset</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-17" id="icmpv6-parameters-codes-17"></a>Type 139 - ICMP Node Information Query</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-17" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td align="center">The Data field contains an IPv6 address which is the Subject of this Query.</td>
+            <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td align="center">The Data field contains a name which is the Subject of this Query, or is empty, as in the case of a NOOP.</td>
+            <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td align="center">The Data field contains an IPv4 address which is the Subject of this Query.</td>
+            <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-18" id="icmpv6-parameters-codes-18"></a>Type 140 - ICMP Node Information Response</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-18.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-18" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td align="center">A successful reply.  The Reply Data field may or may not be empty.</td>
+            <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td align="center">The Responder refuses to supply the answer.  The Reply Data field will be empty.</td>
+            <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td align="center">The Qtype of the Query is unknown to the Responder.  The Reply Data field will be empty.</td>
+            <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-19" id="icmpv6-parameters-codes-19"></a>Type 141 - Inverse Neighbor Discovery</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3122">RFC3122</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-19.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-19" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-20" id="icmpv6-parameters-codes-20"></a>Type 142 - Inverse Neighbor Discovery</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3122">RFC3122</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-20.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-20" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-21" id="icmpv6-parameters-codes-21"></a>Type 144 - Home Agent Address Discovery</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3775">RFC3775</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-21.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-21" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-22" id="icmpv6-parameters-codes-22"></a>Type 145 - Home Agent Address Discovery</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3775">RFC3775</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-22.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-22" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-23" id="icmpv6-parameters-codes-23"></a>Type 146 - Mobile Prefix Solicitation</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3775">RFC3775</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="icmpv6-parameters-codes-23.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-icmpv6-parameters-codes-23" class="sortable">
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="icmpv6-parameters-codes-24" id="icmpv6-parameters-codes-24"></a>Type 147 - Mobile Prefix Advertisement</h3>
+      <dl>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3775">RFC3775</a>]</dd>
+      </dl>
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="0" class="registryempty">No registrations at this time.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="icmpv6-parameters-4" id="icmpv6-parameters-4"></a>FMIPv6 Message Types (Value 154)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmpv6-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icmpv6-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Subtype</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>RtSolPr</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>PrRtAdv</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>HI - Deprecated (Unavailable for Assignment)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>HAck - Deprecated (Unavailable for Assignment)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icmpv6-parameters-5" id="icmpv6-parameters-5"></a>IPv6 Neighbor Discovery Option Formats</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF RFC publication</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmpv6-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icmpv6-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Source Link-layer Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Target Link-layer Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Prefix Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Redirected Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>MTU</td>
+          <td>[<a href="http://www.iana.org/go/rfc4861">RFC4861</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>NBMA Shortcut Limit Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc2491">RFC2491</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Advertisement Interval Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Home Agent Information Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6275">RFC6275</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Source Address List</td>
+          <td>[<a href="http://www.iana.org/go/rfc3122">RFC3122</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Target Address List</td>
+          <td>[<a href="http://www.iana.org/go/rfc3122">RFC3122</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>CGA option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>RSA Signature option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Timestamp option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Nonce option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Trust Anchor option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Certificate option</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>IP Address/Prefix Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>New Router Prefix Information Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4068">RFC4068</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Link-layer Address Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Neighbor Advertisement Acknowledgment   
+Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5568">RFC5568</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21-22</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>MAP Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4140">RFC4140</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>Route Information Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4191">RFC4191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>Recursive DNS Server Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5006">RFC5006</a>][<a href="http://www.iana.org/go/draft-ietf-6man-rdnss-rfc6106bis-15">RFC-ietf-6man-rdnss-rfc6106bis-15</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>RA Flags Extension Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5175">RFC5175</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>Handover Key Request Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5269">RFC5269</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>Handover Key Reply Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5269">RFC5269</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>Handover Assist Information Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5271">RFC5271</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>Mobile Node Identifier Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc5271">RFC5271</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>DNS Search List Option</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-6man-rdnss-rfc6106bis-15">RFC-ietf-6man-rdnss-rfc6106bis-15</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>Proxy Signature (PS)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6496">RFC6496</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>Address Registration Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6775">RFC6775</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>6LoWPAN Context Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6775">RFC6775</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>Authoritative Border Router Option</td>
+          <td>[<a href="http://www.iana.org/go/rfc6775">RFC6775</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36</td>
+          <td>6LoWPAN Capability Indication Option (6CIO)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7400">RFC7400</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">37</td>
+          <td>DHCP Captive-Portal</td>
+          <td>[<a href="http://www.iana.org/go/rfc7710">RFC7710</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">38-137</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">138</td>
+          <td>CARD Request option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4065">RFC4065</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">139</td>
+          <td>CARD Reply option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4065">RFC4065</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">140-252</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">253</td>
+          <td>RFC3692-style Experiment 1 [<a href="#note1">1</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc4727">RFC4727</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">254</td>
+          <td>RFC3692-style Experiment 2 [<a href="#note1">1</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc4727">RFC4727</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icmpv6-parameters-6" id="icmpv6-parameters-6"></a>Trust Anchor option (Type 15) Name Type field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>][<a href="http://www.iana.org/go/rfc6495">RFC6495</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmpv6-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icmpv6-parameters-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6495">RFC6495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>DER Encoded X.501 Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>FQDN</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>SHA-1 Subject Key Identifier (SKI)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6495">RFC6495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>SHA-224 Subject Key Identifier (SKI)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6495">RFC6495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>SHA-256 Subject Key Identifier (SKI)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6495">RFC6495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>SHA-384 Subject Key Identifier (SKI)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6495">RFC6495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>SHA-512 Subject Key Identifier (SKI)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6495">RFC6495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-252</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">253-254</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6495">RFC6495</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6495">RFC6495</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icmpv6-parameters-7" id="icmpv6-parameters-7"></a>Certificate option  (Type 16) Cert Type field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmpv6-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icmpv6-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>X.509v3 Certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc3971">RFC3971</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icmpv6-parameters-8" id="icmpv6-parameters-8"></a>Option-Code for Handover Assist Information Option (Type 29)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5271">RFC5271</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmpv6-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icmpv6-parameters-8" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5271">RFC5271</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>AN ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5271">RFC5271</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Sector ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5271">RFC5271</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icmpv6-parameters-9" id="icmpv6-parameters-9"></a>Option-Code for Mobile Node Identifier Option (Type 30)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5271">RFC5271</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmpv6-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icmpv6-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5271">RFC5271</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>NAI</td>
+          <td>[<a href="http://www.iana.org/go/rfc5271">RFC5271</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IMSI</td>
+          <td>[<a href="http://www.iana.org/go/rfc5271">RFC5271</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icmpv6-parameters-10" id="icmpv6-parameters-10"></a>Qtypes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmpv6-parameters-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icmpv6-parameters-10" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>NOOP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Unused</td>
+          <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Node Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Node Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>IPv4 Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc4620">RFC4620</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="icmpv6-parameters-11" id="icmpv6-parameters-11"></a>IPv6 ND Router Advertisement flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5175">RFC5175</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="icmpv6-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-icmpv6-parameters-11" class="sortable">
+      <thead>
+        <tr>
+          <th>RA Option Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>M - Managed Address Configuration Flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc2461">RFC2461</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>O - Other Configuration Flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc2461">RFC2461</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>H - Mobile IPv6 Home Agent Flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc3775">RFC3775</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Prf - Router Selection Preferences</td>
+          <td>[<a href="http://www.iana.org/go/rfc4191">RFC4191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Prf - Router Selection Preferences</td>
+          <td>[<a href="http://www.iana.org/go/rfc4191">RFC4191</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>P - Neighbor Discovery Proxy Flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc4389">RFC4389</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-53</td>
+          <td>R - Reserved; Available for assignment</td>
+          <td>[<a href="http://www.iana.org/go/rfc5175">RFC5175</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">54-55</td>
+          <td>Private Experimentation</td>
+          <td>[<a href="http://www.iana.org/go/rfc5175">RFC5175</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="address-registration" id="address-registration"></a>Address Registration Option Status Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6775">RFC6775</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="address-registration.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-address-registration" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc6775">RFC6775</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Duplicate Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6775">RFC6775</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Neighbor Cache Full</td>
+          <td>[<a href="http://www.iana.org/go/rfc6775">RFC6775</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sixlowpan-capability-bits" id="sixlowpan-capability-bits"></a>6LoWPAN capability Bits</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7400">RFC7400</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sixlowpan-capability-bits.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sixlowpan-capability-bits" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-7</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7400">RFC7400</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>GHC capable bit (G bit)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7400">RFC7400</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16-47</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Matt_Crawford" id="Matt_Crawford">[Matt_Crawford]</a>
+          </td>
+          <td>Matt Crawford</td>
+          <td>
+            <a href="mailto:crawdad&amp;gungnir.fnal.gov">mailto:crawdad&amp;gungnir.fnal.gov</a>
+          </td>
+          <td>1999-04</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Footnote</h1>
+    <table class="fn">
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note1" id="note1">[1]</a>
+        </td>
+        <td class="fn">
+          <pre>It is only appropriate to use these values in explicitly configured experiments; they MUST NOT be shipped as defaults in implementations. See [<a href="http://www.iana.org/go/rfc3692">RFC3692</a>] for details.
+    </pre>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

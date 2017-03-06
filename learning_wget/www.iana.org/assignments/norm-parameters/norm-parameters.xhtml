@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Negative-ACKnowledgment (NACK) Oriented Reliable Multicast (NORM) Parameters</title>
+  </head>
+  <body>
+    <h1>Negative-ACKnowledgment (NACK) Oriented Reliable Multicast (NORM) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2009-09-17</dd>
+      <dt>Last Updated</dt>
+      <dd>2009-11-25</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="norm-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="norm-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="norm-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#norm-headers">NORM Header Extension Types</a>
+      </li>
+      <li>
+        <a href="#norm-stream-control">NORM Stream Control Codes</a>
+      </li>
+      <li>
+        <a href="#norm_cmd-message-subtypes">NORM_CMD Message Sub-types</a>
+      </li>
+    </ul>
+    <h2><a name="norm-headers" id="norm-headers"></a>NORM Header Extension Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="norm-headers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-norm-headers" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>EXT_AUTH</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>EXT_CC</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-63</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">64</td>
+          <td>EXT_FTI</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>EXT_RATE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="norm-stream-control" id="norm-stream-control"></a>NORM Stream Control Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="norm-stream-control.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-norm-stream-control" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>NORM_STREAM_END</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="norm_cmd-message-subtypes" id="norm_cmd-message-subtypes"></a>NORM_CMD Message Sub-types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="norm_cmd-message-subtypes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-norm_cmd-message-subtypes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>NORM_CMD(FLUSH)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>NORM_CMD(EOT)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>NORM_CMD(SQUELCH)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>NORM_CMD(CC)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>NORM_CMD(REPAIR_ADV)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>NORM_CMD(ACK_REQ)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>NORM_CMD(APPLICATION)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5740">RFC5740</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

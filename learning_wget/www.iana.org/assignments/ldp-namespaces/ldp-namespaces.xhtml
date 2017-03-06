@@ -1,0 +1,2272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Label Distribution Protocol (LDP) Parameters</title>
+  </head>
+  <body>
+    <h1>Label Distribution Protocol (LDP) Parameters</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2017-02-08</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldp-namespaces.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ldp-namespaces.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ldp-namespaces.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ldp-namespaces-2">Message Type Name Space</a>
+      </li>
+      <li>
+        <a href="#ldp-namespaces-4">TLV Type Name Space</a>
+      </li>
+      <li>
+        <a href="#fec-type">Forwarding Equivalence Class (FEC) Type Name Space</a>
+      </li>
+      <li>
+        <a href="#status-codes">Status Code Name Space</a>
+      </li>
+      <li>
+        <a href="#ldp-namespaces-10">Experiment ID Name Space</a>
+      </li>
+      <li>
+        <a href="#ldp-namespaces-11">LDP MP Opaque Value Element basic type</a>
+      </li>
+      <li>
+        <a href="#ldp-namespaces-13">LDP MP Opaque Value Element extended type</a>
+      </li>
+      <li>
+        <a href="#ldp-namespaces-14">LDP MP Status Value Element type</a>
+      </li>
+      <li>
+        <a href="#mac-flush-flags">MAC Flush Flags</a>
+      </li>
+    </ul>
+    <h2><a name="ldp-namespaces-2" id="ldp-namespaces-2"></a>Message Type Name Space</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldp-namespaces-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-ldp-namespaces-2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0001-0x00FF</td>
+          <td>IETF Consensus action</td>
+          <td>LDP base protocol for general</td>
+        </tr>
+        <tr>
+          <td align="center">0x0100-0x01FF</td>
+          <td>IETF Consensus action</td>
+          <td>LDP base protocol for the neighbour discovery</td>
+        </tr>
+        <tr>
+          <td align="center">0x0200-0x02FF</td>
+          <td>IETF Consensus action</td>
+          <td>LDP base protocol for the initialization phase</td>
+        </tr>
+        <tr>
+          <td align="center">0x0300-0x03FF</td>
+          <td>IETF Consensus action</td>
+          <td>LDP base protocol for Addresses</td>
+        </tr>
+        <tr>
+          <td align="center">0x0400-0x04FF</td>
+          <td>IETF Consensus action</td>
+          <td>LDP base protocol for label distribution</td>
+        </tr>
+        <tr>
+          <td align="center">0x0500-0x05FF</td>
+          <td>IETF Consensus action</td>
+          <td>LDP base protocol for connection related messages</td>
+        </tr>
+        <tr>
+          <td align="center">0x0600-0x3DFF</td>
+          <td>IETF Consensus action</td>
+          <td>LDP base protocol</td>
+        </tr>
+        <tr>
+          <td align="center">0x3E00-0x3EFF</td>
+          <td>LDP Vendor-Private Extensions</td>
+          <td>IANA does not assign; see [<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3F00-0x3FFF</td>
+          <td>LDP Experimental Extensions</td>
+          <td>IANA does not assign; see [<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-ldp-namespaces-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0000</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0001</td>
+          <td>Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0100</td>
+          <td>Hello</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0200</td>
+          <td>Initialization</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0201</td>
+          <td>KeepAlive</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0202</td>
+          <td>Capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc5561">RFC5561</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0300</td>
+          <td>Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0301</td>
+          <td>Address Withdraw</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0400</td>
+          <td>Label Mapping</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0401</td>
+          <td>Label Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0402</td>
+          <td>Label Withdraw</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0403</td>
+          <td>Label Release</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0404</td>
+          <td>Label Abort Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0500</td>
+          <td>Call Setup</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0501</td>
+          <td>Call Release</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0700</td>
+          <td>RG Connect Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0701</td>
+          <td>RG Disconnect Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0702</td>
+          <td>RG Notification Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0703</td>
+          <td>RG Application Data Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0704-0x070F</td>
+          <td>Reserved for future ICCP use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldp-namespaces-4" id="ldp-namespaces-4"></a>TLV Type Name Space</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldp-namespaces-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-ldp-namespaces-4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0001-0x07FF</td>
+          <td>IETF Consensus</td>
+          <td>LDP base protocol</td>
+        </tr>
+        <tr>
+          <td align="center">0x0800-0x08FF (CR-LDP)</td>
+          <td>IETF Consensus</td>
+          <td>LDP base protocol</td>
+        </tr>
+        <tr>
+          <td align="center">0x0900-0x3DFF</td>
+          <td>IETF Consensus</td>
+          <td>LDP base protocol</td>
+        </tr>
+        <tr>
+          <td align="center">0x3E00-0x3EFF</td>
+          <td>LDP Vendor-Private Extensions</td>
+          <td>IANA does not assign; see [<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3F00-0x3FFF</td>
+          <td>LDP Experimental Extensions</td>
+          <td>IANA does not assign; see [<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-ldp-namespaces-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+          <th>Notes/Registration Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x0000</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0001</td>
+          <td>Sequence Number TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7769">RFC7769</a>]</td>
+          <td>2015-11-17</td>
+        </tr>
+        <tr>
+          <td>0x0002-0x00FF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0100</td>
+          <td>FEC</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0101</td>
+          <td>Address List</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0102</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0103</td>
+          <td>Hop Count</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0104</td>
+          <td>Path Vector</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0105-0x01FF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0200</td>
+          <td>Generic Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0201</td>
+          <td>ATM Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0202</td>
+          <td>Frame Relay Label</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0203</td>
+          <td>FT Protection TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0204</td>
+          <td>LDP Upstream-Assigned Label TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6389">RFC6389</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0205</td>
+          <td>LDP Upstream-Assigned Label Request TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6389">RFC6389</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0206</td>
+          <td>Entropy Label Capability TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6790">RFC6790</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0207-0x02FF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0300</td>
+          <td>Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0301</td>
+          <td>Extended Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0302</td>
+          <td>Returned PDU</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0303</td>
+          <td>Returned Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0304</td>
+          <td>Returned TLVs</td>
+          <td>[<a href="http://www.iana.org/go/rfc5561">RFC5561</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0305-0x03FF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0400</td>
+          <td>Common Hello Parameters</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0401</td>
+          <td>IPv4 Transport Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0402</td>
+          <td>Configuration Sequence Number</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0403</td>
+          <td>IPv6 Transport Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0404</td>
+          <td>MAC TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc4762">RFC4762</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0405</td>
+          <td>Cryptographic Authentication TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7349">RFC7349</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0406</td>
+          <td>MAC Flush Parameters TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7361">RFC7361</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0407</td>
+          <td>PBB B-MAC List Sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7361">RFC7361</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0408</td>
+          <td>PBB I-SID List Sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7361">RFC7361</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0409-0x04FF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0500</td>
+          <td>Common Session Parameters</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0501</td>
+          <td>ATM Session Parameters</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0502</td>
+          <td>Frame Relay Session Parameters</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0503</td>
+          <td>FT Session TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0504</td>
+          <td>FT Ack TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0505</td>
+          <td>FT Cork TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0506</td>
+          <td>Dynamic Capability Announcement</td>
+          <td>[<a href="http://www.iana.org/go/rfc5561">RFC5561</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0507</td>
+          <td>LDP Upstream Label Assignment Capability TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6389">RFC6389</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0508</td>
+          <td>P2MP Capability Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0509</td>
+          <td>MP2MP Capability Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x050A</td>
+          <td>MBB Capability Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x050B</td>
+          <td>Typed Wildcard FEC Capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc5918">RFC5918</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x050C</td>
+          <td>Multi-Topology Capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc7307">RFC7307</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x050D</td>
+          <td>State Advertisement Control Capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc7473">RFC7473</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x050E</td>
+          <td>MRT Capability TLV (TEMPORARY - registered 2015-10-01, 
+        extension registered 2016-08-18, expires 2017-10-01)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-mpls-ldp-mrt">draft-ietf-mpls-ldp-mrt</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x050F-0x05FF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0600</td>
+          <td>Label Request Message ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0601</td>
+          <td>MTU TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3988">RFC3988</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0602</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0603</td>
+          <td>Unrecognized Notification Capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc5919">RFC5919</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0604-0x06FF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0700</td>
+          <td>ICCP capability TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0701</td>
+          <td>Dual-Stack capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc7552">RFC7552</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0702-0x07FF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0800</td>
+          <td>Explicit Route TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0801</td>
+          <td>Ipv4 Prefix ER-Hop TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0802</td>
+          <td>Ipv6 Prefix ER-Hop TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0803</td>
+          <td>Autonomous System Number ER-Hop TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0804</td>
+          <td>LSP-ID ER-HOP TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0805</td>
+          <td>L2 PW Address of Switching Point</td>
+          <td>[<a href="http://www.iana.org/go/rfc7392">RFC7392</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0806-0x080F</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0810</td>
+          <td>Traffic Parameters TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0811-0x081F</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0820</td>
+          <td>Preemption TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0821</td>
+          <td>LSPID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0822</td>
+          <td>Resource Class TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0823</td>
+          <td>Route Pinning TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0824</td>
+          <td>Generalized Label Request TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0825</td>
+          <td>Generalized Label TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0826</td>
+          <td>Upstream Label TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0827</td>
+          <td>Label Set TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0828</td>
+          <td>Waveband Label TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0829</td>
+          <td>ER-Hop TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x082A</td>
+          <td>Acceptable Label Set TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x082B</td>
+          <td>Admin Status TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x082C</td>
+          <td>Interface ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x082D</td>
+          <td>IPV4 Interface ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x082E</td>
+          <td>IPV6 Interface ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x082F</td>
+          <td>IPv4 IF_ID Status TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0830</td>
+          <td>IPv6 IF_ID Status TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0831</td>
+          <td>Op-Sp Call ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0832</td>
+          <td>GU Call ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0833</td>
+          <td>Call Capability TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0834</td>
+          <td>Crankback TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0835</td>
+          <td>Protection TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3472">RFC3472</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0836</td>
+          <td>LSP_TUNNEL_INTERFACE_ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3480">RFC3480</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0837</td>
+          <td>Unnumbered Interface ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3480">RFC3480</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0838</td>
+          <td>SONET/SDH Traffic Parameters TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc4606">RFC4606</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0839-0x0900</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0901</td>
+          <td>Diff-Serv TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3270">RFC3270</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0902</td>
+          <td>HSMP LSP Capability Parameter</td>
+          <td>[<a href="http://www.iana.org/go/rfc7140">RFC7140</a>]</td>
+          <td>2014-01-09</td>
+        </tr>
+        <tr>
+          <td>0x0903-0x095F</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0960</td>
+          <td>IPv4 Source ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0961</td>
+          <td>IPv6 Source ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0962</td>
+          <td>NSAP Source ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0963</td>
+          <td>IPv4 Destination ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0964</td>
+          <td>IPv6 Destination ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0965</td>
+          <td>NSAP Destination ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0966</td>
+          <td>Egress Label TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0967</td>
+          <td>Local Connection ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0968</td>
+          <td>Diversity TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0969</td>
+          <td>Contract ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x096A</td>
+          <td>PW Status TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x096B</td>
+          <td>PW Interface Parameters TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x096C</td>
+          <td>PW Group ID TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x096D</td>
+          <td>Pseudowire Switching Point PE TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc6073">RFC6073</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x096E</td>
+          <td>Bandwidth TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7267">RFC7267</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x096F</td>
+          <td>LDP MP Status TLV Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0970</td>
+          <td>UNI Service Level TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3476">RFC3476</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0971</td>
+          <td>Queue Request TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7032">RFC7032</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0972</td>
+          <td>MP Node Protection Capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc7715">RFC7715</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0973</td>
+          <td>PSN Tunnel Binding TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7965">RFC7965</a>]</td>
+          <td>2016-07-22</td>
+        </tr>
+        <tr>
+          <td>0x0974</td>
+          <td>Egress Protection Capability</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pals-endpoint-fast-protection-05">RFC-ietf-pals-endpoint-fast-protection-05</a>]</td>
+          <td>2017-02-08</td>
+        </tr>
+        <tr>
+          <td>0x0975-0x3DFF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x3E00-0x3EFF</td>
+          <td>Reserved for Vendor-Private Extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x3F00-0x3FFF</td>
+          <td>Reserved for Experimental Extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="fec-type" id="fec-type"></a>Forwarding Equivalence Class (FEC) Type Name Space</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="fec-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-fec-type-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>IETF Consensus</td>
+        </tr>
+        <tr>
+          <td align="center">128-191</td>
+          <td>First Come First Served</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-fec-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Hex</th>
+          <th>Name</th>
+          <th>Label Advertisement Discipline</th>
+          <th>Reference</th>
+          <th>Notes/Registration Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>0x00</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>0x01</td>
+          <td>Wildcard</td>
+          <td>Not applicable</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>0x02</td>
+          <td>Prefix</td>
+          <td>As negotiated (DU or DoD)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>0x04</td>
+          <td>CR-LSP</td>
+          <td>DoD</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>0x05</td>
+          <td>Typed Wildcard FEC Element</td>
+          <td>Not applicable</td>
+          <td>[<a href="http://www.iana.org/go/rfc5918">RFC5918</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>0x06</td>
+          <td>P2MP</td>
+          <td>DU</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>0x07</td>
+          <td>MP2MP-up</td>
+          <td>DU</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>0x08</td>
+          <td>MP2MP-down</td>
+          <td>DU</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>0x09</td>
+          <td>HSMP-upstream</td>
+          <td>DU</td>
+          <td>[<a href="http://www.iana.org/go/rfc7140">RFC7140</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td>2014-01-09</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>0x0A</td>
+          <td>HSMP-downstream</td>
+          <td>DU, Upstream</td>
+          <td>[<a href="http://www.iana.org/go/rfc7140">RFC7140</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td>2014-01-09</td>
+        </tr>
+        <tr>
+          <td>11-127</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128</td>
+          <td>0x80</td>
+          <td>PWid FEC Element</td>
+          <td>DU</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>129</td>
+          <td>0x81</td>
+          <td>Generalized PWid FEC Element</td>
+          <td>DU</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>130</td>
+          <td>0x82</td>
+          <td>P2MP PW Upstream FEC Element</td>
+          <td>Upstream</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pwe3-p2mp-pw">draft-ietf-pwe3-p2mp-pw</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td>2009-06-03</td>
+        </tr>
+        <tr>
+          <td>131</td>
+          <td>0x83</td>
+          <td>Protection FEC Element</td>
+          <td>DU</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pals-endpoint-fast-protection-05">RFC-ietf-pals-endpoint-fast-protection-05</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td>2010-02-26</td>
+        </tr>
+        <tr>
+          <td>132</td>
+          <td>0x84</td>
+          <td>P2MP PW Downstream FEC Element</td>
+          <td>DU</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pwe3-p2mp-pw">draft-ietf-pwe3-p2mp-pw</a>][<a href="http://www.iana.org/go/rfc7358">RFC7358</a>]</td>
+          <td>2014-04-04</td>
+        </tr>
+        <tr>
+          <td>133-191</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>192-255</td>
+          <td></td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="status-codes" id="status-codes"></a>Status Code Name Space</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The "E" column is the required setting of the Status Code E-bit.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="status-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-status-codes-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00000000-0x1FFFFFFF</td>
+          <td>IETF Consensus</td>
+          <td>CR-LDP: 0x04000000-0x040000FF</td>
+        </tr>
+        <tr>
+          <td align="center">0x20000000-0x3EFFFFFF</td>
+          <td>First Come First Served</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x3F000000-0x3FFFFFFF</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-status-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Range/Value</th>
+          <th>E</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x00000000</td>
+          <td>0</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000001</td>
+          <td>1</td>
+          <td>Bad LDP Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000002</td>
+          <td>1</td>
+          <td>Bad Protocol Version</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000003</td>
+          <td>1</td>
+          <td>Bad PDU Length</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000004</td>
+          <td>0</td>
+          <td>Unknown Message Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000005</td>
+          <td>1</td>
+          <td>Bad Message Length</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000006</td>
+          <td>0</td>
+          <td>Unknown TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000007</td>
+          <td>1</td>
+          <td>Bad TLV Length</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000008</td>
+          <td>1</td>
+          <td>Malformted TLV Value</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000009</td>
+          <td>1</td>
+          <td>Hold Timer Expired</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000000A</td>
+          <td>1</td>
+          <td>Shutdown</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000000B</td>
+          <td>0</td>
+          <td>Loop Detected</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000000C</td>
+          <td>0</td>
+          <td>Unknown FEC</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000000D</td>
+          <td>0</td>
+          <td>No Route</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000000E</td>
+          <td>0</td>
+          <td>No Label Resources</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000000F</td>
+          <td>0</td>
+          <td>Label Resources/Available</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000010</td>
+          <td>1</td>
+          <td>Session Rejected/No Hello</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000011</td>
+          <td>1</td>
+          <td>Session Rejected/Parameters Advertisement Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000012</td>
+          <td>1</td>
+          <td>Session Rejected/Parameters Max PDU Length</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000013</td>
+          <td>1</td>
+          <td>Session Rejected/Parameters Label Range</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000014</td>
+          <td>1</td>
+          <td>KeepAlive Timer Expired</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000015</td>
+          <td>0</td>
+          <td>Label Request Aborted</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000016</td>
+          <td>0</td>
+          <td>Missing Message Parameters</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000017</td>
+          <td>0</td>
+          <td>Unsupported Address Family</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000018</td>
+          <td>1</td>
+          <td>Session Rejected/Bad KeepAlive Time</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000019</td>
+          <td>1</td>
+          <td>Internal Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000001A</td>
+          <td>0</td>
+          <td>No LDP Session</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000001B</td>
+          <td>1</td>
+          <td>Zero FT seqnum</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000001C</td>
+          <td>1</td>
+          <td>Unexpected TLV / Session Not FT</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000001D</td>
+          <td>1</td>
+          <td>Unexpected TLV / Label Not FT</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000001E</td>
+          <td>1</td>
+          <td>Missing FT Protection TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000001F</td>
+          <td>1</td>
+          <td>FT ACK sequence error</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000020</td>
+          <td>0</td>
+          <td>Temporary Shutdown</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000021</td>
+          <td>1</td>
+          <td>FT Seq Numbers Exhausted</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000022</td>
+          <td>1</td>
+          <td>FT Session parameters / changed</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000023</td>
+          <td>1</td>
+          <td>Unexpected FT Cork TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3479">RFC3479</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000024</td>
+          <td>0</td>
+          <td>Illegal C-Bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000025</td>
+          <td>0</td>
+          <td>Wrong C-Bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000026</td>
+          <td>0</td>
+          <td>Incompatible bit-rate</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000027</td>
+          <td>0</td>
+          <td>CEP-TDM mis-configuration</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000028</td>
+          <td>0</td>
+          <td>PW Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000029</td>
+          <td>0</td>
+          <td>Unassigned/Unrecognized TAI</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000002A</td>
+          <td>0</td>
+          <td>Generic Misconfiguration Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000002B</td>
+          <td>0</td>
+          <td>Label Withdraw PW Status Method Not Supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc8077">RFC8077</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000002C</td>
+          <td>0</td>
+          <td>IP Address of CE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6575">RFC6575</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000002D</td>
+          <td>0</td>
+          <td>Attachment Circuit bound to different remote Attachment Circuit</td>
+          <td>[<a href="http://www.iana.org/go/rfc6074">RFC6074</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000002E</td>
+          <td>0</td>
+          <td>Unsupported Capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc5561">RFC5561</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000002F</td>
+          <td>0</td>
+          <td>End-of-LIB</td>
+          <td>[<a href="http://www.iana.org/go/rfc5919">RFC5919</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000030</td>
+          <td>0</td>
+          <td>Attachment Circuit bound to different PE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6074">RFC6074</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000031</td>
+          <td>0</td>
+          <td>Invalid Topology ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7307">RFC7307</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000032</td>
+          <td>1</td>
+          <td>Transport Connection Mismatch</td>
+          <td>[<a href="http://www.iana.org/go/rfc7552">RFC7552</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000033</td>
+          <td>1</td>
+          <td>Dual-Stack Noncompliance</td>
+          <td>[<a href="http://www.iana.org/go/rfc7552">RFC7552</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000034</td>
+          <td>0</td>
+          <td>MRT Capability negotiated without MT Capability 
+        (TEMPORARY - registered 2015-10-01, 
+        extension registered 2016-08-18, expires 2017-10-01)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-mpls-ldp-mrt">draft-ietf-mpls-ldp-mrt</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000035</td>
+          <td>0</td>
+          <td>VCCV Type Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7708">RFC7708</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000036</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x00000037</td>
+          <td>0</td>
+          <td>Bandwidth resources unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7267">RFC7267</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000038</td>
+          <td>0</td>
+          <td>Resources Unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7267">RFC7267</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000039</td>
+          <td>0</td>
+          <td>AII Unreachable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7267">RFC7267</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000003A</td>
+          <td>0</td>
+          <td>PW Loop Detected</td>
+          <td>[<a href="http://www.iana.org/go/rfc6073">RFC6073</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000003B</td>
+          <td>1</td>
+          <td>Reject - unable to use the suggested tunnel/LSPs</td>
+          <td>[<a href="http://www.iana.org/go/rfc7965">RFC7965</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000003C</td>
+          <td>1</td>
+          <td>The C-bit or S-bit unknown</td>
+          <td>[<a href="http://www.iana.org/go/rfc7965">RFC7965</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000003D-0x0000003F</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x00000040</td>
+          <td>0</td>
+          <td>LDP MP status</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000041-0x00000049</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x0000004A</td>
+          <td>0</td>
+          <td>IP Address Type Mismatch</td>
+          <td>[<a href="http://www.iana.org/go/rfc6575">RFC6575</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000004B</td>
+          <td>0</td>
+          <td>Wrong IP Address Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc6575">RFC6575</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0000004C-0x00010000</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x00010001</td>
+          <td>0</td>
+          <td>Unknown ICCP RG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00010002</td>
+          <td>0</td>
+          <td>ICCP Connection Count Exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00010003</td>
+          <td>0</td>
+          <td>ICCP Application Connection Count Exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00010004</td>
+          <td>0</td>
+          <td>ICCP Application not in RG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00010005</td>
+          <td>0</td>
+          <td>Incompatible ICCP Protocol Version</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00010006</td>
+          <td>0</td>
+          <td>ICCP Rejected Message</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00010007</td>
+          <td>0</td>
+          <td>ICCP Administratively Disabled</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00010008-0x0001000F</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x00010010</td>
+          <td>0</td>
+          <td>ICCP RG Removed</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00010011</td>
+          <td>0</td>
+          <td>ICCP Application Removed from RG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7275">RFC7275</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00010012-0x01000000</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x01000001</td>
+          <td>0</td>
+          <td>Unexpected Diff-Serv TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc3270">RFC3270</a>]</td>
+        </tr>
+        <tr>
+          <td>0x01000002</td>
+          <td>0</td>
+          <td>Unsupported PHB</td>
+          <td>[<a href="http://www.iana.org/go/rfc3270">RFC3270</a>]</td>
+        </tr>
+        <tr>
+          <td>0x01000003</td>
+          <td>0</td>
+          <td>Invalid EXP&lt;--&gt;PHB mapping</td>
+          <td>[<a href="http://www.iana.org/go/rfc3270">RFC3270</a>]</td>
+        </tr>
+        <tr>
+          <td>0x01000004</td>
+          <td>0</td>
+          <td>Unsupported PSC</td>
+          <td>[<a href="http://www.iana.org/go/rfc3270">RFC3270</a>]</td>
+        </tr>
+        <tr>
+          <td>0x01000005</td>
+          <td>0</td>
+          <td>Per-LSP context allocation failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc3270">RFC3270</a>]</td>
+        </tr>
+        <tr>
+          <td>0x01000006-0x04000000</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x04000001</td>
+          <td></td>
+          <td>Bad Explicit Routing TLV Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000002</td>
+          <td></td>
+          <td>Bad Strict Node Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000003</td>
+          <td></td>
+          <td>Bad Loose Node Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000004</td>
+          <td></td>
+          <td>Bad Initial ER-Hop Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000005</td>
+          <td></td>
+          <td>Resource Unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000006</td>
+          <td></td>
+          <td>Traffic Parameters Unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000007</td>
+          <td></td>
+          <td>LSP Preempted</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000008</td>
+          <td></td>
+          <td>Modify Request Not Supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc3212">RFC3212</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000009</td>
+          <td></td>
+          <td>Invalid SNP ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0400000A</td>
+          <td></td>
+          <td>Calling Party busy</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0400000B</td>
+          <td></td>
+          <td>Unavailable SNP ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0400000C</td>
+          <td></td>
+          <td>Invalid SNPP ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0400000D</td>
+          <td></td>
+          <td>Unavailable SNPP ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0400000E</td>
+          <td></td>
+          <td>Failed to create SNC</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0400000F</td>
+          <td></td>
+          <td>Failed to establish LC</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000010</td>
+          <td></td>
+          <td>Invalid A End-User Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000011</td>
+          <td></td>
+          <td>Invalid Z End-User Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000012</td>
+          <td></td>
+          <td>Invalid CoS</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000013</td>
+          <td></td>
+          <td>Unavailable CoS</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000014</td>
+          <td></td>
+          <td>Invalid GoS</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000015</td>
+          <td></td>
+          <td>Unavailable GoS</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000016</td>
+          <td></td>
+          <td>Failed Security Check</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000017</td>
+          <td></td>
+          <td>TimeOut</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000018</td>
+          <td></td>
+          <td>Invalid Call Name</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x04000019</td>
+          <td></td>
+          <td>Failed to Release SNC</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0400001A</td>
+          <td></td>
+          <td>Failed to Free LC</td>
+          <td>[<a href="http://www.iana.org/go/rfc3475">RFC3475</a>]</td>
+        </tr>
+        <tr>
+          <td>0x0400001B-0x1FFFFFFF</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x20000000</td>
+          <td>0</td>
+          <td>Unknown VPN ID</td>
+          <td>[<a href="#Andy_Malis">Andy_Malis</a>][MPLS/FR Alliance 2.0.1, "MPLS PVC User to Network Interface
+Implementation Agreement", May 2003, Andrew G. Malis]</td>
+        </tr>
+        <tr>
+          <td>0x20000001</td>
+          <td>0</td>
+          <td>Illegal C-Bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc4906">RFC4906</a>]</td>
+        </tr>
+        <tr>
+          <td>0x20000002</td>
+          <td>0</td>
+          <td>Wrong C-Bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc4906">RFC4906</a>]</td>
+        </tr>
+        <tr>
+          <td>0x20000003</td>
+          <td>1</td>
+          <td>E-Tree VLAN mapping not supported</td>
+          <td>[<a href="http://www.iana.org/go/rfc7796">RFC7796</a>]</td>
+        </tr>
+        <tr>
+          <td>0x20000004</td>
+          <td>0</td>
+          <td>Leaf-to-Leaf PW released</td>
+          <td>[<a href="http://www.iana.org/go/rfc7796">RFC7796</a>]</td>
+        </tr>
+        <tr>
+          <td>0x20000005-0x3EFFFFFF</td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0x3F000000-0x3FFFFFFF</td>
+          <td></td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldp-namespaces-10" id="ldp-namespaces-10"></a>Experiment ID Name Space</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5036">RFC5036</a>]</dd>
+    </dl>
+    <table class="sortable" id="table-ldp-namespaces-10-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00000000-0xefffffff</td>
+          <td>First Come First Served</td>
+        </tr>
+        <tr>
+          <td align="center">0xf0000000-0xffffffff</td>
+          <td>Experiment Ids - Reserved for Private Use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table>
+      <thead>
+        <tr></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldp-namespaces-11" id="ldp-namespaces-11"></a>LDP MP Opaque Value Element basic type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldp-namespaces-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldp-namespaces-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Generic LSP identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Transit IPv4 Source TLV type</td>
+          <td>[<a href="http://www.iana.org/go/rfc6826">RFC6826</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Transit IPv6 Source TLV type</td>
+          <td>[<a href="http://www.iana.org/go/rfc6826">RFC6826</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Transit IPv4 Bidir TLV type</td>
+          <td>[<a href="http://www.iana.org/go/rfc6826">RFC6826</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Transit IPv6 Bidir TLV type</td>
+          <td>[<a href="http://www.iana.org/go/rfc6826">RFC6826</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Recursive Opaque Value</td>
+          <td>[<a href="http://www.iana.org/go/rfc6512">RFC6512</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>VPN-Recursive Opaque Value</td>
+          <td>[<a href="http://www.iana.org/go/rfc6512">RFC6512</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Transit VPNv4 Bidir TLV type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7246">RFC7246</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Transit VPNv6 Bidir TLV type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7246">RFC7246</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Transit IPv4 Shared Tree TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7442">RFC7442</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Transit IPv6 Shared Tree TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7442">RFC7442</a>]</td>
+        </tr>
+        <tr>
+          <td>13-249</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>250</td>
+          <td>Transit VPNv4 Source TLV type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7246">RFC7246</a>]</td>
+        </tr>
+        <tr>
+          <td>251</td>
+          <td>Transit VPNv6 Source TLV type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7246">RFC7246</a>]</td>
+        </tr>
+        <tr>
+          <td>252-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Extended Type field is present in the following two bytes</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldp-namespaces-13" id="ldp-namespaces-13"></a>LDP MP Opaque Value Element extended type</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldp-namespaces-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-ldp-namespaces-13-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-32767</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">32768-65535</td>
+          <td>First Come First Served</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-ldp-namespaces-13" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+        </tr>
+        <tr>
+          <td>1-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ldp-namespaces-14" id="ldp-namespaces-14"></a>LDP MP Status Value Element type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ldp-namespaces-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ldp-namespaces-14" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>MBB Status</td>
+          <td>[<a href="http://www.iana.org/go/rfc6388">RFC6388</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>PLR Status Value Element</td>
+          <td>[<a href="http://www.iana.org/go/rfc7715">RFC7715</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Protected Node Status Value Element</td>
+          <td>[<a href="http://www.iana.org/go/rfc7715">RFC7715</a>]</td>
+        </tr>
+        <tr>
+          <td>4-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mac-flush-flags" id="mac-flush-flags"></a>MAC Flush Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7361">RFC7361</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mac-flush-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mac-flush-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Number</th>
+          <th>Hex</th>
+          <th>Abbreviation</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>0x80</td>
+          <td>C</td>
+          <td>Context</td>
+          <td>[<a href="http://www.iana.org/go/rfc7361">RFC7361</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>0x40</td>
+          <td>N</td>
+          <td>Negative MAC flushing</td>
+          <td>[<a href="http://www.iana.org/go/rfc7361">RFC7361</a>]</td>
+        </tr>
+        <tr>
+          <td>2-7</td>
+          <td></td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Andy_Malis" id="Andy_Malis">[Andy_Malis]</a>
+          </td>
+          <td>Andy Malis</td>
+          <td>
+            <a href="mailto:agmalis&amp;gmail.com">mailto:agmalis&amp;gmail.com</a>
+          </td>
+          <td>2013-05-28</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

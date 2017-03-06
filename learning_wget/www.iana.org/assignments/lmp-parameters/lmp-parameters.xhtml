@@ -1,0 +1,1459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Link Management Protocol (LMP) Parameters</title>
+  </head>
+  <body>
+    <h1>Link Management Protocol (LMP) Parameters</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2013-04-01</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="lmp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="lmp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="lmp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#lmp-parameters-2">LMP Message Type Name Space</a>
+      </li>
+      <li>
+        <a href="#lmp-parameters-4">LMP Object Class name space and Class type (C-Type)</a>
+        <ul>
+          <li>
+            <a href="#lmp-parameters-5">CCID Object Class type name space (Value 1)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-6">NODE_ID Object Class type name space (Value 2)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-7">LINK_ID Object Class type name space (Value 3)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-8">INTERFACE_ID Object Class type name space (Value 4)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-9">MESSAGE_ID Object Class type name space (Value 5)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-10">CONFIG Object Class type name space (Value 6)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-11">HELLO Object Class type name space (Value 7)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-12">BEGIN_VERIFY Object Class type name space (Value 8)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-13">BEGIN_VERIFY_ACK Object Class type name space (Value 9)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-14">VERIFY_ID Object Class type name space (Value 10)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-15">TE_LINK Object Class type name space (Value 11)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-16">DATA_LINK Object Class type name space (Value 12)</a>
+            <ul>
+              <li>
+                <a href="#lmp-parameters-17">DATA_LINK Sub-object Class name space</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#lmp-parameters-18">CHANNEL_STATUS Object Class type name space (Value 13)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-19">CHANNEL_STATUS_REQUEST Object Class type name space (Value 14)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-20">ERROR_CODE Object Class type name space (Value 20)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-21">TRACE Object Class name space and Class type (C-Type) (Value 21)</a>
+          </li>
+          <li>
+            <a href="#lmp-parameters-22">TRACE REQ Object Class name space and Class type (C-Type) (Value 22)</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#behavior-config-flags">LMP Behavior Configuration Flags</a>
+      </li>
+    </ul>
+    <h2><a name="lmp-parameters-2" id="lmp-parameters-2"></a>LMP Message Type Name Space</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Dimitri Papadimitriou</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="lmp-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-lmp-parameters-2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">128-247</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">248-255</td>
+          <td>Reserved for Private Use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-lmp-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Config message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ConfigAck message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>ConfigNack message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Hello message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>BeginVerify message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>BeginVerifyAck message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>BeginVerifyNack message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>EndVerify message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>EndVerifyAck message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Test message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>TestStatusSuccess message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>TestStatusFailure message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>TestStatusAck message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>LinkSummary message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>LinkSummaryAck message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>LinkSummaryNack message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>ChannelStatus message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>ChannelStatusAck message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>ChannelStatusRequest message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>ChannelStatusResponse message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>TraceMonitor message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>TraceMonitorAck message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>TraceMonitorNack message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>TraceMismatch message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>TraceMismatchAck message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>TraceReq message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>TraceReport message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>TraceReqNack message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>InsertTrace message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>InsertTraceAck message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>InsertTraceNack message</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>ConfirmDataChannelStatus</td>
+          <td>[<a href="http://www.iana.org/go/rfc5818">RFC5818</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>ConfirmDataChannelStatusAck</td>
+          <td>[<a href="http://www.iana.org/go/rfc5818">RFC5818</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>ConfirmDataChannelStatusNack</td>
+          <td>[<a href="http://www.iana.org/go/rfc5818">RFC5818</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35-127</td>
+          <td>Unassigned (via Standards Action)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-247</td>
+          <td>Unassigned (via expert review)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">248-255</td>
+          <td>Private Use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="lmp-parameters-4" id="lmp-parameters-4"></a>LMP Object Class name space and Class type (C-Type)</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Dimitri Papadimitriou, if applicable</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="lmp-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-lmp-parameters-4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">128-247</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">248-255</td>
+          <td>Reserved for Private Use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-lmp-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>CCID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>NODE_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>LINK_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>INTERFACE_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>MESSAGE_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>CONFIG</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>HELLO</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>BEGIN_VERIFY</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>BEGIN_VERIFY_ACK</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>VERIFY_ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>TE_LINK</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>DATA_LINK</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>CHANNEL_STATUS</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>CHANNEL_STATUS_REQUEST</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15-19</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>ERROR_CODE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>TRACE</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>TRACE REQ</td>
+          <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23-127</td>
+          <td>Unassigned (Standards Action)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-247</td>
+          <td>Unassigned (Expert review)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">248-255</td>
+          <td>Private Use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="lmp-parameters-5" id="lmp-parameters-5"></a>CCID Object Class type name space (Value 1)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-5" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>LOCAL_CCID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>REMOTE_CCID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-6" id="lmp-parameters-6"></a>NODE_ID Object Class type name space (Value 2)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-6" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>LOCAL_NODE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>REMOTE_NODE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-7" id="lmp-parameters-7"></a>LINK_ID Object Class type name space (Value 3)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-7" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>IPv4 LOCAL_LINK_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>IPv4 REMOTE_LINK_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>IPv6 LOCAL_LINK_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>IPv6 REMOTE_LINK_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>Unnumbered LOCAL_LINK_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>Unnumbered REMOTE_LINK_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-8" id="lmp-parameters-8"></a>INTERFACE_ID Object Class type name space (Value 4)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-8" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>IPv4 LOCAL_INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>IPv4 REMOTE_INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>IPv6 LOCAL_INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>IPv6 REMOTE_INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5</td>
+            <td>Unnumbered LOCAL_INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">6</td>
+            <td>Unnumbered REMOTE_INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-9" id="lmp-parameters-9"></a>MESSAGE_ID Object Class type name space (Value 5)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-9" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>MESSAGE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>MESSAGE_ID_ACK</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-10" id="lmp-parameters-10"></a>CONFIG Object Class type name space (Value 6)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-10" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>HELLO_CONFIG</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>LMP-WDM_CONFIG</td>
+            <td>[<a href="http://www.iana.org/go/rfc4209">RFC4209</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>BehaviorConfig</td>
+            <td>[<a href="http://www.iana.org/go/rfc6898">RFC6898</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-11" id="lmp-parameters-11"></a>HELLO Object Class type name space (Value 7)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-11" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>HELLO</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-12" id="lmp-parameters-12"></a>BEGIN_VERIFY Object Class type name space (Value 8)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-12" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Type 1</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-13" id="lmp-parameters-13"></a>BEGIN_VERIFY_ACK Object Class type name space (Value 9)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-13" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Type 1</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-14" id="lmp-parameters-14"></a>VERIFY_ID Object Class type name space (Value 10)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-14" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Type 1</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-15" id="lmp-parameters-15"></a>TE_LINK Object Class type name space (Value 11)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-15" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>IPv4 TE_LINK</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>IPv6 TE_LINK</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Unnumbered TE_LINK</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-16" id="lmp-parameters-16"></a>DATA_LINK Object Class type name space (Value 12)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-16.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-16" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>IPv4 DATA_LINK</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>IPv6 DATA_LINK</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Unnumbered DATA_LINK</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="registry level3">
+        <h4><a name="lmp-parameters-17" id="lmp-parameters-17"></a>DATA_LINK Sub-object Class name space</h4>
+        <dl>
+          <dt>Available Formats</dt>
+          <dd>
+            <a class="altformat" href="lmp-parameters-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+          </dd>
+        </dl>
+        <table id="table-lmp-parameters-17" class="sortable">
+          <thead>
+            <tr>
+              <th>C-Type</th>
+              <th>Description</th>
+              <th>Reference</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center">0</td>
+              <td>Reserved</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="center">1</td>
+              <td>Interface Switching Type</td>
+              <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">2</td>
+              <td>Wavelength</td>
+              <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">3</td>
+              <td>Link_GroupId</td>
+              <td>[<a href="http://www.iana.org/go/rfc4209">RFC4209</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">4</td>
+              <td>SRLG</td>
+              <td>[<a href="http://www.iana.org/go/rfc4209">RFC4209</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">5</td>
+              <td>BER_Estimate</td>
+              <td>[<a href="http://www.iana.org/go/rfc4209">RFC4209</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">6</td>
+              <td>Optical_Protection</td>
+              <td>[<a href="http://www.iana.org/go/rfc4209">RFC4209</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">7</td>
+              <td>Total_Span_Length</td>
+              <td>[<a href="http://www.iana.org/go/rfc4209">RFC4209</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">8</td>
+              <td>Administrative_Group</td>
+              <td>[<a href="http://www.iana.org/go/rfc4209">RFC4209</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">9</td>
+              <td>Data Channel Status</td>
+              <td>[<a href="http://www.iana.org/go/rfc5818">RFC5818</a>]</td>
+            </tr>
+            <tr>
+              <td align="center">10-127</td>
+              <td>Unassigned (Standards Action)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="center">128-247</td>
+              <td>Unassigned (Expert Review)</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td align="center">248-255</td>
+              <td>Private Use.</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3><a name="lmp-parameters-18" id="lmp-parameters-18"></a>CHANNEL_STATUS Object Class type name space (Value 13)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-18.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-18" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>IPv4 INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>IPv6 INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Unnumbered INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>LINK_GROUP</td>
+            <td>[<a href="http://www.iana.org/go/rfc4209">RFC4209</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-19" id="lmp-parameters-19"></a>CHANNEL_STATUS_REQUEST Object Class type name space (Value 14)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-19.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-19" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>IPv4 INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>IPv6 INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Unnumbered INTERFACE_ID</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-20" id="lmp-parameters-20"></a>ERROR_CODE Object Class type name space (Value 20)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-20.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-20" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>BEGIN_VERIFY_ERROR</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>LINK_SUMMARY_ERROR</td>
+            <td>[<a href="http://www.iana.org/go/rfc4204">RFC4204</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>TRACE_ERROR</td>
+            <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>ConfirmDataChannelStatusNack</td>
+            <td>[<a href="http://www.iana.org/go/rfc5818">RFC5818</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">5-111</td>
+            <td>Unassigned (Standards Action)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">12-119</td>
+            <td>Unassigned (Expert Review)</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">20-127</td>
+            <td>Private Use</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-21" id="lmp-parameters-21"></a>TRACE Object Class name space and Class type (C-Type) (Value 21)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-21.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-21" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Type 1</td>
+            <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="lmp-parameters-22" id="lmp-parameters-22"></a>TRACE REQ Object Class name space and Class type (C-Type) (Value 22)</h3>
+      <dl>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="lmp-parameters-22.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-lmp-parameters-22" class="sortable">
+        <thead>
+          <tr>
+            <th>C-Type</th>
+            <th>Description</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Type 1</td>
+            <td>[<a href="http://www.iana.org/go/rfc4207">RFC4207</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="behavior-config-flags" id="behavior-config-flags"></a>LMP Behavior Configuration Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6898">RFC6898</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="behavior-config-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-behavior-config-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Number</th>
+          <th>Bit Name</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">S</td>
+          <td>SONET/SDH Test support</td>
+          <td>[<a href="http://www.iana.org/go/rfc6898">RFC6898</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">D</td>
+          <td>DWDM support</td>
+          <td>[<a href="http://www.iana.org/go/rfc6898">RFC6898</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td align="center">C</td>
+          <td>Data Channel consistency check support</td>
+          <td>[<a href="http://www.iana.org/go/rfc6898">RFC6898</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-8152</td>
+          <td align="center"></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

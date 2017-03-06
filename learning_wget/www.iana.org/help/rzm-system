@@ -1,0 +1,203 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>IANA — Manage the Root Zone</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" media="screen" href="/_css/2015.1/screen.css"/>
+	<link rel="stylesheet" media="print" href="/_css/2015.1/print.css"/>
+	<link rel="shortcut icon" type="image/ico" href="/_img/bookmark_icon.ico"/>
+
+	<script type="text/javascript" src="/_js/2013.1/jquery.js"></script>
+	<script type="text/javascript" src="/_js/2013.1/iana.js"></script>
+
+	
+
+</head>
+
+<body>
+	
+	<header>
+		<div id="header">
+			<div id="logo">
+				<a href="/"><img src="/_img/2013.1/iana-logo-header.svg" alt="Homepage"/></a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="/domains">Domains</a></li>
+					<li><a href="/numbers">Numbers</a></li>
+					<li><a href="/protocols">Protocols</a></li>
+					<li><a href="/about">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	
+	<div id="body">
+	
+
+			<div id="main_right">
+
+
+	<h1>New DNS Root Zone Management System</h1>
+
+	<div class="panel_information icon">
+		This document is historical and no longer maintained. It is preserved for reference purposes but should not
+		be relied upon for up-to-date information, and should not be considered active.
+	</div>
+
+	<p>ICANN, VeriSign and the Department of Commerce have worked collaboratively to automate certain aspects of DNS
+		root zone management. The new automated system, simplifies and expedites the process top-level domain name administrators must engage in to modify the information they maintain with ICANN.</p>
+
+	<h2>What does the system do?</h2>
+
+	<p>The new automated system moves processing of DNS root zone change requests from a predominantly manual system into a system that will shepherd top-level domain change requests through its various processing stages.  The new automated system will improve the workflow for processing root zone changes by automating some aspects of the process that are currently handled manually, and can be reliably automated.  Automating the DNS root zone process will improve overall processing time and accuracy of the root zone management function.  The new automation system provides key benefits such as greater transparency on the status of requests to their requestors, plus optimization of some tasks that are currently labor intensive. </p>
+
+	<p>In addition to automating this workflow, ICANN's systems will provide improvements that will be visible to top-level domain managers. As well as preserving existing methods of lodging change requests (e.g. via email), the system will allow users to log in with a username and password and lodge change requests via a web interface. This web interface will provide immediate feedback during the submission of a request, and help identify common errors straight away. The system will also give greater visibility to the status of a request. A TLD manager will be able to use the system to track the status of their request in real time.</p>
+
+	<p>Once a request is lodged, many of the steps will be automated in the system. For example, the process of obtain confirmation from the administrative and technical contacts will be performed automatically by the system, rather than manually by ICANN staff.</p>
+
+	<h2>What types of changes are handled by the system?</h2>
+
+	<p>The current version of the system handles regular maintenance changes to existing top-level domains. All top-level domain operators will be issued with credentials to use the system. The current version of the system does not accommodate requests from non-credentialed parties: for example, redelegation requests from third parties, or requests to delegate new top-level domains. For the moment, these will continue to be performed by ICANN staff through normal processes.</p>
+	
+	<h2>Will there be any downtime?</h2>
+	
+	<p>The root zone will remain functional for the entire period of the transition. There is no public impact of the migration to this new system. However, in order to reconcile data between the legacy, and the new system, there will be a one day period on 21 July 2011 in which root zone change requests by top-level domain operators will be not be processed by ICANN staff. Any pending requests will be resumed on Friday, 22 July 2011. Top-level domain managers have been emailed directly regarding this change, and presentations have been given at several TLD management conferences in advance of this change.</p>
+
+	<h2>How are credentials being issued?</h2>
+
+	<p>We are performing a phased roll-out of credentials to top-level domain operators. We have randomly ordered TLDs and will be issuing the login details in batches. We expect to complete issuing all credentials by October 2011.</p>
+
+	<h2>What is the future of this project?</h2>
+
+	<p>The main focus of this system has been to ensure that it operates correctly with the current set of requirements for DNS root zone management. We are very aware of the critical requirements for root stability, and have taken an extended period evaluating the system from this perspective.  Future work on the system will be guided by feedback from top-level domain managers.</p>
+
+	<h2>I still have a question — who can I ask?</h2>
+
+	<p>All questions about the system and the transition can be sent to <a href="mailto:root-mgmt@iana.org">root-mgmt@iana.org</a>, we’d be happy to assist.</p>
+		
+
+			</div>
+			
+			<div id="sidebar_left">
+				<div class="navigation_box">
+				<h2>Domain Names</h2>
+				<ul>
+					<li id="nav_dom_top"><a href="/domains">Overview</a></li>
+					<li id="nav_dom_root"><a href="/domains/root">Root Zone Management</a></li>
+					<ul id="nav_dom_root_sub">
+						<li id="nav_dom_root_top"><a href="/domains/root">Overview</a></li>
+						<li id="nav_dom_root_db"><a href="/domains/root/db">Root Database</a></li>
+						<li id="nav_dom_root_files"><a href="/domains/root/files">Hint and Zone Files</a></li>
+						<li id="nav_dom_root_manage"><a href="/domains/root/manage">Change Requests</a></li>
+						<li id="nav_dom_root_procedures"><a href="/domains/root/help">Instructions &amp; Guides</a></li>
+						<li id="nav_dom_root_servers"><a href="/domains/root/servers">Root Servers</a></li>
+					</ul>
+					<li id="nav_dom_int"><a href="/domains/int">.INT Registry</a></li>
+					<ul id="nav_dom_int_sub">
+						<li id="nav_dom_int_top"><a href="/domains/int">Overview</a></li>
+						<li id="nav_dom_int_manage"><a href="/domains/int/manage">Register/modify an .INT domain</a></li>
+						<li id="nav_dom_int_policy"><a href="/domains/int/policy">Eligibility</a></li>
+					</ul>
+					<li id="nav_dom_arpa"><a href="/domains/arpa">.ARPA Registry</a></li>
+					<li id="nav_dom_idn"><a href="/domains/idn-tables">IDN Practices Repository</a></li>
+					<ul id="nav_dom_idn_sub">
+						<li id="nav_dom_idn_top"><a href="/domains/idn-tables">Overview</a></li>
+						<!-- <li id="nav_dom_idn_tables"><a href="/domains/idn-tables/db">Tables</a></li> -->
+						<li id="nav_dom_idn_submit"><a href="/procedures/idn-repository.html">Submit a table</a></li>
+					</ul>
+					<li id="nav_dom_dnssec"><a href="/dnssec">Root Key Signing Key (DNSSEC)</a></li>
+					<ul id="nav_dom_dnssec_sub">
+						<li id="nav_dom_dnssec_top"><a href="/dnssec">Overview</a></li>
+						<li id="nav_dom_dnssec_ksk"><a href="/dnssec/files">Trusts Anchors and Keys</a></li>
+						<li id="nav_dom_dnssec_ceremonies"><a href="/dnssec/ceremonies">Root KSK Ceremonies</a></li>
+						<li id="nav_dom_dnssec_dps"><a href="/dnssec/dps">Practice Statement</a></li>
+                        <li id="nav_dom_dnssec_tcrs"><a href="/dnssec/tcrs">Community Representatives</a></li>
+					</ul>
+					<li id="nav_dom_special"><a href="/domains/reserved">Reserved Domains</a></li>
+				</ul>
+				</div>
+			</div>
+			
+
+	</div>
+
+	<footer>
+		<div id="footer">
+			<table class="navigation">
+				<tr>
+					<td class="section"><a href="/domains">Domain&nbsp;Names</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/domains/root">Root Zone Registry</a></li>
+							<li><a href="/domains/int">.INT Registry</a></li>
+							<li><a href="/domains/arpa">.ARPA Registry</a></li>
+							<li><a href="/domains/idn-tables">IDN Repository</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/numbers">Number&nbsp;Resources</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/abuse">Abuse Information</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/protocols">Protocols</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/protocols">Protocol Registries</a></li>
+							<li><a href="/time-zones">Time Zone Database</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td class="section"><a href="/about">About&nbsp;Us</a></td>
+					<td class="subsection">
+						<ul>
+							<li><a href="/about/presentations">Presentations</a></li>
+							<li><a href="/reports">Reports</a></li>
+                            <li><a href="/performance">Performance</a></li>
+							<li><a href="/reviews">Reviews</a></li>
+                            <li><a href="/about/excellence">Excellence</a></li>
+							<li><a href="/contact">Contact Us</a></li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+            <div id="custodian">
+                <p>The IANA functions coordinate the Internet’s globally unique identifiers, and
+                    are provided by <a href="http://pti.icann.org">Public Technical Identifiers</a>, an affiliate of
+                    <a href="http://www.icann.org/">ICANN</a>.</p>
+            </div>
+
+		</div>
+	</footer>
+	
+	
+	<script>
+$(document).ready(function() {
+	$("#nav_dom_root").addClass("selected")
+	$("#nav_dom_root_manage").addClass("selected")
+	$("#nav_dom_int_sub").hide()
+	$("#nav_dom_int_sub").hide()
+	$("#nav_dom_idn_sub").hide()
+	$("#nav_dom_dnssec_sub").hide()
+	$("#nav_dom_tools_sub").hide()
+	
+});
+</script>
+
+
+	
+</body>
+
+</html>

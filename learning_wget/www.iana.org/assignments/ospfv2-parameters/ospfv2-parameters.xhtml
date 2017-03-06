@@ -1,0 +1,976 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Open Shortest Path First v2 (OSPFv2) Parameters</title>
+  </head>
+  <body>
+    <h1>Open Shortest Path First v2 (OSPFv2) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2007-04-25</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-12-29</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Please also see: 
+    [<a href="http://www.iana.org/assignments/ospf-authentication-codes">http://www.iana.org/assignments/ospf-authentication-codes</a>]
+    [<a href="http://www.iana.org/assignments/bandwidth-constraints-model-ids">http://www.iana.org/assignments/bandwidth-constraints-model-ids</a>]
+    [<a href="http://www.iana.org/assignments/ospf-dd-packet-flags/ospf-dd-packet-flags.xml">http://www.iana.org/assignments/ospf-dd-packet-flags/ospf-dd-packet-flags.xml</a>]
+    [<a href="http://www.iana.org/assignments/ospf-lls-tlvs">http://www.iana.org/assignments/ospf-lls-tlvs</a>]
+    [<a href="http://www.iana.org/assignments/ospf-opaque-types">http://www.iana.org/assignments/ospf-opaque-types</a>]
+    [<a href="http://www.iana.org/assignments/ospf-mt-routing">http://www.iana.org/assignments/ospf-mt-routing</a>]
+    [<a href="http://www.iana.org/assignments/ospf-sig-alg">http://www.iana.org/assignments/ospf-sig-alg</a>]
+    [<a href="http://www.iana.org/assignments/ospf-traffic-eng-tlvs">http://www.iana.org/assignments/ospf-traffic-eng-tlvs</a>]
+    [<a href="http://www.iana.org/assignments/ospf-parameters">http://www.iana.org/assignments/ospf-parameters</a>]
+  </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ospfv2-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ospfv2-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ospfv2-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ospfv2-parameters-1">OSPFv2 Options Registry (8 bits)</a>
+      </li>
+      <li>
+        <a href="#ospfv2-parameters-3">OSPF Packet Type (both v2 and v3)</a>
+      </li>
+      <li>
+        <a href="#ospfv2-parameters-5">OSPFv2 Link State (LS) Type</a>
+      </li>
+      <li>
+        <a href="#ospfv2-parameters-7">OSPFv2 Router LSA Link Type (Value 1)</a>
+      </li>
+      <li>
+        <a href="#ospfv2-parameters-11">OSPFv2 Router Properties Registry</a>
+      </li>
+      <li>
+        <a href="#ospfv2-parameters-13">OSPFv2 Grace LSA Top Level TLV</a>
+      </li>
+      <li>
+        <a href="#ospfv2-parameters-14">Path Computation Element (PCE) Capability Flags</a>
+      </li>
+      <li>
+        <a href="#instance-ids">OSPFv2 Instance IDs</a>
+      </li>
+      <li>
+        <a href="#extended-prefix-opaque-lsa-tlvs">OSPFv2 Extended Prefix Opaque LSA TLVs</a>
+      </li>
+      <li>
+        <a href="#extended-prefix-tlv-sub-tlvs">OSPFv2 Extended Prefix TLV Sub-TLVs</a>
+      </li>
+      <li>
+        <a href="#extended-prefix-tlv-flags">OSPFv2 Extended Prefix TLV Flags</a>
+      </li>
+      <li>
+        <a href="#extended-link-opaque-lsa-tlvs">OSPFv2 Extended Link Opaque LSA TLVs</a>
+      </li>
+      <li>
+        <a href="#extended-link-tlv-sub-tlvs">OSPFv2 Extended Link TLV Sub-TLVs</a>
+      </li>
+    </ul>
+    <h2><a name="ospfv2-parameters-1" id="ospfv2-parameters-1"></a>OSPFv2 Options Registry (8 bits)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4940">RFC4940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ospfv2-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ospfv2-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x01</td>
+          <td>MT-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc4915">RFC4915</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>E-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>MC-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc1584">RFC1584</a>][<a href="http://www.iana.org/go/rfc5110">RFC5110</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>N/P-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc3101">RFC3101</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x10</td>
+          <td>L-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc5613">RFC5613</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x20</td>
+          <td>DC-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc1793">RFC1793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x40</td>
+          <td>O-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc5250">RFC5250</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x80</td>
+          <td>DN-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc4576">RFC4576</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ospfv2-parameters-3" id="ospfv2-parameters-3"></a>OSPF Packet Type (both v2 and v3)</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>][<a href="http://www.iana.org/go/rfc4940">RFC4940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ospfv2-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-ospfv2-parameters-3-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-127</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-ospfv2-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Hello</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Database Description</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Link State Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Link State Update</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Link State Ack</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ospfv2-parameters-5" id="ospfv2-parameters-5"></a>OSPFv2 Link State (LS) Type</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>][<a href="http://www.iana.org/go/rfc4940">RFC4940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ospfv2-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-ospfv2-parameters-5-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-127</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-ospfv2-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4940">RFC4940</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Router-LSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Network-LSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Summary-LSA (IP network)</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Summary-LSA (ASBR)</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>AS-external-LSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Group-membership-LSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc1584">RFC1584</a>][<a href="http://www.iana.org/go/rfc5110">RFC5110</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>NSSA AS-external LSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc3101">RFC3101</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Link-scoped Opaque LSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5250">RFC5250</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Area-scoped Opaque LSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5250">RFC5250</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>AS-scoped Opaque LSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5250">RFC5250</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ospfv2-parameters-7" id="ospfv2-parameters-7"></a>OSPFv2 Router LSA Link Type (Value 1)</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4940">RFC4940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ospfv2-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-ospfv2-parameters-7-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-127</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Reserved</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-ospfv2-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4940">RFC4940</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Point-to-Point connection to another router</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Transit Network</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Stub Network</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Virtual Link</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ospfv2-parameters-11" id="ospfv2-parameters-11"></a>OSPFv2 Router Properties Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4940">RFC4940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ospfv2-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ospfv2-parameters-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x01</td>
+          <td>B-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>E-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>V-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc2328">RFC2328</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x08</td>
+          <td>W-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc1584">RFC1584</a>][<a href="http://www.iana.org/go/rfc5110">RFC5110</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x10</td>
+          <td>Nt-bit</td>
+          <td>[<a href="http://www.iana.org/go/rfc3101">RFC3101</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ospfv2-parameters-13" id="ospfv2-parameters-13"></a>OSPFv2 Grace LSA Top Level TLV</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4940">RFC4940</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ospfv2-parameters-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-ospfv2-parameters-13-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-255</td>
+          <td>Standards Action</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">256-65519</td>
+          <td>Reserved</td>
+          <td>IANA does not assign</td>
+        </tr>
+        <tr>
+          <td align="center">65520-65527</td>
+          <td>Experimentation</td>
+          <td>IANA does not assign</td>
+        </tr>
+        <tr>
+          <td align="center">65528-65535</td>
+          <td>Vendor Private Use</td>
+          <td>IANA does not assign</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-ospfv2-parameters-13" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Grace Period</td>
+          <td>[<a href="http://www.iana.org/go/rfc3623">RFC3623</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Graceful Restart reason</td>
+          <td>[<a href="http://www.iana.org/go/rfc3623">RFC3623</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IP Interface Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc3623">RFC3623</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">256-65519</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65520-65527</td>
+          <td>Experimentation</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65528-65535</td>
+          <td>Vendor Private Use</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ospfv2-parameters-14" id="ospfv2-parameters-14"></a>Path Computation Element (PCE) Capability Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5088">RFC5088</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ospfv2-parameters-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ospfv2-parameters-14" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Capability Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Path computation with GMPLS link constraints</td>
+          <td>[<a href="http://www.iana.org/go/rfc5088">RFC5088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Bidirectional path computation</td>
+          <td>[<a href="http://www.iana.org/go/rfc5088">RFC5088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Diverse path computation</td>
+          <td>[<a href="http://www.iana.org/go/rfc5088">RFC5088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Load-balanced path computation</td>
+          <td>[<a href="http://www.iana.org/go/rfc5088">RFC5088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Synchronized paths computation</td>
+          <td>[<a href="http://www.iana.org/go/rfc5088">RFC5088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Support for multiple objective functions</td>
+          <td>[<a href="http://www.iana.org/go/rfc5088">RFC5088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Support for additive path constraints (max hop count, etc.)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5088">RFC5088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Support for request prioritization</td>
+          <td>[<a href="http://www.iana.org/go/rfc5088">RFC5088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Support for multiple requests per message</td>
+          <td>[<a href="http://www.iana.org/go/rfc5088">RFC5088</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Global Concurrent Optimization (GCO)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5557">RFC5557</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>P2MP path computation</td>
+          <td>[<a href="http://www.iana.org/go/rfc6006">RFC6006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Active Stateful PCE capability (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>Passive Stateful PCE capability (TEMPORARY - registered 2016-07-27, expires 2017-07-27)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-pce-stateful-pce">draft-ietf-pce-stateful-pce</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13-31</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="instance-ids" id="instance-ids"></a>OSPFv2 Instance IDs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6549">RFC6549</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="instance-ids.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-instance-ids" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Designation</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Base IPv4 Unicast Instance</td>
+          <td>[<a href="http://www.iana.org/go/rfc6549">RFC6549</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Base IPv4 Multicast Instance</td>
+          <td>[<a href="http://www.iana.org/go/rfc6549">RFC6549</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Base IPv4 In-band Management Instance</td>
+          <td>[<a href="http://www.iana.org/go/rfc6549">RFC6549</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-127</td>
+          <td>Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6549">RFC6549</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="extended-prefix-opaque-lsa-tlvs" id="extended-prefix-opaque-lsa-tlvs"></a>OSPFv2 Extended Prefix Opaque LSA TLVs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="extended-prefix-opaque-lsa-tlvs.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-extended-prefix-opaque-lsa-tlvs" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>OSPFv2 Extended Prefix TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>OSPF Extended Prefix Range TLV (TEMPORARY - registered 
+      2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32768-33023</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33024-65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="extended-prefix-tlv-sub-tlvs" id="extended-prefix-tlv-sub-tlvs"></a>OSPFv2 Extended Prefix TLV Sub-TLVs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="extended-prefix-tlv-sub-tlvs.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-extended-prefix-tlv-sub-tlvs" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>SID/Label Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Prefix SID Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>SID/Label Binding Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>IPv4 ERO Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Unnumbered Interface ID ERO Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>IPv4 Backup ERO Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Unnumbered Interface ID Backup ERO Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>ERO Metric Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32768-33023</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33024-65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="extended-prefix-tlv-flags" id="extended-prefix-tlv-flags"></a>OSPFv2 Extended Prefix TLV Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="extended-prefix-tlv-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-extended-prefix-tlv-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x80</td>
+          <td>A</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x40</td>
+          <td>N</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="extended-link-opaque-lsa-tlvs" id="extended-link-opaque-lsa-tlvs"></a>OSPFv2 Extended Link Opaque LSA TLVs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="extended-link-opaque-lsa-tlvs.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-extended-link-opaque-lsa-tlvs" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>OSPFv2 Extended Link TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32768-33023</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33024-65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="extended-link-tlv-sub-tlvs" id="extended-link-tlv-sub-tlvs"></a>OSPFv2 Extended Link TLV Sub-TLVs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="extended-link-tlv-sub-tlvs.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-extended-link-tlv-sub-tlvs" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>SID/Label Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Adj-SID Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>LAN Adj-SID/Label Sub-TLV (TEMPORARY - registered 
+        2015-10-22, extension registered 2016-09-15, expires 2017-10-22)</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-ospf-segment-routing-extensions">draft-ietf-ospf-segment-routing-extensions</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Network-to-Router Metric Sub-TLV</td>
+          <td>[<a href="http://www.iana.org/go/rfc8042">RFC8042</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32768-33023</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33024-65535</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7684">RFC7684</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

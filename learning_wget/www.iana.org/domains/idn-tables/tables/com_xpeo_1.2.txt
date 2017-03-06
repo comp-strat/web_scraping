@@ -1,0 +1,86 @@
+###############################################################
+#
+# TLD:            COM
+# Script:         Old Persian
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Old Persian script.
+#
+###############################################################
+U+103A0	# OLD PERSIAN SIGN A
+U+103A1	# OLD PERSIAN SIGN I
+U+103A2	# OLD PERSIAN SIGN U
+U+103A3	# OLD PERSIAN SIGN KA
+U+103A4	# OLD PERSIAN SIGN KU
+U+103A5	# OLD PERSIAN SIGN GA
+U+103A6	# OLD PERSIAN SIGN GU
+U+103A7	# OLD PERSIAN SIGN XA
+U+103A8	# OLD PERSIAN SIGN CA
+U+103A9	# OLD PERSIAN SIGN JA
+U+103AA	# OLD PERSIAN SIGN JI
+U+103AB	# OLD PERSIAN SIGN TA
+U+103AC	# OLD PERSIAN SIGN TU
+U+103AD	# OLD PERSIAN SIGN DA
+U+103AE	# OLD PERSIAN SIGN DI
+U+103AF	# OLD PERSIAN SIGN DU
+U+103B0	# OLD PERSIAN SIGN THA
+U+103B1	# OLD PERSIAN SIGN PA
+U+103B2	# OLD PERSIAN SIGN BA
+U+103B3	# OLD PERSIAN SIGN FA
+U+103B4	# OLD PERSIAN SIGN NA
+U+103B5	# OLD PERSIAN SIGN NU
+U+103B6	# OLD PERSIAN SIGN MA
+U+103B7	# OLD PERSIAN SIGN MI
+U+103B8	# OLD PERSIAN SIGN MU
+U+103B9	# OLD PERSIAN SIGN YA
+U+103BA	# OLD PERSIAN SIGN VA
+U+103BB	# OLD PERSIAN SIGN VI
+U+103BC	# OLD PERSIAN SIGN RA
+U+103BD	# OLD PERSIAN SIGN RU
+U+103BE	# OLD PERSIAN SIGN LA
+U+103BF	# OLD PERSIAN SIGN SA
+U+103C0	# OLD PERSIAN SIGN ZA
+U+103C1	# OLD PERSIAN SIGN SHA
+U+103C2	# OLD PERSIAN SIGN SSA
+U+103C3	# OLD PERSIAN SIGN HA
+U+103C8	# OLD PERSIAN SIGN AURAMAZDAA
+U+103C9	# OLD PERSIAN SIGN AURAMAZDAA-2
+U+103CA	# OLD PERSIAN SIGN AURAMAZDAAHA
+U+103CB	# OLD PERSIAN SIGN XSHAAYATHIYA
+U+103CC	# OLD PERSIAN SIGN DAHYAAUSH
+U+103CD	# OLD PERSIAN SIGN DAHYAAUSH-2
+U+103CE	# OLD PERSIAN SIGN BAGA
+U+103CF	# OLD PERSIAN SIGN BUUMISH
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

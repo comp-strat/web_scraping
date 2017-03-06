@@ -1,0 +1,1410 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8" /><title>2012 Correspondence - ICANN</title><meta content="width=device-width, initial-scale=1.0" name="viewport" /><meta content="" name="description" /><meta content="" name="author" /><meta content="1159895" name="dnid" /><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><!--HTML5 shim, for IE6-8 support of HTML5 elements--><!--[if lt IE 9]
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>--><link rel="stylesheet" media="all" href="/assets/application-eccb7764fba4611b8b3b9b494ecc5732.css" />
+<!--[if lte IE 9]>
+<link rel="stylesheet" media="all" href="/assets/application_split2-16669b8b605095677cca2e25e7411b89.css" />
+<![endif]--><meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="t+nefrvxTfOGMTs6gmtwyFzmJrXZSaVUbsTO5ioamgplHWOOE1Fd0pqp3u+JwaFjVqV5lZavSz0hKsY0bf/RfA==" /><script type="text/javascript">(function(i,s,o,g,r,a,m){ i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+{
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-25463847-1', 'auto');
+
+// Send pageview hit for all pages expect /search page
+// The /search pageview hit will be generated in the AngularJs doSearch(). See search_filter_ctrl.js.coffee
+if(document.location.pathname != '/search' && document.location.pathname != '/search/') {
+  ga('send', 'pageview');
+}</script><style type="text/css">body { display : none;} </style><base href="/resources/pages/2012-2013-01-10-en" /></head><body><span external-links=""><a class="u-hiddenAndAccessible u-hiddenAndAccessible-shownOnFocus" href="#main-content">Skip to main content</a></span><header class="nav-collapse MainHeader" external_links=""><div class="ActionsBar--container"><div class="ActionsBar"><div class="i-alert"><svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewbox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M256,35.11L0,476.89h512L256,35.11z M256,93.484l205.216,354.138H50.786L256,93.484z M231.901,423.156h48.2v-46.583h-48.2  V423.156z M230.772,186.359v60.228l13.379,110.803h24.019l13.06-110.803v-60.228H230.772L230.772,186.359z" /></svg><div class="label">Pages under review </div></div><div id="alert"><span class="close"><svg enable-background="new 0 0 51.2 51.2" style="text-align: right; float: right; position: relative; width: 16px; top: 1%; right: 1%;" version="1.1" viewbox="0 0 51.2 51.2" x="0" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" y="0"><switch><foreignobject height="1" requiredextensions="http://ns.adobe.com/AdobeIllustrator/10.0/" width="1" x="0" y="0" /><path d="M44.8 6.4C44.8 6.4 44.8 6.4 44.8 6.4l0 38.4c0 0 0 0 0 0H6.4c0 0 0 0 0 0V6.4c0 0 0 0 0 0H44.8zM44.8 0H6.4C2.9 0 0 2.9 0 6.4v38.4c0 3.5 2.9 6.4 6.4 6.4h38.4c3.5 0 6.4-2.9 6.4-6.4V6.4C51.2 2.9 48.3 0 44.8 0L44.8 0zM44.8 0 33.6 12.8l-8 8 -8-8 -4.8 4.8 8 8 -8 8 4.8 4.8 8-8 8 8 4.8-4.8 -8-8 8-8L33.6 12.8zM33.6 12.8" /></switch></svg></span><p class="title">Pages under review</p><p>As a result of the IANA Stewardship Transition, you may find some site content that is out of date. Please use the “Feedback” button in the bottom right corner of the page if you have questions or discover content that requires updating. </p></div><nav class="ActionsBar-primary"><ul class="Languages-list"><li class="Languages-item"><a href="/translations">English</a></li><li class="Languages-item"><a lang="ar" href="/ar">العربية</a></li><li class="Languages-item"><a lang="es" href="/es">Español</a></li><li class="Languages-item"><a lang="fr" href="/fr">Français</a></li><li class="Languages-item"><a lang="ru" href="/ru">Pусский</a></li><li class="Languages-item"><a lang="zh" href="/zh">中文</a></li></ul><ul class="Search"><li><div class="searchbox" ng-app="icannApp"><form ng-controller="SearchBarCtrl"><label class="hidden" for="search_text">Search ICANN.org</label><input type="search" name="search_text" id="search_text" value="" placeholder="Search ICANN.org" class="SearchBox-textField" ng-model="params.searchText" /><input type="submit" name="commit" value="&#xf002;" class="SearchBox-submit" ng-click="doSearch()" /></form></div></li></ul></nav><nav class="ActionsBar-secondary"><ul class="Actions"><li><a href="/users/sign_in">Log In</a></li><li><a href="/users/sign_up">Sign Up</a></li></ul></nav></div></div><div class="MainHeader-navigation" external-links=""><a class="MainHeader-logo" href="/"><img src="/assets/icann_logo-52672386035a35504af59606040687c8.png" alt="Icann logo" /></a><div class="menu-button"><span class="touch-button mobile-menu"><i class="navicon fa fa-bars fa-lg"></i></span></div><nav role="navigation"><div class="nav-item"><a class="nav-item-link" href="/get-started">Get Started</a><div class="nav-dropdown"><a href="/resources/pages/beginners-guides-2012-03-06-en">Beginner&#39;s Guide</a><a href="/en/about/participate/newcomers">Newcomers Program</a><a href="/en/about/participate/fellowships">Fellowship Program</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/news">News &amp; Media</a><div class="nav-dropdown"><a href="/news/announcements">Announcements</a><a href="/news/blog">Blog</a><a href="/news/multimedia">Multimedia</a><a href="/en/news/press">For Journalists</a><a href="/resources/pages/global-newsletter">Global Newsletters</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/policy">Policy</a><div class="nav-dropdown policy"><a href="/policy#what_is_policy">ICANN Policy</a><a href="/policy#how_is_policy_developed">Develop Policy</a><a href="/policy/implementation">Implement Policy</a><a href="/policy#updates">Policy Update</a><a href="/policy#participate">Participate</a><a href="/policy#staff">Team</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/public-comments">Public Comment</a><div class="nav-dropdown"><a href="/public-comments#open-public">Open</a><a href="/public-comments#closed-public">Recently Closed</a><a href="/resources/pages/upcoming-2012-02-25-en">Upcoming</a><a href="/public-comments/archive">Archive</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link active" href="/resources">Resources</a><div class="nav-dropdown"><a href="/resources/pages/board-of-directors-2014-03-19-en">Board</a><a href="/resources/pages/accountability-2012-02-25-en">Accountability &amp; Transparency</a><a href="/en/resources/registrars">Registrars</a><a href="/en/resources/registries">Registries</a><a href="/en/resources/compliance">Contractual Compliance</a><a href="/resources/pages/help-2012-02-03-en">Help</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link" href="/community">Community</a><div class="nav-dropdown"><a href="/community#groups">Groups</a><a href="/community/explore">Explore Profiles</a><a href="https://features.icann.org/calendar">Calendar</a><a href="/community/demographics">Demographics</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div><div class="nav-item"><a class="nav-item-link stewardship" href="/stewardship-accountability">IANA Stewardship<br />&amp; Accountability          </a><div class="nav-dropdown"><a href="/iana-transition-fact-sheet">Fact Sheet</a><a href="/stewardship">IANA Stewardship Transition</a><a href="https://community.icann.org/display/acctcrosscomm/WS1+-+Enhancing+ICANN+Accountability">Enhancing ICANN Accountability</a><a href="/stewardship-implementation">Implementation</a><a href="/csc">Customer Standing Committee</a><a href="/rzerc">Root Zone Evolution Review Committee</a></div><span class="touch-button mobile-submenu"><i class="navicon fa fa-caret-down"></i></span></div></nav></div></header><main id="main-content"><section class="TopSection"><div class="l-rail"><div class="ResourcesMenu"><div class="resource-menu-title js-resource-menu-title">Resources<i class="navicon fa fa-chevron-down fa-lg"></i></div><ul selectable="a"><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/welcome-2012-02-25-en">About ICANN</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/learning-2012-02-25-en">Learning</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/factsheets-2012-02-25-en">Factsheets</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/beginners-guides-2012-03-06-en">Beginner&#39;s Guides</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/glossary-2014-02-03-en">Glossary</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/podcasts-2013-11-05-en">Podcasts</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-2013-11-05-en">Archive</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/participate-2012-02-25-en">Participate</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/what-2012-02-25-en">What ICANN Does</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/effect-2012-02-25-en">Effect on the Internet</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/now-2012-02-25-en">What&#39;s Going On Now</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/how-2012-02-25-en">How to Participate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/newcomers-2012-06-18-en">Newcomers Program</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/fellowships-2012-02-25-en">Fellowships</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/committee-2012-02-25-en">Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/terms-conditions-2012-02-25-en">Terms &amp; Conditions</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/presidents-corner">President&#39;s Corner </a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/management-organization-chart">ICANN Management Organization Chart</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/community/explore?profile_search[badge_filters][]=staff_badge">Staff</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&amp;cws=37">Careers</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/in-focus-2012-02-25-en">In Focus</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/continuity-2012-02-25-en">Continuity</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/dnssec-2012-02-25-en">DNSSEC</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/standards-2012-02-25-en">Standards</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://www.iana.org/dnssec">IANA DNSSEC Root Information</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://stats.research.icann.org/dns/tld_report/">TLD DNSSEC Report</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://stats.research.icann.org/dns/tld_report/">Root Deployment</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/deployment-2012-02-25-en">Registrar Deployment</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/deployment-tlds-2012-02-25-en">Deployment Map</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/deployment-graph-2012-02-25-en">Deployment Graph</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/tools-2012-02-25-en">Tools</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/training-2012-02-25-en">Training</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://www.iana.org/dnssec/ceremonies">Key Ceremony</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/news-2012-02-25-en">News</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/blog-posts-2012-02-25-en">Blog Posts</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/presentations-ed-2012-02-25-en">Presentations</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/related-2012-02-25-en">Related Sites</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://gnso.icann.org/en/group-activities/inactive/2012/improvements">GNSO Improvements</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/travel-support-2012-02-25-en">Travel Support</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/whois-recommendations-implementation-2013-04-26-en">WHOIS Policy Review Team Recommendations - Implementation</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/press-2014-03-17-en">For Journalists</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/materials-2014-03-20-en">Releases &amp; Advisories</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/resources-2013-06-26-en">Resources</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/board-of-directors">Board</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/documents-2014-03-24-en">Board Activity</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://features.icann.org/resolutions">Resolutions</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://features.icann.org/board-advice">Recommendations to the Board</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/2017-board-meetings-2017-01-23-en">Board Meetings</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2017-board-meetings-2017-01-23-en">2017</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2016-board-meetings">2016</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/meetings-2014-01-06-en">2015</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2014-2015-01-28-en">2014</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2013-51-2012-02-25-en">2013</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2012-2012-12-10-en">2012</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2011-b4-2012-02-25-en">2011</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2010-2012-02-25-en">2010</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2009-2012-02-25-en">2009</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2008-2012-02-25-en">2008</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2007-2012-02-25-en">2007</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2006-2012-02-25-en">2006</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2005-2012-02-25-en">2005</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2004-2012-02-25-en">2004</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2003-2012-02-25-en">2003</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2002-2012-02-25-en">2002</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2001-2012-02-25-en">2001</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2000-2012-02-25-en">2000</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/1999-2012-02-25-en">1999</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/1998-2012-02-25-en">1998</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/audit-committee-2014-03-21-en">Audit Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/compensation-committee-2014-03-21-en">Compensation Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/executive-committee-2014-03-21-en">Executive Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/finance-committee-2014-03-21-en">Finance Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/governance-committee-2014-03-21-en">Governance Committee</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/organizational-effectiveness-committee-2014-03-21-en">Organizational Effectiveness Committee</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/new-gtld-2012-10-05-en">Impact of the New gTLD Program</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/risk-committee-2014-03-21-en">Risk Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/past-committees-2015-11-18-en">Past Committees</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/accountability">Accountability</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/mechanisms-2014-03-20-en">Accountability Mechanisms</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/reconsideration-2012-02-25-en">Reconsideration</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/ombudsman-2012-02-25-en">Ombudsman</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/about-2012-02-25-en">About</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/program-2012-02-25-en">Program</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/framework-2012-02-25-en">Framework</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/odr-standards-of-practice-2012-02-25-en">Standards of Practice</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/respectful-communication-2012-02-25-en">Respectful Communication</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/reports-96-2012-02-25-en">Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/speeches-2012-02-25-en">Speeches</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/links-2012-02-25-en">Links</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/questions-2012-02-25-en">Questions</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/irp-2012-02-25-en">Independent Review</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/transparency-2012-02-25-en">Document Disclosure</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/didp-2012-02-25-en">Disclosure Policy</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/en/system/files/files/didp-response-process-29oct13-en.pdf">DIDP Response Process</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/reviews">Reviews</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/reviews/org">Organizational Reviews</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/alac">ALAC</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/aso">ASO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/board">Board</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/ccnso">ccNSO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/gnso">GNSO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/nomcom">Nominating Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/rssac">RSSAC</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/ssac">SSAC</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/org/tlg">Technical Liaison Group</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/reviews/specific-reviews">Specific Reviews</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/specific-reviews/atrt">Accountability &amp; Transparency </a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/specific-reviews/whois">Registration Directory Service</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/specific-reviews/ssr">Security, Stability, and Resiliency</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/reviews/specific-reviews/cct">Competition, Consumer Trust &amp; Consumer Choice</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/cct-metrics-2016-06-27-en">CCT Metrics</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/expected-standards-2016-06-28-en">Expected Standards of Behavior</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://community.icann.org/x/ogDxAg">Enhancing ICANN Accountability and Governance</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu arrow-expanded "></div><a class=" is-selected is-opened" href="/resources/pages/governance-2012-02-25-en">Governance</a></div><ul class="u-marginLl"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/governance-2012-02-25-en">Governance Documents</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/guidelines-2012-05-15-en">Guidelines</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/governance/articles-en">Articles of Incorporation</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/governance/articles-en">Current</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/articles-2012-02-25-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/governance/bylaws-en">Bylaws</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/governance/bylaws-en">Current Bylaws</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-bc-2012-02-25-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/code-of-conduct-2012-05-15-en">Board Code of Conduct</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/coi-2012-02-25-en">Board Conflicts of Interest Policy</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/sois-2012-02-25-en">Board Statements of Interest</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/lobbying-disclosures-contributions-2015-11-18-en">Lobbying Disclosures &amp; Contribution Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/files/summary-ethics-review-2013-05-13-en">Summary of Conflicts of Interest and Ethics Practices Review</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/agreements-2012-02-25-en">Agreements</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/transition-2014-03-23-en">NTIA IANA Functions&#39; Stewardship Transition</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/draft-proposal-2014-04-08-en">Call for Public Input: Draft Process to Develop the Proposal (8 April-8 May 2014</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/process-next-steps-2014-06-06-en">Process to Develop the Proposal and Next Steps</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://forms.icann.org/en/icg">Selected Coordination Group Members - Submission form</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/registries-2012-02-25-en">Registry</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-54-2012-02-25-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/aoc-2012-02-25-en">Affirmation of Commitments</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://aoctracking.icann.org/">AOC Tracking</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/cctlds-2012-02-25-en">ccTLD</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/partnership-mous-2012-02-25-en">Partnership Memorandums of Understanding</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/registrars-2012-02-25-en">Registrar</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-59-2012-02-25-en">Archive</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/annual-report-2012-02-25-en">Annual Reports</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/financials-2012-02-25-en">Financials</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/current-2012-02-25-en">Financial Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/general-2014-01-06-en">Policies, Guidelines and Procedures</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/planning-2012-02-25-en">Planning</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/strategic-engagement-2013-10-10-en">Strategic Plan</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/introduction-2013-06-14-en">Five-Year Operating Plan</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/operating-plan-budget-2015-06-12-en">Annual Operating Plan &amp; Budget</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/achievement-progress-reporting-2015-08-07-en">Achievement and Progress Reporting</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/continuous-improvement">Continuous Improvement</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/progress">Dashboard Beta</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://features.icann.org/plan">Portfolio Management System</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/planning-historical-2014-11-06-en">Historical</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/planning-calendar-2017-02-14-en">Community Roles and Responsibilities</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-a1-2012-02-25-en">Presentations</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfps-2012-02-25-en">RFPs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/litigation-2012-02-25-en">Litigation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/newsletter-2014-03-18-en">Newsletter</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu arrow-expanded ResourcesMenu-item--child"></div><a class="u-text-light is-selected is-opened" href="/resources/pages/correspondence-2012-09-24-en">Correspondence</a></div><ul class="u-marginLl"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/correspondence-2012-09-24-en">2017</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/correspondence-2016-2017-01-06-en">2016</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/correspondence-2015-2016-01-13-en">2015</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2014-2014-01-24-en">2014</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2013-2014-01-24-en">2013</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light is-selected is-opened" href="/resources/pages/2012-2013-01-10-en">2012</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2011-2012-02-25-en">2011</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2010-2012-10-11-en">2010</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2009-2012-10-11-en">2009</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2008-2012-10-11-en">2008</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2007-2012-10-11-en">2007</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2006-2012-10-11-en">2006</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2005-2012-10-11-en">2005</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2004-2012-10-11-en">2004</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2003-2012-10-11-en">2003</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2002-2012-10-11-en">2002</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2001-2012-10-11-en">2001</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/2000-2012-10-11-en">2000</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/1999-2012-10-11-en">1999</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/1998-2012-10-11-en">1998</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/quarterly-reports-2014-11-13-en">Quarterly Reports</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/groups-2012-02-06-en">Groups</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/rssac-4c-2012-02-25-en">RSSAC</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/charter-2013-07-14-en">Charter</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/ssac-2012-02-25-en">SSAC</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/charter-1f-2012-02-25-en">Charter</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ssac-correspondence-2016-01-08-en">Correspondence</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/documents-2012-02-25-en">Documents</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/discussions-2012-02-25-en">Discussions</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/documents-by-category-2012-02-25-en">Documents by Category and Charter Task</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/projects-2012-02-25-en">Projects</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/reading-2012-02-25-en">Reading</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/workplan-activities-2012-02-25-en">Workplan &amp; Activities</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://gacweb.icann.org/display/gacweb/Governmental+Advisory+Committee">GAC</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://atlarge.icann.org/">At-Large</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://aso.icann.org/">ASO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://ccnso.icann.org/">ccNSO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://gnso.icann.org/en/">GNSO</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/tlg-73-2012-02-25-en">Technical Liaison Group</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/nomcom-2013-12-13-en">NomCom</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/nomcom2017-2016-12-13-en">2017 NomCom</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-conduct-2016-12-13-en">Code of Conduct</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-guidelines-2016-12-13-en">Guidelines</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-procedures-2017-02-07-en">Operating Procedures</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="https://forms.icann.org/en/groups/nomcom/apply">Apply – ICANN</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-invitation-2017-01-11-en">Invitation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-positions-2017-01-11-en">Positions</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="https://forms.icann.org/en/groups/nomcom/apply-pti">Apply – PTI</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-pti-invitation-2017-02-07-en">Invitation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom2017-pti-positions-2017-02-07-en">Positions</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://forms.icann.org/en/groups/nomcom/suggest">Suggest a Candidate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/nomcom-archive-2014-05-05-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://www.icann.org/csc">Customer Standing Committee</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://www.icann.org/rzerc">Root Zone Evaluation Review Committee (RZERC)</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><a class=" " href="/resources/pages/business">Business</a></div></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><a class=" " href="/resources/pages/civil-society-2016-05-24-en">Civil Society</a></div></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/compliance-2012-02-25-en">Contractual Compliance</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/about-2014-10-10-en">About</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/compliance-programs">Programs</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/approach-processes-2012-02-25-en">Approach &amp; Process</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/gtld-2012-02-25-en">gTLD Registry Compliance</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-2012-02-25-en">Accredited Registrar Compliance</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/audits-2012-02-25-en">Audit</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/faqs-84-2012-02-25-en">General Questions</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/complaints-2013-03-22-en">Complaint Submission &amp; Learn More</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/compliance-reporting-performance">Reporting &amp; Performance Measurement</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/compliance/notices">Notices</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-8c-2012-02-25-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://features.icann.org/compliance">Performance Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/compliance-reports-2016-04-15-en">Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/compliance/outreach">Outreach</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/registrars-0d-2012-02-25-en">Registrars</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/updates-2012-02-25-en">Changes to Existing Accreditation</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/renewing-2013-07-08-en">Renewing an Existing Accreditation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/terminating-2013-07-08-en">Terminating an Accreditation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/transferring-2013-07-08-en">Transferring (Assigning) an ICANN Accreditation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/purchasing-2013-07-08-en">Purchasing an ICANN-Accredited Registrar</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/name-change-2013-07-08-en">Registrar Name Changes</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/merger-2013-07-08-en">Registrar Mergers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-contact-updates-2015-09-22-en">Registrar Primary Contact Updates</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/retention-2013-09-13-en">Data Retention Waiver</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/application-2012-02-25-en">Application</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/accreditation-2012-02-25-en">How to Become a Registrar</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-training-resources-2015-09-23-en">Registrar Training</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrars-2012-02-25-en">Accreditation Agreement</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/instructions-2014-02-05-en">Instructions</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/advisories-2012-02-25-en">Advisories</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/consensus-policies-2012-02-25-en">Consensus Policies</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/agreements-policies-2012-02-25-en">Agreements &amp; Policies</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/policy-statement-2012-02-25-en">Policy Statement</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/transfers-2012-02-25-en">Domain Name Transfers</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/policy-transfers-2014-07-02-en">Policy</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/name-holder-faqs-2012-02-25-en">Domain Name Holder FAQs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-faqs-2004-11-03-en">Registrar FAQs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/text-2012-02-25-en">Inter-Registrar Transfer Information</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/registrant-rights-2013-09-16-en">Registrant Rights</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/educational-2012-02-25-en">Registrant Educational Materials</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/benefits-2013-09-16-en">Registrants&#39; Benefits and Responsibilities</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/history-2012-02-25-en">History</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/whois-policies-provisions-2013-04-15-en">Whois-Related Policies and Provisions</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/more-2013-07-08-en">Resources for Registrars</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/gtld-lifecycle-2012-02-25-en">gTLD Lifecycle</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://www.icann.org/registrar-reports/accreditation-qualified-list.html">Contact List</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/whois-privacy-conflicts-procedure-2008-01-17-en">Whois/Privacy Law Conflicts</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-data-escrow-2015-12-01-en">Registrar Data Escrow</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registrar-compliance-certificate-2015-12-09-en">Annual Registrar Compliance Certificate</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/registries-46-2012-02-25-en">Registries</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/registries-2012-02-25-en">Agreements</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-54-2012-02-25-en">Archived Registry Agreements</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/global-amendment-base-new-gtld-registry-agreement-2017-01-23-en">Global Amendment to the Base New gTLD Registry Agreement </a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/terminated-registry-agreements-2016-03-02-en">Terminated Registry Agreements</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/advisories-2012-02-25-en">Advisories</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/assignments">Assignments</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/change-of-control">Change of Control of Registry Operator</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registry-agreement-assignment-direct-changes-of-control-2017-01-27-en">List of Completed Direct Changes of Control</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/material-subcontracting-arrangement">Material Subcontracting Arrangement</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/consensus-policies-2012-02-25-en">Consensus Policies</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/contact-f2-2012-02-25-en">Contact</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/coi-2015-09-28-en">Continued Operations Instrument (COI)</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/coi-amend-service-faqs-2015-09-28-en">Amendment Service FAQ</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/continuity-77-2012-02-25-en">Continuity</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-57-2012-02-25-en">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/czds-2014-03-03-en">CZDS</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/ebero-2013-04-02-en">Emergency Back-end Registry Operator</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/faqs-2013-04-02-en">FAQs</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/ersr-2012-02-25-en">Expedited Registry Security Request Process</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://www.icann.org/en/resources/registries/ersr/contact">Contact</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/listing-2012-02-25-en">List of Registries</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/tlds-2012-02-25-en">List of Top-Level Domains</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registry-reports-2016-03-22-en">Monthly Registry Reports</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://newgtlds.icann.org/en/">New gTLDs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/pddrp-2014-01-09-en">PDDRP</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/picdrp-2014-01-09-en">PICDRP</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/poc-2012-02-25-en">Proof of Concept Reports</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/aero-2012-02-25-en">.aero</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/biz-2012-02-25-en">.biz</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/coop-2012-02-25-en">.coop</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/info-2012-02-25-en">.info</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/museum-2012-02-25-en">.museum</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/name-2012-02-25-en">.name</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/pro-2012-02-25-en">.pro</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rrdrp-2014-01-09-en">RRDRP</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registries-faqs-2014-08-08-en">Registries FAQs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/gtld-registry-agreement-termination-2015-10-09-en">Registry Agreement Termination Information Page</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/registry-operator-name-change-2015-12-23-en">Registry Operator Name Change</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/rsep-2014-02-19-en">Registry Service Evaluation Process</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/announcements-2012-02-25-en">Announcements</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/policy-bd-2012-02-25-en">Policy</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/workflow-2012-02-25-en">Workflow</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/reconciliation-2012-02-25-en">Reconciliation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/prelim-competition-issues-2012-02-25-en">Preliminary Determination Of Competition Issues</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/technical-evaluation-panel-2012-02-25-en">Techical Evaluation Panel</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/implementation-notes-2012-02-25-en">Implementation Notes</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/transition-processes-2013-04-22-en">Registry Transition Processes</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-2013-04-23-en">EBERO Temporary Transition Process</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-communicate-2013-04-23-en">EBERO Transition Process - Communicate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-dns-2013-04-23-en">EBERO Transition Process - DNS</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-data-escrow-2013-04-23-en">EBERO Transition Process - Data Escrow</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-rdds-2013-04-23-en">EBERO Transition Process - RDDS</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/ebero-ttp-srs-2013-04-23-en">EBERO Transition Process - SRS</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/prospective-evaluation-2013-04-22-en">Prospective Registry Evaluation Matrix</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/proposed-successor-check-support-2013-04-23-en">Registry Transition Process with Proposed Successor - Check Support</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/proposed-successor-communicate-2013-04-23-en">Registry Transition Process with Proposed Successor - Communicate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/proposed-successor-evaluate-2013-04-23-en">Registry Transition Process with Proposed Successor - Evaluate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/proposed-successor-2013-04-23-en">Registry Transition Process with Proposed Successor</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfp-check-support-2013-04-23-en">Registry Transition Process with Request for Proposals - Check Support</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfp-communicate-2013-04-23-en">Registry Transition Process with Request for Proposals - Communicate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfp-evaluate-2013-04-23-en">Registry Transition Process with Request for Proposals - Evaluate</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfp2-2013-04-23-en">Registry Transition Process with Request for Proposals - RFP</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfp-2013-04-23-en">Registry Transition Process with Request for Proposals</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/removal-cross-ownership-2012-02-28-en">Removal of Cross-Ownership Restrictions</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/reserved-2013-07-08-en">Reserved Names</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/two-character-labels-2016-12-13-en">Two-Character ASCII Labels</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/country-territory-names-2015-10-12-en">Country &amp; Territory Names</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://www.icann.org/resources/two-character-labels-archive">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rra-amendment-procedure-2015-04-06-en">RRA Amendment Procedure</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/tmch-requirements-2014-01-09-en">Trademark Clearinghouse Requirements</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/urs-2014-01-09-en">URS</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><a class=" " href="/resources/pages/metrics-gdd-2015-01-30-en">GDD Metrics</a></div></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/is-ssr-2014-11-24-en">Identifier Systems Security, Stability and Resiliency (IS-SSR)</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/security-awareness-resource-2014-12-04-en">Security Awareness</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/security-2012-02-25-en">Security Team</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/is-ssr-blogs-2015-12-16-en">Security Team Blogs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/security-terminology-2015-09-16-en">Security Terminology</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/archive-2012-10-05-en">Document Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/cctlds-21-2012-02-25-en">ccTLDs</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/background-2012-02-25-en">Background Materials</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/cctlds-2012-02-25-en">Agreements</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources">Delegation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://www.iana.org/domains/root/db">Root Zone Database</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/model-mous-2012-02-25-en">Model MOU</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/workshops-2012-02-25-en">Workshops</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/icann-iso-3166-2012-05-09-en">ICANN and ISO</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/idn-2012-02-25-en">Internationalized Domain Names</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/root-zone-lgr-2015-06-21-en">Root Zone Label Generation Rules (LGR)</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/generation-panel-2015-06-21-en">Generation Panel Update</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/msr-2015-06-21-en">Maximal Starting Repertoire</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/lgr-toolset-2015-06-21-en">LGR Toolset</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/fast-track-2012-02-25-en">IDN ccTLD Fast Track</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/implementation-guidelines-2012-02-25-en">IDN Implementation Guidelines</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/second-level-lgr-2015-06-21-en">Second-Level LGR Reference</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/more-2012-05-08-en">Resources</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rfcs-2012-02-25-en">RFCs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/video-2012-02-26-en">Videos</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://blog.icann.org/category/idns/">Blog Posts</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/committees-wgs-2012-02-25-en">Committees &amp; Working Groups</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/presentations-cd-2012-02-25-en">Presentations</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/fora-2012-02-25-en">Fora</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/announcements-2014-02-19-en">Announcements</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/universal-acceptance-2012-02-25-en">Universal Acceptance Initiative</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/universal-acceptance-faqs-2014-09-26-en">Frequently Asked Questions: Universal Acceptance</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/universal-acceptance-initiative-2014-10-03-en">Roadmap</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/policy-01-2012-02-25-en">Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/mission-2012-08-27-en">Policy Mission</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/staff-goals-2012-08-27-en">Policy Staff Goals</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/presentations-2012-08-27-en">Presentations</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/global-addressing-2012-02-25-en">Global Addressing</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/allocation-ipv6-rirs-2012-02-25-en">IPv6 Allocation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/global-policy-asn-blocks-2010-09-21-en">ASN Allocation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/allocation-ipv4-post-exhaustion-2012-05-08-en">Post Exhaustion IPv4 Allocation</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/new-rirs-criteria-2012-02-25-en">New RIRs Criteria</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/review-procedures-2012-02-25-en">Review Procedures</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/update-2014-02-20-en">Policy Updates</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/public-comments">Public Comment</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/public-comments#open-public">Open</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/public-comments#upcoming-public">Upcoming</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://www.icann.org/public-comments/archive">Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><a class=" " href="/resources/pages/ksk-rollover-2016-05-06-en">Root Zone KSK Rollover</a></div></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/technical-functions-2015-10-15-en">Technical Functions</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/tech-day-archive-2015-10-15-en">Tech Day Archive</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/contact">Contact</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="https://forms.icann.org/en/contact">Contact Form</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/security-2012-02-25-en">Security Team</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/pgp-keys-2012-02-25-en">PGP Keys</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/certificate-authority-2012-02-25-en">Certificate Authority</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/contact-f2-2012-02-25-en">Registry Liaison</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/contact-2012-02-25-en">Ombudsman</a></div></li></ul></li><li><div class="ResourcesMenu-item ResourcesMenu-item--root"><div class="ResourcesMenu-arrow js-expand-menu  "></div><a class=" " href="/resources/pages/help-2012-02-03-en">Help</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/dispute-resolution-2012-02-25-en">Dispute Resolution</a></div></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/dndr-2012-02-25-en">Domain Name Dispute Resolution</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/cedrp-2012-02-25-en">Charter Eligibility Dispute Resolution Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-b7-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-fd-2012-02-25-en">Rules</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/erdrp-2012-02-25-en">Eligibility Requirements Dispute Resolution Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-65-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-c0-2012-02-25-en">Rules</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/ipdrcp-2012-02-25-en">Intellectual Property Defensive Registration Challenge Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-41-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-4d-2012-02-25-en">Rules</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/proqcp-2012-02-25-en">Qualification Challenge Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-2012-02-25-en">Rules</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/rdrp-2012-02-25-en">Restrictions Dispute Resolution Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-85-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-4b-2012-02-25-en">Rules</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/tdrp-2012-02-25-en">Transfer Dispute Resolution Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-fc-2012-02-25-en">Providers</a></div></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/udrp-2012-02-25-en">Uniform Domain Name Dispute Resolution Policy</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/policy-2012-02-25-en">Policy Document</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/providers-6d-2012-02-25-en">Providers</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/provider-approval-process-2012-02-25-en">Provider Approval Process</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/rules-be-2012-02-25-en">Rules</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/principal-2012-02-25-en">Principal Documents</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/proceedings-2012-02-25-en">Proceedings</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/historical-2f-2012-02-25-en">Historical Documents</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/schedule-2012-02-25-en">Timeline</a></div></li></ul></li></ul></li><li><div class="ResourcesMenu-item"><div class="ResourcesMenu-arrow js-expand-menu  ResourcesMenu-item--child"></div><a class="u-text-light " href="/resources/pages/name-collision-2013-12-06-en">Name Collision</a></div><ul class="u-marginLl hidden"><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/name-collision-it-pros-faqs-2014-08-01-en">FAQ: IT Professionals</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/name-collision-ro-faqs-2014-08-01-en">FAQ: Registries</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/mitigation-2013-12-17-en">Guide for IT Professionals</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/cctld-mitigation-2014-10-02-en">Recommendations for New ccTLDs</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="http://www.icann.org/en/help/name-collision/report-problems">Report a Problem</a></div></li></ul></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/news/announcement-2007-03-06-en">Registrar Problems</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/dispute-resolution-2012-02-25-en">Whois Data Correction</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/irp-questions-2010-06-19-en">Independent Review Process</a></div></li><li><div class="ResourcesMenu-item"><a class="u-text-light " href="/resources/pages/reconsideration-2012-02-25-en">Request for Reconsideration</a></div></li></ul></li></ul></div></div><div class="l-main-with-rail resources-landingPage"><div><section dir="ltr" external_links=""><h1 class="LibraryIntro">2012 Correspondence</h1><div class="EmbeddedHTML"><html><body>
+<table class="convey">
+  <tr class="dark">
+    <th>Date</th>
+    <th>Correspondence</th>
+    <th>Sender Affiliation</th>
+    <th>Issue</th>
+    <th>Related Correspondence</th>
+  </tr>
+  <tr>
+    <td>24 December 2012</td>
+    <td>
+<a href="/en/news/correspondence/maher-to-chehade-24dec12-en">David Maher to Fadi Chehadé</a> [Published 9 January 2013]</td>
+    <td>Senior Vice President - Law &amp; Policy | Public Interest Registry (PIR) .org</td>
+    <td>Public Interest Registry (PIR) .ORG Notice of Fee Increase</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>22 December 2012</td>
+    <td>
+<a href="/en/news/correspondence/robinson-to-crocker-dryden-22dec12-en">Jonathan Robinson to Steve Crocker and Heather Dryden</a> [Published 15 January 2013]</td>
+    <td>Chair | GNSO Council</td>
+    <td>Accountability &amp; Transparency Review Team 2 (ATRT 2)</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>21 December 2012</td>
+    <td>
+<a href="/en/news/correspondence/ntag-to-willett-21dec12-en">NTAG to Christine Willett</a> [Published 3 January 2013]</td>
+    <td>New gTLD Applicant Group</td>
+    <td>Deadlines in New gTLD Program</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>19 December 2012</td>
+    <td>
+<a href="/en/system/files/correspondence/spencer-to-chehade-19dec12-en.pdf">Jonathan R. Spencer to Fadi Chehadé</a> [Published 30 August 2016]</td>
+    <td>Vice President and Associate General Counsel | VeriSign, Inc.</td>
+    <td>Notice of Price Increase for .Net Domain Name Registrations</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>18 December 2012</td>
+    <td>
+<a href="/en/news/correspondence/zakirov-to-crocker-18dec12-en">Rinat Zakirov to Steve Crocker</a> [Published 16 January 2013]</td>
+    <td>Chairman of the Executive Committee | The World Congress of Tatars</td>
+    <td>The Applied-for New gTLD .tatar</td>
+    <td>
+<a href="/en/news/correspondence/zakirov-to-crocker-01oct12-en">Zakirov to Crocker</a> [Published 1 October 2012]</td>
+  </tr>
+  <tr>
+    <td>18 December 2012</td>
+    <td>
+<a href="/en/news/correspondence/abbasov-to-chehade-18dec12-en">Prof. Dr. Ali M. Abbasov to Fadi Chehadé</a> [Published 4 January 2013]</td>
+    <td>Minister of Communications and Information Technologies | The Republic of Azerbaijan</td>
+    <td>ICANN's Participation in the Internet Governance Forum (IGF)</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>14 December 2012</td>
+    <td>
+<a href="/en/news/correspondence/chehade-to-marzoug-14dec12-en">Fadi Chehadé to Dr. Mongi Marzoug</a> [Published 17 December 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>Re: Tunisian ICT Ministry Discussion of Post-IGF Plans for ICANN Engagement</td>
+    <td>
+<a href="/en/news/correspondence/marzoug-to-chehade-04dec12-en">Dr. Mongi Marzoug to Fadi Chehadé</a> [Published 17 December 2012]</td>
+  </tr>
+  <tr>
+    <td>7 December 2012</td>
+    <td>
+<a href="/en/news/correspondence/crocker-to-dryden-07dec12-en">Steve Crocker to Heather Dryden</a> [Published 10 December 2012]</td>
+    <td>Chair of the Board of Directors | ICANN</td>
+    <td>Re: GAC Communique from ICANN 45 Meeting in Toronto, Canada</td>
+    <td>
+<a href="/en/news/correspondence/crocker-to-dryden-16jan13-en">Crocker to Dryden</a> [Published 17 January 2013]</td>
+  </tr>
+    <tr>
+    <td>5 December 2012</td>
+    <td>
+<a href="/en/news/correspondence/van-den-hove-meijer-to-crocker-05dec12-en">Norbert van den Hove and Roelof Meijer to Steve Crocker</a> [Published 12 February 2013]</td>
+    <td>Management Team, Telecommunications Market Department; Director | Ministry of Economic Affairs; Stichting Internet Domeinregistratie Nederland</td>
+    <td>Last resort re-delegation scenario for .nl domain</td>
+    <td>
+<a href="/en/news/correspondence/crocker-to-van-den-hove-meijer-06feb13-en">Steve Crocker to Norbert van den Hove and Roelof Meijer</a> [Published 12 February 2013]</td>
+</tr>
+  <tr>
+    <td>4 December 2012</td>
+    <td>
+<a href="/en/news/correspondence/marzoug-to-chehade-04dec12-en">Dr. Mongi Marzoug to Fadi Chehadé</a> [Published 17 December 2012]</td>
+    <td>Minister | Ministry of Information and Communication Technologies</td>
+    <td>Tunisian ICT Ministry Discussion of Post-IGF Plans for ICANN Engagement</td>
+    <td>
+<a href="/en/news/correspondence/chehade-to-marzoug-14dec12-en">Fadi Chehadé to Dr. Mongi Marzoug</a> [Published 17 December 2012]</td>
+  </tr>
+  <tr>
+    <td>29 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/jones-to-chehade-29nov12-en">Carwyn Jones to Fadi Chehadé</a> [Published 4 January 2013]</td>
+    <td>First Minister | Welsh Government</td>
+    <td>ICANN's Proposed Draw and Release Mechanisms for gTLDs</td>
+    <td>
+<a href="/en/news/correspondence/willett-to-jones-12mar13-en">Christine Willett to Carwyn Jones</a> [Published 13 March 2013]</td>
+
+  </tr>
+  <tr>
+    <td>27 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/steneberg-to-icann-board-annexes-27nov12-en">Linda Corugedo Steneberg to the ICANN Board (With Annexes)</a> [Published 30 November 2012]</td>
+    <td>European Commission</td>
+    <td>Interim position of the European Commission concerning the applications for New gTLDs</td>
+    <td>
+<a href="/en/news/correspondence/steneberg-to-icann-board-27nov12-en">Steneberg to the ICANN Board</a> [Published 29 November 2012]</td>
+  </tr>
+  <tr>
+    <td>27 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/steneberg-to-icann-board-27nov12-en">Linda Corugedo Steneberg to the ICANN Board</a> [Published 29 November 2012]</td>
+    <td>European Commission</td>
+    <td>Interim position of the European Commission concerning the applications for New gTLDs</td>
+    <td>
+<a href="/en/news/correspondence/steneberg-to-icann-board-annexes-27nov12-en">Steneberg to ICANN Board (with Annexes)</a> [Published 30 November 2012]</td>
+  </tr>
+  <tr>
+    <td>21 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/catizone-to-crocker-dryden-21nov12-en">Carmen A. Catizone to Steve Crocker and Heather Dryden</a> [Published 24 January 2013]</td>
+    <td>Executive Director/Secretary | National Association of Boards of Pharmacy</td>
+    <td>New gTLD Application for .pharmacy</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>16 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/smith-to-chehade-16nov12-en">Jeffrey Smith to Fadi Chehadé</a> [Published 29 January 2013]</td>
+    <td>CEO | Commercial Connect, LLC</td>
+    <td>New gTLD Application Process</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>16 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/bio-et-al-to-chehade-16nov12-en">BIO et al. to Fadi Chehadé</a> [Published 4 January 2013]</td>
+    <td>The Biotechnology Industry Organization (BIO) et al.</td>
+    <td>Opposition to the Application for the gTLD Name Extension ".bio"</td>
+    <td>
+<a href="/en/news/correspondence/willet-to-bio-31jan13-en">Christine Willett to BIO</a> [Published 1 February 2013]</td>
+  </tr>
+  <tr>
+    <td>15 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/crocker-to-dryden-15nov12-en">Steve Crocker to Heather Dryden</a> [Published 15 November 2012]</td>
+    <td>Chair of the Board of Directors | ICANN</td>
+    <td>Inter-Registrar Transfer Policy Part C Recommendations</td>
+    <td> </td>
+  </tr>
+    <tr>
+    <td>9 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/paes-to-chehade-chalaby-09nov12-en">Eduardo Paes to Fadi Chehadé and Cherine Chalaby</a> [Published 25 January 2013]</td>
+    <td>Mayor | City of Rio de Janeiro</td>
+    <td>New gTLD Applied-For String .RIO</td>
+    <td>
+<a href="/en/news/correspondence/willett-to-paes-16apr13-en">Christine Willett to Eduardo Paes</a> [Published 22 April 2013]</td>
+  </tr>
+  <tr>
+    <td>7 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/robinson-to-icann-board-07nov12-en">Jonathan Robinson to the ICANN Board</a> [Published 8 November 2012]</td>
+    <td>Chair | GNSO Council</td>
+    <td>WHOIS Review Team Final Report</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>5 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/icann-et-al-to-icann-board-ssac-05nov12-en">ICANN, NTIA, and Verisign to the ICANN Board and SSAC</a> [Published 9 November 2012]</td>
+    <td><ul>
+        <li>ICANN</li>
+        <li>NTIA</li>
+        <li>Verisign</li>
+      </ul></td>
+    <td>Regarding SSAC Letter dated 2 July 2012 Recommendation 2</td>
+    <td>
+<a href="/en/news/correspondence/faltstrom-to-icann-board-02jul12-en">Fältström to the ICANN Board</a> [Published 5 July 2012]</td>
+  </tr>
+  <tr>
+    <td>5 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/chehade-to-icann-community-05nov12-en">Fadi Chehadé to the ICANN Community</a> [Published 5 November 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>ICANN's Roadmap to Beijing</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>2 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/icann-to-isc-02nov12-en">ICANN to Internet Society of China</a> [Published 5 November 2012]</td>
+    <td>ICANN</td>
+    <td>Re: New gTLD Batching Process</td>
+    <td>
+<a href="/en/news/correspondence/isc-to-icann-10may12-en">ISC to ICANN</a> [Published 10 May 2012]</td>
+  </tr>
+  <tr>
+    <td>2 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/willet-to-stocker-02nov12-en">Christine Willett to Ernst Stocker</a> [Published 5 November 2012]</td>
+    <td>New gTLD Program General Manager | ICANN</td>
+    <td>Re: New gTLD Program – Batching and the Public Interest: .ZUERICH</td>
+    <td>
+<a href="/en/news/correspondence/stocker-to-crocker-27jun12-en">Stocker to Crocker</a> [Published 5 November 2012]</td>
+  </tr>
+  <tr>
+    <td>2 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/willet-to-brosda-02nov12-en">Christine Willett to Carsten Brosda</a> [Published 5 November 2012]</td>
+    <td>New gTLD Program General Manager | ICANN</td>
+    <td>Re: New gTLD Program – Batching and the Public Interest: .HAMBURG</td>
+    <td>
+<a href="/en/news/correspondence/brosda-to-crocker-05mar12-en">Brosda to Crocker</a> [Published 5 November 2012]</td>
+  </tr>
+  <tr>
+    <td>2 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/willet-to-pschierer-02nov12-en">Christine Willett to Franz Josef Pschierer</a> [Published 5 November 2012]</td>
+    <td>New gTLD Program General Manager | ICANN</td>
+    <td>Re: New gTLD Program – Batching and the Public Interest: .BAYERN</td>
+    <td>
+<a href="/en/news/correspondence/pschierer-to-crocker-19jun12-en">Pschierer to Crocker</a> [Published 5 November 2012]</td>
+  </tr>
+  <tr>
+    <td>2 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/willet-to-platter-02nov12-en">Christine Willett to Günther Platter</a> [Published 5 November 2012]</td>
+    <td>New gTLD Program General Manager | ICANN</td>
+    <td>Re: New gTLD Program – Batching and the Public Interest: .TIROL</td>
+    <td>
+<a href="/en/news/correspondence/platter-to-crocker-30apr12-en">Platter to Crocker</a> [Published 5 November 2012]</td>
+  </tr>
+  <tr>
+    <td>1 November 2012</td>
+    <td>
+<a href="/en/news/correspondence/ncsg-to-icann-01nov12-en">NCSG to ICANN</a> [Published 2 November 2012]</td>
+    <td>Non-Commercial Stakeholders Group (NCSG)</td>
+    <td>Re: IPC-BC's Proposal for Additional Rights Protection Measures (RPM)</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/ntag-to-icann-24oct12-en">NTAG to ICANN</a> [Published 26 October 2012]</li>
+        <li>
+<a href="/en/news/correspondence/metalitz-to-pritz-17oct12-en">Metalitz to Pritz</a> [Published 17 October 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>30 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/panos-to-crocker-et-al-30oct12-en">David Panos to Stephen Crocker, Fadi Chehadé, and Kurt Pritz</a> [Published 30 October 2012]</td>
+    <td>Director | United TLD Holdco, Ltd.</td>
+    <td>Re: Application by United TLD for the .REPUBLICAN gTLD</td>
+    <td>
+<a href="/en/news/correspondence/priebus-jankowski-to-icann-14sep12-en">Priebus and Jankowski to ICANN</a> [Published 2 October 2012]</td>
+  </tr>
+  <tr>
+    <td>24 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/ntag-to-icann-24oct12-en">NTAG to ICANN</a> [Published 26 October 2012]</td>
+    <td>New gTLD Applicant Group</td>
+    <td>Re: Rights Protection Measures (RPM) Improvements</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/ncsg-to-icann-01nov12-en">NCSG to ICANN</a> [Published 2 November 2012]</li>
+        <li>
+<a href="/en/news/correspondence/metalitz-to-pritz-17oct12-en">Metalitz to Pritz</a> [Published 17 October 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>17 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/metalitz-to-pritz-17oct12-en">Steve Metalitz to Kurt Pritz</a> [Published 17 October 2012]</td>
+    <td>President | GNSO Intellectual Property Constituency</td>
+    <td>Joint BC-IPC Position Regarding Rights Protection Measures (RPM) Improvements As Second Level</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/ncsg-to-icann-01nov12-en">NCSG to ICANN</a> [Published 2 November 2012]</li>
+        <li>
+<a href="/en/news/correspondence/ntag-to-icann-24oct12-en">NTAG to ICANN</a> [Published 26 October 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>15 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/dryden-to-chehade-icann-board-15oct12-en">Heather Dryden to Fadi Chehadé and the ICANN Board</a> [Published 15 November 2012]</td>
+    <td>Chair | GAC</td>
+    <td>Chair's Summary of the High Level Meeting - Toronto</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>14 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/white-to-journalists-14oct12-en">Brad White to Journalists</a> [Published 11 October 2012]</td>
+    <td>Director, Global Media Affairs | ICANN</td>
+    <td>Welcome to ICANN's 45th Public Meeting in Toronto</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>13 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/crocker-to-dryden-13oct12-en">Steve Crocker to Heather Dryden</a> [Published 15 October 2012]</td>
+    <td>Chairman of the ICANN Board | ICANN</td>
+    <td>Response to GAC Communiqué, Prague</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>12 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/ntag-to-icann-12oct12-en">NTAG to ICANN</a> [Published 13 October 2012]</td>
+    <td>New gTLD Applicant Group</td>
+    <td>Concerns about Community Inclusion in the Trademark Clearing House (TMCH) Program</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>9 October 2012</td>
+    <td>
+<p><a href="/en/news/correspondence/faltstrom-to-icann-board-09oct12-en">Patrik Fältström to the ICANN Board</a> [Published 31 October 2012]</p>
+      <ul>
+        <li>
+<a href="/en/groups/ssac/documents/sac-056-en.pdf">SAC056 SSAC Advisory on Impacts of Content Blocking via the DomainName System</a> [PDF, 359 KB]</li>
+      </ul>
+</td>
+    <td>Chair | SSAC</td>
+    <td>SSAC Advisory on Impacts of Content Blocking via the Domain Name System</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>9 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/chehade-to-kohnstamm-09oct12-en">Fadi Chehadé to Jacob Kohnstamm</a> [Published 10 October 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>Re: Comments on the Data Protection Impact of the Revision of the ICANN RAA Concerning Accuracy and Data Retention of WHOIS Data</td>
+    <td>
+<a href="/en/news/correspondence/kohnstamm-to-crocker-atallah-26sep12-en">Kohnstamm to Crocker and Atallah</a> [Published 8 October 2012]</td>
+  </tr>
+  <tr>
+    <td>8 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/icann-to-drafting-group-08oct12-en">ICANN to Drafting Group Members</a> [Published 9 October 2012]</td>
+    <td>ICANN</td>
+    <td>Comments on Alternative Implementation Proposals</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>4 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/strickling-to-crocker-04oct12-en">Lawrence Strickling to Steve Crocker</a> [Published 4 October 2012]</td>
+    <td>The Assistant Secretary for Communications and Information | United States Department of Commerce</td>
+    <td>Re: New gTLD Program</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/beckstrom-to-strickling-11jan12-en">Beckstrom to Strickling</a> [Published 11 January 2012]</li>
+        <li>
+<a href="/en/news/correspondence/strickling-to-crocker-03jan12-en">Strickling to Crocker</a> [Published 3 January 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>3 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/chehade-to-stelzer-03oct12-en">Fadi Chehadé to Thomas Stelzer</a> [Published 4 October 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>IGO Domain Names</td>
+    <td>
+<a href="/en/news/correspondence/stelzer-to-atallah-11jul12-en">Stelzer to Atallah</a> [Published 17 July 2012]</td>
+  </tr>
+  <tr>
+    <td>1 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/zhang-to-icann-01oct12-en">Jian Zhang to ICANN</a> [Published 30 November 2012]</td>
+    <td>General Manager | Asia Pacific Top Level Domain Association (APTLD)</td>
+    <td>Comments on Transliterated TLDs</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>1 October 2012</td>
+    <td>
+<a href="/en/news/correspondence/zakirov-to-crocker-01oct12-en">Rinat Zakirov to Steve Crocker</a> [Published 1 October 2012]</td>
+    <td><ul>
+        <li>Chairman of the Executive Committee | The World Congress of Tatars; and</li>
+        <li>Member of Parliament | The Republic of Tatarstan</li>
+      </ul></td>
+    <td>New gTLD Application for .tatar</td>
+    <td>
+<a href="/en/news/correspondence/zakirov-to-crocker-18dec12-en">Zakirov to Crocker</a> [Published 16 January 2013]</td>
+  </tr>
+  <tr>
+    <td>26 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/ntag-to-bc-26sep12-en">NTAG to BC</a> [Published 4 October 2012]</td>
+    <td>New gTLD Applicant Group</td>
+    <td>New gTLD Objection Filing Period</td>
+    <td>
+<a href="/en/news/correspondence/cade-to-chalaby-05sep12-en">Cade to Chalaby</a> [Published 21 December 2012]</td>
+  </tr>
+  <tr>
+    <td>26 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/kohnstamm-to-crocker-atallah-26sep12-en">Jacob Kohnstamm to Steve Crocker and Akram Atallah</a> [Published 8 October 2012]</td>
+    <td>Chairman of the Article 29 | Article 29 Data Protection Working Party, European Commission</td>
+    <td>Comments on the Data Protection Impact of the Revision of the ICANN RAA Concerning Accuracy and Data Retention of WHOIS Data</td>
+    <td>
+<a href="/en/news/correspondence/chehade-to-kohnstamm-09oct12-en">Chehadé to Kohnstamm</a> [Published 10 October 2012]</td>
+  </tr>
+  <tr>
+    <td>25 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/kleiman-to-icann-25sep12-en">Kleiman to the ICANN Board and CEO, GAC Members, Evaluators, the Independent Objector and Members of the ICANN Community</a> [Published 28 September 2012]</td>
+    <td>Internet Counsel | Fletcher, Heald, &amp; Hildreth</td>
+    <td>Regarding TLD Concerns</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>25 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/crocker-to-murai-larson-25sep12-en">Steve Crocker to Jun Murai, Chair of RSSAC</a> [Published 25 September 2012]</td>
+    <td>Chairman of the ICANN Board | ICANN</td>
+    <td>Response to SSAC Letter of 2 July Regarding the New Generic Top Level Domain (gTLD) Process</td>
+    <td>
+<a href="/en/news/correspondence/faltstrom-to-icann-board-02jul12-en">Fältström to the ICANN Board</a> [Published 5 July 2012]</td>
+  </tr>
+  <tr>
+    <td>25 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/crocker-to-faltstrom-25sep12-en">Steve Crocker to Patrik Fältström, Chair of SSAC</a> [Published 25 September 2012]</td>
+    <td>Chairman of the ICANN Board | ICANN</td>
+    <td>Response to SSAC Letter of 2 July Regarding the New Generic Top Level Domain (gTLD) Process</td>
+    <td>
+<a href="/en/news/correspondence/faltstrom-to-icann-board-02jul12-en">Fältström to the ICANN Board</a> [Published 5 July 2012]</td>
+  </tr>
+  <tr>
+    <td>24 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/neylon-et-al-to-chehade-et-al-24sep12-en">Michele Neylon, et al. to Fadi Chehadé, Steve Crocker, Akram Atallah, Alain Pellet, and Heather Dryden</a> [Published 24 September 2012]</td>
+    <td>Michele Neylon, et al.</td>
+    <td>Re: Single Registrant Generic TLDs</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>19 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/chehade-to-leahy-et-al-19sep12-en">Fadi Chehadé to Senate and House Judiciary Committee Chairmen Patrick Leahy, Lamar Smith, Charles E. Grassley, John Conyers, Jr.</a> [Published 20 September 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>Re: Concerns About the New gTLD Expansion</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/minardos-to-crocker-17aug12-en">Minardos to Crocker</a> [Published 20 August 2012]</li>
+        <li>
+<a href="/en/news/correspondence/leahy-et-al-to-atallah-07aug12-en">Leahy et al. to Atallah</a> [Published 10 August 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>14 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/priebus-jankowski-to-icann-14sep12-en">Reince Priebus and J. Christopher Jankowski to ICANN</a> [Published 2 October 2012]</td>
+    <td><ul>
+        <li>Chairman | Republican National Committee (RNC)</li>
+        <li>President | Republican State Leadership Committee (RSLC)</li>
+      </ul></td>
+    <td>Opposition to the Application by United TLD for the .REPUBLICAN gTLD</td>
+    <td>
+<a href="/en/news/correspondence/panos-to-crocker-et-al-30oct12-en">Panos to Crocker, Chehadé, and Pritz</a> [Published 30 October 2012]</td>
+  </tr>
+  <tr>
+    <td>13 September 2012</td>
+    <td>
+<p><a href="/en/news/correspondence/faltstrom-to-icann-board-13sep12-en">Patrik Fältström to the ICANN Board</a> [Published 12 October 2012]</p>
+      <ul>
+        <li>
+<a href="/en/groups/ssac/documents/sac-055-en.pdf">SAC055 WHOIS: Blind Men And An Elephant</a> [PDF, 348 KB]</li>
+      </ul>
+</td>
+    <td>Chair | SSAC</td>
+    <td>SSAC Comment on the WHOIS Review Team Final Report</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>13 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/cowley-to-de-la-chapelle-13sep12-en">Lesley Cowley to Bertrand de La Chapelle</a> [Published 5 October 2012]</td>
+    <td>Chair | ccNSO</td>
+    <td>Re: Impact of the New gTLD Program on ICANN Structure and Processes</td>
+    <td>
+<a href="/en/news/correspondence/de-la-chapelle-to-so-ac-et-al-03aug12-en">De La Chapelle to SOs, ACs, Stakeholder Groups and Constituencies</a> [Published 5 October 2012]</td>
+  </tr>
+  <tr>
+    <td>11 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/crepin-leblond-to-crocker-11sep12-en">Olivier MJ Crépin-Leblond to Steve Crocker</a> [Published 30 October 2012]</td>
+    <td>Chair | At-Large Advisory Committee</td>
+    <td>ALAC Analysis of AoC WHOIS Review Recommendations</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>10 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/panos-to-atallah-et-al-10sep12-en">David Panos to Akram Atallah, Kurt Pritz, and John Jeffrey</a> [Published 10 September 2012]</td>
+    <td>Director | United TLD Holdco, Ltd.</td>
+    <td>Re: New gTLD Applications of Demand Media, Inc.</td>
+    <td>
+<a href="/en/news/correspondence/stoler-to-crocker-et-al-28jul12-en">Stoler to Crocker</a> [Published 14 August 2012]</td>
+  </tr>
+  <tr>
+    <td>7 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/serlin-to-de-la-chapelle-07sep12-en">Matt Serlin to Bertrand de La Chapelle</a> [Published 22 October 2012]</td>
+    <td>Chair | Registrar Stakeholder Group (RrSG)</td>
+    <td>Re: Impact of the New gTLD Program on ICANN Structure and Processes</td>
+    <td>
+<a href="/en/news/correspondence/de-la-chapelle-to-so-ac-et-al-03aug12-en">De La Chapelle to SOs, ACs, Stakeholder Groups and Constituencies</a> [Published 5 October 2012]</td>
+  </tr>
+  <tr>
+    <td>5 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/cade-to-chalaby-05sep12-en">Marilyn Cade to Cherine Chalaby</a> [Published 21 December 2012]</td>
+    <td>GNSO Business Constituency</td>
+    <td>New gTLD Objection Filing Period</td>
+    <td>
+<a href="/en/news/correspondence/ntag-to-bc-26sep12-en">NTAG to BC </a>[Published 4 October 2012]</td>
+  </tr>
+  <tr>
+    <td>5 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/ntag-to-icann-05sep12-en">NTAG to ICANN</a> [Published 5 September 2012]</td>
+    <td>New gTLD Applicant Group</td>
+    <td>New gTLD Communications and Support</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>1 September 2012</td>
+    <td>
+<a href="/en/news/correspondence/maher-to-chalaby-et-al-01sep12-en">David Maher to Cherine Chalaby, Akram Atallah, and Kurt Pritz</a> [Published 1 September 2012]</td>
+    <td>Chair | Registries Stakeholder Group</td>
+    <td>Timelines and Milestones in New gTLD Program</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>17 August 2012</td>
+    <td>
+<a href="/en/news/correspondence/cade-crepin-leblond-metalitz-to-crocker-17aug12-en">Marilyn Cade, Olivier MJ Crépin-Leblond and Steve Metalitz to Steve Crocker</a> [Published 20 August 2012]</td>
+    <td><ul>
+        <li>Chair | GNSO Business Constituency</li>
+        <li>Chair | At-Large Advisory Committee</li>
+        <li>President | GNSO Intellectual Property Constituency</li>
+      </ul></td>
+    <td>Board Decision to Renew the .com Agreement Without Thick Whois</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>17 August 2012</td>
+    <td>
+<a href="/en/news/correspondence/minardos-to-crocker-17aug12-en">George Minardos to Stephen D. Crocker</a> [Published 20 August 2012]</td>
+    <td>Minardos Group</td>
+    <td>Support for ICANN's New gTLD Program</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/chehade-to-leahy-et-al-19sep12-en">Chehadé to Leahy et al.</a> [Published 20 September 2012]</li>
+        <li>
+<a href="/en/news/correspondence/leahy-et-al-to-atallah-07aug12-en">Leahy et al. to Atallah</a> [Published 10 August 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>8 August 2012</td>
+    <td>
+<a href="/en/news/correspondence/rysg-to-icann-board-08aug12-en">Registries Stakeholder Group to the ICANN Board of Directors</a> [Published 10 August 2012]</td>
+    <td>Registries Stakeholder Group (RySG)</td>
+    <td>Increase in Number of Registries</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>7 August 2012</td>
+    <td>
+<a href="/en/news/correspondence/bekele-to-atallah-07aug12-en">Sophia Bekele to Akram Atallah</a> [Published 10 August 2012]</td>
+    <td>Executive Director | DotConnectAfrica (DCA)</td>
+    <td>An Official Note to ICANN Leaders to Convey a Suggestion on the Type of Candidate to Replace Ms. Anne-Rachel Inné</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>7 August 2012</td>
+    <td>
+<a href="/en/news/correspondence/leahy-et-al-to-atallah-07aug12-en">Senate and House Judiciary Committee Chairmen Patrick Leahy, Lamar Smith, Charles E. Grassley, John Conyers, Jr. to Akram Atallah</a> [Published 10 August 2012]</td>
+    <td>Chairman Senate Judiciary Committee; Chairman House Judiciary Committee; Ranking Member Senate Judiciary Committee; Ranking Member House Judiciary Committee | Congress of the United States</td>
+    <td>Concerns About the New gTLD Expansion</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/chehade-to-leahy-et-al-19sep12-en">Chehadé to Leahy et al.</a> [Published 20 September 2012]</li>
+        <li>
+<a href="/en/news/correspondence/minardos-to-crocker-17aug12-en">Minardos to Crocker</a> [Published 20 August 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>3 August 2012</td>
+    <td>
+<a href="/en/news/correspondence/de-la-chapelle-to-so-ac-et-al-03aug12-en">Bertrand de La Chapelle to SOs, ACs, Stakeholder Groups and Constituencies</a> [Published 5 October 2012]</td>
+    <td>Board Member | ICANN; and Internet &amp; Jurisdiction Project Director | Académie Diplomatique Internationale</td>
+    <td>Impact of the New gTLD Program on ICANN Structure and Processes</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/serlin-to-de-la-chapelle-07sep12-en">Serlin to de La Chapelle</a> [Published 22 October 2012]</li>
+        <li>
+<a href="/en/news/correspondence/cowley-to-de-la-chapelle-13sep12-en">Cowley to de La Chapelle</a> [Published 5 October 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>3 August 2012</td>
+    <td>
+<a href="/en/news/correspondence/morelli-to-crocker-03aug12-en">Ambassador Alfredo Morelli to Steve Crocker</a> [Published 28 August 2012]</td>
+    <td>Director | Unit of Technology and Energy, Ministry of Foreign Affairs of Argentina</td>
+    <td>The Use of Patagonia's Region Name for a Closed Brand New gTLD</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>3 August 2012</td>
+    <td>
+<a href="/en/news/correspondence/metalitz-to-pritz-03aug12-en">Steve Metalitz to Kurt Pritz</a> [Published 7 August 2012]</td>
+    <td>President | Intellectual Property Constituency (IPC)</td>
+    <td>Deadline for Public Comments on New gTLD Applications</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>31 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/brights-consulting-inc-to-bachollet-31jul12-en">Brights Consulting, Inc. to Sébastien Bachollet</a> [Published 9 August 2012]</td>
+    <td>Brights Consulting Inc.</td>
+    <td>ICANN Language Services Policy</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>30 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/liodice-to-atallah-30jul12-en">Robert D. Liodice to Akram Atallah</a> [Published 1 August 2012]</td>
+    <td>President and CEO | The Association of National Advertisers (ANA)</td>
+    <td>Extension of the Application Public Comment Window for New gTLDs</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>28 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/stoler-to-crocker-et-al-28jul12-en">Jeffrey Stoler to Steve Crocker, et al.</a> [Published 14 August 2012]</td>
+    <td>Partner | McCarter &amp; English, LLP</td>
+    <td>gTLD Applications of Demand Media, Inc. and Donuts, Inc.</td>
+    <td>
+<a href="/en/news/correspondence/panos-to-atallah-et-al-10sep12-en">Panos to Atallah, Pritz, and Jeffrey</a> [Published 10 September 2012]</td>
+  </tr>
+  <tr>
+    <td>27 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/crocker-to-dryden-27jul12-en">Stephen Crocker to Heather Dryden</a> [Published 31 July 2012]</td>
+    <td>Chair | ICANN Board</td>
+    <td>Processing of Applications for New Generic Top-Level Domains (gTLDs)</td>
+    <td>
+<a href="/en/news/correspondence/dryden-to-crocker-17jun12-en">Dryden to Crocker</a> [Published 18 June 2012]</td>
+  </tr>
+  <tr>
+    <td>26 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/berranger-to-npoc-26jul12-en">Alain Berranger to NPOC</a> [Published 7 August 2012]</td>
+    <td>Member, Board of Directors | CECI</td>
+    <td>Consultation to all NPOC members regarding IFRC's request on "Protection of Red Cross/Red Crescent Designations in the Domain Name System"</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>26 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/ntag-to-chalaby-26jul12-en">NTAG to Cherine Chalaby and Members of the ICANN Board Committee on New gTLDs</a> [Published 26 July 2012]</td>
+    <td>New gTLD Applicant Group</td>
+    <td>Sequencing of New gTLD Applications</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>25 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/battistelli-to-beckstrom-25jul12-en">Benoit Battistelli to Rod Beckstrom</a> [Published 25 July 2012]</td>
+    <td>European Patent Office</td>
+    <td>Expansion of Generic Top Level Domains</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>24 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/al-zoman-to-atallah-24jul12-en">Abdulaziz Al-Zoman to Akram Atallah</a> [Published 7 August 2012]</td>
+    <td>Personal Capacity</td>
+    <td>Important Issues Related to the New gTLD Program</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>21 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/roger-to-gac-21jul12-en">Annalisa Roger to the GAC</a> [Published 2 August 2012]</td>
+    <td>Founder/CEO | The DotGreen Community, Inc.</td>
+    <td>The New gTLD Program and the Public Interest</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>19 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/hott-to-crocker-atallah-19jul12-en">Francisco Vera Hott to Steve Crocker and Akram Atallah</a> [Published 26 October 2012]</td>
+    <td>Vice-President | ONG Derechos Digitales</td>
+    <td>Registrar Accreditation Agreement (RAA) and Privacy</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>16 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/burkov-to-icann-board-16jul12-en">Dmitry Burkov to the ICANN Board</a> [Published 17 July 2012]</td>
+    <td>Chairman of the Board of the Foundation for Assistance for Internet Technologies and Infrastructure Development | Foundation for Assistance for Internet Technologies and Infrastructure Development (FAITID)</td>
+    <td>Support of the SSAC Letter to the ICANN Board</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/crocker-to-faltstrom-25sep12-en">Crocker to Fältström</a> [Published 25 September 2012]</li>
+        <li>
+<a href="/en/news/correspondence/faltstrom-to-icann-board-02jul12-en">Fältström to the ICANN Board</a> [Published 5 July 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>11 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/stelzer-to-atallah-11jul12-en">T. Stelzer to Akram Atallah</a> [Published 17 July 2012]</td>
+    <td>UN Assistant Secretary General | United Nations</td>
+    <td>IGO Domain Names</td>
+    <td>
+<a href="/en/news/correspondence/chehade-to-stelzer-03oct12-en">Chehadé to Stelzer</a> [Published 4 October 2012]</td>
+  </tr>
+    <tr>
+    <td>5 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/simeri-to-beckstrom-05jul12-en">Greg Simeri to Rod Beckstrom</a> [Published 25 January 2013]</td>
+    <td>Personal Capacity</td>
+    <td>Special Characters</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>4 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/van-gelder-to-chehade-atallah-04jul12-en">Stéphane Van Gelder, Chair, GNSO Council, to Fadi Chehadé, CEO, ICANN, and Akram Attalah, Interim CEO, ICANN</a> [Published 4 July 2012]</td>
+    <td>Chair | GNSO Council</td>
+    <td>Welcome to ICANN</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>2 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/faltstrom-to-icann-board-02jul12-en">Patrik Fältström to the ICANN Board</a> [Published 5 July 2012]</td>
+    <td>Chair | SSAC</td>
+    <td>New Generic Top Level Domain (gTLD) Process</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/icann-et-al-to-icann-board-ssac-05nov12-en">ICANN et al. to the ICANN Board and SSAC</a> [Published 9 November 2012]</li>
+        <li>
+<a href="/en/news/correspondence/crocker-to-faltstrom-25sep12-en">Crocker to Fältström</a> [Published 25 September 2012]</li>
+      </ul></td>
+  </tr>
+    <tr>
+    <td>1 July 2012</td>
+    <td>
+<a href="/en/news/correspondence/cid-to-crocker-01jul12-en">Juan Manuel Cid to Stephen D. Crocker</a> [Published 25 January 2013]</td>
+    <td>Province of Cordoba in the Argentinean Republic</td>
+    <td>Objection to Application .cba</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>27 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/stocker-to-crocker-27jun12-en">Ernst Stocker to Steve Crocker</a> [Published 5 November 2012]</td>
+    <td>Government Councillor and Head of the Department for Economic Affairs | The Canton of Zurich</td>
+    <td>New gTLD Program – Batching and the Public Interest: .ZUERICH</td>
+    <td>
+<a href="/en/news/correspondence/willet-to-stocker-02nov12-en">Willett to Stocker</a> [Published 5 November 2012]</td>
+  </tr>
+  <tr>
+    <td>26 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/cowley-to-bachollet-26jun12-en">Leslie Cowley to Sébastien Bachollet</a> [Published 27 June 2012]</td>
+    <td>Chair of the ccNSO | ccNSO</td>
+    <td>Problem with Public Comment Periods</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>25 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/hnarakis-to-chalaby-25jun12-en">Theo Hnarakis to Cherine Chalaby</a> [Published 15 August 2012]</td>
+    <td>CEO and Managing Director | Melbourne IT Ltd</td>
+    <td>Digital Archery Batching Process for New gTLD Applications</td>
+    <td>
+<a href="/en/news/correspondence/hnarakis-to-icann-board-30may12-en">Hnarakis to the ICANN Board New gTLD Program Committee</a> [Published 20 August 2012]</td>
+  </tr>
+  <tr>
+    <td>22 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/clay-to-al-zoman-22jun12-en">Barbara Ann Clay to Dr. Abdulaziz H. Al-Zoman</a> [Published 22 June 2012]</td>
+    <td>Vice President for Communications | ICANN</td>
+    <td>Display of Applied-for Arabic Domain Names</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>22 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/white-to-journalists-22jun12-en">Brad White to Journalists</a> [Published 22 June 2012]</td>
+    <td>Director, Global Media Affairs | ICANN</td>
+    <td>Welcome to ICANN's 44th Public Meeting in Prague</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>19 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/pschierer-to-crocker-19jun12-en">Franz Josef Pschierer to Stephen D. Crocker</a> [Published 5 November 2012]</td>
+    <td>Der IT-Beauftragte der Bayerischen Staatsregierung</td>
+    <td>New gTLD Program – Batching and the Public Interest: .BAYERN</td>
+    <td>
+<a href="/en/news/correspondence/willet-to-pschierer-02nov12-en">Willett to Pschierer</a> [Published 5 November 2012]</td>
+  </tr>
+  <tr>
+    <td>17 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/dryden-to-crocker-17jun12-en">Heather Dryden to Stephen Crocker</a> [Published 18 June 2012]</td>
+    <td>Chair | Governmental Advisory Committee</td>
+    <td>Processing of Applications for New Generic Top-Level Domains (gTLDs)</td>
+
+    <td>
+<a href="/en/news/correspondence/crocker-to-dryden-27jul12-en">Crocker to Dryden</a> [Published 31 July 2012]</td>
+  </tr>
+  <tr>
+    <td>12 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/cowley-to-gerich-12jun12-en">Leslie Cowley to Elise Gerich</a> [Published 26 June 2012]</td>
+    <td>Chair | ccNSO</td>
+    <td>Re: Inquiry About ISO 3166 Two-Letter Codes</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>8 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/amadoz-to-new-gtld-program-committee-08jun12-en">Nacho Amadoz to New gTLD Programme Committee</a> [Published 8 June 2012]</td>
+    <td>Chairman | ECLID</td>
+    <td>New gTLD Batching Process</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>6 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/schwenke-to-tomasso-06jun12-en">Christian Schwenke to Nick Tomasso</a> [Published 8 June 2012]</td>
+    <td>Director of Business Development | Hilton Prague</td>
+    <td>Accommodation blocks for ICANN 44 at the Hilton Prague hotel</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>6 June 2012</td>
+    <td>
+<a href="/en/news/correspondence/kinderis-to-chalaby-06jun12-en">Adrian Kinderis to Cherine Chalaby</a> [Published 8 June 2012]</td>
+    <td>CEO | ARI Registry Services</td>
+    <td>New gTLD Program | Digital Archery and Batching Processes</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>30 May 2012</td>
+    <td>
+<a href="/en/news/correspondence/hnarakis-to-icann-board-30may12-en">Theo Hnarakis to the ICANN Board New gTLD Program Committee</a> [Published 20 August 2012]</td>
+    <td>CEO and Managing Director | Melbourne IT Limited</td>
+    <td>Digital Archery Batching Method</td>
+    <td>
+<a href="/en/news/correspondence/hnarakis-to-chalaby-25jun12-en">Hnarakis to Chalaby</a> [Published 15 August 2012]</td>
+  </tr>
+  <tr>
+    <td>15 May 2012</td>
+    <td>
+<a href="/en/news/correspondence/sbarbaro-to-jeffrey-15may12-en">Philip Sbarbaro to John Jeffrey</a> [Published 25 May 2012]</td>
+    <td>Senior Counsel | Depository, Inc.</td>
+    <td>Depository, Inc.'s Requests to ICANN's for Assistance</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>10 May 2012</td>
+    <td>
+<a href="/en/news/correspondence/beckstrom-to-yin-10may12-en">Rod Beckstrom to Chen Yin</a> [Published 21 May 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>New gTLD Program</td>
+    <td>
+<a href="/en/news/correspondence/yin-to-beckstrom-crocker-19apr12-en">Yin to Beckstrom and Crocker</a> [Published 21 May 2012]</td>
+  </tr>
+  <tr>
+    <td>10 May 2012</td>
+    <td>
+<a href="/zh/news/correspondence/isc-to-icann-10may12-zh">来自中国互联网协会的意见 </a> [Published 10 May 2012]</td>
+    <td>中国互联网协会对</td>
+    <td>新 gTLD 计划分批处理</td>
+    <td>
+<a href="/en/news/correspondence/icann-to-isc-02nov12-en">ICANN to ISC</a> [Published 5 November 2012]</td>
+  </tr>
+  <tr>
+    <td>10 May 2012</td>
+    <td>
+<a href="/en/news/correspondence/isc-to-icann-10may12-en">Internet Society of China to ICANN</a> [Published 10 May 2012]</td>
+    <td>Internet Society of China</td>
+    <td>New gTLD Batching Process</td>
+    <td>
+<a href="/en/news/correspondence/icann-to-isc-02nov12-en">ICANN to ISC</a> [Published 5 November 2012]</td>
+  </tr>
+  <tr>
+    <td>9 May 2012</td>
+    <td>
+<a href="/en/news/correspondence/metalitz-to-icann-board-09may12-en">Steve Metalitz to the ICANN Board New gTLD Program Committee</a> [Published 9 May 2012]</td>
+    <td>President | IPC</td>
+    <td>"Digital Archery" Batching Method</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>7 May 2012</td>
+    <td>
+<a href="/en/news/correspondence/gerich-to-dryden-07may12-en">Elise Gerich to Heather Dryden</a> [Published 22 May 2012]</td>
+    <td>Vice President, IANA and Technical Operations | ICANN</td>
+    <td>Inquiry About ISO 3166 Two-Letter Codes</td>
+    <td>
+<a href="/en/news/correspondence/gerich-to-cowley-07may12-en">Gerich to Cowley</a> [Published 22 May 2012]</td>
+  </tr>
+  <tr>
+    <td>7 May 2012</td>
+    <td>
+<a href="/en/news/correspondence/gerich-to-cowley-07may12-en">Elise Gerich to Lesley Cowley</a> [Published 22 May 2012]</td>
+    <td>Vice President, IANA and Technical Operations | ICANN</td>
+    <td>Inquiry About ISO 3166 Two-Letter Codes</td>
+    <td>
+<a href="/en/news/correspondence/gerich-to-dryden-07may12-en">Gerich to Dryden</a> [Published 22 May 2012]</td>
+  </tr>
+  <tr>
+    <td>7 May 2012</td>
+    <td>
+<a href="/en/news/correspondence/jaffe-to-beckstrom-07may12-en">Daniel L. Jaffe to Rod Beckstrom</a> [Published 7 May 2012]</td>
+    <td>Group Executive Vice President, Government Relations | The Association of National Advertisers (ANA)</td>
+    <td>Defensive Registrations for New gTLDs</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/beckstrom-to-strickling-11jan12-en">Beckstrom to Strickling</a> [Published 11 January 2012]</li>
+        <li>
+<a href="/en/news/correspondence/strickling-to-crocker-03jan12-en">Strickling to Crocker</a> [Published 3 January 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>2 May 2012</td>
+    <td>
+<a href="/en/news/correspondence/pritz-to-kieny-02may12-en">Kurt Pritz to Dr. Marie-Paule Kieny</a> [Published 21 May 2012]</td>
+    <td>Senior Vice President, Stakeholder Relations | ICANN</td>
+    <td>Re: Comments of the World Health Organization to the Internet Corporation for Assigned Names and Numbers (ICANN) on the Top Level Domain Names for Health</td>
+    <td>
+<a href="/en/news/correspondence/kieny-to-beckstrom-et-al-11apr12-en">Kieny to Beckstrom, Crocker, and Pritz</a> [Published 3 May 2012]</td>
+  </tr>
+  <tr>
+    <td>30 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/platter-to-crocker-30apr12-en">Günther Platter to Stephen D. Crocker</a> [Published 5 November 2012]</td>
+    <td>Landeshauptmann | Tirol Unser Land</td>
+    <td>New gTLD Program – Batching and the Public Interest: .TIROL</td>
+    <td>
+<a href="/en/news/correspondence/willet-to-platter-02nov12-en">Willett to Platter</a> [Published 5 November 2012]</td>
+  </tr>
+  <tr>
+    <td>27 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/rysg-to-icann-board-27apr12-en">GNSO Registries Stakeholder Group (RySG) to the ICANN Board of Directors</a> [Published 1 May 2012]</td>
+    <td>GNSO Registries Stakeholder Group (RySG)</td>
+    <td>Response to the Challenge of New TLDs on ICANN Structures and Operation</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>25 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/liodice-to-beckstrom-25apr12-en">Robert D. Liodice to Rod Beckstrom</a> [Published 26 April 2012]</td>
+    <td>President and CEO | The Association of National Advertisers (ANA)</td>
+    <td>Top Level Domain Application System</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>19 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/yin-to-beckstrom-crocker-19apr12-en">Chen Yin to Rod Beckstrom and Steve Crocker</a> [Published 21 May 2012]</td>
+    <td>Director General | China Ministry of Industry and Information Technology</td>
+    <td>New gTLD Program</td>
+    <td>
+<a href="/en/news/correspondence/beckstrom-to-yin-10may12-en">Beckstrom to Yin</a> [Published 21 May 2012]</td>
+  </tr>
+  <tr>
+    <td>18 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/krischenowski-to-new-gtld-program-committee-18apr12-en">Dirk Krischenowski to New gTLD Program Committee </a> [Published 21 May 2012]</td>
+    <td>Founder and Managing Director | dotBERLIN GmbH &amp; Co. KG</td>
+    <td>New gTLD Batching</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>12 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/dryden-to-crocker-icann-board-12apr12-en">Heather Dryden to Steve Crocker and ICANN Board</a> [Published 7 May 2012]</td>
+    <td>Chair | Governmental Advisory Committee (GAC)</td>
+    <td>Protection of Intergovernmental Organisations</td>
+    <td>
+<a href="/en/news/correspondence/crocker-beckstrom-to-dryden-van-gelder-11mar12-en">Crocker and Beckstrom to Dryden and van Gelder</a> [Published 11 March 2012]</td>
+  </tr>
+  <tr>
+    <td>12 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/valente-to-gomes-2-12apr12-en">Karla Valente to Chuck Gomes</a> [Published 12 April 2012]</td>
+    <td>Director gTLD Registry Programs | ICANN</td>
+    <td>Proposal #2012001, DNSSEC Implementation for .name</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>12 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/valente-to-gomes-12apr12-en">Karla Valente to Chuck Gomes</a> [Published 12 April 2012]</td>
+    <td>Director gTLD Registry Programs | ICANN</td>
+    <td>Proposal #2012003 Verisign Redemption Grace Period for .name</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>11 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/kieny-to-beckstrom-et-al-11apr12-en">Dr. Marie-Paule Kieny to Rod Beckstrom, Steve Crocker, and Kurt Pritz</a> [Published 3 May 2012]</td>
+    <td>Assistant Director-General | World Health Organization</td>
+    <td>Comments of the World Health Organization to the Internet Corporation for Assigned Names and Numbers (ICANN) on the Top Level Domain Names for Health</td>
+    <td>
+<a href="/en/news/correspondence/pritz-to-kieny-02may12-en">Pritz to Kieny</a> [Published 21 May 2012]</td>
+  </tr>
+  <tr>
+    <td>11 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/new-gtld-customer-service-to-chapman-11apr12-en">New gTLD Customer Service to Beth Chapman</a> [Published 11 April 2012]</td>
+    <td>ICANN</td>
+    <td>New gTLD Program</td>
+    <td>
+<a href="/en/news/correspondence/chapman-to-beckstrom-30mar12-en">Chapman to Beckstrom</a> [Published 6 April 2012]</td>
+  </tr>
+  <tr>
+    <td>10 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/gibbons-to-pritz-10apr12-en">Jim Gibbons to Kurt Pritz</a> [Published 3 May 2012]</td>
+    <td>President and CEO | Goodwill Industries International, Inc.</td>
+    <td>Request for Exemption/Protection | Goodwill Industries International, Inc.</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>9 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/valente-to-gomes-09apr12-en">Karla Valente to Chuck Gomes</a> [Published 9 April 2012]</td>
+    <td>Director gTLD Registry Programs | ICANN</td>
+    <td>Proposal #2012002, Bulk Transfer after Partial Portfolio Acquisition ("BTAPPA") for .name</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>5 April 2012</td>
+    <td>
+<a href="/en/news/correspondence/new-gtld-customer-service-to-bullock-05apr12-en">New gTLD Customer Service to Jeffrey W. Bullock</a> [Published 9 April 2012]</td>
+    <td>ICANN</td>
+    <td>New gTLD Program</td>
+    <td>
+<a href="/en/news/correspondence/bullock-to-icann-20mar12-en">Bullock to ICANN</a> [Published 6 April 2012]</td>
+  </tr>
+  <tr>
+    <td>30 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/chapman-to-beckstrom-30mar12-en">Beth Chapman to Rod Beckstrom</a> [Published 6 April 2012]</td>
+    <td>Alabama Secretary of State | National Association of Secretaries of State</td>
+    <td>New gTLD Program</td>
+    <td>
+<a href="/en/news/correspondence/new-gtld-customer-service-to-chapman-11apr12-en">New gTLD Customer Service to Chapman</a> [Published 11 April 2012]</td>
+  </tr>
+  <tr>
+    <td>20 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/wood-perriard-to-beckstrom-crocker-20mar12-en">Nick Wood and Caroline Perriard to Rod Beckstrom and Steve Crocker</a> [Published 3 May 2012]</td>
+    <td>Vice-Chair, MARQUES Cyberspace Team, and Council Member, MARQUES; and Chair, MARQUES CyberSpace Team | MARQUES – The Association of European Trade Mark Owners</td>
+    <td>Recognising Co-Existence Agreements in the New gTLD Process: One Way of Reducing Defensive Registration at the Top Level</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>20 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/bullock-to-icann-20mar12-en">Jeffrey W. Bullock to ICANN</a> [Published 6 April 2012]</td>
+    <td>Secretary of State | Delaware Department of State</td>
+    <td>New gTLD Program</td>
+    <td>
+<a href="/en/news/correspondence/new-gtld-customer-service-to-bullock-05apr12-en">New gTLD Customer Service to Bullock</a> [Published 9 April 2012]</td>
+  </tr>
+  <tr>
+    <td>13 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/jagland-to-beckstrom-13mar12-en">Thorbjørn Jagland to Rod Beckstrom</a> [Published 13 March 2012]</td>
+    <td>The Secretary General | Council of Europe</td>
+    <td>Generic Top-Level Domains Program</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/beckstrom-to-igo-counsels-11mar12-en">Beckstrom to Legal Counsel of Public IGOs</a> [Published 11 March 2012]</li>
+        <li>
+<a href="/en/news/correspondence/igo-counsels-to-beckstrom-et-al-13dec11-en">IGO Counsels to Beckstrom et al.</a> [Published 3 March 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>11 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/icann-board-to-rysg-11mar12-en">ICANN Board to the GNSO Registries Stakeholder Group</a> [Published 11 March 2012]</td>
+    <td>ICANN</td>
+    <td>Re: Response to Inquiry on Outstanding Communications | Vertical Integration</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/rysg-to-icann-board-26jan12-en">GNSO RySG to the ICANN Board</a> [Published 26 January 2012]</li>
+        <li>
+<a href="/en/news/correspondence/beckstrom-to-kroes-25oct11-en">Beckstrom to Kroes</a> [Published 25 October 2011]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>11 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/beckstrom-to-igo-counsels-11mar12-en">Rod Beckstrom to the Legal Counsel of Public International Intergovernmental Organizations (IGOs)</a> [Published 11 March 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>Response to Open Intergovernmental Organizations on the Expansion of Generic Top Level Domains</td>
+    <td>
+<a href="/en/news/correspondence/igo-counsels-to-beckstrom-et-al-13dec11-en">IGO Counsels to Beckstrom et al.</a> [Published 3 March 2012]</td>
+  </tr>
+  <tr>
+    <td>11 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/crocker-beckstrom-to-dryden-van-gelder-11mar12-en">Steve Crocker and Rod Beckstrom to Heather Dryden and Stephane van Gelder</a> [Published 11 March 2012]</td>
+    <td>Chairman of the ICANN Board of Directors; President and CEO | ICANN</td>
+    <td>IGO Request Regarding Registration and Use of IGO Names in DNS</td>
+    <td>
+<a href="/en/news/correspondence/dryden-to-crocker-icann-board-12apr12-en">Dryden to Crocker and ICANN Board</a> [Published 7 May 2012]</td>
+  </tr>
+  <tr>
+    <td>9 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/beckstrom-to-de-graaf-mccallum-09mar12-en">Rod Beckstrom to Mr. Gerard de Graaf and Ms. Linsey McCallum, European Commission</a> [Published 9 March 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>Cross Ownership Between Registries and Registrars</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/de-graaf-mccallum-to-beckstrom-crocker-19jan12-en">De Graaf and McCallum to Beckstrom and Crocker</a> [Published 19 January 2012]</li>
+        <li>
+<a href="/en/news/correspondence/beckstrom-to-kroes-25oct11-en">Beckstrom to Kroes</a> [Published 25 October 2011]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>8 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/crocker-to-ibrahim-08mar12-en">Steve Crocker to Elham M.A. Ibrahim</a> [Published 8 March 2012]</td>
+    <td>Chairman of the ICANN Board of Directors | ICANN</td>
+    <td>ICANN Activities in Africa | Response to African Union Communiqué of October 2011</td>
+    <td>
+<a href="/en/news/correspondence/african-union-communique-21oct11-en">African Union Communiqué</a> [Published 10 March 2012]</td>
+  </tr>
+  <tr>
+    <td>5 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/brosda-to-crocker-05mar12-en">Carsten Brosda to Stephen D. Crocker</a> [Published 5 November 2012]</td>
+    <td>Senat der Freien und Hansestadt Hamburg</td>
+    <td>New gTLD Program – Batching and the Public Interest: .HAMBURG</td>
+    <td>
+<a href="/en/news/correspondence/willet-to-brosda-02nov12-en">Willett to Brosda</a> [Published 5 November 2012]</td>
+  </tr>
+  <tr>
+    <td>1 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/quaynor-et-al-to-icann-board-01mar12-en">Nii Quaynor et al. to the ICANN Board</a> [Published 1 March 2012]</td>
+    <td>Former ICANN Board Member, Ghana, et al. | Internet Community</td>
+    <td>ICANN Activities in Africa</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>1 March 2012</td>
+    <td>
+<a href="/en/news/correspondence/atallah-to-enria-01mar12-en">Akram Atallah to Andrea Enria</a> [Published 1 March 2012]</td>
+    <td>COO | ICANN</td>
+    <td>Proposed New gTLDs .bank and .fin</td>
+    <td>
+<a href="/en/news/correspondence/enria-to-clay-20feb12-en">Enria to Clay</a> [Published 20 February 2012]</td>
+  </tr>
+  <tr>
+    <td>27 February 2012</td>
+    <td>
+<a href="/en/news/correspondence/cade-delbianco-to-crocker-beckstrom-27feb12-en">Marilyn Cade and Steve DelBianco to Steve Crocker and Rod Beckstrom</a> [Published 18 May 2012]</td>
+    <td>Chair, Business Constituency; Vice Chair for Policy, Business Constituency | The ICANN GNSO "Business Constituency"</td>
+    <td>New gTLD Program</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>20 February 2012</td>
+    <td>
+<a href="/en/news/correspondence/enria-to-clay-20feb12-en">Andrea Enria to Barbara Clay</a> [Published 20 February 2012]</td>
+    <td>Chairperson | European Banking Authority (EBA)</td>
+    <td>Proposed New gTLDs .bank and .fin</td>
+    <td>
+<a href="/en/news/correspondence/atallah-to-enria-01mar12-en">Atallah to Enria</a> [Published 1 March 2012]</td>
+  </tr>
+  <tr>
+    <td>14 February 2012</td>
+    <td>
+<a href="/en/news/correspondence/enria-to-public-record-14feb12-en">Andrea Enria to the Public Record</a> [Published 14 February 2012]</td>
+    <td>Chairperson | European Banking Authority (EBA)</td>
+    <td>Proposed New gTLDs .bank and .fin</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>8 February 2012</td>
+    <td>
+<a href="/en/news/correspondence/missika-to-crocker-08feb12-en">Jean-Louis Missika to Steve Crocker</a> [Published 3 May 2012]</td>
+    <td>Adjoint au Maire de Paris | Mairie de Paris</td>
+    <td>Consideration of public interest in ICANN's "secondary time stamp" announcement</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>2 February 2012</td>
+    <td>
+<a href="/en/news/correspondence/beckstrom-to-klobuchar-02feb12-en">Rod Beckstrom to Hon. Amy Klobuchar and Hon. Kelly Ayotte, U.S. Senate</a> [Published 2 February 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>Letter Regarding the New gTLD Program</td>
+    <td>
+<a href="/en/news/correspondence/klobuchar-ayotte-to-beckstrom-crocker-22dec11-en">Klobuchar and Ayotte to Beckstrom</a> [Published 22 December 2011]</td>
+  </tr>
+  <tr>
+    <td>2 February 2012</td>
+    <td>
+<a href="/en/news/correspondence/beckstrom-to-upton-02feb12-en">Rod Beckstrom to Hon. Fred Upton, U.S. House of Representatives</a> [Published 2 February 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>Letter Regarding the New gTLD Program</td>
+    <td>
+<a href="/en/news/correspondence/upton-et-al-to-beckstrom-crocker-21dec11-en">Upton et al. to Beckstrom and Crocker</a> [Published 21 December 2011]</td>
+  </tr>
+  <tr>
+    <td>2 February 2012</td>
+    <td>
+<a href="/en/news/correspondence/beckstrom-to-leahy-02feb12-en">Rod Beckstrom to Hon. Patrick Leahy, Hon. Charles E. Grassley, Hon.Lamar Smith, Hon. John Conyers, Jr., U.S. Congress</a> [Published 2 February 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>Letter Regarding the New gTLD Program</td>
+    <td>
+<a href="/en/news/correspondence/leahy-to-beckstrom-27dec11-en">Leahy to Beckstrom</a> [Published 27 December 2011]</td>
+  </tr>
+  <tr>
+    <td>26 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/rysg-to-icann-board-26jan12-en">GNSO Registries Stakeholder Group to the ICANN Board of Directors</a> [Published 26 January 2012]</td>
+    <td>GNSO Registries Stakeholder Group</td>
+    <td>Response to Inquiry on Outstanding Communications | Vertical Integration</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/icann-board-to-rysg-11mar12-en">ICANN Board to GNSO RySG</a> [Published 11 March 2012]</li>
+        <li>
+<a href="/en/news/correspondence/beckstrom-to-kroes-25oct11-en">Beckstrom to Kroes</a> [Published 25 October 2011]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>25 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/pritz-to-boxer-cantwell-et-al-25jan12-en">Kurt Pritz to Hon. Barbara Boxer, Hon. Maria Cantwell, Hon. Claire McCaskill, Hon. Olympia Snowe and Hon. Mark Warner, U.S. Senate</a> [Published 26 January 2012]</td>
+    <td>Senior Vice President, Stakeholder Relations | ICANN</td>
+    <td>ICANN's Expansion of Top Level Domain Names</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>20 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/pritz-to-walden-20jan12-en">Kurt Pritz to the Honorable Greg Walden, U.S. House of Representatives</a> [Published 20 January 2012]</td>
+    <td>Senior Vice President, Stakeholder Relations | ICANN</td>
+    <td>Additional Questions from the December 14, 2011 Hearing Before the House Subcommittee on Communication and Technology, Committee on Energy and Commerce</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>19 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/de-graaf-mccallum-to-beckstrom-crocker-19jan12-en">Gerard de Graaf and Linsey McCallum to Rod Beckstrom and Steve Crocker</a> [Published 19 January 2012]</td>
+    <td>Director; and Acting Director | European Commission</td>
+    <td>Response to Letter to Commissioner Kroes on Vertical Separation Between Registries and Registrars</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/beckstrom-to-de-graaf-mccallum-09mar12-en">Beckstrom to de Graaf and McCallum</a> [Published 9 March 2012]</li>
+        <li>
+<a href="/en/news/correspondence/beckstrom-to-kroes-25oct11-en">Beckstrom to Kroes</a> [Published 25 October 2011]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>11 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/beckstrom-to-strickling-11jan12-en">Rod Beckstrom to Assistant Secretary Lawrence E. Strickling</a> [Published 11 January 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>New gTLDs</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/strickling-to-crocker-04oct12-en">Strickling to Crocker</a> [Published 4 October 2012]</li>
+        <li>
+<a href="/en/news/correspondence/strickling-to-crocker-03jan12-en">Strickling to Crocker</a> [Published 3 January 2012]</li>
+      </ul></td>
+  </tr>
+  <tr>
+    <td>10 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/beckstrom-to-leibowitz-10jan12-en">Rod Beckstrom to FTC Chairman Jon Leibowitz and Commissioners Rosch, Ramirez and Brill</a> [Published 10 January 2012]</td>
+    <td>President and CEO | ICANN</td>
+    <td>Re: ICANN's New gTLD Program</td>
+    <td>
+<a href="/en/news/correspondence/ftc-to-beckstrom-crocker-16dec11-en">FTC to Beckstrom</a> [Published 16 December 2011]</td>
+  </tr>
+  <tr>
+    <td>9 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/liodice-to-icann-09jan12-en">Robert Liodice to ICANN and Members of the ICANN Board</a> [Published 9 January 2012]</td>
+    <td>The Association of National Advertisers (ANA)</td>
+    <td>New gTLD Program</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>6 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/campbell-to-crocker-06jan12-en">Colin Campbell to Steve Crocker</a> [Published 3 May 2012]</td>
+    <td>CEO and Chairman | .CLUB Domains, LLC</td>
+    <td>New gTLD Program</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>6 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/ambler-et-al-to-crocker-06jan12-en">Christopher Ambler, et al. to Steve Crocker</a> [Published 3 May 2012]</td>
+    <td>Founder/CTO, Image Online Design/.Web Internet Domain Registry | 26 Private Sector Supporters of New gTLD program</td>
+    <td>New gTLD Program</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>4 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/igo-counsels-to-beckstrom-crocker-pritz-04jan12-en">IGO Counsel to Rod Beckstrom, Steve Crocker and Kurt Pritz</a> [Published 4 January 2012]</td>
+    <td>Legal Counsels of the Public International Intergovernmental Organizations (IGO)</td>
+    <td>Protection Against the Misleading Use of the Names and Acronyms of International Intergovernmental Organizations in the Domain Name System</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>3 January 2012</td>
+    <td>
+<a href="/en/news/correspondence/strickling-to-crocker-03jan12-en">Lawrence Strickling to Steve Crocker</a> [Published 3 January 2012]</td>
+    <td>The Assistant Secretary for Communications and Information | United States Department of Commerce</td>
+    <td>New gTLD Program</td>
+    <td><ul>
+        <li>
+<a href="/en/news/correspondence/strickling-to-crocker-04oct12-en">Strickling to Crocker</a> [Published 4 October 2012]</li>
+        <li>
+<a href="/en/news/correspondence/beckstrom-to-strickling-11jan12-en">Beckstrom to Strickling</a> [Published 11 January 2012]</li>
+      </ul></td>
+  </tr>
+</table>
+<p> </p>
+<h3>
+<a href="/resources/pages/correspondence-2017">2017</a> | <a href="/resources/pages/correspondence-2016">2016</a> | <a href="/resources/pages/correspondence-2015">2015</a> | <a href="/resources/pages/2014-2014-01-24-en">2014</a> | <a href="/en/news/correspondence/2013">2013</a> | <a href="/en/news/correspondence/2012">2012</a> | <a href="/en/news/correspondence/2011">2011</a> | <a href="/en/news/correspondence/2010">2010</a> | <a href="/en/news/correspondence/2009">2009</a> | <a href="/en/news/correspondence/2008">2008</a> | <a href="/en/news/correspondence/2007">2007</a> | <a href="/en/news/correspondence/2006">2006</a> | <a href="/en/news/correspondence/2005">2005</a> | <a href="/en/news/correspondence/2004">2004</a> | <a href="/en/news/correspondence/2003">2003</a> | <a href="/en/news/correspondence/2002">2002</a> | <a href="/en/news/correspondence/2001">2001</a> | <a href="/en/news/correspondence/2000">2000</a> | <a href="/en/news/correspondence/1999">1999</a> | <a href="/en/news/correspondence/1998">1998</a>
+</h3>
+
+
+
+
+
+
+
+</body></html></div></section></div></div></section></main><footer class="MainFooter" external_links="" id="main_footer"><section class="FooterDisclaimer" style="display: none">ICANN is not responsible for profile content or verification of user details.</section><section class="FooterSocial"><ul><li><a href="http://www.youtube.com/icannnews"><i class="fa fa-youtube"></i>You Tube</a></li><li><a href="https://www.twitter.com/icann"><i class="fa fa-twitter"></i>Twitter</a></li><li><a href="https://www.linkedin.com/company/icann"><i class="fa fa-linkedin"></i>LinkedIn</a></li><li><a href="http://www.flickr.com/photos/icann"><i class="fa fa-flickr"></i>Flickr</a></li><li><a href="http://www.facebook.com/icannorg"><i class="fa fa-facebook"></i>Facebook</a></li><li><a href="/en/news/rss"><i class="fa fa-rss"></i>RSS Feeds</a></li><li><a href="https://community.icann.org"><i class="fa fa-user"></i>Community Wiki</a></li><li><a href="/news/blog"><i class="fa fa-pencil"></i>ICANN Blog </a></li></ul></section><div class="MainFooter-content"><nav class="FooterMenu"><div class="FooterMenu-item"><h3 class="FooterMenu-title">Who We Are</h3><ul class="FooterSubmenu"><li><a href="/get-started">Get Started</a></li><li><a href="/en/about/learning">Learning</a></li><li><a href="/en/about/participate">Participate</a></li><li><a href="https://www.icann.org/resources/pages/groups-2012-02-06-en">Groups</a></li><li><a href="/resources/pages/board-of-directors-2014-03-19-en">Board</a></li><li><a href="/presidents-corner">President&#39;s Corner</a></li><li><a href="/en/about/staff">Staff</a></li><li><a href="https://chj.tbe.taleo.net/chj06/ats/careers/v2/searchResults?org=ICANN&amp;cws=37">Careers</a></li><li><a href="/en/news/newsletter">Newsletter</a></li><li><a href="https://www.icann.org/development-and-public-responsibility">Development and Public Responsibility</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Contact Us</h3><ul class="FooterSubmenu"><li><a href="https://forms.icann.org/en/contact">Offices</a></li><li><a href="/resources/pages/customer-support-2015-06-22-en">Global Support</a></li><li><a href="/about/staff/security">Security Team</a></li><li><a href="/en/contact/pgp-keys">PGP Keys</a></li><li><a href="/contact/certificate-authority">Certificate Authority</a></li><li><a href="/resources/pages/contact-f2-2012-02-25-en">Registry Liaison</a></li><li><a href="https://forms.icann.org/en/about/aoc-review/contact">Specific Reviews</a></li><li><a href="http://forms.icann.org/en/groups/reviews/contact">Organizational Reviews</a></li><li><a href="http://forms.icann.org/en/contact/speakers">Request a Speaker</a></li><li><a href="/en/news/press">For Journalists</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Accountability &amp; Transparency</h3><ul class="FooterSubmenu"><li><a href="/en/news/in-focus/accountability/mechanisms">Accountability Mechanisms</a></li><li><a href="/resources/pages/irp-2012-02-25-en">Independent Review Process</a></li><li><a href="/groups/board/governance/reconsideration">Request for Reconsideration</a></li><li><a href="/help/ombudsman">Ombudsman</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Governance</h3><ul class="FooterSubmenu"><li><a href="/en/about/governance">Documents</a></li><li><a href="/en/about/agreements">Agreements</a></li><li><a href="/resources/reviews/aoc">Specific Reviews</a></li><li><a href="/about/annual-report">Annual Report</a></li><li><a href="/en/about/financials">Financials</a></li><li><a href="/en/about/transparency">Document Disclosure</a></li><li><a href="/en/about/planning">Planning</a></li><li><a href="/progress">KPI Dashboard</a></li><li><a href="/en/news/rfps">RFPs</a></li><li><a href="/en/news/litigation">Litigation</a></li><li><a href="/en/news/correspondence">Correspondence</a></li></ul></div><div class="FooterMenu-item"><h3 class="FooterMenu-title">Help</h3><ul class="FooterSubmenu"><li><a href="/en/help/dispute-resolution">Dispute Resolution</a></li><li><a href="/en/help/dndr">Domain Name Dispute Resolution</a></li><li><a href="/en/help/name-collision">Name Collision</a></li><li><a href="/en/news/announcements/announcement-06mar07-en.htm">Registrar Problems</a></li><li><a href="http://whois.icann.org/">WHOIS</a></li></ul></div></nav></div><section class="copyright"><p><span>© 2016 Internet Corporation For Assigned Names and Numbers.</span><span><a href="/en/help/privacy">Privacy Policy</a></span><span><a href="/en/help/tos">Terms of Service</a></span><span><a href="/en/help/privacy-cookie-policy">Cookie Policy</a></span></p></section></footer><script src="/assets/application-94c6aceae2068177e83af77b024547c1.js"></script><script type="text/javascript">if (self == top) {
+ var theBody = document.getElementsByTagName('body')[0];
+ theBody.style.display = "block"
+} else {
+ top.location = self.location
+} </script><script src="/glossary_terms.js"></script><div class="cookie-notification"><div class="wrapper"><h4>A note about tracking cookies:</h4><p>This site uses cookies to deliver an efficient user experience and to help us see how the site is used. If you would like to read more about the use of cookies, <a href='/en/help/privacy-cookie-policy'>click here</a></p><p class="cookie-notification-notice">This notice is intended to appear only the first time you visit the site on any computer.<span class="js-close-cookie-notification"><i class="close-icon fa fa-times"></i>OK</span></p></div></div><div class="acronym-helper"><div class="wrapper"><div class="acronym-helper-term">Domain Name System</div><div class="acronym-helper-definition">Internationalized Domain Name ,IDN,"IDNs are domain names that include characters used in the local representation of languages that are not written with the twenty-six letters of the basic Latin alphabet ""a-z"". An IDN can contain Latin letters with diacritical marks, as required by many European languages, or may consist of characters from non-Latin scripts such as Arabic or Chinese. Many languages also use other types of digits than the European ""0-9"". The basic Latin alphabet together with the European-Arabic digits are, for the purpose of domain names, termed ""ASCII characters"" (ASCII = American Standard Code for Information Interchange). These are also included in the broader range of ""Unicode characters"" that provides the basis for IDNs. The ""hostname rule"" requires that all domain names of the type under consideration here are stored in the DNS using only the ASCII characters listed above, with the one further addition of the hyphen ""-"". The Unicode form of an IDN therefore requires special encoding before it is entered into the DNS. The following terminology is used when distinguishing between these forms: A domain name consists of a series of ""labels"" (separated by ""dots""). The ASCII form of an IDN label is termed an ""A-label"". All operations defined in the DNS protocol use A-labels exclusively. The Unicode form, which a user expects to be displayed, is termed a ""U-label"". The difference may be illustrated with the Hindi word for ""test"" — परीका — appearing here as a U-label would (in the Devanagari script). A special form of ""ASCII compatible encoding"" (abbreviated ACE) is applied to this to produce the corresponding A-label: xn--11b5bs1di. A domain name that only includes ASCII letters, digits, and hyphens is termed an ""LDH label"". Although the definitions of A-labels and LDH-labels overlap, a name consisting exclusively of LDH labels, such as""icann.org"" is not an IDN."</div></div></div><script src="/assets/resource_pages-b62e0da66a9e2914e4761737fc1c05aa.js"></script><script type="text/javascript">$(document).on("click", ".js-expand-menu", function() {
+  $this = $(this);
+  $ul = $this.closest("li").find("ul").first();
+  $link = $this.siblings().first()
+
+  if ($link.hasClass('is-opened')) {
+    $ul.slideUp('fast', 'easeInOutQuart')
+    $this.removeClass("js-collapsibleCollapsed")
+    $link.removeClass('is-opened')
+    $this.toggleClass('arrow-expanded')
+  } else {
+    // need to have a native hide call and remove the hidden class so sliding works
+    $ul.hide()
+    $ul.removeClass('hidden')
+    $this.addClass("js-collapsibleCollapsed")
+    $link.addClass('is-opened')
+    $this.toggleClass('arrow-expanded')
+    $ul.slideDown('fast', 'easeInOutQuart')
+  }
+});</script><script type="text/javascript">$('a').on('click', function(event) {
+  el = $(this);
+  var filetypes = /\.(zip|exe|dmg|pdf|csv|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+  href = (typeof(el.attr('href')) != 'undefined' ) ? el.attr('href') :"";
+  var is_same_domain = href.match(document.domain.split('.').reverse()[0]);
+  console.log("clicked a link");
+  if(href.match("www.icann.org") && href.match(filetypes))
+  {
+    ga('send', 'event', 'File', 'download', event.target.href);
+  }
+});</script></body></html>

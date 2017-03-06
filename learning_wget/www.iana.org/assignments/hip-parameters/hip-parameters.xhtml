@@ -1,0 +1,2109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Host Identity Protocol (HIP) Parameters</title>
+  </head>
+  <body>
+    <h1>Host Identity Protocol (HIP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2007-12-07</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-02-23</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="hip-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="hip-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#hip-parameters-1">Packet Types</a>
+      </li>
+      <li>
+        <a href="#hip-parameters-2">HIP Version</a>
+      </li>
+      <li>
+        <a href="#hip-parameters-4">Parameter Types</a>
+      </li>
+      <li>
+        <a href="#hip-parameters-5">Group IDs</a>
+      </li>
+      <li>
+        <a href="#hip-parameters-6">Suite IDs</a>
+      </li>
+      <li>
+        <a href="#hit-suite-id">HIT Suite ID</a>
+      </li>
+      <li>
+        <a href="#hip-parameters-7">DI-Types</a>
+      </li>
+      <li>
+        <a href="#hip-parameters-9">Notify Message Types</a>
+      </li>
+      <li>
+        <a href="#hip-parameters-11">Registration Types</a>
+      </li>
+      <li>
+        <a href="#hip-parameters-13">Registration Failure Types</a>
+      </li>
+      <li>
+        <a href="#nat-traversal">HIP NAT Traversal Modes</a>
+      </li>
+      <li>
+        <a href="#via-flags">HIP Via Flags</a>
+      </li>
+      <li>
+        <a href="#certificate-types">HIP Certificate Types</a>
+      </li>
+      <li>
+        <a href="#transport-modes">HIP Transport Modes</a>
+      </li>
+      <li>
+        <a href="#esp-transform-suite-ids">ESP Transform Suite IDs</a>
+      </li>
+      <li>
+        <a href="#hip-cipher-id">HIP Cipher ID</a>
+      </li>
+      <li>
+        <a href="#hi-algorithm">HI Algorithm</a>
+        <ul>
+          <li>
+            <a href="#ecdsa-curve-label">ECDSA Curve Label</a>
+          </li>
+          <li>
+            <a href="#ecdsa-low-curve-label">ECDSA_LOW Curve Label</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2><a name="hip-parameters-1" id="hip-parameters-1"></a>Packet Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hip-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Packet Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>I1 - the HIP Initiator Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>R1 - the HIP Responder Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>I2 - the Second HIP Initiator Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>R2 - the Second HIP Responder Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>UPDATE - the HIP Update Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>NOTIFY - the HIP Notify Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>CLOSE - the HIP Association Closing Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>CLOSE_ACK - the HIP Closing Acknowledgment Packet</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>HIP Distributed Hash Table Resource Record (HDRR)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6537">RFC6537</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21-31</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>HIP_DATA</td>
+          <td>[<a href="http://www.iana.org/go/rfc6078">RFC6078</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hip-parameters-2" id="hip-parameters-2"></a>HIP Version</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hip-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hip-parameters-4" id="hip-parameters-4"></a>Parameter Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-hip-parameters-4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-1023</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">1024-32767</td>
+          <td>Specification Required</td>
+        </tr>
+        <tr>
+          <td align="center">32768-49151</td>
+          <td>Reserved for Private Use</td>
+        </tr>
+        <tr>
+          <td align="center">49152-61439</td>
+          <td>Specification Required</td>
+        </tr>
+        <tr>
+          <td align="center">61440-65535</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-hip-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Parameter Type</th>
+          <th>Length</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-64</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65</td>
+          <td>ESP_INFO</td>
+          <td>12</td>
+          <td>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">66-127</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>R1_Counter (v1 only)</td>
+          <td>12</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>R1_COUNTER</td>
+          <td>12</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130-192</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">193</td>
+          <td>LOCATOR_SET</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc8046">RFC8046</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">194-256</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">257</td>
+          <td>PUZZLE</td>
+          <td>12</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">258-320</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">321</td>
+          <td>SOLUTION</td>
+          <td>20</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">322-384</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">385</td>
+          <td>SEQ</td>
+          <td>4</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">386-448</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">449</td>
+          <td>ACK</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">450-510</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">511</td>
+          <td>DH_GROUP_LIST</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">512</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">513</td>
+          <td>DIFFIE_HELLMAN</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">514-576</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">577</td>
+          <td>HIP_TRANSFORM (v1 only)</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">578</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">579</td>
+          <td>HIP_CIPHER</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">580-607</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">608</td>
+          <td>NAT_TRAVERSAL_MODE</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">609</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">610</td>
+          <td>TRANSACTION_PACING</td>
+          <td>4</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">611-640</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">641</td>
+          <td>ENCRYPTED</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">642-704</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">705</td>
+          <td>HOST_ID</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">706-714</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">715</td>
+          <td>HIT_SUITE_LIST</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">716-767</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">768</td>
+          <td>CERT</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>][<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">769-831</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">832</td>
+          <td>NOTIFICATION</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">833-896</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">897</td>
+          <td>ECHO_REQUEST_SIGNED</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">898-929</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">930</td>
+          <td>REG_INFO</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">931</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">932</td>
+          <td>REG_REQUEST</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">933</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">934</td>
+          <td>REG_RESPONSE</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">935</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">936</td>
+          <td>REG_FAILED</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">937-949</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">950</td>
+          <td>REG_FROM</td>
+          <td>20</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">951-960</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">961</td>
+          <td>ECHO_RESPONSE_SIGNED</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">962-2048</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">2049</td>
+          <td>TRANSPORT_FORMAT_LIST</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2050-4094</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4095</td>
+          <td>ESP_TRANSFORM</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4096-4480</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4481</td>
+          <td>SEQ_DATA</td>
+          <td>4</td>
+          <td>[<a href="http://www.iana.org/go/rfc6078">RFC6078</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4482-4544</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4545</td>
+          <td>ACK_DATA</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc6078">RFC6078</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4546-4576</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4577</td>
+          <td>PAYLOAD_MIC</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc6078">RFC6078</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4578-4579</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4580</td>
+          <td>TRANSACTION_ID</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc6078">RFC6078</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4581-4591</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4592</td>
+          <td>OVERLAY_ID</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc6079">RFC6079</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4593-4600</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">4601</td>
+          <td>ROUTE_DST</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc6028">RFC6028</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4602-7679</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7680</td>
+          <td>HIP_TRANSPORT_MODE</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc6261">RFC6261</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7681-32767</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32768-49151</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">49152-61504</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">61505</td>
+          <td>HIP_MAC</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">61506-61568</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">61569</td>
+          <td>HIP_MAC_2</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">61570-61632</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">61633</td>
+          <td>HIP_SIGNATURE_2</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">61634-61696</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">61697</td>
+          <td>HIP_SIGNATURE</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">61698-63660</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">63661</td>
+          <td>ECHO_REQUEST_UNSIGNED</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">63662-63424</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">63425</td>
+          <td>ECHO_RESPONSE_UNSIGNED</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">63426-63997</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">63998</td>
+          <td>RELAY_FROM</td>
+          <td>20</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">63999-64001</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">64002</td>
+          <td>RELAY_TO</td>
+          <td>20</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">64003-64010</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">64011</td>
+          <td>OVERLAY_TTL</td>
+          <td>4</td>
+          <td>[<a href="http://www.iana.org/go/rfc6079">RFC6079</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">64012-64016</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">64017</td>
+          <td>ROUTE_VIA</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc6028">RFC6028</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">64018-65497</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65498</td>
+          <td>FROM</td>
+          <td>16</td>
+          <td>[<a href="http://www.iana.org/go/rfc8004">RFC8004</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65499</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65500</td>
+          <td>RVS_HMAC</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc8004">RFC8004</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65501</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65502</td>
+          <td>VIA_RVS</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc8004">RFC8004</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65503-65519</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">65520</td>
+          <td>RELAY_HMAC</td>
+          <td>variable</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65521-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hip-parameters-5" id="hip-parameters-5"></a>Group IDs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-parameters-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hip-parameters-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Group ID</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>384-bit group (DEPRECATED)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>OAKLEY well known group 1 (DEPRECATED)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>1536-bit MODP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>3072-bit MODP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>6144-bit MODP group (DEPRECATED)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>8192-bit MODP group (DEPRECATED)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>NIST P-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>NIST P-384</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>NIST P-521</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>SECP160R1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>2048-bit MODP group</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hip-parameters-6" id="hip-parameters-6"></a>Suite IDs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Registry closed per [<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-parameters-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hip-parameters-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Suite ID</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>AES-CBC with HMAC-SHA1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>3DES-CBC with HMAC-SHA1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>3DES-CBC with HMAC-MD5</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>BLOWFISH-CBC with HMAC-SHA1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>NULL-ENCRYPT with HMAC-SHA1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>NULL-ENCRYPT with HMAC-MD5</td>
+          <td>[<a href="http://www.iana.org/go/rfc5201">RFC5201</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hit-suite-id" id="hit-suite-id"></a>HIT Suite ID</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hit-suite-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hit-suite-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Suite ID</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>RSA,DSA/SHA-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ECDSA/SHA-384</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>ECDSA_LOW/SHA-1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hip-parameters-7" id="hip-parameters-7"></a>DI-Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-parameters-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hip-parameters-7" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>DI-Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>none included</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>FQDN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>NAI</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hip-parameters-9" id="hip-parameters-9"></a>Notify Message Types</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Notify Message Type values 1-10 are used for informing about
+errors in packet structures, values 11-20 for informing about
+problems in parameters containing cryptographic related material,
+values 21-30 for informing about problems in authentication or
+packet integrity verification.  Parameter numbers above 30 can be
+used for informing about other types of errors or events.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-parameters-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-hip-parameters-9-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-50</td>
+          <td>IETF Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">51-8191</td>
+          <td>Specification Required</td>
+          <td>error types</td>
+        </tr>
+        <tr>
+          <td align="center">8192-16383</td>
+          <td>Reserved for Private Use</td>
+          <td>error types</td>
+        </tr>
+        <tr>
+          <td align="center">16384-40959</td>
+          <td>Specification Required</td>
+          <td>status types</td>
+        </tr>
+        <tr>
+          <td align="center">40960-65535</td>
+          <td>Reserved for Private Use</td>
+          <td>status types</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-hip-parameters-9" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Notify Message Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>UNSUPPORTED_CRITICAL_PARAMETER_TYPE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-6</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>INVALID_SYNTAX</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-13</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>NO_DH_PROPOSAL_CHOSEN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>INVALID_DH_CHOSEN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>NO_HIP_PROPOSAL_CHOSEN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>INVALID_HIP_CIPHER_CHOSEN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>NO_ESP_PROPOSAL_CHOSEN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>INVALID_ESP_TRANSFORM_CHOSEN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>UNSUPPORTED_HIT_SUITE</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21-23</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>AUTHENTICATION_FAILED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>CHECKSUM_FAILED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>HIP_MAC_FAILED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29-31</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>ENCRYPTION_FAILED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33-39</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">40</td>
+          <td>INVALID_HIT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">42</td>
+          <td>BLOCKED_BY_POLICY</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">43</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">44</td>
+          <td>RESPONDER_BUSY_PLEASE_RETRY</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">45</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">46</td>
+          <td>LOCATOR_TYPE_UNSUPPORTED</td>
+          <td>[<a href="http://www.iana.org/go/rfc8046">RFC8046</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">47</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">48</td>
+          <td>CREDENTIALS_REQUIRED</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">49</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">50</td>
+          <td>INVALID_CERTIFICATE</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">51</td>
+          <td>REG_REQUIRED</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">52-59</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">60</td>
+          <td>NO_VALID_NAT_TRAVERSAL_MODE_PARAMETER</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">61</td>
+          <td>CONNECTIVITY_CHECKS_FAILED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">62</td>
+          <td>MESSAGE_NOT_RELAYED</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">63-69</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">70</td>
+          <td>OVERLAY_TTL_EXCEEDED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6079">RFC6079</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">71-89</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">90</td>
+          <td>UNKNOWN_NEXT_HOP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6028">RFC6028</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">91-99</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">100</td>
+          <td>NO_VALID_HIP_TRANSPORT_MODE</td>
+          <td>[<a href="http://www.iana.org/go/rfc6261">RFC6261</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">101-8191</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8192-16383</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16384</td>
+          <td>I2_ACKNOWLEDGEMENT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16385-40959</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">40960-65535</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hip-parameters-11" id="hip-parameters-11"></a>Registration Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-parameters-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-hip-parameters-11-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-200</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">201-255</td>
+          <td>Reserved for Private Use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-hip-parameters-11" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Registration Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>RENDEZVOUS</td>
+          <td>[<a href="http://www.iana.org/go/rfc8004">RFC8004</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>RELAY_UDP_HIP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-255</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hip-parameters-13" id="hip-parameters-13"></a>Registration Failure Types</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-parameters-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-hip-parameters-13-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-200</td>
+          <td>IETF Review</td>
+        </tr>
+        <tr>
+          <td align="center">201-255</td>
+          <td>Reserved for Private Use</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-hip-parameters-13" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Registration Failure Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Registration requires additional credentials</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Registration type unavailable</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Insufficient resources</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Invalid certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Bad certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Unsupported certificate</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Certificate expired</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Certificate other</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Unknown CA</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-200</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">201-255</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8003">RFC8003</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="nat-traversal" id="nat-traversal"></a>HIP NAT Traversal Modes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="nat-traversal.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-nat-traversal" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Identifier</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>UDP-ENCAPSULATION</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ICE-STUN-UDP</td>
+          <td>[<a href="http://www.iana.org/go/rfc5770">RFC5770</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="via-flags" id="via-flags"></a>HIP Via Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6028">RFC6028</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="via-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-via-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Position</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>SYMMETRIC</td>
+          <td>[<a href="http://www.iana.org/go/rfc6028">RFC6028</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>MUST_FOLLOW</td>
+          <td>[<a href="http://www.iana.org/go/rfc6028">RFC6028</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="certificate-types" id="certificate-types"></a>HIP Certificate Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="certificate-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-certificate-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type Number</th>
+          <th>Cert Format</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>X.509 v3</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Obsoleted</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Hash and URL of X.509 v3</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Obsoleted</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>LDAP URL of X.509 v3</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Obsoleted</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Distinguished Name of X.509 v3</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Obsoleted</td>
+          <td>[<a href="http://www.iana.org/go/rfc8002">RFC8002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="transport-modes" id="transport-modes"></a>HIP Transport Modes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6261">RFC6261</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="transport-modes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-transport-modes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc6261">RFC6261</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>DEFAULT</td>
+          <td>[<a href="http://www.iana.org/go/rfc6261">RFC6261</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>ESP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6261">RFC6261</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>ESP-TCP</td>
+          <td>[<a href="http://www.iana.org/go/rfc6261">RFC6261</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="esp-transform-suite-ids" id="esp-transform-suite-ids"></a>ESP Transform Suite IDs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="esp-transform-suite-ids.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-esp-transform-suite-ids" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>AES-128-CBC with HMAC-SHA1</td>
+          <td>[<a href="http://www.iana.org/go/rfc3602">RFC3602</a>][<a href="http://www.iana.org/go/rfc2404">RFC2404</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>DEPRECATED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>DEPRECATED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>DEPRECATED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>DEPRECATED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>DEPRECATED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7402">RFC7402</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>NULL with HMAC-SHA-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc2410">RFC2410</a>][<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>AES-128-CBC with HMAC-SHA-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc3602">RFC3602</a>][<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>AES-256-CBC with HMAC-SHA-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc3602">RFC3602</a>][<a href="http://www.iana.org/go/rfc4868">RFC4868</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>AES-CCM-8</td>
+          <td>[<a href="http://www.iana.org/go/rfc4309">RFC4309</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>AES-CCM-16</td>
+          <td>[<a href="http://www.iana.org/go/rfc4309">RFC4309</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>AES-GCM with an 8 octet ICV</td>
+          <td>[<a href="http://www.iana.org/go/rfc4106">RFC4106</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>AES-GCM with a 16 octet ICV</td>
+          <td>[<a href="http://www.iana.org/go/rfc4106">RFC4106</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>AES-CMAC-96</td>
+          <td>[<a href="http://www.iana.org/go/rfc4493">RFC4493</a>][<a href="http://www.iana.org/go/rfc4494">RFC4494</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>AES-GMAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc4543">RFC4543</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hip-cipher-id" id="hip-cipher-id"></a>HIP Cipher ID</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hip-cipher-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hip-cipher-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Cipher ID</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>NULL-ENCRYPT</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>AES-128-CBC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>AES-256-CBC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hi-algorithm" id="hi-algorithm"></a>HI Algorithm</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="hi-algorithm.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-hi-algorithm" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Algorithm Profile</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>RESERVED</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>NULL-ENCRYPT</td>
+          <td>[<a href="http://www.iana.org/go/rfc2410">RFC2410</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>DSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>RSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>ECDSA</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>ECDSA_LOW</td>
+          <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="ecdsa-curve-label" id="ecdsa-curve-label"></a>ECDSA Curve Label</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF Review</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ecdsa-curve-label.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ecdsa-curve-label" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Curve</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>RESERVED</td>
+            <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>NIST P-256</td>
+            <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>NIST P-384</td>
+            <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3-65535</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="ecdsa-low-curve-label" id="ecdsa-low-curve-label"></a>ECDSA_LOW Curve Label</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF Review</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="ecdsa-low-curve-label.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-ecdsa-low-curve-label" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Curve</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>RESERVED</td>
+            <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>SECP160R1</td>
+            <td>[<a href="http://www.iana.org/go/rfc7401">RFC7401</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2-65535</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

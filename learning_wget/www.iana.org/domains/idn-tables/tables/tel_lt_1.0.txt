@@ -1,0 +1,70 @@
+﻿TLD: TEL
+Language Tag: lt
+Language Description: Lithuanian
+Version: 1.0
+Effective Date: 15 JUNE 2010
+
+Registry: Telnic Ltd.
+Contact: Vladimir Shadrunov vshadrunov@telnic.org
+Address: 37 Percy str., W1T 2DJ London UK
+Telephone: +44-20-7467-6450
+Website: http://www.telnic.org/
+
+Relevant Policy Document URL: http://www.telnic.org/downloads/policies/IDN_Policy_Lithuanian.pdf
+
+The table below lists the characters allowed in the Unicode representation of IDNs
+associated with the Lithuanian language. The ‘#’ symbol denotes start of a comment that
+continues to the end of line.
+
+Registrants are advised to carefully consider the potential confusion over the perception
+of equivalence between an accented Latin character and a sequence of other Latin
+characters (with or without accents.) There exists no equivalence rule that can be applied
+universally as any such mappings are generally dependent on the language, culture and
+context in which an IDN is used.
+
+U+002D # HYPHEN-MINUS (-)
+U+0030 # DIGIT ZERO (0)
+U+0031 # DIGIT ONE (1)
+U+0032 # DIGIT TWO (2)
+U+0033 # DIGIT THREE (3)
+U+0034 # DIGIT FOUR (4)
+U+0035 # DIGIT FIVE (5)
+U+0036 # DIGIT SIX (6)
+U+0037 # DIGIT SEVEN (7)
+U+0038 # DIGIT EIGHT (8)
+U+0039 # DIGIT NINE (9)
+U+0061 # LATIN SMALL LETTER A (a)
+U+0062 # LATIN SMALL LETTER B (b)
+U+0063 # LATIN SMALL LETTER C (c)
+U+0064 # LATIN SMALL LETTER D (d)
+U+0065 # LATIN SMALL LETTER E (e)
+U+0066 # LATIN SMALL LETTER F (f)
+U+0067 # LATIN SMALL LETTER G (g)
+U+0068 # LATIN SMALL LETTER H (h)
+U+0069 # LATIN SMALL LETTER I (i)
+U+006A # LATIN SMALL LETTER J (j)
+U+006B # LATIN SMALL LETTER K (k)
+U+006C # LATIN SMALL LETTER L (l)
+U+006D # LATIN SMALL LETTER M (m)
+U+006E # LATIN SMALL LETTER N (n)
+U+006F # LATIN SMALL LETTER O (o)
+U+0070 # LATIN SMALL LETTER P (p)
+U+0071 # LATIN SMALL LETTER Q (q)
+U+0072 # LATIN SMALL LETTER R (r)
+U+0073 # LATIN SMALL LETTER S (s)
+U+0074 # LATIN SMALL LETTER T (t)
+U+0075 # LATIN SMALL LETTER U (u)
+U+0076 # LATIN SMALL LETTER V (v)
+U+0077 # LATIN SMALL LETTER W (w)
+U+0078 # LATIN SMALL LETTER X (x)
+U+0079 # LATIN SMALL LETTER Y (y)
+U+007A # LATIN SMALL LETTER Z (z)
+U+0105 # LATIN SMALL LETTER A WITH OGONEK (ą)
+U+010D # LATIN SMALL LETTER C WITH CARON (č)
+U+0117 # LATIN SMALL LETTER E WITH DOT ABOVE (ė)
+U+0119 # LATIN SMALL LETTER E WITH OGONEK (ę)
+U+012F # LATIN SMALL LETTER I WITH OGONEK (į)
+U+0161 # LATIN SMALL LETTER S WITH CARON (š)
+U+016B # LATIN SMALL LETTER U WITH MACRON (ū)
+U+0173 # LATIN SMALL LETTER U WITH OGONEK (ų)
+U+017E # LATIN SMALL LETTER Z WITH CARON (ž)

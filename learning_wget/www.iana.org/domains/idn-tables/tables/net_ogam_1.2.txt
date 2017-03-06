@@ -1,0 +1,68 @@
+###############################################################
+#
+# TLD:            NET
+# Script:         Ogham
+# Version Number: 1.2
+# Effective Date: October 25th, 2014
+# Registry:       Verisign, Inc.
+# Address:        12061 Bluemont Way, Reston VA 20190, USA
+# Telephone:      +1 (703) 925-6999
+# Email:          info@verisign-grs.com
+# URL:            http://www.verisigninc.com
+#
+###############################################################
+
+
+###############################################################
+#
+# Codepoints allowed from the Ogham script.
+#
+###############################################################
+U+1681	# OGHAM LETTER BEITH
+U+1682	# OGHAM LETTER LUIS
+U+1683	# OGHAM LETTER FEARN
+U+1684	# OGHAM LETTER SAIL
+U+1685	# OGHAM LETTER NION
+U+1686	# OGHAM LETTER UATH
+U+1687	# OGHAM LETTER DAIR
+U+1688	# OGHAM LETTER TINNE
+U+1689	# OGHAM LETTER COLL
+U+168A	# OGHAM LETTER CEIRT
+U+168B	# OGHAM LETTER MUIN
+U+168C	# OGHAM LETTER GORT
+U+168D	# OGHAM LETTER NGEADAL
+U+168E	# OGHAM LETTER STRAIF
+U+168F	# OGHAM LETTER RUIS
+U+1690	# OGHAM LETTER AILM
+U+1691	# OGHAM LETTER ONN
+U+1692	# OGHAM LETTER UR
+U+1693	# OGHAM LETTER EADHADH
+U+1694	# OGHAM LETTER IODHADH
+U+1695	# OGHAM LETTER EABHADH
+U+1696	# OGHAM LETTER OR
+U+1697	# OGHAM LETTER UILLEANN
+U+1698	# OGHAM LETTER IFIN
+U+1699	# OGHAM LETTER EAMHANCHOLL
+U+169A	# OGHAM LETTER PEITH
+
+
+###############################################################
+#
+# Common codepoints
+#
+###############################################################
+U+002D	# HYPHEN-MINUS
+U+0030	# DIGIT ZERO
+U+0031	# DIGIT ONE
+U+0032	# DIGIT TWO
+U+0033	# DIGIT THREE
+U+0034	# DIGIT FOUR
+U+0035	# DIGIT FIVE
+U+0036	# DIGIT SIX
+U+0037	# DIGIT SEVEN
+U+0038	# DIGIT EIGHT
+U+0039	# DIGIT NINE
+
+
+
+

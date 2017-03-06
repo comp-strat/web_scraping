@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Public Key Infrastructure using X.509 (PKIX) Parameters</title>
+  </head>
+  <body>
+    <h1>Public Key Infrastructure using X.509 (PKIX) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2003-12-23</dd>
+      <dt>Last Updated</dt>
+      <dd>2013-03-18</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pkix-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="pkix-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="pkix-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#srv-protocol-labels">PKIX SRV Protocol Labels</a>
+      </li>
+      <li>
+        <a href="#caa-properties">Certification Authority Restriction Properties</a>
+      </li>
+      <li>
+        <a href="#caa-flags">Certification Authority Restriction Flags</a>
+      </li>
+    </ul>
+    <h2><a name="srv-protocol-labels" id="srv-protocol-labels"></a>PKIX SRV Protocol Labels</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4386">RFC4386</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="srv-protocol-labels.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-srv-protocol-labels" class="sortable">
+      <thead>
+        <tr>
+          <th>Label Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>_PKIXREP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4386">RFC4386</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="caa-properties" id="caa-properties"></a>Certification Authority Restriction Properties</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6844">RFC6844</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="caa-properties.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-caa-properties" class="sortable">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>issue</td>
+          <td>Authorization Entry by Domain</td>
+          <td>[<a href="http://www.iana.org/go/rfc6844">RFC6844</a>]</td>
+        </tr>
+        <tr>
+          <td>issuewild</td>
+          <td>Authorization Entry by Wildcard Domain</td>
+          <td>[<a href="http://www.iana.org/go/rfc6844">RFC6844</a>]</td>
+        </tr>
+        <tr>
+          <td>iodef</td>
+          <td>Report incident by IODEF report</td>
+          <td>[<a href="http://www.iana.org/go/rfc6844">RFC6844</a>]</td>
+        </tr>
+        <tr>
+          <td>auth</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6844">RFC6844</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=3547">RFC Errata 
+          3547</a>]</td>
+        </tr>
+        <tr>
+          <td>path</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6844">RFC6844</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=3547">RFC Errata 
+          3547</a>]</td>
+        </tr>
+        <tr>
+          <td>policy</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6844">RFC6844</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=3547">RFC Errata 
+          3547</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="caa-flags" id="caa-flags"></a>Certification Authority Restriction Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6844">RFC6844</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="caa-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-caa-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Issuer Critical Flag</td>
+          <td>[<a href="http://www.iana.org/go/rfc6844">RFC6844</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-7</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc6844">RFC6844</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=3532">RFC Errata 
+          3532</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

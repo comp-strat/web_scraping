@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>IPSECKEY Resource Record Parameters</title>
+  </head>
+  <body>
+    <h1>IPSECKEY Resource Record Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2004-12-20</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-10-18</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ipseckey-rr-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ipseckey-rr-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ipseckey-rr-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ipseckey-rr-parameters-1">Algorithm Type Field</a>
+      </li>
+      <li>
+        <a href="#ipseckey-rr-parameters-2">Gateway Type Field</a>
+      </li>
+    </ul>
+    <h2><a name="ipseckey-rr-parameters-1" id="ipseckey-rr-parameters-1"></a>Algorithm Type Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4025">RFC4025</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ipseckey-rr-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ipseckey-rr-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>No key is present</td>
+          <td>[<a href="http://www.iana.org/go/rfc4025">RFC4025</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>A DSA key is present, in the format defined in [<a href="http://www.iana.org/go/rfc2536">RFC2536</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc4025">RFC4025</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>A RSA key is present, in the format defined in [<a href="http://www.iana.org/go/rfc3110">RFC3110</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc4025">RFC4025</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>An ECDSA key is present, in the format defined in [<a href="http://www.iana.org/go/rfc6605">RFC6605</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc8005">RFC8005</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ipseckey-rr-parameters-2" id="ipseckey-rr-parameters-2"></a>Gateway Type Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4025">RFC4025</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ipseckey-rr-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ipseckey-rr-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>No gateway is present</td>
+          <td>[<a href="http://www.iana.org/go/rfc4025">RFC4025</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>A 4-byte IPv4 address is present</td>
+          <td>[<a href="http://www.iana.org/go/rfc4025">RFC4025</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>A 16-byte IPv6 address is present</td>
+          <td>[<a href="http://www.iana.org/go/rfc4025">RFC4025</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>A wire-encoded domain name is present</td>
+          <td>[<a href="http://www.iana.org/go/rfc4025">RFC4025</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

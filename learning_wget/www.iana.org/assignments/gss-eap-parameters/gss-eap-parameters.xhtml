@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>The Extensible Authentication Protocol Mechanism for the Generic Security Service Application Programming Interface (GSS-EAP) Parameters</title>
+  </head>
+  <body>
+    <h1>The Extensible Authentication Protocol Mechanism for the Generic Security Service Application Programming Interface (GSS-EAP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2012-09-05</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-01-08</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="gss-eap-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="gss-eap-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="gss-eap-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#subtoken-types">GSS-EAP Subtoken Types</a>
+      </li>
+      <li>
+        <a href="#error-codes">GSS-EAP Error Codes</a>
+      </li>
+      <li>
+        <a href="#context-flags">GSS-EAP Context Flags</a>
+      </li>
+    </ul>
+    <h2><a name="subtoken-types" id="subtoken-types"></a>GSS-EAP Subtoken Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="subtoken-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-subtoken-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00000000</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000001</td>
+          <td>Error</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000002</td>
+          <td>Acceptor name request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.4.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000003</td>
+          <td>Acceptor name response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.4.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000004</td>
+          <td>EAP response</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.5.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000005</td>
+          <td>EAP request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.5.1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000006</td>
+          <td>GSS-API channel bindings</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.6.2</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x00000007-0x0000000A</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x0000000B</td>
+          <td>Vendor</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.4.1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0000000C</td>
+          <td>Flags</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.6.1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0000000D</td>
+          <td>Initiator MIC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.6.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0000000E</td>
+          <td>Acceptor MIC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.6.3</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0000000F-0x7FFFFFFF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="error-codes" id="error-codes"></a>GSS-EAP Error Codes</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="error-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-error-codes-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>Specification Required</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-error-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Buffer is incorrect size</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Incorrect mechanism OID</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Token is corrupted</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Token is truncated</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Packet received by direction that sent it</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Incorrect token type identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Unhandled critical subtoken received</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>Missing required subtoken</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Duplicate subtoken type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Received unexpected subtoken for current state</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>EAP did not produce a key</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>EAP key too short</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>Authentication rejected</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>AAA returned an unexpected message type</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>AAA response did not include EAP request</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Generic AAA failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17-255</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">&gt;=256</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="context-flags" id="context-flags"></a>GSS-EAP Context Flags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7055">RFC7055</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="context-flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-context-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Flag</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x1</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x2</td>
+          <td>GSS_C_MUTUAL_FLAG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7055">RFC7055, Section 5.6.1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x3-0x80000000</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

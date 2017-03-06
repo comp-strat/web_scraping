@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>IPv6 Low Power Personal Area Network Parameters</title>
+  </head>
+  <body>
+    <h1>IPv6 Low Power Personal Area Network Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2007-05-02</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-02-24</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="_6lowpan-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="_6lowpan-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="_6lowpan-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#_6lowpan-parameters-1">Dispatch Type Field</a>
+      </li>
+      <li>
+        <a href="#_6lowpan-parameters-2">Short Address Fields</a>
+      </li>
+      <li>
+        <a href="#lowpan_nhc">LOWPAN_NHC Header Type</a>
+      </li>
+      <li>
+        <a href="#esc-extension-types">ESC Extension Types</a>
+      </li>
+      <li>
+        <a href="#critical-6lowpan-routing-header-type">Critical 6LoWPAN Routing Header Type</a>
+      </li>
+      <li>
+        <a href="#elective-6lowpan-routing-header-type">Elective 6LoWPAN Routing Header Type</a>
+      </li>
+    </ul>
+    <h2><a name="_6lowpan-parameters-1" id="_6lowpan-parameters-1"></a>Dispatch Type Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Gabriel Montenegro, James Woodyatt, Pascal Thubert (secondary expert)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4944">RFC4944</a>][<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="_6lowpan-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-_6lowpan-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit Pattern</th>
+          <th>Page</th>
+          <th>Header Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:monospace">00 xxxxxx</td>
+          <td>0</td>
+          <td>NALP</td>
+          <td>[<a href="http://www.iana.org/go/rfc4944">RFC4944</a>][<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">00 xxxxxx</td>
+          <td>1-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">00 xxxxxx</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000000</td>
+          <td>0</td>
+          <td>ESC</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000000</td>
+          <td>1-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000000</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000001</td>
+          <td>0</td>
+          <td>IPv6 - uncompressed IPv6 Addresses</td>
+          <td>[<a href="http://www.iana.org/go/rfc4944">RFC4944</a>][<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000001</td>
+          <td>1-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000001</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000010</td>
+          <td>0</td>
+          <td>LOWPAN_HC1 - LOWPAN_HC1 compressed IPv6</td>
+          <td>[<a href="http://www.iana.org/go/rfc4944">RFC4944</a>][<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000010</td>
+          <td>1-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000010</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000011</td>
+          <td>0</td>
+          <td>LOWPAN_DFF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6971">RFC6971</a>][<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000011</td>
+          <td>1-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000011</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000100 through 01 001111</td>
+          <td>0-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 000100 through 01 001111</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 010000</td>
+          <td>0</td>
+          <td>LOWPAN_BC0 - LOWPAN_BC0 broadcast</td>
+          <td>[<a href="http://www.iana.org/go/rfc4944">RFC4944</a>][<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 010000</td>
+          <td>1-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 010000</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 010001 through 01 011111</td>
+          <td>0-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 010001 through 01 011111</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 1xxxxx</td>
+          <td>0-1</td>
+          <td>LOWPAN_IPHC</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>][<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 1xxxxx</td>
+          <td>2-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">01 1xxxxx</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">10 xxxxxx</td>
+          <td>0</td>
+          <td>MESH - Mesh header</td>
+          <td>[<a href="http://www.iana.org/go/rfc4944">RFC4944</a>][<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">10 0xxxxx</td>
+          <td>1</td>
+          <td>for Critical 6LoWPAN Routing Headers</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-roll-routing-dispatch-05">RFC-ietf-roll-routing-dispatch-05</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">10 1xxxxx</td>
+          <td>1</td>
+          <td>for Elective 6LoWPAN Routing Headers</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-roll-routing-dispatch-05">RFC-ietf-roll-routing-dispatch-05</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">10 xxxxxx</td>
+          <td>2-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">10 xxxxxx</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 000xxx</td>
+          <td>0</td>
+          <td>FRAG1 -- Fragmentation Header (first)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4944">RFC4944</a>][<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 000xxx</td>
+          <td>1-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 000xxx</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 001000 through 11 011111</td>
+          <td>0-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 001000 through 11 011111</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 100xxx</td>
+          <td>0</td>
+          <td>FRAGN -- Fragmentation Header (subsequent)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4944">RFC4944</a>][<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 100xxx</td>
+          <td>1-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 100xxx</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 101000 through 11 101111</td>
+          <td>0-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 101000 through 11 101111</td>
+          <td>15</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11 11xxxx</td>
+          <td>0-15</td>
+          <td>Page switch</td>
+          <td>[<a href="http://www.iana.org/go/rfc8025">RFC8025</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="_6lowpan-parameters-2" id="_6lowpan-parameters-2"></a>Short Address Fields</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Gabriel Montenegro</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4944">RFC4944</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="_6lowpan-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-_6lowpan-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Address Range</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:monospace">0000000000000000 to 0111111111111111</td>
+          <td>unicast addresses</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1000000000000000 to 1001111111111111</td>
+          <td>multicast addresses</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1010000000000000 to 1011111111111111</td>
+          <td>reserved for future assignment</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1100000000000000 to 1101111111111111</td>
+          <td>reserved for future assignment</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1110000000000000 to 1111111111111100</td>
+          <td>reserved for future assignment</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1111111111111110</td>
+          <td>defined in IEEE 802.15.4 ("unassigned" short address)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1111111111111111</td>
+          <td>defined in IEEE 802.15.4 (broadcast address)</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="lowpan_nhc" id="lowpan_nhc"></a>LOWPAN_NHC Header Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="lowpan_nhc.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-lowpan_nhc" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:monospace">00000000 to 10101111</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">10110EEN</td>
+          <td>Extension header GHC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7400">RFC7400</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">10111000 to 11001111</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11010CPP</td>
+          <td>UDP GHC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7400">RFC7400</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11011000 to 11011110</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11011111</td>
+          <td>ICMPv6 GHC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7400">RFC7400</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1110000N</td>
+          <td>IPv6 Hop-by-Hop Options Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1110001N</td>
+          <td>IPv6 Routing Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1110010N</td>
+          <td>IPv6 Fragment Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1110011N</td>
+          <td>IPv6 Destinations Options Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1110100N</td>
+          <td>IPv6 Mobility Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1110101N</td>
+          <td>Reserved for future extension headers</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1110110N</td>
+          <td>Reserved for future extension headers</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1110111N</td>
+          <td>IPv6 Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11110CPP</td>
+          <td>UDP Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11111000 to 11111110</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">11111111</td>
+          <td>Unassigned, reserved for extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc6282">RFC6282</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="esc-extension-types" id="esc-extension-types"></a>ESC Extension Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James Woodyatt</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc8066">RFC8066</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="esc-extension-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-esc-extension-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:monospace">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc8066">RFC8066</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">1-31</td>
+          <td>Used by ITU-T G.9903 G.9905 Command IDs</td>
+          <td>[<a href="https://www.itu.int/rec/T-REC-G.9903">ITU-T G.9903</a>][<a href="https://www.itu.int/rec/T-REC-G.9905">ITU-T G.9905</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">32-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc8066">RFC8066</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="critical-6lowpan-routing-header-type" id="critical-6lowpan-routing-header-type"></a>Critical 6LoWPAN Routing Header Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-roll-routing-dispatch-05">RFC-ietf-roll-routing-dispatch-05</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="critical-6lowpan-routing-header-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-critical-6lowpan-routing-header-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:monospace">0-4</td>
+          <td>SRH-6LoRH</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-roll-routing-dispatch-05">RFC-ietf-roll-routing-dispatch-05</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">5</td>
+          <td>RPI-6LoRH</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-roll-routing-dispatch-05">RFC-ietf-roll-routing-dispatch-05</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">6-31</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="elective-6lowpan-routing-header-type" id="elective-6lowpan-routing-header-type"></a>Elective 6LoWPAN Routing Header Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/draft-ietf-roll-routing-dispatch-05">RFC-ietf-roll-routing-dispatch-05</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="elective-6lowpan-routing-header-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-elective-6lowpan-routing-header-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-family:monospace">0-5</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">6</td>
+          <td>IP-in-IP-6LoRH</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-roll-routing-dispatch-05">RFC-ietf-roll-routing-dispatch-05</a>]</td>
+        </tr>
+        <tr>
+          <td style="font-family:monospace">7-31</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

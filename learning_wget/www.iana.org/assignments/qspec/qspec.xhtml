@@ -1,0 +1,794 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>QoS NSIS Signal Layering Protocol (NSLP) QSPEC Parameters</title>
+  </head>
+  <body>
+    <h1>QoS NSIS Signal Layering Protocol (NSLP) QSPEC Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2010-02-24</dd>
+      <dt>Last Updated</dt>
+      <dd>2010-10-06</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="qspec.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="qspec.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="qspec.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#object-types">Object Types</a>
+      </li>
+      <li>
+        <a href="#qspec-version">QSPEC Version</a>
+      </li>
+      <li>
+        <a href="#qspec-type">QSPEC Type</a>
+      </li>
+      <li>
+        <a href="#qspec-procedure">QSPEC Procedure</a>
+      </li>
+      <li>
+        <a href="#parameter-id">Parameter ID</a>
+      </li>
+      <li>
+        <a href="#y2171">Y.2171 Admission Priority Parameter</a>
+      </li>
+      <li>
+        <a href="#excess">Excess Treatment Parameter</a>
+      </li>
+      <li>
+        <a href="#y1541">Y.1541 QoS Class Parameter</a>
+      </li>
+      <li>
+        <a href="#restoration-priority">Restoration Priority Field</a>
+      </li>
+      <li>
+        <a href="#time-to-restore">Time to Restore Field</a>
+      </li>
+      <li>
+        <a href="#extent-of-restoration">Extent of Restoration Field</a>
+      </li>
+    </ul>
+    <h2><a name="object-types" id="object-types"></a>Object Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="object-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-object-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>QoS Desired</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>QoS Available</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>QoS Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Minimum QoS</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>4-63</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>64-67</td>
+          <td>Reserved for Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>68-4095</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="qspec-version" id="qspec-version"></a>QSPEC Version</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="qspec-version.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-qspec-version" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Version 0 QSPEC</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>1-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="qspec-type" id="qspec-type"></a>QSPEC Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="qspec-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-qspec-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Default</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Y.1541-QOSM</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>RMD-QOSM</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>3-12</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>13-16</td>
+          <td>Reserved for Local/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>17-31</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="qspec-procedure" id="qspec-procedure"></a>QSPEC Procedure</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="qspec-procedure.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-qspec-procedure" class="sortable">
+      <thead>
+        <tr>
+          <th>Message Sequence Value</th>
+          <th>Object Combination Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>QSPEC objects as specified in [RFC-ietf-nsis-qspec-24]</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>1</td>
+          <td>QSPEC objects as specified in [RFC-ietf-nsis-qspec-24]</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>2</td>
+          <td>QSPEC objects as specified in [RFC-ietf-nsis-qspec-24]</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>3-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>0</td>
+          <td>QSPEC objects as specified in [RFC-ietf-nsis-qspec-24]</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>QSPEC objects as specified in [RFC-ietf-nsis-qspec-24]</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>QSPEC objects as specified in [RFC-ietf-nsis-qspec-24]</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>3-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>0</td>
+          <td>QSPEC objects as specified in [RFC-ietf-nsis-qspec-24]</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>1-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3-15</td>
+          <td>0-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="parameter-id" id="parameter-id"></a>Parameter ID</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="parameter-id.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-parameter-id" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>TMOD-1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>TMOD-2</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Path Latency</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Path Jitter</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Path PLR</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Path PER</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Slack Term</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Preemption Priority &amp; Defending Priority</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Admission Priority </td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>RPH Priority</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>Excess Treatment</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>PHB Class</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>DSTE Class Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Y.1541 QoS Class</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>TMOD Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>Restoration Priority</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>PHR_Resource_Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5977">RFC5977</a>]</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>PHR_Release_Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5977">RFC5977</a>]</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>PHR_Refresh_Update</td>
+          <td>[<a href="http://www.iana.org/go/rfc5977">RFC5977</a>]</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>PDR_Reservation_Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5977">RFC5977</a>]</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>PDR_Refresh_Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5977">RFC5977</a>]</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>PDR_Release_Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5977">RFC5977</a>]</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>PDR_Reservation_Report</td>
+          <td>[<a href="http://www.iana.org/go/rfc5977">RFC5977</a>]</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>PDR_Refresh_Report</td>
+          <td>[<a href="http://www.iana.org/go/rfc5977">RFC5977</a>]</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>PDR_Release_Report</td>
+          <td>[<a href="http://www.iana.org/go/rfc5977">RFC5977</a>]</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>PDR_Congestion_Report</td>
+          <td>[<a href="http://www.iana.org/go/rfc5977">RFC5977</a>]</td>
+        </tr>
+        <tr>
+          <td>27-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>256-259</td>
+          <td>Reserved for Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>260-4095</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="y2171" id="y2171"></a>Y.2171 Admission Priority Parameter</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="y2171.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-y2171" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>best-effort priority flow</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>normal priority flow</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>high priority flow</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>3-63</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>64-255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="excess" id="excess"></a>Excess Treatment Parameter</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="excess.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-excess" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>drop</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>shape</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>re-mark</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>no metering or policing is permitted</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>4-63</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>64-255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="y1541" id="y1541"></a>Y.1541 QoS Class Parameter</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="y1541.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-y1541" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Y.1541 QoS Class 0</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Y.1541 QoS Class 1</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Y.1541 QoS Class 2</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Y.1541 QoS Class 3</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Y.1541 QoS Class 4</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Y.1541 QoS Class 5</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Y.1541 QoS Class 6</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Y.1541 QoS Class 7</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+        <tr>
+          <td>8-63</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>64-255</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5975">RFC5975</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="restoration-priority" id="restoration-priority"></a>Restoration Priority Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="restoration-priority.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-restoration-priority" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>best-effort priority</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>normal priority</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>high priority</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="time-to-restore" id="time-to-restore"></a>Time to Restore Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="time-to-restore.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-time-to-restore" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Unspecified Time-to-Restore</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Best Time-to-Restore: less than or equal to 200 ms</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Normal Time-to-Restore: less than or equal to 2 s</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>3-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="extent-of-restoration" id="extent-of-restoration"></a>Extent of Restoration Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="extent-of-restoration.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-extent-of-restoration" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>unspecified EOR</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>high priority restored at 100%; medium priority restored at 100%</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>high priority restored at 100%; medium priority restored at 80%</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>high priority restored &gt;= 80%; medium priority restored &gt;= 80%</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>high priority restored &gt;= 80%; medium priority restored &gt;= 60%</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>high priority restored &gt;= 60%; medium priority restored &gt;= 60%</td>
+          <td>[<a href="http://www.iana.org/go/rfc5976">RFC5976</a>]</td>
+        </tr>
+        <tr>
+          <td>6-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

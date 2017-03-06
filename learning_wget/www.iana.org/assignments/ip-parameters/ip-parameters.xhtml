@@ -1,0 +1,728 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Internet Protocol Version 4 (IPv4) Parameters</title>
+  </head>
+  <body>
+    <h1>Internet Protocol Version 4 (IPv4) Parameters</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2016-02-24</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ip-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ip-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ip-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ip-parameters-1">IP OPTION NUMBERS</a>
+      </li>
+      <li>
+        <a href="#ip-parameters-2">IP TIME TO LIVE PARAMETER</a>
+      </li>
+      <li>
+        <a href="#ip-parameters-3">IP TOS PARAMETERS</a>
+      </li>
+      <li>
+        <a href="#ip-parameters-4">Type-of-Service Values</a>
+      </li>
+    </ul>
+    <h2><a name="ip-parameters-1" id="ip-parameters-1"></a>IP OPTION NUMBERS</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not defined</pre>
+      </dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The Internet Protocol (IP) has provision for optional header fields
+identified by an option type field.  Options 0 and 1 are exactly one
+octet which is their type field.  All other options have their one
+octet type field, followed by a one octet length field, followed by
+length-2 octets of option data.  The option type field is sub-divided
+into a one bit copied flag, a two bit class field, and a five bit
+option number.  These taken together form an eight bit value for the
+option type field.  IP options are commonly referred to by this value.
+  </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ip-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ip-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Copy</th>
+          <th>Class</th>
+          <th>Number</th>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td>
+            <pre>EOOL   - End of Options List</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc791">RFC791</a>][<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">1</td>
+          <td align="center">1</td>
+          <td>
+            <pre>NOP    - No Operation</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc791">RFC791</a>][<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">2</td>
+          <td align="center">130</td>
+          <td>
+            <pre>SEC    - Security</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc1108">RFC1108</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">3</td>
+          <td align="center">131</td>
+          <td>
+            <pre>LSR    - Loose Source Route</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc791">RFC791</a>][<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">2</td>
+          <td align="center">4</td>
+          <td align="center">68</td>
+          <td>
+            <pre>TS     - Time Stamp</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc791">RFC791</a>][<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">5</td>
+          <td align="center">133</td>
+          <td>
+            <pre>E-SEC  - Extended Security</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc1108">RFC1108</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">6</td>
+          <td align="center">134</td>
+          <td>
+            <pre>CIPSO  - Commercial Security</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cipso-ipsecurity-01">draft-ietf-cipso-ipsecurity-01</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">7</td>
+          <td align="center">7</td>
+          <td>
+            <pre>RR     - Record Route</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc791">RFC791</a>][<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">8</td>
+          <td align="center">136</td>
+          <td>
+            <pre>SID    - Stream ID</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc791">RFC791</a>][<a href="#Jon_Postel">Jon_Postel</a>][<a href="http://www.iana.org/go/rfc6814">RFC6814</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">9</td>
+          <td align="center">137</td>
+          <td>
+            <pre>SSR    - Strict Source Route</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc791">RFC791</a>][<a href="#Jon_Postel">Jon_Postel</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">10</td>
+          <td align="center">10</td>
+          <td>
+            <pre>ZSU    - Experimental Measurement</pre>
+          </td>
+          <td>[ZSu]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">11</td>
+          <td align="center">11</td>
+          <td>
+            <pre>MTUP   - MTU Probe</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc1063">RFC1063</a>][<a href="http://www.iana.org/go/rfc1191">RFC1191</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">12</td>
+          <td align="center">12</td>
+          <td>
+            <pre>MTUR   - MTU Reply</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc1063">RFC1063</a>][<a href="http://www.iana.org/go/rfc1191">RFC1191</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">2</td>
+          <td align="center">13</td>
+          <td align="center">205</td>
+          <td>
+            <pre>FINN   - Experimental Flow Control</pre>
+          </td>
+          <td>[<a href="#Greg_Finn">Greg_Finn</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">14</td>
+          <td align="center">142</td>
+          <td>
+            <pre>VISA   - Experimental Access Control</pre>
+          </td>
+          <td>[<a href="#Deborah_Estrin">Deborah_Estrin</a>][<a href="http://www.iana.org/go/rfc6814">RFC6814</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">15</td>
+          <td align="center">15</td>
+          <td>
+            <pre>ENCODE - ???</pre>
+          </td>
+          <td>[VerSteeg][<a href="http://www.iana.org/go/rfc6814">RFC6814</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">16</td>
+          <td align="center">144</td>
+          <td>
+            <pre>IMITD  - IMI Traffic Descriptor</pre>
+          </td>
+          <td>[Lee]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">17</td>
+          <td align="center">145</td>
+          <td>
+            <pre>EIP    - Extended Internet Protocol</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc1385">RFC1385</a>][<a href="http://www.iana.org/go/rfc6814">RFC6814</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">2</td>
+          <td align="center">18</td>
+          <td align="center">82</td>
+          <td>
+            <pre>TR     - Traceroute</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc1393">RFC1393</a>][<a href="http://www.iana.org/go/rfc6814">RFC6814</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">19</td>
+          <td align="center">147</td>
+          <td>
+            <pre>ADDEXT - Address Extension</pre>
+          </td>
+          <td>[Ullmann IPv7][<a href="http://www.iana.org/go/rfc6814">RFC6814</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">20</td>
+          <td align="center">148</td>
+          <td>
+            <pre>RTRALT - Router Alert</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc2113">RFC2113</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">21</td>
+          <td align="center">149</td>
+          <td>
+            <pre>SDB    - Selective Directed Broadcast</pre>
+          </td>
+          <td>[<a href="#Charles_Bud_Graff">Charles_Bud_Graff</a>][<a href="http://www.iana.org/go/rfc6814">RFC6814</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">22</td>
+          <td align="center">150</td>
+          <td>
+            <pre>&#160;&#160;&#160;&#160;&#160;&#160;&#160;- Unassigned (Released 18 October 2005)</pre>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">23</td>
+          <td align="center">151</td>
+          <td>
+            <pre>DPS    - Dynamic Packet State</pre>
+          </td>
+          <td>[<a href="#Andy_Malis">Andy_Malis</a>][<a href="http://www.iana.org/go/rfc6814">RFC6814</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">24</td>
+          <td align="center">152</td>
+          <td>
+            <pre>UMP    - Upstream Multicast Pkt.</pre>
+          </td>
+          <td>[<a href="#Dino_Farinacci">Dino_Farinacci</a>][<a href="http://www.iana.org/go/rfc6814">RFC6814</a>][<a href="#note1">1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">25</td>
+          <td align="center">25</td>
+          <td>
+            <pre>QS     - Quick-Start</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc4782">RFC4782</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">0</td>
+          <td align="center">30</td>
+          <td align="center">30</td>
+          <td>
+            <pre>EXP    - RFC3692-style Experiment [<a href="#note2">2</a>]</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc4727">RFC4727</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0</td>
+          <td align="center">2</td>
+          <td align="center">30</td>
+          <td align="center">94</td>
+          <td>
+            <pre>EXP    - RFC3692-style Experiment [<a href="#note2">2</a>]</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc4727">RFC4727</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">0</td>
+          <td align="center">30</td>
+          <td align="center">158</td>
+          <td>
+            <pre>EXP    - RFC3692-style Experiment [<a href="#note2">2</a>]</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc4727">RFC4727</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td align="center">2</td>
+          <td align="center">30</td>
+          <td align="center">222</td>
+          <td>
+            <pre>EXP    - RFC3692-style Experiment [<a href="#note2">2</a>]</pre>
+          </td>
+          <td>[<a href="http://www.iana.org/go/rfc4727">RFC4727</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ip-parameters-2" id="ip-parameters-2"></a>IP TIME TO LIVE PARAMETER</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not defined</pre>
+      </dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The current recommended default time to live (TTL) for the Internet
+Protocol (IP) is 64 [<a href="http://www.iana.org/go/rfc791">RFC791</a>], [<a href="http://www.iana.org/go/rfc1122">RFC1122</a>].
+    </pre>
+      </dd>
+    </dl>
+    <h2><a name="ip-parameters-3" id="ip-parameters-3"></a>IP TOS PARAMETERS</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not defined</pre>
+      </dd>
+      <dt>Description</dt>
+      <dd>
+        <pre>This documents the default Type-of-Service values that are currently
+recommended for the most important Internet protocols.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ip-parameters-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ip-parameters-3" class="sortable">
+      <thead>
+        <tr>
+          <th>TOS Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0000</td>
+          <td>Default</td>
+          <td>[<a href="http://www.iana.org/go/rfc2474">Obsoleted by RFC2474</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0001</td>
+          <td>Minimize Monetary Cost</td>
+          <td>[<a href="http://www.iana.org/go/rfc2474">Obsoleted by RFC2474</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0010</td>
+          <td>Maximize Reliability</td>
+          <td>[<a href="http://www.iana.org/go/rfc2474">Obsoleted by RFC2474</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0100</td>
+          <td>Maximize Throughput</td>
+          <td>[<a href="http://www.iana.org/go/rfc2474">Obsoleted by RFC2474</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1000</td>
+          <td>Minimize Delay</td>
+          <td>[<a href="http://www.iana.org/go/rfc2474">Obsoleted by RFC2474</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1111</td>
+          <td>Maximize Security</td>
+          <td>[<a href="http://www.iana.org/go/rfc2474">Obsoleted by RFC2474</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ip-parameters-4" id="ip-parameters-4"></a>Type-of-Service Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Not defined</pre>
+      </dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The TOS value is used to indicate "better".  Only one TOS value or
+property can be requested in any one IP datagram.
+
+Generally, protocols which are involved in direct interaction with a
+human should select low delay, while data transfers which may involve
+large blocks of data are need high throughput.  Finally, high reliability
+is most important for datagram-based Internet management functions.
+
+Application protocols not included in these tables should be able to
+make appropriate choice of low delay (8 decimal, 1000 binary) or high
+throughput (4 decimal, 0100 binary).
+
+The following are recommended values for TOS.
+
+An application may (at the request of the user) substitute
+0001 (minimize monetary cost) for any of the below values.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ip-parameters-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ip-parameters-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Protocol</th>
+          <th>TOS Value</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TELNET [<a href="#note3">3</a>]</td>
+          <td>1000</td>
+          <td>(minimize delay)</td>
+        </tr>
+        <tr>
+          <td>FTP</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&#160;&#160;Control</td>
+          <td>1000</td>
+          <td>(minimize delay)</td>
+        </tr>
+        <tr>
+          <td>&#160;&#160;Data [<a href="#note4">4</a>]</td>
+          <td>0100</td>
+          <td>(maximize throughput)</td>
+        </tr>
+        <tr>
+          <td>TFTP</td>
+          <td>1000</td>
+          <td>(minimize delay)</td>
+        </tr>
+        <tr>
+          <td>SMTP [<a href="#note5">5</a>]</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&#160;&#160;Command phase</td>
+          <td>1000</td>
+          <td>(minimize delay)</td>
+        </tr>
+        <tr>
+          <td>&#160;&#160;DATA phase</td>
+          <td>0100</td>
+          <td>(maximize throughput)</td>
+        </tr>
+        <tr>
+          <td>Domain Name Service</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&#160;&#160;UDP Query</td>
+          <td>1000</td>
+          <td>(minimize delay)</td>
+        </tr>
+        <tr>
+          <td>&#160;&#160;TCP Query</td>
+          <td>0000</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&#160;&#160;Zone Transfer</td>
+          <td>0100</td>
+          <td>(maximize throughput)</td>
+        </tr>
+        <tr>
+          <td>NNTP</td>
+          <td>0001</td>
+          <td>(minimize monetary cost)</td>
+        </tr>
+        <tr>
+          <td>ICMP</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&#160;&#160;Errors</td>
+          <td>0000</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&#160;&#160;Requests</td>
+          <td>0000 [<a href="#note6">6</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>&#160;&#160;Responses</td>
+          <td>&lt;same as request&gt; [<a href="#note6">6</a>]</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Any IGP</td>
+          <td>0010</td>
+          <td>(maximize reliability)</td>
+        </tr>
+        <tr>
+          <td>EGP</td>
+          <td>0000</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SNMP</td>
+          <td>0010</td>
+          <td>(maximize reliability)</td>
+        </tr>
+        <tr>
+          <td>BOOTP</td>
+          <td>0000</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Andy_Malis" id="Andy_Malis">[Andy_Malis]</a>
+          </td>
+          <td>Andy Malis</td>
+          <td>
+            <a href="mailto:agmalis&amp;gmail.com">mailto:agmalis&amp;gmail.com</a>
+          </td>
+          <td>2013-05-28</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Charles_Bud_Graff" id="Charles_Bud_Graff">[Charles_Bud_Graff]</a>
+          </td>
+          <td>Charles "Bud" Graff</td>
+          <td>
+            <a href="mailto:bud&amp;fotlan.army.mil">mailto:bud&amp;fotlan.army.mil</a>
+          </td>
+          <td>1995-03</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Deborah_Estrin" id="Deborah_Estrin">[Deborah_Estrin]</a>
+          </td>
+          <td>Deborah Estrin</td>
+          <td>
+            <a href="mailto:Estrin&amp;usc.edu">mailto:Estrin&amp;usc.edu</a>
+          </td>
+          <td>1994-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Dino_Farinacci" id="Dino_Farinacci">[Dino_Farinacci]</a>
+          </td>
+          <td>Dino Farinacci</td>
+          <td>
+            <a href="mailto:dino&amp;cisco.com">mailto:dino&amp;cisco.com</a>
+          </td>
+          <td>1999-05</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Greg_Finn" id="Greg_Finn">[Greg_Finn]</a>
+          </td>
+          <td>Greg Finn</td>
+          <td>
+            <a href="mailto:Finn&amp;isi.edu">mailto:Finn&amp;isi.edu</a>
+          </td>
+          <td>1994-10</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Jon_Postel" id="Jon_Postel">[Jon_Postel]</a>
+          </td>
+          <td>Jon Postel</td>
+          <td>
+            <a href="mailto:postel&amp;isi.edu">mailto:postel&amp;isi.edu</a>
+          </td>
+          <td>1994-10</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Footnotes</h1>
+    <table class="fn">
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note1" id="note1">[1]</a>
+        </td>
+        <td class="fn">
+          <pre>obsoleted IP Option Number</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note2" id="note2">[2]</a>
+        </td>
+        <td class="fn">
+          <pre>It is only appropriate to use these values
+in explicitly-configured experiments; they MUST NOT be shipped as
+defaults in implementations.  See RFC 3692 for details.</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note3" id="note3">[3]</a>
+        </td>
+        <td class="fn">
+          <pre>Includes all interactive user protocols (e.g., rlogin).</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note4" id="note4">[4]</a>
+        </td>
+        <td class="fn">
+          <pre>Includes all bulk data transfer protocols (e.g., rcp).</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note5" id="note5">[5]</a>
+        </td>
+        <td class="fn">
+          <pre>If the implementation does not support changing the TOS
+during the lifetime of the connection, then the
+recommended TOS on opening the connection is the default
+TOS (0000).</pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="fn" valign="top">
+          <a name="note6" id="note6">[6]</a>
+        </td>
+        <td class="fn">
+          <pre>Although ICMP request messages are normally sent with
+the default TOS, there are sometimes good reasons why they
+would be sent with some other TOS value.  An ICMP
+response always uses the same TOS value as was used in the
+corresponding ICMP request message.</pre>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

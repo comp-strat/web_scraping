@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Extensible Authentication Protocol (EAP) Encrypted Key Exchange (EKE) Registry</title>
+  </head>
+  <body>
+    <h1>Extensible Authentication Protocol (EAP) Encrypted Key Exchange (EKE) Registry</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2010-11-24</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-10-24</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-eke.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="eap-eke.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="eap-eke.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#diffie-hellman">EAP-EKE Diffie-Hellman Group Registry</a>
+      </li>
+      <li>
+        <a href="#encryption-algorithm">EAP-EKE Encryption Algorithm Registry</a>
+      </li>
+      <li>
+        <a href="#pseudo-random">EAP-EKE Pseudo Random Function Registry</a>
+      </li>
+      <li>
+        <a href="#keyed-message">EAP-EKE Keyed Message Digest (MAC) Registry</a>
+      </li>
+      <li>
+        <a href="#identity-type">EAP-EKE Identity Type Registry</a>
+      </li>
+      <li>
+        <a href="#eap-eke-channel">EAP-EKE Channel-Binding Type Registry</a>
+      </li>
+      <li>
+        <a href="#exchange">EAP-EKE Exchange Registry</a>
+      </li>
+      <li>
+        <a href="#failure-code">EAP-EKE Failure-Code Registry</a>
+      </li>
+    </ul>
+    <h2><a name="diffie-hellman" id="diffie-hellman"></a>EAP-EKE Diffie-Hellman Group Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="diffie-hellman.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-diffie-hellman" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>DHGROUP_EKE_2</td>
+          <td>The prime number of the 1024-bit Group 2 [<a href="http://www.iana.org/go/rfc7296">RFC7296</a>], 
+        with the generator 5 (decimal)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>DHGROUP_EKE_5</td>
+          <td>The prime number of the 1536-bit Group 5 [<a href="http://www.iana.org/go/rfc3526">RFC3526</a>], 
+        g=31</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>DHGROUP_EKE_14</td>
+          <td>The prime number of the 2048-bit Group 14 [<a href="http://www.iana.org/go/rfc3526">RFC3526</a>], 
+        g=11</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>DHGROUP_EKE_15</td>
+          <td>The prime number of the 3072-bit Group 15 [<a href="http://www.iana.org/go/rfc3526">RFC3526</a>], 
+        g=5</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>DHGROUP_EKE_16</td>
+          <td>The prime number of the 4096-bit Group 16 [<a href="http://www.iana.org/go/rfc3526">RFC3526</a>], 
+        g=5</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>6-127</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="encryption-algorithm" id="encryption-algorithm"></a>EAP-EKE Encryption Algorithm Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="encryption-algorithm.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-encryption-algorithm" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Definition</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ENCR_AES128_CBC</td>
+          <td>AES with a 128-bit key, CBC mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>2-127</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pseudo-random" id="pseudo-random"></a>EAP-EKE Pseudo Random Function Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pseudo-random.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pseudo-random" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Definition</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>PRF_HMAC_SHA1</td>
+          <td>HMAC SHA-1, as defined in [<a href="http://www.iana.org/go/rfc2104">RFC2104</a>] </td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>PRF_HMAC_SHA2_256</td>
+          <td>HMAC SHA-2-256 [National Institute of Standards and Technology, U.S. 
+        Department of Commerce, "Secure Hash Standard", NIST FIPS 180-3, October 2008.]
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>3-127</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="keyed-message" id="keyed-message"></a>EAP-EKE Keyed Message Digest (MAC) Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="keyed-message.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-keyed-message" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Key Length (Octets)</th>
+          <th>Definition</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>MAC_HMAC_SHA1</td>
+          <td>20</td>
+          <td>HMAC SHA-1, as defined in [<a href="http://www.iana.org/go/rfc2104">RFC2104</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>MAC_HMAC_SHA2_256</td>
+          <td>32</td>
+          <td>HMAC SHA-2-256</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>3-127</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="identity-type" id="identity-type"></a>EAP-EKE Identity Type Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="identity-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-identity-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Definition</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ID_OPAQUE</td>
+          <td>An opaque octet string</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>ID_NAI</td>
+          <td>A Network Access Identifier, as defined in [<a href="http://www.iana.org/go/rfc4282">RFC4282</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ID_IPv4</td>
+          <td>An IPv4 address, in binary format</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>ID_IPv6</td>
+          <td>An IPv6 address, in binary format</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>ID_FQDN</td>
+          <td>A fully qualified domain name
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>ID_DN</td>
+          <td>An LDAP Distinguished Name formatted as a string, as defined in [<a href="http://www.iana.org/go/rfc4514">RFC4514</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>7-127</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>128-255</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="eap-eke-channel" id="eap-eke-channel"></a>EAP-EKE Channel-Binding Type Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="eap-eke-channel.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-eap-eke-channel" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x0000</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x0001-0xFEFF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xFF00-0xFFFF</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="exchange" id="exchange"></a>EAP-EKE Exchange Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="exchange.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-exchange" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>EAP-EKE-ID exchange</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>EAP-EKE-Commit exchange</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03</td>
+          <td>EAP-EKE-Confirm exchange</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x04</td>
+          <td>EAP-EKE-Failure exchange</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x05-0x7F</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x80-0xFF</td>
+          <td>Reserved for Private Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="failure-code" id="failure-code"></a>EAP-EKE Failure-Code Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joseph Salowey</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="failure-code.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-failure-code" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0x00000000</td>
+          <td>Reserved</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000001</td>
+          <td>No Error</td>
+          <td>This code is used for failure acknowledgement.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000002</td>
+          <td>Protocol Error</td>
+          <td>A failure to parse or understand a protocol message or one of its
+      payloads.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000003</td>
+          <td>Password Not Found</td>
+          <td>A password could not be located for the identity presented by the other
+        protocol party, making authentication impossible.
+      </td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000004</td>
+          <td>Authentication Failure</td>
+          <td>Failure in the cryptographic computation most likely caused by 
+        an incorrect password, or an inappropriate identity type.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000005</td>
+          <td>Authorization Failure</td>
+          <td>While the password being used is correct, the user is not authorized
+       to connect.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000006</td>
+          <td>No Proposal Chosen</td>
+          <td>The peer is unwilling to select any of the cryptographic proposals 
+      offered by the server.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+        <tr>
+          <td>0x00000007-0xFEFFFFFF</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>0xFF000000-0xFFFFFFFF</td>
+          <td>Reserved for Private Use</td>
+          <td></td>
+          <td>[<a href="http://www.iana.org/go/rfc6124">RFC6124</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

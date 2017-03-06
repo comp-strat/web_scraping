@@ -1,0 +1,2763 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Mobile IPv4 Numbers</title>
+  </head>
+  <body>
+    <h1>Mobile IPv4 Numbers</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2015-08-27</dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Charlie Perkins and Pete McCann</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="mobileip-numbers.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="mobileip-numbers.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#mobileip-numbers-1">Mobile IP Message Types</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-2">Extensions to Mobile IP Registration Messages</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-3">Mobile IP Extensions for ICMP Router Discovery messages</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-4">Extension Subtypes </a>
+        <ul>
+          <li>
+            <a href="#mobileip-numbers-5">Generalized Authentication Extension (Value 36)</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-6">KeyGen Request/Reply subtypes (Value 40-43)</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-7">UDP Tunnel Reply Extension (Value 44)</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-8">FA Error Extension subtypes (value 45)</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-9">GRE Key Extension subtypes (value 48)</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-10">NAI Carrying Extension Sub-types (Value 136)</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-11">Dynamic HA Extension subtypes  (Value 139)</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-12">UDP Tunnel Request Extension (Value 144)</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-13">Mobile Network Extension subtypes (Value 148)</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-14">Trusted Networks Configured (TNC) Extension subtypes (Value 149)</a>
+          </li>
+          <li>
+            <a href="#extension-subtype-154">Multipath Extension subtypes (Value 154)</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-15">Code Values for Mobile IP Registration Reply Messages</a>
+        <ul>
+          <li>
+            <a href="#mobileip-numbers-16">Registration successful Code Values</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-17">Registration denied by the foreign agent</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-18">Registration denied by the home agent</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-19">Registration denied by the gateway foreign agent</a>
+          </li>
+          <li>
+            <a href="#mobileip-numbers-20">Error Codes from the Correspondent Node</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-21">Security Parameter Index (SPI) Values for the Mobile IP Reserved SPIs</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-22">Replay Method Identifier</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-23">Generalized Link Layer Address Registration Extension Subtypes and Generalized Link Layer Address Advertisement Extension Subtypes</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-24">Code Values for Mobile IP Handoff Reply Messages (Value 17)</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-25">Message String Extension (Value 145)</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-26">Mobile Network Acknowledgement Extension</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-27">PMIPv4 Non-skippable Extension (Value 47)</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-28">PMIPv4 Skippable Extension (Value 147)</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-29">Dual Stack (DSMIPv4) Extension subtypes (Value 152)</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-30">PMIPv4 Per-Node Authentication Method Types</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-31">PMIPv4 Device ID Types</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-32">PMIPv4 Subscriber ID Types</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-33">Access Technology Types</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-34">IPv6 Prefix Reply Extension Codes</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-36">Code Values for General Notification Messages</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-37">Route Optimization Extension (Value 49)</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-38">Route Optimization Data Extension (Value 50)</a>
+      </li>
+      <li>
+        <a href="#mobileip-numbers-39">Mobile Router Route Optimization Capability Extension (Value 153)</a>
+      </li>
+    </ul>
+    <h2><a name="mobileip-numbers-1" id="mobileip-numbers-1"></a>Mobile IP Message Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Mobile IP defines a set of new control messages, sent with UDP or TCP
+[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>] using well-known port number 434.  Currently, the following
+are defined.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Message Types</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Registration Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Registration Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Tunnel Data</td>
+          <td>[<a href="http://www.iana.org/go/rfc3519">RFC3519</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-6</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>Registration Revocation</td>
+          <td>[<a href="http://www.iana.org/go/rfc3543">RFC3543</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-14</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Revocation Acknowledgment</td>
+          <td>[<a href="http://www.iana.org/go/rfc3543">RFC3543</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Handoff Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Handoff Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Regional Registration Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Regional Registration Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Fast Binding Update (FBU)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4988">RFC4988</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>Fast Binding Acknowledgment (FBAck)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4988">RFC4988</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>Generic Notification</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Generic Notification Acknowledgement</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>Home Test Init message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>Care-of Test Init message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>Home Test message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>Care-of Test message</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Message for Experimental use</td>
+          <td>[<a href="http://www.iana.org/go/rfc4064">RFC4064</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-2" id="mobileip-numbers-2"></a>Extensions to Mobile IP Registration Messages</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>][<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The first set consists of those Extensions which may appear only
+in Mobile IP control messages (those sent to and from UDP port
+number 434).</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Permitted for Notification Messages (Y/N)</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>One-byte Padding</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>Mobile-Home Authentication</td>
+          <td align="center">Y</td>
+          <td>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>Mobile-Foreign Authentication</td>
+          <td align="center">Y</td>
+          <td>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>Foreign-Home Authentication</td>
+          <td align="center">Y</td>
+          <td>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36</td>
+          <td>Generalized Mobile IP Authentication</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">38</td>
+          <td>Critical Vendor/Organization Specific Extension(CVSE)</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3115">RFC3115</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">40</td>
+          <td>MN-FA-KeyGen Request</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">41</td>
+          <td>MN-FA-KeyGen Reply</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">42</td>
+          <td>MN-HA-KeyGen Request</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">43</td>
+          <td>MN-HA-KeyGen Reply</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">44</td>
+          <td>UDP Tunnel Reply Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3519">RFC3519</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">45</td>
+          <td>FA Error Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4636">RFC4636</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">46</td>
+          <td>GFA IP Address Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">47</td>
+          <td>PMIPv4 Non-skippable Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">48</td>
+          <td>GRE Key Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc6245">RFC6245</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">49</td>
+          <td>Route Optimization Extensions</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">50</td>
+          <td>Route Optimization Data</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">51-126</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">127</td>
+          <td>Non-skippable Extension for Experimental use</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4064">RFC4064</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>Deprecated (2001-08-31)</td>
+          <td align="center"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>SKIP Firewall Traversal Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc2356">RFC2356</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>Encapsulating Delivery Style Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3024">RFC3024</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>Mobile Node NAI</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc2794">RFC2794</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>MN-FA Challenge Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">134</td>
+          <td>Normal Vendor/Organization Specific Extension (NVSE)</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3115">RFC3115</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">136</td>
+          <td>NAI Carrying Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3846">RFC3846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">137</td>
+          <td>Revocation Support</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3543">RFC3543</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">138</td>
+          <td>Generalized Link Layer Address Registration Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">139</td>
+          <td>Dynamic HA Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4433">RFC4433</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">140</td>
+          <td>Hierarchical Foreign Agent Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">141</td>
+          <td>Replay Protection Style</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">142</td>
+          <td>Regional Registration Lifetime Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">144</td>
+          <td>UDP Tunnel Request Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc3519">RFC3519</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">145</td>
+          <td>Message String Extension</td>
+          <td align="center">Y</td>
+          <td>[<a href="http://www.iana.org/go/rfc4917">RFC4917</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">147</td>
+          <td>PMIPv4 Skippable Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">148</td>
+          <td>Mobile Network Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">149</td>
+          <td>Trusted Networks Configured (TNC) Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5265">RFC5265</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">150</td>
+          <td>Reserved</td>
+          <td align="center"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">151</td>
+          <td>Service Selection Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5446">RFC5446</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">152</td>
+          <td>Dual Stack (DSMIPv4) Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc5454">RFC5454</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">153</td>
+          <td>Mobile Router Route Optimization Indication</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">154</td>
+          <td>Multipath-Extension</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc7629">RFC7629</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">155-254</td>
+          <td>Unassigned</td>
+          <td align="center"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Skippable Extension for Experimental use</td>
+          <td align="center">N</td>
+          <td>[<a href="http://www.iana.org/go/rfc4064">RFC4064</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-3" id="mobileip-numbers-3"></a>Mobile IP Extensions for ICMP Router Discovery messages</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The second set consists of those extensions which may appear only
+in ICMP Router Discovery messages RFC1256.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>One-byte Padding (encoded with no Length nor Data field)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Mobility Agent Advertisement</td>
+          <td>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17-18</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Prefix-Lengths</td>
+          <td>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Link-Layer Address Option Format (LLA)</td>
+          <td>[<a href="http://www.iana.org/go/rfc4988">RFC4988</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>New IPv4 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc4988">RFC4988</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>New Router Prefix Information</td>
+          <td>[<a href="http://www.iana.org/go/rfc4988">RFC4988</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>Challenge Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25-126</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">127</td>
+          <td>Non-skippable Adv. Extension for Experimental use</td>
+          <td>[<a href="http://www.iana.org/go/rfc4064">RFC4064</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128-135</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">136</td>
+          <td>NAI Carrying Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc3846">RFC3846</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">137</td>
+          <td>CARD MN-AR signature option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4065">RFC4065</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">138</td>
+          <td>CARD Request option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4065">RFC4065</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">139</td>
+          <td>CARD Reply option</td>
+          <td>[<a href="http://www.iana.org/go/rfc4065">RFC4065</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">140</td>
+          <td>Generalized Link Layer Address Advertisement Extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">141-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Skippable Adv. Extension for Experimental use</td>
+          <td>[<a href="http://www.iana.org/go/rfc4064">RFC4064</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-4" id="mobileip-numbers-4"></a>Extension Subtypes </h2>
+    <dl>
+      <dt>Note</dt>
+      <dd>
+        <pre>To conserve the type number space, extension types may have sub-types.
+Currently the following extensions have subtypes defined:</pre>
+      </dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="mobileip-numbers-5" id="mobileip-numbers-5"></a>Generalized Authentication Extension (Value 36)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-5" class="sortable">
+        <thead>
+          <tr>
+            <th>Subtype Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">1</td>
+            <td>MN-AAA Authentication subtype</td>
+            <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>FA-FA authentication</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>MN-GFA authentication</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">4</td>
+            <td>MN-PAR Auth Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc4988">RFC4988</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-6" id="mobileip-numbers-6"></a>KeyGen Request/Reply subtypes (Value 40-43)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Standards Action</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-6" class="sortable">
+        <thead>
+          <tr>
+            <th>Subtype Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">1</td>
+            <td>KeyGen Request/Reply from AAA</td>
+            <td>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">7</td>
+            <td>Not to be allocated - used by early implementations</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-7" id="mobileip-numbers-7"></a>UDP Tunnel Reply Extension (Value 44)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3519">RFC3519</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-7.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-7" class="sortable">
+        <thead>
+          <tr>
+            <th>Subtype Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Regular UDP Tunnel Reply Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc3519">RFC3519</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-8" id="mobileip-numbers-8"></a>FA Error Extension subtypes (value 45)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4636">RFC4636</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-8.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-8" class="sortable">
+        <thead>
+          <tr>
+            <th>Subtype Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>FA Error Indication to MN</td>
+            <td>[<a href="http://www.iana.org/go/rfc4636">RFC4636</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-9" id="mobileip-numbers-9"></a>GRE Key Extension subtypes (value 48)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6245">RFC6245</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-9.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-9" class="sortable">
+        <thead>
+          <tr>
+            <th>Subtype Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>GRE Key Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc6245">RFC6245</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1-255</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-10" id="mobileip-numbers-10"></a>NAI Carrying Extension Sub-types (Value 136)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert review and specification required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3846">RFC3846</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-10.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-10" class="sortable">
+        <thead>
+          <tr>
+            <th>Subtype Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">1</td>
+            <td>HA Identity</td>
+            <td>[<a href="http://www.iana.org/go/rfc3846">RFC3846</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>AAAH identity</td>
+            <td>[<a href="http://www.iana.org/go/rfc3846">RFC3846</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3</td>
+            <td>Foreign Agent NAI (FA-NAI)</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-11" id="mobileip-numbers-11"></a>Dynamic HA Extension subtypes  (Value 139)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>IETF Consensus</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc4433">RFC4433</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-11.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-11" class="sortable">
+        <thead>
+          <tr>
+            <th>Subtype Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">1</td>
+            <td>Requested HA Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc4433">RFC4433</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>Redirected HA Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc4433">RFC4433</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-12" id="mobileip-numbers-12"></a>UDP Tunnel Request Extension (Value 144)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Specification required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc3519">RFC3519</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-12.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-12" class="sortable">
+        <thead>
+          <tr>
+            <th>Subtype Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Regular UDP Tunnel Request Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc3519">RFC3519</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-13" id="mobileip-numbers-13"></a>Mobile Network Extension subtypes (Value 148)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Standards Action or IESG Approval</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-13.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-13" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Mobile Network Request Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Explicit Mode Acknowledgement Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>Implicit Mode Acknowledgement Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3-255</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-14" id="mobileip-numbers-14"></a>Trusted Networks Configured (TNC) Extension subtypes (Value 149)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review with Specification Required</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5265">RFC5265</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-14.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-14" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Trusted Networks Configured (TNC)</td>
+            <td>[<a href="http://www.iana.org/go/rfc5265">RFC5265</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1-255</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="extension-subtype-154" id="extension-subtype-154"></a>Multipath Extension subtypes (Value 154)</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc7629">RFC7629</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="extension-subtype-154.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-extension-subtype-154" class="sortable">
+        <thead>
+          <tr>
+            <th>Subtype Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc7629">RFC7629</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>Multipath Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc7629">RFC7629</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>Flow-Binding Extension</td>
+            <td>[<a href="http://www.iana.org/go/rfc7629">RFC7629</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3-254</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">255</td>
+            <td>Reserved</td>
+            <td>[<a href="http://www.iana.org/go/rfc7629">RFC7629</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="mobileip-numbers-15" id="mobileip-numbers-15"></a>Code Values for Mobile IP Registration Reply Messages</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>][<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-15.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-15" class="sortable">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Guideline</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-8</td>
+          <td>Success Codes</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td align="center">9-63</td>
+          <td>Allocation guidelines not specified</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td align="center">64-127</td>
+          <td>Error Codes from the Foreign Agent</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">128-192</td>
+          <td>Error Codes from the Home Agent</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">193-200</td>
+          <td>Error Codes from the Gateway Foreign Agent</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">201-210</td>
+          <td>Error Codes form the Correspondent Node</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">211-255</td>
+          <td>Allocation guidelines not specified</td>
+          <td>None</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="registry level2">
+      <h3><a name="mobileip-numbers-16" id="mobileip-numbers-16"></a>Registration successful Code Values</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>None</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-16.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-16" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0</td>
+            <td>registration accepted</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">1</td>
+            <td>registration accepted, but simultaneous mobility bindings unsupported</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">2</td>
+            <td>Concurrent registration (pre-accept)</td>
+            <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">3-8</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-17" id="mobileip-numbers-17"></a>Registration denied by the foreign agent</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-17.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-17" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">64</td>
+            <td>reason unspecified</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">65</td>
+            <td>administratively prohibited</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">66</td>
+            <td>insufficient resources</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">67</td>
+            <td>mobile node failed authentication</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>][<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">68</td>
+            <td>home agent failed authentication</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">69</td>
+            <td>requested Lifetime too long</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">70</td>
+            <td>poorly formed Request</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">71</td>
+            <td>poorly formed Reply</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">72</td>
+            <td>requested encapsulation unavailable</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">73</td>
+            <td>reserved and unavailable</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">74</td>
+            <td>request reverse tunnel unavailable</td>
+            <td>[<a href="http://www.iana.org/go/rfc3024">RFC3024</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">75</td>
+            <td>reverse runnel is mandatory and 'T' bit not set</td>
+            <td>[<a href="http://www.iana.org/go/rfc3024">RFC3024</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">76</td>
+            <td>mobile node too distant</td>
+            <td>[<a href="http://www.iana.org/go/rfc3024">RFC3024</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">77</td>
+            <td>invalid care-of address</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">78</td>
+            <td>registration timeout</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">79</td>
+            <td>delivery style not supported</td>
+            <td>[<a href="http://www.iana.org/go/rfc3024">RFC3024</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">80</td>
+            <td>home network unreachable (ICMP error received)</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">81</td>
+            <td>home agent host unreachable (ICMP error received)</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">82</td>
+            <td>home agent port unreachable (ICMP error received)</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">83-87</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">88</td>
+            <td>home agent unreachable (other ICMP error received)</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">89</td>
+            <td>vendor-specific reason</td>
+            <td>[<a href="#Frank_Quick">Frank_Quick</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">90</td>
+            <td>Non-zero HA address required in Registration Request</td>
+            <td>[<a href="http://www.iana.org/go/rfc4433">RFC4433</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">91-95</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">96</td>
+            <td>nonzero_homeaddr_reqd</td>
+            <td>[<a href="http://www.iana.org/go/rfc2794">RFC2794</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">97</td>
+            <td>missing_nai</td>
+            <td>[<a href="http://www.iana.org/go/rfc2794">RFC2794</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">98</td>
+            <td>missing_home_agent</td>
+            <td>[<a href="http://www.iana.org/go/rfc2794">RFC2794</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">99</td>
+            <td>missing_homeaddr</td>
+            <td>[<a href="http://www.iana.org/go/rfc2794">RFC2794</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">100</td>
+            <td>ERROR-FA-1</td>
+            <td>[<a href="http://www.iana.org/go/rfc3115">RFC3115</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">101</td>
+            <td>ERROR-FA-2</td>
+            <td>[<a href="http://www.iana.org/go/rfc3115">RFC3115</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">102-103</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">104</td>
+            <td>unknown_challenge</td>
+            <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">105</td>
+            <td>missing_challenge</td>
+            <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">106</td>
+            <td>stale_challenge</td>
+            <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">107</td>
+            <td>MISSING_MN_FA</td>
+            <td>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">108</td>
+            <td>Error code from Foreign Agent =&gt; fa_bad_aaa_auth</td>
+            <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">109</td>
+            <td>Error code from Foreign Agent =&gt; ha_wrong_challenge</td>
+            <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">110</td>
+            <td>Error code from Foreign Agent =&gt; REPLAY_PROT_UNAVAIL</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">111</td>
+            <td>Error code from Foreign Agent =&gt; ZERO_COA_NOT_SUPP</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">112</td>
+            <td>UNKNOWN_GFA</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">113</td>
+            <td>GFA_UNREACHABLE</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">114</td>
+            <td>GFA_HOST_UNREACHABLE</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">115</td>
+            <td>GFA_PORT_UNREACHABLE</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">116</td>
+            <td>Invalid Home Agent Address</td>
+            <td>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">117-126</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">127</td>
+            <td>FA Error Code for Experimental use</td>
+            <td>[<a href="http://www.iana.org/go/rfc4064">RFC4064</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-18" id="mobileip-numbers-18"></a>Registration denied by the home agent</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-18.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-18" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">128</td>
+            <td>reason unspecified</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">129</td>
+            <td>administratively prohibited</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">130</td>
+            <td>insufficient resources</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">131</td>
+            <td>mobile node failed authentication</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">132</td>
+            <td>foreign agent failed authentication</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">133</td>
+            <td>registration Identification mismatch</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">134</td>
+            <td>poorly formed Request</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">135</td>
+            <td>too many simultaneous mobility bindings</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">136</td>
+            <td>unknown home agent address</td>
+            <td>[<a href="http://www.iana.org/go/rfc3344">RFC3344</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">137</td>
+            <td>request reverse tunnel unavailable</td>
+            <td>[<a href="http://www.iana.org/go/rfc3024">RFC3024</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">138</td>
+            <td>reverse runnel is mandatory and 'T' bit not set</td>
+            <td>[<a href="http://www.iana.org/go/rfc3024">RFC3024</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">139</td>
+            <td>requested encapsulation unavailable</td>
+            <td>[<a href="http://www.iana.org/go/rfc3024">RFC3024</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">140</td>
+            <td>ERROR-HA-1</td>
+            <td>[<a href="http://www.iana.org/go/rfc3115">RFC3115</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">141</td>
+            <td>ERROR-HA-2</td>
+            <td>[<a href="http://www.iana.org/go/rfc3115">RFC3115</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">142</td>
+            <td>ERROR_HA_UDP-ENCAP_UNAVAIL</td>
+            <td>[<a href="http://www.iana.org/go/rfc3519">RFC3519</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">143</td>
+            <td>Reregister with redirected HA</td>
+            <td>[<a href="http://www.iana.org/go/rfc4433">RFC4433</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">144</td>
+            <td>Error code from Home Agent =&gt; ha_bad_aaa_auth</td>
+            <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">145</td>
+            <td>Error code from Home Agent =&gt; ZERO_CAREOF_ADDRESS</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">146</td>
+            <td>Error code from Home Agent =&gt; DYN_GFA_NOT_SUPP</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">147</td>
+            <td>Mobile Network Prefix operation error                     
+(HA_MOBNET_ERROR)</td>
+            <td>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">148</td>
+            <td>Mobile Router operation is not permitted                  
+(HA_MOBNET_DISALLOWED)</td>
+            <td>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">149</td>
+            <td>PMIP_UNSUPPORTED</td>
+            <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">150</td>
+            <td>PMIP_DISALLOWED</td>
+            <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">151</td>
+            <td>SERVICE_AUTHORIZATION_FAILED</td>
+            <td>[<a href="http://www.iana.org/go/rfc5446">RFC5446</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">152</td>
+            <td>MULTIPATH_NOT_ALLOWED</td>
+            <td>[<a href="http://www.iana.org/go/rfc7629">RFC7629</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">153</td>
+            <td>INVALID_FB_IDENTIFIER</td>
+            <td>[<a href="http://www.iana.org/go/rfc7629">RFC7629</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">154-191</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">192</td>
+            <td>HA Error Code for Experimental use</td>
+            <td>[<a href="http://www.iana.org/go/rfc4064">RFC4064</a>]</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-19" id="mobileip-numbers-19"></a>Registration denied by the gateway foreign agent</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5944">RFC5944</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-19.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-19" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">193</td>
+            <td>NO_HOME_REG</td>
+            <td>[<a href="http://www.iana.org/go/rfc4857">RFC4857</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">194</td>
+            <td>Reserved</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">195-200</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3><a name="mobileip-numbers-20" id="mobileip-numbers-20"></a>Error Codes from the Correspondent Node</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="mobileip-numbers-20.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-mobileip-numbers-20" class="sortable">
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>Name</th>
+            <th>Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">201</td>
+            <td>Expired Home nonce Index</td>
+            <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">202</td>
+            <td>Expired Care-of nonce Index</td>
+            <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">203</td>
+            <td>Expired nonces</td>
+            <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">204-210</td>
+            <td>Unassigned</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="mobileip-numbers-21" id="mobileip-numbers-21"></a>Security Parameter Index (SPI) Values for the Mobile IP Reserved SPIs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Must be specified and approved by the MIP4 working group</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-21.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-21" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>CHAP_SPI</td>
+          <td>[<a href="http://www.iana.org/go/rfc4721">RFC4721</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-22" id="mobileip-numbers-22"></a>Replay Method Identifier</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-22.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-22" class="sortable">
+      <thead>
+        <tr>
+          <th>Replay Method</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-1</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Timestamps</td>
+          <td>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Nonces</td>
+          <td>[<a href="http://www.iana.org/go/rfc3957">RFC3957</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-23" id="mobileip-numbers-23"></a>Generalized Link Layer Address Registration Extension Subtypes and Generalized Link Layer Address Advertisement Extension Subtypes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-23.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-23" class="sortable">
+      <thead>
+        <tr>
+          <th>Subtype Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>3GPP2 International Mobile Station Identity         
+and Connection ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>3GPP International Mobile Subscriber Identity</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Ethernet 48-bit MAC address</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>64-bit Global ID, EUI-64</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Solicited IPv4 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Access Point Identifier</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>FA IPv4 Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-24" id="mobileip-numbers-24"></a>Code Values for Mobile IP Handoff Reply Messages (Value 17)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Consensus</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-24.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-24" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Successful Handoff</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Generic Handoff Failure</td>
+          <td>[<a href="http://www.iana.org/go/rfc4881">RFC4881</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-25" id="mobileip-numbers-25"></a>Message String Extension (Value 145)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc4917">RFC4917</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-25.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-25" class="sortable">
+      <thead>
+        <tr>
+          <th>Subtype Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Home Agent</td>
+          <td>[<a href="http://www.iana.org/go/rfc4917">RFC4917</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Foreign Agent</td>
+          <td>[<a href="http://www.iana.org/go/rfc4917">RFC4917</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-26" id="mobileip-numbers-26"></a>Mobile Network Acknowledgement Extension</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Standards Action or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-26.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-26" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Success</td>
+          <td>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Invalid prefix length (MOBNET_INVALID_PREFIX_LEN)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Mobile Router is not authorized for prefix (MOBNET_UNAUTHORIZED)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Forwarding setup failed (MOBNET_FWDING_SETUP_FAILED)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5177">RFC5177</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Home Agent cannot assign a mobile network prefix (MOBNET_UNASSIGNED)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6626">RFC6626</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-27" id="mobileip-numbers-27"></a>PMIPv4 Non-skippable Extension (Value 47)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-27.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-27" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PMIPv4 Per-Node Authentication Method</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-255</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-28" id="mobileip-numbers-28"></a>PMIPv4 Skippable Extension (Value 147)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-28.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-28" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>PMIPv4 Interface ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>PMIPv4 Device ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>PMIPv4 Subscriber ID</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Access Technology Type</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-255</td>
+          <td>Unassigned</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-29" id="mobileip-numbers-29"></a>Dual Stack (DSMIPv4) Extension subtypes (Value 152)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5454">RFC5454</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-29.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-29" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>IPv6 Prefix Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc5454">RFC5454</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPv6 Prefix Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc5454">RFC5454</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>IPv6 Tunneling Mode</td>
+          <td>[<a href="http://www.iana.org/go/rfc5454">RFC5454</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-30" id="mobileip-numbers-30"></a>PMIPv4 Per-Node Authentication Method Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-30.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-30" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>FA-HA Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>IPSec Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-31" id="mobileip-numbers-31"></a>PMIPv4 Device ID Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-31.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-31" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Ethernet MAC address</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Mobile Equipment Identifier (MEID)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>International Mobile Equipment Identity (IMEI)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Electronic Serial Number (ESN)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-32" id="mobileip-numbers-32"></a>PMIPv4 Subscriber ID Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-32.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-32" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>International Mobile Subscriber Identity (IMSI)</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-33" id="mobileip-numbers-33"></a>Access Technology Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-33.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-33" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>802.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>802.11a/b/g</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>802.16e</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>802.16m</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>3GPP EUTRAN/LTE</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>3GPP UTRAN/GERAN</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>3GPP2 1xRTT/HRPD</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>3GPP2 UMB</td>
+          <td>[<a href="http://www.iana.org/go/rfc5563">RFC5563</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-34" id="mobileip-numbers-34"></a>IPv6 Prefix Reply Extension Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5454">RFC5454</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-34.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-34" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>registration accepted, IPv6 to be tunneled to HoA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5454">RFC5454</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>registration accepted, IPv6 to be tunneled to CoA</td>
+          <td>[<a href="http://www.iana.org/go/rfc5454">RFC5454</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-7</td>
+          <td>Unassigned (available for accept codes)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>registration rejected, reason unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc5454">RFC5454</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>registration rejected, administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc5454">RFC5454</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10-255</td>
+          <td>Unassigned (available for reject codes)</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-36" id="mobileip-numbers-36"></a>Code Values for General Notification Messages</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-36.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-mobileip-numbers-36-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Expert Review</td>
+          <td>Success Code</td>
+        </tr>
+        <tr>
+          <td align="center">1-63</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">64-69</td>
+          <td>Expert Review</td>
+          <td>Error Codes from the FA</td>
+        </tr>
+        <tr>
+          <td align="center">70-127</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-133</td>
+          <td>Expert Review</td>
+          <td>Error Codes from the HA</td>
+        </tr>
+        <tr>
+          <td align="center">134-191</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">192-197</td>
+          <td>Expert Review</td>
+          <td>Error Codes from the MN</td>
+        </tr>
+        <tr>
+          <td align="center">198-255</td>
+          <td>Expert Review</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-mobileip-numbers-36" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>notification accepted</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-63</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">64</td>
+          <td>reason unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65</td>
+          <td>administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">66</td>
+          <td>insufficient resources</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">67</td>
+          <td>mobile node failed authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">68</td>
+          <td>home agent failed authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">69</td>
+          <td>notification Identification mismatch</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">70-126</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">127</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">128</td>
+          <td>reason unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">129</td>
+          <td>administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">130</td>
+          <td>insufficient resources</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">131</td>
+          <td>mobile node failed authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">132</td>
+          <td>foreign agent failed authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">133</td>
+          <td>notification Identification mismatch</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">134-190</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">191</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">192</td>
+          <td>reason unspecified</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">193</td>
+          <td>administratively prohibited</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">194</td>
+          <td>insufficient resources</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">195</td>
+          <td>foreign agent failed authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">196</td>
+          <td>home agent failed authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">197</td>
+          <td>notification Identification mismatch</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">198-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc6098">RFC6098</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-37" id="mobileip-numbers-37"></a>Route Optimization Extension (Value 49)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-37.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-37" class="sortable">
+      <thead>
+        <tr>
+          <th>Subtype Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Route Optimization Reply</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Mobile-Correspondent Authentication</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Care-of Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-38" id="mobileip-numbers-38"></a>Route Optimization Data Extension (Value 50)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-38.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-38" class="sortable">
+      <thead>
+        <tr>
+          <th>Subtype Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Route Optimization Prefix Advertisement</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mobileip-numbers-39" id="mobileip-numbers-39"></a>Mobile Router Route Optimization Capability Extension (Value 153)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mobileip-numbers-39.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mobileip-numbers-39" class="sortable">
+      <thead>
+        <tr>
+          <th>Subtype Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Mobile Router Route Optimization Capability</td>
+          <td>[<a href="http://www.iana.org/go/rfc6521">RFC6521</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Frank_Quick" id="Frank_Quick">[Frank_Quick]</a>
+          </td>
+          <td>Frank Quick</td>
+          <td>
+            <a href="mailto:fquick&amp;qualcomm.com">mailto:fquick&amp;qualcomm.com</a>
+          </td>
+          <td>2002-07</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

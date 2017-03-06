@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Babel Routing Protocol</title>
+  </head>
+  <body>
+    <h1>Babel Routing Protocol</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2015-04-14</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-06-02</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="babel.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="babel.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="babel.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#tlv-types">Babel TLV Types</a>
+      </li>
+      <li>
+        <a href="#sub-tlv-types">Babel Sub-TLV Types</a>
+      </li>
+      <li>
+        <a href="#flags">Babel Flags Values</a>
+      </li>
+    </ul>
+    <h2><a name="tlv-types" id="tlv-types"></a>Babel TLV Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7557">RFC7557</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Pad1</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>PadN</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Acknowledgment Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Acknowledgment</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Hello</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>IHU</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Router-Id</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Next Hop</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Update</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Route Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>Seqno Request</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>TS/PC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7298">RFC7298</a>]</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>HMAC</td>
+          <td>[<a href="http://www.iana.org/go/rfc7298">RFC7298</a>]</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>Source-specific Update</td>
+          <td>[<a href="http://www.iana.org/go/draft-boutier-babel-source-specific">draft-boutier-babel-source-specific</a>]</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>Source-specific Request</td>
+          <td>[<a href="http://www.iana.org/go/draft-boutier-babel-source-specific">draft-boutier-babel-source-specific</a>]</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>Source-specific Seqno Request</td>
+          <td>[<a href="http://www.iana.org/go/draft-boutier-babel-source-specific">draft-boutier-babel-source-specific</a>]</td>
+        </tr>
+        <tr>
+          <td>16-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>224-254</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7557">RFC7557</a>]</td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved for expansion of the type space</td>
+          <td>[<a href="http://www.iana.org/go/rfc7557">RFC7557</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="sub-tlv-types" id="sub-tlv-types"></a>Babel Sub-TLV Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7557">RFC7557</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="sub-tlv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-sub-tlv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Pad1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7557">RFC7557</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>PadN</td>
+          <td>[<a href="http://www.iana.org/go/rfc7557">RFC7557</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Diversity</td>
+          <td>[<a href="http://www.iana.org/go/draft-chroboczek-babel-diversity-routing">draft-chroboczek-babel-diversity-routing</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Timestamp</td>
+          <td>[<a href="http://www.iana.org/go/draft-jonglez-babel-rtt-extension">draft-jonglez-babel-rtt-extension</a>]</td>
+        </tr>
+        <tr>
+          <td>4-223</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>224-254</td>
+          <td>Reserved for Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7557">RFC7557</a>]</td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Reserved for expansion of the type space</td>
+          <td>[<a href="http://www.iana.org/go/rfc7557">RFC7557</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="flags" id="flags"></a>Babel Flags Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7557">RFC7557</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="flags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-flags" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Default prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Default router-id</td>
+          <td>[<a href="http://www.iana.org/go/rfc6126">RFC6126</a>]</td>
+        </tr>
+        <tr>
+          <td>2-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

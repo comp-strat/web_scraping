@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>RTP Control Protocol Extended Reports (RTCP XR) Block Type Registry</title>
+  </head>
+  <body>
+    <h1>RTP Control Protocol Extended Reports (RTCP XR) Block Type Registry</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2003-08-29</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-11-11</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtcp-xr-block-types.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="rtcp-xr-block-types.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="rtcp-xr-block-types.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#rtcp-xr-block-types-1">RTCP XR Block Type</a>
+      </li>
+      <li>
+        <a href="#pdv-types">RTCP XR PDV block - PDV type</a>
+      </li>
+      <li>
+        <a href="#idms-spst">IDMS XR Block SPST Registry</a>
+      </li>
+      <li>
+        <a href="#mos-metric">RTCP XR MOS Metric block - multimedia application Calculation Algorithm</a>
+      </li>
+    </ul>
+    <h2><a name="rtcp-xr-block-types-1" id="rtcp-xr-block-types-1"></a>RTCP XR Block Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Joerg Ott</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3611">RFC3611</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rtcp-xr-block-types-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rtcp-xr-block-types-1" class="sortable">
+      <thead>
+        <tr>
+          <th>BT</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1</td>
+          <td>Loss RLE Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc3611">RFC3611</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Duplicate RLE Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc3611">RFC3611</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Packet Receipt Times Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc3611">RFC3611</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>Receiver Reference Time Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc3611">RFC3611</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>DLRR Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc3611">RFC3611</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6</td>
+          <td>Statistics Summary Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc3611">RFC3611</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">7</td>
+          <td>VoIP Metrics Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc3611">RFC3611</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8</td>
+          <td>RTCP XR</td>
+          <td>[<a href="http://www.iana.org/go/rfc5093">RFC5093</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9</td>
+          <td>Texas Instruments Extended VoIP Quality Block</td>
+          <td>[<a href="http://focus.ti.com/general/docs/bcg/bcgdoccenter.tsp?templateId=6116&amp;navigationId=12078#42">http://focus.ti.com/general/docs/bcg/bcgdoccenter.tsp?templateId=6116&amp;navigationId=12078#42</a>][<a href="#David_Lide">David_Lide</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">10</td>
+          <td>Post-repair Loss RLE Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc5725">RFC5725</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">11</td>
+          <td>Multicast Acquisition Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc6332">RFC6332</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">12</td>
+          <td>IDMS Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc7272">RFC7272</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">13</td>
+          <td>ECN Summary Report</td>
+          <td>[<a href="http://www.iana.org/go/rfc6679">RFC6679</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">14</td>
+          <td>Measurement Information Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc6776">RFC6776</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">15</td>
+          <td>Packet Delay Variation Metrics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc6798">RFC6798</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16</td>
+          <td>Delay Metrics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc6843">RFC6843</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17</td>
+          <td>Burst/Gap Loss Summary Statistics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc7004">RFC7004</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18</td>
+          <td>Burst/Gap Discard Summary Statistics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc7004">RFC7004</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19</td>
+          <td>Frame Impairment Statistics Summary</td>
+          <td>[<a href="http://www.iana.org/go/rfc7004">RFC7004</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20</td>
+          <td>Burst/Gap Loss Metrics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc6958">RFC6958</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21</td>
+          <td>Burst/Gap Discard Metrics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc7003">RFC7003</a>][<a href="http://www.rfc-editor.org/errata_search.php?eid=3735">RFC Errata 
+          3735</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22</td>
+          <td>MPEG2 Transport Stream PSI-Independent Decodability Statistics Metrics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc6990">RFC6990</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23</td>
+          <td>De-Jitter Buffer Metrics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc7005">RFC7005</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24</td>
+          <td>Discard Count Metrics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc7002">RFC7002</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25</td>
+          <td>DRLE (Discard RLE Report)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7097">RFC7097</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26</td>
+          <td>BDR (Bytes Discarded Report)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7243">RFC7243</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27</td>
+          <td>RFISD (RTP Flows Initial Synchronization Delay)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7244">RFC7244</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28</td>
+          <td>RFSO (RTP Flows Synchronization Offset Metrics Block)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7244">RFC7244</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29</td>
+          <td>MOS Metrics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc7266">RFC7266</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30</td>
+          <td>LCB (Loss Concealment Metrics Block)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7294">RFC7294, Section 4.1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31</td>
+          <td>CSB (Concealed Seconds Metrics Block)</td>
+          <td>[<a href="http://www.iana.org/go/rfc7294">RFC7294, Section 4.1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">32</td>
+          <td>MPEG2 Transport Stream PSI Decodability Statistics Metrics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc7380">RFC7380</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">33</td>
+          <td>Post-Repair Loss Count Metrics Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc7509">RFC7509</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">34</td>
+          <td>Video Loss Concealment Metric Report Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc7867">RFC7867</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">35</td>
+          <td>Independent Burst/Gap Discard Metrics Block</td>
+          <td>[<a href="http://www.iana.org/go/rfc8015">RFC8015</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">36-254</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>Reserved for future extensions</td>
+          <td>[<a href="http://www.iana.org/go/rfc3611">RFC3611</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pdv-types" id="pdv-types"></a>RTCP XR PDV block - PDV type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Roni Even</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6798">RFC6798</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pdv-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pdv-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>MAPDV2</td>
+          <td>Clause 6.2.3.2 of ITU-T Rec. G.1020, [<a href="http://www.iana.org/go/rfc6798">RFC6798</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>2-point PDV</td>
+          <td>Clause 6.2.4 of ITU-T Rec. Y.1540, [<a href="http://www.iana.org/go/rfc6798">RFC6798</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="idms-spst" id="idms-spst"></a>IDMS XR Block SPST Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Roni Even</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7272">RFC7272</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="idms-spst.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-idms-spst" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Name</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7272">RFC7272</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Synchronization Client</td>
+          <td>[<a href="http://www.iana.org/go/rfc7272">RFC7272, Section 7</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>MSAS</td>
+          <td>[<a href="http://www.etsi.org/deliver/etsi_ts/183000_183099/183063/">TS 183 063</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>SC Prime Input</td>
+          <td>[<a href="http://www.etsi.org/deliver/etsi_ts/183000_183099/183063/">TS 183 063</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>SC Prime Output</td>
+          <td>[<a href="http://www.etsi.org/deliver/etsi_ts/183000_183099/183063/">TS 183 063</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5-15</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mos-metric" id="mos-metric"></a>RTCP XR MOS Metric block - multimedia application Calculation Algorithm</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Roni Even</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7266">RFC7266</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mos-metric.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-mos-metric" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Type</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">P564</td>
+          <td>ITU-T P.564 Compliant Algorithm</td>
+          <td>voice</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-P.564">ITU-T Recommendation P.564, July 2006</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">G107</td>
+          <td>ITU-T G.107</td>
+          <td>voice</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-G.107">ITU-T Recommendation G.107, April 2009</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">TS101_329</td>
+          <td>ETSI TS 101 329-5 Annex E</td>
+          <td>voice</td>
+          <td>[<a href="http://www.etsi.org/deliver/etsi_ts/101300_101399/10132905/01.01.01_60/ts_10132905v010101p.pdf">ETSI TS 101 329-5 V1.1.1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">JJ201_1</td>
+          <td>TTC JJ201.1</td>
+          <td>voice</td>
+          <td>[TTC 201.01, "A method for speech quality assessment for Voice over IP."]</td>
+        </tr>
+        <tr>
+          <td align="center">G107_1</td>
+          <td>ITU-T G.107.1</td>
+          <td>voice</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-G.107.1">ITU-T Recommendation G.107.1, December 2011</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P862</td>
+          <td>ITU-T P.862</td>
+          <td>voice</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-P.862">ITU-T Recommendation P.862, February 2001</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P862_2</td>
+          <td>ITU-T P.862.2</td>
+          <td>voice</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-P.862.2">ITU-T Recommendation P.862.2, November 2007</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P863</td>
+          <td>ITU-T P.863</td>
+          <td>voice</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-P.863">ITU-T Recommendation P.863, January 2011</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P1201_1</td>
+          <td>ITU-T P.1201.1</td>
+          <td>multimedia</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-P.1201.1">ITU-T P.1201.1, October 2012</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P1201_2</td>
+          <td>ITU-T P.1201.2</td>
+          <td>multimedia</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-P.1201.2">ITU-T P.1201.2, October 2012</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P1202_1</td>
+          <td>ITU-T P.1202.1</td>
+          <td>video</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-P.1202.1">ITU-T P.1202.1, October 2012</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">P1202_2</td>
+          <td>ITU-T P.1202.2</td>
+          <td>video</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-P.1202.2">ITU-T P.1202.2, May 2013</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="David_Lide" id="David_Lide">[David_Lide]</a>
+          </td>
+          <td>David Lide</td>
+          <td>
+            <a href="mailto:dlide&amp;ti.com">mailto:dlide&amp;ti.com</a>
+          </td>
+          <td>2007-06-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Miguel_Angel_Reina_Ortega" id="Miguel_Angel_Reina_Ortega">[Miguel_Angel_Reina_Ortega]</a>
+          </td>
+          <td>Miguel Angel Reina Ortega</td>
+          <td>
+            <a href="mailto:MiguelAngel.ReinaOrtega&amp;etsi.org">mailto:MiguelAngel.ReinaOrtega&amp;etsi.org</a>
+          </td>
+          <td>2010-09-09</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

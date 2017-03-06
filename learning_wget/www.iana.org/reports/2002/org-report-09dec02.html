@@ -1,0 +1,451 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>IANA | Report on Redelegation of the .org Top-Level Domain</TITLE>
+<style type="text/css">
+<!--
+p, li, td, ul {font-family: Arial, Helvetica, sans-serif;}
+-->
+</style>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<TABLE align="center" WIDTH="95%" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+  <TR> 
+    <TD WIDTH="7%">&nbsp;</TD>
+    <TD WIDTH="35%"><IMG SRC="/logos/iana1.jpg" WIDTH="238" HEIGHT="145" ALIGN="BOTTOM"></TD>
+    <TD WIDTH="58%" align="center"> <P><font size="+2">IANA Report on Redelegation 
+        of the .org Top-Level Domain</font><br>
+        (9 December 2002)</p></TD>
+  </TR>
+  <tr> 
+    <td colspan="3"> <HR NOSHADE> <p align="center"><b><font size="+2">IANA Report</font></b></p>
+      <P>Subject: Redelegation of the .org Top-Level Domain<br>
+        Date: 9 December 2002</P>
+      <HR ALIGN=LEFT> <p>The Internet Assigned Numbers Authority (the IANA) is 
+        responsible for various administrative functions associated with management 
+        of the Internet's domain-name system root zone, including reviewing the 
+        appropriateness of contemplated changes to the content of the root zone 
+        and preparing reports on those changes. This report gives the findings 
+        and conclusions of the IANA on the redelegation of the .org top-level 
+        domain (TLD) from operation by VeriSign, Inc., to operation by Public 
+        Interest Registry.</p>
+      <p><b><a name="FactualandProceduralBackground"></a><font size="+1">Factual 
+        and Procedural Background</font></b></p>
+      <p><b><a name="A"></a>A. Background of the .org TLD</b></p>
+      <p>The Internet domain-name system (DNS) was deployed under the guidance 
+        of <a href="http://www.postel.org/jonpostel.html">Jon Postel</a> in 1984 
+        and 1985 (see <a href="http://www.rfc-editor.org/rfc/rfc921.txt">RFC 921</a>) 
+        as a distributed database for information about resources on the Internet, 
+        replacing the prior &quot;hosts.txt&quot; system. The DNS contains resource 
+        records that map easy-to-remember domain names to the unique numeric addresses 
+        assigned to every computer on the Internet.</p>
+      <p>The DNS is organized hierarchically with several TLDs containing second-level 
+        domains (SLDs), which in turn contain third-level domains (3LDs), etc. 
+        A domain name consists of a series of labels, separated by dots, tracing 
+        the hierarchy from the top-level domain down to the specific computer 
+        being identified: &lt;3LD&gt;.&lt;SLD&gt;.&lt;TLD&gt;. Thus, the domain 
+        name &quot;www.icann.org&quot; is within the &quot;www&quot; third-level 
+        domain of the &quot;icann&quot; second-level domain of the &quot;org&quot; 
+        top-level domain.</p>
+      <p>As initially deployed, the DNS included both generic top-level domains 
+        (gTLDs) and country-code top-level domains (ccTLDs). In <a href="http://www.rfc-editor.org/rfc/rfc920.txt">RFC 
+        920</a>, entitled &quot;Domain Requirements&quot; (Oct. 1984), Dr. Postel 
+        and Joyce Reynolds proposed a set of initial gTLDs including &quot;com&quot; 
+        (commercial), &quot;edu&quot; (education), &quot;gov&quot; (government), 
+        &quot;mil&quot; (military), and &quot;org&quot; (organization).&quot; 
+        By the time of actual implementation of the top-level domains in January 
+        1985, an additional top-level domain named &quot;net&quot; was included.</p>
+      <p>From the deployment of the DNS until the end of 1992, the gTLDs were 
+        managed by SRI International's Network Information Center (SRI-NIC). Beginning 
+        in 1993, the registration function within gTLDs was assumed by Network 
+        Solutions, Inc. (NSI), under <a href="http://www.icann.org/nsi/coopagmt-01jan93.htm">Cooperative 
+        Agreement NCR 92-18742 with the National Science Foundation</a>.</p>
+      <p>That cooperative agreement was originally scheduled to conclude on 30 
+        September 1998. In June 1998, however, the U.S. Department of Commerce 
+        (which took over from the National Science Foundation as the responsible 
+        U.S. Government agency) issued a <a href="http://www.icann.org/general/white-paper-05jun98.htm">Statement 
+        of Policy commonly known as the &quot;White Paper&quot;</a> (&quot;Management 
+        of Internet Names and Addresses,&quot; 63 Fed. Reg. 31741 (1998)), in 
+        which it announced its intention to transition responsibilities for management 
+        of the domain name space to a private, not-for-profit corporation (now 
+        known as the Internet Corporation for Assigned Names and Numbers, or &quot;ICANN&quot;) 
+        formed by the Internet community. In connection with the implementation 
+        of the White Paper, the NSI-U.S. Government cooperative agreement was 
+        extended in October 1998 (by <a href="http://www.icann.org/nsi/coopagmt-amend11-07oct98.htm">Amendment 
+        11</a>) until 30 September 2000. In 1999, <a href="http://www.icann.org/nsi/nsi-registry-agreement-04nov99.htm">NSI 
+        and ICANN reached an agreement</a> that supplemented the cooperative agreement 
+        with an ICANN-NSI registry agreement, under which NSI's operatorship of 
+        the .com, .net, and .org gTLDs was extended to 10 November 2003 or, if 
+        certain conditions were met, 10 November 2007. At the same time, NSI and 
+        the U.S. Department of Commerce amended the cooperative agreement to extend 
+        for the same period. (<a href="http://www.icann.org/nsi/coopagmt-amend19-04nov99.htm">Amendment 
+        19 to Cooperative Agreement NCR 92-18742</a>, section I(B)(10).)</p>
+      <p>In May 2001, the ICANN-NSI registry agreement covering .com, .net, and 
+        .org, was replaced with three registry agreements, which separately covered 
+        (and had different termination provisions for) the three gTLDs.<sup><a href="#fn1">1</a></sup> 
+        The <a href="http://www.icann.org/tlds/agreements/verisign/registry-agmt-org-25may01.htm#5.1">registry 
+        agreement for .org provided</a> that VeriSign, Inc. (which had acquired 
+        NSI) would give up the operatorship of the .org registry on 31 December 
+        2002,<sup><a href="#fn2">2</a></sup> after which a successor registry 
+        operator designated by ICANN would assume responsibility for the operation 
+        of .org.</p>
+      <p><b><a name="B"></a>B. Process for Selection of a Successor Operator of 
+        the .org TLD</b></p>
+      <p>At its <a href="http://www.icann.org/stockholm/">4 June 2001 meeting in Stockholm, Sweden</a>, 
+        the ICANN Board of Directors <a href="http://www.icann.org/minutes/prelim-report-04jun01.htm#ReferraloforgIssuestoDNSO">referred 
+        the issues</a> raised by the scheduled transition of the operation of 
+        the .org gTLD to ICANN's Domain Name Supporting Organization (DNSO) Names 
+        Council. The Names Council, in turn, formed a working group, which submitted 
+        a <a href="http://www.dnso.org/clubpublic/council/Arc09/msg00031.html">report</a> 
+        that the Names Council <a href="http://www.dnso.org/dnso/notes/20020117.NCteleconf-minutes.html">unanimously 
+        adopted</a> at a meeting on 17 January 2002. The report was posted on 
+        the ICANN web site for public comment, and an in-person Public Forum was 
+        held on the topic on 13 March 2002 at <a href="http://www.icann.org/accra/">ICANN's 
+        meeting in Accra, Ghana</a>.</p>
+      <p>At the ICANN Board's meeting on 14 March 2002, the <a href="http://www.icann.org/minutes/prelim-report-14mar02.htm#orgReassignment">Board 
+        authorized the solicitation of proposals</a> to succeed VeriSign as the 
+        operator of the .org registry. ICANN then posted, <a href="http://www.icann.org/tlds/org/index-01may02.htm">in 
+        draft form, a request for proposals</a>, which included the following 
+        elements:</p>
+      <ul>
+        <li><a href="http://www.icann.org/tlds/org/app-instructions-01may02.htm">application 
+          instructions</a>;</li>
+        <li><a href="http://www.icann.org/tlds/org/transmittal-01may02.htm">an 
+          application transmittal form</a>;</li>
+        <li><a href="http://www.icann.org/tlds/org/org-proposal-01may02.htm">a 
+          proposal form</a> (with detailed questions to be answered in proposals);</li>
+        <li><a href="http://www.icann.org/tlds/org/fitness-disclosure-01may02.htm">a 
+          fitness disclosure for applicants</a>;</li>
+        <li><a href="http://www.icann.org/tlds/org/confid-statement-01may02.htm">a 
+          form for requesting confidential treatment of submitted materials</a>;</li>
+        <li><a href="http://www.icann.org/tlds/org/criteria-01may02.htm">a statement 
+          of criteria for assessing proposals</a>; and</li>
+        <li><a href="http://www.icann.org/tlds/org/draft-registry-agmt-01may02.htm">a 
+          draft registry agreement that the selected successor would be expected 
+          to enter</a>.</li>
+      </ul>
+      <p>After a two-week comment period, these materials were revised based on 
+        the comments received. The <a href="http://www.icann.org/tlds/org/rfp-20may02.htm">final 
+        request for proposals</a> was posted on 20 May 2002. In addition, ICANN 
+        solicited written questions from prospective bidders, and on 24 May 2002 
+        posted <a href="http://www.icann.org/tlds/org/faq-24may02.htm">46 detailed 
+        answers to the questions received</a>.</p>
+      <p><a href="http://www.icann.org/tlds/org/applications-received-18jun02.htm">Eleven 
+        proposals were received</a> by the 18 June 2002 deadline in response to 
+        the request for proposals. Each of these proposals was posted on the ICANN 
+        web site, and public comments were invited.<sup><a href="#fn3">3</a></sup> 
+        A special ICANN Public Forum was held on the evening of 26 June 2002 in 
+        conjunction with ICANN's meeting in Bucharest, Romania, where each bidder 
+        made a presentation to the ICANN Board and community on its proposal, 
+        and a dialogue was held with members of the community, the Board, and 
+        the bidders.<sup><a href="#fn4">4</a></sup></p>
+      <p>Over the next three months, four teams designated by ICANN evaluated 
+        the applications under the <a href="http://www.icann.org/tlds/org/criteria-20may02.htm">eleven 
+        criteria</a> that had been posted as part of the request for proposals. 
+        The four teams, which focused on different aspects, were:</p>
+      <ul>
+        <li>Gartner, Inc. performed a detailed evaluation of the technical aspects 
+          of the eleven proposals;</li>
+        <li> A team of Chief Information Officers of academic institutions in 
+          the United States, Mexico, and Australia also did a technical evaluation, 
+          which was more summary than the Gartner analysis and served as a validator 
+          of it;</li>
+        <li> A team of participants in the DNSO Non-Commercial Domain Name Holders 
+          Constituency did an evaluation of the proposals under three of the stated 
+          criteria, involving proposed measures to differentiate of the .org TLD, 
+          responsiveness to the needs of the noncommercial Internet community, 
+          and level of support from .org registrants and the non-commercial community; 
+          and</li>
+        <li> The ICANN General Counsel evaluated how well the proposals met certain 
+          legal considerations.</li>
+      </ul>
+      <p>Each of these teams based its evaluation on the written proposals, the 
+        presentations at the Bucharest Public Forum, and public comments received 
+        on the proposals through ICANN's online comment mechanisms. In addition, 
+        the evaluators were assisted by the applicants' responses to fourteen 
+        questions that were posed to clarify various aspects of the proposals. 
+      </p>
+      <p>On 19 August 2002, a <a href="http://www.icann.org/tlds/org/preliminary-evaluation-report-19aug02.htm">draft 
+        evaluation report</a>, which detailed and combined the analyses of each 
+        of the evaluation teams, was posted on ICANN's web site. This draft report 
+        recommended the following three proposals, in order of preference: (1) 
+        PIR (a not-for-profit organization proposed to be formed by the Internet 
+        Society, (2) NeuStar, Inc. (a for-profit company), and (3) Global Name 
+        Registry (a for-profit company). Public and applicant comments were invited 
+        on the draft evaluation report, and many were received.<sup><a href="#fn5">5</a></sup> 
+        These comments pointed out several areas in which the evaluation could 
+        be enhanced; these comments were addressed and a <a href="http://www.icann.org/tlds/org/final-evaluation-report-23sep02.htm">final 
+        evaluation report</a> was issued on 23 September 2002. The final evaluation 
+        report included an overall &quot;staff evaluation report&quot; and supporting 
+        reports prepared by Gartner, Inc., the Non-Commercial Domain Name Holders 
+        Constituency team, and the ICANN General Counsel. Although the final evaluation 
+        report reflected revisions to several aspects of the evaluation based 
+        on the comments received, the recommended preferences for selection of 
+        (1) PIR, (2) NeuStar, and (3) Global Name Registry were reaffirmed by 
+        the analysis.</p>
+      <p>Further comments from the <a href="http://www.icann.org/tlds/org/applicant-comments-03oct02.htm">applicants</a> 
+        and the <a href="http://forum.icann.org/org-eval/">public</a> were invited 
+        on the final evaluation report, before its consideration by the ICANN 
+        Board. Eight of the eleven bidders chose to submit <a href="http://www.icann.org/tlds/org/applicant-comments-03oct02.htm">written 
+        summations</a> for consideration by the Board. These were posted on the 
+        ICANN web site.</p>
+      <p>On 14 October 2002, the <a href="http://www.icann.org/minutes/prelim-report-14oct02.htm#SuccessorOperatorfororgRegistry">ICANN 
+        Board met to consider the proposals</a> in view of the extensive public 
+        and applicant comment, as well as the evaluation reports by the various 
+        evaluation teams. At that meeting, it selected PIR as the first-choice 
+        successor, and authorized the ICANN President and General Counsel to &quot;negotiate 
+        a registry agreement with PIR consistent with the model .org Registry 
+        Agreement posted as part of the final Request for Proposals, supplemented 
+        as appropriate according to the proposal submitted by the Internet Society.&quot;<sup><a href="#fn6">6</a></sup></p>
+      <p><b><a name="C"></a>C. Negotiation of the ICANN-PIR Agreement</b></p>
+      <p>The .org Registry Agreement was negotiated over the next ten days. On 
+        24 October 2002, the fully negotiated agreement was posted on the ICANN 
+        web site. In line with ICANN's usual practice, ICANN Board members were 
+        afforded seven days in which to raise objections to the agreements based 
+        on policy considerations; no such objections were raised. On 26 November 
+        2002, the <a href="http://www.icann.org/correspondence/doc-to-icann-26nov02.htm">U.S. 
+        Department of Commerce approved PIR as successor registry</a> under <a href="http://www.icann.org/general/amend3-jpamou-25may01.htm#I">Amendment 
+        3 of its Memorandum of Understanding with ICANN</a>. The ICANN and PIR 
+        formally entered the <a href="http://www.icann.org/tlds/agreements/org/">.org 
+        Registry Agreement</a> on 2 December 2002.<br>
+        <br>
+        <font size="+1"><b><a name="Evaluation"></a>Evaluation</b></font></p>
+      <p>This report is being provided under the <a href="http://www.icann.org/general/iana-contract-21mar01.htm">21 
+        March 2001 contact for performance of the IANA function</a> between the 
+        United States Government and the Internet Corporation for Assigned Names 
+        and Numbers. Under that contract, the IANA is responsible for various 
+        functions, known as the &quot;IANA functions&quot;, associated with the 
+        management of the root zone of the Internet domain-name system.</p>
+      <p>The overall purpose of changing operators of the .org registry is to 
+        enhance diversity of providers in the provision of registry services. 
+        This purpose, however, must be accomplished in a way that preserves the 
+        security and stability of the domain-name system. It should also be accomplished 
+        in a way so that .org is operated in a manner that reflects the particular 
+        needs of present .org registrants and the other entities within the non-commercial 
+        sector for which the .org top-level domain was established.</p>
+      <p>Because the .org TLD registry presently serves over 2,600,000 second-level 
+        domains, ICANN placed primary emphasis on stability in evaluating the 
+        proposals. Indeed, the first criterion for the selection was stability:</p>
+      <blockquote> 
+        <p><b>1. Need to preserve a stable, well-functioning .org registry.</b></p>
+        <p>ICANN's first priority is to preserve the stability of the Internet, 
+          including the domain-name system (DNS). Inasmuch as the .org TLD presently 
+          contains over 2,700,000 second-level domains, a principal consideration 
+          will be ICANN's level of confidence that a particular proposal will 
+          result in technically sound, high-quality services that meet the needs 
+          of .org registrants.</p>
+        <p>Proposals should include specific plans, backed by ample, firmly committed 
+          resources, as to how the proposed operator intends to operate the .org 
+          TLD in a stable and technically competent manner.&nbsp;.&nbsp;.&nbsp;. 
+          In evaluating proposals, ICANN will place significant emphasis on the 
+          demonstrated ability of the applicant or a member of the proposing team 
+          to operate a TLD registry of significant scale in a manner that provides 
+          affordable services with a high degree of service responsiveness and 
+          reliability.</p>
+      </blockquote>
+      <p><a href="http://www.icann.org/tlds/org/criteria.htm#1">Reassignment of 
+        .org Top-Level Domain: Criteria for Assessing Proposals</a> (20 May 2002).</p>
+      <p>This emphasis on stability was reflected throughout the evaluation process 
+        and the Board's selection. After a twenty-five day transition period, 
+        PIR will provide registration services through an outsourcing arrangement 
+        with Afilias, which as the registry operator for .info has experience 
+        in serving as registry operator for over 1,000,000 second-level domains. 
+        The technical evaluation teams both evaluated the Internet Society/PIR 
+        proposal as being within the top tier in terms of stability and other 
+        technical factors.</p>
+      <p>The evaluation considered not only the demonstrated the technical stability 
+        provided by Afilias, but also the organizational characteristics of PIR. 
+        PIR is a not-for-profit corporation organized under Pennsylvania law to 
+        serve as the .org registry operator. Its sole member is the Internet Society, 
+        which appoints its Board. The Internet Society was formed in 1992 and 
+        is a professional membership society with more than 150 organizational 
+        and 11,000 individual members in over 182 countries. Thus, the Internet 
+        Society is a long-established organization that is particularly knowledgeable 
+        about the needs of the organizations for which the .org top-level domain 
+        was intended. By establishing PIR as a subsidiary to serve as the successor 
+        operator of .org, the Internet Society has created a structure that can 
+        operate the .org TLD in a manner that will be sensitive to the needs of 
+        its intended users while allowing PIR to focus on the operation of .org 
+        by insulating it from the possibly distracting effects of pursuing the 
+        Internet Society's broader mission.</p>
+      <p>Under the arrangements put in place by the Internet Society, Afilias 
+        will provide start-up funding for PIR, after which PIR will receive one-third 
+        of the revenues from operation of the registry. These arrangements should 
+        provide PIR the financial resources necessary for it to operate in a financially 
+        stable manner. In addition, the presence of Afilias as a back-end provider 
+        provides assurance of continued stable operation of the .org registry. 
+        <br>
+        <br>
+        The <a href="http://www.icann.org/tlds/agreements/org/">negotiated .org 
+        registry agreement</a> reinforces the overriding emphasis on technical 
+        stability. It is modeled on the registry agreements ICANN has entered 
+        for the four unsponsored TLDs (<a href="http://www.icann.org/tlds/agreements/biz/">.biz</a>, 
+        <a href="http://www.icann.org/tlds/agreements/info/">.info</a>, <a href="http://www.icann.org/tlds/agreements/name/">.name</a>, 
+        and <a href="http://www.icann.org/tlds/agreements/pro/">.pro</a>) that 
+        have been introduced in 2001 and 2002. The agreement's features designed 
+        to ensure that the continued stability of the .org TLD include functional 
+        and performance specifications, data escrow requirements, and a detailed 
+        transition plan (including contingency scenarios) that are designed to 
+        ensure that .org customers and Internet users do not experience failures 
+        or disruptions as a result of the reassignment of the .org registry.</p>
+      <p>The reassignment of the .org registry from VeriSign to PIR will also 
+        meet the goal of enhancing diversity in the provision of gTLD registry 
+        services. Based on 1 July 2002 registration data, the top four providers 
+        of registry services for commercial gTLDs<sup><a href="#fn7">7</a></sup> 
+        currently are:</p>
+      <table align="center" width="80%" border="1" cellspacing="0">
+        <tr align="center"> 
+          <td width="50%"><b>Provider</b></td>
+          <td width="25%"><b>Number of Domain Names</b></td>
+          <td width="25%"><b>Percentage of Total</b></td>
+        </tr>
+        <tr> 
+          <td>VeriSign (.com/.net/.org)</td>
+          <td align="right">28,908,179</td>
+          <td align="right">94.54%</td>
+        </tr>
+        <tr> 
+          <td>Afilias (.info)</td>
+          <td align="right">868,162</td>
+          <td align="right">2.84%</td>
+        </tr>
+        <tr> 
+          <td>NeuLevel (.biz)</td>
+          <td align="right">721,198</td>
+          <td align="right">2.36%</td>
+        </tr>
+        <tr> 
+          <td>Global Name Registry (.name)</td>
+          <td align="right">80,000</td>
+          <td align="right">0.26%</td>
+        </tr>
+      </table>
+      <p>With the reassignment of .org to Public Interest Registry, under which 
+        Afilias will provide the back-end technical services, the providers' 
+        shares will be adjusted as follows (again, based on 1 July 2002 data):</p>
+      <table align="center" width="80%" border="1" cellspacing="0">
+        <tr align="center"> 
+          <td width="50%"><b>Provider</b></td>
+          <td width="25%"><b>Number of Domain Names</b></td>
+          <td width="25%"><b>Percentage of Total</b></td>
+        </tr>
+        <tr> 
+          <td>VeriSign (.com/.net/.org)</td>
+          <td align="right">26,366,166</td>
+          <td align="right">86.23%</td>
+        </tr>
+        <tr> 
+          <td>PIR (.org) (Afilias back-end)</td>
+          <td align="right">2,542,013</td>
+          <td align="right">8.31%</td>
+        </tr>
+        <tr> 
+          <td>Afilias (.info)</td>
+          <td align="right">868,162</td>
+          <td align="right">2.84%</td>
+        </tr>
+        <tr> 
+          <td>NeuLevel (.biz)</td>
+          <td align="right">721,198</td>
+          <td align="right">2.36%</td>
+        </tr>
+        <tr> 
+          <td>Global Name Registry (.name)</td>
+          <td align="right">80,000</td>
+          <td align="right">0.26%</td>
+        </tr>
+      </table>
+      <p>These figures indicate that the reassignment or the .org registry from 
+        VeriSign to PIR (with Afilias as a back-end provider) will materially 
+        increase diversity among gTLD providers, although concentration remains 
+        quite high.<sup><a href="#fn8">8</a></sup></p>
+      <p>The enhanced diversity of back-end providers also provides enhanced features 
+        for the .org registry services. Among the enhanced .org features will 
+        be <a href="http://www.icann.org/tlds/agreements/org/registry-agmt-appd-21oct02.htm#4.2">much 
+        quicker DNS and Whois update times</a> (15 minutes maximum) than presently 
+        provided (12 hours maximum), as well as a variety of <a href="http://www.icann.org/tlds/agreements/org/registry-agmt-appg-23oct02.htm#6">no-cost</a> 
+        and <a href="http://www.icann.org/tlds/agreements/org/registry-agmt-appg-23oct02.htm#4">low-cost</a> 
+        ancillary registry services.</p>
+      <p><b><a name="TransitionPlan"></a><font size="+1">Transition Plan</font></b></p>
+      <p>To help ensure a stable transition, PIR has contracted with VeriSign, 
+        Inc., to provide temporary back-end support for the .org registry beginning 
+        on 1 January 2003. This will permit a phased transition, during which 
+        the existing .org registrars that have completed contractual and other 
+        arrangements with PIR will continue submitting registry updates to VeriSign's 
+        registry system until 25 January 2003, in exactly the same technical manner 
+        as they do at present. Effective 25 January 2003, VeriSign will cease 
+        accepting .org updates from registrars and this function will be taken 
+        over by the new back-end provider, Afilias. The Afilias system will initially 
+        use the same protocol as presently used. Later in 2003, registrars will 
+        begin a migration from the current RRP protocol to the more-fully-featured 
+        EPP protocol, and will convert from the current thin registry model to 
+        a thick registry model. These migrations, as well as extensive contingency 
+        plans, are described in detail in PIR's Transition Plan. These plans 
+        are technically conservative and should lead to a stable transition to 
+        the new registry.</p>
+      <p><b><a name="Conclusion"></a><font size="+1">Conclusion</font></b></p>
+      <p>Based on the foregoing factors, the .org registry should be reassigned 
+        from VeriSign to Public Interest Registry as of 1 January 2003. This reassignment 
+        offers a material increase in the diversity of providers of gTLD registry 
+        services, while ensuring the continued stable operation of the .org registry.</p>
+      <hr noshade width="100%" align="center">
+      <P><b><a name="Notes"></a>Notes: </b>
+      <P><a name="fn1"></a>1. The new agreements (<a href="http://www.icann.org/tlds/agreements/verisign/com-index.htm">.com</a>, 
+        <a href="http://www.icann.org/tlds/agreements/verisign/net-index.htm">.net</a>, 
+        and <a href="http://www.icann.org/tlds/agreements/verisign/org-index.htm">.org</a>) 
+        were approved by the Department of Commerce in <a href="http://www.icann.org/general/amend3-jpamou-25may01.htm#I">paragraph 
+        I of Amendment 3 to its Memorandum of Understanding with ICANN</a>. 
+      <P><a name="fn2"></a>2. See <a href="http://www.icann.org/tlds/agreements/verisign/registry-agmt-org-25may01.htm#5.1.1">ICANN-VeriSign 
+        .org Registry Agreement &sect;&sect; 5.1.1, 5.1.2</a> (25 May 2001). 
+      <P><a name="fn3"></a>3. The postings are archived at &lt;<a href="http://forum.icann.org/org/">http://forum.icann.org/org/</a>&gt;. 
+      <P><a name="fn4"></a>4. For a compendium of the presentations given, see 
+        &lt;<a href="http://www.icann.org/bucharest/org-presentations.htm">http://www.icann.org/bucharest/org-presentations.htm</a>&gt;. 
+        The proceedings were also transcribed and are posted at &lt;<a href="http://www.icann.org/bucharest/captioning-evening-26jun02.htm">http://www.icann.org/bucharest/captioning-evening-26jun02.htm</a>&gt;. 
+      <P><a name="fn5"></a>5. Comments of the applicants are posted at &lt;<a href="http://www.icann.org/tlds/org/applicant-comments-on-preliminary-report.htm">http://www.icann.org/tlds/org/applicant-comments-on-preliminary-report.htm</a>&gt; 
+        and public comments are posted at &lt;<a href="http://forum.icann.org/org-eval/">http://forum.icann.org/org-eval/</a>&gt;. 
+      <P><a name="fn6"></a>6. A preliminary report of the Board meeting, showing 
+        the resolutions adopted by the Board, is posted at &lt;<a href="http://www.icann.org/minutes/prelim-report-14oct02.htm#SuccessorOperatorfororgRegistry">http://www.icann.org/minutes/prelim-report-14oct02.htm#SuccessorOperatorfororgRegistry</a>&gt;. 
+      <P><a name="fn7"></a>7. This table does not include .mil, .gov, .int, or 
+        .edu, which are not ordinarily used for registrations by commercial entities. 
+        In addition, the table does not include three recently introduced sponsored 
+        TLDs (.aero, .coop, and .museum) and one special-purpose unsponsored TLD 
+        (.pro), which account for fewer than 10,000 registered names combined. 
+      <P><a name="fn8"></a>8. VeriSign is one of eighteen gTLD registrars that 
+        jointly own Afilias. The <a href="http://www.icann.org/tlds/org/general-counsels-report-22sep02.htm#B">ICANN 
+        General Counsel's evaluation</a> considered the competitive effect of 
+        this ownership, and concluded that it would not impair the pro-competitive 
+        effects of the reassignment: 
+      <blockquote>
+        <p>ISOC[PIR]'s back-end provider, Afilias, also has VeriSign as 
+          an investor. Afilias is organized as a consortium of eighteen gTLD registrars. 
+          VeriSign is a minority (5.6%) shareholder of Afilias as one of these 
+          registrars. Because the other Afilias shareholders are VeriSign's 
+          competitors, however, VeriSign's ability to exercise control over 
+          Afilias is effectively minimized and, indeed, no VeriSign employee has 
+          ever been elected to Afilias' Board of Trustees/Directors. In 
+          these circumstances, it does not appear that this investment relationship 
+          undercuts the competitive benefits of reassignment of .org, particularly 
+          in view of the fact that the .org registry would be assigned to ISOC[/PIR], 
+          not Afilias.<br>
+        </p>
+      </blockquote>
+      <CENTER>
+        <HR NOSHADE>
+        <font size="-1" face="Arial, Helvetica, sans-serif">Comments concerning 
+        the layout, construction and functionality of this site <BR>
+        should be sent to <A HREF="mailto:webmaster@icann.org">webmaster@icann.org</A>.</font> 
+      </CENTER>
+      <P> 
+        <CENTER>
+          <font size="-1" face="Arial, Helvetica, sans-serif">Page Updated 
+          <!-- #BeginDate format:En2 -->09-Dec-2002<!-- #EndDate -->
+          <BR>
+          </font><font size="-2" face="Arial, Helvetica, sans-serif">(c) 2002&nbsp; 
+          The Internet Corporation for Assigned Names and Numbers. All rights 
+          reserved.</font> 
+        </CENTER>
+        </TD>
+  </TR>
+</TABLE>
+</BODY>
+</HTML>

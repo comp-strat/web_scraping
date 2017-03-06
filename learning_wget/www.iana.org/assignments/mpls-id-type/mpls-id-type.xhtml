@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Multiprotocol Label Switching Architecture (MPLS) Identifier Types</title>
+  </head>
+  <body>
+    <h1>Multiprotocol Label Switching Architecture (MPLS) Identifier Types</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2000-11</dd>
+      <dt>Last Updated</dt>
+      <dd>2011-05-05</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mpls-id-type.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="mpls-id-type.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="mpls-id-type.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#mpls-id-type-2">Information Field and Protocol Identifier in the Q.2941 Generic Identifier</a>
+      </li>
+      <li>
+        <a href="#mpls-id-type-4">Q.2957 User-to-user Signaling for the Internet Protocol</a>
+      </li>
+    </ul>
+    <h2><a name="mpls-id-type-2" id="mpls-id-type-2"></a>Information Field and Protocol Identifier in the Q.2941 Generic Identifier</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3033">RFC3033</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mpls-id-type-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-mpls-id-type-2-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x10-0xFD</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-mpls-id-type-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Identifier type</th>
+          <th>Element</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Session</td>
+          <td>[<a href="http://www.iana.org/go/rfc3033">RFC3033</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>Resource</td>
+          <td>[<a href="http://www.iana.org/go/rfc3033">RFC3033</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03-0x0F</td>
+          <td>IANA does not assign</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0x10-0xFD</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xFE</td>
+          <td>Experimental/Organization specific</td>
+          <td>[<a href="http://www.iana.org/go/rfc3033">RFC3033</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFF</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="mpls-id-type-4" id="mpls-id-type-4"></a>Q.2957 User-to-user Signaling for the Internet Protocol</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3033">RFC3033</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="mpls-id-type-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-mpls-id-type-4-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x03-0xFD</td>
+          <td>IETF Review</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-mpls-id-type-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Identifier type</th>
+          <th>Element</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc3033">RFC3033</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>Reserved for ST2+</td>
+          <td>[<a href="http://www.iana.org/go/rfc3033">RFC3033</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02</td>
+          <td>RSVP message</td>
+          <td>[<a href="http://www.iana.org/go/rfc3033">RFC3033</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x03-0xFD</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xFE</td>
+          <td>Experimental/Organization specific</td>
+          <td>[<a href="http://www.iana.org/go/rfc3033">RFC3033</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xFF</td>
+          <td>Reserved</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Licklider Transmission Protocol (LTP) Parameters</title>
+  </head>
+  <body>
+    <h1>Licklider Transmission Protocol (LTP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2008-07-17</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-02-24</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ltp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="ltp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="ltp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ltp-parameters-1">LTP Extension Tags</a>
+      </li>
+      <li>
+        <a href="#ltp-parameters-2">LTP Ciphersuites</a>
+      </li>
+      <li>
+        <a href="#cancel-segment-reason-codes">LTP Cancel Segment Reason Codes</a>
+      </li>
+      <li>
+        <a href="#engine-numbers">LTP Engine Numbers</a>
+      </li>
+      <li>
+        <a href="#client-service-ids">LTP Client Service Identifiers</a>
+      </li>
+    </ul>
+    <h2><a name="ltp-parameters-1" id="ltp-parameters-1"></a>LTP Extension Tags</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5326">RFC5326</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ltp-parameters-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ltp-parameters-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Extension Tag</th>
+          <th>Meaning</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x00</td>
+          <td>LTP authentication extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc5327">RFC5327</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x01</td>
+          <td>LTP cookie extension</td>
+          <td>[<a href="http://www.iana.org/go/rfc5327">RFC5327</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0x02-0xAF</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">0xB0-0xBF</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5326">RFC5326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0xC0-0xFF</td>
+          <td>Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5326">RFC5326</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ltp-parameters-2" id="ltp-parameters-2"></a>LTP Ciphersuites</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5327">RFC5327</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ltp-parameters-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ltp-parameters-2" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Ciphersuite</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>HMAC-SHA1-80</td>
+          <td>[<a href="http://www.iana.org/go/rfc5327">RFC5327</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>RSA-SHA256</td>
+          <td>[<a href="http://www.iana.org/go/rfc5327">RFC5327</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-127</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">128-191</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5327">RFC5327</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">192-254</td>
+          <td>Private/Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc5327">RFC5327</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255</td>
+          <td>NULL</td>
+          <td>[<a href="http://www.iana.org/go/rfc5327">RFC5327</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="cancel-segment-reason-codes" id="cancel-segment-reason-codes"></a>LTP Cancel Segment Reason Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cancel-segment-reason-codes.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-cancel-segment-reason-codes" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Client service canceled session</td>
+          <td>[<a href="http://www.iana.org/go/rfc5326">RFC5326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Unreachable client service</td>
+          <td>[<a href="http://www.iana.org/go/rfc5326">RFC5326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>Retransmission limit exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc5326">RFC5326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>Miscolored data received</td>
+          <td>[<a href="http://www.iana.org/go/rfc5326">RFC5326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4</td>
+          <td>System error caused termination</td>
+          <td>[<a href="http://www.iana.org/go/rfc5326">RFC5326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">5</td>
+          <td>Retransmission limit exceeded</td>
+          <td>[<a href="http://www.iana.org/go/rfc5326">RFC5326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">6-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="engine-numbers" id="engine-numbers"></a>LTP Engine Numbers</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="engine-numbers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-engine-numbers-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">1-16383</td>
+          <td>Expert Review</td>
+        </tr>
+        <tr>
+          <td align="center">268435456-4398046511103</td>
+          <td>First Come First Served for requests of up to 16384 values. Larger requests require Expert Review.</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-engine-numbers" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-16383</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">16384-2097151</td>
+          <td>Allocated to the Space Assigned Numbers Authority ([<a href="http://sanaregistry.org">SANA</a>]) 
+for use by Consultative Committee for Space Data Systems (CCSDS) missions.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2097152-268435455</td>
+          <td>Reserved for Private or Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">268435456-4398046511103</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">&gt;=4398046511104</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="client-service-ids" id="client-service-ids"></a>LTP Client Service Identifiers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="client-service-ids.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-client-service-ids" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc5326">RFC5326</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>Bundle Protocol</td>
+          <td>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2</td>
+          <td>LTP Service Data Aggregation</td>
+          <td>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">3</td>
+          <td>CCSDS File Delivery Service</td>
+          <td>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">4-16383</td>
+          <td>Allocated to the Space Assigned Numbers Authority ([<a href="http://sanaregistry.org">SANA</a>]) 
+for use by Consultative Committee for Space Data Systems (CCSDS) missions.</td>
+          <td>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16384-32767</td>
+          <td>Reserved for Private or Experimental Use</td>
+          <td>[<a href="http://www.iana.org/go/rfc7116">RFC7116</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">&gt;=32768</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

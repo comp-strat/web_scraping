@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Concise Binary Object Representation (CBOR) Tags</title>
+  </head>
+  <body>
+    <h1>Concise Binary Object Representation (CBOR) Tags</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2013-09-19</dd>
+      <dt>Last Updated</dt>
+      <dd>2017-01-11</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="cbor-tags.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="cbor-tags.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="cbor-tags.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registry included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#tags">CBOR Tags</a>
+      </li>
+    </ul>
+    <h2><a name="tags" id="tags"></a>CBOR Tags</h2>
+    <dl>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Carsten Bormann</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>All registration requests must include the template from [<a href="http://www.iana.org/go/rfc7049">RFC7049</a>].
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="tags.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-tags-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-23</td>
+          <td>Standards Action</td>
+        </tr>
+        <tr>
+          <td align="center">24-255</td>
+          <td>Specification Required</td>
+        </tr>
+        <tr>
+          <td align="center">256-18446744073709551615</td>
+          <td>First Come First Served</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-tags" class="sortable">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Data Item</th>
+          <th>Semantics</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>UTF-8 string</td>
+          <td>Standard date/time string; see Section 2.4.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>multiple</td>
+          <td>Epoch-based date/time; see Section 2.4.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>byte string</td>
+          <td>Positive bignum; see Section 2.4.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>byte string</td>
+          <td>Negative bignum; see Section 2.4.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>array</td>
+          <td>Decimal fraction; see Section 2.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>array</td>
+          <td>Bigfloat; see Section 2.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>6-15</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>COSE_Encrypt0</td>
+          <td>COSE Single Recipient Encrypted Data Object</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>COSE_Mac0</td>
+          <td>COSE Mac w/o Recipients Object</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>COSE_Sign1</td>
+          <td>COSE Single Signer Data Object</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>19-20</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>multiple</td>
+          <td>Expected conversion to base64url encoding; see Section 2.4.4.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>multiple</td>
+          <td>Expected conversion to base64 encoding; see Section 2.4.4.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>multiple</td>
+          <td>Expected conversion to base16 encoding; see Section 2.4.4.2</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>byte string</td>
+          <td>Encoded CBOR data item; see Section 2.4.4.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>unsigned integer</td>
+          <td>reference the nth previously seen string</td>
+          <td>[<a href="http://cbor.schmorp.de/stringref">http://cbor.schmorp.de/stringref</a>][<a href="#Marc_A._Lehmann">Marc_A._Lehmann</a>]</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>array</td>
+          <td>Serialised Perl object with classname and constructor arguments</td>
+          <td>[<a href="http://cbor.schmorp.de/perl-object">http://cbor.schmorp.de/perl-object</a>][<a href="#Marc_A._Lehmann">Marc_A._Lehmann</a>]</td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td>array</td>
+          <td>Serialised language-independent object with type name and constructor arguments</td>
+          <td>[<a href="http://cbor.schmorp.de/generic-object">http://cbor.schmorp.de/generic-object</a>][<a href="#Marc_A._Lehmann">Marc_A._Lehmann</a>]</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td>multiple</td>
+          <td>mark value as (potentially) shared</td>
+          <td>[<a href="http://cbor.schmorp.de/value-sharing">http://cbor.schmorp.de/value-sharing</a>][<a href="#Marc_A._Lehmann">Marc_A._Lehmann</a>]</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td>unsigned integer</td>
+          <td>reference nth marked value</td>
+          <td>[<a href="http://cbor.schmorp.de/value-sharing">http://cbor.schmorp.de/value-sharing</a>][<a href="#Marc_A._Lehmann">Marc_A._Lehmann</a>]</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>array</td>
+          <td>Rational number</td>
+          <td>[<a href="http://peteroupc.github.io/CBOR/rational.html">http://peteroupc.github.io/CBOR/rational.html</a>][<a href="#Peter_Occil">Peter_Occil</a>]</td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>UTF-8 string</td>
+          <td>URI; see Section 2.4.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>33</td>
+          <td>UTF-8 string</td>
+          <td>base64url; see Section 2.4.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>34</td>
+          <td>UTF-8 string</td>
+          <td>base64; see Section 2.4.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>35</td>
+          <td>UTF-8 string</td>
+          <td>Regular expression; see Section 2.4.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>36</td>
+          <td>UTF-8 string</td>
+          <td>MIME message; see Section 2.4.4.3</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>37</td>
+          <td>byte string</td>
+          <td>Binary UUID ([<a href="http://www.iana.org/go/rfc4122">RFC4122</a>] section 4.1.2)</td>
+          <td>[<a href="https://github.com/lucas-clemente/cbor-specs/blob/master/uuid.md">https://github.com/lucas-clemente/cbor-specs/blob/master/uuid.md</a>][<a href="#Lucas_Clemente">Lucas_Clemente</a>]</td>
+        </tr>
+        <tr>
+          <td>38</td>
+          <td>byte string</td>
+          <td>Language-tagged string</td>
+          <td>[<a href="http://peteroupc.github.io/CBOR/langtags.html">http://peteroupc.github.io/CBOR/langtags.html</a>][<a href="#Peter_Occil">Peter_Occil</a>]</td>
+        </tr>
+        <tr>
+          <td>39</td>
+          <td>multiple</td>
+          <td>Identifier</td>
+          <td>[<a href="https://github.com/lucas-clemente/cbor-specs/blob/master/id.md">https://github.com/lucas-clemente/cbor-specs/blob/master/id.md</a>][<a href="#Lucas_Clemente">Lucas_Clemente</a>]</td>
+        </tr>
+        <tr>
+          <td>40-95</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>96</td>
+          <td>COSE_Encrypt</td>
+          <td>COSE Encrypted Data Object</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>97</td>
+          <td>COSE_Mac</td>
+          <td>COSE Mac-ed Data Object</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>98</td>
+          <td>COSE_Sign</td>
+          <td>COSE Signed Data Object</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-cose-msg-24">RFC-ietf-cose-msg-24</a>]</td>
+        </tr>
+        <tr>
+          <td>99-255</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>256</td>
+          <td>multiple</td>
+          <td>mark value as having string references</td>
+          <td>[<a href="http://cbor.schmorp.de/stringref">http://cbor.schmorp.de/stringref</a>][<a href="#Marc_A._Lehmann">Marc_A._Lehmann</a>]</td>
+        </tr>
+        <tr>
+          <td>257</td>
+          <td>byte string</td>
+          <td>Binary MIME message</td>
+          <td>[<a href="http://peteroupc.github.io/CBOR/binarymime.html">http://peteroupc.github.io/CBOR/binarymime.html</a>][<a href="#Peter_Occil">Peter_Occil</a>]</td>
+        </tr>
+        <tr>
+          <td>258-263</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>264</td>
+          <td>array</td>
+          <td>Decimal fraction with arbitrary exponent</td>
+          <td>[<a href="http://peteroupc.github.io/CBOR/bigfrac.html">http://peteroupc.github.io/CBOR/bigfrac.html</a>][<a href="#Peter_Occil">Peter_Occil</a>]</td>
+        </tr>
+        <tr>
+          <td>265</td>
+          <td>array</td>
+          <td>Bigfloat with arbitrary exponent</td>
+          <td>[<a href="http://peteroupc.github.io/CBOR/bigfrac.html">http://peteroupc.github.io/CBOR/bigfrac.html</a>][<a href="#Peter_Occil">Peter_Occil</a>]</td>
+        </tr>
+        <tr>
+          <td>266-22097</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>22098</td>
+          <td>multiple</td>
+          <td>hint that indicates an additional level of indirection</td>
+          <td>[<a href="http://cbor.schmorp.de/indirection">http://cbor.schmorp.de/indirection</a>][<a href="#Marc_A._Lehmann">Marc_A._Lehmann</a>]</td>
+        </tr>
+        <tr>
+          <td>22099-55798</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>55799</td>
+          <td>multiple</td>
+          <td>Self-describe CBOR; see Section 2.4.5</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+        </tr>
+        <tr>
+          <td>55800-15309735</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>15309736</td>
+          <td>map (major type 5)</td>
+          <td>RAINS Message</td>
+          <td>[<a href="https://britram.github.io/rains-prototype">https://britram.github.io/rains-prototype</a>][<a href="#Brian_Trammell">Brian_Trammell</a>]</td>
+        </tr>
+        <tr>
+          <td>15309737-18446744073709551615</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Brian_Trammell" id="Brian_Trammell">[Brian_Trammell]</a>
+          </td>
+          <td>Brian Trammell</td>
+          <td>
+            <a href="mailto:ietf&amp;trammell.ch">mailto:ietf&amp;trammell.ch</a>
+          </td>
+          <td>2016-08-17</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Lucas_Clemente" id="Lucas_Clemente">[Lucas_Clemente]</a>
+          </td>
+          <td>Lucas Clemente</td>
+          <td>
+            <a href="mailto:lucas&amp;clemente.io">mailto:lucas&amp;clemente.io</a>
+          </td>
+          <td>2014-07-01</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Marc_A._Lehmann" id="Marc_A._Lehmann">[Marc_A._Lehmann]</a>
+          </td>
+          <td>Marc A. Lehmann</td>
+          <td>
+            <a href="mailto:cbor&amp;schmorp.de">mailto:cbor&amp;schmorp.de</a>
+          </td>
+          <td>2013-11-26</td>
+        </tr>
+        <tr>
+          <td>
+            <a name="Peter_Occil" id="Peter_Occil">[Peter_Occil]</a>
+          </td>
+          <td>Peter Occil</td>
+          <td>
+            <a href="mailto:poccil14&amp;gmail.com">mailto:poccil14&amp;gmail.com</a>
+          </td>
+          <td>2014-07-01</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

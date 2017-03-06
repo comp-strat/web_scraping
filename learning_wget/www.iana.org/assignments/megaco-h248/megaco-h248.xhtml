@@ -1,0 +1,3968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Megaco/H.248 Packages</title>
+  </head>
+  <body>
+    <h1>Megaco/H.248 Packages</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2000-10</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-04-07</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="megaco-h248.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="megaco-h248.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="megaco-h248.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#megaco-h248-1">Public Packages (0x0001-0x7fff)</a>
+        <ul>
+          <li>
+            <a href="#megaco-h248-2">Tabulation Of Public Packages</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#megaco-h248-3">Private packages (0x8000 to 0xffff)</a>
+      </li>
+      <li>
+        <a href="#megaco-h248-4">Error Codes</a>
+      </li>
+      <li>
+        <a href="#megaco-h248-5">ServiceChange Reasons</a>
+      </li>
+      <li>
+        <a href="#megaco-h248-6">Profile Names</a>
+      </li>
+    </ul>
+    <h2><a name="megaco-h248-1" id="megaco-h248-1"></a>Public Packages (0x0001-0x7fff)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert review or IETF consensus</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Christian Groves</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5125">RFC5125</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The IANA will assign a serial number to each package meeting the
+conditions of registration (except for an update of an existing
+package, which retains the serial number of the package it is
+updating), in consecutive order of registration.  The serial number
+will be used to identify the package in the binary-coded version of
+the Megaco/H.248 protocol.  Serial number 0 is reserved.  Public
+packages MUST be given serial numbers in the range 0x0001 to
+0x7fff.  Private packages MUST be given serial numbers in the range
+0x8000 to 0xffff.
+
+For full details on the requirements for package registration see
+[<a href="http://www.iana.org/go/rfc5615">RFC5615</a>].
+
+IANA will maintain the currency and public availability of the
+tabulation of public and private packages.  Packages will be listed
+in increasing order of serial number.  The latest Package version is
+entered, replacing the previous version in the registry.</pre>
+      </dd>
+    </dl>
+    <div class="registry level2">
+      <h3><a name="megaco-h248-2" id="megaco-h248-2"></a>Tabulation Of Public Packages</h3>
+      <dl>
+        <dt>Registration Procedure(s)</dt>
+        <dd>
+          <pre>Expert Review</pre>
+        </dd>
+        <dt>Expert(s)</dt>
+        <dd>
+          <pre>Christian Groves</pre>
+        </dd>
+        <dt>Reference</dt>
+        <dd>[<a href="http://www.iana.org/go/rfc5125">RFC5125</a>][<a href="http://www.itu.int/rec/T-REC-H.248.1/en">H.248.1</a>][<a href="http://www.iana.org/go/rfc5615">RFC5615</a>]</dd>
+        <dt>Note</dt>
+        <dd>
+          <pre>"Status" - whether the package is still being finalized
+("IP" = In Progress, with expected completion date) or is final.</pre>
+        </dd>
+        <dt>Available Formats</dt>
+        <dd>
+          <a class="altformat" href="megaco-h248-2.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+        </dd>
+      </dl>
+      <table id="table-megaco-h248-2" class="sortable">
+        <thead>
+          <tr>
+            <th>Serial</th>
+            <th>Text Name</th>
+            <th>Ver</th>
+            <th>Extends Ser</th>
+            <th>Extends Ver</th>
+            <th>Status</th>
+            <th>Reference/Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td align="center">0x0001</td>
+            <td align="center">g</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>[<a href="http://www.iana.org/go/rfc5125">RFC5125</a>] or, [<a href="http://www.itu.int/rec/T-REC-H.248.1/en">H.248.1</a>], ITU-T TSB, Place des Nations, CH-1211 Geneva 20, tsbmail&amp;itu.int</td>
+          </tr>
+          <tr>
+            <td align="center">0x0002</td>
+            <td align="center">root</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0003</td>
+            <td align="center">tonegen</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0004</td>
+            <td align="center">tonedet</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0005</td>
+            <td align="center">dg</td>
+            <td align="center">2</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0006</td>
+            <td align="center">dd</td>
+            <td align="center">2</td>
+            <td align="center">0x0004</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>[<a href="http://www.itu.int/rec/T-REC-H.248.1/en">ITU-T Rec. H.248.1v3</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0007</td>
+            <td align="center">cg</td>
+            <td align="center">2</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0008</td>
+            <td align="center">cd</td>
+            <td align="center">1</td>
+            <td align="center">0x0004</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0009</td>
+            <td align="center">al</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x000a</td>
+            <td align="center">ct</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x000b</td>
+            <td align="center">nt</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x000c</td>
+            <td align="center">rtp</td>
+            <td align="center">2</td>
+            <td align="center">0x000b</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>RTP Package, [<a href="http://www.itu.int/rec/T-REC-H.248.1/en">ITU-T Rec. H.248.1v3</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x000d</td>
+            <td align="center">tdmc</td>
+            <td align="center">1</td>
+            <td align="center">0x000b</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x000e</td>
+            <td align="center">ftmd</td>
+            <td align="center">2</td>
+            <td align="center">0x0004</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>[<a href="http://www.itu.int/rec/T-REC-H.248.2/en">ITU-T Rec. H.248.2</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x000f</td>
+            <td align="center">txc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0010</td>
+            <td align="center">txp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0011</td>
+            <td align="center">ctyp</td>
+            <td align="center">3</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0012</td>
+            <td align="center">fax</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0013</td>
+            <td align="center">ipfax</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0014</td>
+            <td align="center">dis</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>[<a href="http://www.itu.int/rec/T-REC-H.248.3/en">ITU-T Rec. H.248.3</a>], ITU-T TSB at above, address</td>
+          </tr>
+          <tr>
+            <td align="center">0x0015</td>
+            <td align="center">key</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0016</td>
+            <td align="center">kp</td>
+            <td align="center">1</td>
+            <td align="center">0x0015</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0017</td>
+            <td align="center">labelkey</td>
+            <td align="center">1</td>
+            <td align="center">0x0015</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0018</td>
+            <td align="center">kf</td>
+            <td align="center">1</td>
+            <td align="center">0x0017</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x0019</td>
+            <td align="center">ind</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x001a</td>
+            <td align="center">ks</td>
+            <td align="center">1</td>
+            <td align="center">0x0017</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x001b</td>
+            <td align="center">anci</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ditto</td>
+          </tr>
+          <tr>
+            <td align="center">0x001c</td>
+            <td align="center">dtd</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>[<a href="http://www.itu.int/rec/T-REC-H.248.6/en">ITU-T Rec. H.248.6</a>], ITU-T TSB at above, address</td>
+          </tr>
+          <tr>
+            <td align="center">0x001d</td>
+            <td align="center">an</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>[<a href="http://www.itu.int/rec/T-REC-H.248.7/en">ITU-T Rec. H.248.7</a>], ITU-T TSB at above, address</td>
+          </tr>
+          <tr>
+            <td align="center">0x001e</td>
+            <td align="center">bcp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Bearer Characteristics, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x001f</td>
+            <td align="center">bnct</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Bearer Network Connection Cut, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0020</td>
+            <td align="center">ri</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Reuse Idle, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0021</td>
+            <td align="center">gb</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Generic Bearer Connection, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0022</td>
+            <td align="center">bt</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Bearer Control Tunnelling, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0023</td>
+            <td align="center">bcg</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Basic Call Progress Tones, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0024</td>
+            <td align="center">xcg</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Expanded Call Progress Tones, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0025</td>
+            <td align="center">srvtn</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Basic Services Tones, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0026</td>
+            <td align="center">xsrvtn</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Expanded Services Tones, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0027</td>
+            <td align="center">int</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Intrusion Tones, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0028</td>
+            <td align="center">biztn</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Business Tones, Q.1950 Annex A, ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0029</td>
+            <td align="center">chp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Media Gateway Resource, Congestion Handling, [<a href="http://www.itu.int/rec/T-REC-H.248.10/en">ITU-T Rec. H.248.10</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x002a</td>
+            <td align="center">h245</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>H245 package, [<a href="http://www.itu.int/rec/T-REC-H.248.12/en">ITU-T Rec. H.248.12</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x002b</td>
+            <td align="center">h323bc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>H323 bearer control package, [<a href="http://www.itu.int/rec/T-REC-H.248.12/en">ITU-T Rec. H.248.12</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x002c</td>
+            <td align="center">h324</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>H324 package, [<a href="http://www.itu.int/rec/T-REC-H.248.12/en">ITU-T Rec. H.248.12</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x002d</td>
+            <td align="center">h245com</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>H245 command package, [<a href="http://www.itu.int/rec/T-REC-H.248.12/en">ITU-T Rec. H.248.12</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0065</td>
+            <td align="center">h245indext</td>
+            <td align="center">2</td>
+            <td align="center">0x002e</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Extended H.245 Indication Package, [<a href="http://www.itu.int/rec/T-REC-H.248.12/en">ITU-T Rec. H.248.12</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x002f</td>
+            <td align="center">threegup</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>3G User Plane, 3GPP TS 29.232 v4.1.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOHPIA ANTIPOLIS cedex, FRANCE, 3gppcontact&amp;etsi.fr</td>
+          </tr>
+          <tr>
+            <td align="center">0x0030</td>
+            <td align="center">threegcsd</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>3G Circuit Switched Data, 3GPP TS 29.232 v4.1.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOHPIA ANTIPOLIS cedex, FRANCE, 3gppcontact&amp;etsi.fr</td>
+          </tr>
+          <tr>
+            <td align="center">0x0031</td>
+            <td align="center">threegtfoc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>3G TFO Control, 3GPP TS 29.232 v4.1.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOHPIA ANTIPOLIS cedex, FRANCE, 3gppcontact&amp;etsi.fr</td>
+          </tr>
+          <tr>
+            <td align="center">0x0032</td>
+            <td align="center">threegxcg</td>
+            <td align="center">1</td>
+            <td align="center">0x0024</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>3G Expanded Call Progress Tones, Generator Package, 3GPP TS 29.232 v4.1.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOHPIA ANTIPOLIS cedex, FRANCE, 3gppcontact&amp;etsi.fr</td>
+          </tr>
+          <tr>
+            <td align="center">0x0033</td>
+            <td align="center">aasb</td>
+            <td align="center">3</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Advanced Audio Server (AAS) Base, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0034</td>
+            <td align="center">aasdc</td>
+            <td align="center">3</td>
+            <td align="center">0x0033</td>
+            <td align="center">3</td>
+            <td align="center">Final</td>
+            <td>AAS Digit Collection, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0035</td>
+            <td align="center">aasrec</td>
+            <td align="center">3</td>
+            <td align="center">0x0033</td>
+            <td align="center">3</td>
+            <td align="center">Final</td>
+            <td>AAS Recording, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0036</td>
+            <td align="center">aassm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>AAS Segment Management, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0037</td>
+            <td align="center">qac</td>
+            <td align="center">1</td>
+            <td align="center">0x000b</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Quality Alert Ceasing, [<a href="http://www.itu.int/rec/T-REC-H.248.13/en">ITU-T Rec. H.248.13</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0038</td>
+            <td align="center">conftn</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Conferencing Tones Generation, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.27/en">ITU-T Rec. H.248.27</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0039</td>
+            <td align="center">test</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Diagnostic Tones Generation, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.27/en">ITU-T Rec. H.248.27</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x003a</td>
+            <td align="center">carr</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Carrier Tones Generation Package, [<a href="http://www.itu.int/rec/T-REC-H.248.27/en">ITU-T Rec. H.248.27</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x003b</td>
+            <td align="center">alert</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Enhanced Alerting Package, [<a href="http://www.itu.int/rec/T-REC-H.248.23/en">ITU-T Rec. H.248.23</a>] (01/05), ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x003c</td>
+            <td align="center">andisp</td>
+            <td align="center">2</td>
+            <td align="center">0x003b</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Analog Display Signalling Package, [<a href="http://www.itu.int/rec/T-REC-H.248.23/en">ITU-T Rec. H.248.23 (01/05)</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x003d</td>
+            <td align="center">mfg</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Multi-Frequency Tone Generation, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.24/en">ITU-T Rec. H.248.24</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x003e</td>
+            <td align="center">mfd</td>
+            <td align="center">1</td>
+            <td align="center">0x0004</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Multi-Frequency Tone Detection, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.24/en">ITU-T Rec. H.248.24</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x003f</td>
+            <td align="center">bcas</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Basic CAS Package, [<a href="http://www.itu.int/rec/T-REC-H.248.25/en">ITU-T Rec. H.248.25 (01/07)</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0040</td>
+            <td align="center">rbs</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Robbed Bit Signalling Package, [<a href="http://www.itu.int/rec/T-REC-H.248.25/en">ITU-T Rec. H.248.25</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0041</td>
+            <td align="center">oses</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Operator Services and Emergency Services Package, [<a href="http://www.itu.int/rec/T-REC-H.248.25/en">ITU-T Rec. H.248.25</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0042</td>
+            <td align="center">osext</td>
+            <td align="center">1</td>
+            <td align="center">0x0041</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Operator Services Extension Package, [<a href="http://www.itu.int/rec/T-REC-H.248.25/en">ITU-T Rec. H.248.25</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0043</td>
+            <td align="center">xal</td>
+            <td align="center">1</td>
+            <td align="center">0x0009</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Extended Analog Line Supervision Package, [<a href="http://www.itu.int/rec/T-REC-H.248.26/en">ITU-T Rec. H.248.26</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0044</td>
+            <td align="center">amet</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Automatic Metering Package, [<a href="http://www.itu.int/rec/T-REC-H.248.26/en">ITU-T Rec. H.248.26</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0045</td>
+            <td align="center">it</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Inactivity Timer Package, [<a href="http://www.itu.int/rec/T-REC-H.248.14/en">ITU-T Rec. H.248.14</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0046</td>
+            <td align="center">threegmlc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>3G Modification of Link Characteristics, Bearer Capability, 3GPP TS 29.232 v4.4.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOHPIA ANTIPOLIS cedex, FRANCE, 3gppcontact&amp;etsi.fr</td>
+          </tr>
+          <tr>
+            <td align="center">0x0047</td>
+            <td align="center">bannsyx</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Base Announcement Syntax, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0048</td>
+            <td align="center">vvsyx</td>
+            <td align="center">2</td>
+            <td align="center">0x0047</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Voice Variable Syntax, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0049</td>
+            <td align="center">setsyx</td>
+            <td align="center">3</td>
+            <td align="center">0x0047</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Announcement Set Syntax, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x004a</td>
+            <td align="center">phrsyx</td>
+            <td align="center">2</td>
+            <td align="center">0x0047</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Phrase Variable Syntax, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x004b</td>
+            <td align="center">nas</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP 05/02</td>
+            <td>Basic NAS package, &lt;taylor&amp;nortelnetworks.com&gt;, [<a href="http://www.iana.org/go/draft-ietf-megaco-naspkg-04">draft-ietf-megaco-naspkg-04</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x004c</td>
+            <td align="center">nasin</td>
+            <td align="center">1</td>
+            <td align="center">0x004b</td>
+            <td align="center">1</td>
+            <td align="center">IP 05/02</td>
+            <td>NAS incoming package, &lt;taylor&amp;nortelnetworks.com&gt;, [<a href="http://www.iana.org/go/draft-ietf-megaco-naspkg-04">draft-ietf-megaco-naspkg-04</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x004d</td>
+            <td align="center">nasout</td>
+            <td align="center">1</td>
+            <td align="center">0x004b</td>
+            <td align="center">1</td>
+            <td align="center">IP 05/02</td>
+            <td>NAS outgoing package, &lt;taylor&amp;nortelnetworks.com&gt;, [<a href="http://www.iana.org/go/draft-ietf-megaco-naspkg-04">draft-ietf-megaco-naspkg-04</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x004e</td>
+            <td align="center">nasctl</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP 05/02</td>
+            <td>NAS control package, &lt;taylor&amp;nortelnetworks.com&gt;, [<a href="http://www.iana.org/go/draft-ietf-megaco-naspkg-04">draft-ietf-megaco-naspkg-04</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x004f</td>
+            <td align="center">nasroot</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP 05/02</td>
+            <td>NAS root package, &lt;taylor&amp;nortelnetworks.com&gt;, [<a href="http://www.iana.org/go/draft-ietf-megaco-naspkg-04">draft-ietf-megaco-naspkg-04</a>]</td>
+          </tr>
+          <tr>
+            <td align="center">0x0050</td>
+            <td align="center">prp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Profile Handling Package, [<a href="http://www.itu.int/rec/T-REC-H.248.18/en">ITU-T Rec. H.248.18</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0051</td>
+            <td align="center">ocp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Media Gateway Overload Control Package, [<a href="http://www.itu.int/rec/T-REC-H.248.11/en">ITU-T Rec. H.248.11</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0052</td>
+            <td align="center">xdd</td>
+            <td align="center">2</td>
+            <td align="center">0x0006</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Extended DTMF Detection Package, [<a href="http://www.itu.int/rec/T-REC-H.248.16/en">ITU-T Rec. H.248.16</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0053</td>
+            <td align="center">qtlt</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Quiet Termination Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0054</td>
+            <td align="center">lltr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Loopback Line Test Response, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0055</td>
+            <td align="center">Itult404</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ITU 404Hz Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0056</td>
+            <td align="center">Itult816</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ITU 816Hz Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0057</td>
+            <td align="center">Itult1020</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ITU 1020Hz Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0058</td>
+            <td align="center">Itultdist</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ITU 2100Hz Disable Tone Line, Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0059</td>
+            <td align="center">Itultdisecd</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ITU 2100Hz Disable Echo, Canceller Tone Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x005a</td>
+            <td align="center">Itult2804</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ITU 2804Hz Tone Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x005b</td>
+            <td align="center">Itultntt</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ITU Noise Test Tone Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x005c</td>
+            <td align="center">Itultdprt</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ITU Digital Pseudo Random, Test Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x005d</td>
+            <td align="center">Itultatme2</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ITU ATME No.2 Test Line, Response, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x005e</td>
+            <td align="center">ansilt1004</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ANSI 1004Hz Test Tone Line, Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x005f</td>
+            <td align="center">ansilttres</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ANSI Test Responder Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0060</td>
+            <td align="center">Ansilt2225</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ANSI 2225Hz Test Progress, Tone Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0061</td>
+            <td align="center">Ansiltdts</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ANSI Digital Test Signal, Line Test, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0062</td>
+            <td align="center">ansiinvlltr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ANSI Inverting Loopback Line, Test Repsonse, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.17/en">ITU-T Rec. H.248.17</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0063</td>
+            <td align="center">h324ext</td>
+            <td align="center">1</td>
+            <td align="center">0x002c</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Extended H.324 Packages, [<a href="http://www.itu.int/rec/T-REC-H.248.12/en">ITU-T Rec. H.248.12</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0064</td>
+            <td align="center">h245comext</td>
+            <td align="center">1</td>
+            <td align="center">0x002d</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Extended H.245 Command, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.12/en">ITU-T Rec. H.248.12</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0065</td>
+            <td align="center">h245indext</td>
+            <td align="center">2</td>
+            <td align="center">0x002e</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Extended H.245 Indication, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.12/en">ITU-T Rec. H.248.12</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0066</td>
+            <td align="center">edd</td>
+            <td align="center">1</td>
+            <td align="center">0x0052</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Enhanced DTMF Detection Package, [<a href="http://www.itu.int/rec/T-REC-H.248.16/en">ITU-T Rec. H.248.16</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0067</td>
+            <td align="center">xg</td>
+            <td align="center">1</td>
+            <td align="center">0x0021</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Connection Group Identity Package, [<a href="http://www.itu.int/rec/T-REC-Q.1950/en">ITU-T Rec. Q.1950</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0068</td>
+            <td align="center">threegctm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>CTM Text Transport, 3GPP TS 29.232 v5.2.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOHPIA ANTIPOLIS cedex, FRANCE, 3gppcontact&amp;etsi.fr</td>
+          </tr>
+          <tr>
+            <td align="center">0x0069</td>
+            <td align="center">spne</td>
+            <td align="center">1</td>
+            <td align="center">0x000d</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>SPNE Control Package, [<a href="http://www.itu.int/rec/T-REC-q.115.0/en">ITU-T Rec. Q.115.0</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x006a</td>
+            <td align="center">semper</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Semi-permanent Connection, Package [<a href="http://www.itu.int/rec/T-REC-H.248.21/en">ITU-T Rec. H.248.21</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x006b</td>
+            <td align="center">shrisk</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Shared Risk Group, Package [<a href="http://www.itu.int/rec/T-REC-H.248.22/en">ITU-T Rec. H.248.22</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x006c</td>
+            <td align="center">isuptn</td>
+            <td align="center">1</td>
+            <td align="center">0x0003</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>ISUP Trunk Tones Generator Package, [<a href="http://www.itu.int/rec/T-REC-J.171.2/en">ITU-T Rec. J.171.2</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x006d</td>
+            <td align="center">bcasaddr</td>
+            <td align="center">1</td>
+            <td align="center">0x003f</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Basic CAS Addressing Package, [<a href="http://www.itu.int/rec/T-REC-H.248.25/en">ITU-T Rec. H.248.25</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x006e</td>
+            <td align="center">fcp</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Floor Control Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x006f</td>
+            <td align="center">indview</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Indication of Being Viewed, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0070</td>
+            <td align="center">vcp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Volume Control Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0071</td>
+            <td align="center">UNASSIGNED</td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td align="center"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td align="center">0x0072</td>
+            <td align="center">vdp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Volume Detection Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0073</td>
+            <td align="center">vlmp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Volume Level Mixing Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0074</td>
+            <td align="center">mvlcp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Mixing Volume Level Control, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0075</td>
+            <td align="center">vavsp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Voice Activated Video, Switch Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0076</td>
+            <td align="center">lvmp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Lecture Video Mode, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0077</td>
+            <td align="center">cvsp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Contributing Video Source, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0078</td>
+            <td align="center">vwp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Video Window Package, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0079</td>
+            <td align="center">tilwin</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Tiled Window Package, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x007a</td>
+            <td align="center">ajb</td>
+            <td align="center">1</td>
+            <td align="center">0x000b</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Adaptive Jitter Buffer Package, [<a href="http://www.itu.int/rec/T-REC-H.248.31/en">ITU-T Rec. H.248.31</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x007b</td>
+            <td align="center">icas</td>
+            <td align="center">2</td>
+            <td align="center">0x003f</td>
+            <td align="center">2</td>
+            <td align="center">Final</td>
+            <td>International CAS Package, [<a href="http://www.itu.int/rec/T-REC-H.248.28/en">ITU-T Rec. H.248.28</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x007c</td>
+            <td align="center">casblk</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>CAS Blocking Package, [<a href="http://www.itu.int/rec/T-REC-H.248.28/en">ITU-T Rec. H.248.28</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x007d</td>
+            <td align="center">icasc</td>
+            <td align="center">1</td>
+            <td align="center">0x007b</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>International CAS Compelled Package, [<a href="http://www.itu.int/rec/T-REC-H.248.29/en">ITU-T Rec. H.248.29</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x007e</td>
+            <td align="center">icasco</td>
+            <td align="center">1</td>
+            <td align="center">0x007d</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>International CAS Compelled with Overlap, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.29/en">ITU-T Rec. H.248.29</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x007f</td>
+            <td align="center">icasce</td>
+            <td align="center">1</td>
+            <td align="center">0x007e</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>International CAS Compelled with, End-to-end Package, [<a href="http://www.itu.int/rec/T-REC-H.248.29/en">ITU-T Rec. H.248.29</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0080</td>
+            <td align="center">rtcpxr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>RTCP XR Package, [<a href="http://www.itu.int/rec/T-REC-H.248.30/en">ITU-T Rec. H.248.30</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0081</td>
+            <td align="center">xrbm</td>
+            <td align="center">1</td>
+            <td align="center">0x0080</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>RTCP XR Burst Metrics Package, [<a href="http://www.itu.int/rec/T-REC-H.248.30/en">ITU-T Rec. H.248.30</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0082</td>
+            <td align="center">threegcsden</td>
+            <td align="center">1</td>
+            <td align="center">0x0030</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>3G Enhanced Circuit Switched Data package, 3GPP TS 29.232 v5.6.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOHPIA ANTIPOLIS cedex, FRANCE, 3gppcontact&amp;etsi.fr</td>
+          </tr>
+          <tr>
+            <td align="center">0x0083</td>
+            <td align="center">threegiptra</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>3G IP transport package, 3GPP TS 29.232 v5.6.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOHPIA ANTIPOLIS cedex, FRANCE, 3gppcontact&amp;etsi.fr</td>
+          </tr>
+          <tr>
+            <td align="center">0x0084</td>
+            <td align="center">threegflex</td>
+            <td align="center">1</td>
+            <td align="center">0x0032</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>3G Flexible Tone Generator Package, 3GPP TS 29.232 v5.6.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOHPIA ANTIPOLIS cedex, FRANCE, 3gppcontact&amp;etsi.fr</td>
+          </tr>
+          <tr>
+            <td align="center">0x0085</td>
+            <td align="center">pcmsb</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ITU-T Recommendation [<a href="http://www.itu.int/rec/T-REC-H.248.33/en">ITU-T Rec. H.248.33</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x008a</td>
+            <td align="center">emp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Middlebox Package TIPHON Extended H.248/MEGACO, Package (EMP) Specification, ICF Control over Reference Point, [ETSI TS 101 332], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org, Note: This work has been superseded, by [ETSI TS 102 333] and ITU-T [<a href="http://www.itu.int/rec/T-REC-H.248.43/en">ITU-T Rec. H.248.43</a>].</td>
+          </tr>
+          <tr>
+            <td align="center">0x008b</td>
+            <td align="center">ds</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Differentiated Services Package, [<a href="http://www.itu.int/rec/T-REC-H.248.52/en">ITU-T Rec. H.248.52</a>], ITU-T TSB at above address, Formerly:, Annex A of [ETSI TS 102 333], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+          </tr>
+          <tr>
+            <td align="center">0x008c</td>
+            <td align="center">gm</td>
+            <td align="center">2</td>
+            <td align="center">0x00b5</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Gate Management - Source Address/, Port Filtering Package, [<a href="http://www.itu.int/rec/T-REC-H.248.43/en">ITU-T Rec. H.248.43</a>], ITU-T TSB at above address, Formerly:, Annex B of [ETSI TS 102 333], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+          </tr>
+          <tr>
+            <td align="center">0x008d</td>
+            <td align="center">tman</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Traffic Management Package, [<a href="http://www.itu.int/rec/T-REC-H.248.53/en">ITU-T Rec. H.248.53</a>], ITU-T TSB at above address, Formerly:, Annex C of [ETSI TS 102 333], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+          </tr>
+          <tr>
+            <td align="center">0x008e</td>
+            <td align="center">gri</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Gate Recovery Information Package, Annex D of [ETSI TS 102 333], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org, Note: This package has been superseded by the, mgcinfo (0x00a0) package in ITU-T [<a href="http://www.itu.int/rec/T-REC-H.248.45/en">ITU-T Rec. H.248.45</a>].</td>
+          </tr>
+          <tr>
+            <td align="center">0x008f</td>
+            <td align="center">ntr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT Traversal Package, Annex E of [ETSI TS 102 333], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org, Note: This package has been superseded by the packages in ITU-T [<a href="http://www.itu.int/rec/T-REC-H.248.37/en">ITU-T Rec. H.248.37</a>].</td>
+          </tr>
+          <tr>
+            <td align="center">0x0090</td>
+            <td align="center">mpls</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>MPLS Package, [<a href="http://www.itu.int/rec/T-REC-H.248.54/en">ITU-T Rec. H.248.54</a>], ITU-T TSB at above address, Formerly: Annex F of [ETSI TS 102 333], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+          </tr>
+          <tr>
+            <td align="center">0x0091</td>
+            <td align="center">vlan</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>VLAN Package, [<a href="http://www.itu.int/rec/T-REC-H.248.56/en">ITU-T Rec. H.248.56</a>], ITU-T TSB at above address, Formerly: Annex G of [ETSI TS 102 333], ETSI Secretariat, 650 Route des Luicoles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+          </tr>
+          <tr>
+            <td align="center">0x0092</td>
+            <td align="center">dcr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Detailed Congestion Reporting Package, [<a href="http://www.itu.int/rec/T-REC-H.248.32/en">ITU-T Rec. H.248.32</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0093</td>
+            <td align="center">stimal</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Stimulus Analogue Lines Package, [<a href="http://www.itu.int/rec/T-REC-H.248.34/en">ITU-T Rec. H.248.34</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0094</td>
+            <td align="center">icascgen</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Generic CAS Compelled Register Signalling Package, [<a href="http://www.itu.int/rec/T-REC-H.248.29/en">ITU-T Rec. H.248.29</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0095</td>
+            <td align="center">coin</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Coin Operated Phone Control Package, [<a href="http://www.itu.int/rec/T-REC-H.248.35/en">ITU-T Rec. H.248.35</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0096</td>
+            <td align="center">metd</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Metering Pulse Detection Package, [<a href="http://www.itu.int/rec/T-REC-H.248.26/en">ITU-T Rec. H.248.26</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0097</td>
+            <td align="center">calltrace</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Trace Package, 3GPP TS 29.232 v6.3.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOPHIA ANTIPOLIS cedex, France, 3gppcontact&amp;etsi.fr</td>
+          </tr>
+          <tr>
+            <td align="center">0x0098</td>
+            <td align="center">hangterm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Hanging Termination Package, [<a href="http://www.itu.int/rec/T-REC-H.248.36/en">ITU-T Rec. H.248.36</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0099</td>
+            <td align="center">ipnapt</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>IP NAPT Traversal Package, [<a href="http://www.itu.int/rec/T-REC-H.248.37/en">ITU-T Rec. H.248.37</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x009a</td>
+            <td align="center">nb</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Notification Behaviour Package, [<a href="http://www.itu.int/rec/T-REC-H.248.1/en">H.248.1v3</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x009b</td>
+            <td align="center">bc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Base Context Package, [<a href="www.itu.int/rec/T-REC-H.248.38/en">ITU-T Rec. H.248.38</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x009c</td>
+            <td align="center">adid</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Application Data Inactivity, Detection Package, [<a href="http://www.itu.int/rec/T-REC-H.248.40/en">ITU-T Rec. H.248.40</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x009d</td>
+            <td align="center">ipdc</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>IP Domain Connection Package, Detection Package, [<a href="http://www.itu.int/rec/T-REC-H.248.41/en">ITU-T Rec. H.248.41</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x009e</td>
+            <td align="center">dcme</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Digital Circuit Multiplication, Equipment Package, [<a href="http://www.itu.int/rec/T-REC-H.248.42/en">ITU-T Rec. H.248.42</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x009f</td>
+            <td align="center">prectn</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Multi-level Precedence and, Pre-emption Package, [<a href="http://www.itu.int/rec/T-REC-H.248.44/en">ITU-T Rec. H.248.44</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00a0</td>
+            <td align="center">mgcinfo</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>MGC Information Package, [<a href="http://www.itu.int/rec/T-REC-H.248.45/en">ITU-T Rec. H.248.45</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00a1</td>
+            <td align="center">top</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Text Overlay Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00a2</td>
+            <td align="center">bbp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Border and Background Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00a3</td>
+            <td align="center">seg</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Segmentation Package, [<a href="http://www.itu.int/rec/T-REC-H.248.1/en">ITU-T Rec. H.248.1v3</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00a4</td>
+            <td align="center">etsi_nb</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ETSI notification behaviour package, [ETSI ES 283 039-3], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+          </tr>
+          <tr>
+            <td align="center">0x00a5</td>
+            <td align="center">etsi_nr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ETSI notification rate package, [ETSI ES 283 039-4], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+          </tr>
+          <tr>
+            <td align="center">0x00a6</td>
+            <td align="center">asr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Automatic Speech Recognition Package, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00a7</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td>Reserved</td>
+          </tr>
+          <tr>
+            <td align="center">0x00a8</td>
+            <td align="center">aastts</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Advanced audio server base package for, TTS enhancement, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00a9</td>
+            <td align="center">mpp</td>
+            <td align="center">2</td>
+            <td align="center">0x0033</td>
+            <td align="center">3</td>
+            <td align="center">Final</td>
+            <td>Multimedia Play Package, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00aa</td>
+            <td align="center">fschp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Floor Status Detection Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ab</td>
+            <td align="center">fcpoli</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Floor Control Policy Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ac</td>
+            <td align="center">adr</td>
+            <td align="center">1</td>
+            <td align="center">0x0099</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Address Reporting Package, [<a href="http://www.itu.int/rec/T-REC-H.248.37/en">ITU-T Rec. H.248.37</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ad</td>
+            <td align="center">ccc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Connection Capability Control Package, [<a href="http://www.itu.int/rec/T-REC-H.248.46/en">ITU-T Rec. H.248.46</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ae</td>
+            <td align="center">scr</td>
+            <td align="center">2</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Statistic Conditional Reporting Package, [<a href="http://www.itu.int/rec/T-REC-H.248.47/en">ITU-T Rec. H.248.47</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00af</td>
+            <td align="center">xrbr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>RTCP XR Block Reporting Package, [<a href="http://www.itu.int/rec/T-REC-H.248.48/en">ITU-T Rec. H.248.48</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00b0</td>
+            <td align="center">recrtcpxr</td>
+            <td align="center">1</td>
+            <td align="center">0x000c</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Received RTCP XR Package, [<a href="http://www.itu.int/rec/T-REC-H.248.30/en">ITU-T Rec. H.248.30</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00b1</td>
+            <td align="center">recxrbm</td>
+            <td align="center">1</td>
+            <td align="center">0x00b0</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Received RTCP XR Burst Metrics Package, [<a href="http://www.itu.int/rec/T-REC-H.248.30/en">ITU-T Rec. H.248.30</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00b2</td>
+            <td align="center">threegasci</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ASCI Group call package, 3GPP TS 29.232 v7.4.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOPHIA ANTIPOLIS cedex, France, 3gppcontact&amp;etsi.org</td>
+          </tr>
+          <tr>
+            <td align="center">0x00b3</td>
+            <td align="center">mrp</td>
+            <td align="center">2</td>
+            <td align="center">0x0035</td>
+            <td align="center">3</td>
+            <td align="center">Final</td>
+            <td>Multimedia Recording Package, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00b4</td>
+            <td align="center">h245tp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>H.245 Transport Package, [<a href="http://www.itu.int/rec/T-REC-H.248.12/en">ITU-T Rec. H.248.12</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00b5</td>
+            <td align="center">rtcph</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>RTCP Handling package, [<a href="http://www.itu.int/rec/T-REC-H.248.57/en">ITU-T Rec. H.248.57</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00b6</td>
+            <td align="center">dapf</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Gate Management - Outgoing Destination, Address/Port Filtering Package, [<a href="http://www.itu.int/rec/T-REC-H.248.43/en">ITU-T Rec. H.248.43</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00b7</td>
+            <td align="center">ipf</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Gate Management - Incoming Protocol, Filtering Package, [<a href="http://www.itu.int/rec/T-REC-H.248.43/en">ITU-T Rec. H.248.43</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00b8</td>
+            <td align="center">opf</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Gate Management - Outgoing Protocol, Filtering Package, [<a href="http://www.itu.int/rec/T-REC-H.248.43/en">ITU-T Rec. H.248.43</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00b9</td>
+            <td align="center">ifb</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Gate Management - Incoming Filtering, Behaviour Package, [<a href="http://www.itu.int/rec/T-REC-H.248.43/en">ITU-T Rec. H.248.43</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ba</td>
+            <td align="center">ofb</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Gate Management - Outgoing Filtering, Behaviour Package, [<a href="http://www.itu.int/rec/T-REC-H.248.43/en">ITU-T Rec. H.248.43</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00bb</td>
+            <td align="center">sdpr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Session Description Protocol RFC, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.49/en">ITU-T Rec. H.248.49</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00bc</td>
+            <td align="center">sdpc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Session Description Protocol, Capabilities Package, [<a href="http://www.itu.int/rec/T-REC-H.248.49/en">ITU-T Rec. H.248.49</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00bd</td>
+            <td align="center">stunb</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT Traversal Toolkit - STUN Base Package, [<a href="http://www.itu.int/rec/T-REC-H.248.50/en">ITU-T Rec. H.248.50</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00be</td>
+            <td align="center">mgstunc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT Traversal Toolkit - MG STUN Client, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.50/en">ITU-T Rec. H.248.50</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00bf</td>
+            <td align="center">mgturnc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT Traversal Toolkit - MG TURN Client, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.50/en">ITU-T Rec. H.248.50</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00c0</td>
+            <td align="center">mgcstunc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT Traversal Toolkit - MGC STUN Client, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.50/en">ITU-T Rec. H.248.50</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00c1</td>
+            <td align="center">stuni</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT Traversal Toolkit - STUN Information, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.50/en">ITU-T Rec. H.248.50</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00c2</td>
+            <td align="center">mgastuns</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT Traversal Toolkit - MG Act-as STUN, Server Package, [<a href="http://www.itu.int/rec/T-REC-H.248.50/en">ITU-T Rec. H.248.50</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00c3</td>
+            <td align="center">ostuncc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT Traversal Toolkit - Originate STUN, Continuity Check Package, [<a href="http://www.itu.int/rec/T-REC-H.248.50/en">ITU-T Rec. H.248.50</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00c4</td>
+            <td align="center">mgcostunr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT Traversal Toolkit - MGC Originated, STUN Request Package, [<a href="http://www.itu.int/rec/T-REC-H.248.50/en">ITU-T Rec. H.248.50</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00c5</td>
+            <td align="center">kar</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT Traversal Toolkit - Keepalive, Request Package, [<a href="http://www.itu.int/rec/T-REC-H.248.50/en">ITU-T Rec. H.248.50</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00c6</td>
+            <td align="center">tcm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Termination Connection Model, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.51/en">ITU-T Rec. H.248.51</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00c7</td>
+            <td align="center">qos</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>QoS Class Package, [<a href="http://www.itu.int/rec/T-REC-H.248.52/en">ITU-T Rec. H.248.52</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00c8</td>
+            <td align="center">tmanr</td>
+            <td align="center">2</td>
+            <td align="center">0x008d</td>
+            <td align="center">2</td>
+            <td align="center">Final</td>
+            <td>Traffic Policing Statistics Package, [<a href="http://www.itu.int/rec/T-REC-H.248.53/en">ITU-T Rec. H.248.53</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00c9</td>
+            <td align="center">pacs</td>
+            <td align="center">1</td>
+            <td align="center">0x008d</td>
+            <td align="center">2</td>
+            <td align="center">Final</td>
+            <td>Packet Size Package, [<a href="http://www.itu.int/rec/T-REC-H.248.53/en">ITU-T Rec. H.248.53</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ca</td>
+            <td align="center">plm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Generic Pull Mode Package, [<a href="http://www.itu.int/rec/T-REC-H.248.55/en">ITU-T Rec. H.248.55</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00cb</td>
+            <td align="center">rtpad</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>RTP Application Data Package, [<a href="http://www.itu.int/rec/T-REC-H.248.58/en">ITU-T Rec. H.248.58</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00cc</td>
+            <td align="center">etn</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Event Timestamp Notification Package, [<a href="http://www.itu.int/rec/T-REC-H.248.59/en">ITU-T Rec. H.248.59</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00cd</td>
+            <td align="center">rmr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Resource Management Rules Package, [<a href="http://www.itu.int/rec/T-REC-H.248.63/en">ITU-T Rec. H.248.63</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ce</td>
+            <td align="center">rmc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Resource Management Configuration, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.63/en">ITU-T Rec. H.248.63</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00cf</td>
+            <td align="center">arm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Abstract Resource Management, Packages, [<a href="http://www.itu.int/rec/T-REC-H.248.63/en">ITU-T Rec. H.248.63</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00d0</td>
+            <td align="center">ipocs</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>IP layer octets count statistics, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.61/en">ITU-T Rec. H.248.61</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00d1</td>
+            <td align="center">cci</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Content of Communication Identity, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.60/en">ITU-T Rec. H.248.60</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00d2</td>
+            <td align="center">rsvp</td>
+            <td align="center">1</td>
+            <td align="center">0x00ca</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>RSVP extension package, [<a href="http://www.itu.int/rec/T-REC-H.248.65/en">ITU-T Rec. H.248.65</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00d3</td>
+            <td align="center">trm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>GCP Transport Mode Indication, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.67/en">ITU-T Rec. H.248.67</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00d4</td>
+            <td align="center">ipr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>IP Router Package, [<a href="http://www.itu.int/rec/T-REC-H.248.64/en">ITU-T Rec. H.248.64</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00d5</td>
+            <td align="center">mri</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Media Resource Identification Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00d6</td>
+            <td align="center">rfs</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Range Format Support, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00d7</td>
+            <td align="center">mrde</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Media Resource Description Expiry, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00d8</td>
+            <td align="center">mbs</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Media Block Size Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00d9</td>
+            <td align="center">mrs</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>RTSP Media Resource Syntax, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00da</td>
+            <td align="center">rtspp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>RTSP Play Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00db</td>
+            <td align="center">sp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Signal Pause Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00dc</td>
+            <td align="center">ddsa</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Data Delivery Speed Adjustment, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00dd</td>
+            <td align="center">prsa</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Playback Relative Scale Adjustment, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00de</td>
+            <td align="center">rtpinfo</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>RTP Information Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00df</td>
+            <td align="center">rtpint</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>RTP Interleaving Package, [<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00e0</td>
+            <td align="center">ipra</td>
+            <td align="center">1</td>
+            <td align="center">0x009d</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>IP Realm Availability Package, [<a href="http://www.itu.int/rec/T-REC-H.248.41/en">ITU-T Rec. H.248.41</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00e1</td>
+            <td align="center">gih</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>General IP Header QoS Octet, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.52/en">ITU-T Rec. H.248.52</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00e2</td>
+            <td align="center">ra</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Re-answer Package, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.62/en">ITU-T Rec. H.248.62</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00e3</td>
+            <td align="center">threegint</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>3G Interface Type package, 3GPP TS 29.232 v8.4.0, 3GPP support office, MCC Dept, ETSI, 650 Route des Lucioles, 06921 SOPHIA ANTIPOLIS cedex, France, 3gppcontact&amp;etsi.org</td>
+          </tr>
+          <tr>
+            <td align="center">0x00e4</td>
+            <td align="center">lstat</td>
+            <td align="center">1</td>
+            <td align="center">0x0099</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Latch Statistics Package, [<a href="http://www.itu.int/rec/T-REC-H.248.37/en">ITU-T Rec. H.248.37</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00e5</td>
+            <td align="center">fcsig</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Floor Control  Signalling Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00e6</td>
+            <td align="center">ipm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Include Participant in Mix Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00e7</td>
+            <td align="center">speakrep</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Speaker Reporting Package, [<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.248.19</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00e8</td>
+            <td align="center">ippcs</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>IP Layer Packet Count Statistics, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.61/en">ITU-T Rec. H.248.61</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00e9</td>
+            <td align="center">rdt</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Removal of Digits and Tones Package, [<a href="http://www.itu.int/rec/T-REC-H.248.68/en">ITU-T Rec. H.248.68</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ea</td>
+            <td align="center">msrpstat</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>MSRP Statistics Package, [<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00eb</td>
+            <td align="center">msrpcs</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>MSRP Connection Status Package, [<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ec</td>
+            <td align="center">mess</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Play Message Package, [<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ed</td>
+            <td align="center">delmess</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Delete Stored Message Package, [<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ee</td>
+            <td align="center">msi</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Message Session Information Package, [<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ef</td>
+            <td align="center">mf</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Message Filtering Package, [<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00f0</td>
+            <td align="center">sminf</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Stored Message Information Package, [<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00f1</td>
+            <td align="center">recmess</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Record Message Package, [<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00f2</td>
+            <td align="center">dmi</td>
+            <td align="center">1</td>
+            <td align="center">0x0006</td>
+            <td align="center">2</td>
+            <td align="center">Final</td>
+            <td>Digit Dialling Method Information, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.70/en">ITU-T Rec. H.248.70</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00f3</td>
+            <td align="center">xdmi</td>
+            <td align="center">1</td>
+            <td align="center">0x0052</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Digit Dialling Method Information for, Extended Digitmap Detection Package, [<a href="http://www.itu.int/rec/T-REC-H.248.70/en">ITU-T Rec. H.248.70</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00f4</td>
+            <td align="center">edmi</td>
+            <td align="center">1</td>
+            <td align="center">0x0066</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Digit Dialling Method Information for, Enhanced Digitmap Detection Package, [<a href="http://www.itu.int/rec/T-REC-H.248.70/en">ITU-T Rec. H.248.70</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00f5</td>
+            <td align="center">recrtcp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Received RTCP Package, [<a href="http://www.itu.int/rec/T-REC-H.248.71/en">ITU-T Rec. H.248.71</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00f6</td>
+            <td align="center">rtcpfb</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>RTCP Feedback Package, [<a href="http://www.itu.int/rec/T-REC-H.248.71/en">ITU-T Rec. H.248.71</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00f7</td>
+            <td align="center">h245tpspc</td>
+            <td align="center">1</td>
+            <td align="center">0x00b4</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>H.245 Transport Package for SPC use, [<a href="http://www.itu.int/rec/T-REC-H.248.72/en">ITU-T Rec. H.248.72</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00f8</td>
+            <td align="center">monapref</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>MONA Preference Package, [<a href="http://www.itu.int/rec/T-REC-H.248.72/en">ITU-T Rec. H.248.72</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00f9</td>
+            <td align="center">tgc</td>
+            <td align="center">1</td>
+            <td align="center">0x000d</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>TDM Gain Control Package, [<a href="http://www.itu.int/rec/T-REC-H.248.73/en">ITU-T Rec. H.248.73</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00fa</td>
+            <td align="center">mstart</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Media Start Package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00fb</td>
+            <td align="center">trim</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Trim Package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00fc</td>
+            <td align="center">eaasrec</td>
+            <td align="center">1</td>
+            <td align="center">0x0035</td>
+            <td align="center">1</td>
+            <td align="center">IP</td>
+            <td>Enhanced Recording Package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00fd</td>
+            <td align="center">easr</td>
+            <td align="center">1</td>
+            <td align="center">0x00a6</td>
+            <td align="center">1</td>
+            <td align="center">IP</td>
+            <td>Enhanced ASR Package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00fe</td>
+            <td align="center">etts</td>
+            <td align="center">1</td>
+            <td align="center">0x00a8</td>
+            <td align="center">1</td>
+            <td align="center">IP</td>
+            <td>Enhanced TTS Package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x00ff</td>
+            <td align="center">poc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Play Offset Control Package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0100</td>
+            <td align="center">edtmf</td>
+            <td align="center">1</td>
+            <td align="center">0x0006</td>
+            <td align="center">2</td>
+            <td align="center">Final</td>
+            <td>Enhanced DTMF Detection Package, [<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0101</td>
+            <td align="center">iprnat</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>IP Router NAT Package, [<a href="http://www.itu.int/rec/T-REC-H.248.64/en">ITU-T Rec. H.248.64</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0102</td>
+            <td align="center">veg</td>
+            <td align="center">1</td>
+            <td align="center">0x00fd</td>
+            <td align="center">1</td>
+            <td align="center">IP</td>
+            <td>Voice Enrolled Grammar Package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0103</td>
+            <td align="center">filtgrp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Filter Group Package, [<a href="http://www.itu.int/rec/T-REC-H.248.76/en">ITU-T Rec. H.248.76</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0104</td>
+            <td align="center">rtcpsdes</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>RTCP Source Description Package, [<a href="http://www.itu.int/rec/T-REC-H.248.71/en">ITU-T Rec. H.248.71</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0105</td>
+            <td align="center">svi</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Speaker Verification and, Identification Package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0106</td>
+            <td align="center">pipa</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Package Identifier Publishing and, Application Package, [<a href="http://www.itu.int/rec/T-REC-H.248.75/en">ITU-T Rec. H.248.75</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0107</td>
+            <td align="center">srtp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Secure RTP Package, [<a href="http://www.itu.int/rec/T-REC-H.248.77/en">ITU-T Rec. H.248.77</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0108</td>
+            <td align="center">mcbalg</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>MGC Controlled Bearer Level ALG, Package, [<a href="http://www.itu.int/rec/T-REC-H.248.78/en">ITU-T Rec. H.248.78</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0109</td>
+            <td align="center">eroas</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Enhanced Revised Offer/Answer SDP, Support Package, [<a href="http://www.itu.int/rec/T-REC-H.248.80/en">ITU-T Rec. H.248.80</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x010a</td>
+            <td align="center">smcn</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Enhanced SDP Media Capabilities, Negotiation Support Package, [<a href="http://www.itu.int/rec/T-REC-H.248.80/en">ITU-T Rec. H.248.80</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x010b</td>
+            <td align="center">ecnrous</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>ECN for RTP-over-UDP Support Package, [<a href="http://www.itu.int/rec/T-REC-H.248.82/en">ITU-T Rec. H.248.82</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x010c</td>
+            <td align="center">mgi</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Media Gateway Instance Package, [<a href="http://www.itu.int/rec/T-REC-H.248.83/en">ITU-T Rec. H.248.83</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x010d</td>
+            <td align="center">nattp2p</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>NAT-traversal Peer-to-Peer package, [<a href="http://www.itu.int/rec/T-REC-H.248.84/en">ITU-T Rec. H.248.84</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x010e</td>
+            <td align="center">tcphp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>TCP hole punching package, [<a href="http://www.itu.int/rec/T-REC-H.248.84/en">ITU-T Rec. H.248.84</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x010f</td>
+            <td align="center">tcptv</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>TCP traffic volume metrics package, [<a href="http://www.itu.int/rec/T-REC-H.248.84/en">ITU-T Rec. H.248.84</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0110</td>
+            <td align="center">tcpccm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>TCP connection control metrics package, [<a href="http://www.itu.int/rec/T-REC-H.248.84/en">ITU-T Rec. H.248.84</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0111</td>
+            <td align="center">tcpcqm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>TCP connection quality metrics package, [<a href="http://www.itu.int/rec/T-REC-H.248.84/en">ITU-T Rec. H.248.84</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0112</td>
+            <td align="center">irb</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Inspection rule base package, [<a href="http://www.itu.int/rec/T-REC-H.248.86/en">ITU-T Rec. H.248.86</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0113</td>
+            <td align="center">iro</td>
+            <td align="center">1</td>
+            <td align="center">0x0112</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>Inspection rule operational package, [<a href="http://www.itu.int/rec/T-REC-H.248.86/en">ITU-T Rec. H.248.86</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0114</td>
+            <td align="center">rtpt</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>RTP Topology Package, [<a href="http://www.itu.int/rec/T-REC-H.248.88/en">ITU-T Rec. H.248.88</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0115</td>
+            <td align="center">tcpbcc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>TCP basic connection control package, [<a href="http://www.itu.int/rec/T-REC-H.248.89/en">ITU-T Rec. H.248.89</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0116</td>
+            <td align="center">tcprm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>TCP retransmission metrics package, [<a href="http://www.itu.int/rec/T-REC-H.248.89/en">ITU-T Rec. H.248.89</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0117</td>
+            <td align="center">tlsbsc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>TLS basic session control package, [<a href="http://www.itu.int/rec/T-REC-H.248.90/en">ITU-T Rec. H.248.90</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0118</td>
+            <td align="center">tlscn</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>TLS capability negotiation package, [<a href="http://www.itu.int/rec/T-REC-H.248.90/en">ITU-T Rec. H.248.90</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0119</td>
+            <td align="center">tlsm</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>TLS session maintenance package, [<a href="http://www.itu.int/rec/T-REC-H.248.90/en">ITU-T Rec. H.248.90</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x011a</td>
+            <td align="center">tlstv</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>TLS traffic volume metrics package, [<a href="http://www.itu.int/rec/T-REC-H.248.90/en">ITU-T Rec. H.248.90</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x011b</td>
+            <td align="center">seplink</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Stream endpoint interlinkage package, [<a href="http://www.itu.int/rec/T-REC-H.248.92/en">ITU-T Rec. H.248.92</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x011c</td>
+            <td align="center">aswp</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>Advanced SDP Wildcarding Package, [<a href="http://www.itu.int/rec/T-REC-H.248.39/en">ITU-T Rec. H.248.39</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x011d</td>
+            <td align="center">mgbalg</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">Final</td>
+            <td>MG located Bearer Level ALG package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1502_Gen/H248_78rev.zip">ITU-T Rec. H.248.78</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x011e</td>
+            <td align="center">dtlscn</td>
+            <td align="center">1</td>
+            <td align="center">0x0118</td>
+            <td align="center">1</td>
+            <td align="center">Final</td>
+            <td>DTLS extended capabilities package, [<a href="http://www.itu.int/rec/T-REC-H.248.93/en">ITU-T Rec. H.248.93</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x011f</td>
+            <td align="center">mgroup</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Media Grouping package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1502_Gen/H248_STGROUP.zip">ITU-T Rec. H.248.STGROUP</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0120</td>
+            <td align="center">stnconfres</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>STUN Consent Freshness package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1502_Gen/H248_50rev.zip">ITU-T Rec. H.248.50 Revised</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0121</td>
+            <td align="center">sctpbcc</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>SCTP basic connection control package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1502_Gen/H248_SCTP.zip">ITU-T H.248.SCTP</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0122</td>
+            <td align="center">sctpreset</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>SCTP Re-configuration Stream reset package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1502_Gen/H248_SCTP.zip">ITU-T H.248.SCTP</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0123</td>
+            <td align="center">rempr</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Remote Pause and Resume, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1502_Gen/H248_PAURES.zip">ITU-T H.248.PAURES</a>], ITU-T TSB at above address.</td>
+          </tr>
+          <tr>
+            <td align="center">0x0124</td>
+            <td align="center">dcep</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">IP</td>
+            <td>Data Channel Establishment Protocol Support Package, [<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1502_Gen/H248_WEBRTC.zip">ITU-T H.248.WEBRTC</a>], ITU-T TSB at above address.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2><a name="megaco-h248-3" id="megaco-h248-3"></a>Private packages (0x8000 to 0xffff)</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Christian Groves</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5125">RFC5125</a>][<a href="http://www.itu.int/rec/T-REC-H.248.1/en">H.248.1</a>][<a href="http://www.iana.org/go/rfc5615">RFC5615</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>"Status" - whether the package is still being finalized
+("IP" = In Progress, with expected completion date) or is final.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="megaco-h248-3.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-megaco-h248-3" class="sortable">
+      <thead>
+        <tr>
+          <th>Serial</th>
+          <th>Text Name</th>
+          <th>Ver</th>
+          <th>Extends Ser</th>
+          <th>Extends Ver</th>
+          <th>Status</th>
+          <th>Reference/Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0x8000</td>
+          <td align="center">eri_iuup</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Ericsson IU, User Plane Package, &lt;Fredrik.Aberg&amp;lmf.ericsson.se&gt;</td>
+        </tr>
+        <tr>
+          <td align="center">0x8001</td>
+          <td align="center">eri_ugcsd</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Ericsson UMTS and GSM Circuit, Switched Data Package, &lt;Fredrik.Aberg&amp;lmf.ericsson.se&gt;</td>
+        </tr>
+        <tr>
+          <td align="center">0x8002</td>
+          <td align="center">eri__ecg</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Ericsson Tone Generator, Package, &lt;Fredrik.Aberg&amp;lmf.ericsson.se&gt;</td>
+        </tr>
+        <tr>
+          <td align="center">0x8003</td>
+          <td align="center">eri_eltp</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Ericsson Line Test Package, &lt;Fredrik.Aberg&amp;lmf.ericsson.se&gt;, Fredrik Abert, Oy L M Ericsson Ab, FIN-02420 Jorvas, Finland</td>
+        </tr>
+        <tr>
+          <td align="center">0x8004</td>
+          <td align="center">adv3gtfoc</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Nokia Advanced TFO Package, Markus.Ahokangas&amp;nokia.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8005</td>
+          <td align="center">nokiaiwf</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Nokia IWF Package, Markus.Ahokangas&amp;nokia.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8006</td>
+          <td align="center">nokiarootc</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Nokia Root Package, Markus.Ahokangas&amp;nokia.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8007</td>
+          <td align="center">threegtrace</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Nokia Trace Package, Markus.Ahokangas&amp;nokia.com, Nokia Networks, PL 319, 90651 Oulu, Finland</td>
+        </tr>
+        <tr>
+          <td align="center">0x8008</td>
+          <td align="center">eri_v52cp</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Ericsson  V5.2 Layer, 1 Control Package, jerker.zetterlund&amp;ericsson.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8009</td>
+          <td align="center">eri_terminfo</td>
+          <td align="center">4</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Ericsson Detailed, Termination Information, Package, jerker.zetterlund&amp;ericsson.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x800a</td>
+          <td align="center">nokiabcp</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Nokia Bearer Characteristics Package, jarkko.pyykkonen&amp;nokia.com, Nokia Networks, PL/P.O. Box 300, 90401 Oulu Finland</td>
+        </tr>
+        <tr>
+          <td align="center">0x800b</td>
+          <td align="center">nokiatestcall</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Nokia Test Call Package, jarkko.pyykkonen&amp;nokia.com, Nokia Networks, PL/P.O. Box 300, 90401 Oulu Finland</td>
+        </tr>
+        <tr>
+          <td align="center">0x800c</td>
+          <td align="center">nokiaect</td>
+          <td align="center">1</td>
+          <td align="center">0x00a</td>
+          <td align="center">1</td>
+          <td align="center">Final</td>
+          <td>Nokia Extended Continuity Package, tapio.piippola&amp;nokia.com, Nokia Networks, PL/P.O. Box 300, 90401 Oulu Finland</td>
+        </tr>
+        <tr>
+          <td align="center">0x800d</td>
+          <td align="center">nokiaipnwr</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Nokia IPnwR Package, tapio.piippola&amp;nokia.com, Nokia Networks, PL/P.O. Box 300, 90401 Oulu Finland</td>
+        </tr>
+        <tr>
+          <td align="center">0x800e</td>
+          <td align="center">eri_trenh</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Ericsson Tracing Enhancements Package, jacky.wu&amp;ericsson.com, Jacky Wu, Ericsson China R&amp;D, 200335 Shanghai, P.R.China</td>
+        </tr>
+        <tr>
+          <td align="center">0x800f</td>
+          <td align="center">eri_wildtermid</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Ericsson Partially Wildcarded TerminationID Package, tony.knight&amp;ericsson.com, Tony Knight, Ericsson Ltd., Midleton Gate, Guildford Business Park, Guildford, Surrey, United Kingdom</td>
+        </tr>
+        <tr>
+          <td align="center">0x8010</td>
+          <td align="center">sctpstream</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>SCTP Stream Handling Package, boglarka.gobolos&amp;nsn.com, Boglarka Gobolos, Nokia Siemens Networks, H-1092 Budapest, K&#246;ztelek u.6., Hungary</td>
+        </tr>
+        <tr>
+          <td align="center">0x8011</td>
+          <td align="center">alu_seco</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent Seamless Communication Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8012</td>
+          <td align="center">alu_segw</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent Security Gateway Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8013</td>
+          <td align="center">alu_ipsecsa</td>
+          <td align="center">1</td>
+          <td align="center">0x8012</td>
+          <td align="center">1</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent IPsec Security Association Control Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8014</td>
+          <td align="center">alu_mgoco</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent Overload Control Optimization Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8015</td>
+          <td align="center">alu_sipmua</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent SIP Media UA Emulation Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8016</td>
+          <td align="center">alu_gtsh</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent Generic Traffic Shaping Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8017</td>
+          <td align="center">alu_ipts</td>
+          <td align="center">1</td>
+          <td align="center">0x8016</td>
+          <td align="center">1</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent IP Bearer Traffic Shaping Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8018</td>
+          <td align="center">alu_iptm</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent IP Transport Mode Audit Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x8019</td>
+          <td align="center">alu_sifw</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent Signalling Firewall Control Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x801a</td>
+          <td align="center">alu_mala</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent Markup Language Analysis Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x801b</td>
+          <td align="center">alu_dmip</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent Deep Message Inspection Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+        <tr>
+          <td align="center">0x801c</td>
+          <td align="center">alu_etdf</td>
+          <td align="center">1</td>
+          <td align="center">-</td>
+          <td align="center">-</td>
+          <td align="center">Final</td>
+          <td>Alcatel-Lucent Enhanced Traffic Detection Package, Albrecht.Schwarz&amp;alcatel-lucent.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="megaco-h248-4" id="megaco-h248-4"></a>Error Codes</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Christian Groves</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5125">RFC5125</a>][<a href="http://www.itu.int/rec/T-REC-H.248.1/en">H.248.1</a>][<a href="http://www.iana.org/go/rfc5615">RFC5615</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Errors consist of an IANA registered error code and an explanatory
+string.
+
+When a MG or MGC reports an error to a MGC, it does so in an error
+descriptor.  An error descriptor consists of an error code and
+optionally the associated explanatory string.  The error code and
+the explanatory string are registered with IANA.
+
+For full details on the requirements for error code registration see
+[<a href="http://www.iana.org/go/rfc5615">RFC5615</a>].
+
+The Reference for the below error codes is [ITU-T Rec.H.248.8] unless
+otherwise noted.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="megaco-h248-4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-megaco-h248-4" class="sortable">
+      <thead>
+        <tr>
+          <th>Error Code</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">400</td>
+          <td>Syntax error in message</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">401</td>
+          <td>Protocol Error</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">402</td>
+          <td>Unauthorized</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">403</td>
+          <td>Syntax error in transaction request</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">406</td>
+          <td>Version Not Supported</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">410</td>
+          <td>Incorrect identifier</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">411</td>
+          <td>The transaction refers to an unknown ContextId</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">412</td>
+          <td>No ContextIDs available</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">413</td>
+          <td>Number of transactions in message exceeds maximum</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">421</td>
+          <td>Unknown action or illegal combination of actions</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">422</td>
+          <td>Syntax Error in Action</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">430</td>
+          <td>Unknown TerminationID</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">431</td>
+          <td>No TerminationID matched a wildcard</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">432</td>
+          <td>Out of TerminationIDs or No TerminationID
+available</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">433</td>
+          <td>TerminationID is already in a Context</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">434</td>
+          <td>Max number of Terminations in a Context exceeded</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">435</td>
+          <td>Termination ID is not in specified Context</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">440</td>
+          <td>Unsupported or unknown Package</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">441</td>
+          <td>Missing Remote or Local Descriptor</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">442</td>
+          <td>Syntax Error in Command</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">443</td>
+          <td>Unsupported or Unknown Command</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">444</td>
+          <td>Unsupported or Unknown Descriptor</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">445</td>
+          <td>Unsupported or Unknown Property</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">446</td>
+          <td>Unsupported or Unknown Parameter</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">447</td>
+          <td>Descriptor not legal in this command</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">448</td>
+          <td>Descriptor appears twice in a command</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">449</td>
+          <td>Unsupported or Unknown Parameter or Property Value</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">450</td>
+          <td>No such property in this package</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">451</td>
+          <td>No such event in this package</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">452</td>
+          <td>No such signal in this package</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">453</td>
+          <td>No such statistic in this package</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">454</td>
+          <td>No such parameter value in this package</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">455</td>
+          <td>Property illegal in this Descriptor</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">456</td>
+          <td>Property appears twice in this Descriptor</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">457</td>
+          <td>Missing parameter in signal or event</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">458</td>
+          <td>Unexpected Event/Request ID</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">459</td>
+          <td>Invalid Combination of Metering Detection Events</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.26/en">ITU-T H.248.26</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">460</td>
+          <td>Unable to set statistic on stream</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">461</td>
+          <td>Unsupported or Unknown Profile</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.18/en">ITU-T Rec. H.248.18</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">471</td>
+          <td>Implied Add for Multiplex failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">472</td>
+          <td>Required Information Missing</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">473</td>
+          <td>Conflicting Property Values</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">474</td>
+          <td>Invalid SDP Syntax</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.49/en">ITU-T Rec. H.248.49</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">475</td>
+          <td>Unable to pause the playout of the signal</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">476</td>
+          <td>Unable to adjust the data delivery speed of the Signal</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">477</td>
+          <td>Unable to adjust the playback relative scale of the signal</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.66/en">ITU-T Rec. H.248.66</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">478</td>
+          <td>Behaviour Contradicts Resource Rule</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.63/en">ITU-T Rec. H.248.63</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">479</td>
+          <td>Only one floor chair per floor is allowed in the Context</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.19/en">ITU-T Rec. H.249.19</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">480</td>
+          <td>Unsupported offset unit or Value</td>
+          <td>[<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">481</td>
+          <td>Element not allowed in a Filter Group Context</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.76/en">ITU-T Rec. H.248.76</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">482</td>
+          <td>Unknown Filter Group</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.76/en">ITU-T Rec. H.248.76</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">483</td>
+          <td>Invalid action for Enrolment Session state</td>
+          <td>[<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">484</td>
+          <td>Invalid action for Verification Session state</td>
+          <td>[<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">485</td>
+          <td>Unsupported measurement block type</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.48/en">ITU-T Rec. H.248.48</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">486</td>
+          <td>Unsupported block parameter value</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.48/en">ITU-T Rec. H.248.48</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">487</td>
+          <td>Inconsistent block type parameters</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.48/en">ITU-T Rec. H.248.48</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">488</td>
+          <td>Incorrect stream endpoint interlinkage</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.92/en">ITU-T Rec. H.248.92</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">489</td>
+          <td>Invalid aggregation and/or de-aggregation</td>
+          <td>[<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1502_Gen/H248_STGROUP.zip">ITU-T Rec. H.248.STGROUP</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">500</td>
+          <td>Internal software Failure in MG or MGC</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">501</td>
+          <td>Not Implemented</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">502</td>
+          <td>Not ready.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">503</td>
+          <td>Service Unavailable</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">504</td>
+          <td>Command Received from unauthorized entity</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">505</td>
+          <td>Transaction Request Received before a Service
+Change Reply has been received</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">506</td>
+          <td>Number of Transaction Pendings Exceeded</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">507</td>
+          <td>Alternate Transport Mode Preferred</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.67/en">ITU-T Rec. H.248.67</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">510</td>
+          <td>Insufficient resources</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">511</td>
+          <td>Temporarily Busy</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">512</td>
+          <td>Media Gateway unequipped to detect requested Event</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">513</td>
+          <td>Media Gateway unequipped to generate requested Signals</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">514</td>
+          <td>Media Gateway cannot send the specified announcement</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">515</td>
+          <td>Unsupported Media Type</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">517</td>
+          <td>Unsupported or invalid mode</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">518</td>
+          <td>Event buffer full</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">519</td>
+          <td>Out of space to store digit map</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">520</td>
+          <td>Digit Map undefined in the MG</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">521</td>
+          <td>Termination is "ServiceChangeing"</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">522</td>
+          <td>Functionality Requested in Topology Triple Not Supported</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">526</td>
+          <td>Insufficient bandwidth</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">529</td>
+          <td>Internal hardware failure in MG</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">530</td>
+          <td>Temporary Network failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">531</td>
+          <td>Permanent Network failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">532</td>
+          <td>Audited Property, Statistic, Event or Signal does not exist</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">533</td>
+          <td>Response exceeds maximum transport PDU size</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">534</td>
+          <td>Illegal write or read only property</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">540</td>
+          <td>Unexpected initial hook state</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.1/en">ITU-T Rec. H.248.1</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">541</td>
+          <td>Unexpected Spare Bit State</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.33/en">ITU-T Rec. H.248.33</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">542</td>
+          <td>Command is not allowed on this termination</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">543</td>
+          <td>MGC requested event detection timestamp not supported</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">581</td>
+          <td>Does Not Exist</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">600</td>
+          <td>Illegal syntax within an announcement specification</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">601</td>
+          <td>Variable type not supported</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">602</td>
+          <td>Variable value out of range</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">603</td>
+          <td>Category not supported</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">604</td>
+          <td>Selector type not supported</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">605</td>
+          <td>Selector value not supported</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">606</td>
+          <td>Unknown segment ID</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">607</td>
+          <td>Mismatch between play specification and provisioned data</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">608</td>
+          <td>Provisioning error</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">609</td>
+          <td>Invalid offset</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">610</td>
+          <td>No free segment IDs</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">611</td>
+          <td>Temporary segment not found</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">612</td>
+          <td>Segment in use</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">613</td>
+          <td>ISP port limit overrun</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-megaco-naspkg-04">draft-ietf-megaco-naspkg-04</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">614</td>
+          <td>No modems available</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-megaco-naspkg-04">draft-ietf-megaco-naspkg-04</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">615</td>
+          <td>Calling number unacceptable</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-megaco-naspkg-04">draft-ietf-megaco-naspkg-04</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">616</td>
+          <td>Called number unacceptable</td>
+          <td>[<a href="http://www.iana.org/go/draft-ietf-megaco-naspkg-04">draft-ietf-megaco-naspkg-04</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">617</td>
+          <td>Reserved for H.248.9 return code</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">618</td>
+          <td>Reserved for H.248.9 return code</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">622</td>
+          <td>Reserved for H.248.9 return code</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">623</td>
+          <td>Reserved for H.248.9 return code</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">624</td>
+          <td>Reserved for H.248.9 return code</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">625</td>
+          <td>Reserved for H.248.9 return code</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">626</td>
+          <td>Reserved for H.248.9 return code</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">627</td>
+          <td>Reserved for H.248.9 return code</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">628</td>
+          <td>Reserved for H.248.9 return code</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">629</td>
+          <td>Reserved for H.248.9 return code</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.9/en">ITU-T Rec. H.248.9</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">630</td>
+          <td>Reserved for H.248.9 / H.248.74 return Code</td>
+          <td>[<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">631</td>
+          <td>Reserved for H.248.9 / H.248.74 return Code</td>
+          <td>[<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">632</td>
+          <td>Reserved for H.248.9 / H.248.74 return Code</td>
+          <td>[<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">633</td>
+          <td>Reserved for H.248.9 / H.248.74 return Code</td>
+          <td>[<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">634</td>
+          <td>Reserved for H.248.9 / H.248.74 return Code</td>
+          <td>[<a href="http://wftp3.itu.int/av-arch/avc-site/2013-2016/1301_Gen/H248_74_Draft.zip">ITU-T Rec. H.248.74</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">700</td>
+          <td>Sieve Script Syntax Error</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">701</td>
+          <td>Unsupported Sieve Require Error</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">702</td>
+          <td>Sieve Actions Exceeded Error</td>
+          <td>[<a href="http://www.itu.int/rec/T-REC-H.248.69/en">ITU-T Rec. H.248.69</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="megaco-h248-5" id="megaco-h248-5"></a>ServiceChange Reasons</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Christian Groves</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5125">RFC5125</a>][<a href="http://www.itu.int/rec/T-REC-H.248.1/en">ITU-T Rec. H.248.1</a>][<a href="http://www.iana.org/go/rfc5615">RFC5615</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>The ServiceChangeReason parameter specifies the reason why the
+ServiceChange has or will occur.  It consists of an alphanumeric
+token and, optionally, an explanatory string.
+
+For full details on the requirements for ServiceChange reason registration
+see [<a href="http://www.iana.org/go/rfc5615">RFC5615</a>].
+
+The following ServiceChangeReasons are defined.  The Reference
+for the below defined ServiceChange Reasons is [<a href="http://www.itu.int/rec/T-REC-H.248.8/en">ITU-T Rec. H.248.8</a>]
+unless otherwise noted.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="megaco-h248-5.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-megaco-h248-5" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>ServiceChangeReasons</th>
+          <th>References</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">900</td>
+          <td>Service Restored</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">901</td>
+          <td>Cold Boot</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">902</td>
+          <td>Warm Boot</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">903</td>
+          <td>MGC Directed Change</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">904</td>
+          <td>Termination malfunctioning</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">905</td>
+          <td>Termination taken out of service</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">906</td>
+          <td>Loss of lower layer connectivity (e.g. downstream sync)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">907</td>
+          <td>Transmission Failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">908</td>
+          <td>MG Impending Failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">909</td>
+          <td>MGC Impending Failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">910</td>
+          <td>Media Capability Failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">911</td>
+          <td>Modem Capability Failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">912</td>
+          <td>Mux Capability Failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">913</td>
+          <td>Signal Capability Failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">914</td>
+          <td>Event Capability Failure</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">915</td>
+          <td>State Loss</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">916</td>
+          <td>Packages Change</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">917</td>
+          <td>Capabilities Change</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">918</td>
+          <td>Cancel Graceful</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">919</td>
+          <td>Warm Failover</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">920</td>
+          <td>Cold Failover</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="megaco-h248-6" id="megaco-h248-6"></a>Profile Names</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Christian Groves</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc5125">RFC5125</a>][<a href="http://www.itu.int/rec/T-REC-H.248.1/en">H.248.1</a>][<a href="http://www.iana.org/go/rfc5615">RFC5615</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Profile names are used by [<a href="http://www.iana.org/go/rfc5125">RFC5125</a>] or [<a href="http://www.itu.int/rec/T-REC-H.248.1/en">H.248.1</a>] in
+the Servicechange request and reply commands.
+Profiles may be specified to further define how the H.248 protocol is
+used and what functionality is supported by an MG. The profile itself
+specifies what options associated with H.248 have been used. For example:
+transport and packages used for an application.
+
+Profile names shall be in accordance with the registration rule in
+section 14.4 of H.248.1/Megaco. Profile names shall not exceed 64
+characters in length.
+
+For full details on the requirements for profile name registration see
+[<a href="http://www.iana.org/go/rfc5615">RFC5615</a>].
+
+The IANA shall provide the list of profile names in alphabetic order.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="megaco-h248-6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-megaco-h248-6" class="sortable">
+      <thead>
+        <tr>
+          <th>Profile Name</th>
+          <th>Version</th>
+          <th>Reference/Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AuditProfiles</td>
+          <td>01</td>
+          <td>Profile Package, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.18/en">ITU-T Rec. H.248.18</a>], ITU-T TSB</td>
+        </tr>
+        <tr>
+          <td>Ericsson*</td>
+          <td>-</td>
+          <td>&lt;Osmo.Seppala&amp;lmf.ericsson.se&gt;</td>
+        </tr>
+        <tr>
+          <td>ETSI_ARGW</td>
+          <td>01</td>
+          <td>[ETSI ES 283 002], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+        </tr>
+        <tr>
+          <td>ETSI_BGF</td>
+          <td>01</td>
+          <td>[[<a href="http://pda.etsi.org/pda/queryform.asp.">European Telecommunications Standards Institute, "Telecommunications
+and Internet converged Services and Protocols for Advanced Networking (TISPAN);
+Resource and Admission Control: H.248 Profile for controlling Border Gateway
+Functions (BGF) in the Resource and Admission Control Subsystem (RACS);
+Protocol specification"; ETSI ES 283 018 V1.1.1 (2006-06), June 2006</a>]], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+        </tr>
+        <tr>
+          <td>ETSI_GateControl</td>
+          <td>01</td>
+          <td>[ETSI 102 333], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+        </tr>
+        <tr>
+          <td>etsi_tgw</td>
+          <td>01</td>
+          <td>[[<a href="http://pda.etsi.org/pda/queryform.asp">European Telecommunications Standards Institute, "Telecommunications
+and Internet converged Services and Protocols for Advanced Networking (TISPAN);
+PSTN/ISDN Emulation: H.248 Profile for controlling Trunking Media Gateways
+in the PSTN/ISDN Emulation Subsystem (PES);Protocol specification",
+ETSI ES 283 024 V1.1.1 (2006-06), June 2006</a>]], ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, PTCCHelp&amp;etsi.org</td>
+        </tr>
+        <tr>
+          <td>ETSIprof*</td>
+          <td>-</td>
+          <td>ETSI Secretariat, 650 Route des Lucioles, 06921 Sophia Antipolis CEDEX, France, ptcchelp&amp;etsi.org</td>
+        </tr>
+        <tr>
+          <td>IPPhone</td>
+          <td>01</td>
+          <td>IP Phone Profile, [<a href="http://www.iana.org/go/rfc3054">RFC3054</a>], peter_blatherwick&amp;mitel.com, Mitel Networks</td>
+        </tr>
+        <tr>
+          <td>MSF_BGF</td>
+          <td>01</td>
+          <td>MSF-IA-MEGACO.009-FINAL, MultiService Forum, 48377 Fremont Blvd., Suite 117, Fremont, CA 94538, USA, info&amp;msforum.org</td>
+        </tr>
+        <tr>
+          <td>MSF_BGF</td>
+          <td>02</td>
+          <td>MSF-IA-MEGACO.016-FINAL, MultiService Forum, 48377 Fremont Blvd., Suite 117, Fremont, CA 94538, USA, info&amp;msforum.org</td>
+        </tr>
+        <tr>
+          <td>MSF_cBTG</td>
+          <td>01</td>
+          <td>msf2008.012.01, MultiService Forum, 48377 Fremont Blvd., Suite 117, Fremont, CA 94538, USA, info&amp;msforum.org</td>
+        </tr>
+        <tr>
+          <td>MSFprof*</td>
+          <td>-</td>
+          <td>MultiService Forum, 48377 Fremont Blvd., Suite 117, Fremont, CA 94538, USA, info&amp;msforum.org</td>
+        </tr>
+        <tr>
+          <td>MSFR3TGW</td>
+          <td>01</td>
+          <td>MSF-IA-MEGACO.011-FINAL, MultiService Forum, 48377 Fremont Blvd., Suite 117, Fremont, CA 94538, USA, info&amp;msforum.org</td>
+        </tr>
+        <tr>
+          <td>MSFR4_MS</td>
+          <td>01</td>
+          <td>MSF-IA-MEGACO.015-FINAL, MultiService Forum, 48377 Fremont Blvd., Suite 117, Fremont, CA 94538, USA, info&amp;msforum.org</td>
+        </tr>
+        <tr>
+          <td>MSFUKAG</td>
+          <td>01</td>
+          <td>MSF-IA-MEGACO.005-FINAL, MultiService Forum, 48377 Fremont Blvd., Suite 117, Fremont, CA 94538, USA, info&amp;msforum.org</td>
+        </tr>
+        <tr>
+          <td>nokiamgw*</td>
+          <td>01</td>
+          <td>jarkko.pyykkonen&amp;nokia.com, Nokia Networks, PL/P.O. Box 300, 90401 Oulu Finland</td>
+        </tr>
+        <tr>
+          <td>NoProfile</td>
+          <td>01</td>
+          <td>[<a href="http://www.iana.org/go/rfc5125">RFC5125</a>] or, ITU-T Rec. [<a href="http://www.itu.int/rec/T-REC-H.248.1/en">H.248.1</a>], ITU-T TSB</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

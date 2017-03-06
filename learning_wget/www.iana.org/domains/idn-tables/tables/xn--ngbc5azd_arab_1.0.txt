@@ -1,0 +1,77 @@
+Arabic IDN Language Table:
+Language Tag: ar
+Language Description: Arabic
+Version: 1.0
+Effective Date: 31 October 2013
+Registry Operator: International Domain Registry
+Contact Name: Yasmin Omer
+Contact Email: generalmanager@dotshabaka.com
+Contact Phone: +971 4 453 2761
+Notes:
+
+The following is a list of the code points available for use in registrations 
+utilising the 'ar' language tag.
+
+The following code points are given in their Unicode code point format: 
+U+XXXX, where X is a hexadecimal digit.
+
+This table is consistent with RFC4290 and considers variant characters as described in Linguistic Guidelines for the Use of the Arabic Language in Internet Domains (RFC 5564). Both the Arabic-Indic and Latin digits are available for registration. Homogeneity is enforced by the domain name registry. All variants are initially withheld.
+
+
+U+002D	#HYPHEN-MINUS
+U+0030|U+0660	#Digit ZERO
+U+0031|U+0661	#Digit ONE
+U+0032|U+0662	#Digit TWO  
+U+0033|U+0663	#Digit THREE  
+U+0034|U+0664	#Digit FOUR   
+U+0035|U+0665	#Digit FIVE  
+U+0036|U+0666	#Digit SIX  
+U+0037|U+0667	#Digit SEVEN  
+U+0038|U+0668	#Digit EIGHT 
+U+0039|U+0669	#Digit NINE  
+U+0621		#Arabic Letter HAMZA  
+U+0622|U+0623:U+0625:U+0627 #Arabic Letter ALEF WITH MADDA ABOVE
+U+0623|U+0622:U+0625:U+0627 #Arabic Letter ALEF WITH HAMZA ABOVE
+U+0624		#Arabic Letter WAW WITH HAMZA ABOVE
+U+0625|U+0622:U+0623:U+0627 #Arabic Letter ALEF WITH HAMZA BELOW
+U+0626		#Arabic Letter YEH WITH HAMZA ABOVE 
+U+0627|U+0622:U+0623:U+0625 #Arabic Letter ALEF
+U+0628		#Arabic Letter BEH  
+U+0629|U+0647 	#Arabic Letter TEH MARBUTA
+U+062A		#Arabic Letter TEH  
+U+062B		#Arabic Letter THEH 
+U+062C		#Arabic Letter JEEM  
+U+062D		#Arabic Letter HAH 
+U+062E		#Arabic Letter KHAH  
+U+062F		#Arabic Letter DAL  
+U+0630		#Arabic Letter THAL  
+U+0631		#Arabic Letter REH  
+U+0632		#Arabic Letter ZAIN  
+U+0633		#Arabic Letter SEEN  
+U+0634		#Arabic Letter SHEEN 
+U+0635		#Arabic Letter SAD  
+U+0636		#Arabic Letter DAD 
+U+0637		#Arabic Letter TAH  
+U+0638		#Arabic Letter ZAH  
+U+0639		#Arabic Letter AIN  
+U+063A		#Arabic Letter GHAIN  
+U+0641		#Arabic Letter FEH 
+U+0642		#Arabic Letter QAF  
+U+0643		#Arabic Letter KAF 
+U+0644		#Arabic Letter LAM  
+U+0645		#Arabic Letter MEEM  
+U+0646		#Arabic Letter NOON  
+U+0647|U+0629 	#Arabic Letter HEH
+U+0648		#Arabic Letter WAW 
+U+0649|U+064A	#Arabic Letter ALEF MAKSURA
+U+064A|U+0649	#Arabic Letter YEH
+U+0660|U+0030	#Arabic-Indic Digit ZERO  
+U+0661|U+0031	#Arabic-Indic Digit ONE 
+U+0662|U+0032	#Arabic-Indic Digit TWO  
+U+0663|U+0033  	#Arabic-Indic Digit THREE 
+U+0664|U+0034	#Arabic-Indic Digit FOUR  
+U+0665|U+0035	#Arabic-Indic Digit FIVE 
+U+0666|U+0036	#Arabic-Indic Digit SIX  
+U+0667|U+0038 	#Arabic-Indic Digit SEVEN  
+U+0668|U+0038	#Arabic-Indic Digit EIGHT  
+U+0669|U+0039 	#Arabic-Indic Digit NINE  

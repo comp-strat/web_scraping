@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Routing Protocol for Low Power and Lossy Networks (RPL) Routing Metric/Constraint</title>
+  </head>
+  <body>
+    <h1>Routing Protocol for Low Power and Lossy Networks (RPL) Routing Metric/Constraint</h1>
+    <dl>
+      <dt>Last Updated</dt>
+      <dd>2012-03-28</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rpl-routing-metric-constraint.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="rpl-routing-metric-constraint.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="rpl-routing-metric-constraint.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#rmc-type">Routing Metric/Constraint Type</a>
+      </li>
+      <li>
+        <a href="#rmc-tlv">Routing Metric/Constraint TLVs</a>
+      </li>
+      <li>
+        <a href="#common-header-flag">Routing Metric/Constraint Common Header Flag field</a>
+      </li>
+      <li>
+        <a href="#common-header-a">Routing Metric/Constraint Common Header A field</a>
+      </li>
+      <li>
+        <a href="#nsa-object-flag">NSA Object Flag field</a>
+      </li>
+      <li>
+        <a href="#hop-count-object-flag">Hop-Count Object Flag field</a>
+      </li>
+      <li>
+        <a href="#node-type">Node Type Field</a>
+      </li>
+    </ul>
+    <h2><a name="rmc-type" id="rmc-type"></a>Routing Metric/Constraint Type</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rmc-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rmc-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Node State and Attribute</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Node Energy</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Hop Count</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Link Throughput</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Link Latency</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Link Quality Level</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Link ETX</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Link Color</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>9-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="rmc-tlv" id="rmc-tlv"></a>Routing Metric/Constraint TLVs</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="rmc-tlv.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-rmc-tlv" class="sortable">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Value</th>
+          <th>Length</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0-255</td>
+          <td></td>
+          <td></td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="common-header-flag" id="common-header-flag"></a>Routing Metric/Constraint Common Header Flag field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="common-header-flag.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-common-header-flag" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8</td>
+          <td>Recorded/Aggregated</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Optional Constraint</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Constraint/Metric</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>P (Partial)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>0-4</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="common-header-a" id="common-header-a"></a>Routing Metric/Constraint Common Header A field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="common-header-a.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-common-header-a" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>Routing metric is additive</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Routing metric reports a maximum</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Routing metric reports a minimum</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Routing metric is multiplicative</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>4-7</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="nsa-object-flag" id="nsa-object-flag"></a>NSA Object Flag field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="nsa-object-flag.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-nsa-object-flag" class="sortable">
+      <thead>
+        <tr>
+          <th>Bit</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0-5</td>
+          <td>Reserved</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Aggregator</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Overloaded</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="hop-count-object-flag" id="hop-count-object-flag"></a>Hop-Count Object Flag field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</dd>
+    </dl>
+    <table>
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="0" class="registryempty">No registrations at this time.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="node-type" id="node-type"></a>Node Type Field</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="node-type.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-node-type" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>a mains-powered node</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>a battery-powered node</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>a node powered by an energy scavenger</td>
+          <td>[<a href="http://www.iana.org/go/rfc6551">RFC6551</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

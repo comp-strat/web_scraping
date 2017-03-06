@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Locally-Served DNS Zones</title>
+  </head>
+  <body>
+    <h1>Locally-Served DNS Zones</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2011-06-10</dd>
+      <dt>Last Updated</dt>
+      <dd>2016-05-16</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Once a zone is added to one of these subregistries, it is effectively added permanently; once an address range
+starts being configured as a local zone in systems on the Internet, it will be impossible to reverse those changes.</pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="locally-served-dns-zones.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="locally-served-dns-zones.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="locally-served-dns-zones.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#ipv4">IPv4 Locally-Served DNS Zone Registry</a>
+      </li>
+      <li>
+        <a href="#ipv6">IPv6 Locally-Served DNS Zone Registry</a>
+      </li>
+    </ul>
+    <h2><a name="ipv4" id="ipv4"></a>IPv4 Locally-Served DNS Zone Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ipv4.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ipv4" class="sortable">
+      <thead>
+        <tr>
+          <th>Zone</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">10.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">16.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">17.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">18.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">19.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">20.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">21.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">22.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">23.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">24.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">25.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">26.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">27.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">28.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">29.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">30.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">31.172.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">168.192.IN-ADDR.ARPA</td>
+          <td>RFC1918 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">0.IN-ADDR.ARPA</td>
+          <td>IPv4 "THIS" NETWORK</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">127.IN-ADDR.ARPA</td>
+          <td>IPv4 LOOPBACK NETWORK</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">254.169.IN-ADDR.ARPA</td>
+          <td>IPv4 LINK LOCAL</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2.0.192.IN-ADDR.ARPA</td>
+          <td>IPv4 TEST-NET-1</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">100.51.198.IN-ADDR.ARPA</td>
+          <td>IPv4 TEST-NET-2</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">113.0.203.IN-ADDR.ARPA</td>
+          <td>IPv4 TEST-NET-3</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">255.255.255.255.IN-ADDR.ARPA</td>
+          <td>IPv4 BROADCAST</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">64.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">65.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">66.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">67.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">68.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">69.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">70.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">71.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">72.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">73.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">74.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">75.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">76.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">77.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">78.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">79.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">80.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">81.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">82.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">83.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">84.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">85.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">86.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">87.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">88.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">89.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">90.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">91.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">92.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">93.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">94.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">95.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">96.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">97.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">98.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">99.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">100.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">101.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">102.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">103.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">104.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">105.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">106.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">107.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">108.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">109.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">110.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">111.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">112.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">113.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">114.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">115.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">116.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">117.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">118.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">119.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">120.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">121.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">122.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">123.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">124.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">125.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">126.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">127.100.IN-ADDR.ARPA</td>
+          <td>RFC6598 Zone</td>
+          <td>[<a href="http://www.iana.org/go/rfc7793">RFC7793</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="ipv6" id="ipv6"></a>IPv6 Locally-Served DNS Zone Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="ipv6.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-ipv6" class="sortable">
+      <thead>
+        <tr>
+          <th>Zone</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA</td>
+          <td>IPv6 Unspecified Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.IP6.ARPA</td>
+          <td>IPv6 Loopback Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">D.F.IP6.ARPA</td>
+          <td>IPv6 Locally Assigned Local Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8.E.F.IP6.ARPA</td>
+          <td>IPv6 Link Local Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">9.E.F.IP6.ARPA</td>
+          <td>IPv6 Link Local Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">A.E.F.IP6.ARPA</td>
+          <td>IPv6 Link Local Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">B.E.F.IP6.ARPA</td>
+          <td>IPv6 Link Local Address</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">8.B.D.0.1.0.0.2.IP6.ARPA</td>
+          <td>IPv6 Example Prefix</td>
+          <td>[<a href="http://www.iana.org/go/rfc6303">RFC6303</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

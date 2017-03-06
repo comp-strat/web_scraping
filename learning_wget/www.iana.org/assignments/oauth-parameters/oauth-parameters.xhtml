@@ -1,0 +1,1153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>OAuth Parameters</title>
+  </head>
+  <body>
+    <h1>OAuth Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2012-07-27</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-12-03</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="oauth-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="oauth-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="oauth-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#token-types">OAuth Access Token Types</a>
+      </li>
+      <li>
+        <a href="#endpoint">OAuth Authorization Endpoint Response Types</a>
+      </li>
+      <li>
+        <a href="#extensions-error">OAuth Extensions Error Registry</a>
+      </li>
+      <li>
+        <a href="#parameters">OAuth Parameters</a>
+      </li>
+      <li>
+        <a href="#token-type-hint">OAuth Token Type Hints</a>
+      </li>
+      <li>
+        <a href="#uri">OAuth URI</a>
+      </li>
+      <li>
+        <a href="#client-metadata">OAuth Dynamic Client Registration Metadata</a>
+      </li>
+      <li>
+        <a href="#token-endpoint-auth-method">OAuth Token Endpoint Authentication Methods</a>
+      </li>
+      <li>
+        <a href="#pkce-code-challenge-method">PKCE Code Challenge Methods</a>
+      </li>
+      <li>
+        <a href="#token-introspection-response">OAuth Token Introspection Response</a>
+      </li>
+    </ul>
+    <h2><a name="token-types" id="token-types"></a>OAuth Access Token Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Hannes Tschofenig</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="token-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-token-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Additional Endpoint Response Parameters</th>
+          <th>HTTP Authentication Scheme(s)</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bearer</td>
+          <td></td>
+          <td>Bearer</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6750">RFC6750</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="endpoint" id="endpoint"></a>OAuth Authorization Endpoint Response Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Hannes Tschofenig</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="endpoint.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-endpoint" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>code</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>code id_token</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>code id_token token</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>code token</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>id_token</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>id_token token</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html">http://openid.net/specs/oauth-v2-multiple-response-types-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>token</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="extensions-error" id="extensions-error"></a>OAuth Extensions Error Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Hannes Tschofenig</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="extensions-error.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-extensions-error" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Usage Location</th>
+          <th>Protocol Extension</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>invalid_request</td>
+          <td>resource access error response</td>
+          <td>bearer access token type</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6750">RFC6750</a>]</td>
+        </tr>
+        <tr>
+          <td>invalid_token</td>
+          <td>resource access error response</td>
+          <td>bearer access token type</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6750">RFC6750</a>]</td>
+        </tr>
+        <tr>
+          <td>insufficient_scope</td>
+          <td>resource access error response</td>
+          <td>bearer access token type</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6750">RFC6750</a>]</td>
+        </tr>
+        <tr>
+          <td>unsupported_token_type</td>
+          <td>revocation endpoint error response</td>
+          <td>token revocation endpoint</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc7009">RFC7009</a>]</td>
+        </tr>
+        <tr>
+          <td>interaction_required</td>
+          <td>authorization endpoint</td>
+          <td>OpenID Connect</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>login_required</td>
+          <td>authorization endpoint</td>
+          <td>OpenID Connect</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>session_selection_required</td>
+          <td>authorization endpoint</td>
+          <td>OpenID Connect</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>consent_required</td>
+          <td>authorization endpoint</td>
+          <td>OpenID Connect</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>invalid_request_uri</td>
+          <td>authorization endpoint</td>
+          <td>OpenID Connect</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>invalid_request_object</td>
+          <td>authorization endpoint</td>
+          <td>OpenID Connect</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>request_not_supported</td>
+          <td>authorization endpoint</td>
+          <td>OpenID Connect</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>request_uri_not_supported</td>
+          <td>authorization endpoint</td>
+          <td>OpenID Connect</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>registration_not_supported</td>
+          <td>authorization endpoint</td>
+          <td>OpenID Connect</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="parameters" id="parameters"></a>OAuth Parameters</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Hannes Tschofenig</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="parameters.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-parameters" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Parameter Usage Location</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>client_id</td>
+          <td>authorization request, token request</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>client_secret</td>
+          <td>token request</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>response_type</td>
+          <td>authorization request</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>redirect_uri</td>
+          <td>authorization request, token request</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>scope</td>
+          <td>authorization request, authorization response, token request, token response</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>state</td>
+          <td>authorization request, authorization response</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>code</td>
+          <td>authorization response, token request</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>error</td>
+          <td>authorization response, token response</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>error_description</td>
+          <td>authorization response, token response</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>error_uri</td>
+          <td>authorization response, token response</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>grant_type</td>
+          <td>token request</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>access_token</td>
+          <td>authorization response, token response</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>token_type</td>
+          <td>authorization response, token response</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>expires_in</td>
+          <td>authorization response, token response</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>username</td>
+          <td>token request</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>password</td>
+          <td>token request</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>refresh_token</td>
+          <td>token request, token response</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc6749">RFC6749</a>]</td>
+        </tr>
+        <tr>
+          <td>nonce</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>display</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>prompt</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>max_age</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>ui_locales</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>claims_locales</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>id_token_hint</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>login_hint</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>acr_values</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>claims</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>registration</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>request</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>request_uri</td>
+          <td>authorization request</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>id_token</td>
+          <td>authorization response, access token response</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">http://openid.net/specs/openid-connect-core-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>session_state</td>
+          <td>authorization response, access token response</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-session-1_0.html">http://openid.net/specs/openid-connect-session-1_0.html</a>]</td>
+        </tr>
+        <tr>
+          <td>assertion</td>
+          <td>token request</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7521">RFC7521</a>]</td>
+        </tr>
+        <tr>
+          <td>client_assertion</td>
+          <td>token request</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7521">RFC7521</a>]</td>
+        </tr>
+        <tr>
+          <td>client_assertion_type</td>
+          <td>token request</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7521">RFC7521</a>]</td>
+        </tr>
+        <tr>
+          <td>code_verifier</td>
+          <td>token request</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7636">RFC7636</a>]</td>
+        </tr>
+        <tr>
+          <td>code_challenge</td>
+          <td>authorization request</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7636">RFC7636</a>]</td>
+        </tr>
+        <tr>
+          <td>code_challenge_method</td>
+          <td>authorization request</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7636">RFC7636</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="token-type-hint" id="token-type-hint"></a>OAuth Token Type Hints</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required with mandatory two-week mailing list review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7009">RFC7009</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="token-type-hint.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-token-type-hint" class="sortable">
+      <thead>
+        <tr>
+          <th>Hint Value</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>access_token</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc7009">RFC7009</a>]</td>
+        </tr>
+        <tr>
+          <td>refresh_token</td>
+          <td>IETF</td>
+          <td>[<a href="http://www.iana.org/go/rfc7009">RFC7009</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="uri" id="uri"></a>OAuth URI</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Hannes Tschofenig</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6755">RFC6755</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>Prefix: urn:ietf:params:oauth
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="uri.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-uri" class="sortable">
+      <thead>
+        <tr>
+          <th>URN</th>
+          <th>Common Name</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>urn:ietf:params:oauth:grant-type:jwt-bearer</td>
+          <td>JWT Bearer Token Grant Type Profile for OAuth 2.0</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7523">RFC7523</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:oauth:client-assertion-type:jwt-bearer</td>
+          <td>JWT Bearer Token Profile for OAuth 2.0 Client Authentication</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7523">RFC7523</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:oauth:grant-type:saml2-bearer</td>
+          <td>SAML 2.0 Bearer Assertion Grant Type Profile for OAuth 2.0</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7522">RFC7522</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:oauth:client-assertion-type:saml2-bearer</td>
+          <td>SAML 2.0 Bearer Assertion Profile for OAuth 2.0 Client Authentication</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7522">RFC7522</a>]</td>
+        </tr>
+        <tr>
+          <td>urn:ietf:params:oauth:token-type:jwt</td>
+          <td>JSON Web Token (JWT) Token Type</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7519">RFC7519</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="client-metadata" id="client-metadata"></a>OAuth Dynamic Client Registration Metadata</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Justin Richer</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>See [<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]for mailing list information.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="client-metadata.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-client-metadata" class="sortable">
+      <thead>
+        <tr>
+          <th>Client Metadata Name</th>
+          <th>Client Metadata Description</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>redirect_uris</td>
+          <td>Array of redirection URIs for use in redirect-based flows</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>token_endpoint_auth_method</td>
+          <td>Requested authentication method for the token endpoint</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>grant_types</td>
+          <td>Array of OAuth 2.0 grant types that the client may use</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>response_types</td>
+          <td>Array of the OAuth 2.0 response types that the client may use</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>client_name</td>
+          <td>Human-readable name of the client to be presented to the user</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>client_uri</td>
+          <td>URL of a web page providing information about the client</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>logo_uri</td>
+          <td>URL that references a logo for the client</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>scope</td>
+          <td>Space-separated list of OAuth 2.0 scope values</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>contacts</td>
+          <td>Array of strings representing ways to contact people 
+        responsible for this client, typically email addresses</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>tos_uri</td>
+          <td>URL that points to a human-readable terms of service document 
+        for the client</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>policy_uri</td>
+          <td>URL that points to a human-readable policy document for the 
+        client</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>jwks_uri</td>
+          <td>URL referencing the client's JSON Web Key Set [<a href="http://www.iana.org/go/rfc7517">RFC7517</a>] 
+        document representing the client's public keys</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>jwks</td>
+          <td>Client's JSON Web Key Set [<a href="http://www.iana.org/go/rfc7517">RFC7517</a>] 
+        document representing the client's public keys</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>software_id</td>
+          <td>Identifier for the software that comprises a client</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>software_version</td>
+          <td>Version identifier for the software that comprises a client</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>client_id</td>
+          <td>Client identifier</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>client_secret</td>
+          <td>Client secret</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>client_id_issued_at</td>
+          <td>Time at which the client identifier was issued</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>client_secret_expires_at</td>
+          <td>Time at which the client secret will expire</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>registration_access_token</td>
+          <td>OAuth 2.0 Bearer Token used to access
+      the client configuration endpoint</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7592">RFC7592</a>]</td>
+        </tr>
+        <tr>
+          <td>registration_client_uri</td>
+          <td>Fully qualified URI of the client
+      registration endpoint</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7592">RFC7592</a>]</td>
+        </tr>
+        <tr>
+          <td>application_type</td>
+          <td>Kind of the application -- "native" or "web"</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>sector_identifier_uri</td>
+          <td>URL using the https scheme to be used in calculating 
+        Pseudonymous Identifiers by the OP</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>subject_type</td>
+          <td>subject_type requested for responses to this Client -- 
+        "pairwise" or "public"</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>id_token_signed_response_alg</td>
+          <td>JWS alg algorithm REQUIRED for signing the ID Token issued 
+        to this Client</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>id_token_encrypted_response_alg</td>
+          <td>JWE alg algorithm REQUIRED for encrypting the ID Token 
+        issued to this Client</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>id_token_encrypted_response_enc</td>
+          <td>JWE enc algorithm REQUIRED for encrypting the ID Token 
+        issued to this Client</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>userinfo_signed_response_alg</td>
+          <td>JWS alg algorithm REQUIRED for signing UserInfo Responses</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>userinfo_encrypted_response_alg</td>
+          <td>JWE alg algorithm REQUIRED for encrypting UserInfo Responses</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>userinfo_encrypted_response_enc</td>
+          <td>JWE enc algorithm REQUIRED for encrypting UserInfo Responses</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>request_object_signing_alg</td>
+          <td>JWS alg algorithm that MUST be used for signing Request 
+        Objects sent to the OP</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>request_object_encryption_alg</td>
+          <td>JWE alg algorithm the RP is declaring that it may use for 
+        encrypting Request Objects sent to the OP</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>request_object_encryption_enc</td>
+          <td>JWE enc algorithm the RP is declaring that it may use for 
+        encrypting Request Objects sent to the OP</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>token_endpoint_auth_signing_alg</td>
+          <td>JWS alg algorithm that MUST be used for signing the JWT 
+        used to authenticate the Client at the Token Endpoint for the 
+        private_key_jwt and client_secret_jwt authentication methods</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>default_max_age</td>
+          <td>Default Maximum Authentication Age</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>require_auth_time</td>
+          <td>Boolean value specifying whether the auth_time Claim in the 
+        ID Token is REQUIRED</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>default_acr_values</td>
+          <td>Default requested Authentication Context Class Reference values</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>initiate_login_uri</td>
+          <td>URI using the https scheme that a third party can use to 
+        initiate a login by the RP</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+        <tr>
+          <td>request_uris</td>
+          <td>Array of request_uri values that are pre-registered by the 
+        RP for use at the OP</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-registration-1_0-29.html#IANA">OpenID Connect Dynamic Client Registration 1.0 incorporating errata set 2</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="token-endpoint-auth-method" id="token-endpoint-auth-method"></a>OAuth Token Endpoint Authentication Methods</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Justin Richer</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</dd>
+      <dt>Note</dt>
+      <dd>
+        <pre>See [<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]for mailing list information.
+    </pre>
+      </dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="token-endpoint-auth-method.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-token-endpoint-auth-method" class="sortable">
+      <thead>
+        <tr>
+          <th>Token Endpoint Authentication Method Name</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>none</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>client_secret_post</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>client_secret_basic</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7591">RFC7591</a>]</td>
+        </tr>
+        <tr>
+          <td>client_secret_jwt</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>]</td>
+        </tr>
+        <tr>
+          <td>private_key_jwt</td>
+          <td>[<a href="#OpenID_Foundation_Artifact_Binding_Working_Group">OpenID_Foundation_Artifact_Binding_Working_Group</a>]</td>
+          <td>[<a href="http://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core 1.0</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="pkce-code-challenge-method" id="pkce-code-challenge-method"></a>PKCE Code Challenge Methods</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7636">RFC7636</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="pkce-code-challenge-method.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-pkce-code-challenge-method" class="sortable">
+      <thead>
+        <tr>
+          <th>Code Challenge Method Parameter Name</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>plain</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7636">Section 4.2 of RFC7636</a>]</td>
+        </tr>
+        <tr>
+          <td>S256</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7636">Section 4.2 of RFC7636</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="token-introspection-response" id="token-introspection-response"></a>OAuth Token Introspection Response</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7662">RFC7662</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="token-introspection-response.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-token-introspection-response" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Change Controller</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>active</td>
+          <td>Token active status</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>username</td>
+          <td>User identifier of the resource owner</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>client_id</td>
+          <td>Client identifier of the client</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>scope</td>
+          <td>Authorized scopes of the token</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>token_type</td>
+          <td>Type of the token</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>exp</td>
+          <td>Expiration timestamp of the token</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>iat</td>
+          <td>Issuance timestamp of the token</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>nbf</td>
+          <td>Timestamp which the token is not valid before</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>sub</td>
+          <td>Subject of the token</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>aud</td>
+          <td>Audience of the token</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>iss</td>
+          <td>Issuer of the token</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+        <tr>
+          <td>jti</td>
+          <td>Unique identifier of the token</td>
+          <td>IESG</td>
+          <td>[<a href="http://www.iana.org/go/rfc7662">RFC7662, Section 2.2</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="OpenID_Foundation_Artifact_Binding_Working_Group" id="OpenID_Foundation_Artifact_Binding_Working_Group">[OpenID_Foundation_Artifact_Binding_Working_Group]</a>
+          </td>
+          <td>OpenID Foundation Artifact Binding Working Group</td>
+          <td>
+            <a href="mailto:openid-specs-ab&amp;lists.openid.net">mailto:openid-specs-ab&amp;lists.openid.net</a>
+          </td>
+          <td>2015-12-03</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

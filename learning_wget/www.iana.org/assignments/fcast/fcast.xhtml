@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>FCAST Parameters</title>
+  </head>
+  <body>
+    <h1>FCAST Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2013-05-07</dd>
+      <dt>Last Updated</dt>
+      <dd>2013-07-09</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="fcast.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="fcast.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="fcast.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#format">FCAST Object Metadata Format</a>
+      </li>
+      <li>
+        <a href="#encoding">FCAST Object Metadata Encoding</a>
+      </li>
+      <li>
+        <a href="#types">FCAST Object Metadata Types</a>
+      </li>
+    </ul>
+    <h2><a name="format" id="format"></a>FCAST Object Metadata Format</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="format.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-format" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Format Name</th>
+          <th>Format Reference</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0 (default)</td>
+          <td>HTTP/1.1 metainformation format</td>
+          <td>[<a href="http://www.iana.org/go/rfc2616">RFC2616</a>], Section 7.1</td>
+          <td>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1-15</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="encoding" id="encoding"></a>FCAST Object Metadata Encoding</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="encoding.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-encoding" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Encoding Name</th>
+          <th>Encoding Reference</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0</td>
+          <td>UTF-8 encoded text</td>
+          <td>[<a href="http://www.iana.org/go/rfc3629">RFC3629</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">1</td>
+          <td>GZIP'ed UTF-8 encoded text</td>
+          <td>[<a href="http://www.iana.org/go/rfc1952">RFC1952</a>][<a href="http://www.iana.org/go/rfc3629">RFC3629</a>]</td>
+          <td>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">2-15</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="types" id="types"></a>FCAST Object Metadata Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Unassigned</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-types" class="sortable">
+      <thead>
+        <tr>
+          <th>Meta-Data Type</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">Fcast-Obj-Digest-SHA1</td>
+          <td>a string that contains the "base64" encoding of the SHA-1 message 
+      digest of the object before any content encoding is applied (if any) and without 
+      considering the FCAST Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">Fcast-Obj-Digest-SHA256</td>
+          <td>a string that contains the "base64" encoding of the SHA-256 message 
+      digest of the object before any content encoding is applied (if any) and without 
+      considering the FCAST Header</td>
+          <td>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">Fcast-Obj-Slice-Nb</td>
+          <td>Unsigned 32-bit integer that contains the total number of slices. 
+        A value greater than 1 indicates that this object is the result of a split of the original 
+      object</td>
+          <td>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">Fcast-Obj-Slice-Idx</td>
+          <td>Unsigned 32-bit integer that contains the slice index (in the {0 .. 
+      SliceNb - 1} interval)</td>
+          <td>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</td>
+        </tr>
+        <tr>
+          <td align="center">Fcast-Obj-Slice-Offset</td>
+          <td>Unsigned 64-bit integer that contains the byte offset at which this 
+      slice starts within the original object</td>
+          <td>[<a href="http://www.iana.org/go/rfc6968">RFC6968</a>]</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
