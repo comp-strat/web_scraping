@@ -1,1 +1,0 @@
-(function(){$("a").on("click",function(t){var a;a=this,""!==a.hash&&(t.preventDefault(),$.ajax({type:"GET",url:"/check_custom_redirect",dataType:"json",data:{path:a.pathname},success:function(t){return window.location=null!==t.destination_url?t.destination_url+"/"+a.hash:a.href}}))})}).call(this);
