@@ -1,0 +1,2921 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+<html lang="en">
+<head>
+    <title>
+        Yuba County Office of Education / Homepage</title>
+    <!--
+    <PageMap>
+    <DataObject type="document">
+    <Attribute name="siteid">4</Attribute>
+    </DataObject>
+    </PageMap>
+    -->
+
+    
+    
+    <!-- Begin swuc.GlobalJS -->
+<script type="text/javascript">
+ staticURL = "http://www.yubacoe.org/Static/V2_17_01/";
+ SessionTimeout = "240";
+</script>
+<!-- End swuc.GlobalJS -->
+
+
+    <!-- Stylesheets -->
+
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/webfonts/OpenSans-Light.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/webfonts/OpenSans-Italic.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/webfonts/OpenSans-Regular.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/webfonts/OpenSans-SemiBold.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Content/shepherd/shepherd-theme-default.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01/App_Themes/SW/jquery.jgrowl.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01//site/assets/styles/system.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01//site/assets/styles/apps.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01/App_Themes/SW/jQueryUI.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/webfonts/SchoolwiresMobile.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01//site/assets/styles/dashboard.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/Styles/Grid.css" />
+
+    <!-- Scripts -->
+    
+
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
+    <script src='http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/Scripts/min/jquery-migrate-1.2.1.js' type='text/javascript'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js' type='text/javascript'></script>
+    <script src='http://www.yubacoe.org/Scripts/tether.min.js' type='text/javascript'></script>
+    <script src='http://www.yubacoe.org/Scripts/shepherd/shepherd.min.js' type='text/javascript'></script>
+
+
+    
+
+    <!--  -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            SetCookie('SWScreenWidth', screen.width);
+            SetCookie('SWClientWidth', document.body.clientWidth);
+
+            //If small browser window and responsive template and first load, reload to get the off-canvas menu
+            var isResponsiveTemplatePreInit = 'False';
+            var isResponsive = 'False';
+
+            if (isResponsiveTemplatePreInit == 'False' && isResponsive == 'True' && document.body.clientWidth < 1024) {
+                window.location.reload(true);
+            }
+            
+            $("div.ui-article:last").addClass("last-article");
+            $("div.region .app:last").addClass("last-app");
+
+            // get on screen alerts
+            var isAnyActiveOSA = 'False';
+            var onscreenAlertCookie = GetCookie('Alerts');
+
+            if (onscreenAlertCookie == '' || onscreenAlertCookie == undefined) {
+                onscreenAlertCookie = "";
+            }
+            if (isAnyActiveOSA == 'True') {
+                GetContent(homeURL + "/cms/Tools/OnScreenAlerts/UserControls/OnScreenAlertDialogListWrapper.aspx?OnScreenAlertCookie=" + onscreenAlertCookie + "&SiteID=4", "onscreenalert-holder", 2, "OnScreenAlertCheckListItem();");
+            }
+
+            
+
+        });
+
+    // ADA SKIP NAV
+    $(document).ready(function () {
+        $(document).on('focus', '#skipLink', function () {
+            $("div.sw-skipnav-outerbar").animate({
+                marginTop: "0px"
+            }, 500);
+        });
+
+        $(document).on('blur', '#skipLink', function () {
+            $("div.sw-skipnav-outerbar").animate({
+                marginTop: "-30px"
+            }, 500);
+        });
+    });
+
+    // ADA MYSTART
+    $(document).ready(function () {
+        var top_level_nav = $('.sw-mystart-nav');
+
+        // Set tabIndex to -1 so that top_level_links can't receive focus until menu is open
+        // school dropdown
+        $(top_level_nav).find('ul').find('a').attr('tabIndex', -1);
+
+        // my account dropdown
+        $(top_level_nav).next('ul').find('a').attr('tabIndex', -1);
+
+        $(top_level_nav).focus(function () {
+            // hide open menus
+            hideMyStartBarMenu();
+
+            // show school dropdown
+            if ($(this).find('ul').length > 0) {
+                $(this).find('.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false');
+            }
+
+            // show my account dropdown
+            if ($(this).next('ul').length > 0) {
+                $(this).next('.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false');
+                $('#sw-mystart-account').addClass("clicked-state");
+            }
+        });
+
+        // Bind arrow keys for navigation
+        $(top_level_nav).keydown(function (e) {
+            if (e.keyCode == 37) { //key left
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).prev('.sw-mystart-nav').length == 0) {
+                    $(this).parents('div').find('.sw-mystart-nav').last().focus();
+                } else {
+                    $(this).prev('.sw-mystart-nav').focus();
+                }
+            } else if (e.keyCode == 38) { //key up
+                e.preventDefault();
+
+                // show school dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('div.sw-dropdown').css('display', 'block').find('ul').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+
+                // show my account dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('ul.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+            } else if (e.keyCode == 39) { //key right
+                e.preventDefault();
+
+                // This is the last item
+                if ($(this).next('.sw-mystart-nav').length == 0) {
+                    $(this).parents('div').find('.sw-mystart-nav').first().focus();
+                } else {
+                    $(this).next('.sw-mystart-nav').focus();
+                }
+            } else if (e.keyCode == 40) { //key down
+                e.preventDefault();
+
+                // show school dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('div.sw-dropdown').css('display', 'block').find('ul').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+                }
+
+                // show my account dropdown
+                if ($(this).next('ul').length > 0) {
+                    $(this).next('ul.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+                }
+            } else if (e.keyCode == 13 || e.keyCode == 32) { //enter key
+                // If submenu is hidden, open it
+                e.preventDefault();
+
+                $(this).parent('li').find('ul[aria-hidden=true]').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+            } else if (e.keyCode == 27) { //escape key
+                e.preventDefault();
+                hideMyStartBarMenu();
+            } else {
+                $(this).parent('.sw-mystart-nav').find('ul[aria-hidden=false] a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        return false;
+                    }
+                });
+            }
+        });
+
+        // school dropdown
+        var startbarlinks = $(top_level_nav).find('ul').find('a');
+        bindMyStartBarLinks(startbarlinks);
+
+        // my account dropdown
+        var myaccountlinks = $(top_level_nav).next('ul').find('a');
+        bindMyStartBarLinks(myaccountlinks);
+
+        function bindMyStartBarLinks(links) {
+            $(links).keydown(function (e) {
+                e.stopPropagation();
+
+                if (e.keyCode == 38) { //key up
+                    e.preventDefault();
+
+                    // This is the first item
+                    if ($(this).parent('li').prev('li').length == 0) {
+                        if ($(this).parents('ul').parents('.sw-mystart-nav').length > 0) {
+                            $(this).parents('ul').parents('.sw-mystart-nav').focus();
+                        } else {
+                            $(this).parents('ul').prev('.sw-mystart-nav').focus();
+                        }
+                    } else {
+                        $(this).parent('li').prev('li').find('a').first().focus();
+                    }
+                } else if (e.keyCode == 40) { //key down
+                    e.preventDefault();
+
+                    if ($(this).parent('li').next('li').length == 0) {
+                        if ($(this).parents('ul').parents('.sw-mystart-nav').length > 0) {
+                            $(this).parents('ul').parents('.sw-mystart-nav').focus();
+                        } else {
+                            $(this).parents('ul').prev('.sw-mystart-nav').focus();
+                        }
+                    } else {
+                        $(this).parent('li').next('li').find('a').first().attr('tabIndex', 0);
+                        $(this).parent('li').next('li').find('a').first().focus();
+                    }
+                } else if (e.keyCode == 27 || e.keyCode == 37) { // escape key or key left
+                    e.preventDefault();
+                    hideMyStartBarMenu();
+                } else if (e.keyCode == 32) { //enter key
+                    e.preventDefault();
+                    window.location = $(this).attr('href');
+                } else {
+                    var found = false;
+
+                    $(this).parent('div').nextAll('li').find('a').each(function () {
+                        if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                            $(this).focus();
+                            found = true;
+                            return false;
+                        }
+                    });
+
+                    if (!found) {
+                        $(this).parent('div').prevAll('li').find('a').each(function () {
+                            if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                                $(this).focus();
+                                return false;
+                            }
+                        });
+                    }
+                }
+            });
+        }
+
+        // Hide menu if click or focus occurs outside of navigation
+        $('#sw-mystart-inner').find('.sw-mystart-nav').last().keydown(function (e) {
+            if (e.keyCode == 9) {
+                // If the user tabs out of the navigation hide all menus
+                hideMyStartBarMenu();
+            }
+        });
+
+        /*$(document).click(function() { 
+            hideMyStartBarMenu();
+        });*/
+
+        // try to capture as many custom MyStart bars as possible
+        $('.sw-mystart-button').find('a').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#sw-mystart-inner').click(function (e) {
+            e.stopPropagation();
+        });
+
+        $('ul.sw-dropdown-list').blur(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-mypasskey').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-sitemanager').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-myview').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-signin').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-register').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        // button click events
+        $('div.sw-mystart-button.home a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.pw a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.manage a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('#sw-mystart-account').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).addClass('clicked-state');
+                $('#sw-myaccount-list').show();
+            }
+        });
+
+        $('#sw-mystart-mypasskey a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.signin a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.register a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+    });
+
+    function hideMyStartBarMenu() {
+        $('.sw-dropdown').attr('aria-hidden', 'true').css('display', 'none');
+        $('#sw-mystart-account').removeClass("clicked-state");
+    }
+
+    // ADA CHANNEL NAV
+    $(document).ready(function () {
+        var settings = {
+            menuHoverClass: 'hover'
+        };
+
+        // Add ARIA role to menubar and menu items
+        $('[id="channel-navigation"]').attr('role', 'menubar').find('li').attr('role', 'menuitem');
+
+        var top_level_links = $('[id="channel-navigation"]').find('> li > a');
+
+        // Set tabIndex to -1 so that top_level_links can't receive focus until menu is open
+        $(top_level_links).next('ul').attr({ 'aria-hidden': 'true', 'role': 'menu' }).find('a').attr('tabIndex', -1);
+
+        // Adding aria-haspopup for appropriate items
+        $(top_level_links).each(function () {
+            if ($(this).next('ul').length > 0)
+                $(this).parent('li').attr('aria-haspopup', 'true');
+        });
+
+        $(top_level_links).focus(function () {
+            //hide open menus
+            hideChannelMenu();
+
+            if ($(this).parent('li').find('ul').length > 0) {
+                $(this).parent('li').addClass(settings.menuHoverClass).find('ul').attr('aria-hidden', 'false').css('display', 'block');
+            }
+        });
+
+        // Bind arrow keys for navigation
+        $(top_level_links).keydown(function (e) {
+            if (e.keyCode == 37) { //key left
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).parent('li').prev('li').length == 0) {
+                    $(this).parents('ul').find('> li').last().find('a').first().focus();
+                } else {
+                    $(this).parent('li').prev('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 38) { //key up
+                e.preventDefault();
+
+                if ($(this).parent('li').find('ul').length > 0) {
+                    $(this).parent('li').addClass(settings.menuHoverClass).find('ul').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+            } else if (e.keyCode == 39) { //key right
+                e.preventDefault();
+
+                // This is the last item
+                if ($(this).parent('li').next('li').length == 0) {
+                    $(this).parents('ul').find('> li').first().find('a').first().focus();
+                } else {
+                    $(this).parent('li').next('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 40) { //key down
+                e.preventDefault();
+
+                if ($(this).parent('li').find('ul').length > 0) {
+                    $(this).parent('li')
+                         .addClass(settings.menuHoverClass)
+                         .find('ul').css('display', 'block')
+                         .attr('aria-hidden', 'false')
+                         .find('a').attr('tabIndex', 0)
+                         .first().focus();
+                }
+            } else if (e.keyCode == 13 || e.keyCode == 32) { //enter key
+                // If submenu is hidden, open it
+                e.preventDefault();
+
+                $(this).parent('li').find('ul[aria-hidden=true]').attr('aria-hidden', 'false').addClass(settings.menuHoverClass).find('a').attr('tabIndex', 0).first().focus();
+            } else if (e.keyCode == 27) { //escape key
+                e.preventDefault();
+                hideChannelMenu();
+            } else {
+                $(this).parent('li').find('ul[aria-hidden=false] a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        return false;
+                    }
+                });
+            }
+        });
+
+        var links = $(top_level_links).parent('li').find('ul').find('a');
+
+        $(links).keydown(function (e) {
+            if (e.keyCode == 38) {
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).parent('li').prev('li').length == 0) {
+                    $(this).parents('ul').parents('li').find('a').first().focus();
+                } else {
+                    $(this).parent('li').prev('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 40) {
+                e.preventDefault();
+
+                if ($(this).parent('li').next('li').length == 0) {
+                    $(this).parents('ul').parents('li').find('a').first().focus();
+                } else {
+                    $(this).parent('li').next('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 27 || e.keyCode == 37) {
+                e.preventDefault();
+
+                $(this).parents('ul').first().prev('a').focus().parents('ul').first().find('.' + settings.menuHoverClass).removeClass(settings.menuHoverClass);
+            } else if (e.keyCode == 32) {
+                e.preventDefault();
+                window.location = $(this).attr('href');
+            } else {
+                var found = false;
+
+                $(this).parent('li').nextAll('li').find('a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        found = true;
+                        return false;
+                    }
+                });
+
+                if (!found) {
+                    $(this).parent('li').prevAll('li').find('a').each(function () {
+                        if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                            $(this).focus();
+                            return false;
+                        }
+                    });
+                }
+            }
+        });
+
+        function hideChannelMenu() {
+            $('li.sw-channel-item.' + settings.menuHoverClass).removeClass(settings.menuHoverClass).find('ul').attr('aria-hidden', 'true').css('display', 'none').find('a').attr('tabIndex', -1);
+        }
+
+        // Hide menu if click or focus occurs outside of navigation
+        $('[id="channel-navigation"]').find('a').last().keydown(function (e) {
+            if (e.keyCode == 9) {
+                // If the user tabs out of the navigation hide all menus
+                hideChannelMenu();
+            }
+        });
+
+        $('[id="channel-navigation"]').find('a').first().keydown(function (e) {
+            if (e.keyCode == 9) {
+                // hide open MyStart Bar menus
+                hideMyStartBarMenu();
+            }
+        });
+
+        /*$(document).click(function() {
+            hideChannelMenu();
+        });*/
+
+        $('[id="channel-navigation"]').click(function (e) {
+            e.stopPropagation();
+        });
+    });
+    </script>
+
+    <!-- Page -->
+    
+    <style type="text/css">/* MedaiBegin Standard */                                                                                                                                                                                                                                                                                        
+div.sw-special-mode-bar {
+	position:fixed !important;
+	bottom:0px;
+	left:0px;
+	width:100%;
+}
+.sw-mystart-nav.schoollist, .sw-mystart-nav.home{display: none;}
+
+/* GroupBegin Icon Font */
+@font-face {
+	font-family: 'yuba';
+	src:url('http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8//fonts/yuba.eot');
+}
+@font-face {
+	font-family: 'yuba';
+	src: url(data:application/x-font-woff;charset=utf-8;base64,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) format('woff'),
+		 url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.icon-font {
+	font-family: 'yuba';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	visibility:hidden;
+	font-size:22px;
+	text-decoration:none;
+	color:#CC6600;
+	display:block;
+	width:100%;
+}
+/* GroupEnd */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+/* GroupBegin Mystart */
+#sw-mystart-outer {
+	background:none transparent;
+	height:38px;
+	padding-top:6px;
+	font-family:'Lato', 'Arial', sans-serif;
+}
+.sw-mystart-button, .sw-mystart-dropdown, #sw-mystart-account {
+	padding-top:3px;
+}
+.sw-mystart-button.home {
+	padding-left:10px;
+	float:right;
+}
+#sw-myaccount .sw-myaccount-chevron {
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -11px -473px transparent;
+	width:20px;
+	height:20px;
+	top:0px;
+	right:3px;
+}
+#sw-mystart-account.clicked-state:hover .sw-myaccount-chevron {
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -11px -498px transparent;
+}
+#sw-myaccount {
+	padding-right:20px;
+}
+#sw-myaccount-list {
+	top:23px;
+}
+#sw-myaccount-list li a {
+	color:#0099CC;
+}
+#sw-myaccount-list li:hover {
+	background:#0099CC;
+}
+#sw-myaccount-list li:hover a {
+	color:#FFF;
+}
+.sw-mystart-button, #sw-mystart-account, .sw-mystart-dropdown {
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -220px -494px transparent;
+	border-radius:4px;
+	height:21px;
+}
+.sw-mystart-button a, .sw-mystart-button a:active, .sw-mystart-button a:visited, #sw-myaccount, .sw-mystart-dropdown {
+	color:#FFF;
+	font-size:14px;
+	font-weight:normal;
+}
+.sw-mystart-button:hover, #sw-mystart-account:hover {
+	background:#FFF;
+	border-radius:4px;
+}
+.sw-mystart-button:hover a, #sw-mystart-account:hover #sw-myaccount {
+	color:#0099CC;
+}
+.sw-mystart-dropdown .sw-dropdown {
+	background-color:#FFF;
+	color:#0099CC;
+	font-size:14px;
+}
+.sw-mystart-dropdown .sw-dropdown-arrow {
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -11px -473px transparent;
+	height:20px;
+	border:0px;
+}
+.sw-mystart-dropdown .sw-dropdown-selected{
+	color:#0099CC;
+}
+.sw-mystart-dropdown .sw-dropdown-list li a {
+	color:#0099CC;
+	font-size:14px;
+}
+.sw-mystart-dropdown .sw-dropdown-list li:hover a {
+	color:#FFF;
+}
+.sw-mystart-dropdown .sw-dropdown-list li:hover {
+	background-color:#0099CC;
+}
+/* GroupEnd */ 
+ 
+/* GroupBegin Global */
+body {
+	position:relative;
+	color:#333;
+}
+.column, .column-inner {
+	float: left;
+}
+#gb-top-color {
+	width:100%;
+	height:530px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/GlobalAssets/images///background-images/no-bg.png) repeat 0px 0px #0099CC;
+}
+#gb-top-bar {
+	width:100%;
+	height:4px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background:#000;
+	opacity:.15;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
+	filter: alpha(opacity=15);
+	-khtml-opacity: 0.15;
+	-moz-opacity: 0.15;
+}
+#gb-top-fade {
+	height:365px;
+	width:100%;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) repeat 0px 0px transparent;
+}
+#gb-page {
+	width: 960px;
+	height: auto;
+	margin: 0px auto 0px auto;
+	border-radius:8px 8px 0px 0px;
+	position:relative;
+	padding-bottom:20px;
+}
+#gb-header-outer {
+	width:100%;
+	padding:9px 0px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/gb-page-bg.png) repeat-x 0px 0px transparent;
+	border-radius:8px 8px 0px 0px;
+}
+#gb-header {
+	width: 938px;
+        height: 106px;
+        margin:0px auto;
+        background:#FFF;
+        border:1px solid #DCDCDC;
+        border-radius:8px;
+}
+#gb-logo {
+        float:left;
+        padding:10px 0px 0px 30px;
+}
+#gb-icons {
+	float:right;
+	margin:33px 35px 0px 0px;
+}
+.icn {
+	float:left;
+	display:block;
+	text-align:center;
+	text-decoration:none;
+	color:#333;
+	font-size:14px;
+	margin:0px 0px 0px 20px;
+	width:63px;
+}
+.icn span {
+	display:block;
+	margin-bottom:8px;
+}
+#gb-search {
+	width:220px;
+	height:35px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -13px -408px transparent;
+	margin:5px 0px 11px 0px;
+}
+#sw-mystart-search {
+	float:none;
+	background:transparent;
+	margin:0px;
+	width:220px;
+}
+#sw-search-input {
+	width:164px;
+	color:#333;
+	font-size:13px;
+	padding:8px 2px 0px 14px;
+}
+#sw-search-input:focus {
+	outline:none;
+}
+#sw-search-button {
+	display:block;
+	border:0px;
+	width:34px;
+	height:28px;
+}
+#sw-search-button span {
+	display:none;
+}
+#gb-footer {
+	width: 938px;
+	height:102px;
+	margin: 30px auto 0px auto;
+	border:1px solid #DCDCDC;
+        border-radius:8px;
+        font-size:14px;
+       /* Removed by Marie - Case #00126753 background:url(/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat center -810px #FFF;*/
+	background: #FFF;
+        position:relative;
+}
+#gb-footer.sp {
+	margin-top:10px
+}
+.column-bottom {
+	display:block;
+	position:absolute;
+	border-left:1px solid #DCDCDC;
+	border-right:1px solid #DCDCDC;
+	border-bottom:1px solid #DCDCDC;
+	border-radius:0px 0px 8px 8px;
+	width:218px;
+	background:#FFF;
+	top:-31px;
+	height:10px;
+}
+.column-bottom.left {
+	left:-1px;
+}
+.column-bottom.right {
+	right:-1px;
+}
+.gb.footer p {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+.gb.footer.one {
+	padding:15px 20px;
+	float: left;	
+}
+.gb.footer.one h1 {
+	font-weight:700;
+	font-size:14px;
+}
+.gb.footer.two {
+	padding:15px 20px;
+	float: right;	
+	font-size:12px;
+}
+.gb.footer.two a {
+	color:#333;
+	text-decoration:none;
+}
+.gb.footer.two a:hover {
+	text-decoration:underline;
+}
+#district-link {
+	position:absolute;
+	left:50%;
+	top:3px;
+	width:215px;
+	height:93px;
+	margin-left:-109px;
+	display:block;
+}
+#sw-footer-outer {
+	display:none;
+}
+#gb-footer-background {
+	width:100%;
+	height:200px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) repeat 0px -603px #DFDFDF;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+}
+/* GroupEnd */
+
+/* GroupBegin App Styles */
+.ui-hp div.ui-widget.app {
+	margin-bottom:10px;
+}
+.hp.column.one .hp.column-inner.one div.ui-widget-header, .hp.column.two div.ui-widget-header, .sp.column.one div.ui-widget-header {
+	background: #0099CC; /* Old browsers */
+	background: -moz-linear-gradient(top,  #0099CC 0%, #0076A1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0099CC), color-stop(100%,#0076A1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0099CC 0%,#0076A1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0099CC 0%,#0076A1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0099CC 0%,#0076A1 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #0099CC 0%,#0076A1 100%); /* W3C */
+	border-radius:8px 8px 0px 0px;
+	min-height:28px;
+	padding-top:2px;
+}
+.hp.column.one .hp.column-inner.two div.ui-widget-header {
+	background:none transparent;
+	filter:none;
+}
+div.ui-widget.app div.ui-widget-header h1, div.ui-widget.app.navigation div.ui-widget-header h1 {
+	color:#FFF;
+	font-size:18px;
+	margin:0px;
+	padding:0px 15px;
+	font-weight:700;
+}
+.hp.column-inner.two div.ui-widget.app div.ui-widget-header h1, .sp.column.two div.ui-widget.app div.ui-widget-header h1, #spn-content div.ui-widget.app div.ui-widget-header h1 {
+	color:#CC6600;
+}
+.sp.column.two div.ui-widget.app div.ui-widget-header h1, #spn-content div.ui-widget.app div.ui-widget-header h1 {
+	padding:0px 0px 10px 0px;
+}
+.sp.column.two div.ui-widget.app {
+	padding: 10px;
+}
+div.ui-widget-title h1 {
+	/*STYLE LIKE H1*/
+}
+h1.ui-article-title {
+	/*STYLE LIKE H2*/
+}
+.hp.column div.ui-widget-detail, .sp.column.one div.ui-widget-detail {
+	padding:0px 15px;
+}
+.hp.column-inner.one div.ui-widget-detail, .hp.column.two div.ui-widget-detail {
+	border-left:1px solid #DCDCDC;
+	border-right:1px solid #DCDCDC;
+	background:#FFF;
+}
+.hp.column-inner.one div.ui-widget-footer, .hp.column.two div.ui-widget-footer {
+	border-left:1px solid #DCDCDC;
+	border-right:1px solid #DCDCDC;
+	border-bottom:1px solid #DCDCDC;
+	border-radius:0px 0px 8px 8px;
+	width:auto;
+	background:#FFF;
+}
+.lastApp {
+	position:relative;
+}
+.hp.column-inner.one .lastApp div.ui-widget-footer, .hp.column.two .lastApp div.ui-widget-footer {
+	position:absolute;
+	width:218px;
+	height:1500px;
+	bottom:-1500px;
+	left:0px;
+	padding:0px;
+}
+/* GroupEnd */
+
+/* GroupBegin Mod Events */
+.ui-hp .upcomingevents {
+	display: none; 
+}
+.upcoming-column-container {
+	padding: 5px 0px 5px 0px;
+}
+.upcoming-column.left {
+	float:left;
+	color:#CC6600;
+	width:35px;
+	text-transform:uppercase;
+}
+.upcoming-column.left h1.ui-article-title {
+	font-size:20px;
+}
+.joel-month {
+	display:block;
+	font-size:13px;
+}
+.upcoming-column.right {
+	float:left;
+	width:145px;
+	margin-left:5px;
+}
+.ui-hp .upcomingevents .ui-article-description {
+	margin:0px;
+}
+.ui-hp .upcomingevents .sw-calendar-block-time, .upcomingevents .sw-calendar-block-title {
+	font-size:14px;
+}
+.ui-hp .upcomingevents .sw-calendar-block-title:hover {
+	text-decoration:underline;
+}
+.ui-hp a.view-calendar-link {
+	color:#333;
+	font-weight:bold;
+	text-decoration:none;
+	display:block;
+	padding:15px 0px 0px 40px;
+}
+.ui-hp a.view-calendar-link:hover {
+	text-decoration:underline;
+}
+.ui-hp .upcomingevents div.ui-article {
+	padding:10px 0px;
+}
+/* GroupEnd*/
+
+/* GroupBegin Homepage */
+#hp-content {
+	width: 940px;
+	padding:10px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/gb-page-bg.png) repeat-x 0px 0px transparent;
+	position:relative;
+	overflow:hidden;
+}
+.hp.column.one {
+	width: 710px;
+	padding:0px 10px 0px 0px;
+	position:relative;
+}
+.hp.column-inner.one {
+	width:220px;
+	padding:0px 30px 0px 0px;
+}
+.hp.column-inner.two {
+	width:445px;
+	padding:0px 15px 0px 0px;
+}
+.hp.column.two {
+	width: 220px;
+}
+/* GroupEnd */
+
+/* GroupBegin Photo Area */
+#hp-slideshow-shadow {
+	display:block;
+	position:absolute;
+	width:718px;
+	height:15px;
+	left:0px;
+	top:343px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -41px -370px transparent;
+}
+#hp-slideshow {
+	width: 710px;
+	height: 340px;
+	overflow: hidden;
+	position: relative;
+	border-radius:8px;
+	margin-bottom:19px;
+}
+#hp-slideshow .rotating-images {
+	width: 100%;
+	height: 100%;
+	position: static;
+}
+#hp-slideshow .rotating-images ul.pictures li {
+	width: 100% !important;
+	height: auto !important;
+}
+#hp-slideshow .rotating-images ul.pictures li img {
+	min-height: 0px;
+	width: 100% !important;
+	height: auto !important;
+	border-radius:8px;
+}
+.desc-bg {
+	width:100%;
+	height:41px;
+	background:#CC6600;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	z-index:3;
+	opacity:.8;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	filter: alpha(opacity=80);
+	-khtml-opacity: 0.8;
+	-moz-opacity: 0.8;
+	border-radius:0px 0px 8px 8px;
+}
+.gallery-desc {
+	z-index:4;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	height:41px;
+	color:#FFF;
+	font-size:16px;
+	width:475px;
+	padding:0px 0px 0px 15px;
+}
+.itemize-container-outer {
+	position:absolute;
+	z-index:4;
+	bottom:13px;
+	right:17px;
+}
+.gallery-container li.itemized {
+	background:#FFF;
+	width:12px;
+	height:12px;
+	border-radius:50%;
+	margin:0px 3px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/gb-page-bg.png) repeat-x 0px 0px transparent;
+	cursor:pointer;
+}
+.gallery-container li.itemized.active {
+	background:#FFF;
+}
+.caption {
+	padding-top:9px;
+}
+/* GroupEnd */ 
+
+/* GroupBegin Subpage */
+#sp-content {
+	width: 940px;
+	padding:10px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/gb-page-bg.png) repeat-x 0px 0px transparent;
+}
+#sp-content-bottom {
+	position:relative;
+	min-height:470px;
+}
+#sp-column-one-bg {
+	position:absolute;
+	top:1px;
+	left:0px;
+	background:#FFF;
+	height:100%;
+	width:218px;
+	border-left:1px solid #DCDCDC;
+	border-right:1px solid #DCDCDC;
+	border-bottom:1px solid #DCDCDC;
+	border-radius:8px;
+}
+#sp-column-two-bg {
+	position:absolute;
+	top:0px;
+	right:0px;
+	background:#FFF;
+	height:100%;
+	width: 710px;
+	border: 1px solid #DCDCDC;
+	border-top: 0px;
+	border-radius: 0px 0px 8px 8px;
+}
+.sp.column.one {
+	width: 220px;
+	margin-right:8px;
+	position:relative;
+}
+.sp.column.two.top {
+	width: 100%;
+	border-radius: 8px 8px 0px 0px;
+	border:1px solid #DCDCDC;
+	border-bottom:0px;
+	background:#FFF;
+	padding: 0px;
+	margin: 35px 0px 0px 0px;
+	height: 15px;
+	width: 710px;
+}
+.sp.column.two {
+	width: 670px;
+	padding: 3px 20px 10px 20px;
+}
+#breadcrumbs {
+	height: 34px;
+	padding: 10px 0px 0px;
+}
+ul.ui-breadcrumbs > li > a {
+	color:#333;
+	font-size:13px;
+	text-decoration:none;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat right -383px transparent;
+}
+ul.ui-breadcrumbs > li > a:hover {
+	text-decoration:underline;
+}
+/* GroupEnd */
+
+/* GroupBegin Subpage No Nav */
+#spn-content {
+	width: 940px;
+	padding:10px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/gb-page-bg.png) repeat-x 0px 0px transparent;
+}
+#spn-content-inner {
+	background:#FFF;
+	border-radius: 8px;
+	border:1px solid #DCDCDC;
+	padding:10px 20px;
+	min-height:470px;
+}
+#spn-content-inner .sp.column.two.top {
+	border-radius:0px;
+	border:0px;
+	background:transparent;
+	padding:0px 0px 0px 20px;
+	width:650px;
+}
+/* GroupEnd */ 
+
+/* GroupBegin Navigation Styles */
+div.ui-widget.app.navigation li div.bullet.expandable{
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -24px -446px transparent;
+	cursor:pointer;
+}
+div.ui-widget.app.navigation li div.bullet.collapsible{
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -44px -450px transparent;
+	cursor:pointer;
+}
+div.ui-widget.app.navigation li div.bullet{
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -6px -449px transparent;
+	width:15px;
+}
+div.ui-widget.app.navigation li a {
+	color:#333;
+}
+div.ui-widget.app.navigation li a:hover, div.ui-widget.app.navigation li.active a {
+	font-weight:700;
+}
+/* GroupEnd */
+ 
+/* GroupBegin Channel Bar Styles */
+#gb-channel-list-outer {
+	width: 960px;
+	min-height: 44px;
+	background: #F5AA13; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1YWExMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjYzY2MDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #F5AA13 0%, #CC6600 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F5AA13), color-stop(100%,#CC6600)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #F5AA13 0%,#CC6600 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #F5AA13 0%,#CC6600 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #F5AA13 0%,#CC6600 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #F5AA13 0%,#CC6600 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F5AA13', endColorstr='#CC6600',GradientType=0 ); /* IE6-8 */
+}
+#home-button {
+	float:left;
+	width:50px;
+	height:44px;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat right -400px transparent;
+}
+#home-button a {
+	text-decoration:none;
+	color:#FFF;
+	display:block;
+	width:100%;
+	height:100%;
+	text-align:center;
+}
+#home-button.active a, #home-button a:hover {
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -220px -448px transparent;
+}
+#home-button .icon-font {
+	color:#FFF;
+	font-size:20px;
+	padding-top:10px;
+}
+#sw-channel-list-container {
+	display: block;
+	width: 910px;
+	float:left;
+}
+ul.sw-channel-list {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+ul.sw-channel-list li.sw-channel-item {
+	float: left;
+	height: 44px;
+	list-style: none outside none;
+	margin: 0;
+	position: relative;
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat right -400px transparent;
+}
+li.sw-channel-item > a {
+	color: #FFF;
+	display: block;
+	height: 100%;
+	padding: 0 15px 0 0;
+	text-decoration: none;
+	font-size:16px;
+}
+li.sw-channel-item > a span {
+	display: block;
+	padding: 10px 0 11px 15px;
+}
+ul.sw-channel-list li.sw-channel-item.hover, ul.sw-channel-list li.sw-channel-item.active {
+	background:url(http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/template-sprite.png) no-repeat -220px -448px transparent;
+}
+li.sw-channel-item.hover > a, li.sw-channel-item.active > a {
+	color: #FFF;
+}
+li.sw-channel-item.hover > a span, li.sw-channel-item.active > a span {
+}
+/* GroupEnd */ 
+
+/* GroupBegin Channel Bar Dropdown Styles */
+ul.sw-channel-dropdown {
+	background: none repeat scroll 0 0 #FFF;
+	border: 1px solid #CC6600;
+	display: none;
+	font-size: 12px;
+	font-weight: normal;
+	left: 0;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 44px;
+	width: 180px;
+	z-index: 7001;
+}
+ul.sw-channel-dropdown li {
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	display: block;
+	height: auto;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	white-space: pre-wrap;
+	width: 180px;
+}
+ul.sw-channel-dropdown li a {
+	background: none repeat scroll 0 0 transparent;
+	color: #CC6600;
+	display: block;
+	padding: 7px 10px;
+	text-decoration: none;
+	width: 160px;
+}
+ul.sw-channel-dropdown li a:hover {
+	background:#CC6600;
+	color: #FFF;
+}
+.sw-channel-more-li {
+	background-color: #333333;
+	background-image: url("http://c2.creative.schoolwires.net//GlobalAssets/Images/Backgrounds/sw-channel-more-chevron.png");
+	background-position: right top;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+ul.sw-channel-dropdown .sw-channel-more-li a:hover {
+	background-color: #333333;
+	background-image: url("http://c2.creative.schoolwires.net//GlobalAssets/Images/Backgrounds/sw-channel-more-chevron.png");
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+.sw-channel-more-span {
+	color: #FFFFFF;
+}       
+/* GroupEnd */ 
+ 
+/* GroupBegin EditorStyles */
+body {
+	font-family:'Lato', 'Arial', sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
+h1 {
+	font-size: 20px;
+	line-height: 1.5;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h2 {
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h3 {
+	font-size: 16px;
+	line-height: 1.2;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+}
+h4 {
+	font-size: 14px;
+	line-height: 1.2;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+}
+h5 {
+	font-size: 12px;
+	line-height: 1;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: bold;
+}
+h6 {
+	font-size: 12px;
+	line-height: 1;		
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+	font-style: italic;
+}
+.title {
+	font-weight:bold;
+}
+.subtitle {
+	font-style:italic;
+}     
+/* GroupEnd */
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                /* MediaEnd *//* MediaBegin 768+ */ @media (max-width: 1023px) {                                                                                                                                                                                                                                                                                                            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                } /* MediaEnd *//* MediaBegin 640+ */ @media (max-width: 767px) {                                                                                                                                                                                                                                                                                                            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                } /* MediaEnd *//* MediaBegin 480+ */ @media (max-width: 639px) {                                                                                                                                                                                                                                                                                                             
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                } /* MediaEnd *//* MediaBegin 320+ */ @media (max-width: 479px) {                                                                                                                                                                                                                                                                                                            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                } /* MediaEnd */</style>
+    <link rel="shortcut icon" href="http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Domain/4/favicon.ico"><link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/8/scripts/joel.modEvents.min.js"></script>
+<script type="text/javascript" src="http://extend.schoolwires.com/creative/scripts/creative/rotate/creative.GalleryRotate-V3.jQuery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	photoGallery();
+	useChannelForSection();
+	dynamicContent();
+	searchText();		
+});
+$(window).load(function(){
+	$(".icon-font").css("visibility", "visible");
+});
+		
+function photoGallery(){
+	//DOC #sw-content-container10.region.ui-hp -- IF .gallery-container NOT PRESENT THEN ADD .creativeGalleryRotate
+	if(!$("#sw-content-container10.region.ui-hp .gallery-container").length){
+		// PHOTO GALLERY CONFIGURATION
+		$("#sw-content-container10.ui-hp div.ui-widget.app.gallery").creativeGalleryRotate({
+			"imageHeight"		: 100,
+			"imageControls"		: "off",
+			"animateType"		: "fade", // CHOICES - "slide"
+			"animateSpeed"		: 3,
+			"pauseHover"		: ['all'], // CHOICES - ['title'], ['overlay'], ['caption'], ['all']
+			"autoRotate"		: "on",
+			"useTitles"		: "off",
+			"useCaptions"		: "on",
+			"useOverlay"		: "off",
+			"randomOrder"		: "on",
+			"linkedElement"		: ['picture'], // CHOICES - ['picture'], ['title'], ['overlay']
+			"itemizedBullets"	: "on",
+			"thumbnails"		: "off",
+			"thumbnailWidth"	: 50,
+			"thumbnailHeight"	: 32,
+			"thumbnailControls"	: "off",
+			"thumbnailLimit"	: 3,
+			"addClass"		: "unclassed",
+			"moreLinkText"		: "off" 
+		});
+	}
+}
+function useChannelForSection(){
+	//DOC div.sp.column.one, .ui-widget-header h1 -- IF .ui-widget-header h1 DOES NOT EXIST ADD ChannelName
+	if(!$("div.sp.column.one .ui-widget-header h1").length) {
+		$("div.sp.column.one .ui-widget-header").append("<h1></h1>");
+	}
+}
+function dynamicContent(){
+	//DOC .ui-breadcrumb-first -- CHANGE THE FIRST BREADCRUMB TEXT TO HOME
+	$("li.ui-breadcrumb-first > a > span").text("Home");
+	
+	//DOC #swsignin-txt-username -- AUTO-FOCUS USERNAME SIGNIN FORM FIELD #swsignin-txt-username
+	$("#swsignin-txt-username").focus();
+	
+	//DOC div.ui-spn > div > p > span -- IF ON SIGNED OUT PAGE ADD STYLING
+	if($("div.ui-spn > div > p > span").text() == "You have been signed out."){
+		$("div.ui-spn > div").css({"text-align" : "center", "padding" : "50px 0px 50px 0px"});
+	}
+	
+	// ********** MYSTART ********** \\
+	//DOC #sw-mystart-search -- MOVE SEARCH INTO BODY
+	$("#sw-mystart-search").addClass("ui-clear").appendTo("#gb-search");
+	
+	
+	//////// Added by Marie - Case #0010505402
+	if ("yubacoe" == "SELPA"){
+		$(".sw-mystart-dropdown.schoollist, .sw-mystart-button.home").css("display","none");
+	}
+	
+	//DOC .sw-mystart-button.home -- REPLACE BUTTON TEXT
+	$(".sw-mystart-button.home span").html("YCOE Home");	
+	
+	//DOC .sw-mystart-dropdown.schoollist .selector, .sw-dropdown-selected -- REPLACE TEXT
+	$(".sw-mystart-dropdown.schoollist .selector, .sw-mystart-dropdown.schoollist .sw-dropdown-selected").text("Our Schools...");
+	
+	addFramesetTranslate();	
+	
+	// ********** EVENTS ********** \\
+	//DOC .ui-hp .upcomingevents -- INITIALIZE modEvents()
+	$(".ui-hp .upcomingevents").modEvents({
+		columns:"yes"
+	});
+	
+	// ********** SAME HEIGHT APPS FOR HOMEPAGE ********** \\
+	//DOC .app -- ADD CLASS TO LAST APP IN COLUMNS 1 AND 2
+	$(".hp.column-inner.one .app:last, .hp.column.two .app:last").addClass("lastApp");
+}
+function searchText() {
+	//DOC #sw-mystart-search, #sw-search-input -- SETS THE VALUE OF #sw-search-input
+        //SEARCH TEXT 
+        $("div#sw-mystart-search input#sw-search-input").removeAttr("placeholder");
+	$("div#sw-mystart-search input#sw-search-input").attr("value", "Search...");
+	$("div#sw-mystart-search input#sw-search-input").focus(function() {
+		if($(this).val() == "Search...") {
+			$(this).val("");
+		}
+	});
+	//DOC #sw-mystart-search, #sw-search-input -- RESET THE VALUE OF #sw-search-input
+	$("div#sw-mystart-search input#sw-search-input").blur(function() {
+		if($(this).val() == "") {
+			$(this).val("Search...");
+		}
+	});
+}
+function addFramesetTranslate(){
+	var pageURL = window.location.href;
+	var translateDropdown = '<div class="sw-mystart-dropdown translate">' +
+						'<div class="selector">Translate This page...</div>' +
+						'<div class="sw-dropdown" style="display: none;">' +
+							'<div class="sw-dropdown-selected">Translate This page...</div>' +
+							'<ul class="sw-dropdown-list">' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|es&hl=en&anno=0&ie=UTF8">English to Spanish</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ar&hl=en&anno=0&ie=UTF8">English to Arabic</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|zh-CN&hl=en&anno=0&ie=UTF8">English to Chinese (Simplified)</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|zh-TW&hl=en&anno=0&ie=UTF8">English to Chinese (Traditional)</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|fr&hl=en&anno=0&ie=UTF8">English to French</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|de&hl=en&anno=0&ie=UTF8">English to German</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|it&hl=en&anno=0&ie=UTF8">English to Italian</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ja&hl=en&anno=0&ie=UTF8">English to Japanese</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ko&hl=en&anno=0&ie=UTF8">English to Korean</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|pt&hl=en&anno=0&ie=UTF8">English to Portuguese</a>' +
+								'</li>' +
+								'<li>' +
+									'<a href="http://translate.google.com/translate?u=' + pageURL + '&langpair=en|ru&hl=en&anno=0&ie=UTF8">English to Russian</a>' +
+								'</li>' +
+							'</ul>' +
+						'</div>' +
+						'<div class="sw-dropdown-arrow"></div>' +
+					'</div>';
+	var pageHost = window.location.host;
+	if(pageHost != "translate.googleusercontent.com")
+	{				
+		$("#sw-mystart-left").append(translateDropdown);
+		$(".sw-mystart-dropdown.translate").click(function()
+		{
+			$(".sw-dropdown",this).show();
+		});
+		$(".sw-mystart-dropdown.translate").hover(function()
+		{
+		},
+		function()
+		{
+			$(".sw-dropdown",this).hide();
+		});
+	}
+		
+}
+</script>
+
+<!--[if IE 7]>
+<style type="text/css">
+	div.ui-widget.app.headlines ul.ui-articles div.ui-article {
+		display: inline-block;
+	}
+	div.ui-widget.app.headlines ul.ui-articles div.ui-article {
+		display: block;
+		padding: 0px;
+	}
+	div.ui-widget.app.headlines ul.ui-articles li {
+		vertical-align: top;
+		margin: 5px 0px 5px 0px;
+	}
+	.ui-datepicker td {
+		padding: 4px 0px;
+	}
+</style>
+<![endif]-->
+
+<!--[if lte IE 8]>
+<style type="text/css">
+	#gb-header, #gb-footer, .hp.column-inner.one div.ui-widget-footer, .hp.column.two div.ui-widget-footer, .gallery-container li.itemized, .sw-mystart-button, #sw-mystart-account, .sw-mystart-dropdown, #hp-slideshow .rotating-images ul.pictures li img, #hp-slideshow, .sp.column.two.top, #spn-content-inner {
+		position:relative;
+		behavior:url(/cms/lib07/CA01902906/Centricity/Template/8/scripts/PIE.htc);
+	}
+	.column-bottom, #sp-column-one-bg, #sp-column-two-bg, .desc-bg {
+		behavior:url(/cms/lib07/CA01902906/Centricity/Template/8/scripts/PIE.htc);
+	}
+	.hp.column.one .hp.column-inner.one div.ui-widget-header, .hp.column.two div.ui-widget-header, .sp.column.one div.ui-widget-header {
+		position:relative;
+		behavior:url(/cms/lib07/CA01902906/Centricity/Template/8/scripts/PIE.htc);
+		-pie-background: linear-gradient(top, #0099CC, #0076A1);
+	}
+</style>
+<![endif]-->
+<!--[if IE 9]>
+<style type="text/css">
+	.hp.column.one .hp.column-inner.one div.ui-widget-header, .hp.column.two div.ui-widget-header, .sp.column.one div.ui-widget-header {
+		position:relative;
+		behavior:url(/cms/lib07/CA01902906/Centricity/Template/8/scripts/PIE.htc);
+		-pie-background: linear-gradient(top, #0099CC, #0076A1);
+	}
+	.lastApp div.ui-widget-footer {
+		bottom:-2005px;
+	}
+</style>
+<![endif]-->
+<style type="text/css" media="print">
+	.noprint, div#sw-mystart-outer, {
+		display: none;
+	}
+	div#sp-content, div#spn-content {
+		background: none;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+	div.sp.column.two {
+		background: none;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+		min-height: 0px;
+		border: 0px;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+</style>
+
+    <!-- App Preview -->
+    
+
+
+    <style type="text/css">
+        /* HOMEPAGE EDIT THUMBNAIL STYLES */
+
+        div.region {
+            ;
+        }
+
+            div.region span.homepage-thumb-region-number {
+                font: bold 100px verdana;
+                color: #fff;
+            }
+
+        div.homepage-thumb-region {
+            background: #264867; /*dark blue*/
+            border: 5px solid #fff;
+            text-align: center;
+            padding: 40px 0 40px 0;
+            display: block;
+        }
+
+            div.homepage-thumb-region.region-1 {
+                background: #264867; /*dark blue*/
+            }
+
+            div.homepage-thumb-region.region-2 {
+                background: #5C1700; /*dark red*/
+            }
+
+            div.homepage-thumb-region.region-3 {
+                background: #335905; /*dark green*/
+            }
+
+            div.homepage-thumb-region.region-4 {
+                background: #B45014; /*dark orange*/
+            }
+
+            div.homepage-thumb-region.region-5 {
+                background: #51445F; /*dark purple*/
+            }
+
+            div.homepage-thumb-region.region-6 {
+                background: #3B70A0; /*lighter blue*/
+            }
+
+            div.homepage-thumb-region.region-7 {
+                background: #862200; /*lighter red*/
+            }
+
+            div.homepage-thumb-region.region-8 {
+                background: #417206; /*lighter green*/
+            }
+
+            div.homepage-thumb-region.region-9 {
+                background: #D36929; /*lighter orange*/
+            }
+
+            div.homepage-thumb-region.region-10 {
+                background: #6E5C80; /*lighter purple*/
+            }
+
+        /* END HOMEPAGE EDIT THUMBNAIL STYLES */
+    </style>
+
+    <style type="text/css" media="print">
+        .noprint {
+            display: none !important;
+        }
+    </style>
+
+    
+
+<!-- Begin Schoolwires Traffic Code --> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5173826-6']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+
+  _gaq.push(['_setCustomVar', 4, 'AccountNo', 'CA01902906', 1]);
+    _gaq.push(['_setCustomVar', 5, 'LoggedIn', 'False', 3]);
+    // Added Custom Variable to allow us to filter based on hosting type, so we can see stats for each environment. Pulls from web config.
+  _gaq.push(['_setCustomVar',
+    1,                // This custom var is set to slot #1.  Required parameter.
+    'Hosting Type',    // The name of the custom variable.  Required parameter.
+    'SAASC',        // The value of the custom variable.  Required parameter.
+                      //  (possible values might be Free, Bronze, Gold, and Platinum)
+    1                 // Sets the scope to visitor-level.  Optional parameter.
+  ]);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- End Schoolwires Traffic Code --> 
+
+    
+</head>
+<body>
+
+    <input type="hidden" id="hidFullPath" value="http://www.yubacoe.org/" />
+    <input type="hidden" id="hidActiveChannelNavType" value="-1" />
+    <input type="hidden" id="hidActiveChannel" value ="0" />
+    <input type="hidden" id="hidActiveSection" value="0" />
+
+    <!-- OnScreen Alert Dialog Start -->
+    <div id="onscreenalert-holder"></div>
+    <!-- OnScreen Alert Dialog End -->
+
+    <!-- ADA Skip Nav -->
+    <div class="sw-skipnav-outerbar">
+        <a href="index.html#sw-maincontent" id="skipLink" class="sw-skipnav" tabindex="0">Skip to Main Content</a>
+    </div>
+
+    <!-- DashBoard SideBar Start -->
+    
+    <!-- DashBoard SideBar End -->
+
+    <!-- off-canvas menu enabled-->
+    
+
+    
+
+<style type="text/css">
+	/* SPECIAL MODE BAR */
+	div.sw-special-mode-bar {
+		background: #FBC243 url('http://www.yubacoe.org/Static/V2_17_01//GlobalAssets/Images/special-mode-bar-background.png') no-repeat;
+		height: 30px;
+		text-align: left;
+		font-size: 12px;
+		position: relative;
+		z-index: 10000;
+	}
+	div.sw-special-mode-bar > div {
+		padding: 8px 0 0 55px;
+		font-weight: bold;
+	}
+	div.sw-special-mode-bar > div > a {
+		margin-left: 20px;
+		background: #A0803D;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		color: #fff;
+		padding: 4px 6px 4px 6px;
+		font-size: 11px;
+	}
+	
+	body.blue div.sw-special-mode-bar, body.green div.sw-special-mode-bar, body.red div.sw-special-mode-bar {
+	    display: none;
+	}
+
+	/* END SPECIAL MODE BAR */
+</style>
+
+<script type="text/javascript">
+	
+	function SWEndPreviewMode() { 
+		var data = "{}";
+		var success = "window.location='';";
+		var failure = "CallControllerFailure(result[0].errormessage);";
+		CallController("http://www.yubacoe.org/site/SiteController.aspx/EndPreviewMode", data, success, failure);
+	}
+	
+	function SWEndEmulationMode() {
+		SetUnescapedCookie('UserID', GetCookie('SourceEmulationUserID'));
+		DeleteCookie('SourceEmulationUserID');
+		window.location = 'http://www.yubacoe.org/ums/Users/Users.aspx';
+	}
+
+	function SWEndPreviewConfigMode() {
+	    var data = "{}";
+	    var success = "window.location='';";
+	    var failure = "CallControllerFailure(result[0].errormessage);";
+	    CallController("http://www.yubacoe.org/site/SiteController.aspx/EndPreviewConfigMode", data, success, failure);
+	}
+</script>
+            
+
+    <!-- BEGIN - MYSTART BAR -->
+<div id='sw-mystart-outer' class='noprint'>
+<div id='sw-mystart-inner'>
+<div id='sw-mystart-left'>
+<div class='sw-mystart-nav sw-mystart-button home'><a tabindex="0" href="http://www.yubacoe.org/Domain/4" alt="District Home" title="Return to the homepage on the district site."><span>District Home<div id='sw-home-icon'></div>
+</span></a></div>
+<div class='sw-mystart-nav sw-mystart-dropdown schoollist' tabindex='0'>
+<div class='selector'>Select a School...</div>
+<div class='sw-dropdown'>
+<div class='sw-dropdown-selected'>Select a School</div>
+<ul class='sw-dropdown-list'>
+<li><a href="http://www.yubacoe.org/Domain/10">SELPA</a></li>
+<li><a href="http://www.yubacoe.org/Domain/11">Yuba County Career Preparatory Charter Academy</a></li>
+<li><a href="http://www.yubacoe.org/Domain/12">Yuba County 1 - Stop</a></li>
+</ul>
+</div>
+<div class='sw-dropdown-arrow'></div>
+</div>
+</div>
+<div id='sw-mystart-right'>
+<div id='ui-btn-signin' class='sw-mystart-button signin'><a href="http://www.yubacoe.org/site/Default.aspx?PageType=7&SiteID=4&IgnoreRedirect=true"><span>Sign In</span></a></div>
+<div id='sw-mystart-search' class='sw-mystart-nav'>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#sw-search-input').keyup(function(e) {        if (e.keyCode == 13) {
+            SWGoToSearchResultsPageswsearchinput();
+        }
+    });
+    $('#sw-search-input').val($('#swsearch-hid-word').val())});
+function SWGoToSearchResultsPageswsearchinput() {
+window.location.href="http://www.yubacoe.org/site/Default.aspx?PageType=6&SiteID=4&SearchString=" + $('#sw-search-input').val();
+}
+</script>
+<input id="sw-search-input" type="text" title="Search Term" aria-label="Search Term" placeholder="Search this Site..." />
+<a tabindex="0" id="sw-search-button" title="Search" aria-label="Search" onclick="SWGoToSearchResultsPageswsearchinput();"><span><img src="http://www.yubacoe.org/Static/V2_17_01//globalassets/images/sw-mystart-search.png" alt="Search" /></span></a>
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+<!-- END - MYSTART BAR -->
+<div id="gb-top-color">
+	<div id="gb-top-fade"></div>
+</div>
+<div id="gb-top-bar"></div>
+<div id="gb-footer-background"></div>
+<div id="gb-page">
+	<div id="gb-header-outer">
+		<div id="gb-header" class="ui-clear">
+			<div id="gb-logo">
+				<a href="http://www.yubacoe.org/yubacoe" title="Yuba County Office of Education">
+					<img src='http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Template/GlobalAssets/images///logos/YCOE&#32;Web&#32;Site_r1_c4a.png' alt="Yuba County Office of Education" />
+				</a>		
+			</div>
+			<div id="gb-icons" class="ui-clear">
+				<a class="icn calendar" href="http://www.yubacoe.org/Page/2">
+					<span class="icon-font">1</span>
+					<span class="icon-text">calendar</span>
+				</a>
+				<a class="icn email" href="https://portal.office.com" target="_self">
+					<span class="icon-font">2</span>
+					<span class="icon-text">email</span>
+				</a>
+				<a class="icn directory" href="http://www.yubacoe.org/Page/365" target="_self">
+					<span class="icon-font">3</span>
+					<span class="icon-text">directory</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div id="gb-channel-list-outer" class="ui-clear">
+		<div id="home-button" class="active">
+			<a href="http://www.yubacoe.org/yubacoe">
+				<span class="icon-font">4</span>
+			</a>
+		</div>
+		<div id="sw-channel-list-container">
+<ul id="channel-navigation" class="sw-channel-list">
+<li id="navc-156" class="sw-channel-item">
+<a href="http://www.yubacoe.org/domain/157">
+<span>About YCOE</span></a>
+<ul class="sw-channel-dropdown">
+<li id="navs-157"><a href="http://www.yubacoe.org/domain/157"><span>About YCOE</span></a></li>
+<li id="navs-93"><a href="http://www.yubacoe.org/domain/93"><span>Contact Us</span></a></li>
+</ul>
+</li><li id="navc-163" class="sw-channel-item">
+<a href="http://www.yubacoe.org/domain/162">
+<span>Superintendent</span></a>
+<ul class="sw-channel-dropdown">
+<li id="navs-162"><a href="http://www.yubacoe.org/domain/162"><span>Office of the Superintendent</span></a></li>
+<li id="navs-161"><a href="http://www.yubacoe.org/domain/161"><span>Board of Education</span></a></li>
+</ul>
+</li><li id="navc-22" class="sw-channel-item">
+<a href="http://www.yubacoe.org/domain/22">
+<span>Departments</span></a>
+<ul class="sw-channel-dropdown">
+<li id="navs-61"><a href="http://www.yubacoe.org/domain/61"><span>Alternative Education</span></a></li>
+<li id="navs-36"><a href="http://www.yubacoe.org/domain/36"><span>Fiscal Services</span></a></li>
+<li id="navs-62"><a href="http://www.yubacoe.org/domain/62"><span>Special Education</span></a></li>
+<li id="navs-43"><a href="http://www.yubacoe.org/site/Default.aspx?PageID=100"><span>Technology Services</span></a></li>
+</ul>
+</li><li id="navc-153" class="sw-channel-item">
+<a href="http://www.yubacoe.org/domain/37">
+<span>Human Resources</span></a>
+<ul class="sw-channel-dropdown">
+<li id="navs-37"><a href="http://www.yubacoe.org/domain/37"><span>Human Resources</span></a></li>
+<li id="navs-87"><a href="http://www.yubacoe.org/domain/87"><span>For Administrators</span></a></li>
+</ul>
+</li><li id="navc-154" class="sw-channel-item">
+<a href="http://www.yubacoe.org/domain/86">
+<span>Parents & Students</span></a>
+<ul class="sw-channel-dropdown">
+<li id="navs-86"><a href="http://www.yubacoe.org/domain/86"><span>For Families</span></a></li>
+<li id="navs-82"><a href="http://www.yubacoe.org/domain/82"><span>For Teachers</span></a></li>
+<li id="navs-95"><a href="http://www.yubacoe.org/domain/95"><span>Common Core Standard</span></a></li>
+<li id="navs-96"><a href="http://www.yubacoe.org/domain/96"><span>Smarter Balanced Assessment</span></a></li>
+<li id="navs-138"><a href="http://www.yubacoe.org/domain/138"><span>SARC</span></a></li>
+<li id="navs-164"><a href="http://www.yubacoe.org/domain/164"><span>LCAP</span></a></li>
+</ul>
+</li><li id="navc-102" class="sw-channel-item">
+<a href="http://www.yubacoe.org/domain/103">
+<span>Employee Central</span></a>
+<ul class="sw-channel-dropdown">
+<li id="navs-103"><a href="http://www.yubacoe.org/domain/103"><span>Employee Central</span></a></li>
+<li id="navs-113"><a href="http://www.yubacoe.org/domain/113"><span>Employee Intranet</span></a></li>
+</ul>
+</li></ul><div class='clear'></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        channelHoverIE();
+        channelTouch();
+        closeMenuByPressingKey();
+    });
+
+    function channelTouch() {
+        // this will change the dropdown behavior when it is touched vs clicked.
+        // channels will be clickable on second click. first click simply opens the menu.
+        $('#channel-navigation > .sw-channel-item > a').on({
+            'touchstart': function (e) {
+                
+                // see if has menu
+                if ($(this).siblings('ul.sw-channel-dropdown li').length > 0) {
+                    var button = $(this);
+
+                    // add href as property if not already set
+                    // then remove href attribute
+                    if (!button.prop('linkHref')) {
+                        button.prop('linkHref', button.attr('href'));
+                        button.removeAttr('href');
+                    }
+
+                    // check to see if menu is already open
+                    if ($(this).siblings('ul.sw-channel-dropdown').is(':visible')) {
+                        // if open go to link
+                        window.location.href = button.prop('linkHref');
+                    } 
+
+                } 
+            }
+        });
+    }
+
+
+    
+    function channelHoverIE(){
+		// set z-index for IE7
+		var parentZindex = $('#channel-navigation').parents('div:first').css('z-index');
+		var zindex = (parentZindex > 0 ? parentZindex : 8000);
+		$(".sw-channel-item").each(function(ind) {
+			$(this).css('z-index', zindex - ind);
+			zindex --;
+		});
+	    $(".sw-channel-item").hover(function(){
+	        var subList = $(this).children('ul');
+	        if ($.trim(subList.html()) !== "") {
+	            subList.show();
+	            subList.attr("aria-hidden", "false");
+		    }
+		    $(this).addClass("hover");
+	    }, function() {
+	        $(".sw-channel-dropdown").hide();
+	        $(this).removeClass("hover");
+	        var subList = $(this).children('ul');
+	        if ($.trim(subList.html()) !== "") {
+	            subList.attr("aria-hidden", "true");
+	        }
+	    });
+    }
+
+    function closeMenuByPressingKey() {
+        $(".sw-channel-item").each(function(ind) {
+            $(this).keyup(function (event) {
+                if (event.keyCode == 27) { // ESC
+                    $(".sw-channel-dropdown").hide();
+                    $(this).removeClass("hover");
+                    var subList = $(this).children('ul');
+                    if ($.trim(subList.html()) !== "") {
+                        subList.attr("aria-hidden", "true");
+                    }
+                    $(this).next().find('a:first').focus();
+                }
+            });
+        });
+
+        $(".sw-channel-dropdown li").each(function(ind) {
+            $(this).keyup(function (event) {
+                if (event.keyCode == 9) { // TAB
+                    $(".sw-channel-dropdown").hide();
+                    var parentMenuItem = $(this).parent().closest('li');
+                    parentMenuItem.removeClass("hover");
+                    var subList = parentMenuItem.children('ul');
+                    if ($.trim(subList.html()) !== "") {
+                        subList.attr("aria-hidden", "true");
+                    }
+                    parentMenuItem.next().find('a:first').focus();
+                }
+            });
+        });
+    }
+
+</script>
+
+
+	</div>
+	<div id="hp-content" class="ui-clear">
+		<div class="hp column one ui-clear">
+			<span id="hp-slideshow-shadow"></span>
+			<div id="hp-slideshow">
+				<a id="sw-maincontent" name="sw-maincontent" tabindex="0"></a><div id="sw-content-container10" class="region ui-hp"><div id='pmi-164'>
+<div id="module-content-165" >
+<div class="ui-widget app gallery json">
+<script type="text/javascript">
+var photoGallery164= {"Album": {"title":"Rotating Photos 595 x 340","description":"","transitiondelay":"7","fadestyle":"NO","gallerywidth":"595","backgroundaudio":"/cms/lib07/CA01902906/Centricity/ModuleInstance/165/","loopaudio":"False","lgpath":"/cms/lib07/CA01902906/Centricity/ModuleInstance/165/large/","tnpath":"/cms/lib07/CA01902906/Centricity/ModuleInstance/165/thumbs/","Images": [{"photoname":"bigstock-Children-using-digital-tablet--47235751","src":"bigstock-Children-using-digital-tablet--47235751.jpg?rnd=0.748926594270825","caption":"We could have a job for you!  Substitute Teachers needed!  Click here for more information...","pause":"","link":"https://sites.google.com/site/tricountysubstitute/","target":"_blank"},{"photoname":"Children1","src":"iStock_000041282518Small.jpg?rnd=0.630163305732498","caption":"RISE (Resources, Information, Service & Education","pause":"","link":"","target":"_self"},{"photoname":"Children2","src":"iStock_000010749402Small.jpg?rnd=0.972153759548512","caption":"Respect for all...","pause":"","link":"","target":"_self"},{"photoname":"Children3","src":"iStock_000023460418kids2.jpg?rnd=0.671494200672719","caption":"Accountability to self and others...","pause":"","link":"","target":"_self"},{"photoname":"Children4","src":"iStock_000034009794Small.jpg?rnd=0.875130771601168","caption":"Safe and caring environments...","pause":"","link":"","target":"_self"},{"photoname":"Dr. Reveles with student and officer","src":"Dr. Reveles with student and officer.jpg?rnd=0.106680287563559","caption":"","pause":"","link":"","target":"_self"},{"photoname":"Leslie and Rocco","src":"Leslie and Rocco.jpg?rnd=0.119646615870132","caption":"","pause":"","link":"","target":"_self"}]}}
+</script>
+</div>
+</div>
+</div>
+</div>
+			</div>
+			<div class="hp column-inner one">
+				<div id="sw-content-container1" class="region ui-hp"><div id='pmi-464'>
+<div id="module-content-455" >
+<div class="ui-widget app navigation  siteshortcuts">
+	<div class="ui-widget-header"><h1>Schools & Districts</h1></div>
+	<div class="ui-widget-detail">
+		<ul class="site-shortcuts">
+<li id="siteshortcut-17" class=""><a href="http://www.yubacoe.org/Page/326" target="_parent" >Find a School</a>
+</li>
+<li id="siteshortcut-18" class=""><a href="http://www.yubacoe.org/Page/279" target="_parent" >District Locator</a>
+</li>
+<li id="siteshortcut-19" class=""><a href="http://www.yubacoe.org/Page/281" target="_parent" >District Calendars</a>
+</li></ul>
+<div class="app-level-social-follow"></div>
+	</div>
+	<div class="ui-widget-footer">
+	</div>
+</div></div>
+</div>
+<div id='pmi-583'>
+<div id="module-content-561" >
+<div class="ui-widget app navigation  siteshortcuts">
+	<div class="ui-widget-header"><h1>COE Links</h1></div>
+	<div class="ui-widget-detail">
+		<ul class="site-shortcuts">
+<li id="siteshortcut-106" class=""><a href="http://www.yubacoe.org/Page/530" target="_parent" >*New - Office Online 365 Training</a>
+</li>
+<li id="siteshortcut-105" class=""><a href="http://www.yubacoe.org/Page/529" target="_parent" >*New - Office 2016 Training</a>
+</li>
+<li id="siteshortcut-93" class=""><a href="http://www.yubacoe.org/Page/473" target="_parent" >School Accountability Report Cards (SARC)</a>
+</li>
+<li id="siteshortcut-104" class=""><a href="http://www.yubacoe.org/Page/499" target="_parent" >Tech From the Trenches-Blog</a>
+</li>
+<li id="siteshortcut-43" class=""><a href="https://md.schooldude.com" target="_blank" >Maintenance Work Orders</a>
+</li>
+<li id="siteshortcut-42" class=""><a href="https://techticket.yubacoe.k12.ca.us:8443" target="_blank" >Tech Ticket Portal</a>
+</li>
+<li id="siteshortcut-63" class=" no-bullet"><a href="https://www.facebook.com/yubacoe" target="_blank" ><img src="http://www.yubacoe.org/cms/lib07/CA01902906/Centricity/Shared/Icons/images.jpg" onmouseout=this.src="/cms/lib07/CA01902906/Centricity/Shared/Icons/images.jpg" height="50" width="63"  alt="Like us"/></a>
+</li></ul>
+<div class="app-level-social-follow"></div>
+	</div>
+	<div class="ui-widget-footer">
+	</div>
+</div></div>
+</div>
+</div>
+			</div>
+			<div class="hp column-inner two">
+				<div id="sw-content-container2" class="region ui-hp"><div id='pmi-580'>
+
+
+
+<div id='sw-module-5580'>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = '4';
+            var PageID = '1';
+            var RenderLoc = '0';
+            var MIID = '558';
+
+            //added to check to make sure moderated content doesn't bleed through the dialog
+            if ($('#dialog-overlay-WindowLargeModal-body.moderateContent').length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript('ModuleView');CheckScript('Mustache');
+ });</script>
+    
+    <div id="module-content-558" >
+<div class="ui-widget app flexpage">
+	<div class="ui-widget-header">
+		<h1>Yuba County Update</h1>
+	</div>
+	
+	<div class="ui-widget-detail">
+		
+<div class="ui-article"><span ><p>&nbsp;<strong style="color: #103b5c; font-family: HelveticaNeue, &quot;Helvetica Neue&quot;, Helvetica, Arial, &quot;Lucida Grande&quot;, sans-serif; font-size: 16px;"><em>2017 Yuba County Spelling Bee&nbsp;</em></strong></p><h4><span style="color: #800000;">Tuesday, March 7th</span><br style="color: #800000;" /> &nbsp;<br style="color: #800000;" /><span style="color: #800000;">6:00 p.m.</span><br style="color: #800000;" />&nbsp;<br style="color: #800000;" /><span style="color: #800000;">Yuba County Career and Preparatory School</span><br style="color: #800000;" /><span style="color: #800000;">1104 E Street, Marysville</span><br style="color: #800000;" />&nbsp;<br style="color: #800000;" /><span style="color: #800000;">Students participating in the Spelling Bee need to arrive by 5:30 p.m.</span><br style="color: #800000;" />&nbsp;<br style="color: #800000;" /><span style="color: #800000;">Please contact Amy Nore at 749-4854 or amy.nore@yubacoe.k12.ca.us for more information.&nbsp;</span></h4></span></div> 
+<div class="clear"></div>
+	
+	</div>
+	<div class="ui-widget-footer">
+		
+			
+		
+		<div class="clear"></div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.yubacoe.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&EnableQuirksMode=0&ViewID=' + viewToUse + '&Tag=' + tag, container, 2, 'chkSidebar();');
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $('#hid-'+MIID+'-DetailView').val();
+   }
+  GetContent('http://www.yubacoe.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&FlexDataID=' + flexDataID + '&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=0&Tag=' + tag + '&ViewID=' + targetView, container, 2, 'chkSidebar();');
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.yubacoe.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&Tag=' + tag + '&EnableQuirksMode=0&ViewID='+viewToUse, container, 2, 'chkSidebar();');
+}
+</script>
+</div>
+
+</div></div>
+</div>
+			</div>
+		</div>
+		<div class="hp column two">
+			<div id="gb-search"></div>
+			<div id="sw-content-container3" class="region ui-hp"><div id='pmi-12'>
+<div id="module-content-13" ><div class="ui-widget app upcomingevents">
+ <div class="ui-widget-header">
+     <h1>Upcoming Events </h1>
+ </div>
+ <div class="ui-widget-detail">
+		<ul class="ui-articles">
+<li>
+<div class="ui-article">
+     <h1 class="ui-article-title sw-calendar-block-date">Today</h1>
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">6:00 PM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.yubacoe.org/site/Default.aspx?PageID=2&PageType=17&DomainID=4&ModuleInstanceID=1&EventDateID=812">County Spelling Bee, Yuba County Center for Education, 1104 E Street, Marysville, Polar Bear Room</a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <h1 class="ui-article-title sw-calendar-block-date">Tomorrow</h1>
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">4:30 PM - 6:00 PM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.yubacoe.org/site/Default.aspx?PageID=2&PageType=17&DomainID=4&ModuleInstanceID=1&EventDateID=797">Board Meeting</a></span>
+     </p>
+</div>
+</li>
+	</ul>
+<a class='view-calendar-link' href="http://www.yubacoe.org/Page/2"><span>View Calendar</span></a>
+ </div>
+ <div class="ui-widget-footer">
+ </div>
+</div>
+</div>
+</div>
+<div id='pmi-622'>
+<div id="module-content-600" >
+<div class="ui-widget app navigation  siteshortcuts">
+	<div class="ui-widget-header"><h1>News & Headlines</h1></div>
+	<div class="ui-widget-detail">
+		<ul class="site-shortcuts">
+<li id="siteshortcut-107" class=""><a href="http://www.edweek.org/ew/projects/mindset-in-the-classroom-a-national-study.html" target="_blank" >Mindset in the Classroom: A Study of K-12 Teachers </a>
+</li>
+<li id="siteshortcut-92" class=""><a href="http://edsource.org/storylines/shift-to-smarter-balanced-assessments" target="_parent" >Shift To Smarter Balanced Assessments</a>
+</li>
+<li id="siteshortcut-89" class=""><a href="http://blogs.edweek.org/teachers/teaching_now/2016/01/teacher-professional-development-and-other-countries.html" target="_blank" >Reports:  Teacher PD Drives School Growth</a>
+</li>
+<li id="siteshortcut-78" class=""><a href="http://www.cde.ca.gov/fg/aa/lc/" target="_parent" >Local Control Funding Formula - Overview</a>
+</li>
+<li id="siteshortcut-91" class=""><a href="http://edsource.org/2016/brown-praises-return-to-local-control-in-state-of-the-state/93795" target="_parent" >Gov. Brown Praises Return of Local Control to State</a>
+</li></ul>
+<div class="app-level-social-follow"></div>
+	</div>
+	<div class="ui-widget-footer">
+	</div>
+</div></div>
+</div>
+</div>
+		</div>
+	</div>
+	<div id="gb-footer" class="ui-clear">
+		<span class="column-bottom left"></span>
+		<span class="column-bottom right"></span>
+		<div class="gb footer one">
+			<p><h1>Yuba County Office of Education</h1>
+			935 14th St | Marysville, CA 95901<br/>
+			Phone: 530-749-4900<br/>
+			Fax: 530-741-6500
+            <p><a href="http://www.yubacoe.org/Page/361" target="_blank">Contact Us<br/></p>	
+		</div>
+		<div class="gb footer two">
+			<p><a href="http://www.schoolwires.com/privacy" target="_blank">Schoolwires Privacy Policy<br/>
+			(Updated)</a><br/>
+			<a href="mailto:webman@yubacoe.k12.ca.us">Questions or Feedback?</a><br/>
+			<a href="http://www.schoolwires.com/terms" target="_blank">Terms of Use</a>
+			</p>
+		</div>
+		<a href="index.html" id="district-link"></a>
+	</div>
+</div><!-- BEGIN - STANDARD FOOTER -->
+<div id='sw-footer-outer'>
+<div id='sw-footer-inner'>
+<div id='sw-footer-left'></div>
+<div id='sw-footer-right'>
+<div id='sw-footer-links'>
+<ul>
+<li><a title='Click to email the primary contact' href='mailto:brian.mcdonald@yubacoe.org'>Questions or Feedback?</a> | </li>
+<li><a href='http://www.schoolwires.com/privacy' target="_blank">Blackboard Web Community Manager Privacy Policy (Updated)</a> | </li>
+<li><a href='http://www.schoolwires.com/terms' target="_blank">Terms of Use</a></li>
+</ul>
+</div>
+<div id='sw-footer-copyright'>Copyright &copy; 2002-2017 Blackboard, Inc. All rights reserved.</div>
+<div id='sw-footer-logo'><a href='http://www.blackboard.com' title="Blackboard, Inc. All rights reserved.">
+<img src='http://www.yubacoe.org/Static/V2_17_01//GlobalAssets/Images/Navbar/blackboard_logo.png'
+ alt="Blackboard, Inc. All rights reserved."/>
+</a></div>
+</div>
+</div>
+</div>
+<!-- END - STANDARD FOOTER -->
+<script type="text/javascript">
+   $(document).ready(function(){
+      var beaconURL='http://analytics.schoolwires.com/analytics.asmx/Insert?AccountNumber=EPuA1ryO5fMtKCYc5u358Q%3d%3d&SessionID=306cefa1-bcf7-41fd-9c35-57e8f2764f7f&SiteID=4&ChannelID=0&SectionID=0&PageID=1&HitDate=3%2f7%2f2017+4%3a23%3a35+PM&Browser=Firefox+11.0&OS=UNIX&IPAddress=136.152.142.25';
+      try {
+         $.getJSON(beaconURL + '&jsonp=?', function(myData) {});
+      } catch(err) { 
+         // prevent site error for analytics
+      }
+   });
+</script>
+
+    <input type="hidden" id="hid-pageid" value="1" />
+
+    
+    
+
+    <div id='dialog-overlay-WindowMedium-base' class='ui-dialog-overlay-base' ><div id='WindowMedium'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowMedium");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowMedium-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowMedium-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowMedium-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowMedium-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowSmall-base' class='ui-dialog-overlay-base' ><div id='WindowSmall'  class='ui-dialog-overlay small' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowSmall");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowSmall-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowSmall-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowSmall-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowSmall-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowLarge-base' class='ui-dialog-overlay-base' ><div id='WindowLarge'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowLarge");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowLarge-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowLarge-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowLarge-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowLarge-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+    <div id='dialog-overlay-WindowMediumModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowMediumModal'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowMediumModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowMediumModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowMediumModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowMediumModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowMediumModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowSmallModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowSmallModal'  class='ui-dialog-overlay small' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowSmallModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowSmallModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowSmallModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowSmallModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowSmallModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowLargeModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowLargeModal'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowLargeModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowLargeModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowLargeModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowLargeModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowLargeModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowXLargeModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowXLargeModal'  class='ui-dialog-overlay xlarge' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowXLargeModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowXLargeModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowXLargeModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowXLargeModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowXLargeModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+    <div id='dialog-overlay-MyAccountSubscriptionOverlay-base' class='ui-dialog-overlay-base-modal' ><div id='MyAccountSubscriptionOverlay'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("MyAccountSubscriptionOverlay");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-MyAccountSubscriptionOverlay-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-MyAccountSubscriptionOverlay-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-MyAccountSubscriptionOverlay-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-MyAccountSubscriptionOverlay-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+    <div id='dialog-overlay-InsertOverlay-base' class='ui-dialog-overlay-base-modal' ><div id='InsertOverlay'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("InsertOverlay");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-InsertOverlay-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-InsertOverlay-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-InsertOverlay-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-InsertOverlay-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-InsertOverlay2-base' class='ui-dialog-overlay-base-modal' ><div id='InsertOverlay2'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("InsertOverlay2");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-InsertOverlay2-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-InsertOverlay2-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-InsertOverlay2-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-InsertOverlay2-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    
+    <style type="text/css">
+    #videowrapper {
+        position: fixed;
+        z-index: 20000;
+        background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+    #videodialog {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        right: 50px;
+        background: #FFF none repeat scroll 0% 0%;
+        z-index: 30000;
+        box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.65);
+        box-sizing: border-box;
+        border: 8px solid #FFF;
+    }
+
+    #videodialog .close-btn {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 0px 25px 0px 0px;
+        color: #666;
+        line-height: 1;
+        font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #videodialog .close-btn::after {
+        content: "X";
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        margin-top: -8px;
+        background: #999 none repeat scroll 0% 0%;
+        border-radius: 9px;
+        color: #FFF;
+        font-weight: bold;
+        line-height: 16px;
+        font-size: 9px;
+        text-align: center;
+    }
+        #videodialog-video {
+            margin-top:25px;
+        }
+    </style>
+    <script type="text/javascript">
+        function resizeVideoIframe() {
+            $("#videodialog-video iframe").css({ "width": "auto", "height": "auto" });
+            var screenWidth = $(window).width();
+            var screenHeight = $(window).height();
+            //alert('screen width =' + screenWidth + '  screen height=' + screenHeight);
+            var initVidW = 800, initVidH = 600;
+            var vidRatio = initVidH / initVidW;
+            var vidWidth = $("#videodialog-video").width();
+            //alert('videoWidth = ' +vidWidth);
+            var vidHeight = vidWidth * vidRatio;
+
+            if ((vidHeight + 100) > screenHeight) {
+                vidHeight = screenHeight - 140;
+            }
+
+            $("#videodialog-video").css({ "height": (vidHeight) });
+            $("#videodialog-video iframe").css({ "width": vidWidth, "height": vidHeight }); 
+        }
+
+        function resizeVideo() {
+            $("#videodialog-video video").css({ "width": "auto", "height": "auto" });
+            var screenWidth = $(window).width();
+            var screenHeight = $(window).height();
+            //alert('screen width =' + screenWidth + '  screen height=' + screenHeight);
+            var initVidW = 800, initVidH = 600;
+            var vidRatio = initVidH / initVidW;
+            var vidWidth = $("#videodialog-video").width();
+            //alert('videoWidth = ' +vidWidth);
+            var vidHeight = vidWidth * vidRatio;
+
+            if ((vidHeight + 100) > screenHeight) {
+                vidHeight = screenHeight - 140;
+            }
+
+            $("#videodialog-video").css({ "height": (vidHeight) });
+            $("#videodialog-video video").css({ "width": vidWidth, "height": vidHeight });
+            //$(".videoControl").css({ "bottom": $("#videodialog-video video").bottom() + 5, "width": 100 });
+        }
+
+        function closeVideoDialog() {
+            $('#videowrapper').addClass('ui-helper-hidden');
+            $('#videodialog-video').html('');
+            $(window).resize(function () { });
+        }
+    </script>
+    <div id="videowrapper" class="ui-helper-hidden">
+        <div id="videodialog">
+            <div id="videodialog-close" class="close-btn" onclick="closeVideoDialog();">CLOSE</div>
+            <div id="videodialog-video"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            removeBrokenImages();
+            checkSidebar();
+            RemoveCookie();
+
+            $('.navigation li.collapsible').each(function () {
+                if ($(this).find('ul').length == 0) {
+                    $(this).removeClass('collapsible');
+                }
+            });
+
+            // find page nav state cookie and add open chevron
+            var arrValues = GetCookie('SWPageNavState').split('~');
+
+            $.each(arrValues, function () {
+                if (this != '') {
+                    $('#' + this).addClass('collapsible').prepend("<div class='bullet collapsible' />");
+                }
+            });
+
+            // find remaining sub menus and add closed chevron and close menu
+            $('.navigation li > ul').each(function () {
+                var list = $(this);
+
+                if (list.parent().hasClass('active') && !list.parent().hasClass('collapsible')) {
+                    // open sub for currently selected page                    
+                    list.parent().addClass('collapsible').prepend("<div class='bullet collapsible' />");
+                } else {
+                    if (list.parent().hasClass('collapsible') && !list.siblings('div').hasClass('collapsible')) {
+                        // open sub for page with auto expand
+                        list.siblings('div.expandable').remove();
+                        list.parent().prepend("<div class='bullet collapsible' />");
+                    }
+                }
+
+                if (!list.siblings('div').hasClass('collapsible')) {
+                    // keep all closed that aren't already set to open
+                    list.parent().addClass('expandable').prepend("<div class='bullet expandable' />");
+                    ClosePageSubMenu(list.parent());
+                } else {
+                    OpenPageSubMenu(list.parent());
+                }
+            });
+
+            // remove bullet from hierarchy if no-bullet set
+            $('.navigation li.collapsible').each(function () {
+                if ($(this).hasClass('no-bullet')) {
+                    if (!$(this).hasClass('navigationgroup')) { $(this).removeClass('collapsible'); }
+                    $(this).children('div.collapsible').remove();
+                }
+            });
+
+            $('.navigation li.expandable').each(function () {
+                if ($(this).hasClass('no-bullet')) {
+                    if (!$(this).hasClass('navigationgroup')) { $(this).removeClass('expandable'); }
+                    $(this).children('div.expandable').remove();
+                }
+            });
+
+            $('.navigation li:not(.collapsible,.expandable,.no-bullet)').each(function () {
+                $(this).prepend("<div class='bullet' />");
+            });
+
+            $('.navigation li.active').parents('ul').each(function () {
+                if (!$(this).hasClass('page-navigation')) {
+                    OpenPageSubMenu($(this).parent());
+                }
+            });
+
+            // set click event for chevron
+            $(document).on('click', '.navigation div.collapsible', function () {
+                ClosePageSubMenu($(this).parent());
+            });
+
+            $(document).on('click', '.navigation div.expandable', function () {
+                OpenPageSubMenu($(this).parent());
+            });
+
+            // set navigation grouping links
+            $(document).on('click', '.navigationgroup.collapsible > a', function () {
+                ClosePageSubMenu($(this).parent());
+            });
+
+            $(document).on('click', '.navigationgroup.expandable > a', function () {
+                OpenPageSubMenu($(this).parent());
+            });
+
+            //SW MYSTART DROPDOWNS
+            $(document).on('click', '.sw-mystart-dropdown', function () {
+                $(this).children(".sw-dropdown").css("display", "block");
+            });
+
+            $(".sw-mystart-dropdown").hover(function () { }, function () {
+                $(this).children(".sw-dropdown").hide();
+                $(this).blur();
+            });
+
+            //SW ACCOUNT DROPDOWN
+            $(document).on('click', '#sw-mystart-account', function () {
+                $(this).children("#sw-myaccount-list").show();
+                $(this).addClass("clicked-state");
+            });
+
+            $("#sw-mystart-account, #sw-myaccount-list").hover(function () { }, function () {
+                $(this).children("#sw-myaccount-list").hide();
+                $(this).removeClass("clicked-state");
+                $("#sw-myaccount").blur();
+            });
+
+            // set hover class for page and section navigation
+            $('.ui-widget.app.pagenavigation, .ui-widget.app.sectionnavigation').find('li > a').hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            // set active class on channel and section
+            var activeChannelNavType = $('input#hidActiveChannelNavType').val();
+            if (activeChannelNavType == -1) {
+                // homepage is active
+                $('#navc-HP').addClass('active');
+            } else if (activeChannelNavType == 1) {
+                // calendar page is active
+                $('#navc-CA').addClass('active');
+            } else {
+                // channel is active
+                var activeSelectorID = $('input#hidActiveChannel').val();
+                $('#navc-' + activeSelectorID).addClass('active');
+                activeSelectorID = $('input#hidActiveSection').val();
+                $('#navs-' + activeSelectorID).addClass('active');
+            }
+        }); // end document ready
+
+        function OpenPageSubMenu(li) {
+            if (li.prop('tagName').toLowerCase() == "li") {
+                if (li.hasClass('expandable')) {
+                    li.removeClass('expandable').addClass('collapsible');
+                }
+                if (li.find('div:first').hasClass('expandable')) {
+                    li.find('div:first').removeClass('expandable').addClass('collapsible');
+                }
+                li.find('ul:first').show();
+
+                PageNavigationStateCookie();
+            }
+        }
+
+        function ClosePageSubMenu(li) {
+            if (li.prop('tagName').toLowerCase() == "li") {
+                li.removeClass('collapsible').addClass('expandable');
+                li.find('div:first').removeClass('collapsible').addClass('expandable');
+                li.find('ul:first').hide();
+
+                PageNavigationStateCookie();
+            }
+        }
+
+        function PageNavigationStateCookie() {
+            var strCookie = "";
+
+            $('.pagenavigation li > ul').each(function () {
+                var item = $(this).parent('li');
+                if (item.hasClass('collapsible') && !item.hasClass('no-bullet')) {
+                    strCookie += $(this).parent().attr('id') + '~';
+                }
+            });
+
+            SetCookie('SWPageNavState', strCookie);
+        }
+
+        function checkSidebar() {
+            $(".ui-widget-sidebar").each(function () {
+                if ($.trim($(this).html()) != "") {
+                    $(this).show();
+                    $(this).siblings(".ui-widget-detail").addClass("with-sidebar");
+                }
+            });
+        }
+
+        function removeBrokenImages() {
+            //REMOVES ANY BROKEN IMAGES
+            $("span.img img").each(function () {
+                if ($(this).attr("src") !== undefined) {
+                    $(this).parent().parent().show();
+                    $(this).parent().parent().siblings().addClass("has-thumb");
+                }
+            });
+        }
+
+        function LoadEventDetailUE(moduleInstanceID, eventDateID, userRegID, isEdit) {
+            (userRegID === undefined ? userRegID = 0 : '');
+            (isEdit === undefined ? isEdit = false : '');
+            OpenDialogOverlay("WindowMediumModal", { LoadType: "U", LoadURL: "http://www.yubacoe.org//site/UserControls/Calendar/EventDetailWrapper.aspx?ModuleInstanceID=" + moduleInstanceID + "&EventDateID=" + eventDateID + "&UserRegID=" + userRegID + "&IsEdit=" + isEdit });
+        }
+
+        function RemoveCookie() {
+            // There are no sub page            
+            if ($('.pagenavigation li li').length == 0) {
+                //return false;
+                PageNavigationStateCookie();
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        function AddOffCanvasMenuHeightForSiteNav() {
+            var sitenavulHeight = 0;
+
+            if ($('#sw-pg-sitenav-ul').length > 0) {
+                sitenavulHeight = parseInt($("#sw-pg-sitenav-ul").height());
+            }
+
+            var swinnerwrapHeight = 0;
+
+            if ($('#sw-inner-wrap').length > 0) {
+                swinnerwrapHeight = parseInt($("#sw-inner-wrap").height());
+            }
+
+            // 360px is abount 5 li height
+            if (sitenavulHeight + 360 >= swinnerwrapHeight) {
+                $("#sw-inner-wrap").height(sitenavulHeight + 360);
+            }
+        }
+
+        function AddOffCanvasMenuHeightForSelectSchool() {
+            var selectschoolulHeight = 0;
+
+            if ($('#sw-pg-selectschool-ul').length > 0) {
+                selectschoolulHeight = parseInt($("#sw-pg-selectschool-ul").height());
+            }
+
+            var swinnerwrapHeight = 0;
+
+            if ($('#sw-inner-wrap').length > 0) {
+                swinnerwrapHeight = parseInt($("#sw-inner-wrap").height());
+            }
+
+            // 360px is abount 5 li height
+            if (selectschoolulHeight + 360 >= swinnerwrapHeight) {
+                $("#sw-inner-wrap").height(selectschoolulHeight + 360);
+            }
+        }
+
+        $(document).ready(function () {
+            if ($("#sw-pg-sitenav-a").length > 0) {
+                $(document).on('click', '#sw-pg-sitenav-a', function () {
+                    if ($("#sw-pg-sitenav-ul").hasClass('sw-pgmenu-closed')) {
+                        AddOffCanvasMenuHeightForSiteNav();
+
+                        $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+                        $("#sw-pg-sitenav-ul").removeClass('sw-pgmenu-closed');
+                        $("#sw-pg-sitenav-ul").addClass('sw-pgmenu-open');
+                    } else {
+                        $("#sw-pg-sitenav-ul").removeClass('sw-pgmenu-open');
+                        $("#sw-pg-sitenav-ul").addClass('sw-pgmenu-closed');
+                    }
+                });
+
+                $(document).on('click', '#sw-pg-selectschool-a', function () {
+                    if ($("#sw-pg-selectschool-ul").hasClass('sw-pgmenu-closed')) {
+                        AddOffCanvasMenuHeightForSelectSchool();
+
+                        $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+                        $("#sw-pg-selectschool-ul").removeClass('sw-pgmenu-closed');
+                        $("#sw-pg-selectschool-ul").addClass('sw-pgmenu-open');
+                    } else {
+                        $("#sw-pg-selectschool-ul").removeClass('sw-pgmenu-open');
+                        $("#sw-pg-selectschool-ul").addClass('sw-pgmenu-closed');
+                    }
+                });
+
+                $(document).on('click', '#sw-pg-myaccount-a', function () {
+                    if ($("#sw-pg-myaccount-ul").hasClass('sw-pgmenu-closed')) {
+                        $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+                        $("#sw-pg-myaccount-ul").removeClass('sw-pgmenu-closed');
+                        $("#sw-pg-myaccount-ul").addClass('sw-pgmenu-open');
+                    } else {
+                        $("#sw-pg-myaccount-ul").removeClass('sw-pgmenu-open');
+                        $("#sw-pg-myaccount-ul").addClass('sw-pgmenu-closed');
+                    }
+                });
+
+                $(document).on('click', '.pg-list-bullet', function () {
+                    $(this).prev().toggle();
+
+                    if ($(this).hasClass('closed')) {
+                        AddOffCanvasMenuHeightForSiteNav();
+
+                        $(this).removeClass('closed');
+                        $(this).addClass('open');
+                    } else {
+                        $(this).removeClass('open');
+                        $(this).addClass('closed');
+                    }
+                });
+
+                $(document).on('mouseover', '#sw-pg-selectschool', function () {
+                    $("#sw-pg-selectschool-firstli").removeClass('sw-pg-selectschool-firstli-mouseout').addClass('sw-pg-selectschool-firstli-mouseover');
+                    $("#sw-pg-selectschool-firstli a").addClass('sw-pg-selectschool-firstli-a-mouseover').removeClass('sw-pg-selectschool-firstli-a-mouseout');
+                });
+
+                $(document).on('mouseout', '#sw-pg-selectschool', function () {
+                    $("#sw-pg-selectschool-firstli").removeClass('sw-pg-selectschool-firstli-mouseover').addClass('sw-pg-selectschool-firstli-mouseout');
+                    $("#sw-pg-selectschool-firstli a").addClass('sw-pg-selectschool-firstli-a-mouseout').removeClass('sw-pg-selectschool-firstli-a-mouseover');
+                });
+
+                $(document).on('mouseover', '#sw-pg-myaccount', function () {
+                    $("#sw-pg-myaccount-firstli").removeClass('sw-pg-myaccount-firstli-mouseout').addClass('sw-pg-myaccount-firstli-mouseover');
+                    $("#sw-pg-myaccount-firstli a").addClass('sw-pg-myaccount-firstli-a-mouseover').removeClass('sw-pg-myaccount-firstli-a-mouseout');
+                });
+
+                $(document).on('mouseout', '#sw-pg-myaccount', function () {
+                    $("#sw-pg-myaccount-firstli").removeClass('sw-pg-myaccount-firstli-mouseover').addClass('sw-pg-myaccount-firstli-mouseout');
+                    $("#sw-pg-myaccount-firstli a").addClass('sw-pg-myaccount-firstli-a-mouseout').removeClass('sw-pg-myaccount-firstli-a-mouseover');
+                });
+
+                $(document).on('mouseover', '#sw-pg-sitenav', function () {
+                    $("#sw-pg-sitenav-firstli").removeClass('sw-pg-sitenav-firstli-mouseout').addClass('sw-pg-sitenav-firstli-mouseover');
+                    $("#sw-pg-sitenav-firstli a").addClass('sw-pg-sitenav-firstli-a-mouseover').removeClass('sw-pg-sitenav-firstli-a-mouseout');
+                });
+
+                $(document).on('mouseout', '#sw-pg-sitenav', function () {
+                    $("#sw-pg-sitenav-firstli").removeClass('sw-pg-sitenav-firstli-mouseover').addClass('sw-pg-sitenav-firstli-mouseout');
+                    $("#sw-pg-sitenav-firstli a").addClass('sw-pg-sitenav-firstli-a-mouseout').removeClass('sw-pg-sitenav-firstli-a-mouseover');
+                });
+
+                $(document).on('mouseover', '#sw-pg-district', function () {
+                    $("#sw-pg-district-firstli").removeClass('sw-pg-district-firstli-mouseout').addClass('sw-pg-district-firstli-mouseover');
+                    $("#sw-pg-district-firstli a").addClass('sw-pg-district-firstli-a-mouseover').removeClass('sw-pg-district-firstli-a-mouseout');
+                });
+
+                $(document).on('mouseout', '#sw-pg-district', function () {
+                    $("#sw-pg-district-firstli").removeClass('sw-pg-district-firstli-mouseover').addClass('sw-pg-district-firstli-mouseout');
+                    $("#sw-pg-district-firstli a").addClass('sw-pg-district-firstli-a-mouseout').removeClass('sw-pg-district-firstli-a-mouseover');
+                });
+            }
+        });
+
+
+    </script>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js' type='text/javascript'></script>
+    <script src="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/Scripts/min/SW-UI.min.js" type='text/javascript'></script>
+    <script src="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/Scripts/jquery.sectionlayer.js" type='text/javascript'></script>
+    <script src="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/Scripts/Initialize.js" type='text/javascript'></script>
+    <script src="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/Scripts/min/swfobject.min.js" type="text/javascript"></script>
+    <script src="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/Scripts/min/jquery.ajaxupload.min.js" type="text/javascript"></script>
+
+    <!-- Begin swuc.CheckScript -->
+  <script type="text/javascript" src="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/Scripts/ThirdParty/json2.js"></script>
+  <script type="text/javascript" src="http://www.yubacoe.org/Static/V2_17_01/GlobalAssets/Scripts/CheckScript.js"></script>
+<!-- End swuc.CheckScript -->
+
+
+    <!-- Server Load Time (05): 0.0156251 Seconds -->
+
+    
+
+    <!-- off-canvas menu enabled-->
+    
+
+</body>
+</html>

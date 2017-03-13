@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>FLITE Scanner Stations</title>
+  <meta name="description"  content="Ferris Library for Information, Technology and Education (FLITE) is located in the heart of Ferris State University's main campus combining the collections and services of the former Timme and Health Science Libraries.  FLITE also houses the Media Production Department.  FLITE features a variety of public work and study spaces and over 600 active ports for computer connectivity.  FLITE is a Patent and Trademark Depository Library for western lower Michigan and is a depository for U.S. Bureau of the Census and State of Michigan publications.">
+  <meta name="keywords"  content="Library, Ferris Library for Information, Technology and Education, FLITE, scanners">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="stylesheet" href="http://library.ferris.edu/homepagenew.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://library.ferris.edu/homepagenewprint.css" type="text/css" media="print" />
+<link href="http://library.ferris.edu/lightbox/css/lightbox.css" rel="stylesheet" />
+<link href="http://library.ferris.edu/tabber.css" rel="STYLESHEET" type="text/css" media="screen" />
+<link href="http://library.ferris.edu/primo.css" rel="STYLESHEET" type="text/css" media="screen" />
+
+<script src="http://library.ferris.edu/js/modernizr.js"></script>
+<script src="http://library.ferris.edu/js/Respond.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+<!-- include extern jQuery file but fall back to local file if extern one fails to load !-->
+<!--
+<script src="lightbox/js/lightbox.js"></script>
+-->
+<script type="text/javascript" src="http://library.ferris.edu/tabber.js"></script>
+
+<script type="text/javascript">
+
+/* Optional: Temporarily hide the "tabber" class so it does not "flash"
+   on the page as plain HTML. After tabber runs, the class is changed
+   to "tabberlive" and it will appear. */
+
+document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+</script>
+
+<script type="text/javascript"> 
+function searchPrimo()
+{
+document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value;
+document.forms["searchForm"].submit();
+}
+
+    function searchKeyPress(e)
+    {
+        if (typeof e == 'undefined' && window.event) { e = window.event; }
+        if (e.keyCode == 13)
+        {
+            document.getElementById('gosmart').click();
+        }
+    }
+</script>
+
+<script type="text/Javascript" src="http://www.ferris.edu/library/services/encorelocationfacet.js">
+//script to refine encore search results to a collection
+</script>
+<script src="http://www.ferris.edu/library/google-analytics.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="container">
+<header id="topstuff">
+	<a href="../../HTMLS/index.html"><img src="http://library.ferris.edu/Ferris_Wordmark.png" alt="Link to Ferris Homepage" title="Link to Ferris Homepage" /></a>
+<h4>Ferris Library for Information, Technology, and Education</h4>
+<nav>
+<script type="text/javascript" src="http://library.ferris.edu/topbuttonsnew.js"></script>
+</nav>
+
+</header>
+<div id="left40">
+<nav>
+<ul id="nav2">
+	<li><a href="http://www.ferris.edu/library/homepage.htm">Library Home</a></li>
+	<li><a href="scanner.html#">Get Help</a>
+	<ul>
+		<li><a href="../reference/helppage.html">In Person</a></li>
+		<li><a href="../reference/helppagechat.html">By Chat Reference</a></li>
+		<li><a href="../reference/helppageemail.html">By Email</a></li>
+		<li><a href="../reference/helppagetelephone.html">By Telephone</a></li>
+		<li><a href="../reference/helppagetext.html">By Text Message (SMS)</a></li>
+	</ul>
+	</li>
+</ul>
+<div class="placeholder">
+<!-- This section is necessary to provide spacing between accordion menu and page menu  -->
+<p>&nbsp;</p>
+<div class="clearall"></div>
+</div>
+</nav>
+<article>
+<div class="width90">
+<div class="gradientbox">
+<h1>Did You Know?</h1>
+<p>Books which can be checked out from the library can be found on the lower level and on the third floor. Call numbers A-D are on the first floor, and books with call numbers E-Z are mostly on the third floor. Some smaller collections are in the lower level.
+</p>
+</div>
+</div>
+</article>
+<br class="clearall" />
+</div>
+
+<div id="middle30">
+<h5>Scanning Stations</h5>
+<p>For those patrons who need to scan information, near the Oval Information Desk on the first floor are two scanning stations with appropriate software.  These stations are available on a first come, first serve basis.  There is no charge associated with using these computer workstations and you do not need to show a Bulldog ID card.</p>
+<p>For assistance with technical issues, look to staff seated at the Oval Information Desk.</p>
+<p><strong>More Contact Information</strong></p>
+<p><a href="../reference/helppageemail.html">Email</a> 
+<br><strong>Phone: </strong>591-3602</p>
+<br>
+<div class="clearleft"></div>
+</div>
+<div id="right30">
+<figure>
+<img src="http://www.ferris.edu/library/images/scanner.jpg" alt="scanner station">
+</figure>
+</div>
+<div class="clearall"></div>
+</div>
+
+<script>
+var ww = document.body.clientWidth;
+
+$(document).ready(function() {
+$(".nav li a").each(function() {
+if ($(this).next().length > 0) {
+$(this).addClass("parent");
+};
+})
+
+$(".toggleMenu").click(function(e) {
+e.preventDefault();
+$(this).toggleClass("active");
+$(".nav").toggle();
+});
+adjustMenu();
+})
+
+$(window).bind('resize orientationchange', function() {
+ww = document.body.clientWidth;
+adjustMenu();
+});
+
+var adjustMenu = function() {
+if (ww < 769) {
+$(".toggleMenu").css("display", "inline-block");
+if (!$(".toggleMenu").hasClass("active")) {
+$(".nav").hide();
+} else {
+$(".nav").show();
+}
+$(".nav li").unbind('mouseenter mouseleave');
+$(".nav li a.parent").unbind('click').bind('click', function(e) {
+// must be attached to anchor element to prevent bubbling
+e.preventDefault();
+$(this).parent("li").toggleClass("hover");
+});
+}
+else if (ww >= 769) {
+$(".toggleMenu").css("display", "none");
+$(".nav").show();
+$(".nav li").removeClass("hover");
+$(".nav li a").unbind('click');
+$(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
+// must be attached to li so that mouseleave is not triggered when hover over submenu
+$(this).toggleClass('hover');
+});
+}
+}
+
+</script>
+<script>
+$(document).ready(function () {
+  $('#nav2 > li > a').click(function(){
+    if ($(this).attr('class') != 'active'){
+      $('#nav2 li ul').slideUp();
+      $(this).next().slideToggle();
+      $('#nav2 li a').removeClass('active');
+      $(this).addClass('active');
+    }
+    else {
+      $('#nav2 li ul').slideUp();
+      $('#nav2 li a').removeClass('active');
+	}
+  });
+});
+</script>
+
+<!-- This script is to compensate for the inline and float right bug in Webkit browsers  -->
+<script>
+var n = document.createTextNode(' ');
+$( window ).resize(function() {
+	$('#topstuff').hide();
+	$('#topstuff').get(0).offsetHeight; // no need to store this anywhere, the reference is enough
+	$('#topstuff').show();
+});
+</script>
+
+</body>
+</html>

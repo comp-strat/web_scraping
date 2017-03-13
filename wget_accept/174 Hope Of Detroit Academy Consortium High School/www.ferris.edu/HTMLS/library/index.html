@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title>Ferris State University Library Homepage</title>
+<meta name="description" content="Ferris Library for Information, Technology and Education (FLITE) is located in the heart of Ferris State University's main campus combining the collections and services of the former Timme and Health Science Libraries.  FLITE also houses the Media Production Department.  FLITE features a variety of public work and study spaces and over 600 active ports for computer connectivity.  FLITE is a Patent and Trademark Depository Library for western lower Michigan and is a depository for U.S. Bureau of the Census and State of Michigan publications.">
+<meta name="keywords" content="Library, Ferris Library for Information, Technology and Education, FLITE, databases, resources, electronic resources, patents and trademarks, copying">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="http://library.ferris.edu/homepagenew.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://library.ferris.edu/homepagenewprint.css" type="text/css" media="print" />
+<link href="http://library.ferris.edu/lightbox/css/lightbox.css" rel="stylesheet" />
+<link href="http://library.ferris.edu/tabber.css" rel="STYLESHEET" type="text/css" media="screen" />
+<link href="http://library.ferris.edu/primo.css" rel="STYLESHEET" type="text/css" media="screen" />
+
+<script src="http://library.ferris.edu/js/modernizr.js"></script>
+<script src="http://library.ferris.edu/js/Respond.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+<!-- include extern jQuery file but fall back to local file if extern one fails to load !-->
+<!--
+<script src="lightbox/js/lightbox.js"></script>
+-->
+<script type="text/javascript" src="http://library.ferris.edu/tabber.js"></script>
+
+<script type="text/javascript">
+
+/* Optional: Temporarily hide the "tabber" class so it does not "flash"
+   on the page as plain HTML. After tabber runs, the class is changed
+   to "tabberlive" and it will appear. */
+
+document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+</script>
+
+<script type="text/javascript">
+function searchPrimo()
+{
+document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value;
+document.forms["searchForm"].submit();
+}
+
+    function searchKeyPress(e)
+    {
+        if (typeof e == 'undefined' && window.event) { e = window.event; }
+        if (e.keyCode == 13)
+        {
+            document.getElementById('gosmart').click();
+        }
+    }
+</script>
+
+<script type="text/Javascript" src="http://www.ferris.edu/htmls/library/encorelocationfacet.js">
+//script to refine encore search results to a collection
+</script>
+<script type="text/JavaScript">
+Date.prototype.getWeek = function() {
+var onejan = new Date(this.getFullYear(),0,1);
+return Math.ceil((((this - onejan) / 86400000) + onejan.getDay())/7);
+}
+var today = new Date();
+var weekno = today.getWeek();
+
+var feature_text = new Array ();
+feature_text[0] = "<p><strong><em>Electronic books from Ebrary<\/em><\/strong><\/p><p>Ebrary's Academic Complete collection provides over 38,000 electronic books covering major academic subject areas. Ebrary books are found in FLITE's Online catalog. Use the ebrary platform to search full-text content, bookmark important pages and take notes to share with others.<\/p>";
+feature_text[1] = "<p><strong><em>Access World News and Michigan Newspapers<\/em><\/strong><\/p><p>FLITE brings the world to your computer. Access World News has content from hundreds of newspapers from Europe, Asia, Africa and South America, and hundreds more from North America. Plus there are dozens of Michigan newspapers, including the Detroit News, the Grand Rapids Press, and the Big Rapids Pioneer.<\/p>";
+feature_text[2] = "<p><strong><em>ProQuest Business Collection<\/em><\/strong><\/p><p>The Proquest Business Collection provides comprehensive information on business, with full-text from 2000 publications, and citations from 1000 more. ABI INFORM covers business conditions, business trends, management practice & theory, corporate strategy & tactics, and the competitive landscape.<\/p>";
+feature_text[3] = "<p><strong><em>Historical Newspapers<\/em><\/strong><\/p><p>Bring history alive! FLITE provides access to digitized and searchable archives of 8 key newspapers: Chicago Defender, Chicago Tribune, Christian Science Monitor, Detroit Free Press, Los Angeles Times, New York Times, Wall Street Journal, and Washington Post.<\/p>";
+feature_text[4] = "<p><strong><em>ScienceDirect from Elsevier<\/em><\/strong><\/p><p>Search 2000 academic and peer-reviewed journals published or distributed by Elsevier and access full-text content through FLITE subscriptions to key journals and to the Elsevier Freedom Collection. This collection includes major coverage in science, technology, medicine, and business.<\/p>";
+feature_text[5] = "<p><strong><em>Facts on File: World News Digest<\/em><\/strong><\/p><p> Need the scoop on the news now or then? Try the World News Digest! This record of domestic and international news covers all major political, social, and economic events from November 1940 right up to today's top stories.<\/p>";
+feature_text[6] = "<p><strong><em>Facts on File: Issues and Controversies<\/em><\/strong><\/p><p>Issues and Controversies provides balanced coverage and contemporary points of view for hot issues in the news and major topics in American history. Need a place to start on your paper? Look no further! Issues and Controversies has the ideas you need.<\/p>";
+feature_text[7] = "<p><strong><em>Academic OneFile<\/em><\/strong><\/p><p>Academic OneFile from Gale is a great way to get started on a research paper or final project! Search over 12,000 academic titles in numerous disciplines, along with magazines and newspapers, television transcripts, medical information in both audio & visual formats, and podcasts.<\/p>";
+feature_text[8] = "<p><strong><em>EBSCO CINAHL<\/em><\/strong><\/p><p>The CINAHL database is geared specifically to nursing and allied health professionals, students, educators and researchers. This database provides indexing for 2,928 journals from the fields of nursing and allied health and records dating back to 1981. Search CINAHL in conjunction with PubMed for coverage of health topics.<\/p>";
+feature_text[9] = "<p><strong><em>Electronic Resources for Criminal Justice studies<\/em><\/strong><\/p><p>Criminal Justice Periodicals Index and Criminal Justice Abstracts provide full text and abstracts for articles on criminal justice, law enforcement and corrections administration. Full text content is available for many important titles, including the Sage Criminology collection<\/p>";
+feature_text[10] = "<p><strong><em>JSTOR<\/em><\/strong><\/p><p>JSTOR contains hundreds of journals, covering most academic subjects. Journal coverage in JSTOR starts with the first issue of the journal and includes all but the most recently published articles. All JSTOR content is full-text, and the entire collection can be searched with a single command.<\/p>";
+feature_text[11] = "<p><strong><em>Journals and Books from Springer<\/em><\/strong><\/p><p>FLITE subscribes to a large collection of academic e-journals published and distributed by Springer, an important publisher of scientific, technical and medical content. Electronic editions of most Springer books published from 2004-2008 can be found in FLITE's Online catalog.<\/p>";
+feature_text[12] = "<p><strong><em>Artemis Literary Resources<\/em><\/strong><\/p><p>Artemis Literary Resources contains Literature Resources from Gale, MLA International Bibliography, and Gale Literary Index. It gives access to full-text materials on literary topics, authors and their works, plus biographical information and millions of bibliographical citations.<\/p>";
+feature_text[13] = "<p><strong><em>Government Documents<\/em><\/strong><\/p><p>FLITE is part of the U.S. Federal Depository Library Program.  A wide variety of government information sources is provided to the library by the Government Printing Office.  Government Documents are found on the lower level of FLITE and through links in the online catalog.  For assistance contact the Government Documents Librarian.<\/p>";
+feature_text[14] = "<p><strong><em>Ambrose Streaming Video<\/em><\/strong><\/p><p>Ambrose Streaming Videos can be viewed from anywhere with an Internet connection. They can be built into FerrisConnect courses or watched for background content or fun. The collection includes the complete BBC Shakespeare productions, along with high quality geography, literary, and historical documentaries. <\/p>";
+feature_text[15] = "<p><strong><em>ARTstor<\/em><\/strong><\/p><p>The ARTstor Digital Library is a nonprofit resource that provides over 1.5 million digital images in the arts, architecture, humanities, and sciences with an accessible suite of software tools for teaching and research.<\/p>";
+feature_text[16] = "<p><strong><em>Demographics Now<\/em><\/strong><\/p><p>Demographics Now provides detailed demographic data for the entire United States. Sources include the 2010 and 2000 Census and Simmons National Community Survey (includes media use) among others. Users can combine data from multiple sources, compare geographical areas, and map results. Directories of individuals and businesses are available for viewing and creating targeted lists. Tables created can be exported in Excel, Word, and PDF formats.<\/p>";
+feature_text[17] = "<p><strong><em>SRDS<\/em><\/strong><\/p><p>SRDS provides media rates and data for the advertising industry, listing advertising rates, editorial or programming content, circulation and other basic information for a variety of advertising media, including radio, television, newspapers, and consumer magazines.<\/p>";
+feature_text[18] = "<p><strong><em>Electronic books from Ebrary<\/em><\/strong><\/p><p>Ebrary's Academic Complete collection provides over 38,000 electronic books covering major academic subject areas. Ebrary books are found in FLITE's Online catalog. Use the ebrary platform to search full-text content, bookmark important pages and take notes to share with others.<\/p>";
+
+var j = Math.round(weekno/3);
+
+</script>
+<script type="text/Javascript">
+<!--
+	var ajaxRequest;  // The variable that makes Ajax possible!
+
+	function ajaxFunction() {
+		if (window.XDomainRequest) {
+			// Internet explorer
+			ajaxRequest = new XDomainRequest();
+		} else {
+			// Opera 8.0+, Firefox, Safari
+			ajaxRequest = new XMLHttpRequest();
+			ajaxRequest.onreadystatechange = function() {
+				if(ajaxRequest.readyState == 4) {
+					var j=ajaxRequest.responseText;
+					document.getElementById("schedule").innerHTML = j;
+				}
+			}
+		}
+        if (ajaxRequest) {
+			ajaxRequest.open("get", "http://library.ferris.edu/gethours.php", true);
+			ajaxRequest.send();
+			document.getElementById("schedule").innerHTML = ajaxRequest.responseText;
+		}
+	}
+-->
+</script>
+
+<!-- This code runs Google analytics for the main Ferris web site  -->
+<script type="text/javascript">
+<!--
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-515974-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+// -->
+</script>
+
+
+</head>
+<body>
+<div class="container">
+<header id="topstuff">
+<!-- <div class="headgraphic"> -->
+	<a href="../../HTMLS/index.html"><img src="http://library.ferris.edu/Ferris_Wordmark.png" alt="Link to Ferris Homepage" title="Link to Ferris Homepage" /></a>
+<!-- </div>  -->
+<h4>Ferris Library for Information, Technology, and Education</h4>
+<nav>
+<script type="text/javascript" src="http://library.ferris.edu/topbuttonsnew.js"></script>
+</nav>
+
+</header>
+<div id="left40">
+<!-- <h1>Get Help ...</h1>  -->
+<article>
+<ul id="nav2">
+	<li><a href="index.html#">Get Help</a>
+    <ul>
+		<li><a href="../../library/reference/helppage.html">In Person</a></li>
+		<li><a href="../../library/reference/helppagechat.html">By Chat Reference</a></li>
+		<li><a href="../../library/reference/helppageemail.html">By Email</a></li>
+		<li><a href="../../library/reference/helppagetelephone.html">By Telephone</a></li>
+		<li><a href="../../library/reference/helppagetext.html">By Text Message (SMS)</a></li>
+	</ul>
+	</li>
+	<li><a href="index.html#" onclick="window.open('http://library.ferris.edu/hours.php','hours','height=580,width=680,screenX=20,screenY=10,resizable')">Library Hours</a></li>
+	<li><a href="../../library/faq/faq.html">FAQ</a></li>
+</ul>
+</article>
+
+<article>
+<div class="listoflinks">
+
+	<a href="../../library/about/mission.html">FLITE Mission and Values</a><br />
+	<a href="http://libkcad.ferris.edu">Kendall Library</a><br />
+	<a href="http://library.ferris.edu/phonepopup.html" onClick="window.open(this.href,'phonepopup','height=400,width=450,screenX=20,screenY=10,scrollbars=no'); return false">Phone Directory</a><br />
+	<a href="http://library.ferris.edu/addresspopup.html" onClick="window.open(this.href,'addresspopup','height=260,width=490,screenX=20,screenY=10,scrollbars=no'); return false">Postal (Mailing) Address</a><br />
+	<a href="http://library.ferris.edu/instruction/rooms/homepage.htm">Room Reservations</a><br />
+
+<br />
+<div class="socialmedia">
+<!--
+<div class="fb-follow" data-href="https://www.facebook.com/flitelibrary" data-width="100" data-height="35" data-colorscheme="light" data-layout="standard" data-show-faces="false"></div>
+
+<a href="http://www.twitter.com/FLITElibrary"><img src="http://twitter-badges.s3.amazonaws.com/follow_us-a.png" alt="Follow FLITElibrary on Twitter" border="0px" /></a><br />
+<a href="http://www.facebook.com/flitelibrary"><img src="facebook-button3.png" width="160" alt="Follow FLITElibrary on facebook" border="0px" /></a>
+-->
+<a href="http://www.twitter.com/FLITElibrary"><img src="http://www.ferris.edu/library/images/twitter.png" width="24px" alt="Follow FLITE Library on Twitter" border="0px" /></a>
+<a href="http://www.facebook.com/flitelibrary"><img src="http://www.ferris.edu/library/images/facebook.png" width="24px" alt="Follow FLITE Library on facebook" border="0px" /></a>
+<a href="https://www.instagram.com/flitelib"><img src="http://www.ferris.edu/library/images/instagram.png" width="24px" alt="Follow FLITE Library on instagram" border="0px" /></a>
+</div>
+<br />
+
+<div class="shiftleft">
+<a href="../../library/reference/helppagechat.html"><img src="http://www.ferris.edu/library/images/reponline.gif"></a>
+</div>
+<div id="schedule" class="small"></div>
+</div>
+<br class="clearall" />
+
+</article>
+</div>
+<article>
+<div id="middlemain">
+<div class="tabber">
+<div class="tabbertab">
+	<h2>SmartSearch</h2>
+	<h6>SmartSearch</h6>
+	<form name="searchForm" role="search" method="get" action="http://tcna.primo.hosted.exlibrisgroup.com/primo_library/libweb/action/dlSearch.do" enctype="application/x-www-form-urlencoded; charset=utf-8" id="simple" target="_self">
+	<div class="boxOutline">
+		<!-- <label>Search For :</label> -->
+		<input type="text" size="30" id="primoQueryTemp" placeholder="Find books, articles &amp; more" name="queryTemp" onkeypress="searchKeyPress(event);">
+		<input name="institution" value="FSU" type="hidden">
+	    <input name="vid" value="FSU" type="hidden">
+		<input name="tab" value="default_tab" type="hidden">
+	    <input name="group" value="GUEST" type="hidden">
+	    <input name="onCampus" value="true" type="hidden">
+	    <input name="displayMode" value="full" type="hidden">
+		<input type="hidden" name="search_scope" value="everything_flite">
+	    <input type="hidden" id="primoQuery" name="query">
+	    <input value="Search" id="gosmart" class="submit" title="Search" alt="Search" type="button" onClick="searchPrimo()">
+	</div>
+	</form>
+	  <div class="clearall"></div>
+	  <br />
+	  <dl>
+	  	<dd><a href="http://library.ferris.edu/smartsearchpopup.html" onClick="window.open(this.href,'smartsearchpopup','height=400,width=400,screenX=20,screenY=10,scrollbars=no'); return false">What is SmartSearch?</a></dd>
+	  </dl>
+</div>
+
+<div class="tabbertab">
+	<h2>Databases</h2>
+	<h6>Databases</h6>
+	<dl>
+		<dd><a href="http://library.ferris.edu/databases.html">Browse by academic major or topic</a></dd>
+		<dd><a href="http://ferris.libguides.com/az.php">Select a database (alphabetical by title)</a></dd>
+		<dd><a href="http://ferris.libguides.com/subjectarea">Select a database by subject area</a></dd>
+		<dd><a href="http://ferris.libguides.com/az.php?t=19884">Online Encyclopedias, Dictionaries etc.</a></dd>
+		<dd><a href="http://ferris.libguides.com/az.php?t=20506">Streaming Video</a></dd>
+
+	</dl>
+		<!-- <dd><a href="http://libun2.ferris.edu/SmartSearch/biography.html">Search for a person</a></dd>
+		<dd><a href="http://libun2.ferris.edu/SmartSearch/intropage.html">Help me get started</a></dd>
+	<p><strong>Search for databases by keyword (If you already know the database name, click <a href="http://library.ferris.edu/dbaccess.html">here.</a>  If you are searching for a person click <a href="http://libun2.ferris.edu/SmartSearch/biography.html">here.</a>)</strong></p>
+	<form name="form1" action="http://libun2.ferris.edu/SmartSearch/multitermsearch.php">
+	  <p><input name="textfield" type="text" size="35"> <input type="submit" name="Submit" value="Enter"></p>
+	</form> -->
+</div>
+<div class="tabbertab">
+	<h2>Catalog</h2>
+	<h6>Catalog</h6>
+
+	<!-- BEGIN CATALOGSEACH.INC -->
+
+	<!-- start search box -->
+	<form method="get" action="javascript:gosearch();">
+	<div class="boxOutline">
+
+	<div style="display:none;">
+		<input type="hidden" name="encorebase" id="encorebase" value="http://encore.ferris.edu/iii/encore/search/C|S">
+		<input type="hidden" name="searchlocation" id="searchlocation" value="|Lf:facetcollections:0:0:Ferris State University::|Orightresult?lang=eng&suite=pearl">
+	</div>
+	<div id="search_box">
+		<input type="text" name="target" placeholder="Enter your search" value="" size="35" id="target" onKeyPress="return submitenter(this,event)">
+		<input type="submit" class="submit" value="Search" id="go">
+	</div>
+	</div>
+
+	</form>
+	<!-- end search box -->
+
+<br /><br />
+<dl>
+	<dd><a href="http://libcat.ferris.edu/search~S1">Classic Catalog</a></dd>
+	<dd><a href="http://libcat.ferris.edu/search~S1/r">Class Reserves (obtain at checkout desk)</a></dd>
+	<dd><a href="http://ferris.libguides.com/er.php">Electronic Class Reserves (E-Reserves)</a></dd>
+	<dd><a href="http://libcat.ferris.edu/search~S8">Media Booking</a></dd>
+	<dd><a href="https://libcat.ferris.edu/patroninfo~S9">Renew Books</a></dd>
+	<dd><a href="http://elibrary.mel.org/search">Search MelCat</a></dd>
+</dl>
+     <!-- END CATALOGSEARCH.INC -->
+</div>
+<div class="tabbertab">
+	<h2>Journals</h2>
+	<h6>Journals</h6>
+	<dl>
+	<dd><a href="http://sfx.ferris.edu/sfx_local/az">Search by Title</a></dd>
+	<dd><a href="http://sfx.ferris.edu/sfx_local/az?&amp;param_sid_save=9daf2317b6d921f01de280cd64d1804d&amp;param_lang_save=eng&amp;param_letter_group_save=&amp;param_perform_save=searchTitle&amp;param_letter_group_script_save=&amp;param_chinese_checkbox_save=0&amp;param_services2filter_save=getHolding&amp;param_services2filter_save=getFullTxt&amp;param_current_view_save=table&amp;param_jumpToPage_save=1&amp;param_type_save=textSearch&amp;param_textSearchType_save=contains&&amp;param_perform_value=searchCategories">Search by Category (Subject)</a></dd>
+	<dd><a href="http://sfx.ferris.edu/sfx_local/az?&amp;param_sid_save=9daf2317b6d921f01de280cd64d1804d&amp;param_lang_save=eng&amp;param_letter_group_save=&amp;param_perform_save=searchCategories&amp;param_letter_group_script_save=&amp;param_chinese_checkbox_save=0&amp;param_services2filter_save=getHolding&amp;param_services2filter_save=getFullTxt&amp;param_current_view_save=table&amp;param_jumpToPage_save=1&amp;param_type_save=textSearch&amp;param_textSearchType_save=contains&&amp;param_perform_value=locate">Locate by Vendor and Category</a></dd>
+	<dd><a href="http://sfx.ferris.edu/sfx_local/az?&amp;param_sid_save=9daf2317b6d921f01de280cd64d1804d&amp;param_lang_save=eng&amp;param_letter_group_save=&amp;param_perform_save=locate&amp;param_letter_group_script_save=&amp;param_chinese_checkbox_save=0&amp;param_services2filter_save=getHolding&amp;param_services2filter_save=getFullTxt&amp;param_current_view_save=table&amp;param_jumpToPage_save=1&amp;param_type_save=textSearch&amp;param_textSearchType_save=contains&&amp;param_perform_value=citation">Use CitationLinker</a></dd>
+	</dl>
+</div>
+</div>
+
+<div class="newsboxcontent">
+<h2>FLITE News</h2>
+<p>
+<script type="text/javascript" src="http://library.ferris.edu/instruction/news/news.js"></script></p>
+<p>Click <a href="http://library.ferris.edu/instruction/news/newsall.html" onClick="window.open(this.href,'newsall','screenX=20,screenY=10,width=540,height=500,scrollbars=yes'); return false">here</a> for more FLITE news</p>
+</div>
+<br class="clearall" />
+
+</div>
+</article>
+<div id="rightmain">
+<article>
+<div class="gradientbox">
+<h1>Featured Resource</h1>
+
+<script type="text/javascript">
+	document.write(feature_text[j]);
+</script>
+
+<br class="clearall" />
+
+</div>
+</article>
+</div>
+<div class="clearall"></div>
+</div>
+</body>
+
+<script>
+var ww = document.body.clientWidth;
+
+$(document).ready(function() {
+$(".nav li a").each(function() {
+if ($(this).next().length > 0) {
+$(this).addClass("parent");
+};
+})
+
+$(".toggleMenu").click(function(e) {
+e.preventDefault();
+$(this).toggleClass("active");
+$(".nav").toggle();
+});
+adjustMenu();
+})
+
+$(window).bind('resize orientationchange', function() {
+ww = document.body.clientWidth;
+adjustMenu();
+});
+
+var adjustMenu = function() {
+if (ww < 769) {
+$(".toggleMenu").css("display", "inline-block");
+if (!$(".toggleMenu").hasClass("active")) {
+$(".nav").hide();
+} else {
+$(".nav").show();
+}
+$(".nav li").unbind('mouseenter mouseleave');
+$(".nav li a.parent").unbind('click').bind('click', function(e) {
+// must be attached to anchor element to prevent bubbling
+e.preventDefault();
+$(this).parent("li").toggleClass("hover");
+});
+}
+else if (ww >= 769) {
+$(".toggleMenu").css("display", "none");
+$(".nav").show();
+$(".nav li").removeClass("hover");
+$(".nav li a").unbind('click');
+$(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
+// must be attached to li so that mouseleave is not triggered when hover over submenu
+$(this).toggleClass('hover');
+});
+}
+}
+
+</script>
+<script>
+$(document).ready(function () {
+  $('#nav2 > li > a').click(function(){
+    if ($(this).attr('class') != 'active'){
+      $('#nav2 li ul').slideUp();
+      $(this).next().slideToggle();
+      $('#nav2 li a').removeClass('active');
+      $(this).addClass('active');
+    }
+    else {
+      $('#nav2 li ul').slideUp();
+      $('#nav2 li a').removeClass('active');
+	}
+  });
+});
+</script>
+
+<!-- This script is to compensate for the inline and float right bug in Webkit browsers  -->
+<script>
+var n = document.createTextNode(' ');
+$( window ).resize(function() {
+	$('#topstuff').hide();
+	$('#topstuff').get(0).offsetHeight; // no need to store this anywhere, the reference is enough
+	$('#topstuff').show();
+});
+</script>
+</script>
+<script type='text/javascript'>
+	ajaxFunction();
+</script>
+
+</html>

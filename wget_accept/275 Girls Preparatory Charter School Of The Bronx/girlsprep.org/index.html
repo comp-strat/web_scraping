@@ -1,0 +1,1783 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://jrs-s.net/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://jrs-s.net/wp-content/themes/twentyfifteen/js/html5.js"></script>
+	<![endif]-->
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>JRS Systems: the blog | technomancy made simple</title>
+<link rel="alternate" type="application/rss+xml" title="JRS Systems: the blog &raquo; Feed" href="http://jrs-s.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="JRS Systems: the blog &raquo; Comments Feed" href="http://jrs-s.net/comments/feed/" />
+<link rel='stylesheet' id='twentyfifteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://jrs-s.net/wp-content/themes/twentyfifteen/genericons/genericons.css?ver=3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyfifteen-style-css'  href='http://jrs-s.net/wp-content/themes/twentyfifteen-jrs/style.css?ver=4.3.9' type='text/css' media='all' />
+<style id='twentyfifteen-style-inline-css' type='text/css'>
+	/* Color Scheme */
+
+	/* Background Color */
+	body {
+		background-color: #e9f2f9;
+	}
+
+	/* Sidebar Background Color */
+	body:before,
+	.site-header {
+		background-color: #55c3dc;
+	}
+
+	/* Box Background Color */
+	.post-navigation,
+	.pagination,
+	.secondary,
+	.site-footer,
+	.hentry,
+	.page-header,
+	.page-content,
+	.comments-area,
+	.widecolumn {
+		background-color: #ffffff;
+	}
+
+	/* Box Background Color */
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.pagination .prev,
+	.pagination .next,
+	.widget_calendar tbody a,
+	.widget_calendar tbody a:hover,
+	.widget_calendar tbody a:focus,
+	.page-links a,
+	.page-links a:hover,
+	.page-links a:focus,
+	.sticky-post {
+		color: #ffffff;
+	}
+
+	/* Main Text Color */
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	.pagination .prev,
+	.pagination .next,
+	.widget_calendar tbody a,
+	.page-links a,
+	.sticky-post {
+		background-color: #22313f;
+	}
+
+	/* Main Text Color */
+	body,
+	blockquote cite,
+	blockquote small,
+	a,
+	.dropdown-toggle:after,
+	.image-navigation a:hover,
+	.image-navigation a:focus,
+	.comment-navigation a:hover,
+	.comment-navigation a:focus,
+	.widget-title,
+	.entry-footer a:hover,
+	.entry-footer a:focus,
+	.comment-metadata a:hover,
+	.comment-metadata a:focus,
+	.pingback .edit-link a:hover,
+	.pingback .edit-link a:focus,
+	.comment-list .reply a:hover,
+	.comment-list .reply a:focus,
+	.site-info a:hover,
+	.site-info a:focus {
+		color: #22313f;
+	}
+
+	/* Main Text Color */
+	.entry-content a,
+	.entry-summary a,
+	.page-content a,
+	.comment-content a,
+	.pingback .comment-body > a,
+	.author-description a,
+	.taxonomy-description a,
+	.textwidget a,
+	.entry-footer a:hover,
+	.comment-metadata a:hover,
+	.pingback .edit-link a:hover,
+	.comment-list .reply a:hover,
+	.site-info a:hover {
+		border-color: #22313f;
+	}
+
+	/* Secondary Text Color */
+	button:hover,
+	button:focus,
+	input[type="button"]:hover,
+	input[type="button"]:focus,
+	input[type="reset"]:hover,
+	input[type="reset"]:focus,
+	input[type="submit"]:hover,
+	input[type="submit"]:focus,
+	.pagination .prev:hover,
+	.pagination .prev:focus,
+	.pagination .next:hover,
+	.pagination .next:focus,
+	.widget_calendar tbody a:hover,
+	.widget_calendar tbody a:focus,
+	.page-links a:hover,
+	.page-links a:focus {
+		background-color: #22313f; /* Fallback for IE7 and IE8 */
+		background-color: rgba( 34, 49, 63, 0.7);
+	}
+
+	/* Secondary Text Color */
+	blockquote,
+	a:hover,
+	a:focus,
+	.main-navigation .menu-item-description,
+	.post-navigation .meta-nav,
+	.post-navigation a:hover .post-title,
+	.post-navigation a:focus .post-title,
+	.image-navigation,
+	.image-navigation a,
+	.comment-navigation,
+	.comment-navigation a,
+	.widget,
+	.author-heading,
+	.entry-footer,
+	.entry-footer a,
+	.taxonomy-description,
+	.page-links > .page-links-title,
+	.entry-caption,
+	.comment-author,
+	.comment-metadata,
+	.comment-metadata a,
+	.pingback .edit-link,
+	.pingback .edit-link a,
+	.post-password-form label,
+	.comment-form label,
+	.comment-notes,
+	.comment-awaiting-moderation,
+	.logged-in-as,
+	.form-allowed-tags,
+	.no-comments,
+	.site-info,
+	.site-info a,
+	.wp-caption-text,
+	.gallery-caption,
+	.comment-list .reply a,
+	.widecolumn label,
+	.widecolumn .mu_register label {
+		color: #22313f; /* Fallback for IE7 and IE8 */
+		color: rgba( 34, 49, 63, 0.7);
+	}
+
+	/* Secondary Text Color */
+	blockquote,
+	.logged-in-as a:hover,
+	.comment-author a:hover {
+		border-color: #22313f; /* Fallback for IE7 and IE8 */
+		border-color: rgba( 34, 49, 63, 0.7);
+	}
+
+	/* Border Color */
+	hr,
+	.dropdown-toggle:hover,
+	.dropdown-toggle:focus {
+		background-color: #22313f; /* Fallback for IE7 and IE8 */
+		background-color: rgba( 34, 49, 63, 0.1);
+	}
+
+	/* Border Color */
+	pre,
+	abbr[title],
+	table,
+	th,
+	td,
+	input,
+	textarea,
+	.main-navigation ul,
+	.main-navigation li,
+	.post-navigation,
+	.post-navigation div + div,
+	.pagination,
+	.comment-navigation,
+	.widget li,
+	.widget_categories .children,
+	.widget_nav_menu .sub-menu,
+	.widget_pages .children,
+	.site-header,
+	.site-footer,
+	.hentry + .hentry,
+	.author-info,
+	.entry-content .page-links a,
+	.page-links > span,
+	.page-header,
+	.comments-area,
+	.comment-list + .comment-respond,
+	.comment-list article,
+	.comment-list .pingback,
+	.comment-list .trackback,
+	.comment-list .reply a,
+	.no-comments {
+		border-color: #22313f; /* Fallback for IE7 and IE8 */
+		border-color: rgba( 34, 49, 63, 0.1);
+	}
+
+	/* Border Focus Color */
+	a:focus,
+	button:focus,
+	input:focus {
+		outline-color: #22313f; /* Fallback for IE7 and IE8 */
+		outline-color: rgba( 34, 49, 63, 0.3);
+	}
+
+	input:focus,
+	textarea:focus {
+		border-color: #22313f; /* Fallback for IE7 and IE8 */
+		border-color: rgba( 34, 49, 63, 0.3);
+	}
+
+	/* Sidebar Link Color */
+	.secondary-toggle:before {
+		color: #ffffff;
+	}
+
+	.site-title a,
+	.site-description {
+		color: #ffffff;
+	}
+
+	/* Sidebar Text Color */
+	.site-title a:hover,
+	.site-title a:focus {
+		color: rgba( 255, 255, 255, 0.7);
+	}
+
+	/* Sidebar Border Color */
+	.secondary-toggle {
+		border-color: #ffffff; /* Fallback for IE7 and IE8 */
+		border-color: rgba( 255, 255, 255, 0.1);
+	}
+
+	/* Sidebar Border Focus Color */
+	.secondary-toggle:hover,
+	.secondary-toggle:focus {
+		border-color: #ffffff; /* Fallback for IE7 and IE8 */
+		border-color: rgba( 255, 255, 255, 0.3);
+	}
+
+	.site-title a {
+		outline-color: #ffffff; /* Fallback for IE7 and IE8 */
+		outline-color: rgba( 255, 255, 255, 0.3);
+	}
+
+	/* Meta Background Color */
+	.entry-footer {
+		background-color: #f1f1f1;
+	}
+
+	@media screen and (min-width: 38.75em) {
+		/* Main Text Color */
+		.page-header {
+			border-color: #22313f;
+		}
+	}
+
+	@media screen and (min-width: 59.6875em) {
+		/* Make sure its transparent on desktop */
+		.site-header,
+		.secondary {
+			background-color: transparent;
+		}
+
+		/* Sidebar Background Color */
+		.widget button,
+		.widget input[type="button"],
+		.widget input[type="reset"],
+		.widget input[type="submit"],
+		.widget_calendar tbody a,
+		.widget_calendar tbody a:hover,
+		.widget_calendar tbody a:focus {
+			color: #55c3dc;
+		}
+
+		/* Sidebar Link Color */
+		.secondary a,
+		.dropdown-toggle:after,
+		.widget-title,
+		.widget blockquote cite,
+		.widget blockquote small {
+			color: #ffffff;
+		}
+
+		.widget button,
+		.widget input[type="button"],
+		.widget input[type="reset"],
+		.widget input[type="submit"],
+		.widget_calendar tbody a {
+			background-color: #ffffff;
+		}
+
+		.textwidget a {
+			border-color: #ffffff;
+		}
+
+		/* Sidebar Text Color */
+		.secondary a:hover,
+		.secondary a:focus,
+		.main-navigation .menu-item-description,
+		.widget,
+		.widget blockquote,
+		.widget .wp-caption-text,
+		.widget .gallery-caption {
+			color: rgba( 255, 255, 255, 0.7);
+		}
+
+		.widget button:hover,
+		.widget button:focus,
+		.widget input[type="button"]:hover,
+		.widget input[type="button"]:focus,
+		.widget input[type="reset"]:hover,
+		.widget input[type="reset"]:focus,
+		.widget input[type="submit"]:hover,
+		.widget input[type="submit"]:focus,
+		.widget_calendar tbody a:hover,
+		.widget_calendar tbody a:focus {
+			background-color: rgba( 255, 255, 255, 0.7);
+		}
+
+		.widget blockquote {
+			border-color: rgba( 255, 255, 255, 0.7);
+		}
+
+		/* Sidebar Border Color */
+		.main-navigation ul,
+		.main-navigation li,
+		.widget input,
+		.widget textarea,
+		.widget table,
+		.widget th,
+		.widget td,
+		.widget pre,
+		.widget li,
+		.widget_categories .children,
+		.widget_nav_menu .sub-menu,
+		.widget_pages .children,
+		.widget abbr[title] {
+			border-color: rgba( 255, 255, 255, 0.1);
+		}
+
+		.dropdown-toggle:hover,
+		.dropdown-toggle:focus,
+		.widget hr {
+			background-color: rgba( 255, 255, 255, 0.1);
+		}
+
+		.widget input:focus,
+		.widget textarea:focus {
+			border-color: rgba( 255, 255, 255, 0.3);
+		}
+
+		.sidebar a:focus,
+		.dropdown-toggle:focus {
+			outline-color: rgba( 255, 255, 255, 0.3);
+		}
+	}
+
+		/* Custom Header Background Color */
+		body:before,
+		.site-header {
+			background-color: #0b1256;
+		}
+
+		@media screen and (min-width: 59.6875em) {
+			.site-header,
+			.secondary {
+				background-color: transparent;
+			}
+
+			.widget button,
+			.widget input[type="button"],
+			.widget input[type="reset"],
+			.widget input[type="submit"],
+			.widget_calendar tbody a,
+			.widget_calendar tbody a:hover,
+			.widget_calendar tbody a:focus {
+				color: #0b1256;
+			}
+		}
+	
+</style>
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfifteen-ie-css'  href='http://jrs-s.net/wp-content/themes/twentyfifteen/css/ie.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='twentyfifteen-ie7-css'  href='http://jrs-s.net/wp-content/themes/twentyfifteen/css/ie7.css?ver=20141010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://jrs-s.net/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://jrs-s.net/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://jrs-s.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://jrs-s.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3.9" />
+
+<!-- Bad Behavior 2.2.18 run time: 0.832 ms -->
+<script type="text/javascript">
+<!--
+function bb2_addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			oldonload();
+			func();
+		}
+	}
+}
+
+bb2_addLoadEvent(function() {
+	for ( i=0; i < document.forms.length; i++ ) {
+		if (document.forms[i].method == 'post') {
+			var myElement = document.createElement('input');
+			myElement.setAttribute('type', 'hidden');
+			myElement.name = 'bb2_screener_';
+			myElement.value = '1488998125 2607:f140:400:a006:19b1:fcf0:81f5:5e4c 2607:f140:400:a006:19b1:fcf0:81f5:5e4c, 2607:f140:400:a006:19b1:fcf0:81f5:5e4c';
+			document.forms[i].appendChild(myElement);
+		}
+	}
+});
+// --></script>
+		<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #556c99; }
+</style>
+
+<script type='text/javascript' src='http://jrs-s.net/wp-content/plugins/wp-spamshield/js/jscripts.php'></script> 
+</head>
+
+<body class="home blog custom-background">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="index.html#content">Skip to content</a>
+
+	<div id="sidebar" class="sidebar">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+										<h1 class="site-title"><a href="http://jrs-s.net/" rel="home">JRS Systems: the blog</a></h1>
+											<p class="site-description">technomancy made simple</p>
+									<button class="secondary-toggle">Menu and widgets</button>
+			</div><!-- .site-branding -->
+		</header><!-- .site-header -->
+
+			<div id="secondary" class="secondary">
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+				<div class="menu-test-container"><ul id="menu-test" class="nav-menu"><li id="menu-item-501" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-501"><a href="http://jrs-s.net/about/">About</a></li>
+<li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="http://jrs-s.net/contact/">Contact</a></li>
+</ul></div>			</nav><!-- .main-navigation -->
+		
+		
+					<div id="widget-area" class="widget-area" role="complementary">
+				<aside id="categories-3" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+	<li class="cat-item cat-item-6"><a href="http://jrs-s.net/category/windows-server/net/" >.NET</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://jrs-s.net/category/open-source/linux/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-26"><a href="http://jrs-s.net/category/business/" >Business</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://jrs-s.net/category/open-source/linux/debian/" >Debian</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://jrs-s.net/category/open-source/freebsd/" >FreeBSD</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://jrs-s.net/category/hardware/" >Hardware</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://jrs-s.net/category/open-source/linux/" >Linux</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://jrs-s.net/category/open-source/mailservers/" title="Postfix, Dovecot, Exim, Qmail, etc">Mailservers</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://jrs-s.net/category/windows-desktop/malware/" >Malware</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="http://jrs-s.net/category/windows-server/microsoft-exchange/" >Microsoft Exchange</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://jrs-s.net/category/open-source/" >Open Source</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://jrs-s.net/category/hardware/solid-state-drives/" >Solid State Drives</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://jrs-s.net/category/open-source/linux/ubuntu/" >Ubuntu</a>
+</li>
+	<li class="cat-item cat-item-19"><a href="http://jrs-s.net/category/open-source/webservers/" title="apache, nginx, lighttpd, etc">Webservers</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="http://jrs-s.net/category/windows-desktop/" >Windows Desktop</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://jrs-s.net/category/windows-server/" >Windows Server</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="http://jrs-s.net/category/open-source/zfs/" >ZFS</a>
+</li>
+		</ul>
+</aside><aside id="archives-3" class="widget widget_archive"><h2 class="widget-title">Archives</h2>		<ul>
+	<li><a href='http://jrs-s.net/2017/02/'>February 2017</a></li>
+	<li><a href='http://jrs-s.net/2016/11/'>November 2016</a></li>
+	<li><a href='http://jrs-s.net/2016/10/'>October 2016</a></li>
+	<li><a href='http://jrs-s.net/2016/09/'>September 2016</a></li>
+	<li><a href='http://jrs-s.net/2016/06/'>June 2016</a></li>
+	<li><a href='http://jrs-s.net/2016/05/'>May 2016</a></li>
+	<li><a href='http://jrs-s.net/2015/11/'>November 2015</a></li>
+	<li><a href='http://jrs-s.net/2015/10/'>October 2015</a></li>
+	<li><a href='http://jrs-s.net/2015/08/'>August 2015</a></li>
+	<li><a href='http://jrs-s.net/2015/05/'>May 2015</a></li>
+	<li><a href='http://jrs-s.net/2015/02/'>February 2015</a></li>
+	<li><a href='http://jrs-s.net/2015/01/'>January 2015</a></li>
+	<li><a href='http://jrs-s.net/2014/12/'>December 2014</a></li>
+	<li><a href='http://jrs-s.net/2014/10/'>October 2014</a></li>
+	<li><a href='http://jrs-s.net/2014/08/'>August 2014</a></li>
+	<li><a href='http://jrs-s.net/2014/07/'>July 2014</a></li>
+	<li><a href='http://jrs-s.net/2014/06/'>June 2014</a></li>
+	<li><a href='http://jrs-s.net/2014/05/'>May 2014</a></li>
+	<li><a href='http://jrs-s.net/2014/04/'>April 2014</a></li>
+	<li><a href='http://jrs-s.net/2014/02/'>February 2014</a></li>
+	<li><a href='http://jrs-s.net/2013/07/'>July 2013</a></li>
+	<li><a href='http://jrs-s.net/2013/06/'>June 2013</a></li>
+	<li><a href='http://jrs-s.net/2013/05/'>May 2013</a></li>
+	<li><a href='http://jrs-s.net/2013/04/'>April 2013</a></li>
+	<li><a href='http://jrs-s.net/2013/03/'>March 2013</a></li>
+	<li><a href='http://jrs-s.net/2012/10/'>October 2012</a></li>
+	<li><a href='http://jrs-s.net/2012/09/'>September 2012</a></li>
+	<li><a href='http://jrs-s.net/2012/08/'>August 2012</a></li>
+	<li><a href='http://jrs-s.net/2012/07/'>July 2012</a></li>
+	<li><a href='http://jrs-s.net/2012/06/'>June 2012</a></li>
+	<li><a href='http://jrs-s.net/2012/05/'>May 2012</a></li>
+	<li><a href='http://jrs-s.net/2012/04/'>April 2012</a></li>
+	<li><a href='http://jrs-s.net/2012/03/'>March 2012</a></li>
+	<li><a href='http://jrs-s.net/2012/02/'>February 2012</a></li>
+	<li><a href='http://jrs-s.net/2011/12/'>December 2011</a></li>
+	<li><a href='http://jrs-s.net/2011/10/'>October 2011</a></li>
+	<li><a href='http://jrs-s.net/2011/08/'>August 2011</a></li>
+	<li><a href='http://jrs-s.net/2011/07/'>July 2011</a></li>
+	<li><a href='http://jrs-s.net/2011/06/'>June 2011</a></li>
+	<li><a href='http://jrs-s.net/2011/03/'>March 2011</a></li>
+	<li><a href='http://jrs-s.net/2011/01/'>January 2011</a></li>
+	<li><a href='http://jrs-s.net/2010/12/'>December 2010</a></li>
+	<li><a href='http://jrs-s.net/2010/11/'>November 2010</a></li>
+	<li><a href='http://jrs-s.net/2010/10/'>October 2010</a></li>
+	<li><a href='http://jrs-s.net/2010/05/'>May 2010</a></li>
+	<li><a href='http://jrs-s.net/2010/04/'>April 2010</a></li>
+	<li><a href='http://jrs-s.net/2010/02/'>February 2010</a></li>
+		</ul>
+</aside><aside id="text-4" class="widget widget_text">			<div class="textwidget"><img src="http://jrs-s.net/wp-content/uploads/2015/02/this-is-fine.jpg" height=1 width=1></div>
+		</aside>			</div><!-- .widget-area -->
+		
+	</div><!-- .secondary -->
+
+	</div><!-- .sidebar -->
+
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+			
+<article id="post-768" class="post-768 post type-post status-publish format-standard hentry category-business">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="http://jrs-s.net/2017/02/28/office-2016-for-mac-on-the-microsoft-vlsc-volume-license-service-center-by-way-of-techsoup/" rel="bookmark">Office 2016 for Mac on the Microsoft VLSC (Volume License Service Center) by way of TechSoup</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>If you bought Office 2016 for the Mac by way of volume licensing &#8211; for example, if you&#8217;re a non-profit and got it through TechSoup &#8211; you may have a hell of a time figuring out how to actually GET it. Above and beyond the usual fandango of getting an open license agreement and creating a Windows Live account for the same email address the OLSA is attached to and creating a VLSC account on that Windows Live account and taking ownership of the OLSA&#8230; things get deeply weird when you try to download it. <br clear="all"></p>
+<figure id="attachment_769" style="width: 953px;" class="wp-caption aligncenter"><a href="http://jrs-s.net/wp-content/uploads/2017/02/office-for-mac-1-e1488320751894.png"><img src="http://jrs-s.net/wp-content/uploads/2017/02/office-for-mac-1-e1488320751894.png" alt="I had to google to even figure out what &quot;Office Online Server&quot; was.  Hint: you can&#039;t actually install it on a Mac..." width="953" height="566" class="size-full wp-image-769" /></a><figcaption class="wp-caption-text">I had to google to even figure out what &#8220;Office Online Server&#8221; was.  Hint: you can&#8217;t actually install it on a Mac&#8230;</figcaption></figure>
+<p>There&#8217;s your Microsoft Office for Mac 2016 Standard in the Downloads section, and it has the usual glowing text about how awesome it will be to have Office 2016 for your Mac in the Description tab&#8230; but when you click Download, all of a sudden you&#8217;re faces with a download for &#8220;Office Online Server&#8221;, which has absolutely <em>nothing </em>to do with Office 2016 for Mac.</p>
+<p>I went around and around trying to figure out what was going on with this, to no avail.  I eventually figured out &#8211; due to scads of people posting about OTHER problems with the Mac installer, which I fervently hope I won&#8217;t encounter once I actually get the chance to install this thing &#8211; that the ISO I should be seeing was about 1.6GB in size.  The ISO for &#8220;Office Online Server 64 Bit English&#8221; is a &#8220;svelte&#8221; 599MB, so that&#8217;s <em>not</em> it.</p>
+<p>Eventually, just before giving up and trying to file a bug report with Microsoft about mislabeled downloads on the VLSC, I looked hard at the &#8220;32/64 bit&#8221; Operating System Type.  I mean, I&#8217;d looked at it ten times already and moved on, because, sure, OS X should be taking a multi-arch installer, why not?  But when I actually clicked the drop down&#8230;</p>
+<p><figure id="attachment_770" style="width: 978px;" class="wp-caption aligncenter"><a href="http://jrs-s.net/wp-content/uploads/2017/02/office-for-mac-2.png"><img src="http://jrs-s.net/wp-content/uploads/2017/02/office-for-mac-2.png" alt="somebody at Microsoft is in need of a paddlin&#039;. Why the hell isn&#039;t &quot;MAC&quot; the *default* operating system type for &quot;Office 2016 Standard FOR MAC?!&quot;" width="978" height="576" class="size-full wp-image-770" /></a><figcaption class="wp-caption-text">somebody at Microsoft is in need of a paddlin&#8217;. Why the hell isn&#8217;t &#8220;MAC&#8221; the *default* operating system type for &#8220;Office 2016 Standard FOR MAC?!&#8221;</figcaption></figure><br />
+Yyyyyyeah.  Hope this helps somebody else, that was a frustrating half hour or so.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="http://jrs-s.net/2017/02/28/office-2016-for-mac-on-the-microsoft-vlsc-volume-license-service-center-by-way-of-techsoup/" rel="bookmark"><time class="entry-date published" datetime="2017-02-28T17:19:15+00:00">February 28, 2017</time><time class="updated" datetime="2017-02-28T17:26:09+00:00">February 28, 2017</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="http://jrs-s.net/category/business/" rel="category tag">Business</a></span><span class="comments-link"><a href="http://jrs-s.net/2017/02/28/office-2016-for-mac-on-the-microsoft-vlsc-volume-license-service-center-by-way-of-techsoup/#respond">Leave a comment<span class="screen-reader-text"> on Office 2016 for Mac on the Microsoft VLSC (Volume License Service Center) by way of TechSoup</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+<article id="post-749" class="post-749 post type-post status-publish format-standard hentry category-business category-hardware category-zfs">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="http://jrs-s.net/2016/11/08/depressing-storage-calculator/" rel="bookmark">Depressing Storage Calculator</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<h1>When a Terabyte is not a Terabyte</h1>
+<p>It seems like a stupid question, if you&#8217;re not an IT professional &#8211; and maybe even if you are &#8211; how much storage does it take to store 1TB of data?  Unfortunately, it&#8217;s <em>not</em> a stupid question in the vein of &#8220;what weighs more, a pound of feathers or a pound of bricks&#8221;, and the answer isn&#8217;t &#8220;one terabyte&#8221; either.  I&#8217;m going to try to break down all the various things that make the answer harder &#8211; and unhappier &#8211; in easy steps.  Not everybody will need all of these things, so I&#8217;ll try to lay it out in a reasonably likely order from &#8220;affects everybody&#8221; to &#8220;only affects mission-critical business data with real RTO and RPO defined&#8221;.</p>
+<h1>Counting the Costs</h1>
+<h2>Simple Local Storage</h2>
+<h3>Computer TB vs Manufacturer TB</h3>
+<p>To your computer, and to all computers since the dawn of computing, a KB is actually a &#8220;kibibyte&#8221;, a megabyte a &#8220;mebibyte&#8221;, and so forth &#8211; they&#8217;re powers of two, not of ten.  So 1 KiB = 2^10 = 1024.  That&#8217;s an extra 24 bytes from a proper Kilobyte, which is 10^3 = 1000.  No big deal, right?  Well, the difference squares itself with each hop up from KB to MB to GB to TB, and gets that much more significant.  Storage manufacturers prefer &#8211; and also have, since the dawn of time &#8211; to measure in those proper power-of-ten units, since that means they get to put bigger numbers on a device of a given actual size and thus try to trick you into thinking it&#8217;s somehow better.</p>
+<p>At the Terabyte/Tebibyte level, you&#8217;re talking about the difference between 2^40 and 10^12.  So 1 TiB, as your computer measures data, is 1.0995 TB as the rat bastards who sell hard drives measure storage. Let&#8217;s just go ahead and round that up to a nice easy 1.1.  </p>
+<p><strong>TL;DR: multiply times 1.1 to account for vendor units.</strong></p>
+<h3>Working Free Space</h3>
+<p>Remember those sliding number puzzles you had as a kid, where the digits 1-8 were embedded in a 9-square grid, and you were supposed to slide them around one at a time until you got them in order?  Without the &#8220;9&#8221; missing, you wouldn&#8217;t be able to slide them.  That&#8217;s a pretty decent rough analogy of how storage generally works, for all sorts of general reasons.  If you don&#8217;t have any free space, you can&#8217;t move the tiles around and actually get anything done.  For our sliding number puzzles when we were kids, that was 8/9 of the available storage occupied.  A better rule of thumb for us is 8/10, or 80%.  Once your disk(s) are 80% full, you should consider them <em>full</em>, and you should immediately be either deleting things or upgrading.  If they hit <em>90%</em> full, you should consider your own personal pants to be on actual fire, and react with an appropriate amount of immediacy to remedy that.</p>
+<p><strong>TL;DR: multiply times 1.25 to account for working free space.</strong></p>
+<h3>Growth</h3>
+<p>You&#8217;re probably not <em>really</em> planning on just storing one chunk of data you have right now and never changing it.  You&#8217;re almost certainly talking about curating an ever-growing collection of data that changes and accumulates as time goes on.  Most people and businesses should plan on their data storage needs to double about every five years &#8211; that&#8217;s pretty conservative; it can easily get worse than that.  Still, five years is <em>also</em> a pretty decent &#8211; and very conservative, not aggressive &#8211; hardware refresh cycle.  So let&#8217;s say we want to plan for our storage needs to be fulfilled by what we buy now, until we need new everything anyway.  That means doubling everything so you don&#8217;t have to upgrade for another few years.</p>
+<p><strong>TL;DR: multiply times 2.0 to account for data growth over the next few years.</strong></p>
+<h2>Disaster Recovery</h2>
+<p>What, you weren&#8217;t planning on not backing your stuff up, were you?  At a bare <em>minimum</em>, you&#8217;re going to need as much storage for backup as you did for production &#8211; most likely, you&#8217;ll need considerably more.  We&#8217;ll be <em>super super generous</em> here and assume all you need is enough space for one single full backup &#8211; which usually only applies if you also have redundancy and very heavy-duty &#8220;oops recovery&#8221; and maybe hotspares as well.  But if you don&#8217;t have all those things&#8230; this really isn&#8217;t enough.  Really.</p>
+<p><strong>TL;DR: multiply times 2.0 to account for one full backup, as disaster recovery.</strong></p>
+<h2>Redundancy, Hotspares, and Snapshots</h2>
+<h3>Snapshots / &#8220;Oops Recovery&#8221; Schemes</h3>
+<p>You want to have a way to fix it pretty much immediately if you accidentally break a document.  What this scheme looks like may differ depending on the sophistication of the system you&#8217;re working on.  At best, you&#8217;re talking something like ZFS snapshots.  In the middle of the road, Windows&#8217; Volume Shadow Copy service (what powers the &#8220;Previous Versions&#8221; tab in Windows Explorer).  At worst, the Recycle Bin.  (And that&#8217;s really not good enough and you should figure out a way to do better.)  What these things all have in common is that they offer a limiting factor to how badly you can screw yourself with the stroke of a key &#8211; you can &#8220;undo&#8221; whatever it is you broke to a relatively recent version that wasn&#8217;t broken in just a few clicks.</p>
+<p>Different &#8220;oops recovery&#8221; schemes have different levels of efficiency, and different amounts of point-in-time granularity.  My own ZFS-based systems maintain 30 hourly snapshots, 30 daily snapshots, and 3 monthly snapshots.  I generally plan for snapshot space to take up about 33% as much space as my production storage, and that&#8217;s not a bad rule of thumb across the board, even if you can&#8217;t cram as many of your own schemes level of &#8220;oops points&#8221; in the same amount of space.</p>
+<p><strong>TL;DR: multiply times 1.3 to account for snapshots, VSS, or other &#8220;oops recovery&#8221;.</strong></p>
+<h3>Redundancy</h3>
+<p>Redundancy &#8211; in the form of mirrored drives, striped RAID arrays, and so forth &#8211; is not a backup!  However, it is a very, very useful thing to help you avoid the downtime monster, and in the case of more advanced storage schema like ZFS, to avoid corruption and bitrot.  If you&#8217;re using 1:1 redundancy &#8211; RAID1, RAID10, ZFS mirrors, or btrfs-RAID1 distributed redundancy &#8211; this means you need two of every drive.  If you&#8217;re using two blocks of parity in each eight block stripe (think RAID6 or ZFS RAIDZ2 with eight drives in each vdev), you&#8217;re going to be looking at 75% theoretical efficiency that comes out to more like 70% actual efficiency after stripe overhead.  I&#8217;m just going to go ahead and say &#8220;let&#8217;s calculate using the more pessimistic number&#8221;.  So, double everything to account for redundancy.</p>
+<p><strong>TL;DR: multiply times 2.0 to account for redundant storage scheme.</strong></p>
+<h3>Hotspare</h3>
+<p>This is probably going to be the least common item on the list, but the vast majority of my clients have opted for it at this point.  A hotspare server is ready to take over for the production server at a moment&#8217;s notice, without an actual &#8220;restore the backup&#8221; type procedure.  With Sanoid, this most frequently means hourly replication from production to hotspare, with the ability to spin up the replicated VMs &#8211; both storage and hypervisor &#8211; directly on the hotspare server.  The hotspare is thus promoted to being production, and what was the production server can be repaired with reduced time pressure and restored into service as a hotspare itself.</p>
+<p>If you have a hotspare &#8211; and if, say, ten or more people&#8217;s payroll and productivity is dependent on your systems being up and running, you probably should &#8211; that&#8217;s another full redundancy to add to the bill.</p>
+<p><strong>TL;DR: bump your &#8220;backup&#8221; allowance up from x2.0 to x3.0 if you also use hotspare hardware.</strong></p>
+<h1>The Butcher&#8217;s Bill</h1>
+<p>If you have, and account for, everything we went through above, to store 1 &#8220;terabyte&#8221; of data you&#8217;ll need:</p>
+<p>1 &#8220;terabyte&#8221; (really a tebibyte) of data<br />
+x 1.1 TiB per TB<br />
+x 1.25 for working free space<br />
+x 2.0 for planned growth over the next few years</p>
+<p>x 3.0 for disaster recovery + hotspare systems<br />
+x 1.3 for snapshot or other &#8220;oops recovery&#8221;<br />
+x 2.0 for redundancy<br />
+==========================================<br />
+21.45 TB of actual storage hardware.</p>
+<h2>That can&#8217;t be right! You&#8217;re insane!</h2>
+<p>Alright, let&#8217;s break that down somewhat differently, then.  Keep in mind that we&#8217;re talking about three separate computer systems in the above example, each with its own storage (production, hotspare, and disaster recovery).  Now let&#8217;s instead assume that we&#8217;re talking about using drives of a given size, and see what that breaks down to in terms of actual usable storage on them.</p>
+<p>Let&#8217;s forget about the hotspare and the disaster recovery boxes, so we&#8217;re looking at the purely local level now.  Then let&#8217;s toss out the redundancy, since we&#8217;re only talking about one individual drive.  That leaves us with 1TB / 1.1 TiB per TB / 1.25 working TiB per stored TiB / 1.3 TiB of prod+snapshots for every TiB of prod = 0.559 TiB of usable capacity per 1TB drive.  Factor in planned growth by cutting that in half, and that means you shouldn&#8217;t be planning to <em>start out</em> storing more than 0.28 TiB of data on 1TB of storage.</p>
+<p><strong>TL;DR: If you have 280GiB of existing data, you need 1TB of local capacity.</strong></p>
+<p>That probably sounds more reasonable in terms of your &#8220;gut feel&#8221;, right?  You have 280GiB of data, so you buy a 1TB disk, and that&#8217;ll give you some breathing room for a few years?  Maybe you think it feels a bit aggressive (it isn&#8217;t), but it should at least be within the ballpark of how you&#8217;re used to thinking and feeling.</p>
+<p>Now multiply by 2 for storage redundancy (mirrored disks), and by 3 for site/server redundancy (production, hotspare, and DR) and you&#8217;re at six 1TB disks total, to store 280GiB of data.  6/.28 = 21.43, and we&#8217;re right back where we started from, less a couple of rounding errors: we need to provision 21.45 TB for every 1TiB of data we&#8217;ve got right now.</p>
+<h2>8:1 rule of thumb</h2>
+<p>Based on the same calculations and with a healthy dose of rounding, we come up with another really handy, useful, <em>memorable</em> rule of thumb: when buying, you need eight times as much raw storage in production as the amount of data you have now.</p>
+<p>So if you&#8217;ve got 1TiB of data, buy servers with 8TB of disks &#8211; whether it&#8217;s two 4TB disks in a single mirror, or four 2TB disks in two mirrors, or whatever, your rule of thumb is 8:1.  <em>Per system</em>, so if you maintain hotspare and DR systems, you&#8217;ll need to do that twice more &#8211; but it&#8217;s still 8:1 in raw storage per machine.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="http://jrs-s.net/2016/11/08/depressing-storage-calculator/" rel="bookmark"><time class="entry-date published updated" datetime="2016-11-08T12:39:06+00:00">November 8, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="http://jrs-s.net/category/business/" rel="category tag">Business</a>, <a href="http://jrs-s.net/category/hardware/" rel="category tag">Hardware</a>, <a href="http://jrs-s.net/category/open-source/zfs/" rel="category tag">ZFS</a></span><span class="comments-link"><a href="http://jrs-s.net/2016/11/08/depressing-storage-calculator/#respond">Leave a comment<span class="screen-reader-text"> on Depressing Storage Calculator</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+<article id="post-746" class="post-746 post type-post status-publish format-standard hentry category-freebsd category-linux category-open-source">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="http://jrs-s.net/2016/10/24/connecting-pfsense-to-a-standard-openvpn-server-config/" rel="bookmark">Connecting pfSense to a standard OpenVPN Server config</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>First, you need to dump the client cert+key into System -> Cert Manager -> Certificates.  Then dump the server&#8217;s CA cert into System-> Cert Manager-> CA.</p>
+<p>Now go to the VPN -> OpenVPN -> Clients and add a client. You&#8217;ll likely want Peer-to-Peer (SSL/TLS), UDP, tun, and wan.  Put in the remote host IP address or FQDN.  You&#8217;ll probably want to check &#8220;infinitely resolve server&#8221;.  Under Cryptographic settings, select the CA and certificate you entered into the System Cert Manager, and you&#8217;ll most likely want BF-CBC for the encryption algo and SHA-1 for the auth digest algo. Topology should be subnet unless you&#8217;re doing something funky; set compression if you&#8217;ve enabled it on the other end, but otherwise leave it alone.</p>
+<p>This is enough to get you the VPN, but it won&#8217;t pass traffic originating there to you.  To respond to traffic initiated from the other end, you&#8217;ll need to head to Firewall -> Rules -> OpenVPN.  If you want all traffic to be allowed, when you create the new Pass rule, be certain to change the protocol from TCP to Any, and leave everything else the default.  Save your rule and apply it, and you should at this point be connected and passing packets in both directions between your pfSense OpenVPN client and your standard (based on the template server.conf distributed with OpenVPN and using easy-rsa) OpenVPN server.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="http://jrs-s.net/2016/10/24/connecting-pfsense-to-a-standard-openvpn-server-config/" rel="bookmark"><time class="entry-date published updated" datetime="2016-10-24T22:52:10+00:00">October 24, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="http://jrs-s.net/category/open-source/freebsd/" rel="category tag">FreeBSD</a>, <a href="http://jrs-s.net/category/open-source/linux/" rel="category tag">Linux</a>, <a href="http://jrs-s.net/category/open-source/" rel="category tag">Open Source</a></span><span class="comments-link"><a href="http://jrs-s.net/2016/10/24/connecting-pfsense-to-a-standard-openvpn-server-config/#respond">Leave a comment<span class="screen-reader-text"> on Connecting pfSense to a standard OpenVPN Server config</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+<article id="post-730" class="post-730 post type-post status-publish format-standard hentry category-linux category-open-source category-ubuntu category-zfs">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="http://jrs-s.net/2016/09/15/zfs-snapshots-and-cold-storage/" rel="bookmark">ZFS snapshots and cold storage</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>OK, this isn&#8217;t really a practice I personally have any use for.  I much, much prefer replicating snapshots to live systems using <a href="http://sanoid.net/" target="_blank">syncoid</a> as a wrapper for zfs send and receive.  But if you want to use cold storage, or just want to understand conceptually the way snapshots and streams work, read on.</p>
+<h2>Our working dataset</h2>
+<p>Let&#8217;s say you have a ZFS pool and dataset named, creatively enough, poolname/setname, and let&#8217;s say you&#8217;ve taken snapshots over a period of time, named @0 through @9.</p>
+<pre>root@banshee:~# zfs list -rt all poolname/setname
+NAME                USED  AVAIL  REFER  MOUNTPOINT
+poolname/setname    1004M  21.6G    19K  /poolname/setname
+poolname/setname@0   100M      -   100M  -
+poolname/setname@1   100M      -   100M  -
+poolname/setname@2   100M      -   100M  -
+poolname/setname@3   100M      -   100M  -
+poolname/setname@4   100M      -   100M  -
+poolname/setname@5   100M      -   100M  -
+poolname/setname@6   100M      -   100M  -
+poolname/setname@7   100M      -   100M  -
+poolname/setname@8   100M      -   100M  -
+poolname/setname@9   100M      -   100M  -</pre>
+<p>By looking at the USED and REFER columns, we can see that each snapshot has 100M of data in it, unique to that snapshot, which in total adds up to 1004M of data.</p>
+<h2>Sending a full backup to cold storage</h2>
+<p>Now if we want to use zfs send to move stuff to cold storage, we have to start out with a full backup of the oldest snapshot, @0:</p>
+<pre>root@banshee:~# zfs send poolname/setname@0 | pv > /c&#x6f;&#x6c;&#x64;st&#111;&#x72;&#x61;ge&#47;&#x73;&#x65;tn&#97;&#x6d;&#x65;&#x40;0.&#x7a;&#x66;&#x73;fu&#108;&#x6c;
+ 108MB 0:00:00 [ 297MB/s] [<=>                                                 ]
+root@banshee:~# ls -lh /coldstorage
+total 1.8M
+-rw-r--r-- 1 root root 108M Sep 15 16:26 setnam&#101;&#64;&#48;&#x2e;&#x7a;&#x66;&#x73;&#x66;&#x75;&#x6c;l</pre>
+<h2>Sending incremental backups to cold storage</h2>
+<p>Let&#8217;s go ahead and take some incrementals of setname now:</p>
+<pre>root@banshee:~# zfs send -i poolname/setname@0 poolname/setname@1 | pv > /coldstorage/setname@0&#x2d;&#x40;1&#x2e;&#x7a;f&#x73;&#x69;n&#99;
+ 108MB 0:00:00 [ 316MB/s] [<=>                                                 ]
+root@banshee:~# zfs send -i poolname/setname@1 poolname/setname@2 | pv > /coldstorage/setname@&#49;&#x2d;&#64;&#x32;&#46;&#x7a;f&#x73;i&#x6e;c
+ 108MB 0:00:00 [ 299MB/s] [<=>                                                 ]
+root@banshee:~# ls -lh /coldstorage
+total 5.2M
+-rw-r--r-- 1 root root 108M Sep 15 16:33 setname@&#x30;-&#x40;1&#x2e;&#122;f&#x73;i&#x6e;c
+-rw-r--r-- 1 root root 108M Sep 15 16:26 &#x73;&#x65;&#x74;&#110;ame&#x40;&#x30;&#x2e;&#122;fsf&#x75;&#x6c;&#x6c;
+-rw-r--r-- 1 root root 108M Sep 15 16:33 setname@&#x31;-&#x40;&#50;.&#x7a;f&#x73;&#105;n&#x63;</pre>
+<p>OK, so now we have one full and two incrementals.  Before we do anything that works, let&#8217;s look at some of the things we <em>can&#8217;t</em> do, because these are <em>really</em> important to know about.  </p>
+<h2>Without a full, incrementals are useless</h2>
+<p>First of all, we can&#8217;t restore an incremental without a full:</p>
+<pre>root@banshee:~# pv < /coldstorage/setname@0&#x2d;&#x40;1&#46;&#x7a;f&#115;&#x69;n&#99; | zfs receive poolname/restore
+cannot receive incremental stream: destination 'poolname/restore' does not exist
+  64kB 0:00:00 [94.8MB/s] [>                                   ]  0%            </pre>
+<p>Good thing we&#8217;ve <em>got</em> that full backup of @0, eh?  </p>
+<h2>Restoring a full backup from cold storage</h2>
+<pre>root@banshee:~# pv < &#x2f;&#x63;&#111;lds&#x74;&#x6f;&#x72;&#97;ge&#x2f;&#x73;&#x65;&#116;na&#x6d;&#x65;&#x40;&#48;.z&#x66;&#x73;&#x66;&#117;ll | zfs receive poolname/restore
+ 108MB 0:00:00 [ 496MB/s] [==================================>] 100%            
+root@banshee:~# zfs list -rt all poolname/restore
+NAME                USED  AVAIL  REFER  MOUNTPOINT
+poolname/restore     100M  21.5G   100M  /poolname/restore
+poolname/restore@0      0      -   100M  -</pre>
+<p>Simple &#8211; we restored our full backup of poolname to a new dataset named restore, which is in the condition poolname was in when @0 was taken, and contains @0 as a snapshot.  Now, keeping in tune with our &#8220;things we cannot do&#8221; theme, can we skip straight from this full of @0 to our incremental from @1-@2?</p>
+<h2>Without ONE incremental, following incrementals are useless</h2>
+<pre>root@banshee:~# pv < /coldstorage/setname@1-&#64;2.zf&#115;&#105;&#110;&#99; | zfs receive poolname/restore
+cannot receive incremental stream: most recent snapshot of poolname/restore does not
+match incremental source
+  64kB 0:00:00 [49.2MB/s] [>                                   ]  0%</pre>
+<p>No, we cannot restore a later incremental directly onto our full of @0.  We <em>must</em> use an incremental which starts with @0, which is the only snapshot we actually have present in full. <em>Then</em> we can restore the incremental from @1 to @2 after <em>that</em>.</p>
+<h2>Restoring incrementals in order</h2>
+<pre>root@banshee:~# pv < /coldstorage/setname@0&#x2d;&#64;&#x31;&#x2e;z&#x66;s&#105;&#x6e;c | zfs receive poolname/restore
+ 108MB 0:00:00 [ 452MB/s] [==================================>] 100%            
+root@banshee:~# pv < /coldstorage/setname@&#49;&#x2d;&#64;&#x32;.&#122;&#x66;s&#x69;n&#99; | zfs receive poolname/restore
+ 108MB 0:00:00 [ 448MB/s] [==================================>] 100%
+root@banshee:~# zfs list -rt all poolname/restore
+NAME                                                 USED  AVAIL  REFER  MOUNTPOINT
+poolname/restore                                      301M  21.3G   100M  /poolname/restore
+poolname/restore@0                                    100M      -   100M  -
+poolname/restore@1                                    100M      -   100M  -
+poolname/restore@2                                       0      -   100M  -</pre>
+<p>There we go &#8211; first do a full restore of @0 onto a new dataset, then do incremental restores of @0-@1 and @1-@2, in order, and once we&#8217;re done we&#8217;ve got a restore of setname in the condition it was in when @2 was taken, and containing @0, @1, and @2 as snapshots within it.</p>
+<h2>Incrementals that skip snapshots</h2>
+<p>Let&#8217;s try one more thing &#8211; what if we <strong>take</strong>, and restore, an incremental directly from @2 to @9?</p>
+<pre>root@banshee:~# zfs send -i poolname/setname@2 poolname/setname@9 | pv > /coldstorage/setname@&#50;&#x2d;&#64;&#x39;&#46;&#x7a;&#102;&#x73;&#105;&#x6e;c
+ 108MB 0:00:00 [ 324MB/s] [<=>                                                 ]
+root@banshee:~# pv < /coldstorage/setname@&#x32;&#x2d;&#64;9&#x2e;&#x7a;&#102;si&#x6e;&#x63; | zfs receive banshee/restore
+ 108MB 0:00:00 [ 464MB/s] [==================================>] 100%            
+root@banshee:~# zfs list -rt all poolname/restore
+NAME                USED  AVAIL  REFER  MOUNTPOINT
+poolname/restore     402M  21.2G   100M  /poolname/restore
+poolname/restore@0   100M      -   100M  -
+poolname/restore@1   100M      -   100M  -
+poolname/restore@2   100M      -   100M  -
+poolname/restore@9      0      -   100M  -</pre>
+<p>Note that when we restored an incremental of @2-@9, we did restore our dataset to the condition it was in when @9 was taken, but we did <em>not</em> restore the actual snapshots <em>between</em> @2 and @9.  If we&#8217;d wanted to save those in a single operation, we should&#8217;ve used an incremental snapshot <em>stream</em>.</p>
+<h2>Sending incremental streams to cold storage</h2>
+<p>To save an incremental <em>stream</em>, we use -I instead of -i when we invoke zfs send.  Let&#8217;s send an incremental stream from @0 through @9 to cold storage:</p>
+<pre>root@banshee:~# zfs send -I poolname/setname@0 poolname/setname@9 | pv > /coldstorage/setname@0&#45;&#x40;&#x39;.z&#x66;&#x73;in&#99;&#x73;&#x74;r&#101;&#x61;&#x6d;
+ 969MB 0:00:03 [ 294MB/s] [   <=>                                              ]
+root@banshee:~# ls -lh /coldstorage
+total 21M
+-rw-r--r-- 1 root root 108M Sep 15 16:33 setname@&#x30;-&#x40;&#49;.&#x7a;f&#x73;&#105;n&#x63;
+-rw-r--r-- 1 root root 969M Sep 15 16:48 setname@&#x30;-&#x40;&#x39;.&#x7a;&#102;s&#x69;&#110;c&#x73;t&#x72;&#x65;a&#x6d;
+-rw-r--r-- 1 root root 108M Sep 15 16:26 &#115;&#x65;t&#x6e;a&#x6d;e&#64;&#x30;.&#x7a;f&#x73;f&#117;&#x6c;l
+-rw-r--r-- 1 root root 108M Sep 15 16:33 setname@&#49;&#x2d;&#64;&#x32;&#46;&#x7a;f&#x73;i&#x6e;c</pre>
+<h2>Incremental streams can&#8217;t be used without a full, either</h2>
+<p>Again, what <em>can&#8217;t</em> we do?  We can&#8217;t use our incremental <em>stream</em> by itself, either: we still need that full of @0 to do anything with the stream of @0-@9.<br />
+Let&#8217;s demonstrate that by starting over from scratch.</p>
+<p>root@banshee:~# zfs destroy -R poolname/restore<br />
+root@banshee:~# pv < /coldstorage/setname@0&#x2d;&#x40;9&#x2e;&#x7a;f&#x73;&#x69;n&#99;&#x73;t&#114;&#x65;a&#109; | zfs receive poolname/restore
+cannot receive incremental stream: destination 'poolname/restore' does not exist
+ 256kB 0:00:00 [ 464MB/s] [>                                   ]  0%            </p>
+<h2>Restoring from cold storage using snapshot streams</h2>
+<p>All right, let&#8217;s restore from our full first, and <em>then</em> see what the incremental stream can do:</p>
+<pre>root@banshee:~# pv < &#x2f;c&#x6f;l&#x64;s&#x74;&#111;r&#x61;g&#x65;/&#x73;&#101;&#x74;&#110;a&#x6d;e&#x40;0&#x2e;&#122;&#x66;&#x73;f&#x75;l&#x6c; | zfs receive poolname/restore
+ 108MB 0:00:00 [ 418MB/s] [==================================>] 100%            
+root@banshee:~# pv < /coldstorage/setname@&#x30;-&#x40;&#57;.&#x7a;f&#x73;&#105;n&#x63;s&#x74;&#114;e&#x61;m | zfs receive poolname/restore
+ 969MB 0:00:06 [ 155MB/s] [==================================>] 100%            
+root@banshee:~# zfs list -rt all poolname/restore
+NAME                USED  AVAIL  REFER  MOUNTPOINT
+poolname/restore    1004M  20.6G   100M  /poolname/restore
+poolname/restore@0   100M      -   100M  -
+poolname/restore@1   100M      -   100M  -
+poolname/restore@2   100M      -   100M  -
+poolname/restore@3   100M      -   100M  -
+poolname/restore@4   100M      -   100M  -
+poolname/restore@5   100M      -   100M  -
+poolname/restore@6   100M      -   100M  -
+poolname/restore@7   100M      -   100M  -
+poolname/restore@8   100M      -   100M  -
+poolname/restore@9      0      -   100M  -</pre>
+<p>There you have it &#8211; our incremental <em>stream</em> is a single file containing incrementals for all snapshots transitioning from @0 to @9, so after restoring it <em>on top of a full from @0</em>, we have a restore of setname which is in the condition setname was in when @9 was taken, <em>and</em> contains all the actual snapshots from @0 through @9.</p>
+<h2>Conclusions about cold storage backups</h2>
+<p>I still don&#8217;t particularly recommend doing backups this way due to the ultimate fragility of requiring lots of independent bits and bobs.  If you delete or otherwise lose the full of @0, ALL incrementals you take since then are useless &#8211; which means eventually you&#8217;re going to want to take a new full, maybe of @100, and start over again.  The problem is, as soon as you do that, you&#8217;re going to take up <em>double</em> the space on cold storage you were using in production, since you have all the data from @0-@99 in incrementals, AND all of the surviving data from those snapshots in @100, along with any new data in @100!  </p>
+<p>You can delete the full of @0 after the full of @100 finishes, and as soon as you do, all those incrementals of @1 to @99 become completely useless and need to be deleted as well.  If you screw up somehow and <em>think</em> you have a good full of @100 when you really don&#8217;t, and delete @0&#8230; <em>all</em> of your backups become useless, and you&#8217;re completely dead in the water.  So be careful.</p>
+<p>By contrast, if you use <a href="http://sanoid.net/" target="_blank">syncoid</a> to <a href="http://arstechnica.com/information-technology/2015/12/rsync-net-zfs-replication-to-the-cloud-is-finally-here-and-its-fast/" target="_blank">replicate directly to a second server or pool</a>, you never need more space than you took up in production, you no longer have the nail-biting period when you delete old fulls, and you no longer have to worry about going agonizingly through ten or a hundred separate incremental restores to get back where you were &#8211; you can delete snapshots from the back or the middle of a working dataset on another pool without any concern that it&#8217;ll break snapshots that come later than the one you&#8217;re deleting, and you can restore them all directly in a single operation by replicating in the opposite direction.</p>
+<p>But, if you&#8217;re still determined to send snapshots to cold storage &#8211; local, Glacier, or whatever &#8211; at least now you know how.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="http://jrs-s.net/2016/09/15/zfs-snapshots-and-cold-storage/" rel="bookmark"><time class="entry-date published" datetime="2016-09-15T16:14:14+00:00">September 15, 2016</time><time class="updated" datetime="2016-09-16T12:25:57+00:00">September 16, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="http://jrs-s.net/category/open-source/linux/" rel="category tag">Linux</a>, <a href="http://jrs-s.net/category/open-source/" rel="category tag">Open Source</a>, <a href="http://jrs-s.net/category/open-source/linux/ubuntu/" rel="category tag">Ubuntu</a>, <a href="http://jrs-s.net/category/open-source/zfs/" rel="category tag">ZFS</a></span><span class="comments-link"><a href="http://jrs-s.net/2016/09/15/zfs-snapshots-and-cold-storage/#respond">Leave a comment<span class="screen-reader-text"> on ZFS snapshots and cold storage</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+<article id="post-718" class="post-718 post type-post status-publish format-standard hentry category-freebsd category-linux category-open-source category-ubuntu category-zfs">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="http://jrs-s.net/2016/06/29/verifying-copies/" rel="bookmark">Verifying copies</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Most of the time, we explicitly trust that our tools are doing what we ask them to do.  For example, if we rsync -a /source /target, we trust that the contents of /target will exactly match the contents of /source.  That&#8217;s the whole point, right?  And rsync is a tool with a long and impeccable lineage.  So we trust it.  And, really, we should.</p>
+<p>But <em>once</em> in a while, we might get paranoid.  And when we do, and we decide to empirically and thoroughly <em>check</em> our copied data&#8230; things might get weird.  Today, we&#8217;re going to explore the weirdness, and look at how to interpret it.</p>
+<h3>So you want to make a copy of /usr/bin&#8230;</h3>
+<p>Well, let&#8217;s be honest, you probably don&#8217;t.  But it&#8217;s a convenient choice, because it has plenty of files in it (but not so many that copies will take forever), it has folders beneath it, and it has a couple of other things in there that can throw you off balance.</p>
+<p>On the machine I&#8217;m sitting in front of now, /usr/bin is on an ext4 filesystem &#8211; the root filesystem, in fact.  The machine also has a couple of ZFS filesystems.  Let&#8217;s start out by using <strong>rsync</strong> to copy it off to a ZFS dataset.</p>
+<p>We&#8217;ll use the <strong>-a</strong> argument to rsync, which stands for archive, and is a shorthand for -rlptgoD.  This means recursive, copy symlinks as symlinks, maintain permissions, maintain timestamps, maintain group ownership, maintain ownership, and preserve devices and other special files <em>as</em> devices and special files where possible.  Seems fairly straightforward, right?</p>
+<pre>root@banshee:/# zfs create banshee/tmp
+root@banshee:/# rsync -a /usr/bin /banshee/tmp/
+root@banshee:/# du -hs /usr/bin ; du -hs /banshee/tmp/bin
+353M	/usr/bin
+215M	/banshee/tmp/bin</pre>
+<p><strong>Hey!</strong>  We&#8217;re missing data!  What the hell?  No, we&#8217;re not actually missing data &#8211; we just didn&#8217;t think about the fact that the <strong>du</strong> command reports <em>space used on disk</em>, which is related but <em>not</em> at all the same thing as <em>amount of data stored</em>.  In this case, obvious culprit is obvious:</p>
+<pre>root@banshee:/# zfs get compression banshee/tmp
+NAME         PROPERTY     VALUE     SOURCE
+banshee/tmp  compression  lz4       inherited from banshee
+root@banshee:/# zfs get compressratio banshee/tmp
+NAME         PROPERTY       VALUE  SOURCE
+banshee/tmp  compressratio  1.55x  -</pre>
+<h3>So, compression tricked us.</h3>
+<p>I had LZ4 compression enabled on my ZFS dataset, which means that the contents of /usr/bin &#8211; much of which are highly compressible &#8211; do <em>not</em> take up anywhere near as much <em>space on disk</em> when stored there as they do on the original ext4 filesystem.  For the purposes of our exercise, let&#8217;s just wipe it out, create a new dataset that <em>doesn&#8217;t</em> use compression, and try again.</p>
+<pre>root@banshee:/# zfs destroy -r banshee/tmp
+root@banshee:/# zfs create -o compression=off banshee/tmp
+root@banshee:/# rsync -ha /usr/bin /banshee/tmp/
+root@banshee:/# du -hs /usr/bin ; du -hs /banshee/tmp/bin
+353M	/usr/bin
+365M	/tmp/bin</pre>
+<p>Wait, what the hell?!  Compression&#8217;s <em>off</em> now, so why am I <em>still</em> seeing discrepancies &#8211; and in this case, <em>more</em> space used on the ZFS target than the ext4 source?  Well, again &#8211; <em><strong>du</strong> measures on-disk space</em>, and these are different filesystems.  The blocksizes may or may not be different, and in this case, ZFS stores redundant copies of the metadata associated with each file where ext4 does not, so this adds up to measurable discrepancies in the output of <strong>du</strong>.</p>
+<h3>Semi-hidden, arcane du arguments</h3>
+<p>You won&#8217;t find any mention at all of it in the man page, but <strong>info du</strong> mentions an argument called <strong>&#8211;apparent-size</strong> that sounds like the answer to our prayers.</p>
+<pre>`--apparent-size'
+     Print apparent sizes, rather than disk usage.  The apparent size
+     of a file is the number of bytes reported by `wc -c' on regular
+     files, or more generally, `ls -l --block-size=1' or `stat
+     --format=%s'.  For example, a file containing the word `zoo' with
+     no newline would, of course, have an apparent size of 3.  Such a
+     small file may require anywhere from 0 to 16 KiB or more of disk
+     space, depending on the type and configuration of the file system
+     on which the file resides.</pre>
+<p>Perfect!  So all we have to do is use <em>that</em>, right?</p>
+<pre>root@banshee:/# du -hs --apparent-size /usr/bin ; du -hs --apparent-size /banshee/tmp/bin
+349M	/usr/bin
+353M	/banshee/tmp/bin</pre>
+<p>We&#8217;re still consuming 4MB more space on the target than the source, dammit.  WHY?</p>
+<h3>Counting files and comparing notes</h3>
+<p>So we&#8217;ve tried everything we could think of, including some voodoo arguments to <strong>du</strong> that probably cost the lives of many Bothans, and we still have a discrepancy in the amount of data present in source and target.  Next step, let&#8217;s count the files and folders present on both sides, by using the <strong>find</strong> command to enumerate them all, and piping its output to <strong>wc -l</strong>, which counts them once enumerated:</p>
+<pre>root@banshee:/# find /usr/bin | wc -l ; find /banshee/tmp/bin | wc -l
+2107
+2107</pre>
+<p>Huh.  No discrepancies <em>there</em>.  OK, fine &#8211; we know about the <strong>diff</strong> command, which compares the contents of files and tells us if there are discrepancies &#8211; and handily, <strong>diff -r</strong> is recursive!  Problem solved!</p>
+<pre>root@banshee:/# diff -r /usr/bin /banshee/tmp/bin 2>&#038;1 | head -n 5
+diff: /banshee/tmp/bin/arista-gtk: No such file or directory
+diff: /banshee/tmp/bin/arista-transcode: No such file or directory
+diff: /banshee/tmp/bin/dh_pypy: No such file or directory
+diff: /banshee/tmp/bin/dh_python3: No such file or directory
+diff: /banshee/tmp/bin/firefox: No such file or directory</pre>
+<h3>What&#8217;s wrong with diff -r?</h3>
+<p>Actually, problem emphatically <em>not</em> solved.  I cheated a little, there &#8211; I knew perfectly well we were going to get a ton of errors thrown, so I piped descriptor 2 (standard error) to descriptor 1 (standard output) and then to <strong>head -n 5</strong>, which would just give me the first five lines of errors &#8211; otherwise we&#8217;d be staring at screens full of crap.  Why are we getting &#8220;no such file or directory&#8221; on all these?  Let&#8217;s look at one:</p>
+<pre>root@banshee:/# ls -l /banshee/tmp/bin/arista-gtk
+lrwxrwxrwx 1 root root 26 Mar 20  2014 /banshee/tmp/bin/arista-gtk -> ../share/arista/arista-gtk</pre>
+<p>Oh.  Well, crap &#8211; /usr/bin is chock full of relative symlinks, which rsync -a copied exactly as they are.  So now our target, /banshee/tmp/bin, is full of relative symlinks that don&#8217;t go anywhere, and <strong>diff -r</strong> is trying to <em>follow</em> them to compare contents.  /usr/share/arista/arista-gtk is a thing, but /banshee/share/arista/arista-gtk isn&#8217;t.  So now what?</p>
+<h3>find, and xargs, and md5sum, oh my!</h3>
+<p>Luckily, we have a tool called <strong>md5sum</strong> that will generate a pretty strong checksum of any arbitrary content we give it.  It&#8217;ll still try to follow symlinks if we let it, though.  We could just <em>ignore</em> the symlinks, since they don&#8217;t have any data in them directly anyway, and just sorta assume that they&#8217;re targeted to the same relative target that they were on the source&#8230; yeah, sure, let&#8217;s try that.</p>
+<p>What we&#8217;ll do is use the <strong>find</strong> command, with the <strong>-type f</strong> argument, to only find actual files in our source and our target, thereby skipping folders and symlinks entirely.  We&#8217;ll then pipe that to <strong>xargs</strong>, which turns the list of output from <strong>find -type f</strong> into a list of <em>arguments</em> for <strong>md5sum</strong>, which we can then redirect to text files, and <em>then</em> we can diff the text files.  Problem solved!  We&#8217;ll find that extra 4MB of data in no time!</p>
+<pre>root@banshee:/# find /usr/bin -type f | xargs md5sum > /tmp/sourcesums.txt
+root@banshee:/# find /banshee/tmp/bin -type f | xargs md5sum > /tmp/targetsums.txt</pre>
+<p>&#8230; okay, actually I&#8217;m going to cheat here, because you guessed it: we failed again.  So we&#8217;re going to pipe the output through <strong>grep sudo</strong> to let us just look at the output of a couple of lines of detected <strong>diff</strong>erences.</p>
+<pre>root@banshee:/# diff /tmp/sourcesums.txt /tmp/targetsums.txt | grep sudo
+< 866713ce6e9700c3a567788334be7e25  /usr/bin/sudo
+< e43c40cfbec06f191191120f4332f60f  /usr/bin/sudoreplay
+> e43c40cfbec06f191191120f4332f60f  /banshee/tmp/bin/sudoreplay
+> 866713ce6e9700c3a567788334be7e25  /banshee/tmp/bin/sudo</pre>
+<p>Ah, crap &#8211; absolute paths.  <em>Every</em> single file failed this check, since we&#8217;re seeing it referenced by absolute path, and /usr/bin/sudo doesn&#8217;t match /banshee/tmp/bin/sudo, even though the <em>checksums</em> match!  OK, we&#8217;ll fix that by using <em>relative</em> paths when we generate our sums&#8230; and I&#8217;ll save you a little more time; <em>that</em> might fail too, because there&#8217;s not actually any guarantee that <strong>find</strong> will return the files in the same <em>sort order</em> both times.  So we&#8217;ll also pipe <strong>find</strong>&#8216;s output through <strong>sort</strong> to fix <em>that</em> problem, too.</p>
+<pre>root@banshee:/banshee/tmp# cd /usr ; find ./bin -type f | sort | xargs md5sum > /tmp/sourcesums.txt
+root@banshee:/usr# cd /banshee/tmp ; find ./bin -type f | sort | xargs md5sum > /tmp/targetsums.txt
+root@banshee:/banshee/tmp# diff /tmp/sourcesums.txt /tmp/targetsums.txt
+root@banshee:/banshee/tmp# 
+</pre>
+<p>Yay, we finally got verification &#8211; all of our files exist on both sides, are named the same on both sides, are in the same <em>folders</em> on both sides, <em>and</em> checksum out the same on both sides!  So our data&#8217;s good!  Hey, wait a minute&#8230; if we have the same number of files, in the same places, with the same contents, how come we&#8217;ve <em>still</em> got different <em>totals?!</em></p>
+<h3>Macabre, unspeakable use of ls</h3>
+<p>We didn&#8217;t really get what we needed out of <strong>find</strong>.  We do at least know that we have the right total number of files and folders, and that things are in the right places, and that we got the same checksums out of the files that we could check.  So where the hell are those missing 4MB of data coming from?!  We&#8217;re using our arcane invocation of <strong>du -s &#8211;apparent-size</strong> to make sure we&#8217;re looking at bytes of <em>data</em> and not bytes of <em>allocated disk space</em>, so why are we still seeing differences?</p>
+<p>This time, let&#8217;s try using <strong>ls</strong>.  It&#8217;s rarely used, but <strong>ls</strong> <em>does</em> have a recursion argument, <strong>-R</strong>.  We&#8217;ll use that along with <strong>-l</strong> for long form and <strong>-a</strong> to pick up dotfiles, and we&#8217;ll pipe it though <strong>grep -v &#8216;\.\.&#8217;</strong> to get rid of the entry for the parent directory (which obviously won&#8217;t be the same for <strong>/usr/bin</strong> and for <strong>/banshee/tmp/bin</strong>, no matter how otherwise perfect matches they are), and then, once more, we&#8217;ll have something we can <strong>diff</strong>.</p>
+<pre>root@banshee:/banshee/tmp# ls -laR /usr/bin > /tmp/sourcels.txt
+root@banshee:/banshee/tmp# ls -laR /banshee/tmp/bin > /tmp/targetls.txt
+root@banshee:/banshee/tmp# diff /tmp/sourcels.txt /tmp/targetls.txt | grep which
+< lrwxrwxrwx  1 root   root         10 Jan  6 14:16 which -> /bin/which
+> lrwxrwxrwx 1 root   root         10 Jan  6 14:16 which -> /bin/which</pre>
+<p>Once again, I cheated, because there was still going to be a problem here.  <strong>ls -l</strong> isn&#8217;t necessarily going to use the same <em>number of formatting spaces</em> when listing the source or the target &#8211; so our <strong>diff</strong>, again, frustratingly fails on every single line.  I cheated here by only looking at the output for the <strong>which</strong> file so we wouldn&#8217;t get overwhelmed.  The fix?  We&#8217;ll pipe through <strong>awk</strong>, forcing the spacing to be constant.  Grumble grumble grumble&#8230;</p>
+<pre>root@banshee:/banshee/tmp# ls -laR /usr/bin | awk '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11}' > /tmp/sourcels.txt
+root@banshee:/banshee/tmp# ls -laR /banshee/tmp/bin | awk '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11}' > /tmp/targetls.txt
+root@banshee:/banshee/tmp# diff /tmp/sourcels.txt /tmp/targetls.txt | head -n 25
+1,4c1,4
+< /usr/bin:          
+< total 364620         
+< drwxr-xr-x 2 root root 69632 Jun 21 07:39 .  
+< drwxr-xr-x 11 root root 4096 Jan 6 15:59 ..  
+---
+> /banshee/tmp/bin:          
+> total 373242         
+> drwxr-xr-x 2 root root 2108 Jun 21 07:39 .  
+> drwxr-xr-x 3 root root 3 Jun 29 18:00 ..  
+166c166
+< -rwxr-xr-x 2 root root 36607 Mar 1 12:35 c2ph  
+---
+> -rwxr-xr-x 1 root root 36607 Mar 1 12:35 c2ph  
+828,831c828,831
+< -rwxr-xr-x 4 root root 14592 Dec 3 2012 lockfile-check  
+< -rwxr-xr-x 4 root root 14592 Dec 3 2012 lockfile-create  
+< -rwxr-xr-x 4 root root 14592 Dec 3 2012 lockfile-remove  
+< -rwxr-xr-x 4 root root 14592 Dec 3 2012 lockfile-touch  
+---
+> -rwxr-xr-x 1 root root 14592 Dec 3 2012 lockfile-check  
+> -rwxr-xr-x 1 root root 14592 Dec 3 2012 lockfile-create  
+> -rwxr-xr-x 1 root root 14592 Dec 3 2012 lockfile-remove  
+> -rwxr-xr-x 1 root root 14592 Dec 3 2012 lockfile-touch  
+885,887c885,887</pre>
+<p><strong>FINALLY!</strong> Useful output! It makes perfect sense that the special files <strong>.</strong> and <strong>..</strong>, referring to the current and parent directories, would be different.  But we&#8217;re still getting more hits, like for those four <strong>lockfile-</strong> commands.  We already know they&#8217;re identical from source to target, both because we can see the filesizes are the same and because we&#8217;ve already <strong>md5sum</strong>&#8216;ed them and they matched.  So what&#8217;s up here?</p>
+<h3>And you thought you&#8217;d never need to use the &#8216;info&#8217; command in anger</h3>
+<p>We&#8217;re going to have to use <strong>info</strong> instead of <strong>man</strong> again &#8211; this time, to learn about the <strong>ls</strong> command&#8217;s lesser-known evils.</p>
+<p>Let&#8217;s take a quick look at those mismatched lines for the <strong>lockfile-</strong> commands again:</p>
+<pre>< -rwxr-xr-x 4 root root 14592 Dec 3 2012 lockfile-check  
+< -rwxr-xr-x 4 root root 14592 Dec 3 2012 lockfile-create  
+< -rwxr-xr-x 4 root root 14592 Dec 3 2012 lockfile-remove  
+< -rwxr-xr-x 4 root root 14592 Dec 3 2012 lockfile-touch  
+---
+> -rwxr-xr-x 1 root root 14592 Dec 3 2012 lockfile-check  
+> -rwxr-xr-x 1 root root 14592 Dec 3 2012 lockfile-create  
+> -rwxr-xr-x 1 root root 14592 Dec 3 2012 lockfile-remove  
+> -rwxr-xr-x 1 root root 14592 Dec 3 2012 lockfile-touch</pre>
+<p>OK, ho hum, we&#8217;ve seen this a million times before.  File type, permission modes, owner, group, size, modification date, filename, and in the case of the one symlink shown, the symlink target.  Hey, wait a minute&#8230; how come nobody ever thinks about the <em>second</em> column?  And, yep, that second column is the only difference in these lines &#8211; it&#8217;s <strong>4</strong> in the source, and <strong>1</strong> in the target.</p>
+<p>But what does that <em>mean?</em>  You won&#8217;t learn the first thing about it from <strong>man ls</strong>, which doesn&#8217;t tell you any more than that -l gives you a &#8220;long listing format&#8221;.  And there&#8217;s no option to print <em>column headers</em>, which would certainly be helpful&#8230; <strong>info ls</strong> won&#8217;t give you any secret magic arguments to print column headers either.  But however grudgingly, it will at least <em>name</em> them:</p>
+<pre>`-l'
+`--format=long'
+`--format=verbose'
+     In addition to the name of each file, print the file type, file
+     mode bits, number of hard links, owner name, group name, size, and
+     timestamp</pre>
+<p>So it looks like that mysterious second column refers to the number of hardlinks to the file being listed, normally one (the file itself) &#8211; but on our source, there are <em>four</em> hardlinks to each of our <strong>lockfile-</strong> files.</p>
+<h3>Checking out hardlinks</h3>
+<p>We can explore this a little further, using <strong>find</strong>&#8216;s <strong>&#8211;samefile</strong> test:</p>
+<pre>root@banshee:/banshee/tmp# find /usr/bin -samefile /usr/bin/lockfile-check
+/usr/bin/lockfile-create
+/usr/bin/lockfile-check
+/usr/bin/lockfile-remove
+/usr/bin/lockfile-touch
+root@banshee:/banshee/tmp# find /banshee/tmp/bin -samefile /usr/bin/lockfile-check
+root@banshee:/banshee/tmp# </pre>
+<p>Well, that explains it &#8211; on our source, <strong>lockfile-create</strong>, <strong>lockfile-check</strong>, <strong>lockfile-remove</strong>, and <strong>lockfile-touch</strong> are all actually just hardlinks to the same inode &#8211; meaning that while they look like four different files, they&#8217;re actually just four separate pointers to the same data on disk.  Those and several other sets of hardlinks add up to the reason why our target, <strong>/banshee/tmp/bin</strong>, is larger than our source, </strong>/usr/bin</strong>, even though they appear to contain the same data exactly.</p>
+<p>Could we have used <strong>rsync</strong> to duplicate <strong>/usr/bin</strong> <em>exactly</em>, including the hardlink structures?  Absolutely!  That&#8217;s what the <strong>-H</strong> argument is there for.  Why isn&#8217;t that rolled into the <strong>-a</strong> shortcut argument, you might ask?  Well, probably because hardlinks aren&#8217;t supported on all filesystems &#8211; in particular, they won&#8217;t work on FAT32 thumbdrives, or on NFS links set up by sufficiently paranoid sysadmins &#8211; so rather than have rsync jobs fail, it&#8217;s left up to you to specify if you want to recreate them.</p>
+<h3>Simpler verification with tar</h3>
+<p>This was cumbersome as hell &#8211; could we have done it more simply?  Well, of course!  Actually&#8230; maybe.</p>
+<p>We <em>could</em> have used the venerable <strong>tar</strong> command to generate a <em>single</em> md5sum for the <em>entire</em> collection of data in one swell foop.  We do have to be careful, though &#8211; <strong>tar</strong> will encode the entire path you feed it into the file structure, so you can&#8217;t compare <strong>tar</strong>s created directly from <strong>/usr/bin</strong> and <strong>/banshee/tmp/bin</strong> &#8211; instead, you need to <strong>cd</strong> into the parent directories, create <strong>tar</strong>s of <strong>./bin</strong> in each case, then compare <em>those</em>.</p>
+<p>Let&#8217;s start out by comparing our current copies, which differ in how hardlinks are handled:</p>
+<pre>root@banshee:/tmp# cd /usr ; tar -c ./bin | md5sum ; cd /banshee/tmp ; tar -c ./bin | md5sum
+4bb9ffbb20c11b83ca616af716e2d792  -
+2cf60905cb7870513164e90ac82ffc3d  -</pre>
+<p>Yep, they differ &#8211; which we should be expecting ; after all, the source has hardlinks and the target does not.  How about if we fix up the target so that it also uses hardlinks?</p>
+<pre>root@banshee:/tmp# rm -r /banshee/tmp/bin ; rsync -haH /usr/bin /banshee/tmp/
+root@banshee:/tmp# cd /usr ; tar -c ./bin | md5sum ; cd /banshee/tmp ; tar -c ./bin | md5sum
+4bb9ffbb20c11b83ca616af716e2d792  -
+f654cf7a1c4df8482d61b59993bb92f7  -</pre>
+<p>Well, crap.  That <em>should&#8217;ve</em> resulted in identical <strong>md5sum</strong>s, shouldn&#8217;t it?  It <em>would</em> have, if we&#8217;d gone from one ext4 filesystem to another:</p>
+<pre>root@banshee:/banshee/tmp# rsync -haH /usr/bin /tmp/
+root@banshee:/banshee/tmp# cd /usr ; tar -c ./bin | md5sum ; cd /tmp ; tar -c ./bin | md5sum
+4bb9ffbb20c11b83ca616af716e2d792  -
+4bb9ffbb20c11b83ca616af716e2d792  -</pre>
+<p>So why, exactly, didn&#8217;t we get the same <strong>md5sum</strong> values for a <strong>tar</strong> on ZFS, when we did on ext4?  The metadata gets included in those tarballs, and it&#8217;s just plain <em>different</em> between different filesystems.  Different metadata means different contents of the tar means different checksums.  Ugly but true.  Interestingly, though, if we dump <strong>/banshee/tmp/bin</strong> <em>back</em> through <strong>tar</strong> and out to another location, the checksums match again:</p>
+<pre>root@banshee:/tmp/fromtar# tar -c /banshee/tmp/bin | tar -x
+tar: Removing leading `/' from member names
+tar: Removing leading `/' from hard link targets
+root@banshee:/tmp/fromtar# cd /tmp/fromtar/banshee/tmp ; tar -c ./bin | md5sum ; cd /usr ; tar -c ./bin | md5sum
+4bb9ffbb20c11b83ca616af716e2d792  -
+4bb9ffbb20c11b83ca616af716e2d792  -</pre>
+<p>What this tells us is that ZFS is storing <em>additional</em> metadata that ext4 can&#8217;t, and that, in turn, is what was making our <strong>tar</strong>balls checksum differently&#8230; but when you move that data back onto a nice dumb ext4 filesystem again, the extra metadata is stripped again, and things match again.</p>
+<h3>Picking and choosing what matters</h3>
+<p>Properly verifying data and metadata on a block-for-block basis is <em>hard</em>, and you need to really, carefully think about <em>what</em>, exactly, you do &#8211; and don&#8217;t! &#8211; want to verify.  If you want to verify absolutely <em>everything</em>, including folder metadata, <strong>tar</strong> might be your best bet &#8211; but it probably won&#8217;t match up across filesystems.  If you just want to verify the contents <em>of</em> the files, some combination of <strong>find</strong>, <strong>xargs</strong>, <strong>md5sum</strong>, and <strong>diff</strong> will do the trick.  If you&#8217;re concerned about things like hardlink structure, you have to check for those independently.  If you aren&#8217;t just handwaving things away, this stuff is hard.  <em>Extra</em> hard if you&#8217;re changing filesystems from source to target.</p>
+<h3>Shortcut for ZFS users: replication!</h3>
+<p>For those of you using ZFS, and using <em>strictly</em> ZFS, though, there is a shortcut: replication.  If you use <strong>syncoid</strong> to orchestrate ZFS replication at the dataset level, you can be sure that absolutely <em>everything</em>, yes everything, is preserved:</p>
+<pre>root@banshee:/usr# syncoid banshee/tmp banshee/tmp2
+INFO: Sending oldest full snapshot banshee/tmp@autosnap_2016-06-29_19:33:01_hourly (~ 370.8 MB) to new target filesystem:
+ 380MB 0:00:01 [ 229MB/s] [===============================================================================================================================] 102%            
+INFO: Updating new target filesystem with incremental banshee/tmp@autosnap_2016-06-29_19:33:01_hourly ... syncoid_banshee_2016-06-29:19:39:01 (~ 4 KB):
+2.74kB 0:00:00 [26.4kB/s] [======================================================================================>                                         ] 68%           
+root@banshee:/banshee/tmp2# cd /banshee/tmp ; tar -c . | md5sum ; cd /banshee/tmp2 ; tar -c . | md5sum
+e2b2ca03ffa7ba6a254cefc6c1cffb4f  -
+e2b2ca03ffa7ba6a254cefc6c1cffb4f  -
+</pre>
+<p>Easy, peasy, chicken greasy: replication guarantees absolutely <em>everything</em> matches.</p>
+<h3>TL;DR</h3>
+<p>There isn&#8217;t one, really!  Verification of data and metadata, <em>especially</em> across filesystems, is one of the fundamental challenges of information systems that&#8217;s generally abstracted away from you almost entirely, and it makes for one hell of a deep rabbit hole to fall into.  Hopefully, if you&#8217;ve slogged through all this with me so far, you have a better idea of what tools are at your fingertips to test it when you need to.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="http://jrs-s.net/2016/06/29/verifying-copies/" rel="bookmark"><time class="entry-date published updated" datetime="2016-06-29T18:46:09+00:00">June 29, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="http://jrs-s.net/category/open-source/freebsd/" rel="category tag">FreeBSD</a>, <a href="http://jrs-s.net/category/open-source/linux/" rel="category tag">Linux</a>, <a href="http://jrs-s.net/category/open-source/" rel="category tag">Open Source</a>, <a href="http://jrs-s.net/category/open-source/linux/ubuntu/" rel="category tag">Ubuntu</a>, <a href="http://jrs-s.net/category/open-source/zfs/" rel="category tag">ZFS</a></span><span class="comments-link"><a href="http://jrs-s.net/2016/06/29/verifying-copies/#comments">1 Comment<span class="screen-reader-text"> on Verifying copies</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+<article id="post-704" class="post-704 post type-post status-publish format-standard hentry category-linux category-open-source">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="http://jrs-s.net/2016/06/20/potentially-malicious-filenames/" rel="bookmark">Potentially malicious filenames</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<h3>How can I rename all the files of a certain pattern to a different pattern in Bash?</h3>
+<p>This question comes up all the time.  We&#8217;ll walk you through the common answers, how to make them bulletproof as possible, and how they fail.  Then we&#8217;ll do it right, in Perl.</p>
+<p><strong>TL;DR &#8211; you cannot safely handle malicious filenames in bash scripts, you need a real language &#8211; like Perl &#8211; for that.</strong></p>
+<h3>Simple, and wrong: for loops in Bash</h3>
+<p>Let&#8217;s say you have a simple set of files:</p>
+<pre>me@banshee:~/demo$ ls
+test1.txt test2.txt test3.txt
+</pre>
+<p>Maybe you want to rename all the .txt files to .bin files.  You could do this with a bash for loop:</p>
+<pre>for file in `ls test*.txt` ; do newfile=`echo $file | sed 's/\.txt$/.bin/'`; mv $file $newfile; done</pre>
+<p>For this simple set of files with no nasty pitfalls in the names, this works fine:</p>
+<pre>me@banshee:~/demo$ ls
+test1.bin test2.bin test3.bin</pre>
+<p>But what if we want to make it <em>ugly</em>?  Let&#8217;s add a couple of files with some really malicious names to our original list:</p>
+<pre>me@banshee:~/demo$ ls -l
+total 2
+-rw-rw-r-- 1 me me 0 Jun 20 17:19 test1.txt
+-rw-rw-r-- 1 me me 0 Jun 20 17:19 test2.txt
+-rw-rw-r-- 1 me me 0 Jun 20 17:19 test3.txt
+-rw-rw-r-- 1 me me 0 Jun 20 17:24 test 4 $?!*--""'';:()[]{}.txt
+-rw-rw-r-- 1 me me 0 Jun 20 17:26 test 5 ; rm * ; .txt</pre>
+<p>Ah, our old friend <a href="https://xkcd.com/327/" target="_blank">Little Bobby Tables</a>!  What happens if we run our naive little for loop on <em>that</em> set of files?</p>
+<pre>me@banshee:~/demo$ for file in `ls test*.txt`; do newfile=`echo $file | sed 's/\.txt$/.bin/'`; mv $file $newfile; done
+mv: cannot stat ‘test’: No such file or directory
+mv: cannot stat ‘4’: No such file or directory
+mv: cannot stat ‘lolwtf’: No such file or directory
+mv: cannot stat ‘$?!*--;:(){}[].txt’: No such file or directory
+mv: cannot stat ‘test’: No such file or directory
+mv: cannot stat ‘5’: No such file or directory
+mv: cannot stat ‘;’: No such file or directory
+mv: cannot stat ‘rm’: No such file or directory
+mv: cannot stat ‘test1.txt’: No such file or directory
+mv: cannot stat ‘test2.txt’: No such file or directory
+mv: cannot stat ‘test3.txt’: No such file or directory
+mv: target ‘$?!*--;:(){}[].bin’ is not a directory
+mv: target ‘.bin’ is not a directory
+mv: cannot stat ‘;’: No such file or directory
+mv: cannot stat ‘.txt’: No such file or directory
+me@banshee:~/demo$ ls -l
+total 2
+-rw-rw-r-- 1 me me 0 Jun 20 17:19 test1.bin
+-rw-rw-r-- 1 me me 0 Jun 20 17:19 test2.bin
+-rw-rw-r-- 1 me me 0 Jun 20 17:19 test3.bin
+-rw-rw-r-- 1 me me 0 Jun 20 17:24 test 4 lolwtf $?!*--""'';:()[]{}.txt
+-rw-rw-r-- 1 me me 0 Jun 20 17:26 test 5 ; rm * ; .txt</pre>
+<p>Well, it could have been worse.  At least we didn&#8217;t end up actually <em>executing</em> that <strong>; rm * ;</strong> we snuck in there.  Still, the operation clearly didn&#8217;t complete successfully &#8211; and if it isn&#8217;t making you nervous, it damn well <em>should</em> be.  So now what?</p>
+<h3>Complex, and wrong: while read loops in Bash</h3>
+<p>The <strong>for</strong> loop broke on spaces, meaning any filename with a space in it would get handled as separate pieces.  Upgrading from a <strong>for</strong> loop to a <strong>while read</strong> loop will mitigate that.  Adding some strategic encapsulation with &#8220;double quotes&#8221; will mitigate a few more expansion issues beyond that.</p>
+<pre>me@banshee:~/demo$ ls *.txt | while read file; do newfile=`echo "$file" | sed 's/\.txt$/.bin/'`; mv "$file" "$newfile"; done</pre>
+<p>Let&#8217;s look at each piece of this puzzle in order:</p>
+<ul>
+<li> <strong>ls *.txt</strong><br />
+I think you can figure this one out.</p>
+<li> <strong>while read file; do</strong><br />
+for each complete line of the input, put it in a variable named $file, then execute this loop.</p>
+<li> <strong>newfile=`echo &#8220;$file&#8221; | sed &#8216;s/\.txt$/.bin/&#8217;`</strong><br />
+Actually we need to break this down further:</p>
+<ul>
+<li><strong>newfile=&#8220;</strong> &#8211; execute the contents of the `backticks` as a command, and put the output in the variable <strong>$newfile</strong>.
+<li><strong>echo &#8220;$file&#8221; | </strong> &#8211; dump the contents of the variable $echo into the input of the command after the pipe.  Note how we encapsulated &#8220;$file&#8221; with &#8220;double quotes&#8221; here &#8211; this prevents bash from expanding the <em>contents</em> of $file, as well as expanding $file itself. This is worth a demonstration of its own:
+<pre>me@banshee:/tmp/tmp$ touch 1 2 3
+me@banshee:/tmp/tmp$ ls 
+1  2  3
+me@banshee:/tmp/tmp$ echo 1 * 3
+1 1 2 3 3
+me@banshee:/tmp/tmp$ echo "1 * 3"
+1 * 3
+</pre>
+<p>See?</p>
+<li><strong>sed &#8216;s/\.txt$/.bin/&#8217;</strong> &#8211; we&#8217;re asking <strong>sed</strong> to replace any instance of <strong>.txt</strong> <em>at the end of the line only</em> with <strong>.bin</strong>.  The $ in <strong>\.txt$</strong> tells us only to match if <strong>.txt</strong> is at the end of the line. The <strong>\</strong> in <strong>\.txt$</strong> tells sed to &#8220;escape&#8221; the period character, which otherwise would be a wildcard that matches ANY character in the input.  We don&#8217;t need to escape the period character in <strong>.bin</strong>, since that&#8217;s in the replacement section, where wildcard characters would never be interpreted anyway.
+<li> <strong>mv &#8220;$file&#8221; &#8220;$newfile&#8221;</strong> &#8211; fairly self-explanatory, but note again the &#8220;double&#8221; &#8220;quotes&#8221; encapsulation of &#8220;$file&#8221; and &#8220;$newfile&#8221; &#8211; it&#8217;s necessary; this tells bash that the variables $file and $newfile are one single argument apiece, no matter how many spaces, wildcard characters, or anything else might be present once $file and $newfile are expanded to their literal text.  You might think that the double quotes in that nasty <strong>test 4 lolwtf \$?!*&#8211;&#8220;&#8221;&#8221;;:()[]{}.txt</strong> filename would still break this &#8211; but, thankfully, you&#8217;d be wrong.
+<li> <strong>done</strong> &#8211; this justcompletes the loop.
+</ul>
+<p>But did it work?</p>
+<pre>me@banshee:~/demo$ ls -l
+total 3
+-rw-rw-r-- 1 me me 0 Jun 20 17:19 test1.bin
+-rw-rw-r-- 1 me me 0 Jun 20 17:19 test2.bin
+-rw-rw-r-- 1 me me 0 Jun 20 17:19 test3.bin
+-rw-rw-r-- 1 me me 0 Jun 20 17:24 test 4 lolwtf $?!*--""'';:()[]{}.bin
+-rw-rw-r-- 1 me me 0 Jun 20 17:27 test 5 ; rm * ; .bin
+</pre>
+<p>Woohoo! </p>
+<p>There&#8217;s still one trick we haven&#8217;t thrown at our little bash loop, though, and that&#8217;s <em>escape characters in the filenames</em>.  Behold, the mighty backslash:</p>
+<pre>me@banshee:~/demo$ ls -l | grep 6
+-rw-rw-r-- 1 me me 0 Jun 20 18:17 test 6 \$?!*.txt
+</pre>
+<p>Will it blend?</p>
+<pre>me@banshee:~/demo$ ls *.txt | while read file; do newfile="`echo "$file" | sed 's/\.txt$/.bin/'`"; mv "$file" "$newfile"; done
+mv: cannot stat ‘test 6 $?!*.txt’: No such file or directory</pre>
+<p>&#8216;Fraid not &#8211; we successfully handled wildcards, quotes, and shell specials, but the lowly backslash brought us down with ease.  If there&#8217;s a safe and sane way to handle <em>that</em> in Bash, I don&#8217;t know it.  Also, by now my brain hurts with all the double quoting and the tricky loop selection and the AAAAIIIIEEEE make it stop already!</p>
+<p>So how DO you REALLY safely handle insanely dirty filenames?  With Perl. Duh.</p>
+<h3>Simple, and <em>correct:</em> while loops in Perl</h3>
+<pre>
+#!/usr/bin/perl
+
+# demonstration - rename all files in the current directory ending in .txt
+#                 with the same filename, but ending in .bin
+
+# open the current directory, or die with a useful error message if we can't
+opendir (DIR, '.') or die $!;
+
+# loop through the current directory, file by file
+while (my $file = readdir(DIR)) {
+	# don't do anything unless this is a .txt file
+	if ($file =~ /\.txt$/) {
+		# first set $newfile to $file
+		my $newfile = $file;
+		# now replace .txt at the end of $newfile with .bin
+		$newfile =~ s/\.txt$/.bin/;
+		# now rename the actual file from .txt to .bin
+		rename $file, $newfile;
+	}
+}
+# close the current directory
+closedir (DIR);
+</pre>
+<p>This is a <em>lot</em> easier to read and understand.  There&#8217;s no crazy double and triple encapsulation, we can properly indent things, we can see what the hell we&#8217;re doing.  Yes.</p>
+<p>But does it work?</p>
+<pre>
+me@banshee:~/demo$ perl /tmp/test.pl
+me@banshee:~/demo$ ls -l
+total 3
+-rw-rw-r-- 1 me me   0 Jun 20 17:19 test1.bin
+-rw-rw-r-- 1 me me   0 Jun 20 17:19 test2.bin
+-rw-rw-r-- 1 me me   0 Jun 20 17:19 test3.bin
+-rw-rw-r-- 1 me me   0 Jun 20 17:24 test 4 lolwtf $?!*--;:(){}[].bin
+-rw-rw-r-- 1 me me   0 Jun 20 17:27 test 5 ; rm * ; .bin
+-rw-rw-r-- 1 me me   0 Jun 20 18:17 test 6 \$?!*.bin
+</pre>
+<p>Damn right it does &#8211; they don&#8217;t call Perl the Swiss Army Chainsaw for nothin&#8217;.</p>
+<p><strong>endfile TL;DR: don&#8217;t try to handle potentially-malicious filenames with Bash in the first place &#8211; handle them with Perl.</strong></p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="http://jrs-s.net/2016/06/20/potentially-malicious-filenames/" rel="bookmark"><time class="entry-date published" datetime="2016-06-20T17:07:01+00:00">June 20, 2016</time><time class="updated" datetime="2016-06-20T17:55:47+00:00">June 20, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="http://jrs-s.net/category/open-source/linux/" rel="category tag">Linux</a>, <a href="http://jrs-s.net/category/open-source/" rel="category tag">Open Source</a></span><span class="comments-link"><a href="http://jrs-s.net/2016/06/20/potentially-malicious-filenames/#respond">Leave a comment<span class="screen-reader-text"> on Potentially malicious filenames</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+<article id="post-700" class="post-700 post type-post status-publish format-standard hentry category-freebsd category-linux category-open-source category-zfs">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="http://jrs-s.net/2016/06/16/psa-snapshots-are-better-than-zvols/" rel="bookmark">PSA: Snapshots are better than ZVOLs</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>A lot of people new to ZFS, and even a lot of people not-so-new to ZFS, like to wax ecstatic about ZVOLs.  But they never seem to mention the very real pitfalls ZVOLs present.</p>
+<h3>What&#8217;s a ZVOL?</h3>
+<p>Well, if you know what LVM is, a ZVOL is like an LV, but for ZFS.  If you <em>don&#8217;t</em> know what LVM is, you can think of a ZVOL as, basically, a dynamically allocated &#8220;raw partition&#8221; inside ZFS.  Unlike a normal dataset, a ZVOL doesn&#8217;t have a filesystem of its own.  And you can access it by a raw devicename, like /dev/zvol/poolname/zvolname.  This looks ideal for those use-cases where you want to nest a legacy filesystem underneath ZFS &#8211; for example, virtual machine images.  Once you have the ZVOL, you have a raw block storage device to interact with &#8211; think mkfs.ext4 /dev/zvol/poolname/zvolname, for example &#8211; but you still get all the normal ZFS features along with it, like data integrity, compression, snapshots, and so forth.  Plus you don&#8217;t have to mess with a loopback device, so that should be higher performance, right?  What&#8217;s not to love?</p>
+<h3>ZVOLs perform better, though, right?</h3>
+<p>AFAICT, the increased performance is pretty much a lie.  I&#8217;ve benchmarked ZVOLs pretty extensively against raw disk partitions, raw LVs, raw files, and even .qcow2 files and there really isn&#8217;t much of a performance difference to be seen.  A partially-allocated ZVOL isn&#8217;t going to perform any better than a partially-allocated .qcow2 file, and a fully-allocated ZVOL isn&#8217;t going to perform any better than a fully-allocated .qcow2 file.  (Raw disk partitions or LVs don&#8217;t really get any significant boost, either.)</p>
+<h3>Let&#8217;s talk about snapshots.</h3>
+<p>If snapshots aren&#8217;t one of the biggest reasons you&#8217;re using ZFS, they should be, and ZVOLs and snapshots are really, really tricky and weird.  If you have a dataset that&#8217;s occupying 85% of your pool, you can snapshot that dataset any time you like.  If you have a <em>ZVOL</em> that&#8217;s occupying 85% of your pool, you cannot snapshot it, period.  This is one of those things that both tyros and vets tend to immediately balk at &#8211; I must be misunderstanding something, right?  Surely it doesn&#8217;t work that way?  Afraid it does.  </p>
+<h3>Ooh, is it demo-in-a-VM-time again?! =)</h3>
+<pre>root@xenial:~# zfs create target/dataset -o compress=off -o quota=15G
+root@xenial:~# pv < /dev/zero > /target/dataset/0.bin
+  15GiB 0:01:13 [10.3MiB/s] [            <=>                            ]
+pv: write failed: Disk quota exceeded
+root@xenial:~# zfs list
+NAME             USED  AVAIL  REFER  MOUNTPOINT
+target          15.3G  3.93G    19K  /target
+target/dataset  15.0G      0  15.0G  /target/dataset
+root@xenial:~# zfs snapshot target/dataset@1
+root@xenial:~# </pre>
+<p>Above, we created a dataset on a 20G pool, we dumped 15G of data into it, and we snapshotted the dataset.  No surprises here, this is exactly what we expect.  </p>
+<p>But what happens when we try the same thing with a ZVOL?</p>
+<pre>root@xenial:~# zfs create target/zvol -V 15G -o compress=off
+root@xenial:~# pv < /dev/zero > /dev/zvol/target/zvol
+  15GiB 0:03:22 [57.3MiB/s] [========================================>  ] 99% ETA 0:00:00
+pv: write failed: No space left on device
+NAME          USED  AVAIL  REFER  MOUNTPOINT
+target       15.8G  3.46G    19K  /target
+target/zvol  15.5G  3.90G  15.0G  -
+root@xenial:~# zfs snapshot target/zvol@1
+cannot create snapshot 'target/zvol@1': out of space</pre>
+<p>Despite having 3.9G free on our pool, <em>we can&#8217;t snapshot the zvol</em>.  If you don&#8217;t have at least as much free space in a pool as the REFER of a ZVOL on that pool, you can&#8217;t snapshot the ZVOL, period.  This means for our little baby demonstration here we&#8217;d need 15G free to snapshot our 15G ZVOL.  In a real-world situation with VM images, this could easily be a case where you can&#8217;t snapshot your 15<strong>TB</strong> VM image without 15 <strong>terabytes</strong> of free space available &#8211; where if you&#8217;d stuck with standard datasets, you&#8217;d be able to snapshot that same 15TB VM even with just a few hundred megabytes of AVAIL at your disposal.</p>
+<h3>TL;DR:</h3>
+<p>Think long and hard before you implement ZVOLs.  Then, you know&#8230; don&#8217;t.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="http://jrs-s.net/2016/06/16/psa-snapshots-are-better-than-zvols/" rel="bookmark"><time class="entry-date published updated" datetime="2016-06-16T10:47:55+00:00">June 16, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="http://jrs-s.net/category/open-source/freebsd/" rel="category tag">FreeBSD</a>, <a href="http://jrs-s.net/category/open-source/linux/" rel="category tag">Linux</a>, <a href="http://jrs-s.net/category/open-source/" rel="category tag">Open Source</a>, <a href="http://jrs-s.net/category/open-source/zfs/" rel="category tag">ZFS</a></span><span class="comments-link"><a href="http://jrs-s.net/2016/06/16/psa-snapshots-are-better-than-zvols/#respond">Leave a comment<span class="screen-reader-text"> on PSA: Snapshots are better than ZVOLs</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+<article id="post-693" class="post-693 post type-post status-publish format-standard hentry category-android category-linux category-open-source category-ubuntu">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="http://jrs-s.net/2016/06/13/could-not-complete-ssl-handshake-with-nagios-and-nsclient-0-4x/" rel="bookmark">Could not complete SSL handshake, Socket timeout after 10 seconds with Nagios and NSClient++ 0.4x</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Adding a couple of new Windows hosts to my monitoring network this morning, my NRPE plugin checks against them were failing.</p>
+<pre>me@nagios:~$ /usr/lib/nagios/plugins/check_nrpe -H monitoredwindowsserver.vpn
+CHECK_NRPE: Error - could not complete SSL handshake.</pre>
+<p>The usual culprits &#8211; password set but not being used, or hosts_allowed not including the host doing the checking &#8211; were already set correctly.</p>
+<p>Turns out the NSClient++ folks changed up the default configs.  In order to get it working again with a relatively vanilla Nagios server on the other end, I needed to set two new directives under [/settings/NRPE/server]:</p>
+<pre>
+verify mode = none
+insecure = true
+</pre>
+<p>With those directives set and a restart to the nsclient service on the Windows end, manual tests to NRPE worked properly:</p>
+<pre>me@nagios:~$ /usr/lib/nagios/plugins/check_nrpe -H monitoredwindowsserver.vpn
+I (0.4.4.19 2015-12-08) seem to be doing fine...</pre>
+<p>One of these days I should figure out how to get the default modes, which use peer-to-peer certificate checks, working&#8230; but for the moment, I&#8217;m only allowing traffic over a VPN tunnel anyway, so it was more important to get it working in its existing (secured by VPN) configuration than to blow a few hours untangling the new defaults.</p>
+<p>Wasn&#8217;t out of the woods yet, though &#8211; that got NRPE working, but not NSClientServer, which is what I&#8217;m actually using to monitor these Windows hosts for the most part.  So I was still seeing &#8220;CRITICAL &#8211; Socket timeout after 10 seconds&#8221; on a lot of tests against the new hosts in Nagios.  Doing a netstat -an on the Windows hosts themselves showed that they were listening on 5666 &#8211; the NRPE port &#8211; but <em>nothing</em> was listening on 12489, the NSClientServer port.  This required another fix in the nsclient.ini file.  Just underneath <strong>[/modules]</strong>, you&#8217;ll need to add (not just uncomment!) this line:</p>
+<pre>NSClientServer = enabled</pre>
+<p>And restart the NSClient++ service again, either from Services applet or with <strong>net stop nscp ; net start nscp</strong>.  Now we test the check_nt plugin against the host&#8230;</p>
+<pre>me@nagios:~$ /usr/lib/nagios/plugins/check_nt -H monitoredwindowsserver.vpn -v UPTIME -p 12489
+System Uptime - 0 day(s) 1 hour(s) 34 minute(s)</pre>
+<p>Now, <em>finally</em>, all of my tests are working.  Hope this saves somebody else from having the kind of morning I had!</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="http://jrs-s.net/2016/06/13/could-not-complete-ssl-handshake-with-nagios-and-nsclient-0-4x/" rel="bookmark"><time class="entry-date published" datetime="2016-06-13T09:45:26+00:00">June 13, 2016</time><time class="updated" datetime="2016-06-13T10:25:30+00:00">June 13, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="http://jrs-s.net/category/open-source/linux/android/" rel="category tag">Android</a>, <a href="http://jrs-s.net/category/open-source/linux/" rel="category tag">Linux</a>, <a href="http://jrs-s.net/category/open-source/" rel="category tag">Open Source</a>, <a href="http://jrs-s.net/category/open-source/linux/ubuntu/" rel="category tag">Ubuntu</a></span><span class="comments-link"><a href="http://jrs-s.net/2016/06/13/could-not-complete-ssl-handshake-with-nagios-and-nsclient-0-4x/#respond">Leave a comment<span class="screen-reader-text"> on Could not complete SSL handshake, Socket timeout after 10 seconds with Nagios and NSClient++ 0.4x</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+<article id="post-685" class="post-685 post type-post status-publish format-standard hentry category-linux category-open-source category-ubuntu category-zfs">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="http://jrs-s.net/2016/05/16/zfs-practicing-failures/" rel="bookmark">ZFS: Practicing failures on virtual hardware</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>I always used to sweat, and sweat <em>bullets</em>, when it came time to replace a failed disk in ZFS.  It happened infrequently enough that I never did remember the syntax quite right in between issues, and the last thing you want to do with production hardware and data is fumble around in a cold sweat &#8211; you want to <em>know</em> what the correct syntax for everything is ahead of time, and be practiced and confident.</p>
+<p>Wonderfully, there&#8217;s no reason for that anymore &#8211; particularly on Linux, which boasts a really excellent set of tools for simulating storage hardware quickly and easily.  So today, we&#8217;re going to walk through setting up a pool, destroying one of the disks in it, and recovering from the failure.  The important part here isn&#8217;t really the syntax for the replacement, though&#8230; it&#8217;s learning how to set up the simulation in the first place, which allows you to test <em>lots</em> of things properly when your butt isn&#8217;t on the line!</p>
+<h3>Prerequisites</h3>
+<p>Obviously, you need to have ZFS available.  If you&#8217;re on Ubuntu Xenial, you can get it with <strong>apt update ; apt install zfs-linux</strong>.  If you&#8217;re on an earlier version of Ubuntu, you&#8217;ll need to add the zfs-native PPA from the ZFS on Linux project, and install from there: <strong>apt-add-repository ppa:zfs-native/stable ; apt update ; apt install ubuntu-zfs</strong>.</p>
+<p>You&#8217;ll also need the QEMU tools, to create and manage .qcow2 storage files, and qemu-nbd loopback type devices that access them like real hardware.  Again on Ubuntu, that&#8217;s <strong>apt update ; apt install qemu-utils</strong>.</p>
+<p>If you aren&#8217;t running Ubuntu, the tools are definitely still available, but you&#8217;ll need to consult your own distro&#8217;s documentation / forums / etc to figure out how to install &#8217;em.</p>
+<h3>Creating the virtual disk back-end</h3>
+<p>First up, we create the back end files for the storage.  In today&#8217;s example, that&#8217;ll be a pair of 1GB disks.</p>
+<pre>root@banshee:~# qemu-img create -f qcow2 /tmp/0.qcow2 1G ; qemu-img create -f qcow2 /tmp/1.qcow2 1G
+Formatting '/tmp/0.qcow2', fmt=qcow2 size=1073741824 encryption=off cluster_size=65536 lazy_refcounts=off 
+Formatting '/tmp/1.qcow2', fmt=qcow2 size=1073741824 encryption=off cluster_size=65536 lazy_refcounts=off 
+</pre>
+<p>That does exactly what it looks like: creates a pair of 1GB virtual disks, /tmp/0.qcow2 and /tmp/1.qcow2.  Qcow2 files are sparsely allocated, so they don&#8217;t actually take up any room at all yet &#8211; they&#8217;ll expand as and if you put data in them.  (If you omit the <em>-f qcow2</em> argument, qemu-img will create fully allocated RAW files instead, which will take longer.)</p>
+<h3>Creating the virtual disk devices</h3>
+<p>By themselves, our .qcow2 files don&#8217;t help us much.  In order to use them as disks with ZFS, what we really need are <em>block devices</em>, in the /dev filesystem, which reference our qcow2 files.  That&#8217;s where qemu-nbd comes in.</p>
+<pre>root@banshee:~# modprobe nbd max_part=63</pre>
+<p>You might or might not actually need that bit &#8211; but it never hurts.  This makes sure the <strong>nbd</strong> kernel module is loaded, <em>and</em>, for safety&#8217;s sake, that it won&#8217;t try to load more than 63 partitions on a single virtual device.  This might keep your system from crashing if you try to access a stupendously corrupt or maliciously crafted qcow2 file &#8211; I&#8217;m not sure what happens if a system thinks it has devices sda1 through sda65537, and I&#8217;d really rather not find out!</p>
+<pre>root@banshee:~# qemu-nbd -c /dev/nbd0 /tmp/0.qcow2 ; qemu-nbd -c /dev/nbd1 /tmp/1.qcow2</pre>
+<p>Easy peasy &#8211; we now have virtual disks /dev/nbd0 and /dev/nbd1, which can be accessed by ZFS (or any other filesystem or linux system utility) just like any other disk would be.</p>
+<h3>Setting up a zpool</h3>
+<p>This looks just like setting up any other pool.  We&#8217;ll use the <em>ashift</em> argument to make the pool use 4K blocks, since that matches my underlying block device (which might or might not really matter, but it&#8217;s a good habit to get into anyway, and this is all about building good habits and muscle memory, right?)</p>
+<pre>root@banshee:~# zpool create -oashift=12 test mirror /dev/nbd0 /dev/nbd1
+root@banshee:~# zpool status test
+  pool: test
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     0
+	  mirror-0  ONLINE       0     0     0
+	    nbd0    ONLINE       0     0     0
+	    nbd1    ONLINE       0     0     0
+
+errors: No known data errors
+</pre>
+<p>Easy peasy!  We now have a pool with a simple two-disk mirror vdev.  </p>
+<h3>Playing with topology: add more devices</h3>
+<p>What if we wanted to make it a pool of mirrors, with a second mirror vdev?</p>
+<pre>root@banshee:~# qemu-img create -f qcow2 /tmp/2.qcow2 1G ; qemu-img create -f qcow2 /tmp/3.qcow2 1G
+Formatting '/tmp/2.qcow2', fmt=qcow2 size=1073741824 encryption=off cluster_size=65536 lazy_refcounts=off 
+Formatting '/tmp/3.qcow2', fmt=qcow2 size=1073741824 encryption=off cluster_size=65536 lazy_refcounts=off 
+root@banshee:~# qemu-nbd -c /dev/nbd2 /tmp/2.qcow2 ; qemu-nbd -c /dev/nbd3 /tmp/3.qcow2
+root@banshee:~# zpool add -oashift=12 test mirror /dev/nbd2 /dev/nbd3
+root@banshee:~# zpool status test
+  pool: test
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     0
+	  mirror-0  ONLINE       0     0     0
+	    nbd0    ONLINE       0     0     0
+	    nbd1    ONLINE       0     0     0
+	  mirror-1  ONLINE       0     0     0
+	    nbd2    ONLINE       0     0     0
+	    nbd3    ONLINE       0     0     0
+
+errors: No known data errors
+</pre>
+<p>Couldn&#8217;t be easier.</p>
+<h3>Save some data on your new virtual hardware</h3>
+<p>Before we do anything else, let&#8217;s store some data on the new pool, so that we have something to detect corruption on later. (ZFS doesn&#8217;t checksum or scrub empty blocks, so won&#8217;t find corruption in them.)</p>
+<pre>root@banshee:~# pv < /dev/urandom > /test/urandom.bin
+ 408MB 0:00:37 [  15MB/s] [                                          <=>                    ]
+^C</pre>
+<p>I used the pipe viewer utility here, <strong>pv</strong>, which is available on Ubuntu with <strong>apt update ; apt install pv</strong>.</p>
+<p>The ^C is because I hit control-C to interrupt it once I felt that I&#8217;d written enough data.  In this case, a bit over 400MB of random data, saved on our new pool in the file /test/urandom.bin.</p>
+<pre>root@banshee:~# zpool list test
+NAME   SIZE  ALLOC   FREE  EXPANDSZ   FRAG    CAP  DEDUP  HEALTH  ALTROOT
+test  1.97G   414M  1.56G         -    26%    20%  1.00x  ONLINE  -
+
+root@banshee:~# zfs list test
+NAME   USED  AVAIL  REFER  MOUNTPOINT
+test   413M  1.50G   413M  /test
+
+root@banshee:~# ls -lh /test
+total 413M
+-rw-r--r-- 1 root root 413M May 16 12:12 urandom.bin
+</pre>
+<p>Gravy.</p>
+<h3>I just want to kill something beautiful</h3>
+<p>What happens if a drive or a controller port goes berserk, and overwrites large swathes of a disk with zeroes?  No time like the present to find out!  </p>
+<p>We <strong>don&#8217;t</strong> really want to write directly over a .qcow2 file, since our goal today is to test ZFS, not to test the QEMU infrastructure itself.  We want to write to the actual device we created, and let the device put the data in the .qcow2 file.  Let&#8217;s pick on <strong>/dev/nbd0</strong>, backed by <strong>/tmp/0.qcow2</strong> &#8211; it looks uppity and in need of some comeuppance.</p>
+<pre>root@banshee:~# pv < /dev/zero > /dev/nbd0
+ 777MB 0:00:06 [48.9MB/s] [       <=>                                                     ]
+^C</pre>
+<p>Boom.  Errors galore.  Does ZFS know about them yet?</p>
+<pre>root@banshee:~# zpool status test
+  pool: test
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     0
+	  mirror-0  ONLINE       0     0     0
+	    nbd0    ONLINE       0     0     0
+	    nbd1    ONLINE       0     0     0
+	  mirror-1  ONLINE       0     0     0
+	    nbd2    ONLINE       0     0     0
+	    nbd3    ONLINE       0     0     0
+
+errors: No known data errors
+</pre>
+<p>Nope!  We really, really did simulate <em>on-disk corruption</em>, which ZFS has no way of knowing about until it tries to actually access the data.  </p>
+<h3>Easter egging for errors</h3>
+<p>So, let&#8217;s actually access the data by reading in the entire <strong>/test/urandom.bin</strong> file, and <em>then</em> check our status:</p>
+<pre>root@banshee:~# pv < /test/urandom.bin > /dev/null
+ 412MB 0:00:00 [6.99GB/s] [=============================================>] 100%            
+root@banshee:~# zpool status test
+  pool: test
+ state: ONLINE
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     0
+	  mirror-0  ONLINE       0     0     0
+	    nbd0    ONLINE       0     0     0
+	    nbd1    ONLINE       0     0     0
+	  mirror-1  ONLINE       0     0     0
+	    nbd2    ONLINE       0     0     0
+	    nbd3    ONLINE       0     0     0
+
+errors: No known data errors
+</pre>
+<p>Hey &#8211; still nothing!  Why not?  Because <strong>/test/urandom.qcow2</strong> is still in the ARC, that&#8217;s why!  ZFS didn&#8217;t actually need to hit the storage to hand us the file, so it didn&#8217;t &#8211; and we still haven&#8217;t detected the massive amount of corruption we injected into <strong>/dev/nbd0</strong>.</p>
+<p>We can get ZFS to actually look for the problem in a couple of ways.  The cruder way is to export the pool and reimport it, which will have the side effect of dumping the ARC as well.  The more professional way is to scrub the pool, which is a technique with the explicit design of reading and verifying every block.  But first, let&#8217;s see what happens just reading from the storage normally, after the ARC isn&#8217;t holding the data anymore:</p>
+<pre>root@banshee:~# zpool export test
+root@banshee:~# zpool import test
+root@banshee:~# zpool status test
+  pool: test
+ state: ONLINE
+status: One or more devices has experienced an unrecoverable error.  An
+	attempt was made to correct the error.  Applications are unaffected.
+action: Determine if the device needs to be replaced, and clear the errors
+	using 'zpool clear' or replace the device with 'zpool replace'.
+   see: http://zfsonlinux.org/msg/ZFS-8000-9P
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     0
+	  mirror-0  ONLINE       0     0     0
+	    nbd0    ONLINE       0     0     4
+	    nbd1    ONLINE       0     0     0
+	  mirror-1  ONLINE       0     0     0
+	    nbd2    ONLINE       0     0     0
+	    nbd3    ONLINE       0     0     0
+
+errors: No known data errors
+</pre>
+<p>Ooh, we&#8217;ve <em>already</em> found a few errors &#8211; we injected so much corruption that we nailed a few of ZFS&#8217; metadata blocks on <strong>/dev/nbd0</strong>, which were found immediately on importing the pool again.  There were redundant copies of the metadata blocks available, though, so ZFS repaired the errors it found already with those.</p>
+<p>Now that we&#8217;ve exported and imported the pool, which also dumped the ARC, let&#8217;s re-read the file in its entirety again, then see what our status looks like:</p>
+<pre>
+root@banshee:~# pv < /test/urandom.bin > /dev/null
+ 412MB 0:00:00 [ 563MB/s] [================================================>] 100%            
+root@banshee:~# zpool status test
+  pool: test
+ state: ONLINE
+status: One or more devices has experienced an unrecoverable error.  An
+	attempt was made to correct the error.  Applications are unaffected.
+action: Determine if the device needs to be replaced, and clear the errors
+	using 'zpool clear' or replace the device with 'zpool replace'.
+   see: http://zfsonlinux.org/msg/ZFS-8000-9P
+  scan: none requested
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     0
+	  mirror-0  ONLINE       0     0     0
+	    nbd0    ONLINE       0     0     9
+	    nbd1    ONLINE       0     0     0
+	  mirror-1  ONLINE       0     0     0
+	    nbd2    ONLINE       0     0     0
+	    nbd3    ONLINE       0     0     0
+
+errors: No known data errors
+</pre>
+<p>Five more blocks detected corrupt.  Doesn&#8217;t seem like a lot, does it?  Keep in mind, ZFS is only finding blocks that we specifically attempt to read from right now &#8211; so a lot of what would be corrupt blocks on <strong>/dev/nbd0</strong>, we actually read from <strong>/dev/nbd1</strong> instead.  And only half-ish of the data was saved to <strong>mirror-0</strong> in the first place &#8211; the rest went to <strong>mirror-1</strong>.  So, ZFS is finding and repairing corrupt blocks&#8230; but only a few of them so far.  This was worth playing with to see what happens with undetected errors in normal use, but now that we&#8217;ve done this, let&#8217;s look for errors the <em>right</em> way.</p>
+<h3>It isn&#8217;t really clean until it&#8217;s been scrubbed</h3>
+<p>When we scrub the pool, we explicitly read <em>every single block</em> that&#8217;s been written and is actively in use on <em>every single device</em>, all at once.</p>
+<p>So far, we&#8217;ve found nine corrupt blocks just poking around the system like we normally would in normal use.  Will a scrub find more?</p>
+<pre>root@banshee:~# zpool scrub test
+root@banshee:~# zpool status test
+  pool: test
+ state: ONLINE
+status: One or more devices has experienced an unrecoverable error.  An
+	attempt was made to correct the error.  Applications are unaffected.
+action: Determine if the device needs to be replaced, and clear the errors
+	using 'zpool clear' or replace the device with 'zpool replace'.
+   see: http://zfsonlinux.org/msg/ZFS-8000-9P
+  scan: scrub repaired 170M in 0h0m with 0 errors on Mon May 16 12:32:00 2016
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     0
+	  mirror-0  ONLINE       0     0     0
+	    nbd0    ONLINE       0     0 1.40K
+	    nbd1    ONLINE       0     0     0
+	  mirror-1  ONLINE       0     0     0
+	    nbd2    ONLINE       0     0     0
+	    nbd3    ONLINE       0     0     0
+
+errors: No known data errors
+</pre>
+<p><strong>There</strong> we go!  We just went from 9 checksum errors, to 1.4 <em>thousand</em> checksum errors detected.</p>
+<p>And <em>that</em>, folks, is why you want to regularly scrub your pool.</p>
+<p>Can we do worse?  What happens if we blow through <em>every</em> block on <strong>/dev/nbd0</strong>, instead of &#8220;just&#8221; 3/4 or so of them?</p>
+<pre>root@banshee:~# pv < /dev/zero > /dev/nbd0
+pv: write failed: No space left on device<=>                                                 ]
+root@banshee:~# zpool scrub test
+root@banshee:~# zpool status test
+  pool: test
+ state: ONLINE
+status: One or more devices could not be used because the label is missing or
+	invalid.  Sufficient replicas exist for the pool to continue
+	functioning in a degraded state.
+action: Replace the device using 'zpool replace'.
+   see: http://zfsonlinux.org/msg/ZFS-8000-4J
+  scan: scrub repaired 0 in 0h0m with 0 errors on Mon May 16 12:36:38 2016
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     0
+	  mirror-0  ONLINE       0     0     0
+	    nbd0    UNAVAIL      0     0 1.40K  corrupted data
+	    nbd1    ONLINE       0     0     0
+	  mirror-1  ONLINE       0     0     0
+	    nbd2    ONLINE       0     0     0
+	    nbd3    ONLINE       0     0     0
+
+errors: No known data errors
+</pre>
+<p>The <strong>CKSUM</strong> column hasn&#8217;t changed &#8211; but <strong>/dev/nbd0</strong> now shows as <strong>UNAVAIL</strong>, with the <strong>corrupted data</strong> flag, because we blew through all the metadata including all copies of the disk label itself.  We still have no data errors on the pool itself, but mirror-0, and the pool itself, are operating degraded now.  Which we&#8217;ll want to fix.</p>
+<p>Interestingly, we also just found a bug in ZFS &#8211; the pool itself as well as the <strong>mirror-0</strong> vdev, should be showing <strong>DEGRADED</strong> in the <strong>STATE</strong> column, not <strong>ONLINE</strong>!  <a href="https://github.com/zfsonlinux/zfs/issues/4653" target="_blank">I&#8217;m gonna go report that, be back in a minute&#8230;</a></p>
+<h3>Replacing a failed disk (Rise chicken.  Chicken, rise.)</h3>
+<p>OK, now that we&#8217;ve thoroughly failed a disk, we can replace it.  We happen to know &#8211; because we&#8217;re evil bastards who did it ourselves &#8211; that the actual <em>disk</em> itself is fine on the hardware level, we just basically degaussed it.  So we could just replace it in the array <em>in situ.</em>  That&#8217;s not usually going to be best practice with real hardware, though, so let&#8217;s more thoroughly simulate <em>actually</em> removing and replacing the disk with a new one.</p>
+<p>First, the removal:</p>
+<pre>root@banshee:~# qemu-nbd -d /dev/nbd0
+/dev/nbd0 disconnected
+</pre>
+<p>Simple enough.  ZFS doesn&#8217;t really know the disk is gone yet, but we can force it to figure out by scrubbing again before checking the status:</p>
+<pre>root@banshee:~# zpool scrub test
+root@banshee:~# zpool status test
+  pool: test
+ state: DEGRADED
+status: One or more devices could not be used because the label is missing or
+	invalid.  Sufficient replicas exist for the pool to continue
+	functioning in a degraded state.
+action: Replace the device using 'zpool replace'.
+   see: http://zfsonlinux.org/msg/ZFS-8000-4J
+  scan: scrub repaired 0 in 0h0m with 0 errors on Mon May 16 12:42:35 2016
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        DEGRADED     0     0     0
+	  mirror-0  DEGRADED     0     0     0
+	    nbd0    UNAVAIL      0     0 1.40K  corrupted data
+	    nbd1    ONLINE       0     0     0
+	  mirror-1  ONLINE       0     0     0
+	    nbd2    ONLINE       0     0     0
+	    nbd3    ONLINE       0     0     0
+
+errors: No known data errors
+</pre>
+<p>Interestingly, now that we&#8217;ve actually <em>removed</em> <strong>/dev/nbd0</strong> in a hardware sense, our pool and vdev show &#8211; correctly &#8211; as <strong>DEGRADED</strong>, in the actual <strong>STATUS</strong> column as well as in the status <em>message</em>.</p>
+<p>Regardless, now that we&#8217;ve &#8220;pulled&#8221; the disk, let&#8217;s &#8220;replace&#8221; it.</p>
+<pre>root@banshee:~# rm /tmp/0.qcow2
+root@banshee:~# qemu-img create -f qcow2 /tmp/0.qcow2 1G
+Formatting '/tmp/0.qcow2', fmt=qcow2 size=1073741824 encryption=off cluster_size=65536 lazy_refcounts=off 
+root@banshee:~# qemu-nbd -c /dev/nbd0 /tmp/0.qcow2
+</pre>
+<p>Easy enough &#8211; now, we&#8217;re in <em>exactly</em> the same boat we&#8217;d be in if this was a real machine and we&#8217;d physically removed and replaced the offending drive, but done nothing else.  ZFS, of course, is still going to show degraded status &#8211; we need to give the new drive to the pool, as well as physically plugging it in.  So let&#8217;s do that:</p>
+<pre>root@banshee:~# zpool replace test /dev/nbd0
+</pre>
+<p>Is it really that easy?  Let&#8217;s check the status and find out:</p>
+<pre>root@banshee:~# zpool status test
+  pool: test
+ state: ONLINE
+  scan: resilvered 206M in 0h0m with 0 errors on Mon May 16 12:47:20 2016
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     0
+	  mirror-0  ONLINE       0     0     0
+	    nbd0    ONLINE       0     0     0
+	    nbd1    ONLINE       0     0     0
+	  mirror-1  ONLINE       0     0     0
+	    nbd2    ONLINE       0     0     0
+	    nbd3    ONLINE       0     0     0
+
+errors: No known data errors
+</pre>
+<p>Yep, it really is that easy.</p>
+<h3>Party&#8217;s over: clean up before you go home</h3>
+<p>Now that you&#8217;ve successfully tested what you set out to test, the last step is to clean up your virtual mess.  In order, you need to destroy the test pool, disconnect the virtual devices, and delete the back-end storage files they referenced.</p>
+<pre>root@banshee:~# zpool destroy test
+root@banshee:~# qemu-nbd -d /dev/nbd0 ; qemu-nbd -d /dev/nbd1 ; qemu-nbd -d /dev/nbd2 ; qemu-nbd -d /dev/nbd3
+/dev/nbd0 disconnected
+/dev/nbd1 disconnected
+/dev/nbd2 disconnected
+/dev/nbd3 disconnected
+root@banshee:~# rm /tmp/0.qcow2 ; rm /tmp/1.qcow2 ; rm /tmp/2.qcow2 ; rm /tmp/3.qcow2
+</pre>
+<p>All done &#8211; clean as a whistle, and ready to set up the next simulation!</p>
+<h3>If you learned how to fail out a disk, awesome, but&#8230;</h3>
+<p>If you ended up here trying to figure out how to deal with and replace a failed disk, cool, and I hope you got what you were looking for.  But <em>please</em>, remember the testing steps we did for the environment &#8211; they&#8217;re what this post is actually about.  Learning how to set up your own virtual test environment will make you a much, <em>much</em> better admin down the line &#8211; and make you as cool as an action hero that one fateful day when it&#8217;s a <em>real</em> disk that&#8217;s faulted out of your <em>real</em> pool, and your data&#8217;s on the line.  Nothing gives you confidence and takes away the stress like plenty of experience having done the exact same thing before.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="http://jrs-s.net/2016/05/16/zfs-practicing-failures/" rel="bookmark"><time class="entry-date published" datetime="2016-05-16T12:04:31+00:00">May 16, 2016</time><time class="updated" datetime="2016-05-16T12:23:01+00:00">May 16, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="http://jrs-s.net/category/open-source/linux/" rel="category tag">Linux</a>, <a href="http://jrs-s.net/category/open-source/" rel="category tag">Open Source</a>, <a href="http://jrs-s.net/category/open-source/linux/ubuntu/" rel="category tag">Ubuntu</a>, <a href="http://jrs-s.net/category/open-source/zfs/" rel="category tag">ZFS</a></span><span class="comments-link"><a href="http://jrs-s.net/2016/05/16/zfs-practicing-failures/#respond">Leave a comment<span class="screen-reader-text"> on ZFS: Practicing failures on virtual hardware</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+<article id="post-678" class="post-678 post type-post status-publish format-standard hentry category-freebsd category-linux category-open-source category-ubuntu category-zfs">
+	
+	<header class="entry-header">
+		<h2 class="entry-title"><a href="http://jrs-s.net/2016/05/09/testing-copies-equals-n-resiliency/" rel="bookmark">Testing copies=n resiliency</a></h2>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>I decided to see how well ZFS copies=n would stand up to on-disk corruption today.  Spoiler alert: not great.</p>
+<p>First step, I created a 1GB virtual disk, made a zpool out of it with 8K blocks, and set copies=2.</p>
+<pre>me@locutus:~$ sudo qemu-img create -f qcow2 /data/test/copies/0.qcow2 1G
+me@locutus:~$ sudo qemu-nbd -c /dev/nbd0 /data/test/copies/0.qcow2 1G
+me@locutus:~$ sudo zpool create -oashift=12 test /data/test/copies/0.qcow2
+me@locutus:~$ sudo zfs set copies=2 test
+</pre>
+<p>Now, I wrote 400 1MB files to it &#8211; just enough to make the pool roughly 85% full, including the overhead due to copies=2.</p>
+<pre>me@locutus:~$ cat /tmp/makefiles.pl
+#!/usr/bin/perl
+
+for ($x=0; $x<400 ; $x++) {
+	print "dd if=/dev/zero bs=1M count=1 of=$x\n";
+	print `dd if=/dev/zero bs=1M count=1 of=$x`;
+}</pre>
+<p>With the files written, I backed up my virtual filesystem, fully populated, so I can repeat the experiment later.</p>
+<pre>me@locutus:~$ sudo zpool export test
+me@locutus:~$ sudo cp /data/test/copies/0.qcow2 /data/test/copies/0.qcow2.bak
+me@locutus:~$ sudo zpool import test</pre>
+<p>Now, I write corrupt blocks to 10% of the filesystem.  (Roughly: it's possible that the same block was overwritten with a garbage block more than once.)  Note that I used a specific seed, so that I can recreate the scenario <em>exactly</em>, for more runs later.</p>
+<pre>me@locutus:~$ cat /tmp/corruptor.pl
+#!/usr/bin/perl
+
+# total number of blocks in the test filesystem
+$numblocks=131072;
+
+# desired percentage corrupt blocks
+$percentcorrupt=.1;
+
+# so we write this many corrupt blocks
+$corruptloop=$numblocks*$percentcorrupt;
+
+# consistent results for testing
+srand 32767;
+
+# generate 8K of garbage data
+for ($x=0; $x<8*1024; $x++) {
+	$garbage .= chr(int(rand(256)));
+}
+
+open FH, "> /dev/nbd0";
+
+for ($x=0; $x<$corruptloop; $x++) {
+	$blocknum = int(rand($numblocks-100));
+	print "Writing garbage data to block $blocknum\n";
+	seek FH, ($blocknum*8*1024), 0;
+	print FH $garbage;
+}
+
+close FH;
+</pre>
+<p>Okay.  When I scrub the filesystem I just wrote those 10,000 or so corrupt blocks to, what happens?</p>
+<pre>me@locutus:~$ sudo zpool scrub test ; sudo zpool status test
+  pool: test
+ state: ONLINE
+status: One or more devices has experienced an error resulting in data
+	corruption.  Applications may be affected.
+action: Restore the file in question if possible.  Otherwise restore the
+	entire pool from backup.
+   see: http://zfsonlinux.org/msg/ZFS-8000-8A
+  scan: scrub repaired 133M in 0h1m with 1989 errors on Mon May  9 15:56:11 2016
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0 1.94K
+	  nbd0      ONLINE       0     0 8.94K
+
+errors: 1989 data errors, use '-v' for a list
+me@locutus:~$ sudo zpool status -v test | grep /test/ | wc -l
+385</pre>
+<p>OUCH. 385 of my 400 total files were still corrupt after the scrub!  Copies=2 didn't do a great job for me here. <img src="http://jrs-s.net/wp-includes/images/smilies/frownie.png" alt=":(" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>What if I try it again, this time just writing garbage to 1% of the blocks on disk, not 10%?  First, let's restore that backup I cleverly made:</p>
+<pre>root@locutus:/data/test/copies# zpool export test
+root@locutus:/data/test/copies# qemu-nbd -d /dev/nbd0
+/dev/nbd0 disconnected
+root@locutus:/data/test/copies# pv < 0.qcow2.bak > 0.qcow2
+ 999MB 0:00:00 [1.63GB/s] [==================================>] 100%            
+root@locutus:/data/test/copies# qemu-nbd -c /dev/nbd0 /data/test/copies/0.qcow2
+root@locutus:/data/test/copies# zpool import test
+root@locutus:/data/test/copies# zpool status test | tail -n 5
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     0
+	  nbd0      ONLINE       0     0     0
+
+errors: No known data errors</pre>
+<p>Alright, now let's change $percentcorrupt from 0.1 to 0.01, and try again.  How'd we do after only corrupting 1% of the blocks on disk?</p>
+<pre>root@locutus:/data/test/copies# zpool status test
+  pool: test
+ state: ONLINE
+status: One or more devices has experienced an error resulting in data
+	corruption.  Applications may be affected.
+action: Restore the file in question if possible.  Otherwise restore the
+	entire pool from backup.
+   see: http://zfsonlinux.org/msg/ZFS-8000-8A
+  scan: scrub repaired 101M in 0h0m with 72 errors on Mon May  9 16:13:49 2016
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0    72
+	  nbd0      ONLINE       0     0 1.08K
+
+errors: 64 data errors, use '-v' for a list
+root@locutus:/data/test/copies# zpool status test -v | grep /test/ | wc -l
+64</pre>
+<p>Still not great.  We lost 64 out of our 400 files. Tenth of a percent?</p>
+<pre>root@locutus:/data/test/copies# zpool status -v test
+  pool: test
+ state: ONLINE
+status: One or more devices has experienced an error resulting in data
+	corruption.  Applications may be affected.
+action: Restore the file in question if possible.  Otherwise restore the
+	entire pool from backup.
+   see: http://zfsonlinux.org/msg/ZFS-8000-8A
+  scan: scrub repaired 12.1M in 0h0m with 2 errors on Mon May  9 16:22:30 2016
+config:
+
+	NAME        STATE     READ WRITE CKSUM
+	test        ONLINE       0     0     2
+	  nbd0      ONLINE       0     0   105
+
+errors: Permanent errors have been detected in the following files:
+
+        /test/300
+        /test/371
+</pre>
+<p>Damn.  We <em>still</em> lost two files, even with only writing 130 or so corrupt blocks.  (The missing 26 corrupt blocks weren't picked up by the scrub because they happened in the 15% or so of unused space on the pool, presumably: a scrub won't check unused blocks.) OK, what if we try a control - how about we corrupt the same tenth of a percent of the filesystem (105 blocks or so), this time <em>without</em> copies=2 set?  To make it fair, I wrote 800 1MB files to the same filesystem this time using the default copies=1 - this is more files, but it's the same percentage of the filesystem full. (Interestingly, this went a LOT faster.  Perceptibly, more than twice as fast, I think, although I didn't actually time it.)</p>
+<p>Now with our still 84% full /test zpool, but this time with copies=1, I corrupted the same 0.1% of the total block count.</p>
+<pre>root@locutus:/data/test/copies# zpool status test
+  pool: test
+ state: ONLINE
+status: One or more devices has experienced an error resulting in data
+	corruption.  Applications may be affected.
+action: Restore the file in question if possible.  Otherwise restore the
+	entire pool from backup.
+   see: http://zfsonlinux.org/msg/ZFS-8000-8A
+  scan: scrub repaired 8K in 0h0m with 98 errors on Mon May  9 16:28:26 2016
+config:
+
+	NAME                         STATE     READ WRITE CKSUM
+	test                         ONLINE       0     0    98
+	  /data/test/copies/0.qcow2  ONLINE       0     0   198
+
+errors: 93 data errors, use '-v' for a list
+</pre>
+<p><strong>Without</strong> copies=2 set, we lost 93 files instead of 2.  So copies=n was definitely better than nothing for our test of writing 0.1% of the filesystem as bad blocks... but it wasn't fabulous, either, and it fell flat on its face with 1% or 10% of the filesystem corrupted. By comparison, a truly redundant pool - one with two <em>disks</em> in it, in a mirror vdev - would have survived the same test (corrupting ANY number of blocks on a single disk) with flying colors.</p>
+<p>The TL;DR here is that copies=n <em>is</em> better than nothing... but not by a long shot, and you do give up a <em>lot</em> of performance for it.  Conclusion: play with it if you like, but limit it only to extremely important data, and don't make the mistake of thinking it's any substitute for device redundancy, much less backups.</p>
+	</div><!-- .entry-content -->
+
+	
+	<footer class="entry-footer">
+		<span class="posted-on"><span class="screen-reader-text">Posted on </span><a href="http://jrs-s.net/2016/05/09/testing-copies-equals-n-resiliency/" rel="bookmark"><time class="entry-date published" datetime="2016-05-09T15:33:22+00:00">May 9, 2016</time><time class="updated" datetime="2016-05-09T19:59:03+00:00">May 9, 2016</time></a></span><span class="cat-links"><span class="screen-reader-text">Categories </span><a href="http://jrs-s.net/category/open-source/freebsd/" rel="category tag">FreeBSD</a>, <a href="http://jrs-s.net/category/open-source/linux/" rel="category tag">Linux</a>, <a href="http://jrs-s.net/category/open-source/" rel="category tag">Open Source</a>, <a href="http://jrs-s.net/category/open-source/linux/ubuntu/" rel="category tag">Ubuntu</a>, <a href="http://jrs-s.net/category/open-source/zfs/" rel="category tag">ZFS</a></span><span class="comments-link"><a href="http://jrs-s.net/2016/05/09/testing-copies-equals-n-resiliency/#respond">Leave a comment<span class="screen-reader-text"> on Testing copies=n resiliency</span></a></span>			</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+	<nav class="navigation pagination" role="navigation">
+		<h2 class="screen-reader-text">Posts navigation</h2>
+		<div class="nav-links"><span class='page-numbers current'><span class="meta-nav screen-reader-text">Page </span>1</span>
+<a class='page-numbers' href='http://jrs-s.net/page/2/'><span class="meta-nav screen-reader-text">Page </span>2</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='http://jrs-s.net/page/9/'><span class="meta-nav screen-reader-text">Page </span>9</a>
+<a class="next page-numbers" href="http://jrs-s.net/page/2/">Next page</a></div>
+	</nav>
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+
+	</div><!-- .site-content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+						<a href="https://wordpress.org/">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- .site-footer -->
+
+</div><!-- .site -->
+
+<p><a href="http://bad-behavior.ioerror.us/">Bad Behavior</a> has blocked <strong>1204</strong> access attempts in the last 7 days.</p>
+<script type='text/javascript'>
+/* <![CDATA[ */
+r3f5x9JS=escape(document['referrer']);
+hf4N='c551c37ec60fca5f3ccb3b58d08430ba';
+hf4V='16ac9c8835846f08705ca215eede288f';
+jQuery(document).ready(function($){var e="#commentform, .comment-respond form, .comment-form, #lostpasswordform, #registerform, #loginform, #login_form, #wpss_contact_form";$(e).submit(function(){$("<input>").attr("type","hidden").attr("name","r3f5x9JS").attr("value",r3f5x9JS).appendTo(e);$("<input>").attr("type","hidden").attr("name",hf4N).attr("value",hf4V).appendTo(e);return true;});$("#comment").attr({minlength:"15",maxlength:"15360"})});
+/* ]]> */
+</script> 
+<script type='text/javascript' src='http://jrs-s.net/wp-content/themes/twentyfifteen/js/skip-link-focus-fix.js?ver=20141010'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://jrs-s.net/wp-content/themes/twentyfifteen/js/functions.js?ver=20150330'></script>
+<script type='text/javascript' src='http://jrs-s.net/wp-content/plugins/wp-spamshield/js/jscripts-ftr-min.js'></script>
+
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Database Caching 4/14 queries in 0.003 seconds using memcached
+Object Caching 1472/1562 objects using memcached
+
+ Served from: jrs-s.net @ 2017-03-08 13:35:25 by W3 Total Cache -->

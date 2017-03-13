@@ -1,0 +1,985 @@
+
+<!DOCTYPE HTML>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<html lang="en">
+<head id="ctl00_ctl00_Head1"><title>
+	
+			Compass Montessori School
+		
+</title><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="icon" href="http://www.compassmontessori.org/Customers/CO/compassmontessorisch/sysimages/custom/favicon.ico" type="image/x-icon" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="SI" content="/admin/districthome.aspx" />
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="http://www.compassmontessori.org/admin/css/social-links.css" />
+
+
+
+<link href="http://cdn.schoolpointe.com/js/nivo-slider/nivo-slider.css" rel="stylesheet" type="text/css" />
+<link href="http://cdn.schoolpointe.com/jquery-ui/1.8.9/css/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+<script src="http://cdn.schoolpointe.com/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/hoverIntent.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/superfish.1.7.js" type="text/javascript"></script>
+
+<link href="http://www.compassmontessori.org/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="http://cdn.schoolpointe.com/js/bootstrapAccessibility/css/bootstrap-accessibility.css" rel="stylesheet">
+<script src="http://www.compassmontessori.org/Scripts/bootstrap.min.js"></script>
+<script src="http://www.compassmontessori.org/js/Bootstrap.dropdown.Override.js"></script>
+<script src="http://cdn.schoolpointe.com/js/bootstrapAccessibility/js/bootstrap-accessibility.min.js"></script>
+
+<script src="http://cdn.schoolpointe.com/js/jquery.dropshadow.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/search/SearchEngine.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/jquery.guid.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/jquery.dotimeout.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/querystring.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/jquery.shadowon.min.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/nivo-slider/jquery.nivo.slider.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/menu-collapsed.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/menu.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/js/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="http://cdn.schoolpointe.com/jquery-ui/1.8.9/js/jquery-ui.min.js" type="text/javascript"></script>
+<!--[if IE]>
+    <script src="http://cdn.schoolpointe.com/js/html5-ie.js" type="text/javascript" language="javascript"></script>
+    <![endif]-->
+
+
+<link href="http://cdn.schoolpointe.com/js/video-js-5.11.7/video-js.min.css" rel="stylesheet">
+<script src="http://cdn.schoolpointe.com/js/video-js-5.11.7/video.min.js"></script>
+<style type="text/css">
+    .vjs-volume-menu-button.vjs-menu-button-inline .vjs-menu
+    {
+        opacity: 1;
+    }
+</style>
+
+<script type="text/javascript">
+    function loadVideo(guid, playlist)
+    {
+        videojs(guid, playlist, function ()
+        {
+            var origWidth = jQuery('#' + guid).parent().data('width');
+            var origHeight = jQuery('#' + guid).parent().data('height');
+
+            var actualWidth = jQuery('#' + guid).parent().width();
+            if (origWidth > actualWidth)
+            {
+                this.height(origHeight * (actualWidth / origWidth));
+                this.width(actualWidth);
+
+                //Retroactively fixes an issue with resizing videos
+                //the style attribute shouldn't be on the parent
+                jQuery('#' + guid).parent().removeAttr('style');
+
+            } else
+            {
+                this.height(origHeight);
+                this.width(origWidth);
+            }
+            if (playlist != '{}')
+            {
+                this.on('ended', function ()
+                {
+                    this.playlist.next();
+                });
+            }
+
+            //fixes issue in IE when going full screen
+            //video would be behind other content on the page
+            this.on('enterFullWindow', function ()
+            {
+                $(this.el).parents().not('html,body').each(function ()
+                {
+                    $(this)
+                        .data('oldzindex', $(this).css('z-index'))
+                        .css('z-index', 99999)
+                        .addClass('forcedzindex');
+                });
+            });
+            this.on('exitFullWindow', function ()
+            {
+                $('.forcedzindex').each(function ()
+                {
+                    $(this)
+                        .css('z-index', $(this).data('oldzindex'))
+                        .removeClass('forcedzindex')
+                        .removeData('oldzindex');
+                });
+
+            });
+        });
+    }
+
+    jQuery(window).load(function ()
+    {
+
+        //Create the input element
+        var reCaptchinput = $('#recaptcha_response_field');
+        if (reCaptchinput != "")
+        {
+            reCaptchinput.wrapAll("<label class=''  associatedcontrolid='recaptcha_response_field' text='recaptcha'>recaptcha </label>");
+        }
+
+
+        jQuery.browser = {}; (function ()
+        {
+            jQuery.browser.msie = false;
+            jQuery.browser.version = 0; if (navigator.userAgent.match(/MSIE ([0-9]+)\./))
+            {
+                jQuery.browser.msie = true; jQuery.browser.version = RegExp.$1;
+            }
+        })();
+        if (jQuery.browser.msie && jQuery.browser.version <= 7)
+        {
+            //we could do something else here...
+            console.log("You should really update your browser");
+        }
+
+        videojs.options.flash.iFrameMode = true;
+        jQuery('.videoplayer > .video-js').each(function ()
+        {
+            var guid = this.id;
+            var playlist = jQuery('#' + guid).parent().data('playlist');
+            if (playlist === undefined || playlist === null)
+            {
+                playlist = '{}';
+                loadVideo(guid, playlist);
+            }
+        });
+    });
+</script>
+
+<!--IE 8 and below Bootstrapfix-->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+	<style tyoe="text/css">
+	    .quicklinks{ display: none !important;}
+	</style>
+<![endif]-->
+<!-- Bootstrap -->
+
+<script type="text/javascript">
+
+    // needed for jquery bbq, needs jQuery.browser that had been deprecated.
+
+    jQuery.browser = {};
+    (function ()
+    {
+        jQuery.browser.msie = false;
+        jQuery.browser.version = 0;
+        if (navigator.userAgent.match(/MSIE ([0-9]+)\./))
+        {
+            jQuery.browser.msie = true;
+            jQuery.browser.version = RegExp.$1;
+        }
+    })();
+
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="http://cdn.schoolpointe.com/js/datetimepicker/jquery.datetimepicker.css" />
+<script src="http://cdn.schoolpointe.com/js/datetimepicker/jquery.datetimepicker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://cdn.schoolpointe.com/js/jquery-frontier-cal-1.3.2/css/frontierCalendar/jquery-frontier-cal-1.3.2.css" />
+<link rel="stylesheet" type="text/css" href="http://cdn.schoolpointe.com/js/jquery-frontier-cal-1.3.2/css/colorpicker/colorpicker.css" />
+<link rel="Stylesheet" type="text/css" href="http://cdn.schoolpointe.com/css/CalendarPopupStyle.css" />
+<link href="http://cdn.schoolpointe.com/css/schoolpointe.css?version=1.1" rel="stylesheet" type="text/css" />
+<link href="http://cdn.schoolpointe.com/css/bully-report.css" rel="stylesheet" type="text/css" />
+
+
+
+<link rel="alternate" type="application/rss+xml" title='Compass Montessori School - News' href='http://www.compassmontessori.org/rssNews.ashx'>
+
+        <link rel="alternate" type="application/rss+xml" title='Compass Montessori High School - News' href='http://www.compassmontessori.org/rssNews.ashx?schoolId=1'>
+    
+        <link rel="alternate" type="application/rss+xml" title='Compass Montessori Farm School - News' href='http://www.compassmontessori.org/rssNews.ashx?schoolId=2'>
+    
+        <link rel="alternate" type="application/rss+xml" title='Compass Montessori Elementary School - News' href='http://www.compassmontessori.org/rssNews.ashx?schoolId=3'>
+    
+        <link rel="alternate" type="application/rss+xml" title='Compass Montessori Children's House - News' href='http://www.compassmontessori.org/rssNews.ashx?schoolId=4'>
+    
+
+<script>
+    (function (i, s, o, g, r, a, m)
+    {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function ()
+        {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+		m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-58503126-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script src="http://cdn.schoolpointe.com/HTML_CodeSniffer-2.0.7/build/HTMLCS.js"></script>
+<script>
+
+    window['HtmlCodeSniffer_Done'] = false;
+
+    $(document).ready(function ()
+    {
+        $('#goog-gt-tt .logo > img').attr('alt', 'Google tanslate icon');
+
+        var submitErrors = function ()
+        {
+            try
+            {
+                var options = {
+                    path: "http://cdn.schoolpointe.com/HTML_CodeSniffer-2.0.7/build/"
+                };
+
+                HTMLCS.process("WCAG2AA", document,
+                    function (data)
+                    {
+                        var messages = HTMLCS.getMessages();
+                        var length = messages.length;
+
+                        if (length > 0)
+                        {
+                            messages = messages.filter(function (a)
+                            {
+                                return a.type == 1;
+                            });
+
+                            messages = messages.filter(function (a)
+                            {
+                                return a.code !== 'WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail'
+                                       && a.code !== 'WCAG2AA.Principle4.Guideline4_1.4_1_1.F77'
+                                       && a.code !== 'WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputHidden.Name'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_3.1_3_1.F68'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail'
+                                       && a.code !== 'WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font'
+                                       && a.code !== 'WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent'
+                                       && a.code !== 'WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.EmptyNoId'
+                                       && a.code !== 'WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_1.1_1_1.H67.1'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Center'
+                                       && a.code !== 'WCAG2AA.Principle2.Guideline2_4.2_4_2.H25.1.EmptyTitle';
+                            });
+
+                            var count = messages.length;
+
+                            window['HtmlCodeSniffer_Errors'] = count;
+
+                            if (count > 0)
+                            {
+                                $("#AdaErrorCount").text("ADA errors: " + count);
+                                $("#AdaErrorCount").css("cursor", "pointer");
+                                $("#AdaErrorCount").click(function ()
+                                {
+                                    window.open('http://wave.webaim.org/report#/' + window.location.href, '_blank')
+                                });
+                            }
+                            else
+                            {
+                                $("#AdaErrorCount").css("display", "none !important");
+                            }
+
+
+                            var data = {
+                                districtId: "CO_CompassMontessoriSch",
+                                url: "/index.aspx",
+                                errorCount: count,
+                                value: parseInt("0", 10),
+                                forceUpdate: 'false' === 'true'
+                            };
+
+                            try
+                            {
+                                var methodUrl = "/admin/shared/AdaLog.asmx/RecordLog";
+                                $.ajax({
+                                    type: "POST",
+                                    url: methodUrl,
+                                    data: JSON.stringify(data),
+                                    contentType: "application/json; charset=utf-8",
+                                    dataType: "json",
+                                    success: function (msg)
+                                    {
+                                        window['HtmlCodeSniffer_Done'] = true;
+                                    },
+                                    error: function (e)
+                                    {
+                                        console.log(e);
+                                        window['HtmlCodeSniffer_Done'] = true;
+                                    }
+                                });
+                            } catch (ex)
+                            {
+                                window['HtmlCodeSniffer_Done'] = true;
+                            }
+
+                        }
+
+                    }, function (error)
+                    {
+                        console.log(error)
+                    });
+                } catch (ex)
+            {
+                    console.log(ex);
+                }
+        };
+
+        submitErrors();
+    });
+
+
+</script>
+
+
+	<style type="text/css">
+		.masterC .col-xs-1, .masterC .col-sm-1, .masterC .col-md-1, .masterC .col-lg-1, .masterC .col-xs-2, .masterC .col-sm-2, .masterC .col-md-2, .masterC .col-lg-2, .masterC .col-xs-3, .masterC .col-sm-3, .masterC .col-md-3, .masterC .col-lg-3, .masterC .col-xs-4, .masterC .col-sm-4, .masterC .col-md-4, .masterC .col-lg-4, .masterC .col-xs-5, .masterC .col-sm-5, .masterC .col-md-5, .masterC .col-lg-5, .masterC .col-xs-6, .masterC .col-sm-6, .masterC .col-md-6, .masterC .col-lg-6, .masterC .col-xs-7, .masterC .col-sm-7, .masterC .col-md-7, .masterC .col-lg-7, .masterC .col-xs-8, .masterC .col-sm-8, .masterC .col-md-8, .masterC .col-lg-8, .masterC .col-xs-9, .masterC .col-sm-9, .masterC .col-md-9, .masterC .col-lg-9, .masterC .col-xs-10, .masterC .col-sm-10, .masterC .col-md-10, .masterC .col-lg-10, .masterC .col-xs-11, .masterC .col-sm-11, .masterC .col-md-11, .masterC .col-lg-11, .masterC .col-xs-12, .masterC .col-sm-12, .masterC .col-md-12, .masterC .col-lg-12 {
+			padding: 0 5px;
+		}
+	</style>
+	
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#slideshow .slides').nivoSlider({ effect: 'fade', pauseTime: 5000, prevText: '<', nextText: '>' });
+        });
+    </script>
+
+	
+	
+<link id="ctl00_ctl00_SiteCSS" rel="stylesheet" type="text/css" href="http://www.compassmontessori.org/siteCSS.aspx?&amp;page=%2findex.aspx" /></head>
+<body class="school-0 index ">
+	<form name="aspnetForm" method="post" action="index.html" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTcyNTQxNjU3OQ9kFgJmD2QWAmYPZBYEZg9kFgZmD2QWAmYPZBYCAgEPFgIeBFRleHQFGUNvbXBhc3MgTW9udGVzc29yaSBTY2hvb2xkAgMPZBYCAgEPFgIeC18hSXRlbUNvdW50AgQWCGYPZBYCZg8VAh5Db21wYXNzIE1vbnRlc3NvcmkgSGlnaCBTY2hvb2wBMWQCAQ9kFgJmDxUCHkNvbXBhc3MgTW9udGVzc29yaSBGYXJtIFNjaG9vbAEyZAICD2QWAmYPFQIkQ29tcGFzcyBNb250ZXNzb3JpIEVsZW1lbnRhcnkgU2Nob29sATNkAgMPZBYCZg8VAiNDb21wYXNzIE1vbnRlc3NvcmkgQ2hpbGRyZW4ncyBIb3VzZQE0ZAIFDxYCHgRocmVmBSEvc2l0ZUNTUy5hc3B4PyZwYWdlPSUyZmluZGV4LmFzcHhkAgEPZBYOZg9kFgICAw9kFgJmDxYCHwBlZAICDw8WAh4LTmF2aWdhdGVVcmwFAS9kZAIDD2QWAmYPFgIfAAWXUDx1bCBjbGFzcz0nbmF2IG5hdmJhci1uYXYgZGlzdHJpY3QtdG9wLW5hdicgPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nLycgPkhvbWU8L2E+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nID5BYm91dCBVcyAgPGIgY2xhc3M9J2NhcmV0Jz48L2I+PC9hPjx1bCBjbGFzcz0nZHJvcGRvd24tbWVudSc+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvQ29udGVudC8xMjInID5BYm91dCBDb21wYXNzIE1vbnRlc3NvcmkgU2Nob29sPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvQ29udGVudC84NCcgPk91dGNvbWVzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvQ29udGVudC81MCcgPkVucm9sbG1lbnQ8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50LzUyJyA+VG91cnMgYW5kIFBhcmVudCBPcmllbnRhdGlvbjwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQvMTU0JyA+T2JzZXJ2YXRpb24gUG9saWN5PC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvQ29udGVudC80NicgPkNvbnRhY3QgVXM8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50LzQ4JyA+RHJpdmluZyBEaXJlY3Rpb25zPC9hPjwvbGk+PC91bD48L2xpPjxsaSBjbGFzcz0nZHJvcGRvd24nPjxhIGhyZWY9JyMnIGNsYXNzPSdkcm9wZG93bi10b2dnbGUnIGRhdGEtdG9nZ2xlPSdkcm9wZG93bicgPkNvbXBhc3MgU3RhZmYgIDxiIGNsYXNzPSdjYXJldCc+PC9iPjwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duLW1lbnUnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnQvNjQnID5Hb2xkZW4gU3RhZmYgYW5kIEJpb3M8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50LzYyJyA+V2hlYXQgUmlkZ2UgU3RhZmYgYW5kIEJpb3M8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSdkcm9wZG93bic+PGEgaHJlZj0nIycgY2xhc3M9J2Ryb3Bkb3duLXRvZ2dsZScgZGF0YS10b2dnbGU9J2Ryb3Bkb3duJyA+UHJvZ3JhbXMgIDxiIGNsYXNzPSdjYXJldCc+PC9iPjwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duLW1lbnUnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5jb21wYXNzbW9udGVzc29yaS5vcmcvb2xjL3RlYWNoZXIuYXNweD9zPTEwJyA+SGlnaCBTY2hvb2w8L2E+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nID5GYXJtIFNjaG9vbCAgPGIgY2xhc3M9J2NhcmV0Jz48L2I+PC9hPjx1bCBjbGFzcz0nZHJvcGRvd24tbWVudSc+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudC8zMzgnID5GYXJtIFNjaG9vbCBPdmVydmlldzwvYT48L2xpPjxsaSBjbGFzcz0nZHJvcGRvd24nPjxhIGhyZWY9JyMnIGNsYXNzPSdkcm9wZG93bi10b2dnbGUnIGRhdGEtdG9nZ2xlPSdkcm9wZG93bicgdGFyZ2V0PSdfYmxhbmsnPkZhcm0gU2Nob29sIE9jY3VwYXRpb25zICA8YiBjbGFzcz0nY2FyZXQnPjwvYj48L2E+PHVsIGNsYXNzPSdkcm9wZG93bi1tZW51Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuY29tcGFzc21vbnRlc3Nvcmkub3JnL29sYy90ZWFjaGVyLmFzcHg/cz02MScgPkNvbW11bml0eSBhbmQgS2l0Y2hlbiBPY2N1cGF0aW9uPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vd3d3LmNvbXBhc3Ntb250ZXNzb3JpLm9yZy9vbGMvdGVhY2hlci5hc3B4P3M9MzQnID5GYXJtIE9jY3VwYXRpb248L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuY29tcGFzc21vbnRlc3Nvcmkub3JnL29sYy90ZWFjaGVyLmFzcHg/cz0zMycgPlN0b3JlIE9jY3VwYXRpb248L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuY29tcGFzc21vbnRlc3Nvcmkub3JnL29sYy90ZWFjaGVyLmFzcHg/cz0zNicgPk1ha2Vyc3BhY2U8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSdkcm9wZG93bic+PGEgaHJlZj0nIycgY2xhc3M9J2Ryb3Bkb3duLXRvZ2dsZScgZGF0YS10b2dnbGU9J2Ryb3Bkb3duJyA+RmFybSBTY2hvb2wgSW5mbyAgPGIgY2xhc3M9J2NhcmV0Jz48L2I+PC9hPjx1bCBjbGFzcz0nZHJvcGRvd24tbWVudSc+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvZmFybSBzY2hvb2wvdHJpcHJhdGlvbmFsZWFuZG92ZXJ2aWV3LnBkZj9pZD02NjYnIHRhcmdldD0nX2JsYW5rJz5UcmlwIFJhdGlvbmFsZSBhbmQgT3ZlcnZpZXc8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy9jcmVkaXRvdmVydmlld2Zvcjl0aGdyYWRlZmFybXNjaG9vbHN0dWRlbnRzICgxKS5wZGY/aWQ9MzQyNicgdGFyZ2V0PSdfYmxhbmsnPkNyZWRpdCBPdmVydmlldyBmb3IgRmFybSBTY2hvb2wgU3R1ZGVudHMgKDl0aCBHcmFkZSk8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy9kb2MxMjEzMTMtMTIxMzIwMTMxNDIyNTkucGRmP2lkPTQ1NScgPkxlYXJuIE1hdGggRmFjdHMgLSBXaHkgaXMgaXQgSW1wb3J0YW50PC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScjJyA+RlMgVm9sdW50ZWVyPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvZmFybSBzY2hvb2wvaW1wb3J0YW50ZmFybXNjaG9vbGRhdGVzLnBkZj9pZD02NjQnIHRhcmdldD0nX2JsYW5rJz5JbXBvcnRhbnQgRmFybSBTY2hvb2wgRGF0ZXMgMjAxNi0yMDE3PC9hPjwvbGk+PC91bD48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nID5XaGVhdCBSaWRnZSBDaGlsZHJlbidzIEhvdXNlICA8YiBjbGFzcz0nY2FyZXQnPjwvYj48L2E+PHVsIGNsYXNzPSdkcm9wZG93bi1tZW51Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuY29tcGFzc21vbnRlc3Nvcmkub3JnL29sYy90ZWFjaGVyLmFzcHg/cz00NCcgPk1vdW50YWluIFJvb208L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuY29tcGFzc21vbnRlc3Nvcmkub3JnL29sYy90ZWFjaGVyLmFzcHg/cz00NScgPlByYWlyaWUgUm9vbTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5jb21wYXNzbW9udGVzc29yaS5vcmcvb2xjL3RlYWNoZXIuYXNweD9zPTQzJyA+Rm9yZXN0IFJvb208L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSdkcm9wZG93bic+PGEgaHJlZj0nIycgY2xhc3M9J2Ryb3Bkb3duLXRvZ2dsZScgZGF0YS10b2dnbGU9J2Ryb3Bkb3duJyA+R29sZGVuIENoaWxkcmVuJ3MgSG91c2UgIDxiIGNsYXNzPSdjYXJldCc+PC9iPjwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duLW1lbnUnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5jb21wYXNzbW9udGVzc29yaS5vcmcvb2xjL3RlYWNoZXIuYXNweD9zPTU5JyA+R29sZGVuIENoaWxkcmVuJ3MgSG91c2UgV2VzdDwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5jb21wYXNzbW9udGVzc29yaS5vcmcvb2xjL3RlYWNoZXIuYXNweD9zPTQxJyA+R29sZGVuIENoaWxkcmVuJ3MgSG91c2UgRWFzdDwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nID5Hb2xkZW4gTG93ZXIgRWxlbWVudGFyeSAgPGIgY2xhc3M9J2NhcmV0Jz48L2I+PC9hPjx1bCBjbGFzcz0nZHJvcGRvd24tbWVudSc+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vd3d3LmNvbXBhc3Ntb250ZXNzb3JpLm9yZy9vbGMvdGVhY2hlci5hc3B4P3M9MjcnID5HYXJuZXQgUm9vbTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5jb21wYXNzbW9udGVzc29yaS5vcmcvb2xjL3RlYWNoZXIuYXNweD9zPTM4JyA+QXF1YW1hcmluZSBSb29tPC9hPjwvbGk+PC91bD48L2xpPjxsaSBjbGFzcz0nZHJvcGRvd24nPjxhIGhyZWY9JyMnIGNsYXNzPSdkcm9wZG93bi10b2dnbGUnIGRhdGEtdG9nZ2xlPSdkcm9wZG93bicgPldoZWF0IFJpZGdlIExvd2VyIEVsZW1lbnRhcnkgIDxiIGNsYXNzPSdjYXJldCc+PC9iPjwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duLW1lbnUnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5jb21wYXNzbW9udGVzc29yaS5vcmcvb2xjL3RlYWNoZXIuYXNweD9zPTQ2JyA+Q3lwcmVzcyBSb29tPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vd3d3LmNvbXBhc3Ntb250ZXNzb3JpLm9yZy9vbGMvdGVhY2hlci5hc3B4P3M9NDcnID5BY2FjaWEgUm9vbTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5jb21wYXNzbW9udGVzc29yaS5vcmcvb2xjL3RlYWNoZXIuYXNweD9zPTQ4JyA+QXNwZW4gUm9vbTwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nID5XaGVhdCBSaWRnZSBVcHBlciBFbGVtZW50YXJ5ICA8YiBjbGFzcz0nY2FyZXQnPjwvYj48L2E+PHVsIGNsYXNzPSdkcm9wZG93bi1tZW51Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuY29tcGFzc21vbnRlc3Nvcmkub3JnL29sYy90ZWFjaGVyLmFzcHg/cz01MScgPkVhcnRoIFJvb208L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuY29tcGFzc21vbnRlc3Nvcmkub3JnL29sYy90ZWFjaGVyLmFzcHg/cz00OScgPldhdGVyIFJvb208L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuY29tcGFzc21vbnRlc3Nvcmkub3JnL29sYy90ZWFjaGVyLmFzcHg/cz01MCcgPkZpcmUgUm9vbTwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nID5Hb2xkZW4gVXBwZXIgRWxlbWVudGFyeSAgPGIgY2xhc3M9J2NhcmV0Jz48L2I+PC9hPjx1bCBjbGFzcz0nZHJvcGRvd24tbWVudSc+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vd3d3LmNvbXBhc3Ntb250ZXNzb3JpLm9yZy9vbGMvdGVhY2hlci5hc3B4P3M9MzknID5Ub3BheiBSb29tPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vd3d3LmNvbXBhc3Ntb250ZXNzb3JpLm9yZy9vbGMvdGVhY2hlci5hc3B4P3M9NDAnID5QeXJpdGUgUm9vbTwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50LzU0JyA+QmVmb3JlICYgQWZ0ZXIgU2Nob29sIENhcmU8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50LzU4JyA+R29sZGVuIENhbXB1cyBFbnJpY2htZW50PC9hPjwvbGk+PGxpIGNsYXNzPSdkcm9wZG93bic+PGEgaHJlZj0nIycgY2xhc3M9J2Ryb3Bkb3duLXRvZ2dsZScgZGF0YS10b2dnbGU9J2Ryb3Bkb3duJyA+V2hlYXQgUmlkZ2UgRW5yaWNobWVudCBDbGFzc2VzICA8YiBjbGFzcz0nY2FyZXQnPjwvYj48L2E+PHVsIGNsYXNzPSdkcm9wZG93bi1tZW51Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuc2lnbnVwZ2VuaXVzLmNvbS9nby80MDkwYzRkYTVhOTI5YTJmODUtdXBwZXInIHRhcmdldD0nX2JsYW5rJz5VcHBlciBFbGVtZW50YXJ5IC0gU3BvcnRzIHdpdGggTXIuIENoYXNlPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vd3d3LnNpZ251cGdlbml1cy5jb20vZ28vNDA5MGM0ZGE1YTkyOWEyZjg1LTNyZGdyYWRlJyB0YXJnZXQ9J19ibGFuayc+S2hhbiBBY2FkZW15IHdpdGggTXMuIExpc2EgYW5kIE1zLiBLYWxpbmE8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuc2lnbnVwZ2VuaXVzLmNvbS9nby80MDkwYzRkYTVhOTI5YTJmODUtY2hpbGRyZW5zMycgdGFyZ2V0PSdfYmxhbmsnPkNoaWxkcmVuJ3MgSG91c2UgQXJ0IC0gV2l0aCBNcy4gQW15IGFuZCBNcy4gQ2FtZXJvbjwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5zaWdudXBnZW5pdXMuY29tL2dvLzQwOTBjNGRhNWE5MjlhMmY4NS1sb3dlcicgdGFyZ2V0PSdfYmxhbmsnPkxvd2VyIEVsZW1lbnRhcnkgLSBSZWFkaW5nIFN1cHBvcnQ8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuc2lnbnVwZ2VuaXVzLmNvbS9nby80MDkwYzRkYTVhOTI5YTJmODUtdXBwZXIxJyB0YXJnZXQ9J19ibGFuayc+VXBwZXIgRWxlbWVudGFyeSAtIFN0dWR5IG9mIEFtZXJpY2FuIEhpc3Rvcnk8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvcGFyZW50IGluZm9ybWF0aW9uIGxldHRlciAyMDE3LnBkZj9pZD0zMjQ4JyA+U3VtbWVyIFByb2dyYW0gMjAxNzwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nID5QYXJlbnRzICA8YiBjbGFzcz0nY2FyZXQnPjwvYj48L2E+PHVsIGNsYXNzPSdkcm9wZG93bi1tZW51Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50LzcwJyA+Q29tcGFzcyBBbGwgU2Nob29sIEhvdXJzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvY29tcGFzcyBtb250ZXNzb3JpIHNjaG9vbCBjYWxlbmRhciAyMDE2LTIwMTcgLSBnb29nbGUgZG9jcy5wZGY/aWQ9NzUzJyA+MjAxNi0yMDE3IEltcG9ydGFudCBEYXRlczwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQvMTE2JyA+SW1wb3J0YW50IFBob25lIE51bWJlcnM8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50LzMyMicgPkNvbXBhc3MgTW9udGVzc29yaSBTY2hvb2wgQmVsbCBTY2hlZHVsZTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL3VzZXJmaWxlcy8yL215IGZpbGVzL2dvbGRlbm5ld3RyYWZmaWNwYXR0ZXJuLnBkZj9pZD04MDgnID5OZXcgVHJhZmZpYyBQYXR0ZXJuIGF0IFBpY2stVXAsIEdvbGRlbiBDYW1wdXM8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50LzEwMicgPldoZWF0IFJpZGdlIERyb3AgT2ZmIGFuZCBQaWNrIFVwPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvQ29udGVudC8xMDQnID5Hb2xkZW4gRHJvcCBPZmYgYW5kIFBpY2sgVXA8L2E+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nID5QYXJlbnQgRWR1Y2F0aW9uICA8YiBjbGFzcz0nY2FyZXQnPjwvYj48L2E+PHVsIGNsYXNzPSdkcm9wZG93bi1tZW51Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50LzMzNicgPlBhcmVudCBTZW1pbmFyczwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL3VzZXJmaWxlcy8yL215IGZpbGVzL2VkdWN0YXRpb24mYW1wO3BlYWNlX3BhcnQxLnBkZj9pZD0zMzI3JyA+RWR1Y2F0aW9uIGFuZCBQZWFjZSBQYXJ0IDEgRmVicnVhcnkgMjJuZC48L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy9mcm9tY2hpbGRob29kdG9hZG9sZXNjZW5jZV90aGVhcHBlbmRpY2llcy5wZGY/aWQ9MzI1MicgPlBhcmVudCBTZW1pbmFyIC0gSmFuIDE4dGggLSAiRnJvbSBDaGlsZGhvb2QgdG8gQWRvbGVzY2VuY2UiIC0gVGhlIEFwcGVuZGljZXMgKEEsIEIsICYgQyk8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy90b2VkdWNhdGV0aGVodW1hbnBvdGVudGlhbF8xLTQucGRmP2lkPTMxODQnID5QYXJlbnQgU2VtaW5hcnMgLSBUbyAgRWR1Y2F0ZSBUaGUgSHVtYW4gUG90ZW50aWFsIC0gRGVjZW1iZXIgMTR0aDwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL3VzZXJmaWxlcy8yL215IGZpbGVzL2Fic29yYmVudCBjaCAyNy5wZGY/aWQ9ODgyJyA+UGFyZW50IFNlbWluYXJzIC0gTm92IDE2dGggLSAiVGhlIEFic29yYmVudCBNaW5kIiAtIENoYXB0ZXIgMjc8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy9hYnNvcmJlbnQgbWluZC5wZGY/aWQ9ODQ5JyA+UGFyZW50IFNlbWluYXJzIC0gT2N0IDE5dGggLSAiVGhlIEFic29yYmVudCBNaW5kIiAtIENoYXB0ZXIgMzwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nID5Nb250ZXNzb3JpIExlc3NvbnMgIDxiIGNsYXNzPSdjYXJldCc+PC9iPjwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duLW1lbnUnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnQvMjAyJyA+RWxlbWVudGFyeSBOb3VuIExlc3NvbiA8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50LzIwNCcgPkxvbmcgRGl2aXNpb24gTGVzc29uIFVzaW5nIFRlc3QgVHViZXM8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50LzIwNicgPjYtOSBNdWx0aXBsaWNhdGlvbiBMZXNzb248L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50LzIwOCcgPlNtYWxsIEJlYWQgRnJhbWUgTGVzc29uPC9hPjwvbGk+PC91bD48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQvMjEyJyA+QXNzZXNzbWVudCBUb29sczwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQvMjEwJyA+SG93IHRvIGFkZCB0aGUgQ29tcGFzcyBXZWJzaXRlIHRvIG15IG1vYmlsZSBkZXZpY2U8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSdkcm9wZG93bic+PGEgaHJlZj0nIycgY2xhc3M9J2Ryb3Bkb3duLXRvZ2dsZScgZGF0YS10b2dnbGU9J2Ryb3Bkb3duJyA+U3R1ZGVudHMgIDxiIGNsYXNzPSdjYXJldCc+PC9iPjwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duLW1lbnUnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQvMTQwJyB0YXJnZXQ9J19ibGFuayc+U3R1ZGVudCBJbmZvcm1hdGlvbjwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQvMzQwJyA+U3R1ZGVudCBVc2Ugb2YgRGlzdHJpY3QgQ29tcHV0aW5nIFJlc291cmNlcyBhbmQgdGhlIEludGVybmV0PC9hPjwvbGk+PC91bD48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2xpbmtzRm9ybXMuYXNweCcgPkZvcm1zICYgTGlua3M8L2E+PC9saT48L3VsPmQCBA9kFgJmDxYCHwAFoSg8dWwgY2xhc3M9J25hdiBuYXZiYXItbmF2IHF1aWNrbGlua3MnID48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy8nID5Ib21lPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvQ29udGVudC8xNTInID5GaW5hbmNpYWwgVHJhbnNwYXJlbmN5PC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwczovL2NhbGVuZGFyLmdvb2dsZS5jb20vY2FsZW5kYXIvZW1iZWQ/c3JjPWNvbXBhc3NrMTIub3JnXzQ0anRxMDhkdmpqODFyNjkwbGdsZTBjNXAwJTQwZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbSZhbXA7Y3R6PUFtZXJpY2EvRGVudmVyJyB0YXJnZXQ9J19ibGFuayc+U2Nob29sIENhbGVuZGFyPC9hPjwvbGk+PGxpIGNsYXNzPSdkcm9wZG93bic+PGEgaHJlZj0nIycgY2xhc3M9J2Ryb3Bkb3duLXRvZ2dsZScgZGF0YS10b2dnbGU9J2Ryb3Bkb3duJyA+Q29tcGFzcyBMdW5jaCBQcm9ncmFtICA8YiBjbGFzcz0nY2FyZXQnPjwvYj48L2E+PHVsIGNsYXNzPSdkcm9wZG93bi1tZW51Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy8tbWVudV8yMDE2LTIwMTcgLSBtYXJjaC5wZGY/aWQ9MzQ1OCcgPkdvbGRlbiBDYW1wdXMgTWFyY2ggTWVudTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL3VzZXJmaWxlcy8yL215IGZpbGVzL3dyamFudWFyeTE3bWVudS5wZGY/aWQ9MzMyNScgPldoZWF0IFJpZGdlIEx1bmNoIE1lbnU8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHBzOi8vd3d3Lm15bWVhbHRpbWUuY29tL1NpZ25Jbi5hc3B4P1JldHVyblVybD0lMmYnIHRhcmdldD0nX2JsYW5rJz5NZWFsVGltZSAtIFBheSBMdW5jaCBGZWVzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvZnJlZSBhbmQgcmVkdWNlZCBhcHAuLnBkZj9pZD04MjInID4yMDE2LTIwMTcgRmFtaWx5IEVjb25vbWljIERhdGEgU3VydmV5IChGcmVlICYgUmVkdWNlZCBBcHBsaWNhdGlvbik8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSdkcm9wZG93bic+PGEgaHJlZj0nIycgY2xhc3M9J2Ryb3Bkb3duLXRvZ2dsZScgZGF0YS10b2dnbGU9J2Ryb3Bkb3duJyA+Q29tcGFzcyBDb21tdW5pY2F0aW9ucyAgPGIgY2xhc3M9J2NhcmV0Jz48L2I+PC9hPjx1bCBjbGFzcz0nZHJvcGRvd24tbWVudSc+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvd2Fncy93YWd3cm1hcmNoNXRoLTExdGgyMDE3LnBkZj9pZD0zNDk1JyB0YXJnZXQ9J19ibGFuayc+V2hlYXQgUmlkZ2UgV0FHPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvd2Fncy9kb2N1bWVudCAoMzApLnBkZj9pZD0zNDk0JyA+R29sZGVuIFdBRzwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL3VzZXJmaWxlcy8yL215IGZpbGVzL21hZ3MvbWFnZ2RtYXJjaGZpbmFsLnBkZj9pZD0zNDczJyB0YXJnZXQ9J19ibGFuayc+R29sZGVuIENhbXB1cyBNQUc8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy9tYWdzL21hZ3dybWFyY2hmaW5hbC5wZGY/aWQ9MzQ3NCcgdGFyZ2V0PSdfYmxhbmsnPldoZWF0IFJpZGdlIENhbXB1cyBNQUc8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9ibG9nLzIyOC9jb21wYXNzLXBvaW50cy1uZXdzbGV0dGVyJyA+QmxvZzogQ29tcGFzcyBQb2ludHMgTmV3czwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9kaXN0cmljdEJvYXJkRWQuYXNweCcgPkNvbXBhc3MgQm9hcmQ8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly9jbXMuZGFwaG5pcy5vcGFsc2luZm8ubmV0L2Jpbi9ob21lJyB0YXJnZXQ9J19ibGFuayc+Q29tcGFzcyBMaWJyYXJ5PC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwczovL2NvbXBhc3Ntb250ZXNzb3JpLnRlZGsxMi5jb20vaGlyZS9pbmRleC5hc3B4JyA+RW1wbG95bWVudDwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5jb21wYXNzbW9udGVzc29yaS5vcmcvb2xjL3RlYWNoZXIuYXNweD9zPTYzJyA+UFRTQTwvYT48L2xpPjxsaSBjbGFzcz0nZHJvcGRvd24nPjxhIGhyZWY9JyMnIGNsYXNzPSdkcm9wZG93bi10b2dnbGUnIGRhdGEtdG9nZ2xlPSdkcm9wZG93bicgPkZ1bmRyYWlzaW5nIGFuZCBFdmVudHMgIDxiIGNsYXNzPSdjYXJldCc+PC9iPjwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duLW1lbnUnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL3VzZXJmaWxlcy8yL215IGZpbGVzL29sZHdlc3RhZmVzdGEucGRmP2lkPTM0MzknID5PbGQgV2VzdGEgRmVzdGE8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50LzM2OCcgPlBUU0EgRnVuZHJhaXNpbmc8L2E+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nIHRhcmdldD0nX2JsYW5rJz5Db21wYXNzIE1lc2EgUnVuIGFuZCBIYXJ2ZXN0IEZlc3RpdmFsICA8YiBjbGFzcz0nY2FyZXQnPjwvYj48L2E+PHVsIGNsYXNzPSdkcm9wZG93bi1tZW51Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy9vdmVyYWxsIHJlc3VsdHMucGRmP2lkPTc5MScgdGFyZ2V0PSdfYmxhbmsnPk1lc2EgUnVuIDIwMTYgT3ZlcmFsbCBSZXN1bHRzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvZ2VuZGVyIHJlc3VsdHMucGRmP2lkPTc5MicgdGFyZ2V0PSdfYmxhbmsnPk1lc2EgUnVuIDIwMTYgR2VuZGVyIFJlc3VsdHM8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vY29tcGFzc2dpdmVzLm9yZy8nIHRhcmdldD0nX2JsYW5rJz5Db21wYXNzIE1vbnRlc3NvcmkgRWR1Y2F0aW9uIEZvdW5kYXRpb248L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly9jb21wYXNzZ2l2ZXMub3JnL3N1cHBvcnQtY21lZi9kb25hdGUvJyB0YXJnZXQ9J19ibGFuayc+RG9uYXRlIHRvIENvbXBhc3M8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSdkcm9wZG93bic+PGEgaHJlZj0nIycgY2xhc3M9J2Ryb3Bkb3duLXRvZ2dsZScgZGF0YS10b2dnbGU9J2Ryb3Bkb3duJyA+Vm9sdW50ZWVyICA8YiBjbGFzcz0nY2FyZXQnPjwvYj48L2E+PHVsIGNsYXNzPSdkcm9wZG93bi1tZW51Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuc2lnbnVwZ2VuaXVzLmNvbS9nby80MDkwYzRkYTVhOTI5YTJmODUtMjAxNjIwMTcnIHRhcmdldD0nX2JsYW5rJz5CaW5nbzwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vZm9ybXMvZC9lLzFGQUlwUUxTY2t2b1FHYXZzb3pYR3RPejV5NE91d2RlbHVSYTBQc2Z6YlQyUVhjdl82aWF0TTV3L3ZpZXdmb3JtJyA+TG9nIHlvdXIgVm9sdW50ZWVyIEhvdXJzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vd3d3LnNpZ251cGdlbml1cy5jb20vZ28vMjBmMGU0ZmE5YWMyZGE1Ny1saWJyYXJ5MT8xNDcyMTQ4Nzc2OTY3JyA+V1IgTGlicmFyeSBWb2x1bnRlZXIgU2NoZWR1bGUgPC9hPjwvbGk+PC91bD48L2xpPjxsaSBjbGFzcz0nZHJvcGRvd24nPjxhIGhyZWY9JyMnIGNsYXNzPSdkcm9wZG93bi10b2dnbGUnIGRhdGEtdG9nZ2xlPSdkcm9wZG93bicgPkNvbXBhc3MgWWVhcmJvb2sgIDxiIGNsYXNzPSdjYXJldCc+PC9iPjwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duLW1lbnUnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5zaWdudXBnZW5pdXMuY29tL2dvLzIwZjA1NDhhYWFiMmFhNzUtY29tcGFzcycgdGFyZ2V0PSdfYmxhbmsnPlZvbHVudGVlciB0byBoZWxwIHdpdGggdGhlIDIwMTYtMTcgWWVhcmJvb2s8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHBzOi8vdHJlZXJpbmcuemVuZGVzay5jb20vaGMvZW4tdXMvYXJ0aWNsZXMvMjAwMzMzNzc0LUhvdy1kby1JLW9yZGVyLWEtUHJldmlvdXMteWVhcnMtWWVhcmJvb2stJyA+MjAxNS0xNiBZZWFyYm9vazwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J2Ryb3Bkb3duJz48YSBocmVmPScjJyBjbGFzcz0nZHJvcGRvd24tdG9nZ2xlJyBkYXRhLXRvZ2dsZT0nZHJvcGRvd24nID5Db21wYXNzIEF0aGxldGljcyAgPGIgY2xhc3M9J2NhcmV0Jz48L2I+PC9hPjx1bCBjbGFzcz0nZHJvcGRvd24tbWVudSc+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvQ29udGVudDIvMTg4JyA+Q29tcGFzcyBIaWdoIFNjaG9vbCBNVEIgVGVhbSAtIENvbXBhc3MgVHJhaWwgQmxhemVyczwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQyLzE5MCcgPlVOSUNPUk5TIENST1NTIENPVU5UUlkgVEVBTTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQyLzE5MicgPkhJR0ggU0NIT09MIFVMVElNQVRFIEZSSVNCRUUgVEVBTTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQyLzE5NCcgPkZBUk0gU0NIT09MIFVMVElNQVRFIEZSSVNCRUUgVEVBTTwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9EaXN0cmljdEdhbGxlcnkuYXNweCcgPlBob3RvIEdhbGxlcmllczwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQvODInID5BbHVtbmk8L2E+PC9saT48L3VsPmQCBQ9kFgICAQ9kFgYCAQ9kFgJmDxYCHwECDRYaZg9kFgRmDxUCKFN1biBkb2dzIChzdW5kb2dzKSBhdCB0aGUgR29sZGVuIENhbXB1cy4oU3VuIGRvZ3MgKHN1bmRvZ3MpIGF0IHRoZSBHb2xkZW4gQ2FtcHVzLmQCAQ8VATsvdXNlcmZpbGVzLzIwMTYtMTIvMjNhYzg3MjEtMDQ0NC00Nzc0LWI2NTctMjQxMzQ4MTQ1NzIyLmpwZ2QCAQ9kFgRmDxUCFENvbXBhc3MgVHJhaWxibGF6ZXJzFENvbXBhc3MgVHJhaWxibGF6ZXJzZAIBDxUBOy91c2VyZmlsZXMvMjAxNi0xMS9hYzVkMDRlMi0yZmVhLTRlYzAtYjJmNi03MTAyMzBjMTM2MTkuanBnZAICD2QWBGYPFQIAAGQCAQ8VATsvdXNlcmZpbGVzLzIwMTYtMDgvNjQxZTYxZjgtMjAyNi00Y2Q4LTk2NTgtOGM0OGE3NmFjYzI5LmpwZ2QCAw9kFgRmDxUCAABkAgEPFQE7L3VzZXJmaWxlcy8yMDE2LTA4L2VkM2RkNzNiLTczMzctNGVkYy1hNDhmLTRiYWUyZDAyNWY0NC5qcGdkAgQPZBYEZg8VAhVMaWdodCBTcGVjdHJ1bSBMZXNzb24VTGlnaHQgU3BlY3RydW0gTGVzc29uZAIBDxUBOy91c2VyZmlsZXMvMjAxNi0wMy9mNzcxOTViZS02ZDQ2LTQ3NGEtOWYwZC1hYTUzYjJhOTkzYTguanBnZAIFD2QWBGYPFQIAAGQCAQ8VATsvdXNlcmZpbGVzLzIwMTYtMDgvNjlkYTM5OGUtMDJjNC00Yjk0LThhNjctZTUyZGU4OTBiNGI5LmpwZ2QCBg9kFgRmDxUCFUNvbXBhc3MgR29sZGVuIENhbXB1cxVDb21wYXNzIEdvbGRlbiBDYW1wdXNkAgEPFQE7L3VzZXJmaWxlcy8yMDE2LTAzLzAwZjk1ZjlhLTcwOWMtNDZlNy1iYjNlLWNjYTRjNTgyZWUyOC5qcGdkAgcPZBYEZg8VAhpDb21wYXNzIFdoZWF0IFJpZGdlIENhbXB1cxpDb21wYXNzIFdoZWF0IFJpZGdlIENhbXB1c2QCAQ8VATsvdXNlcmZpbGVzLzIwMTYtMDMvMjllYWM3NWMtZDYzMC00NDdlLWIwOTUtMjkzYjczYjZmMTEwLmpwZ2QCCA9kFgRmDxUCAABkAgEPFQFWL3VzZXJmaWxlcy8yMDE2LTAxL2IxODZmZDI4LWVjZDEtNDNjOS04NTk1LTk1ZDQzOWY3N2E4Ny5qcGc/bm9jYWNoZT02MzU4NzkxNDIzNzUzMDgyMTVkAgkPZBYEZg8VAhZIaWdoIFNjaG9vbCBHcmFkdWF0aW9uFkhpZ2ggU2Nob29sIEdyYWR1YXRpb25kAgEPFQFWL3VzZXJmaWxlcy8yMDE2LTAxLzNiMjU4MDAzLWY5NmUtNGY1Mi04ZThmLTk5NGI0ZmNmMzcxOC5qcGc/bm9jYWNoZT02MzU4NzkxMzMyODQxMzUxNTNkAgoPZBYEZg8VAgAAZAIBDxUBVi91c2VyZmlsZXMvMjAxNS0wOS8yOWYxNGZlOC1mYTc3LTRlYjQtODdiZi1hMWZmN2I5MDQxZGQuanBnP25vY2FjaGU9NjM1Nzg3MDAwMDUyMzg4NDMxZAILD2QWBGYPFQIAAGQCAQ8VATgvZG9jcy9kaXN0cmljdC9wYXJhY2h1dGUgZnJvbSBwdHNhLmpwZz9pZD03MTAmd2lkdGg9MTE3MGQCDA9kFgRmDxUCAABkAgEPFQExL2RvY3MvZGlzdHJpY3QvY2hlY2tlcmJvYXJkLmpwZz9pZD03MTEmd2lkdGg9MTE3MGQCAw8PFgIfAAUlV2VsY29tZSB0byBDb21wYXNzIE1vbnRlc3NvcmkgU2Nob29sIWRkAgUPZBYEZg8WAh8ABQtPdXIgTWlzc2lvbmQCAQ8WAh8ABdICPHA+PHNwYW4gc3R5bGU9ImNvbG9yOiByZ2IoMzMsIDQ5LCA2NCk7IGZvbnQtZmFtaWx5OiAnSGVsdmV0aWNhIE5ldWUnLCBIZWx2ZXRpY2EsIGFyaWFsLCAnTGliZXJhdGlvbiBTYW5zJywgRnJlZVNhbnMsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTRweDsgbGluZS1oZWlnaHQ6IDIycHg7Ij5VdGlsaXppbmcgYXV0aGVudGljIE1vbnRlc3NvcmkgbWV0aG9kcywgdGhlIENvbXBhc3MgY29tbXVuaXR5IGFpbXMgdG8gbnVydHVyZSB0aGUgd2hvbGUgY2hpbGQgYW5kIGVucmljaCB0aGUgbGl2ZXMgb2YgZWFjaCBzdHVkZW50IGZyb20gUHJlc2Nob29sIHRvIDEydGggZ3JhZGUuPC9zcGFuPjwvcD5kAggPZBYIAgMPZBYCAgEPZBYCZg8WAh8ABbskPHVsIGNsYXNzPSdzZi12ZXJ0aWNhbCcgPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nLycgPkhvbWU8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50LzE1MicgPkZpbmFuY2lhbCBUcmFuc3BhcmVuY3k8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHBzOi8vY2FsZW5kYXIuZ29vZ2xlLmNvbS9jYWxlbmRhci9lbWJlZD9zcmM9Y29tcGFzc2sxMi5vcmdfNDRqdHEwOGR2amo4MXI2OTBsZ2xlMGM1cDAlNDBncm91cC5jYWxlbmRhci5nb29nbGUuY29tJmFtcDtjdHo9QW1lcmljYS9EZW52ZXInIHRhcmdldD0nX2JsYW5rJz5TY2hvb2wgQ2FsZW5kYXI8L2E+PC9saT48bGkgY2xhc3M9J2hhcy1mbHlvdXQnPjxhIGhyZWY9JyMnID5Db21wYXNzIEx1bmNoIFByb2dyYW08L2E+PHVsIGNsYXNzPSdmbHlvdXQnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL3VzZXJmaWxlcy8yL215IGZpbGVzLy1tZW51XzIwMTYtMjAxNyAtIG1hcmNoLnBkZj9pZD0zNDU4JyA+R29sZGVuIENhbXB1cyBNYXJjaCBNZW51PC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvd3JqYW51YXJ5MTdtZW51LnBkZj9pZD0zMzI1JyA+V2hlYXQgUmlkZ2UgTHVuY2ggTWVudTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cHM6Ly93d3cubXltZWFsdGltZS5jb20vU2lnbkluLmFzcHg/UmV0dXJuVXJsPSUyZicgdGFyZ2V0PSdfYmxhbmsnPk1lYWxUaW1lIC0gUGF5IEx1bmNoIEZlZXM8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy9mcmVlIGFuZCByZWR1Y2VkIGFwcC4ucGRmP2lkPTgyMicgPjIwMTYtMjAxNyBGYW1pbHkgRWNvbm9taWMgRGF0YSBTdXJ2ZXkgKEZyZWUgJiBSZWR1Y2VkIEFwcGxpY2F0aW9uKTwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J2hhcy1mbHlvdXQnPjxhIGhyZWY9Jy9Db250ZW50LzEzNicgPkNvbXBhc3MgQ29tbXVuaWNhdGlvbnM8L2E+PHVsIGNsYXNzPSdmbHlvdXQnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL3VzZXJmaWxlcy8yL215IGZpbGVzL3dhZ3Mvd2Fnd3JtYXJjaDV0aC0xMXRoMjAxNy5wZGY/aWQ9MzQ5NScgdGFyZ2V0PSdfYmxhbmsnPldoZWF0IFJpZGdlIFdBRzwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL3VzZXJmaWxlcy8yL215IGZpbGVzL3dhZ3MvZG9jdW1lbnQgKDMwKS5wZGY/aWQ9MzQ5NCcgPkdvbGRlbiBXQUc8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy9tYWdzL21hZ2dkbWFyY2hmaW5hbC5wZGY/aWQ9MzQ3MycgdGFyZ2V0PSdfYmxhbmsnPkdvbGRlbiBDYW1wdXMgTUFHPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvbWFncy9tYWd3cm1hcmNoZmluYWwucGRmP2lkPTM0NzQnIHRhcmdldD0nX2JsYW5rJz5XaGVhdCBSaWRnZSBDYW1wdXMgTUFHPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvYmxvZy8yMjgvY29tcGFzcy1wb2ludHMtbmV3c2xldHRlcicgPkJsb2c6IENvbXBhc3MgUG9pbnRzIE5ld3M8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvZGlzdHJpY3RCb2FyZEVkLmFzcHgnID5Db21wYXNzIEJvYXJkPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vY21zLmRhcGhuaXMub3BhbHNpbmZvLm5ldC9iaW4vaG9tZScgdGFyZ2V0PSdfYmxhbmsnPkNvbXBhc3MgTGlicmFyeTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cHM6Ly9jb21wYXNzbW9udGVzc29yaS50ZWRrMTIuY29tL2hpcmUvaW5kZXguYXNweCcgPkVtcGxveW1lbnQ8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuY29tcGFzc21vbnRlc3Nvcmkub3JnL29sYy90ZWFjaGVyLmFzcHg/cz02MycgPlBUU0E8L2E+PC9saT48bGkgY2xhc3M9J2hhcy1mbHlvdXQnPjxhIGhyZWY9JyMnID5GdW5kcmFpc2luZyBhbmQgRXZlbnRzPC9hPjx1bCBjbGFzcz0nZmx5b3V0Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMi9teSBmaWxlcy9vbGR3ZXN0YWZlc3RhLnBkZj9pZD0zNDM5JyA+T2xkIFdlc3RhIEZlc3RhPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvQ29udGVudC8zNjgnID5QVFNBIEZ1bmRyYWlzaW5nPC9hPjwvbGk+PGxpIGNsYXNzPSdoYXMtZmx5b3V0Jz48YSBocmVmPSdodHRwOi8vd3d3Lm1lc2FydW4uY29tJyB0YXJnZXQ9J19ibGFuayc+Q29tcGFzcyBNZXNhIFJ1biBhbmQgSGFydmVzdCBGZXN0aXZhbDwvYT48dWwgY2xhc3M9J2ZseW91dCc+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvdXNlcmZpbGVzLzIvbXkgZmlsZXMvb3ZlcmFsbCByZXN1bHRzLnBkZj9pZD03OTEnIHRhcmdldD0nX2JsYW5rJz5NZXNhIFJ1biAyMDE2IE92ZXJhbGwgUmVzdWx0czwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL3VzZXJmaWxlcy8yL215IGZpbGVzL2dlbmRlciByZXN1bHRzLnBkZj9pZD03OTInIHRhcmdldD0nX2JsYW5rJz5NZXNhIFJ1biAyMDE2IEdlbmRlciBSZXN1bHRzPC9hPjwvbGk+PC91bD48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL2NvbXBhc3NnaXZlcy5vcmcvJyB0YXJnZXQ9J19ibGFuayc+Q29tcGFzcyBNb250ZXNzb3JpIEVkdWNhdGlvbiBGb3VuZGF0aW9uPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vY29tcGFzc2dpdmVzLm9yZy9zdXBwb3J0LWNtZWYvZG9uYXRlLycgdGFyZ2V0PSdfYmxhbmsnPkRvbmF0ZSB0byBDb21wYXNzPC9hPjwvbGk+PC91bD48L2xpPjxsaSBjbGFzcz0naGFzLWZseW91dCc+PGEgaHJlZj0nL0NvbnRlbnQvMjM2JyA+Vm9sdW50ZWVyPC9hPjx1bCBjbGFzcz0nZmx5b3V0Jz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHA6Ly93d3cuc2lnbnVwZ2VuaXVzLmNvbS9nby80MDkwYzRkYTVhOTI5YTJmODUtMjAxNjIwMTcnIHRhcmdldD0nX2JsYW5rJz5CaW5nbzwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vZm9ybXMvZC9lLzFGQUlwUUxTY2t2b1FHYXZzb3pYR3RPejV5NE91d2RlbHVSYTBQc2Z6YlQyUVhjdl82aWF0TTV3L3ZpZXdmb3JtJyA+TG9nIHlvdXIgVm9sdW50ZWVyIEhvdXJzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPSdodHRwOi8vd3d3LnNpZ251cGdlbml1cy5jb20vZ28vMjBmMGU0ZmE5YWMyZGE1Ny1saWJyYXJ5MT8xNDcyMTQ4Nzc2OTY3JyA+V1IgTGlicmFyeSBWb2x1bnRlZXIgU2NoZWR1bGUgPC9hPjwvbGk+PC91bD48L2xpPjxsaSBjbGFzcz0naGFzLWZseW91dCc+PGEgaHJlZj0nIycgPkNvbXBhc3MgWWVhcmJvb2s8L2E+PHVsIGNsYXNzPSdmbHlvdXQnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0naHR0cDovL3d3dy5zaWdudXBnZW5pdXMuY29tL2dvLzIwZjA1NDhhYWFiMmFhNzUtY29tcGFzcycgdGFyZ2V0PSdfYmxhbmsnPlZvbHVudGVlciB0byBoZWxwIHdpdGggdGhlIDIwMTYtMTcgWWVhcmJvb2s8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9J2h0dHBzOi8vdHJlZXJpbmcuemVuZGVzay5jb20vaGMvZW4tdXMvYXJ0aWNsZXMvMjAwMzMzNzc0LUhvdy1kby1JLW9yZGVyLWEtUHJldmlvdXMteWVhcnMtWWVhcmJvb2stJyA+MjAxNS0xNiBZZWFyYm9vazwvYT48L2xpPjwvdWw+PC9saT48bGkgY2xhc3M9J2hhcy1mbHlvdXQnPjxhIGhyZWY9Jy9Db250ZW50LzYwJyA+Q29tcGFzcyBBdGhsZXRpY3M8L2E+PHVsIGNsYXNzPSdmbHlvdXQnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQyLzE4OCcgPkNvbXBhc3MgSGlnaCBTY2hvb2wgTVRCIFRlYW0gLSBDb21wYXNzIFRyYWlsIEJsYXplcnM8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50Mi8xOTAnID5VTklDT1JOUyBDUk9TUyBDT1VOVFJZIFRFQU08L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50Mi8xOTInID5ISUdIIFNDSE9PTCBVTFRJTUFURSBGUklTQkVFIFRFQU08L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50Mi8xOTQnID5GQVJNIFNDSE9PTCBVTFRJTUFURSBGUklTQkVFIFRFQU08L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvRGlzdHJpY3RHYWxsZXJ5LmFzcHgnID5QaG90byBHYWxsZXJpZXM8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50LzgyJyA+QWx1bW5pPC9hPjwvbGk+PC91bD5kAgUPZBYCAgEPZBYCAgIPZBYCAgMPFgIfAQIEZAIHD2QWAgIBD2QWBAIBDzwrAAoBAA8WCB4NRGF5TmFtZUZvcm1hdAsqJ1N5c3RlbS5XZWIuVUkuV2ViQ29udHJvbHMuRGF5TmFtZUZvcm1hdAIeDU5leHRNb250aFRleHQFLj48c3BhbiBjbGFzcz0nb2JzY3VyZSc+R28gdG8gbmV4dCBtb250aDwvc3Bhbj4eDVByZXZNb250aFRleHQFMjw8c3BhbiBjbGFzcz0nb2JzY3VyZSc+R28gdG8gcHJldmlvdXMgbW9udGg8L3NwYW4+HgJTRBYBBgBAaxC2ZdQIZGQCAw8PFgYeBlRhcmdldAUGX2JsYW5rHwAFElZpZXcgRnVsbCBDYWxlbmRhch8DBSUvY2FsTW9udGhWaWV3LmFzcHg/cz0wJnk9MjAxNyZtPTMmdD0wZGQCCQ9kFgICAQ9kFgYCAQ8WAh8BAgoWFAIBD2QWAmYPFQYGRmViIDI3WS9jYWxlbmRhcldlZWtWaWV3LmFzcHg/c2Nob29scz0wLDEsMiwzLDQsNSZzY2hvb2xpZD0wJnR5cGVzPSZldmVudElEPTEwNDAmdmlld0RhdGU9RmViIDI3IjJuZCBSb3VuZCBDaG9pY2UgRW5yb2xsbWVudCBXaW5kb3ciMm5kIFJvdW5kIENob2ljZSBFbnJvbGxtZW50IFdpbmRvdw1AYXQgV1IgYW5kIEdEAGQCAg9kFgJmDxUGBk1hciAwNlgvY2FsZW5kYXJXZWVrVmlldy5hc3B4P3NjaG9vbHM9MCwxLDIsMyw0LDUmc2Nob29saWQ9MCZ0eXBlcz0mZXZlbnRJRD05Mzkmdmlld0RhdGU9TWFyIDA2JEZhcm0gU2Nob29sIEZBQ0UgVGltZSBhdCAzOjMwLTU6MzBwbSRGYXJtIFNjaG9vbCBGQUNFIFRpbWUgYXQgMzozMC01OjMwcG0RQGF0IEdvbGRlbiBDYW1wdXMXMzozMCBQTSAmbWRhc2g7IDU6MzAgUE1kAgMPZBYCZg8VBgZNYXIgMDZYL2NhbGVuZGFyV2Vla1ZpZXcuYXNweD9zY2hvb2xzPTAsMSwyLDMsNCw1JnNjaG9vbGlkPTAmdHlwZXM9JmV2ZW50SUQ9OTMyJnZpZXdEYXRlPU1hciAwNjVIaWdoIFNjaG9vbCBQYXJlbnQvVGVhY2hlciBDb25mZXJlbmNlcyBhdCAzOjMwLTU6MzBwbTVIaWdoIFNjaG9vbCBQYXJlbnQvVGVhY2hlciBDb25mZXJlbmNlcyBhdCAzOjMwLTU6MzBwbRFAYXQgR29sZGVuIENhbXB1cxczOjMwIFBNICZtZGFzaDsgNTozMCBQTWQCBA9kFgJmDxUGBk1hciAwOFkvY2FsZW5kYXJXZWVrVmlldy5hc3B4P3NjaG9vbHM9MCwxLDIsMyw0LDUmc2Nob29saWQ9MCZ0eXBlcz0mZXZlbnRJRD0xMDQ4JnZpZXdEYXRlPU1hciAwOCpDTUVGIE1lZXRpbmcgYXQgMTozMC0zOjAwcG0gYXQgV2hlYXQgUmlkZ2UqQ01FRiBNZWV0aW5nIGF0IDE6MzAtMzowMHBtIGF0IFdoZWF0IFJpZGdlFkBhdCBXaGVhdCBSaWRnZSBDYW1wdXMXMTozMCBQTSAmbWRhc2g7IDM6MDAgUE1kAgUPZBYCZg8VBgZNYXIgMTBYL2NhbGVuZGFyV2Vla1ZpZXcuYXNweD9zY2hvb2xzPTAsMSwyLDMsNCw1JnNjaG9vbGlkPTAmdHlwZXM9JmV2ZW50SUQ9OTM1JnZpZXdEYXRlPU1hciAxMClDb21wYXNzIEhpZ2ggU2Nob29sIFBsYXkgYXQgN3BtIGF0IEdvbGRlbilDb21wYXNzIEhpZ2ggU2Nob29sIFBsYXkgYXQgN3BtIGF0IEdvbGRlbhFAYXQgR29sZGVuIENhbXB1cxc3OjAwIFBNICZtZGFzaDsgODowMCBQTWQCBg9kFgJmDxUGBk1hciAxMVgvY2FsZW5kYXJXZWVrVmlldy5hc3B4P3NjaG9vbHM9MCwxLDIsMyw0LDUmc2Nob29saWQ9MCZ0eXBlcz0mZXZlbnRJRD05MzYmdmlld0RhdGU9TWFyIDExIkNvbXBhc3MgSGlnaCBTY2hvb2wgUGxheSBhdCBHb2xkZW4iQ29tcGFzcyBIaWdoIFNjaG9vbCBQbGF5IGF0IEdvbGRlbhJAIGF0IEdvbGRlbiBDYW1wdXMXNzowMCBQTSAmbWRhc2g7IDg6MDAgUE1kAgcPZBYCZg8VBgZNYXIgMTNZL2NhbGVuZGFyV2Vla1ZpZXcuYXNweD9zY2hvb2xzPTAsMSwyLDMsNCw1JnNjaG9vbGlkPTAmdHlwZXM9JmV2ZW50SUQ9MTE1NCZ2aWV3RGF0ZT1NYXIgMTMvV2F0Y2ggTWUgV29yayAtIENIIEdvbGRlbiAtIGJ5IGFwcG9pbnRtZW50IG9ubHkvV2F0Y2ggTWUgV29yayAtIENIIEdvbGRlbiAtIGJ5IGFwcG9pbnRtZW50IG9ubHkRQGF0IEdvbGRlbiBDYW1wdXMXMzoxNSBQTSAmbWRhc2g7IDU6MzAgUE1kAggPZBYCZg8VBgZNYXIgMTNZL2NhbGVuZGFyV2Vla1ZpZXcuYXNweD9zY2hvb2xzPTAsMSwyLDMsNCw1JnNjaG9vbGlkPTAmdHlwZXM9JmV2ZW50SUQ9MTE1MyZ2aWV3RGF0ZT1NYXIgMTM8Q2hpbGRyZW4ncyBIb3VzZSBXYXRjaCBNZSBXb3JrIGF0IFdoZWF0IFJpZGdlIGF0IDM6MzAtNTozMHBtPENoaWxkcmVuJ3MgSG91c2UgV2F0Y2ggTWUgV29yayBhdCBXaGVhdCBSaWRnZSBhdCAzOjMwLTU6MzBwbRdAIGF0IFdoZWF0IFJpZGdlIENhbXB1cxczOjMwIFBNICZtZGFzaDsgNTozMCBQTWQCCQ9kFgJmDxUGBk1hciAxNFgvY2FsZW5kYXJXZWVrVmlldy5hc3B4P3NjaG9vbHM9MCwxLDIsMyw0LDUmc2Nob29saWQ9MCZ0eXBlcz0mZXZlbnRJRD05Mjkmdmlld0RhdGU9TWFyIDE0I1doZWF0IFJpZGdlIFVwcGVyIEVsZW1lbnRhcnkgUGkgRGF5I1doZWF0IFJpZGdlIFVwcGVyIEVsZW1lbnRhcnkgUGkgRGF5FkBhdCBXaGVhdCBSaWRnZSBDYW1wdXMAZAIKD2QWAmYPFQYGTWFyIDE2WC9jYWxlbmRhcldlZWtWaWV3LmFzcHg/c2Nob29scz0wLDEsMiwzLDQsNSZzY2hvb2xpZD0wJnR5cGVzPSZldmVudElEPTkyOCZ2aWV3RGF0ZT1NYXIgMTYiV2hlYXQgUmlkZ2UgQWxsIFNjaG9vbCBUYWxlbnQgU2hvdyJXaGVhdCBSaWRnZSBBbGwgU2Nob29sIFRhbGVudCBTaG93FkBhdCBXaGVhdCBSaWRnZSBDYW1wdXMXNjowMCBQTSAmbWRhc2g7IDc6MDAgUE1kAgUPDxYCHwMFIS9jYWxNb250aFZpZXcuYXNweD9zPTAmeT0yMDE3Jm09M2RkAgcPDxYEHwMFRC9jYWxlbmRhcldlZWtWaWV3LmFzcHg/c2Nob29scz0wJnNjaG9vbGlkPTAmdHlwZXM9JnZpZXdEYXRlPTMvOC8yMDE3HwAFD1ZpZXcgQWxsIEV2ZW50c2RkAgoPZBYCAgEPZBYCZg8WAh8BAgQWCGYPZBYCZg8VBUNodHRwczovL3d3dy5mYWNlYm9vay5jb20vQ29tcGFzcy1Nb250ZXNzb3JpLVNjaG9vbC0xMzY4NzE1NzYzMzExNDgvIkNvbXBhc3MgTW9udGVzc29yaSBTY2hvb2wgRmFjZWJvb2sFX3NlbGYlPHNwYW4gY2xhc3M9J29ic2N1cmUnPkZhY2Vib29rPC9zcGFuPg5mYSBmYS1mYWNlYm9va2QCAQ9kFgJmDxUFFC9pbnRyYW5ldF9sb2dpbi5hc3B4IkNvbXBhc3MgTW9udGVzc29yaSBTY2hvb2wgSW50cmFuZXQFX3NlbGYlPHNwYW4gY2xhc3M9J29ic2N1cmUnPkludHJhbmV0PC9zcGFuPg1mYSBmYS1zaXRlbWFwZAICD2QWAmYPFQULL2xvZ2luLmFzcHgjQ29tcGFzcyBNb250ZXNzb3JpIFNjaG9vbCBDTVMgTG9naW4FX3NlbGYmPHNwYW4gY2xhc3M9J29ic2N1cmUnPkNNUyBMb2dpbjwvc3Bhbj4NZmEgZmEtc2lnbi1pbmQCAw9kFgJmDxUFKWh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9jbXN0cmFpbGJsYXplcnMvLENvbXBhc3MgTW9udGVzc29yaSBIaWdoIFNjaG9vbCBUcmFpbCBCbGF6ZXJzBV9zZWxmJTxzcGFuIGNsYXNzPSdvYnNjdXJlJz5GYWNlYm9vazwvc3Bhbj4OZmEgZmEtZmFjZWJvb2tkZOcla8GGqT7OCtbhmPacbKnP1xrk" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="http://www.compassmontessori.org/WebResource.axd?d=ciQs-AUcGllikzvJxOn4IY9qdpn5WXYfT_PMnTK91Xt8dksb258BJxYsmn4olEPTocq6JTsZH-_-9MV4tnJ7755rEvo1&amp;t=635875512900000000" type="text/javascript"></script>
+
+		
+
+<a id="skip-link" class="obscure" href="index.html#start-content">Skip to main content</a>
+
+
+
+
+
+		<div class="headerback">
+			<header id="site-head">
+				<div class="district-very-top-nav-container">
+					<div class="container ">
+						<div class="row searchcontainer">
+
+							<div class="search">
+								<div>
+									<div valign="top" style="" class="searchPad">
+										<label for="txtSearch" class="obscure">Search site using Google</label><input id="txtSearch" placeholder="Search" class="inputSearch" type="text">
+									</div>
+									<div style="display: inline; float: right;" class="searchgo">
+										<a title="Search" class="bSearch glyphicon glyphicon-search"><span class="obscure">Search Site button</span></a>
+									</div>
+								</div>
+							</div>
+
+							<div id="google_translate_element">
+							</div>
+							<script>
+								function googleTranslateElementInit() {
+									new google.translate.TranslateElement({
+										pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+									}, 'google_translate_element');
+								}
+							</script>
+							<script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="row">
+						
+	
+		
+	
+
+					</div>
+				</div>
+
+				<div class="NavBack container">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-5 col-lg-4 ">
+							<div class="head-logo-container">
+								<a id="ctl00_ctl00_lnkSchoolHome" class="logo" href="index.html"><span class="obscure">Logo link to home page</span></a>
+							</div>
+						</div>
+
+						<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 ">
+							<nav class="navbar navbar-default" role="navigation">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+										<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand hidden-lg hidden-md hidden-sm" href="index.html#">
+										Compass Montessori School</a>
+								</div>
+								<!-- Collect the nav links, forms, and other content for toggling -->
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<ul class='nav navbar-nav district-top-nav' ><li class='without-image'><a href='index.html' >Home</a></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >About Us  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/Content/122' >About Compass Montessori School</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/84' >Outcomes</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/50' >Enrollment</a></li><li class='without-image'><a href='http://www.compassmontessori.org/content/52' >Tours and Parent Orientation</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/154' >Observation Policy</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/46' >Contact Us</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/48' >Driving Directions</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Compass Staff  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/content/64' >Golden Staff and Bios</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/62' >Wheat Ridge Staff and Bios</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Programs  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=10' >High School</a></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Farm School  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/content/338' >Farm School Overview</a></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' target='_blank'>Farm School Occupations  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=61' >Community and Kitchen Occupation</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=34' >Farm Occupation</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=33' >Store Occupation</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=36' >Makerspace</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Farm School Info  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/farm&#32;school/triprationaleandoverview.pdf?id=666' target='_blank'>Trip Rationale and Overview</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/creditoverviewfor9thgradefarmschoolstudents&#32;(1).pdf?id=3426' target='_blank'>Credit Overview for Farm School Students (9th Grade)</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/doc121313-12132013142259.pdf?id=455' >Learn Math Facts - Why is it Important</a></li><li class='without-image'><a href='index.html#' >FS Volunteer</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/farm&#32;school/importantfarmschooldates.pdf?id=664' target='_blank'>Important Farm School Dates 2016-2017</a></li></ul></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Wheat Ridge Children's House  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=44' >Mountain Room</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=45' >Prairie Room</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=43' >Forest Room</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Golden Children's House  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=59' >Golden Children's House West</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=41' >Golden Children's House East</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Golden Lower Elementary  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=27' >Garnet Room</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=38' >Aquamarine Room</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Wheat Ridge Lower Elementary  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=46' >Cypress Room</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=47' >Acacia Room</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=48' >Aspen Room</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Wheat Ridge Upper Elementary  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=51' >Earth Room</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=49' >Water Room</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=50' >Fire Room</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Golden Upper Elementary  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=39' >Topaz Room</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=40' >Pyrite Room</a></li></ul></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/54' >Before & After School Care</a></li><li class='without-image'><a href='http://www.compassmontessori.org/content/58' >Golden Campus Enrichment</a></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Wheat Ridge Enrichment Classes  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.signupgenius.com/go/4090c4da5a929a2f85-upper' target='_blank'>Upper Elementary - Sports with Mr. Chase</a></li><li class='without-image'><a href='http://www.signupgenius.com/go/4090c4da5a929a2f85-3rdgrade' target='_blank'>Khan Academy with Ms. Lisa and Ms. Kalina</a></li><li class='without-image'><a href='http://www.signupgenius.com/go/4090c4da5a929a2f85-childrens3' target='_blank'>Children's House Art - With Ms. Amy and Ms. Cameron</a></li><li class='without-image'><a href='http://www.signupgenius.com/go/4090c4da5a929a2f85-lower' target='_blank'>Lower Elementary - Reading Support</a></li><li class='without-image'><a href='http://www.signupgenius.com/go/4090c4da5a929a2f85-upper1' target='_blank'>Upper Elementary - Study of American History</a></li></ul></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/parent&#32;information&#32;letter&#32;2017.pdf?id=3248' >Summer Program 2017</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Parents  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/content/70' >Compass All School Hours</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/compass&#32;montessori&#32;school&#32;calendar&#32;2016-2017&#32;-&#32;google&#32;docs.pdf?id=753' >2016-2017 Important Dates</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/116' >Important Phone Numbers</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/322' >Compass Montessori School Bell Schedule</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/goldennewtrafficpattern.pdf?id=808' >New Traffic Pattern at Pick-Up, Golden Campus</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/102' >Wheat Ridge Drop Off and Pick Up</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/104' >Golden Drop Off and Pick Up</a></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Parent Education  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/Content/336' >Parent Seminars</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/eductation&amp;peace_part1.pdf?id=3327' >Education and Peace Part 1 February 22nd.</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/fromchildhoodtoadolescence_theappendicies.pdf?id=3252' >Parent Seminar - Jan 18th - "From Childhood to Adolescence" - The Appendices (A, B, & C)</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/toeducatethehumanpotential_1-4.pdf?id=3184' >Parent Seminars - To  Educate The Human Potential - December 14th</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/absorbent&#32;ch&#32;27.pdf?id=882' >Parent Seminars - Nov 16th - "The Absorbent Mind" - Chapter 27</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/absorbent&#32;mind.pdf?id=849' >Parent Seminars - Oct 19th - "The Absorbent Mind" - Chapter 3</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Montessori Lessons  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/content/202' >Elementary Noun Lesson </a></li><li class='without-image'><a href='http://www.compassmontessori.org/content/204' >Long Division Lesson Using Test Tubes</a></li><li class='without-image'><a href='http://www.compassmontessori.org/content/206' >6-9 Multiplication Lesson</a></li><li class='without-image'><a href='http://www.compassmontessori.org/content/208' >Small Bead Frame Lesson</a></li></ul></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/212' >Assessment Tools</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/210' >How to add the Compass Website to my mobile device</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Students  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/Content/140' target='_blank'>Student Information</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/340' >Student Use of District Computing Resources and the Internet</a></li></ul></li><li class='without-image'><a href='http://www.compassmontessori.org/District/Links-Forms' >Forms & Links</a></li></ul>
+
+									<ul class="quicklinks">
+										<li class="qlTitle">QUICK LINKS</li>
+									</ul>
+									<ul class='nav navbar-nav quicklinks' ><li class='without-image'><a href='index.html' >Home</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/152' >Financial Transparency</a></li><li class='without-image'><a href='https://calendar.google.com/calendar/embed?src=compassk12.org_44jtq08dvjj81r690lgle0c5p0%40group.calendar.google.com&amp;ctz=America/Denver' target='_blank'>School Calendar</a></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Compass Lunch Program  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/-menu_2016-2017&#32;-&#32;march.pdf?id=3458' >Golden Campus March Menu</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/wrjanuary17menu.pdf?id=3325' >Wheat Ridge Lunch Menu</a></li><li class='without-image'><a href='https://www.mymealtime.com/SignIn.aspx?ReturnUrl=%2f' target='_blank'>MealTime - Pay Lunch Fees</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/free&#32;and&#32;reduced&#32;app..pdf?id=822' >2016-2017 Family Economic Data Survey (Free & Reduced Application)</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Compass Communications  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/wags/wagwrmarch5th-11th2017.pdf?id=3495' target='_blank'>Wheat Ridge WAG</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/wags/document&#32;(30).pdf?id=3494' >Golden WAG</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/mags/maggdmarchfinal.pdf?id=3473' target='_blank'>Golden Campus MAG</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/mags/magwrmarchfinal.pdf?id=3474' target='_blank'>Wheat Ridge Campus MAG</a></li><li class='without-image'><a href='http://www.compassmontessori.org/blog/228/compass-points-newsletter' >Blog: Compass Points News</a></li></ul></li><li class='without-image'><a href='http://www.compassmontessori.org/Board' >Compass Board</a></li><li class='without-image'><a href='http://cms.daphnis.opalsinfo.net/bin/home' target='_blank'>Compass Library</a></li><li class='without-image'><a href='https://compassmontessori.tedk12.com/hire/index.aspx' >Employment</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=63' >PTSA</a></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Fundraising and Events  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/oldwestafesta.pdf?id=3439' >Old Westa Festa</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/368' >PTSA Fundraising</a></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' target='_blank'>Compass Mesa Run and Harvest Festival  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/overall&#32;results.pdf?id=791' target='_blank'>Mesa Run 2016 Overall Results</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/gender&#32;results.pdf?id=792' target='_blank'>Mesa Run 2016 Gender Results</a></li></ul></li><li class='without-image'><a href='http://compassgives.org/' target='_blank'>Compass Montessori Education Foundation</a></li><li class='without-image'><a href='http://compassgives.org/support-cmef/donate/' target='_blank'>Donate to Compass</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Volunteer  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.signupgenius.com/go/4090c4da5a929a2f85-20162017' target='_blank'>Bingo</a></li><li class='without-image'><a href='https://docs.google.com/forms/d/e/1FAIpQLSckvoQGavsozXGtOz5y4OuwdeluRa0PsfzbT2QXcv_6iatM5w/viewform' >Log your Volunteer Hours</a></li><li class='without-image'><a href='http://www.signupgenius.com/go/20f0e4fa9ac2da57-library1?1472148776967' >WR Library Volunteer Schedule </a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Compass Yearbook  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.signupgenius.com/go/20f0548aaab2aa75-compass' target='_blank'>Volunteer to help with the 2016-17 Yearbook</a></li><li class='without-image'><a href='https://treering.zendesk.com/hc/en-us/articles/200333774-How-do-I-order-a-Previous-years-Yearbook-' >2015-16 Yearbook</a></li></ul></li><li class='dropdown'><a href='index.html#' class='dropdown-toggle' data-toggle='dropdown' >Compass Athletics  <b class='caret'></b></a><ul class='dropdown-menu'><li class='without-image'><a href='http://www.compassmontessori.org/Content2/188' >Compass High School MTB Team - Compass Trail Blazers</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content2/190' >UNICORNS CROSS COUNTRY TEAM</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content2/192' >HIGH SCHOOL ULTIMATE FRISBEE TEAM</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content2/194' >FARM SCHOOL ULTIMATE FRISBEE TEAM</a></li></ul></li><li class='without-image'><a href='http://www.compassmontessori.org/Gallery' >Photo Galleries</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/82' >Alumni</a></li></ul>
+
+
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="slideshowback">
+			<div class="navshadow">
+			</div>
+			
+	
+    <link href='http://www.compassmontessori.org/themes/victory/css/index.css' rel='stylesheet' type='text/css' />
+    <div class="container">
+        <div class="row">
+            
+
+<div id="slideshow">
+    <div class="slides">
+        
+                <img title='Sun dogs (sundogs) at the Golden Campus.' alt='Sun dogs (sundogs) at the Golden Campus.' src='http://www.compassmontessori.org/images/full//userfiles/2016-12/23ac8721-0444-4774-b657-241348145722.jpg' />
+            
+                <img title='Compass Trailblazers' alt='Compass Trailblazers' src='http://www.compassmontessori.org/images/full//userfiles/2016-11/ac5d04e2-2fea-4ec0-b2f6-710230c13619.jpg' />
+            
+                <img title='' alt='' src='http://www.compassmontessori.org/images/full//userfiles/2016-08/641e61f8-2026-4cd8-9658-8c48a76acc29.jpg' />
+            
+                <img title='' alt='' src='http://www.compassmontessori.org/images/full//userfiles/2016-08/ed3dd73b-7337-4edc-a48f-4bae2d025f44.jpg' />
+            
+                <img title='Light Spectrum Lesson' alt='Light Spectrum Lesson' src='http://www.compassmontessori.org/images/full//userfiles/2016-03/f77195be-6d46-474a-9f0d-aa53b2a993a8.jpg' />
+            
+                <img title='' alt='' src='http://www.compassmontessori.org/images/full//userfiles/2016-08/69da398e-02c4-4b94-8a67-e52de890b4b9.jpg' />
+            
+                <img title='Compass Golden Campus' alt='Compass Golden Campus' src='http://www.compassmontessori.org/images/full//userfiles/2016-03/00f95f9a-709c-46e7-bb3e-cca4c582ee28.jpg' />
+            
+                <img title='Compass Wheat Ridge Campus' alt='Compass Wheat Ridge Campus' src='http://www.compassmontessori.org/images/full//userfiles/2016-03/29eac75c-d630-447e-b095-293b73b6f110.jpg' />
+            
+                <img title='' alt='' src='http://www.compassmontessori.org/images/full//userfiles/2016-01/b186fd28-ecd1-43c9-8595-95d439f77a87.jpg?nocache=635879142375308215' />
+            
+                <img title='High School Graduation' alt='High School Graduation' src='http://www.compassmontessori.org/images/full//userfiles/2016-01/3b258003-f96e-4f52-8e8f-994b4fcf3718.jpg?nocache=635879133284135153' />
+            
+                <img title='' alt='' src='http://www.compassmontessori.org/images/full//userfiles/2015-09/29f14fe8-fa77-4eb4-87bf-a1ff7b9041dd.jpg?nocache=635787000052388431' />
+            
+                <img title='' alt='' src='http://www.compassmontessori.org/images/full//docs/district/parachute&#32;from&#32;ptsa.jpg?id=710&amp;width=1170' />
+            
+                <img title='' alt='' src='http://www.compassmontessori.org/images/full//docs/district/checkerboard.jpg?id=711&amp;width=1170' />
+            
+    </div>
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="WelcomeTo">
+                <span id="ctl00_ctl00_MasterNews_MasterNews_welcometo">Welcome to Compass Montessori School!</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 backgroundcolor topFeatured">
+            <div class="clearfix panel2 content">
+                
+<div class="feature-content ">
+    
+
+    <div class="feature-content-body content">
+        
+        <div class="feature-content-content">
+            <p><span style="color: rgb(33, 49, 64); font-family: 'Helvetica Neue', Helvetica, arial, 'Liberation Sans', FreeSans, sans-serif; font-size: 14px; line-height: 22px;">Utilizing authentic Montessori methods, the Compass community aims to nurture the whole child and enrich the lives of each student from Preschool to 12th grade.</span></p>
+        </div>
+        
+    </div>
+
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+		</div>
+		
+	
+	
+
+		<div class="container">
+			<div class="masterC alignment-stretch">
+				<div class="row">
+					
+				</div>
+				<div class="row">
+					
+	<div class="content-section">
+		
+
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 backgroundcolor1">
+			<div class="clearfix panel content">
+				
+    <h1><i class="icon">=</i> Quick Links
+    </h1>
+    <ul class='sf-vertical' ><li class='without-image'><a href='index.html' >Home</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/152' >Financial Transparency</a></li><li class='without-image'><a href='https://calendar.google.com/calendar/embed?src=compassk12.org_44jtq08dvjj81r690lgle0c5p0%40group.calendar.google.com&amp;ctz=America/Denver' target='_blank'>School Calendar</a></li><li class='has-flyout'><a href='index.html#' >Compass Lunch Program</a><ul class='flyout'><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/-menu_2016-2017&#32;-&#32;march.pdf?id=3458' >Golden Campus March Menu</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/wrjanuary17menu.pdf?id=3325' >Wheat Ridge Lunch Menu</a></li><li class='without-image'><a href='https://www.mymealtime.com/SignIn.aspx?ReturnUrl=%2f' target='_blank'>MealTime - Pay Lunch Fees</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/free&#32;and&#32;reduced&#32;app..pdf?id=822' >2016-2017 Family Economic Data Survey (Free & Reduced Application)</a></li></ul></li><li class='has-flyout'><a href='http://www.compassmontessori.org/Content/136' >Compass Communications</a><ul class='flyout'><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/wags/wagwrmarch5th-11th2017.pdf?id=3495' target='_blank'>Wheat Ridge WAG</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/wags/document&#32;(30).pdf?id=3494' >Golden WAG</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/mags/maggdmarchfinal.pdf?id=3473' target='_blank'>Golden Campus MAG</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/mags/magwrmarchfinal.pdf?id=3474' target='_blank'>Wheat Ridge Campus MAG</a></li><li class='without-image'><a href='http://www.compassmontessori.org/blog/228/compass-points-newsletter' >Blog: Compass Points News</a></li></ul></li><li class='without-image'><a href='http://www.compassmontessori.org/Board' >Compass Board</a></li><li class='without-image'><a href='http://cms.daphnis.opalsinfo.net/bin/home' target='_blank'>Compass Library</a></li><li class='without-image'><a href='https://compassmontessori.tedk12.com/hire/index.aspx' >Employment</a></li><li class='without-image'><a href='http://www.compassmontessori.org/olc/teacher.aspx?s=63' >PTSA</a></li><li class='has-flyout'><a href='index.html#' >Fundraising and Events</a><ul class='flyout'><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/oldwestafesta.pdf?id=3439' >Old Westa Festa</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/368' >PTSA Fundraising</a></li><li class='has-flyout'><a href='http://www.mesarun.com' target='_blank'>Compass Mesa Run and Harvest Festival</a><ul class='flyout'><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/overall&#32;results.pdf?id=791' target='_blank'>Mesa Run 2016 Overall Results</a></li><li class='without-image'><a href='http://www.compassmontessori.org/userfiles/2/my&#32;files/gender&#32;results.pdf?id=792' target='_blank'>Mesa Run 2016 Gender Results</a></li></ul></li><li class='without-image'><a href='http://compassgives.org/' target='_blank'>Compass Montessori Education Foundation</a></li><li class='without-image'><a href='http://compassgives.org/support-cmef/donate/' target='_blank'>Donate to Compass</a></li></ul></li><li class='has-flyout'><a href='http://www.compassmontessori.org/Content/236' >Volunteer</a><ul class='flyout'><li class='without-image'><a href='http://www.signupgenius.com/go/4090c4da5a929a2f85-20162017' target='_blank'>Bingo</a></li><li class='without-image'><a href='https://docs.google.com/forms/d/e/1FAIpQLSckvoQGavsozXGtOz5y4OuwdeluRa0PsfzbT2QXcv_6iatM5w/viewform' >Log your Volunteer Hours</a></li><li class='without-image'><a href='http://www.signupgenius.com/go/20f0e4fa9ac2da57-library1?1472148776967' >WR Library Volunteer Schedule </a></li></ul></li><li class='has-flyout'><a href='index.html#' >Compass Yearbook</a><ul class='flyout'><li class='without-image'><a href='http://www.signupgenius.com/go/20f0548aaab2aa75-compass' target='_blank'>Volunteer to help with the 2016-17 Yearbook</a></li><li class='without-image'><a href='https://treering.zendesk.com/hc/en-us/articles/200333774-How-do-I-order-a-Previous-years-Yearbook-' >2015-16 Yearbook</a></li></ul></li><li class='has-flyout'><a href='http://www.compassmontessori.org/Content/60' >Compass Athletics</a><ul class='flyout'><li class='without-image'><a href='http://www.compassmontessori.org/Content2/188' >Compass High School MTB Team - Compass Trail Blazers</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content2/190' >UNICORNS CROSS COUNTRY TEAM</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content2/192' >HIGH SCHOOL ULTIMATE FRISBEE TEAM</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content2/194' >FARM SCHOOL ULTIMATE FRISBEE TEAM</a></li></ul></li><li class='without-image'><a href='http://www.compassmontessori.org/Gallery' >Photo Galleries</a></li><li class='without-image'><a href='http://www.compassmontessori.org/Content/82' >Alumni</a></li></ul>
+
+<script type='text/javascript'>
+	$(document).ready(function ()
+	{
+		$('.sf-vertical').superfish({
+			animation: { height: 'show' }, delay: 500, speed: 'fast'
+		});
+	});
+</script>
+
+
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 backgroundcolor2">
+			<div class="clearfix panel content">
+				
+    <div id="start-content"></div>
+
+    <h1><i class='icon'>*</i> News </h1>
+    <div class="news">
+        
+
+
+    <style type="text/css">
+        .rssNewsLink {
+            float: right;
+        }
+    </style>
+    
+            <section id="news-list">
+        
+            <div class="article Newsarticle rows">
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl01_lnkImage" class="newsimage" href="http://www.compassmontessori.org/News/121"><img id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl01_articleImage" src="http://www.compassmontessori.org/docs/_Thumb_/district/easyfundraising.jpg?id=3503&amp;thumbwidth=190&amp;fullwidth=500" alt="Easy Fundraising for Compass" style="border-width:0px;" /></a>
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl01_lnkTitle" class="news-title" href="http://www.compassmontessori.org/News/121">Raise money for Compass the easy way! </a>
+                <span id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl01_lblSummary" class="news-summary"></span>
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl01_lnkViewAll" title="read more about Raise money for Compass the easy way! " class="view-all" href="http://www.compassmontessori.org/News/121">Learn More >></a>
+            </div>
+        
+            <div class="article Newsarticle rows">
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl02_lnkImage" class="newsimage" href="http://www.compassmontessori.org/News/120"><img id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl02_articleImage" src="http://www.compassmontessori.org/docs/_Thumb_/district/temp-1.jpg?id=3500&amp;thumbwidth=190&amp;fullwidth=500" alt="New Pergola" style="border-width:0px;" /></a>
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl02_lnkTitle" class="news-title" href="http://www.compassmontessori.org/News/120">New pergola on our Wheat Ridge campus</a>
+                <span id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl02_lblSummary" class="news-summary"><p>Message from Ms. Cameron, Wheat Ridge Principal.</p></span>
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl02_lnkViewAll" title="read more about New pergola on our Wheat Ridge campus" class="view-all" href="http://www.compassmontessori.org/News/120">Learn More >></a>
+            </div>
+        
+            <div class="article Newsarticle rows">
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl03_lnkImage" class="newsimage" href="http://www.compassmontessori.org/News/119"><img id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl03_articleImage" src="http://www.compassmontessori.org/docs/_Thumb_/district/screen%20shot%202017-03-04%20at%209.32.10%20am.png?id=3493&amp;thumbwidth=190&amp;fullwidth=500" alt="Stinky Pete Wanted Poster" style="border-width:0px;" /></a>
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl03_lnkTitle" class="news-title" href="http://www.compassmontessori.org/News/119">WANTED: YOU</a>
+                <span id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl03_lblSummary" class="news-summary"><p id="E76" is="qowt-word-para" qowt-eid="E76" qowt-entry="undefined" qowt-lvl="undefined"><span style="color:#000000;"><span style="font-size:13px;"><span style="font-family:trebuchet ms,helvetica,sans-serif;">We&rsquo;re fixin&rsquo; to put the fun in fundraising at Old </span></span></span><span style="color:#000000;"><span style="font-size:13px;"><span style="font-family:trebuchet ms,helvetica,sans-serif;">Westa</span></span></span><span style="color:#000000;"><span style="font-size:13px;"><span style="font-family:trebuchet ms,helvetica,sans-serif;"> Festa.</span></span></span></p></span>
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl03_lnkViewAll" title="read more about WANTED: YOU" class="view-all" href="http://www.compassmontessori.org/News/119">Learn More >></a>
+            </div>
+        
+            <div class="article Newsarticle rows">
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl04_lnkImage" class="newsimage" href="http://www.compassmontessori.org/News/118"><img id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl04_articleImage" src="http://www.compassmontessori.org/docs/_Thumb_/district/screen%20shot%202017-02-20%20at%2012.26.58%20pm.png?id=3443&amp;thumbwidth=190&amp;fullwidth=500" alt="Old Westa Festa" style="border-width:0px;" /></a>
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl04_lnkTitle" class="news-title" href="http://www.compassmontessori.org/News/118">Compass Montessori Old Westa Festa</a>
+                <span id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl04_lblSummary" class="news-summary"><p>April 8, 2017 &nbsp;The Vista at Applewood Golf Course</p></span>
+                <a id="ctl00_ctl00_MasterContent_ContentColumnMiddle_ctl00_rep_news_ctl04_lnkViewAll" title="read more about Compass Montessori Old Westa Festa" class="view-all" href="http://www.compassmontessori.org/News/118">Learn More >></a>
+            </div>
+        
+            <div class="clr"></div>
+            </section>
+        
+
+
+    </div>
+    <a href="http://www.compassmontessori.org/News" class="view-all-news">View All News</a>
+    <div class="clr">
+    </div>
+
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 backgroundcolor3">
+			<div class="clearfix panel content">
+				
+    <h1><i class="icon">+</i> Calendar
+    </h1>
+    
+<section id="calendar">
+	<table id="ctl00_ctl00_MasterContent_ContentColumnRight_ctl00_cal_events" class="calendar" cellspacing="0" cellpadding="2" title="Calendar" border="0" style="border-width:0px;border-collapse:collapse;">
+	<tr><td colspan="7" style="background-color:Silver;"><table class="calendar" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
+		<tr><td style="width:15%;"><a href="javascript:__doPostBack('ctl00$ctl00$MasterContent$ContentColumnRight$ctl00$cal_events','V6241')" style="color:Black" title="Go to the previous month"><<span class='obscure'>Go to previous month</span></a></td><td align="center" style="width:70%;">March 2017</td><td align="right" style="width:15%;"><a href="javascript:__doPostBack('ctl00$ctl00$MasterContent$ContentColumnRight$ctl00$cal_events','V6300')" style="color:Black" title="Go to the next month">><span class='obscure'>Go to next month</span></a></td></tr>
+	</table></td></tr><tr><th align="center" abbr="Sunday" scope="col">S</th><th align="center" abbr="Monday" scope="col">M</th><th align="center" abbr="Tuesday" scope="col">T</th><th align="center" abbr="Wednesday" scope="col">W</th><th align="center" abbr="Thursday" scope="col">T</th><th align="center" abbr="Friday" scope="col">F</th><th align="center" abbr="Saturday" scope="col">S</th></tr><tr><td class=" other-month" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=2/26/2017">26</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=2/27/2017">27</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=2/28/2017">28</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/1/2017">1</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/2/2017">2</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/3/2017">3</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/4/2017">4</a></td></tr><tr><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/5/2017">5</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/6/2017">6</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/7/2017">7</a></td><td class=" today" align="center" style="color:White;background-color:Silver;width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/8/2017">8</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/9/2017">9</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/10/2017">10</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/11/2017">11</a></td></tr><tr><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/12/2017">12</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/13/2017">13</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/14/2017">14</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/15/2017">15</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/16/2017">16</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/17/2017">17</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/18/2017">18</a></td></tr><tr><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/19/2017">19</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/20/2017">20</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/21/2017">21</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/22/2017">22</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/23/2017">23</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/24/2017">24</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/25/2017">25</a></td></tr><tr><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/26/2017">26</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/27/2017">27</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/28/2017">28</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/29/2017">29</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/30/2017">30</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=3/31/2017">31</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=4/1/2017">1</a></td></tr><tr><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=4/2/2017">2</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=4/3/2017">3</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=4/4/2017">4</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=4/5/2017">5</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=4/6/2017">6</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=4/7/2017">7</a></td><td class=" with-event" align="center" style="width:14%;"><a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,53,2,24,25,26,32,51,52,55,56&amp;viewDate=4/8/2017">8</a></td></tr>
+</table>
+	<footer>
+		<a id="ctl00_ctl00_MasterContent_ContentColumnRight_ctl00_aCal" class="view-full-calendar" href="http://www.compassmontessori.org/calMonthView.aspx?s=0&amp;y=2017&amp;m=3&amp;t=0" target="_blank" style="padding-left: 10px;">View Full Calendar</a>
+	</footer>
+</section>
+
+
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 backgroundcolor4">
+			<div class="clearfix panel content">
+				
+    <h1><i class="icon">@</i> Upcoming Events
+    </h1>
+    
+<style type="text/css">
+    section#upcoming-events .event-location
+    {
+        display: none;
+    }
+</style>
+
+        <section id="upcoming-events">
+            <ul>
+    
+        <li>
+            <div class="event-date">
+                Feb 27
+            </div>
+            <div class="event-link">
+                <a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0,1,2,3,4,5&amp;schoolid=0&amp;types=&amp;eventID=1040&amp;viewDate=Feb&#32;27" title="2nd Round Choice Enrollment Window">
+                    2nd Round Choice Enrollment Window
+                </a>
+            </div>
+            <div class="event-location">
+                @at WR and GD
+            </div>
+            <div class="event-time">
+                
+            </div>
+        </li>
+    
+        <li>
+            <div class="event-date">
+                Mar 06
+            </div>
+            <div class="event-link">
+                <a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0,1,2,3,4,5&amp;schoolid=0&amp;types=&amp;eventID=939&amp;viewDate=Mar&#32;06" title="Farm School FACE Time at 3:30-5:30pm">
+                    Farm School FACE Time at 3:30-5:30pm
+                </a>
+            </div>
+            <div class="event-location">
+                @at Golden Campus
+            </div>
+            <div class="event-time">
+                3:30 PM &mdash; 5:30 PM
+            </div>
+        </li>
+    
+        <li>
+            <div class="event-date">
+                Mar 06
+            </div>
+            <div class="event-link">
+                <a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0,1,2,3,4,5&amp;schoolid=0&amp;types=&amp;eventID=932&amp;viewDate=Mar&#32;06" title="High School Parent/Teacher Conferences at 3:30-5:30pm">
+                    High School Parent/Teacher Conferences at 3:30-5:30pm
+                </a>
+            </div>
+            <div class="event-location">
+                @at Golden Campus
+            </div>
+            <div class="event-time">
+                3:30 PM &mdash; 5:30 PM
+            </div>
+        </li>
+    
+        <li>
+            <div class="event-date">
+                Mar 08
+            </div>
+            <div class="event-link">
+                <a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0,1,2,3,4,5&amp;schoolid=0&amp;types=&amp;eventID=1048&amp;viewDate=Mar&#32;08" title="CMEF Meeting at 1:30-3:00pm at Wheat Ridge">
+                    CMEF Meeting at 1:30-3:00pm at Wheat Ridge
+                </a>
+            </div>
+            <div class="event-location">
+                @at Wheat Ridge Campus
+            </div>
+            <div class="event-time">
+                1:30 PM &mdash; 3:00 PM
+            </div>
+        </li>
+    
+        <li>
+            <div class="event-date">
+                Mar 10
+            </div>
+            <div class="event-link">
+                <a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0,1,2,3,4,5&amp;schoolid=0&amp;types=&amp;eventID=935&amp;viewDate=Mar&#32;10" title="Compass High School Play at 7pm at Golden">
+                    Compass High School Play at 7pm at Golden
+                </a>
+            </div>
+            <div class="event-location">
+                @at Golden Campus
+            </div>
+            <div class="event-time">
+                7:00 PM &mdash; 8:00 PM
+            </div>
+        </li>
+    
+        <li>
+            <div class="event-date">
+                Mar 11
+            </div>
+            <div class="event-link">
+                <a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0,1,2,3,4,5&amp;schoolid=0&amp;types=&amp;eventID=936&amp;viewDate=Mar&#32;11" title="Compass High School Play at Golden">
+                    Compass High School Play at Golden
+                </a>
+            </div>
+            <div class="event-location">
+                @ at Golden Campus
+            </div>
+            <div class="event-time">
+                7:00 PM &mdash; 8:00 PM
+            </div>
+        </li>
+    
+        <li>
+            <div class="event-date">
+                Mar 13
+            </div>
+            <div class="event-link">
+                <a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0,1,2,3,4,5&amp;schoolid=0&amp;types=&amp;eventID=1154&amp;viewDate=Mar&#32;13" title="Watch Me Work - CH Golden - by appointment only">
+                    Watch Me Work - CH Golden - by appointment only
+                </a>
+            </div>
+            <div class="event-location">
+                @at Golden Campus
+            </div>
+            <div class="event-time">
+                3:15 PM &mdash; 5:30 PM
+            </div>
+        </li>
+    
+        <li>
+            <div class="event-date">
+                Mar 13
+            </div>
+            <div class="event-link">
+                <a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0,1,2,3,4,5&amp;schoolid=0&amp;types=&amp;eventID=1153&amp;viewDate=Mar&#32;13" title="Children's House Watch Me Work at Wheat Ridge at 3:30-5:30pm">
+                    Children's House Watch Me Work at Wheat Ridge at 3:30-5:30pm
+                </a>
+            </div>
+            <div class="event-location">
+                @ at Wheat Ridge Campus
+            </div>
+            <div class="event-time">
+                3:30 PM &mdash; 5:30 PM
+            </div>
+        </li>
+    
+        <li>
+            <div class="event-date">
+                Mar 14
+            </div>
+            <div class="event-link">
+                <a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0,1,2,3,4,5&amp;schoolid=0&amp;types=&amp;eventID=929&amp;viewDate=Mar&#32;14" title="Wheat Ridge Upper Elementary Pi Day">
+                    Wheat Ridge Upper Elementary Pi Day
+                </a>
+            </div>
+            <div class="event-location">
+                @at Wheat Ridge Campus
+            </div>
+            <div class="event-time">
+                
+            </div>
+        </li>
+    
+        <li>
+            <div class="event-date">
+                Mar 16
+            </div>
+            <div class="event-link">
+                <a href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0,1,2,3,4,5&amp;schoolid=0&amp;types=&amp;eventID=928&amp;viewDate=Mar&#32;16" title="Wheat Ridge All School Talent Show">
+                    Wheat Ridge All School Talent Show
+                </a>
+            </div>
+            <div class="event-location">
+                @at Wheat Ridge Campus
+            </div>
+            <div class="event-time">
+                6:00 PM &mdash; 7:00 PM
+            </div>
+        </li>
+    
+        </ul></section>
+
+<footer>
+    
+    <a id="ctl00_ctl00_MasterContent_ContentColumnFarRight_ctl00_hl_viewAllEvents" class="view-all" href="http://www.compassmontessori.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=&amp;viewDate=3/8/2017">View All Events</a>
+</footer>
+
+
+			</div>
+		</div>
+		<div class="clr">
+		</div>
+	</div>
+
+				</div>
+				<div class="clr">
+				</div>
+			</div>
+		</div>
+		
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 backgroundcolor masterC ">
+				<div class="clearfix panel2 content newsTop">
+					
+   
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row blue-box">
+		</div>
+	</div>
+
+		<div class="footerwrapper">
+			<footer id="site-foot">
+				
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 ">
+            <div class="row">
+
+                <div id="social-links" class="fa">
+                    
+        <a href='https://www.facebook.com/Compass-Montessori-School-136871576331148/' title='Compass Montessori School Facebook' target='_self'>
+            <span class='obscure'>Facebook</span>
+            <i class='fa fa-facebook'></i>
+        </a>
+    
+        <a href='http://www.compassmontessori.org/Login/Intranet' title='Compass Montessori School Intranet' target='_self'>
+            <span class='obscure'>Intranet</span>
+            <i class='fa fa-sitemap'></i>
+        </a>
+    
+        <a href='http://www.compassmontessori.org/login.aspx' title='Compass Montessori School CMS Login' target='_self'>
+            <span class='obscure'>CMS Login</span>
+            <i class='fa fa-sign-in'></i>
+        </a>
+    
+        <a href='https://www.facebook.com/cmstrailblazers/' title='Compass Montessori High School Trail Blazers' target='_self'>
+            <span class='obscure'>Facebook</span>
+            <i class='fa fa-facebook'></i>
+        </a>
+    
+
+                    <div class="clr">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="row footer-contact-info">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footerinfo footerinfo1">
+                    Compass Montessori School Wheat Ridge | 10399 W. 44th Ave. • Wheat Ridge, CO 80033
+                    <br />
+                    (303) 420-8288 • Attendance: (303) 982-6560 • Fax: (303) 420-0139
+                </div>
+                <br />
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footerinfo footerinfo2">
+                    Compass Montessori School Golden | 4441 Salvia St. • Golden, CO 80403
+                    <br />
+                    (303) 271-1977 • Attendance: (303) 982-6732 • Fax: (303) 271-1984
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="footer-branding-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <a href="http://www.schoolpointe.com" target="_blank" class="pull-right" alt="SchoolPointe">
+                    <img alt="SchoolPointe" src="http://cdn.schoolpointe.com/images/new/SPblack.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+	if (typeof ga === "undefined")
+	{
+		(function (i, s, o, g, r, a, m)
+		{
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function ()
+			{
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	}
+
+	ga('create', 'UA-66591572-16', 'auto', { 'name': 'SchoolPointeTracker' });
+	ga('SchoolPointeTracker.send', 'pageview');
+
+</script>
+
+
+			</footer>
+		</div>
+	
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAC0u08pbk7WDhmatLHmv1jv/m3KZ4Rw42Qv01BXdFjnsuJDlLo7jbhnG/nVZ2ICvL3OJnFdc+RbXgXTW9pchBl+jQovAmf31D5B6BqiZmuijTwx5mHiYNbv1FdqpqBQrMzM1K+QpKql9H/gcATpXgSPV4wgTY3WnopWBV6ByCYJZOPjDlRtpam5M6vNI9jhA3Jf/6Ul2Mo2Lk5F7xwZr8W7qo9L1JY8sNIfM6pxcghayl7m45kT/Rkax7YQAHfebMwgI5/t6MueklaSeA70lVxB5Xs/H0U8GVXsbd8WSDSmNRhRhLV9oza2OzzduA+hFQ2xZv78SxyfhZWJcPpC5/cbD+mdOTDzrcpG6gGTTTzP72LQUTxSL7qUmgHgzzsIWYKTptAacO0gt4dLDg8xxwTsQle+xat86NTKboBVJkTfbNi9upJQZr/igY/E4Q0wYK/mvwyGGM4KkMfaCyVRvgHVWRP3R8y5AtqaOyJZgMcluYNv1tACb+4uicqih97a4vfNsFZ9p9Acq5KLujbhXJ7W+JuK9A/ceH/DTcx9a+hY7kRvzj8JlaxiHauGcGf1z2NTH3u85H0XF7AS1sX4y08uBqINmSFOEt1K+EZ4CWrq4yRy99BTEVOII1b0VL2Lv/mHUP0+nOC4m0ER9CVInjRT5HW1YA3KXZ3fA9IKgQfcrsJOrV/Nj3FWr6TyeWeDVdZuYKVc3QjtvbnDm39mxViA7MuhQCWf1gIoy6GE28vsVg6wsFzUUCOocBUtt7mzQVZ2mkIfOcW44HKag+TSehi3QUrc8a3sO9j40fSU6zpjiyzRibQPwvwW4p5MPdybz8AtEi3f9GF43BPhRcAIl2Xo5xP+a2fsty0ytdLP/3WjGYLtwHKI22iX+MLgrnydmr1RKUWcHYT7+PCjksQd1cTZA3hMfQX56VdTSfk0XA89RIgVrwEr3IvrVjazLhKdOxNUGbcJTXDT07oglC4RGqr7xCBA4qA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
+</form>
+
+</body>
+</html>

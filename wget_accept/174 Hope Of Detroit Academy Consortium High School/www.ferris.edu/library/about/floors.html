@@ -1,0 +1,416 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+<title>Maps of FLITE Floors</title>
+<meta name="description" content="Ferris Library for Information, Technology and Education (FLITE) is located in the heart of Ferris State University's main campus combining the collections and services of the former Timme and Health Science Libraries.  FLITE also houses the Media Production Department.  FLITE features a variety of public work and study spaces and over 600 active ports for computer connectivity.  FLITE is a Patent and Trademark Depository Library for western lower Michigan and is a depository for U.S. Bureau of the Census and State of Michigan publications.">
+<meta name="keywords" content="Library, Ferris Library for Information, Technology and Education, FLITE, resources, collections, Woodbridge N. Ferris Resource Site, writings bibliography">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="stylesheet" href="http://library.ferris.edu/homepagenew.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://library.ferris.edu/homepagenewprint.css" type="text/css" media="print" />
+<link href="http://library.ferris.edu/lightbox/css/lightbox.css" rel="stylesheet" />
+<link href="http://library.ferris.edu/tabber.css" rel="STYLESHEET" type="text/css" media="screen" />
+<link href="http://library.ferris.edu/primo.css" rel="STYLESHEET" type="text/css" media="screen" />
+
+<script src="http://library.ferris.edu/js/modernizr.js"></script>
+<script src="http://library.ferris.edu/js/Respond.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="http://library.ferris.edu/SpecCollections/fancyapps/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="http://library.ferris.edu/SpecCollections/fancyapps/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+<!-- include extern jQuery file but fall back to local file if extern one fails to load !-->
+
+<script src="http://www.ferris.edu/library/google-analytics.js" type="text/javascript">
+</script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+<script type="text/javascript">
+	var exampleDivs = new Array("lowerlevel", "floor1", "floor2", "floor3", "floor4");
+
+	function showExample(divId){
+		var item;
+		//first hide everything
+		for(var i = 0; i < exampleDivs.length; i++){
+			item = document.getElementById(exampleDivs[i]);
+			if(item){
+				item.className = "hidden";
+			} //end of if the div exists */
+		}//end of for each element in exampleDivs array
+
+		//now unhide the one we sent through as an argument/parameter/whatever
+		item = document.getElementById(divId);
+		if(item){
+			item.className = "unhidden";
+		}
+	}
+</script>
+
+<!-- This code runs Google analytics for the main Ferris web site  -->
+<script type="text/javascript">
+<!--
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-515974-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+// -->
+</script>
+
+</head>
+<body>
+<div class="container">
+<header id="topstuff">
+	<a href="../../HTMLS/index.html"><img src="http://library.ferris.edu/Ferris_Wordmark.png" alt="Link to Ferris Homepage" title="Link to Ferris Homepage" /></a>
+<h4>Ferris Library for Information, Technology, and Education</h4>
+<nav>
+<script type="text/javascript" src="http://library.ferris.edu/topbuttonsnew.js"></script>
+</nav>
+
+</header>
+<div id="left40">
+<article>
+<ul id="nav2">
+	<li><a href="http://www.ferris.edu/library/homepage.htm">Library Home</a></li>
+	<li><a href="floors.html#">Get Help</a>
+	<ul>
+		<li><a href="../reference/helppage.html">In Person</a></li>
+		<li><a href="../reference/helppagechat.html">By Chat Reference</a></li>
+		<li><a href="../reference/helppageemail.html">By Email</a></li>
+		<li><a href="../reference/helppagetelephone.html">By Telephone</a></li>
+		<li><a href="../reference/helppagetext.html">By Text Message (SMS)</a></li>
+	</ul>
+	</li>
+</ul>
+
+<div class="placeholder">
+<!-- This section is necessary to provide spacing between accordion menu and page menu -->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+
+<div class="grayboxmenu">
+<h2>Choose a floor</h2>
+<ul>
+
+	<li><a href="javascript:showExample('lowerlevel');">Lower Level</a></li>
+	<li><a href="javascript:showExample('floor1');">First Floor</a></li>
+	<li><a href="javascript:showExample('floor2');">Second Floor</a></li>
+	<li><a href="javascript:showExample('floor3');">Third Floor</a></li>
+	<li><a href="javascript:showExample('floor4');">Fourth Floor</a></li>
+<!--
+	<li><a href="#" onclick="document.getElementById('im').src='../images/FliteFloors/lowerlevel_FY15_650.jpg'">Lower Level</a></li>
+	<li><a href="#" onclick="document.getElementById('im').src='../images/FliteFloors/floor1_FY15_650.jpg'">First Floor</a></li>
+	<li><a href="#" onclick="document.getElementById('im').src='../images/FliteFloors/floor2_FY15_650.jpg'">Second Floor</a></li>
+	<li><a href="#" onclick="document.getElementById('im').src='../images/FliteFloors/floor3_FY15_650.jpg'">Third Floor</a></li>
+	<li><a href="#" onclick="document.getElementById('im').src='../images/FliteFloors/floor4_FY15_650.jpg'">Fourth Floor</a></li>
+-->
+</ul>
+</div>
+</article>
+
+<figure>
+<div class="floatright">
+	<img src="http://www.ferris.edu/library/images/FliteFloors/legend.png" width="260px" alt="library map legend" title="library map legend" />
+</div>
+</figure>
+<div class="clearall"></div>
+</div>
+<div id="right75">
+<article>
+<p><strong>Click on the map for a larger version</strong></p>
+<div class="hidden" id="lowerlevel">
+	<a class="fancybox manual-a" href="http://www.ferris.edu/library/images/lowerlevel_revised_FY15.jpg"><img src="http://www.ferris.edu/library/images/FliteFloors/lowerlevel_FY15_650.jpg" align="top" alt="map of library floor" title="map of library floor"></a>
+</div>
+<div class="unhidden" id="floor1">
+	<a class="fancybox manual-a" href="http://www.ferris.edu/library/images/floor1_revised_FY15.jpg"><img src="http://www.ferris.edu/library/images/FliteFloors/floor1_FY15_650.jpg" align="top" alt="map of library floor" title="map of library floor"></a>
+</div>
+<div class="hidden" id="floor2">
+	<a class="fancybox manual-a" href="http://www.ferris.edu/library/images/floor2_revised_FY15.jpg"><img src="http://www.ferris.edu/library/images/FliteFloors/floor2_FY15_650.jpg" align="top" alt="map of library floor" title="map of library floor"></a>
+</div>
+<div class="hidden" id="floor3">
+	<a class="fancybox manual-a" href="http://www.ferris.edu/library/images/floor3_revised_FY15.jpg"><img src="http://www.ferris.edu/library/images/FliteFloors/floor3_FY15_650.jpg" align="top" alt="map of library floor" title="map of library floor"></a>
+</div>
+<div class="hidden" id="floor4">
+	<a class="fancybox manual-a" href="http://www.ferris.edu/library/images/floor4_revised_FY15.jpg"><img src="http://www.ferris.edu/library/images/FliteFloors/floor4_FY15_650.jpg" align="top" alt="map of library floor" title="map of library floor"></a>
+</div>
+
+<!--
+<p>
+<a class="fancybox manual-a" href="../images/lowerlevel_revised_FY15.jpg">Lower Level</a><br />
+<a class="fancybox manual-a" href="../images/floor1_revised_FY15.jpg">First Floor</a><br />
+<a class="fancybox manual-a" href="../images/floor2_revised_FY15.jpg">Second Floor</a><br />
+<a class="fancybox manual-a" href="../images/floor3_revised_FY15.jpg">Third Floor</a><br />
+<a class="fancybox manual-a" href="../images/floor4_revised_FY15.jpg">Fourth Floor</a>
+</p>
+-->
+</article>
+</div>
+<div class="clearall"></div>
+</div>
+
+<script>
+var ww = document.body.clientWidth;
+
+$(document).ready(function() {
+$(".nav li a").each(function() {
+if ($(this).next().length > 0) {
+$(this).addClass("parent");
+};
+})
+
+$(".toggleMenu").click(function(e) {
+e.preventDefault();
+$(this).toggleClass("active");
+$(".nav").toggle();
+});
+adjustMenu();
+})
+
+$(window).bind('resize orientationchange', function() {
+ww = document.body.clientWidth;
+adjustMenu();
+});
+
+var adjustMenu = function() {
+if (ww < 769) {
+$(".toggleMenu").css("display", "inline-block");
+if (!$(".toggleMenu").hasClass("active")) {
+$(".nav").hide();
+} else {
+$(".nav").show();
+}
+$(".nav li").unbind('mouseenter mouseleave');
+$(".nav li a.parent").unbind('click').bind('click', function(e) {
+// must be attached to anchor element to prevent bubbling
+e.preventDefault();
+$(this).parent("li").toggleClass("hover");
+});
+}
+else if (ww >= 769) {
+$(".toggleMenu").css("display", "none");
+$(".nav").show();
+$(".nav li").removeClass("hover");
+$(".nav li a").unbind('click');
+$(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
+// must be attached to li so that mouseleave is not triggered when hover over submenu
+$(this).toggleClass('hover');
+});
+}
+}
+
+</script>
+<script>
+$(document).ready(function () {
+  $('#nav2 > li > a').click(function(){
+    if ($(this).attr('class') != 'active'){
+      $('#nav2 li ul').slideUp();
+      $(this).next().slideToggle();
+      $('#nav2 li a').removeClass('active');
+      $(this).addClass('active');
+    }
+    else {
+      $('#nav2 li ul').slideUp();
+      $('#nav2 li a').removeClass('active');
+	}
+  });
+});
+</script>
+
+<!-- This script is to compensate for the inline and float right bug in Webkit browsers  -->
+<script>
+var n = document.createTextNode(' ');
+$( window ).resize(function() {
+	$('#topstuff').hide();
+	$('#topstuff').get(0).offsetHeight; // no need to store this anywhere, the reference is enough
+	$('#topstuff').show();
+});
+</script>
+
+</body>
+</html>
+
+

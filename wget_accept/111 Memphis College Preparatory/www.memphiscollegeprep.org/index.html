@@ -1,0 +1,477 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="homeheader"><title>
+	College Begins Now | Memphis College Prep
+</title><meta http-equiv="content-type" content="text/html;charset=utf-8" /><meta http-equiv="content-style-type" content="text/css" /><meta http-equiv="content-script-type" content="text/javascript" /><link href="http://www.memphiscollegeprep.org/images/favico.ico" rel="shortcut icon" type="image/x-icon" /><link href="http://www.memphiscollegeprep.org/images/favico.ico" rel="icon" type="image/x-icon" /><link href="http://www.memphiscollegeprep.org/css/style.css" media="all" rel="stylesheet" type="text/css" /><link href="http://www.memphiscollegeprep.org/css/extra.css" media="all" rel="stylesheet" type="text/css" />
+    <!--[if IE 8]> <link rel="stylesheet" type="text/css" href="css/ie8-and-down.css" /> <![endif]-->
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" type="text/css" href="css/ie7-and-down.css" />
+<![endif]-->
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" /><script src="js/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script><script type='text/javascript'>
+      DD_belatedPNG.fix('.png_bg, #menu, img, #top, .content, .options, #segurabanner, .dropbox');
+    </script><![endif]-->
+    <script type="text/javascript">
+        function hiddenText(iid) {
+            if (document.getElementById(iid).value == "sign-up for our enewsletter") {
+
+                document.getElementById(iid).value = "";
+            }
+        }
+
+        function displayText(iid) {
+            if (document.getElementById(iid).value == "") {
+
+                document.getElementById(iid).value = "sign-up for our enewsletter";
+            }
+        }
+        function echeck(str) {
+
+            var at = "@"
+            var dot = "."
+            var lat = str.indexOf(at)
+            var lstr = str.length
+            var ldot = str.indexOf(dot)
+            if (str.indexOf(at) == -1) {
+                alert("Invalid E-mail ID")
+                return false
+            }
+
+            if (str.indexOf(at) == -1 || str.indexOf(at) == 0 || str.indexOf(at) == lstr) {
+                alert("Invalid E-mail ID")
+                return false
+            }
+
+            if (str.indexOf(dot) == -1 || str.indexOf(dot) == 0 || str.indexOf(dot) == lstr) {
+                alert("Invalid E-mail ID")
+                return false
+            }
+
+            if (str.indexOf(at, (lat + 1)) != -1) {
+                alert("Invalid E-mail ID")
+                return false
+            }
+
+            if (str.substring(lat - 1, lat) == dot || str.substring(lat + 1, lat + 2) == dot) {
+                alert("Invalid E-mail ID")
+                return false
+            }
+
+            if (str.indexOf(dot, (lat + 2)) == -1) {
+                alert("Invalid E-mail ID")
+                return false
+            }
+
+            if (str.indexOf(" ") != -1) {
+                alert("Invalid E-mail ID")
+                return false
+            }
+
+            return true
+        }
+        function eNewsLetter() {
+            //alert("coming");
+            //alert(document.getElementById("txtSignup").value);
+            var emailID = document.getElementById("txtSignup");
+            //alert(emailID);
+            if ((emailID.value == null) || (emailID.value == "")) {
+                alert("Please Enter your Email ID")
+                emailID.focus()
+                return false
+            }
+            if (echeck(emailID.value) == false) {
+                emailID.value = ""
+                emailID.focus()
+                return false
+            }
+            document.command.emailAddr.value = emailID.value;
+            document.command.submit();
+            //alert(document.command.emailAddr.value);
+            return false;
+        }
+    </script>
+    <link href="http://www.memphiscollegeprep.org/css/featuredcontentglider.css" rel="stylesheet" type="text/css" />
+    <script src="http://www.memphiscollegeprep.org/js/jquery.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://www.memphiscollegeprep.org/js/featuredcontentglider.js"> </script>
+    <script type="text/javascript">
+
+        featuredcontentglider.init({
+            gliderid: "banner", //ID of main glider container
+            contentclass: "glidecontent", //Shared CSS class name of each glider content
+            togglerid: "p-select", //ID of toggler container
+            remotecontent: "", //Get gliding contents from external file on server? "filename" or "" to disable
+            selected: 0, //Default selected content index (0=1st)
+            persiststate: false, //Remember last content shown within browser session (true/false)?
+            speed: 10, //Glide animation duration (in milliseconds)
+            direction: "downup", //set direction of glide: "updown", "downup", "leftright", or "rightleft"
+            autorotate: true, //Auto rotate contents (true/false)?
+            autorotateconfig: [7000, 500] //if auto rotate enabled, set [milliseconds_btw_rotations, cycles_before_stopping]
+        })
+ 
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-12845308-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <style>
+        .donate-btn
+        {
+            width: 92px;
+            height: 26px;
+            float: left;
+        }
+    </style>
+<meta name="description" content="At Memphis College Prep, a public Memphis charter school, the path to college begins in kindergarten" /><meta name="keywords" content="Memphis Charter Schools, College Prep, Elementary School, Kindergarten, Memphis, Charter School, Education Reform" /><meta name="author" content="Ebiz Soultions, http://www.thinkebiz.net" /></head>
+<body>
+    <form name="form1" method="post" action="index.html" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTI3NDkwNDE1Nw9kFgQCAQ9kFgJmD2QWAmYPFgIeBFRleHQFKUNvbGxlZ2UgQmVnaW5zIE5vdyB8IE1lbXBoaXMgQ29sbGVnZSBQcmVwZAIDD2QWBgIBDxYCHgtfIUl0ZW1Db3VudAIGFgxmD2QWBgIBDw8WAh8ABQIxM2RkAgIPFQMHQWJvdXRVcwIxMwhhYm91dCB1c2QCAw9kFgICAQ8WAh8BAgcWDmYPZBYCZg8VBAdNaXNzaW9uAjEzATYHbWlzc2lvbmQCAQ9kFgJmDxUEBVN0YWZmAjEzAjE5BXN0YWZmZAICD2QWAmYPFQQFQm9hcmQCMTMBOAVib2FyZGQCAw9kFgJmDxUECFBhcnRuZXJzAjEzAjIwCHBhcnRuZXJzZAIED2QWAmYPFQQIQ2FsZW5kYXICMTMCMjEIY2FsZW5kYXJkAgUPZBYCZg8VBANmYXECMTMCMjIDZmFxZAIGD2QWAmYPFQQJQ29udGFjdFVzAjEzAjExCmNvbnRhY3QgdXNkAgEPZBYGAgEPDxYCHwAFAjEwZGQCAg8VAwtPdXJBcHByb2FjaAIxMAxvdXIgYXBwcm9hY2hkAgMPDxYCHgdWaXNpYmxlaGQWAgIBDxYCHwEC/////w9kAgIPZBYGAgEPDxYCHwAFAjExZGQCAg8VAwZFbnJvbGwCMTEGZW5yb2xsZAIDDw8WAh8CaGQWAgIBDxYCHwEC/////w9kAgMPZBYGAgEPDxYCHwAFAjEyZGQCAg8VAwdSZXN1bHRzAjEyB3Jlc3VsdHNkAgMPZBYCAgEPFgIfAQIEFghmD2QWAmYPFQQFWWVhcjECMTIBNBF5ZWFyIDE6IDIwMTAtMjAxMWQCAQ9kFgJmDxUEBVllYXIyAjEyATUReWVhciAyOiAyMDExLTIwMTJkAgIPZBYCZg8VBAV5ZWFyMwIxMgI1NRF5ZWFyIDM6IDIwMTItMjAxM2QCAw9kFgJmDxUEBXllYXI0AjEyAjYyEXllYXIgNDogMjAxMy0yMDE0ZAIED2QWBgIBDw8WAh8ABQIxNGRkAgIPFQMLR2V0SW52b2x2ZWQCMTQMZ2V0IGludm9sdmVkZAIDD2QWAgIBDxYCHwECBBYIZg9kFgJmDxUEBmRvbmF0ZQIxNAIxMgZkb25hdGVkAgEPZBYCZg8VBAl2b2x1bnRlZXICMTQCMTMKdm9sdW50ZWVyc2QCAg9kFgJmDxUEB3Zpc2l0dXMCMTQCMTQIdmlzaXQgdXNkAgMPZBYCZg8VBA1hZG9wdGFzY2hvbGFyAjE0AjQ5D2Fkb3B0IGEgc2Nob2xhcmQCBQ9kFgYCAQ8PFgIfAAUCMTVkZAICDxUDC0pvaW5PdXJUZWFtAjE1DWpvaW4gb3VyIHRlYW1kAgMPZBYCAgEPFgIfAQIDFgZmD2QWAmYPFQQTQXBwbGljYXRpb24gUHJvY2VzcwIxNQI1NhNhcHBsaWNhdGlvbiBwcm9jZXNzZAIBD2QWAmYPFQQOYmVhZ2FtZWNoYW5nZXICMTUCNTkMZ2FtZSBjaGFuZ2VyZAICD2QWAmYPFQQTb3RoZXIgb3Bwb3J0dW5pdGllcwIxNQI2MA1vcHBvcnR1bml0aWVzZAIDDxYCHwECBBYIZg9kFgQCAQ8WBB4EaHJlZgU4aHR0cDovL3d3dy5tZW1waGlzY29sbGVnZXByZXAub3JnL3dlYi9FbnJvbGwuYXNweD9waWQ9MTEeBnRhcmdldAUHX3BhcmVudBYCAgEPDxYCHghJbWFnZVVybAUldXBsb2FkL0hvbWVJbWFnZXMvYmVhbGVzdHJlZXRmZXN0LmpwZ2RkAgMPDxYCHwAFAk5vZGQCAQ9kFgQCAQ8WBB8DBUBodHRwOi8vd3d3Lm1lbXBoaXNjb2xsZWdlcHJlcC5vcmcvd2ViL01pc3Npb24uYXNweD9waWQ9MTMmc3BpZD02HwQFB19wYXJlbnQWAgIBDw8WAh8FBSB1cGxvYWQvSG9tZUltYWdlcy9tYWRhZ2FzY2FyLmpwZ2RkAgMPDxYCHwAFAk5vZGQCAg9kFgQCAQ8WBB8DBUBodHRwOi8vd3d3Lm1lbXBoaXNjb2xsZWdlcHJlcC5vcmcvd2ViL2RvbmF0ZS5hc3B4P3BpZD0xNCZzcGlkPTEyHwQFB19wYXJlbnQWAgIBDw8WAh8FBR91cGxvYWQvSG9tZUltYWdlcy9BbnRvbmlvdXMuanBnZGQCAw8PFgIfAAUCTm9kZAIDD2QWBAIBDxYEHwMFOWh0dHA6Ly93d3cubWVtcGhpc2NvbGxlZ2VwcmVwLm9yZy93ZWIvUmVzdWx0cy5hc3B4P3BpZD0xMh8EBQdfcGFyZW50FgICAQ8PFgIfBQUbdXBsb2FkL0hvbWVJbWFnZXMvIERhdGEuanBnZGQCAw8PFgIfAAUCTm9kZAIFDxYCHwECARYCZg9kFgJmDxUCAzEyNypTdXBwb3J0IE1DUCBldmVyeSB0aW1lIHlvdSBzaG9wIG9uIEFtYXpvbiFkZHdEp30CMqEzZRLbzpuMlc4xB+7/" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+    <center>
+        <!-- DIV TOP -->
+        <div id='top'>
+            <div class='content'>
+                
+                <img src='http://www.memphiscollegeprep.org/images/logo_en.jpg' border="0" />
+                
+                <div id="top_search">
+                    <div id="form_search">
+                        
+                        <input name="txtSignup" type="text" id="txtSignup" value="sign-up for our enewsletter"
+                            onfocus="hiddenText(this.id)" onblur="displayText(this.id)" class="text" />
+                        <!--<div id="advanced_search"><a href="#">Advanced Search</a></div>-->
+                    </div>
+                    <div id="register_link">
+                        <input class='enews-btn' type='button' value='' name='image' onclick="eNewsLetter()" />
+                    </div>
+                    <div style="clear: both;">
+                        <div id="language_links" style="margin-top: 15px; margin-left: 95px;">
+                            <ul>
+                                <li>
+                                    <div class="donate-btn">
+                                        <form>
+                                        </form>
+                                        <form action="https://mcp.z2systems.com/np/clients/mcp/donation.jsp" method="post" target="_blank">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="DUA3ZFVQDP632">
+                                        <input type="image" src="http://www.memphiscollegeprep.org/images/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                        <img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110429-1/en_US/i/scr/pixel.gif"
+                                            width="1" height="1">
+                                        </form>
+                                    </div>
+                                    </li>
+                                <li><a class="tab2" href="http://www.linkedin.com/groups?homeNewMember=&amp;gid=2613104&amp;trk=eml-grp-sub"
+                                    target="_blank"><!--LinkedIn--></a></li>
+                                <li><a class="tab3" href="http://www.facebook.com/memphiscollegeprep" target="_blank">
+                                    <!--Facebook--></a></li>
+                                <li><a class="tab4" href="http://www.twitter.com/memcollegeprep" target="_blank"><!--Twitter--></a></li>
+                                <li><a class="tab5" href="http://www.youtube.com/user/MemphisCollegePrep" target="_blank">
+                                    <!--youtube--></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='clear'>
+        </div>
+        <!-- FIM DIV TOP -->
+        <!-- DIV TOP MENU -->
+        <div id='topmenu'>
+            <div class='menu'>
+                
+                <div id="nav_new">
+                    <ul>
+                        <li class="first"><a href='http://www.memphiscollegeprep.org/default.aspx'>home</a>
+                            
+                                    
+                                    <li><a href='http://www.memphiscollegeprep.org/web/AboutUs.aspx?pid=13'>
+                                        about us</a>
+                                        <div id="repMenu_ctl00_panSub">
+	
+                                            <div class="sub">
+                                                <ul>
+                                                    
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/Mission.aspx?pid=13&amp;spid=6'>
+                                                                mission</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/Staff.aspx?pid=13&amp;spid=19'>
+                                                                staff</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/Board.aspx?pid=13&amp;spid=8'>
+                                                                board</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/Partners.aspx?pid=13&amp;spid=20'>
+                                                                partners</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/Calendar.aspx?pid=13&amp;spid=21'>
+                                                                calendar</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/faq.aspx?pid=13&amp;spid=22'>
+                                                                faq</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/ContactUs.aspx?pid=13&amp;spid=11'>
+                                                                contact us</a> </li>
+                                                        
+                                                </ul>
+                                            </div>
+                                        
+</div>
+                                    </li>
+                                
+                                    
+                                    <li><a href='http://www.memphiscollegeprep.org/web/OurApproach.aspx?pid=10'>
+                                        our approach</a>
+                                        
+                                    </li>
+                                
+                                    
+                                    <li><a href='http://www.memphiscollegeprep.org/web/Enroll.aspx?pid=11'>
+                                        enroll</a>
+                                        
+                                    </li>
+                                
+                                    
+                                    <li><a href='http://www.memphiscollegeprep.org/web/Results.aspx?pid=12'>
+                                        results</a>
+                                        <div id="repMenu_ctl03_panSub">
+	
+                                            <div class="sub">
+                                                <ul>
+                                                    
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/Year1.aspx?pid=12&amp;spid=4'>
+                                                                year 1: 2010-2011</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/Year2.aspx?pid=12&amp;spid=5'>
+                                                                year 2: 2011-2012</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/year3.aspx?pid=12&amp;spid=55'>
+                                                                year 3: 2012-2013</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/year4.aspx?pid=12&amp;spid=62'>
+                                                                year 4: 2013-2014</a> </li>
+                                                        
+                                                </ul>
+                                            </div>
+                                        
+</div>
+                                    </li>
+                                
+                                    
+                                    <li><a href='http://www.memphiscollegeprep.org/web/GetInvolved.aspx?pid=14'>
+                                        get involved</a>
+                                        <div id="repMenu_ctl04_panSub">
+	
+                                            <div class="sub">
+                                                <ul>
+                                                    
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/donate.aspx?pid=14&amp;spid=12'>
+                                                                donate</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/volunteer.aspx?pid=14&amp;spid=13'>
+                                                                volunteers</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/visitus.aspx?pid=14&amp;spid=14'>
+                                                                visit us</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/adoptascholar.aspx?pid=14&amp;spid=49'>
+                                                                adopt a scholar</a> </li>
+                                                        
+                                                </ul>
+                                            </div>
+                                        
+</div>
+                                    </li>
+                                
+                                    
+                                    <li><a href='http://www.memphiscollegeprep.org/web/JoinOurTeam.aspx?pid=15'>
+                                        join our team</a>
+                                        <div id="repMenu_ctl05_panSub">
+	
+                                            <div class="sub">
+                                                <ul>
+                                                    
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/Application&#32;Process.aspx?pid=15&amp;spid=56'>
+                                                                application process</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/beagamechanger.aspx?pid=15&amp;spid=59'>
+                                                                game changer</a> </li>
+                                                        
+                                                            <li><a href='http://www.memphiscollegeprep.org/web/other&#32;opportunities.aspx?pid=15&amp;spid=60'>
+                                                                opportunities</a> </li>
+                                                        
+                                                </ul>
+                                            </div>
+                                        
+</div>
+                                    </li>
+                                
+                    </ul>
+                </div>
+                <div class='clear'>
+                </div>
+            </div>
+            <div style="height: 7px;">
+            </div>
+            
+            <center>
+                <div id='topbanner'>
+                    <div style="margin-top: -3px; clear: both;">
+                        <div id="banner" class="glidecontentwrapper">
+                            <div id="arrow" style="position: absolute; left: 745px; z-index: 1000; top: 185px;">
+                                <img src="http://www.memphiscollegeprep.org/images/arrow.png">
+                            </div>
+                            
+                                    <div style="top: 0px; height: 309px; visibility: visible;" class="glidecontent">
+                                        <div class="banner-title">
+                                            <a href="http://www.memphiscollegeprep.org/web/Enroll.aspx?pid=11" id="repImages_ctl00_anc" target="_parent">
+                                                <img id="repImages_ctl00_HeaderImage" class="headline" src="http://www.memphiscollegeprep.org/upload/HomeImages/bealestreetfest.jpg" style="height:325px;width:772px;border-width:0px;" />
+                                            </a>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                
+                                    <div style="top: 0px; height: 309px; visibility: visible;" class="glidecontent">
+                                        <div class="banner-title">
+                                            <a href="http://www.memphiscollegeprep.org/web/Mission.aspx?pid=13&spid=6" id="repImages_ctl01_anc" target="_parent">
+                                                <img id="repImages_ctl01_HeaderImage" class="headline" src="http://www.memphiscollegeprep.org/upload/HomeImages/madagascar.jpg" style="height:325px;width:772px;border-width:0px;" />
+                                            </a>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                
+                                    <div style="top: 0px; height: 309px; visibility: visible;" class="glidecontent">
+                                        <div class="banner-title">
+                                            <a href="http://www.memphiscollegeprep.org/web/donate.aspx?pid=14&spid=12" id="repImages_ctl02_anc" target="_parent">
+                                                <img id="repImages_ctl02_HeaderImage" class="headline" src="http://www.memphiscollegeprep.org/upload/HomeImages/Antonious.jpg" style="height:325px;width:772px;border-width:0px;" />
+                                            </a>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                
+                                    <div style="top: 0px; height: 309px; visibility: visible;" class="glidecontent">
+                                        <div class="banner-title">
+                                            <a href="http://www.memphiscollegeprep.org/web/Results.aspx?pid=12" id="repImages_ctl03_anc" target="_parent">
+                                                <img id="repImages_ctl03_HeaderImage" class="headline" src="http://www.memphiscollegeprep.org/upload/HomeImages/%20Data.jpg" style="height:325px;width:772px;border-width:0px;" />
+                                            </a>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                
+                            <div lastselected="2pg" style="display: block;" id="p-select" class="glidecontenttoggler">
+                                <a loadpage="1pg" buttontype="previous" href="index.html#" class="prev"></a>
+                                <ul>
+                                    <li><a pagenumber="0pg" class="toc" href="http://www.memphiscollegeprep.org/web/Enroll.aspx?pid=11">
+                                        <img src="http://www.memphiscollegeprep.org/images/enroll.png" style="margin-top: 10px; border: none;" /></a></li>
+                                    <li><a pagenumber="1pg" class="toc" href="http://www.memphiscollegeprep.org/web/JoinOurTeam.aspx?pid=15"><strong>Work
+                                        at Memphis College Prep</strong>Join our mission to pave the path from kindergarten
+                                        to college</a></li>
+                                    <li><a pagenumber="2pg" class="toc selected" href="http://www.memphiscollegeprep.org/web/donate.aspx?pid=14&amp;spid=12"><strong>
+                                        Make a Donation</strong>Help prevent the achievement gap for hundreds of Memphis
+                                        students</a></li>
+                                    <li><a pagenumber="3pg" class="toc" href="http://www.memphiscollegeprep.org/web/Results.aspx?pid=12"><strong>View our
+                                        Results</strong>See the growth our scholars have made</a></li>
+                                </ul>
+                                <a loadpage="3pg" href="index.html#" class="next"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <!-- FIM TOP MENU -->
+        <div id="newsbar">
+            <div style="height: 30px;">
+            </div>
+            <div class="news_bg">
+                <div class="newstext">
+                    <div class="news">
+                        <ul class="innerfade" style="position: relative;">
+                            
+                                    <li style="z-index: 2; position: absolute; display: list-item;">
+                                        <div id="c9235" class="csc-default">
+                                            <a href="http://www.memphiscollegeprep.org/web/newsDetail.aspx?id=127">
+                                                
+                                                Support MCP every time you shop on Amazon!</a>
+                                        </div>
+                                    </li>
+                                
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class='clear'>
+            </div>
+        </div>
+    </center>
+    <!-- footer -->
+    <div id='footer'>
+        <div class='content'>
+            <div class='text'>
+                &copy; 2011 Memphis College Prep &nbsp; | &nbsp; 1500 Dunn Avenue Memphis, TN 38106
+                &nbsp; | &nbsp; <font color="#ffffff">P</font> 901.620.6475 &nbsp; | &nbsp; <font
+                    color="#ffffff">F</font> 901.620.6476 &nbsp; | &nbsp;
+
+         <a href="https://www.google.co.in/maps/place/Memphis+College+Prep+Elementary+Charter+School/@35.1570298,-90.0462366,15.25z/data=!4m8!1m2!2m1!1sMemphis+College+Prep,+1500+Dunn+Avenue+Memphis,+TN+38106!3m4!1s0x0:0xe01c45bd12770efe!8m2!3d35.1588281!4d-90.0409466" target="_blank">Map It!</a>
+
+
+                
+                <p>
+                    Web Design and Development by <a href="http://thinkebiz.net/" target="_blank">eBiz Solutions</a></p>
+            </div>
+            <div class='clear'>
+            </div>
+            <br />
+        </div>
+        
+    </div>
+    </form>
+    <form name="command" id="command" action="http://visitor.constantcontact.com/manage/optin/ea?v=001kkqO0FxDKZR5fzyFpjylGA%3D%3D"
+    method="post" target="_new">
+    <input id="emailAddr" name="emailAddr" type="hidden" value="">
+    <!--<input name="_save" type="submit" class="btn-primary" value="Submit" onclick="">-->
+    </form>
+    <script type="text/javascript" src="http://www.memphiscollegeprep.org/js/all-home.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.news > ul').innerfade({ speed: 'slow', timeout: 5000, type: 'sequence', containerheight: '1.5em' });
+            $('#rotate > ul').tabs({ event: 'mouseover' });
+            $(".tab1 > div > p > a").bind("click", function () {
+                location.href = $(this).attr('title');
+            });
+            $(".tab2 > div > p > a").bind("click", function () {
+                location.href = $(this).attr('title');
+            });
+            $(".tab3 > div > p > a").bind("click", function () {
+                location.href = $(this).attr('title');
+            });
+            $(".tab4 > div > p > a").bind("click", function () {
+                location.href = $(this).attr('title');
+            });
+            $('li.top').hover(
+			function () { $('ul', this).css('display', 'block'); },
+			function () { $('ul', this).css('display', 'none'); }
+		);
+        });
+    </script>
+</body>
+</html>
