@@ -1,0 +1,465 @@
+URL:https://www.richland2.org/CharterHigh/School-Information/Lab-Hours
+----------------------------------------------
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+ <head id="ctl00_Head1">
+  <title>
+   Lab Hours
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="no-cache" http-equiv="pragma"/>
+  <meta content="text/css" http-equiv="content-style-type"/>
+  <meta content="text/javascript" http-equiv="content-script-type"/>
+  <link href="/CharterHigh/BlueKey/Templates/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="/CharterHigh/BlueKey/Templates/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!--<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1.0,initial-scale=1.0" />-->
+  <meta content="width=device-width,user-scalable=yes,initial-scale=1.0" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Arial:400,300,600,700|Raleway:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet"/>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+  <link href="/CharterHigh/CMSPages/GetResource.ashx?stylesheetfile=/BlueKey/Templates/css/main.css" rel="stylesheet"/>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript">
+  </script>
+  <script src="/BlueKey/Templates/js/general.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,de,es,gu,hi,ko,ms,te,tl,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
+  </script>
+  <script src="../../../Scripts/jquery.cookie.js">
+  </script>
+ </head>
+ <body class="LTR Safari Chrome Safari52 Chrome52 ENUS ContentBody school">
+  <div id="fb-root">
+  </div>
+  <script>
+   (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=150907861667387";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <form action="/CharterHigh/School-Information/Lab-Hours" id="aspnetForm" method="post" onsubmit="javascript:return WebForm_OnSubmit();">
+   <div class="aspNetHidden">
+    <input id="ctl00_manScript_HiddenField" name="ctl00_manScript_HiddenField" type="hidden" value=""/>
+    <input id="__CMSCsrfToken" name="__CMSCsrfToken" type="hidden" value="ypfgYyJhJsvPD1YoteScywaHMTwIhyu1/cF+a3ka4TBuns/uhaiMHYNwDf28udG7TUr1x79XgeaGD6KO8GZxU0KngnW8ni9lxQns9tJqgbI="/>
+    <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+    <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+   </script>
+   <script src="/CharterHigh/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDBSZKl12dcPoeBVlmRcbvhjRYce6gWmhDmyFRRH4Wz_0KE3eZv1iOVEm3HL-8HtTA2&amp;t=636160660665894255" type="text/javascript">
+   </script>
+   <input id="lng" name="lng" type="hidden" value="en-US"/>
+   <script src="/CharterHigh/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fWebServiceCall.js" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+function PM_Postback(param) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); } if(window.CMSContentManager) { CMSContentManager.allowSubmit = true; }; __doPostBack('ctl00$CMSPortalManager$am',param); }
+function PM_Callback(param, callback, ctx) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); }if (window.CMSContentManager) { CMSContentManager.storeContentChangedStatus(); };WebForm_DoCallback('ctl00$CMSPortalManager$am',param,callback,ctx,null,true); }
+//]]>
+   </script>
+   <script src="/CharterHigh/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fjquery%2fjquery-core.js" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSWebParts%2fSmartSearch%2fSearchBox_files%2fPredictiveSearch.js" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LYLba0Ex6Wkyw0TUNzoXr5vgcTmd4EiP2UQbr-Z0k3yHlMiJROzDhl9X9v0VOZuM7PDMr3VpLjm3iVJVhruJFnC89FBu8wYOEff8VitAX1o90&amp;t=7c776dc1" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScLzk7wQ4Ek8DePhm7YdfN8xy9rykRmq_SW7JYDIKDKs5dkr5Pu17RPaRTKS5nikHEppWuT-C24Qa-zmzATNed5U8FEaEsBuk8B6FMf4IvrSL0&amp;t=7c776dc1" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/BlueKey/Templates/RichlandSchool/BKRichlandSchoolInteriorPage.aspx?_TSM_HiddenField_=ctl00_manScript_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.60919.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3aee051b62-9cd6-49a5-87bb-93c07bc43d63%3a475a4ef5%3aeffe2a26%3a7e63a579" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+var CMS = CMS || {};
+CMS.Application = {
+  "isRTL": "false",
+  "isDebuggingEnabled": true,
+  "applicationUrl": "/CharterHigh/",
+  "imagesUrl": "/CharterHigh/CMSPages/GetResource.ashx?image=%5bImages.zip%5d%2f",
+  "isDialog": false
+};
+
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+function WebForm_OnSubmit() {
+null;
+return true;
+}
+//]]>
+   </script>
+   <div class="aspNetHidden">
+    <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="9A421BF2"/>
+    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="ovW78egUlzGHTDxqDPeOdeUPCbpTyOmlrjR93D5uzN0nnqjd9bbc93hZQ2n4AQ9oJ1N1WAx2rfGDOj9CaXSQuKJnOYctxOoSeBQawVjBtPorSd8jKVe3SS5dYvBPuP8hI7MhaGKTYZ1fN6OjocREIS3SKxUBHiY8vp60mS6oBtk="/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$manScript', 'aspnetForm', ['tctl00$ctxM',''], [], [], 90, 'ctl00');
+//]]>
+   </script>
+   <div id="ctl00_ctxM">
+   </div>
+   <div class="wide">
+    <style type="text/css">
+     .searchLabel{
+        display:none;
+    }
+    .searchResultsPanel{
+        background:#fff;
+        color:#000;
+    }
+    </style>
+    <header>
+     <div class="wrapper">
+      <div class="logo">
+       <a href="/CharterHigh/">
+        <img alt="Return to the home page" src="/CharterHigh/BlueKey/Templates/images/WhiteTorch.png"/>
+       </a>
+      </div>
+      <div class="schoolMenuToggle">
+       Explore
+      </div>
+     </div>
+    </header>
+    <div class="mainNav">
+     <div class="mainNavSearch">
+      <div class="mainNavSearch">
+       <div class="searchBox" id="ctl00_bkHeader_x_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_bkHeader_x_btnSearch')">
+        <label class="searchLabel" for="ctl00_bkHeader_x_txtWord" id="ctl00_bkHeader_x_lblSearch">
+         x:
+        </label>
+        <input id="ctl00_bkHeader_x_txtWord_exWatermark_ClientState" name="ctl00$bkHeader$x$txtWord_exWatermark_ClientState" type="hidden"/>
+        <input class="searchBox form-control" id="ctl00_bkHeader_x_txtWord" maxlength="1000" name="ctl00$bkHeader$x$txtWord" type="text"/>
+        <input class="searchButton btn btn-default" id="ctl00_bkHeader_x_btnSearch" name="ctl00$bkHeader$x$btnSearch" type="submit" value="GO"/>
+        <div class="predictiveSearchHolder" id="ctl00_bkHeader_x_pnlPredictiveResultsHolder">
+        </div>
+       </div>
+      </div>
+     </div>
+     <ul class="CMSListMenuUL" id="mainmenu">
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/" title="Home">
+        Home
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/About-Us" title="About Us">
+        About Us
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/School-Information" title="School Information">
+        School Information
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Graduation-2017" title="Graduation 2017">
+          Graduation 2017
+         </a>
+        </li>
+        <li class="CMSListMenuHighlightedLI">
+         <a class="CMSListMenuLinkHighlighted" href="/CharterHigh/School-Information/Lab-Hours" title="Lab Hours">
+          Lab Hours
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Calendar" title="Calendar">
+          Calendar
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Frequently-Asked-Questions" title="Frequently Asked Questions">
+          Frequently Asked Questions
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Directions" title="Directions">
+          Directions
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/School-Board" title="School Board">
+          School Board
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/School-Improvement-Council" title="School Improvement Council">
+          School Improvement Council
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/Contact-Us" title="Contact Us">
+        Contact Us
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="https://sites.google.com/a/richland2.org/chpassport/" title="Leadership">
+        Leadership
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/News" title="News">
+        News
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/Careers" title="Careers">
+        Careers
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/Student-Registration" title="Register Your Student">
+        Register Your Student
+       </a>
+      </li>
+     </ul>
+     <div class="mainNavSocial">
+      <h4>
+       Follow Us
+      </h4>
+      <a aria-label="Like us on Facebook" class="socialLink" href="https://www.facebook.com/r2charterhs" id="ctl00_bkHeader_fbLink" target="_blank">
+       <em class="fa fa-facebook">
+       </em>
+      </a>
+      <a aria-label="Follow us on Twitter" class="socialLink" href="https://twitter.com/r2charterhs" id="ctl00_bkHeader_twitterLink" target="_blank">
+       <em class="fa fa-twitter">
+       </em>
+      </a>
+      <a aria-label="Read our newsletter or blog" class="socialLink" href="http://r2charterhigh.blogspot.com/" id="ctl00_bkHeader_blogLink" target="_blank">
+       <em class="fa fa-rss">
+       </em>
+      </a>
+     </div>
+     <div class="mainNavTranslation">
+      <a aria-label="Click here for site translation options" href="/CharterHigh/Special-Pages/Site-Translations" style="color:#fff">
+       <img alt="Translate this page" height="24" src="/CharterHigh/BlueKey/Templates/images/Translate-512.png" width="24"/>
+       Traducciones ~ Translations ~ 번역
+      </a>
+     </div>
+     <div class="mainNavClose">
+     </div>
+    </div>
+    <!-- BEGIN PAGE SPECIFIC MARKUP-->
+    <div class="subBanner" style="background: url('/CharterHigh/CharterHigh/media/SchoolMediaLibrary/BannerImages/DefaultBannerImage.jpg') 50% 50% no-repeat; background-size: cover;">
+    </div>
+    <div class="schoolHeroName" id="ctl00_mainContentPlaceHolder_shn" style="background:#0e3556">
+     Richland Two Charter High School
+    </div>
+    <div class="wrapper">
+     <div class="schoolIndexLeft">
+      <div class="crumbs">
+       <a href="/CharterHigh/">
+        Home
+       </a>
+       <a href="/CharterHigh/School-Information">
+        School Information
+       </a>
+       <span class="current">
+        Lab Hours
+       </span>
+      </div>
+      <h1>
+       Lab Hours
+      </h1>
+      <p>
+       The Richland Two Charter High School is open for student use Monday through Thursday, 8:00 AM to 8:00 PM and Friday until 3:00 PM.
+       <br/>
+       <strong>
+        During Evening Hours, please keep in mind
+       </strong>
+       :
+      </p>
+      <div>
+       <ul>
+        <li>
+         The lab will close at 7:10 PM if no students have arrived by that time.
+        </li>
+        <li>
+         Please arrive no later than 6:00 PM to take quizzes.
+        </li>
+        <li>
+         Students will not be permitted to log on to a computer after 7:10 PM (this allows at least thirty 30 minutes to complete any work before having to log out by 7:45 PM).
+        </li>
+        <li>
+         The latest start time for a course exam is 6:45 PM (this allows a one-hour minimum per exam session as the length of exams varies from course to course).
+        </li>
+        <li>
+         Monday through Thursday, all computers must be shut down by 7:45 PM.
+        </li>
+        <li>
+         Fridays, all computers must be shut down by 2:45 PM.
+        </li>
+        <li>
+         Students working from home and have questions are encouraged call the computer lab at 803-419-1348. Please note that the lab in use may differ from night to night according to which staffer is attending. See the list below.
+        </li>
+       </ul>
+      </div>
+      <p>
+      </p>
+      <h2>
+       Evening Computer Lab Hours by Staff (4:00 PM to Close)​ ​ ​ ​
+      </h2>
+      <table border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0" style="border-collapse:collapse;">
+       <tbody>
+        <tr>
+         <td>
+          <h2 style="text-align: center;">
+           Monday
+          </h2>
+         </td>
+         <td>
+          <h2 style="text-align: center;">
+           Tuesday
+          </h2>
+         </td>
+         <td>
+          <h2 style="text-align: center;">
+           Wednesday
+          </h2>
+         </td>
+         <td>
+          <h2 style="text-align: center;">
+           Thursday
+          </h2>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <span>
+           Henry Lovett - Principal
+          </span>
+         </td>
+         <td>
+          <span>
+           Ann Holland - Work-Based Learning Coordinator​
+          </span>
+         </td>
+         <td>
+          <span>
+           Brian Stiles - English Teacher | Testing Coordinator​
+          </span>
+         </td>
+         <td>
+          <span>
+           Angela Bright - School Counselor
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+         </td>
+         <td>
+         </td>
+         <td>
+         </td>
+         <td>
+          <span>
+           Scott Sutton - Math Teacher
+          </span>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <p>
+       <br/>
+       ​
+      </p>
+     </div>
+     <div class="schoolIndexRight">
+      <img alt="School Logo" class="schoolLogo" id="ctl00_mainContentPlaceHolder_schoolLogo" src="../CharterHigh/media/SchoolMediaLibrary/Logos/SchoolLogo.png"/>
+     </div>
+    </div>
+    <!-- END PAGE SPECIFIC MARKUP-->
+    <footer class="schoolsFooter" id="ctl00_foot" style="background:#0e3556">
+     <div class="schoolNameFooter">
+      <a aria-label="Click here to return to the school's home page" href="/~" style="text-decoration:none">
+       Richland Two Charter High School
+      </a>
+     </div>
+     <p>
+      7900 Brookmont Lane  |  Columbia, SC 29203  |  Phone: (803)-419-1348 |  Fax: (803)-935-1212
+     </p>
+     <p>
+      <a aria-label="Click here to learn more about our accessibility efforts" href="https://www.richland2.org/accessibility.aspx" style="font-weight:normal">
+       Accessibility
+      </a>
+      | ©
+      <script lang="JavaScript" type="text/javascript">
+       document.write(new Date().getFullYear());
+      </script>
+      <a aria-label="Click here to return to the district's home page" href="https://www.richland2.org" style="font-weight:normal;">
+       Richland School District Two
+      </a>
+     </p>
+    </footer>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+(function() {var fn = function() {$get("ctl00_manScript_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+if (typeof(Sys.Browser.WebKit) == 'undefined') {
+    Sys.Browser.WebKit = {};
+}
+if (navigator.userAgent.indexOf('WebKit/') > -1) {
+    Sys.Browser.agent = Sys.Browser.WebKit;
+    Sys.Browser.version = parseFloat(navigator.userAgent.match(/WebKit\/(\d+(\.\d+)?)/)[1]);
+    Sys.Browser.name = 'WebKit';
+}
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+WebServiceCall('/CharterHigh/cmsapi/webanalytics', 'LogHit', '{"NodeAliasPath":"/School-Information/Lab-Hours","DocumentCultureCode":"en-US","UrlReferrer":""}')
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+WebForm_InitCallback();//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+var predictiveSearchObject_ctl00_bkHeader_x = new PredictiveSearchExtender('ctl00_bkHeader_x', 'ctl00_bkHeader_x_txtWord', 'ctl00_bkHeader_x_pnlPredictiveResultsHolder', 1, true, 'selectedResult', 'searchResultsPanel');
+predictiveSearchObject_ctl00_bkHeader_x.CallPredictiveSearch = function(arg, context) { WebForm_DoCallback('ctl00$bkHeader$x',arg,predictiveSearchObject_ctl00_bkHeader_x.RecieveSearchResults,context,null,false); }
+
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_bkHeader_x_txtWord_exWatermark_ClientState","WatermarkCssClass":"searchBox WatermarkText","WatermarkText":"Search","id":"ctl00_bkHeader_x_txtWord_exWatermark"}, null, null, $get("ctl00_bkHeader_x_txtWord"));
+});
+//]]>
+   </script>
+  </form>
+ </body>
+</html>

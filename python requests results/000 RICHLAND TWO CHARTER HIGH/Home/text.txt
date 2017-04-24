@@ -1,0 +1,1937 @@
+URL:https://www.richland2.org
+----------------------------------------------
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+ <head id="ctl00_Head1">
+  <title>
+   Home
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="no-cache" http-equiv="pragma"/>
+  <meta content="text/css" http-equiv="content-style-type"/>
+  <meta content="text/javascript" http-equiv="content-script-type"/>
+  <link href="/BlueKey/Templates/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="/BlueKey/Templates/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!--<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1.0,initial-scale=1.0" />-->
+  <meta content="width=device-width,user-scalable=yes,initial-scale=1.0" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Arial:400,300,600,700|Raleway:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet"/>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+  <link href="/CMSPages/GetResource.ashx?stylesheetfile=/BlueKey/Templates/css/main.css" rel="stylesheet"/>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript">
+  </script>
+  <script src="/BlueKey/Templates/js/general.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,de,es,gu,hi,ko,ms,te,tl,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
+  </script>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-34895385-1', 'auto');
+          ga('send', 'pageview');
+  </script>
+ </head>
+ <body class="LTR Safari Chrome Safari52 Chrome52 ENUS ContentBody">
+  <form action="/" id="aspnetForm" method="post" onsubmit="javascript:return WebForm_OnSubmit();">
+   <div class="aspNetHidden">
+    <input id="ctl00_manScript_HiddenField" name="ctl00_manScript_HiddenField" type="hidden" value=""/>
+    <input id="__CMSCsrfToken" name="__CMSCsrfToken" type="hidden" value="RIJza/5fQK/5rkXRNdNGA3xor5UHHRoY0ASk3RrxB9zrHSDIWgqRtLkahuGdO16vDPnzK1DI4h319RpFAeVc8N4JezPem2dMzenfcODXh7E="/>
+    <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+    <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="nrDQF818sZ52XIEKSjjuVYCk3Pd3pY3LM4vgysTolKsFMAoreCRRR0OO6OdfD9aNratO9ZzPeLq3jHBAGy3GM/ZkDQjZzf6qHojERXYs3ixD6wqV5AIiHN+5vZq+5v5O0SRIDI0mBVJCLYV4gkmTwvT5fJKSN+4R/JebJHWKlS5LOu7mfFRb8zJRRBcGy0rP7KaDATSK8CdxK3Zop72GfHRhGBw5BesDc0ceM8x6eb0cd2Q9B5aP1HA+KF6bMCbxlr+OMrcEJr0GtDu6nq5CvHdBXhs78ikBOOqZjmvbtzydU6TKIRB0XDzlSm4eOzzQqhPxoI3/DpbWjt6FnEI8Pcf4KPMlfPj4tpfkAXl3Z/CG98fDHkxVZArqqDX6m5+kRNXiTVgcPAB/5I7YNSnfBvLiL97XVU/S7cFiHq3H+a6cPER9AIjv1Grp5WYEoaZ8xnKD/QNZykxmeMHRICuMrt5iaDlJuTpZvvKqJSPvjQ7TpZaxWRvCwFG/c2qLxlfHOm97UkmBKy4L78kgkOzpj7CbSEOBSCvTlLWCKfCkTTiWkAOzomzOsw5t3G9JYaZ0wsbd+H7jrDK31NDYGMZSsgKYlhQUbUWEFW9uweJph6ZF2SdL3vSiwmGH5vV9vnc3Ungm8+zdUt/+UwtrwXK3Yq5ilrSyCDvvake1ZIFoq9xky29t/ZeSDises0+1d9XThtqi6cxDa+v1n/2Mibe82kgr648c/GnTU6s9HsYh2CLB4Wutc0VJn15lsEo+W4tlDlMmqD2GGGgriEZCjlLSWpfjQp6symdoyqkTa06AxTRnm0/Gapl4K2Y+p+oEBHMXQz8W59tMt9ItS2TRUVC19zvrEj8bVcoHih6NChmXd/GCBMi5BbLO6yd+EE1gn/b16USxMy7DTyI+Z99mywv+aEb0bgpkfNi7zhKJ01xbZQ3xgvlwGJwuMTWgtEjXxlaoHQ0k9yxBeqc63JS7mC3Ny2YjMM11pjnQUMnmiIV8AmBl5BKvhGXVbQM/cTONKaT6zu+h60AeBfSc6damPzaLT4groPtQgefnWOeiIpalSQTV+Qdx0RH9ww8T7Pzz2dT//achGJ/Sav4udrnJv0Pq5x5K0BXbASxvM68q2VyRz4mJYeLRoX0pgO214fwBt175r29os/u3tfhGdUba8nf+dp91EopdPb3qMzK9cCZggTM7j4dNoZ0X/quI6DbbQhrMlOirxkATobQzpTEm2L4GhLXypk4DnaWP0a/qIoDV5lINDA/Qli51rqYb6lJQnoHCbolLAuegYjNkVRHmB6MTO/1iQfgi712O/jZs5FekzZPPWuxPrQ/z4LO2hdsXgwqTXkIs/jGvVKlCMrc4JIDAxZL9HSWegK4mz6JenVRktLDj/IX69FyDhTviYHfS9uQwEuvwrtn8/WAm96irq/ryn65+hQrDRCNQKYGHYrEhAPiw3HTEi9oFV469ONvN7zavOGxvXM31f/nkoZp5+ve8Zw/3hqrtXgh1JOSIJahpDIiiby/wIrkxbj6f7xjsY7rvavb9Gk2+M7UqCg+9ZPMH6Cm+CoZ0p8EV2A3jK3VbGoTNehJpqtuiJGuGWz1VA4FBV57KbkJv+IyJDwSwljragP7Q1FMdhHrVS+CpiOP4zZrxw1Cvl45OMBwc+IU5bPYzDALyGadTVxEA3ygDEQF0ou8hEILMMotl4br7XyG1pwqqjtsSdupilKnF5TUMqA+edUeF0g4DRO5TpEtVpFuFLSXyhfXyn4KxLcxUXFwTz00g5yCK1YC75jyLHo3vqfPESIfG7qSmuTWbMf0hRDM+ah1QJ/i/kMmPkg+Hg9D0mfr73+5Q5IdOzf/PFy8EuT24lWYIH3NwQgtq0xf1wIPahzRfDIDFTrHMggjOuxiU9IWY4oCj8PJ8t8II7P7kv50EWvEFOVedRsHfkJpeOjEeVCN+rT5kQZJdV4zBU2p+jcCwRF2wXzQIhNrQudKAz1Tlm5tL2xmZlTxfgeBL51xxlMrXBgUusMD/hoekYjFw7JFfr18UckoXQ67gRYuOzkZI+d1A/W+4DKE7vJI8rgTo5N7mxkJ+eoMhiSBV5rJdn/ptXHRSvyBoocqF+WiYpSRYaVJr24WacJEKIK5tt5nqsnEvJ88IBhsrDnhVzOHRzvrsKzjc5e+OzGW10xlIV2fFhyoCXSu9VtrNjIa2HMkqxjCZ6kpyqtjVUhjzbgEBL8NfmS/kuGe3yITlixbdPJ5UH0ItU9GqIv6nQJsKmhXsqbiOVJFBt3wkR6bR+qAJ03wSOdio5f7T2bzNCm9xDwKA519SIV21oocI4ubdoT9e7mzE/wWUxs3PXL1V2BfOSq15JN7bXCc+1mr6Y0etnasi2Qcuslx25w8zRSf49nr6SPCcRCb7y4YsqeoX3sIauwCXFlvcBsLclkFdkJjBZv4Wx1p93vUoSvPH59l7EiPkpJu0HBH9d0Aht8W/71Sh7qs7+aZl3RPLh8bT+ePCEffv4FaDnf5nys4A2nQ4iN9o4z2HdZg94GiPPeRHBhSA1Ql6fFw76iCpKycC4eQuis0IClmRYT6aFSg0SHz70HfA6HX9rQqpoWT6vKguimYpdFwLrUCOEPZYKWoBHpWADSyUqzogViKy4QWlSkOjKQ81SC+B6B0zIaMyKB+HRQzkNI9NIUTUKozlhUuH9e8Mm2Fkv0SovlGr5MjinYN/ut9+cX9yyh76Bt48Zcr/WeDHygt0lhsH4T/ptxl+L98vI0pPgo7JHXVZ722N86LnwNONY8CDFHyaspeUTHhMafZBEMdGWo03EraD2rbg3iO28DGQ+4zS2smLSR7b53n//MVtWp61teWXQn4SVVTFX90P6726suMZYbmGVEtsiRmDd/VeLY+RqzAVV3nlzDwWYWARwrDWq6FhEYibFU12KiR5A1Kij7UCVpCRu1vW5COzsTa96jbQqU3WVHeM208VSgaCTWkX+a2975JGUFvsQqKymqciBwfsI2uIN9CgSaYoVQ50hghyqMWI6Q2fVLmFqvWmpnH7G3uedM43TkX/MYL19aU+TUwNW3t309DEr8AdSjBzYZS0/ocH669HHQrmISLB0kZ+YQrBnA9PS7jbrW8eXQDDbUqL8USoFSQQt7jQcLLLZuGBXmceV1BODIJTkWYopwVr2No9bxcv+EEWoSrNAnALUFvks5BmC4ML2TpnzTarjD8qh+x4H/nBalF0eIe3uqaCCB98cgnTkAVxKU1Mh00kITrwqpKdffELzTkO1OtmBYoWpA0DfQLVj0XXFx96kN00jfK4dhUjiLoyIsksUyVIOK/xsi/ffZxi/WSbD/wp5PacLHbMjwPX+sw5bxy0CtGTIjrujhzkq1yEPQ5aaknUmBl0aUCn4SXMeXQaIrKlSt5FhtmTEVz+XXV4s/ubHdDeU+t1L0qn709mM7dTkos+fKWHLgQwTYr0xNSQNQGvuplh+ZZfZXdYe91SQgvc5NL7b3h9ATkTDNd9vFg4te+tM8CK3UpvrwjVxHGKoPCTOQ0OwTvxPbIyGdry9TMUNQa6na60xqaAjrxyTw+f2vdpIK4IlB9V3rePLCwDc0YM4kQ75+srhnGqaluu+Bb2jFQ9+fkldUqIyjKHVszE34HuwUA8C/YCnzWkqNhAUuvrnPHZkoKMCI1LVR8cU4GgAwP/TVxIpg/CWFmL8sBGAThGDImBE4jjMyQZgEllBDHpnrH7mikooCT5UBDoZ2MoQBwH8j8NfsPtUwfejgBUqYr5JFVJ55FGi4KOOt+YhGGloXucNj6OwPsv74MM80prhLK7yn4HGEQSGa4RLOfiedbA5r0b5NvGI0Lvx4khgUGdvwczey87ZWhAhRll7cktjLpLjU/sePIPvLPgH1t0ijq3MI2gyv5EZAIQd8Kq3PhGZyMQfd6KNxi40RE9lbFf5e2iVzRdV01IQ13mti4YgtFiEYbxpSmzVN/7bdylAZtu7/M914ekooXGVdJZFBhqfjjubYxbTEq1/Hj5fi9jbG0pEOcJLwNS3Qd3VqboxtHUHob0NzZW3nb8WbITXkCMIRUnjOoqLNU080fCCB8m1Y/zcFM1J19Ia80PmtMcmxy1SK4GqaX14I8GVZ5WeuTLXUSk1AcKkLYGZVRDLWWUd1M="/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+   </script>
+   <script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDBSZKl12dcPoeBVlmRcbvhjRYce6gWmhDmyFRRH4Wz_0KE3eZv1iOVEm3HL-8HtTA2&amp;t=636160660665894255" type="text/javascript">
+   </script>
+   <input id="lng" name="lng" type="hidden" value="en-US"/>
+   <script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fWebServiceCall.js" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+function PM_Postback(param) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); } if(window.CMSContentManager) { CMSContentManager.allowSubmit = true; }; __doPostBack('ctl00$CMSPortalManager$am',param); }
+function PM_Callback(param, callback, ctx) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); }if (window.CMSContentManager) { CMSContentManager.storeContentChangedStatus(); };WebForm_DoCallback('ctl00$CMSPortalManager$am',param,callback,ctx,null,true); }
+//]]>
+   </script>
+   <script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fjquery%2fjquery-core.js" type="text/javascript">
+   </script>
+   <script src="/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSWebParts%2fSmartSearch%2fSearchBox_files%2fPredictiveSearch.js" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LYLba0Ex6Wkyw0TUNzoXr5vgcTmd4EiP2UQbr-Z0k3yHlMiJROzDhl9X9v0VOZuM7PDMr3VpLjm3iVJVhruJFnC89FBu8wYOEff8VitAX1o90&amp;t=7c776dc1" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScLzk7wQ4Ek8DePhm7YdfN8xy9rykRmq_SW7JYDIKDKs5dkr5Pu17RPaRTKS5nikHEppWuT-C24Qa-zmzATNed5U8FEaEsBuk8B6FMf4IvrSL0&amp;t=7c776dc1" type="text/javascript">
+   </script>
+   <script src="/BlueKey/Templates/BKHomePage.aspx?_TSM_HiddenField_=ctl00_manScript_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.60919.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3aee051b62-9cd6-49a5-87bb-93c07bc43d63%3a475a4ef5%3aeffe2a26%3a7e63a579" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+var CMS = CMS || {};
+CMS.Application = {
+  "isRTL": "false",
+  "isDebuggingEnabled": true,
+  "applicationUrl": "/",
+  "imagesUrl": "/CMSPages/GetResource.ashx?image=%5bImages.zip%5d%2f",
+  "isDialog": false
+};
+
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+function WebForm_OnSubmit() {
+null;
+return true;
+}
+//]]>
+   </script>
+   <div class="aspNetHidden">
+    <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="1E12582B"/>
+    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="QTWmkQvG4vSDnLVFgKsUV1Dqsspssek2CljH3MmX4j/40psdjD2+AE2S+DrgqcyIPn0LSn3mGiMCmul/NGJlQFiEzzp2TBi3ruCO2dVWjQ85P3OePOOiNxh8vgCwlV8s0Nj/s9vdYsnoaXvJntGwI6BVOZ+wBojF1ZZuioU6Mg8="/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$manScript', 'aspnetForm', ['tctl00$ctxM',''], [], [], 90, 'ctl00');
+//]]>
+   </script>
+   <div id="ctl00_ctxM">
+   </div>
+   <div class="wide">
+    <div class="iHero" style="background: url(../BlueKey/Templates/images/iHero.jpg) 50% 50% no-repeat; background-size: cover;">
+     <div class="iHeroCaption">
+      <div class="iHeroTitle">
+       Inspiring Success
+      </div>
+      <div class="iHeroCopy">
+       Learning | Community | Character | Joy
+      </div>
+      <a class="btn btnAccent1 iHeroAction" href="https://www.richland2.org/RichlandDistrict/media/Richland-District/Documents/4_Squares_Explained.pdf" target="_blank">
+       Learn about the four squares to success
+      </a>
+     </div>
+    </div>
+    <div class="iRow">
+     <div class="wrapper">
+      <h2 class="iRowHeader">
+       From the News Room
+       <a class="viewAll" href="/news">
+        View All News
+       </a>
+      </h2>
+      <div class="newsWrapper">
+       <div class="newsBox">
+        <a aria-label="Board to hold Special Called Board Meeting" href="http://www.richland2.org/News/Board-to-hold-Special-Called-Board-Meeting" style="text-decoration:none;color:#000;font-weight:normal">
+         <div class="newsBoxThumb" style="background: url(/getattachment/b2407f83-8879-4e6e-b1ab-d0b0c061d04e/teaser-image.aspx) 50% 50% no-repeat; background-size: cover;" title="Board to hold Special Called Board Meeting">
+         </div>
+         <div class="newsBoxContent">
+          <h3>
+           Board to hold Special Called Board Meeting
+          </h3>
+          The Richland Two Board of Trustees will hold a Special Called Board Meeting on Tuesday, April 25, 2017.
+         </div>
+        </a>
+       </div>
+       <div class="newsBox">
+        <a aria-label="27 students win Sparkleberry Fair Scholarships" href="http://www.richland2.org/News/27-students-win-Sparkleberry-Fair-Scholarships" style="text-decoration:none;color:#000;font-weight:normal">
+         <div class="newsBoxThumb" style="background: url(/getattachment/939827b0-5fa6-427f-b692-9381fc00376b/teaser-image.aspx) 50% 50% no-repeat; background-size: cover;" title="27 students win Sparkleberry Fair Scholarships">
+         </div>
+         <div class="newsBoxContent">
+          <h3>
+           27 students win Sparkleberry Fair Scholarships
+          </h3>
+          The Sparkleberry Country Fair is helping twenty-seven Richland Two students pay their college expenses.
+         </div>
+        </a>
+       </div>
+       <div class="newsBox">
+        <a aria-label="Board Meeting Highlights for April 18" href="http://www.richland2.org/News/Board-Meeting-Highlights-for-April-18" style="text-decoration:none;color:#000;font-weight:normal">
+         <div class="newsBoxThumb" style="background: url(/getattachment/2e1f6bc2-34b7-49a4-861f-3db8e90ba782/teaser-image.aspx) 50% 50% no-repeat; background-size: cover;" title="Board Meeting Highlights for April 18">
+         </div>
+         <div class="newsBoxContent">
+          <h3>
+           Board Meeting Highlights for April 18
+          </h3>
+          Read more of the Board Meeting Highlights for the April 18 meeting.
+         </div>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="iRow iRowBottom">
+     <div class="iBottomLeft">
+      <div class="bottomImage" style="background: url('/getmedia/863692f5-683c-463c-91f8-6352970cb824/graduation-blue.aspx?width=700&amp;height=500&amp;ext=.jpg') 50% 50% no-repeat; background-size: cover;">
+       <img alt="" class="bottomAngle" src="/BlueKey/Templates/images/bottomLeftAngle.png"/>
+      </div>
+      <h3>
+       High School Graduation
+      </h3>
+      Commencement ceremonies to be held June 2-3 at the Colonial Life Arena
+      <p>
+       <img alt="Get the schedule, tips and parking map here" src="/RichlandDistrict/media/Richland-District/Images/motoboard.png?ext=.png"/>
+      </p>
+      <a class="btn btnAccent1 bottomAction" href="/Departments/Communications-Strategic-Partnerships/Graduation">
+       Get the schedule, tips and parking map here
+      </a>
+     </div>
+     <div class="iBottomRight">
+      <div class="bottomImage" style="background: url('/getmedia/ffd0ad2e-a52c-478d-9be3-09253eced54a/IMG_1641.aspx?width=750&amp;height=500&amp;ext=.jpg') 50% 50% no-repeat; background-size: cover;">
+       <img alt="" class="bottomAngle" src="/BlueKey/Templates/images/bottomRightAngle.png"/>
+      </div>
+      <h3>
+       Join R2 Innovates
+      </h3>
+      R2 Innovates is looking for incredibly smart, passionate and motivated educators with ideas that scale and that impact outcomes for students in the areas of learning, character, community and joy. In the end, we choose educators whom we believe in. The innovators we support have both the skill and the drive to make their ideas become reality.
+      <br/>
+      <br/>
+      <br/>
+      <p>
+       <img alt="Click here to apply for R2 Innovates" src="/getmedia/a54cd88b-bac6-4b48-a611-19ef7d4c02ca/R2-Innovates-Logo-04.aspx?width=300&amp;height=205&amp;ext=.jpg"/>
+      </p>
+      <a class="btn btnAccent1 bottomAction" href="http://r2innovates.blogspot.com/p/application.html">
+       Click here to apply for R2 Innovates
+      </a>
+     </div>
+    </div>
+    <div class="iRow iRowCalendar">
+     <h2 class="iRowHeader">
+      Upcoming Events
+      <a class="viewAll" href="/About/Calendar">
+       View Calendar
+      </a>
+     </h2>
+     <div class="eventWrapper">
+      <a class="eventBox" href="/About/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         2
+        </div>
+        <div class="eventMonth">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         School Board Meeting
+        </h3>
+        <!--<p>23:00:00 - 02:30:00</p>-->
+       </div>
+      </a>
+      <a class="eventBox" href="/About/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         9
+        </div>
+        <div class="eventMonth">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         School Board Meeting
+        </h3>
+        <!--<p>23:00:00 - 01:00:00</p>-->
+       </div>
+      </a>
+      <a class="eventBox" href="/About/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         23
+        </div>
+        <div class="eventMonth">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         School Board Meeting
+        </h3>
+        <!--<p>23:00:00 - 01:00:00</p>-->
+       </div>
+      </a>
+      <a class="eventBox" href="/About/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         29
+        </div>
+        <div class="eventMonth">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         Memorial Day Holiday
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+      <a class="eventBox" href="/About/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         31
+        </div>
+        <div class="eventMonth">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         Half day for all students
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+      <a class="eventBox" href="/About/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         1
+        </div>
+        <div class="eventMonth">
+         JUN
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         Last Day of School/Half-day for all students
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+     </div>
+    </div>
+    <div class="iRow iRowBottomCaption">
+     <p>
+      In partnership with our community, Richland School District Two prepares all students for success by providing meaningful, challenging and engaging learning experiences.
+     </p>
+    </div>
+    <style type="text/css">
+     .searchLabel{
+        display:none;
+    }
+    .searchResultsPanel{
+        background:#fff;
+        color:#000;
+    }
+    </style>
+    <header>
+     <div class="wrapper">
+      <div class="logo">
+       <a href="/">
+        <img alt="Return to the home page" src="/BlueKey/Templates/images/logo.png"/>
+       </a>
+      </div>
+      <div class="menuToggle">
+       Explore
+      </div>
+      <div class="ourSchoolsBtn">
+       Our Schools
+      </div>
+     </div>
+    </header>
+    <div class="mainNav">
+     <div class="mainNavSearch">
+      <div class="mainNavSearch">
+       <div class="searchBox" id="ctl00_bkHeader_x_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_bkHeader_x_btnSearch')">
+        <label class="searchLabel" for="ctl00_bkHeader_x_txtWord" id="ctl00_bkHeader_x_lblSearch">
+         x:
+        </label>
+        <input id="ctl00_bkHeader_x_txtWord_exWatermark_ClientState" name="ctl00$bkHeader$x$txtWord_exWatermark_ClientState" type="hidden"/>
+        <input class="searchBox form-control" id="ctl00_bkHeader_x_txtWord" maxlength="1000" name="ctl00$bkHeader$x$txtWord" type="text"/>
+        <input class="searchButton btn btn-default" id="ctl00_bkHeader_x_btnSearch" name="ctl00$bkHeader$x$btnSearch" type="submit" value="GO"/>
+        <div class="predictiveSearchHolder" id="ctl00_bkHeader_x_pnlPredictiveResultsHolder">
+        </div>
+       </div>
+      </div>
+     </div>
+     <ul class="CMSListMenuUL" id="mainmenu">
+      <li class="CMSListMenuHighlightedLI">
+       <a class="CMSListMenuLinkHighlighted" href="/" title="Home">
+        Home
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/I-m-a-Richland-Two" title="I'm a Richland Two...">
+        I'm a Richland Two...
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/I-m-a-Richland-Two/I-m-a-Student-or-Parent" title="Student or Parent">
+          Student or Parent
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/I-m-a-Richland-Two/I-m-an-Employee" title="Employee">
+          Employee
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/I-m-a-Richland-Two/I-m-a-Future-Family" title="Future Family">
+          Future Family
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/I-m-a-Richland-Two/I-m-a-Community-Member-Local-Business" title="Community Member/Local Business">
+          Community Member/Local Business
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/I-m-a-Richland-Two/I-m-a-Prospective-Employee" title="Prospective Employee">
+          Prospective Employee
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/About/About-Us" title="About Richland Two">
+        About Richland Two
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/About/About-Us" title="About Us">
+          About Us
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/advanced" title="Richland Two AdvancED Process">
+          Richland Two AdvancED Process
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/About/State-of-the-District" title="State of the District">
+          State of the District
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/About/District-Awards" title="District Awards">
+          District Awards
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/About/Frequently-Asked-Questions" title="Frequently Asked Questions">
+          Frequently Asked Questions
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/About/Calendar" title="Calendar">
+          Calendar
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/About/Contact-Us" title="Contact Us">
+          Contact Us
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Superintendent" title="Superintendent">
+        Superintendent
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Superintendent/Superintendent-s-Welcome" title="Superintendent's Welcome">
+          Superintendent's Welcome
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Superintendent/Superintendent-Elect" title="Superintendent-Elect">
+          Superintendent-Elect
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Superintendent/Assistant-Superintendents-for-Schools" title="Assistant Superintendents for Schools">
+          Assistant Superintendents for Schools
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Superintendent/Board-and-Superintendent-Goals" title="Board and Superintendent Goals">
+          Board and Superintendent Goals
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/getmedia/55c039e0-dcf6-4fc8-b409-22f81e9c4ed9/District_Priorities.aspx" title="Priorities">
+          Priorities
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/School-Board" title="School Board">
+        School Board
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="http://www.boarddocs.com/sc/rsd2/Board.nsf/Public" title="Agenda">
+          Agenda
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="http://policy.microscribepub.com/cgi-bin/om_isapi.dll?clientID=1966250717&amp;depth=2&amp;infobase=richland2.nfo&amp;record={1}&amp;softpage=PL_frame" title="Board Policies">
+          Board Policies
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/School-Board/Boardsmanship" title="Boardsmanship">
+          Boardsmanship
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/School-Board/Meeting-Schedule-Highlights" title="Meeting Schedule &amp; Highlights">
+          Meeting Schedule &amp; Highlights
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/School-Board/Members" title="Members">
+          Members
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/School-Board/Public-Participation" title="Public Participation">
+          Public Participation
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Departments" title="Departments">
+        Departments
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Accountability-and-Grants" title="Accountability and Grant Initiatives">
+          Accountability and Grant Initiatives
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Administrative-Services" title="Administrative Services">
+          Administrative Services
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Enrollment-Registration" title="Registrar (Enrollment &amp; Registration)">
+          Registrar (Enrollment &amp; Registration)
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Business-Services" title="Business Services">
+          Business Services
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Communications-Strategic-Partnerships" title="Communications &amp; Strategic Partnerships">
+          Communications &amp; Strategic Partnerships
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Diversity-Multicultural-Inclusion" title="Diversity &amp; Multicultural Inclusion">
+          Diversity &amp; Multicultural Inclusion
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Human-Resources" title="Human Resources">
+          Human Resources
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Information-Technology" title="Information Technology">
+          Information Technology
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Instructional-Support-Services" title="Instructional Support Services">
+          Instructional Support Services
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Operations" title="Operations">
+          Operations
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Planning-Initiatives" title="Planning">
+          Planning
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Departments/Teaching-Learning" title="Teaching &amp; Learning">
+          Teaching &amp; Learning
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/News" title="News">
+        News
+       </a>
+      </li>
+     </ul>
+     <div class="mainNavSocial">
+      <h4>
+       Follow Us
+      </h4>
+      <a aria-label="Like us on Facebook" class="socialLink" href="https://www.facebook.com/RichlandSchoolDistrictTwo/" target="_blank">
+       <em class="fa fa-facebook">
+       </em>
+      </a>
+      <a aria-label="Follow us on Twitter" class="socialLink" href="https://twitter.com/RichlandTwo" target="_blank">
+       <em class="fa fa-twitter">
+       </em>
+      </a>
+      <a aria-label="Watch us on YouTube" class="socialLink" href="https://www.youtube.com/user/RichlandDistrict2" target="_blank">
+       <em class="fa fa-youtube">
+       </em>
+      </a>
+      <a aria-label="Follow us on Flickr" class="socialLink" href="https://www.flickr.com/photos/richlandtwo" target="_blank">
+       <em class="fa fa-flickr">
+       </em>
+      </a>
+      <a aria-label="Follow us on Instagram" class="socialLink" href="https://www.instagram.com/richlandtwo/" target="_blank">
+       <em class="fa fa-instagram">
+       </em>
+      </a>
+      <a aria-label="Follow us on Pinterest" class="socialLink" href="https://www.pinterest.com/richlandtwo/" target="_blank">
+       <em class="fa fa-pinterest">
+       </em>
+      </a>
+      <!--<a href="" class="socialLink"><em class="fa fa-rss"></em></a>-->
+     </div>
+     <div class="mainNavTranslation">
+      <a aria-label="Click here for site translation options" href="/Special-Pages/Site-Translations" style="color:#fff">
+       <img alt="Translate this page" height="24" src="/BlueKey/Templates/images/Translate-512.png" width="24"/>
+       Traducciones ~ Translations ~ 번역
+      </a>
+     </div>
+     <div class="mainNavClose">
+     </div>
+    </div>
+    <div class="ourSchools">
+     <ul class="CMSListMenuUL" id="schoolMenu">
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Schools/Elementary-Schools" title="Elementary Schools">
+        Elementary Schools
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Bethel-Hanberry" title="Bethel-Hanberry">
+          Bethel-Hanberry
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Bookman-Road" title="Bookman Road">
+          Bookman Road
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Bridge-Creek" title="Bridge Creek">
+          Bridge Creek
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Catawba-Trail" title="Catawba Trail">
+          Catawba Trail
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Forest-Lake-Elementart-NASA-Explorer-School-ELC" title="Forest Lake Elementary">
+          Forest Lake Elementary
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Jackson-Creek" title="Jackson Creek">
+          Jackson Creek
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Joseph-Keels" title="Joseph Keels">
+          Joseph Keels
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Killian" title="Killian">
+          Killian
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/L-W-Conder-Arts-Integrated-Magnet" title="L.W. Conder Arts Integrated Magnet">
+          L.W. Conder Arts Integrated Magnet
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Lake-Carolina-Lower-Campus" title="Lake Carolina - Lower Campus">
+          Lake Carolina - Lower Campus
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Lower-Carolina-Upper-Campus" title="Lake Carolina - Upper Campus">
+          Lake Carolina - Upper Campus
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Langford" title="Langford">
+          Langford
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Lonnie-B-Nelson" title="Lonnie B. Nelson">
+          Lonnie B. Nelson
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/North-Springs" title="North Springs">
+          North Springs
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Polo-Road" title="Polo Road">
+          Polo Road
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Pontiac" title="Pontiac">
+          Pontiac
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Rice-Creek" title="Rice Creek">
+          Rice Creek
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Round-Top" title="Round Top">
+          Round Top
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Sandlapper" title="Sandlapper">
+          Sandlapper
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Elementary-Schools/Windsor" title="Windsor">
+          Windsor
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Schools/Middle-Schools" title="Middle Schools">
+        Middle Schools
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Middle-Schools/Blythewood" title="Blythewood Middle">
+          Blythewood Middle
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Middle-Schools/Dent" title="Dent Middle">
+          Dent Middle
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Middle-Schools/E-L-Wright" title="E.L. Wright Middle">
+          E.L. Wright Middle
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Middle-Schools/Kelly-Hill" title="Kelly Mill Middle">
+          Kelly Mill Middle
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Middle-Schools/Longleaf" title="Longleaf Middle">
+          Longleaf Middle
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Middle-Schools/Muller-Road" title="Muller Road Middle">
+          Muller Road Middle
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/Middle-Schools/Summit-Parkway" title="Summit Parkway Middle">
+          Summit Parkway Middle
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Schools/High-Schools" title="High Schools">
+        High Schools
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/High-Schools/Blythewood" title="Blythewood High">
+          Blythewood High
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/High-Schools/Richland-Northeast" title="Richland Northeast High">
+          Richland Northeast High
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/High-Schools/Ridge-View" title="Ridge View High">
+          Ridge View High
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/High-Schools/Spring-Valley" title="Spring Valley High">
+          Spring Valley High
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/Schools/High-Schools/Westwood" title="Westwood High">
+          Westwood High
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Schools/Magnet-Schools-and-Centers" title="Magnet Schools and Centers">
+        Magnet Schools and Centers
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Schools/Blythewood-Academy" title="Blythewood Academy">
+        Blythewood Academy
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Schools/Center-for-Child-Development" title="Center for Child Development">
+        Center for Child Development
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Schools/R2I2" title="Richland Two Institute of Innovation">
+        Richland Two Institute of Innovation
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Schools/Richland-Two-Charter-School-(1)" title="Richland Two Charter School">
+        Richland Two Charter School
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/Schools/W-R-Rogers-Center" title="W.R. Rogers Center ">
+        W.R. Rogers Center
+       </a>
+      </li>
+     </ul>
+     <div class="ourSchoolsClose">
+     </div>
+    </div>
+    <!-- BEGIN PAGE SPECIFIC MARKUP-->
+    <!-- END PAGE SPECIFIC MARKUP-->
+    <footer>
+     <div class="footerLeft">
+      <h1 style="text-transform:none !important">
+       <a aria-label="Click here to learn about Richland Two" href="/about/about-us" title="About Richland Two">
+        About Two
+       </a>
+      </h1>
+     </div>
+     <div class="footerCenter">
+      <img alt="Richland School District Two Logo Image" src="/BlueKey/Templates/images/logo.png"/>
+     </div>
+     <div class="footerRight">
+      <h1 style="text-transform:none !important">
+       <a aria-label="Click here to go to our contact page" href="/About/Contact-Us" title="Contact Us">
+        Contact Us
+       </a>
+      </h1>
+     </div>
+     <div class="footerCredits">
+      <p>
+       <a aria-label="Click here to learn more about our accessibility efforts" href="/accessibility.aspx" style="font-weight:normal">
+        Accessibility
+       </a>
+       | ©
+       <script lang="JavaScript" type="text/javascript">
+        document.write(new Date().getFullYear());
+       </script>
+       Richland School District Two
+      </p>
+     </div>
+    </footer>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+(function() {var fn = function() {$get("ctl00_manScript_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+if (typeof(Sys.Browser.WebKit) == 'undefined') {
+    Sys.Browser.WebKit = {};
+}
+if (navigator.userAgent.indexOf('WebKit/') > -1) {
+    Sys.Browser.agent = Sys.Browser.WebKit;
+    Sys.Browser.version = parseFloat(navigator.userAgent.match(/WebKit\/(\d+(\.\d+)?)/)[1]);
+    Sys.Browser.name = 'WebKit';
+}
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+WebServiceCall('/cmsapi/webanalytics', 'LogHit', '{"NodeAliasPath":"/Home","DocumentCultureCode":"en-US","UrlReferrer":""}')
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+WebForm_InitCallback();//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+var predictiveSearchObject_ctl00_bkHeader_x = new PredictiveSearchExtender('ctl00_bkHeader_x', 'ctl00_bkHeader_x_txtWord', 'ctl00_bkHeader_x_pnlPredictiveResultsHolder', 1, true, 'selectedResult', 'searchResultsPanel');
+predictiveSearchObject_ctl00_bkHeader_x.CallPredictiveSearch = function(arg, context) { WebForm_DoCallback('ctl00$bkHeader$x',arg,predictiveSearchObject_ctl00_bkHeader_x.RecieveSearchResults,context,null,false); }
+
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_bkHeader_x_txtWord_exWatermark_ClientState","WatermarkCssClass":"searchBox WatermarkText","WatermarkText":"Search","id":"ctl00_bkHeader_x_txtWord_exWatermark"}, null, null, $get("ctl00_bkHeader_x_txtWord"));
+});
+//]]>
+   </script>
+  </form>
+ </body>
+</html>
+URL:https://www.richland2.org/CharterHigh/
+----------------------------------------------
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+ <head id="ctl00_Head1">
+  <title>
+   Home
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="no-cache" http-equiv="pragma"/>
+  <meta content="text/css" http-equiv="content-style-type"/>
+  <meta content="text/javascript" http-equiv="content-script-type"/>
+  <link href="/CharterHigh/BlueKey/Templates/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="/CharterHigh/BlueKey/Templates/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!--<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1.0,initial-scale=1.0" />-->
+  <meta content="width=device-width,user-scalable=yes,initial-scale=1.0" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Arial:400,300,600,700|Raleway:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet"/>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+  <link href="/CharterHigh/CMSPages/GetResource.ashx?stylesheetfile=/BlueKey/Templates/css/main.css" rel="stylesheet"/>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript">
+  </script>
+  <script src="/BlueKey/Templates/js/general.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,de,es,gu,hi,ko,ms,te,tl,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
+  </script>
+  <script src="../../../Scripts/jquery.cookie.js">
+  </script>
+ </head>
+ <body class="LTR Safari Chrome Safari52 Chrome52 ENUS ContentBody school">
+  <div id="fb-root">
+  </div>
+  <script>
+   (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=150907861667387";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <form action="/CharterHigh/" id="aspnetForm" method="post" onsubmit="javascript:return WebForm_OnSubmit();">
+   <div class="aspNetHidden">
+    <input id="ctl00_manScript_HiddenField" name="ctl00_manScript_HiddenField" type="hidden" value=""/>
+    <input id="__CMSCsrfToken" name="__CMSCsrfToken" type="hidden" value="q/RC9tsnsoVsFxs+sf36sdL37Edk8KLCiyq0cdhCiyztaWhbJaKiugyPHHjIznLtz1ErMREk07LDERrxujQZncFyJFv/3e5kheJUMXAlZRo="/>
+    <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+    <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+   </script>
+   <script src="/CharterHigh/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDBSZKl12dcPoeBVlmRcbvhjRYce6gWmhDmyFRRH4Wz_0KE3eZv1iOVEm3HL-8HtTA2&amp;t=636160660665894255" type="text/javascript">
+   </script>
+   <input id="lng" name="lng" type="hidden" value="en-US"/>
+   <script src="/CharterHigh/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fWebServiceCall.js" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+function PM_Postback(param) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); } if(window.CMSContentManager) { CMSContentManager.allowSubmit = true; }; __doPostBack('ctl00$CMSPortalManager$am',param); }
+function PM_Callback(param, callback, ctx) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); }if (window.CMSContentManager) { CMSContentManager.storeContentChangedStatus(); };WebForm_DoCallback('ctl00$CMSPortalManager$am',param,callback,ctx,null,true); }
+//]]>
+   </script>
+   <script src="/CharterHigh/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fjquery%2fjquery-core.js" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSWebParts%2fSmartSearch%2fSearchBox_files%2fPredictiveSearch.js" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LYLba0Ex6Wkyw0TUNzoXr5vgcTmd4EiP2UQbr-Z0k3yHlMiJROzDhl9X9v0VOZuM7PDMr3VpLjm3iVJVhruJFnC89FBu8wYOEff8VitAX1o90&amp;t=7c776dc1" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScLzk7wQ4Ek8DePhm7YdfN8xy9rykRmq_SW7JYDIKDKs5dkr5Pu17RPaRTKS5nikHEppWuT-C24Qa-zmzATNed5U8FEaEsBuk8B6FMf4IvrSL0&amp;t=7c776dc1" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/BlueKey/Templates/RichlandSchool/BKRichlandSchoolHomePage.aspx?_TSM_HiddenField_=ctl00_manScript_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.60919.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3aee051b62-9cd6-49a5-87bb-93c07bc43d63%3a475a4ef5%3aeffe2a26%3a7e63a579" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+var CMS = CMS || {};
+CMS.Application = {
+  "isRTL": "false",
+  "isDebuggingEnabled": true,
+  "applicationUrl": "/CharterHigh/",
+  "imagesUrl": "/CharterHigh/CMSPages/GetResource.ashx?image=%5bImages.zip%5d%2f",
+  "isDialog": false
+};
+
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+function WebForm_OnSubmit() {
+null;
+return true;
+}
+//]]>
+   </script>
+   <div class="aspNetHidden">
+    <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="A4F0556E"/>
+    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="gXiS0YMczY0yTq27h0+L1b6jonRHM/+FkY9AtfRuUGjBX9/x8UEzmDx8zopvHwPuqCegP1K99MEc6SHXk/7UsRlgCL5S/Sj958GbuYgmob8RuuoMeOnewGCVJSrp9BiSsJvhhj2/+nqoMp2HRXq40btUlmtYYMGckP83Ee3Y42s="/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$manScript', 'aspnetForm', ['tctl00$ctxM',''], [], [], 90, 'ctl00');
+//]]>
+   </script>
+   <div id="ctl00_ctxM">
+   </div>
+   <div class="wide">
+    <style type="text/css">
+     .searchLabel{
+        display:none;
+    }
+    .searchResultsPanel{
+        background:#fff;
+        color:#000;
+    }
+    </style>
+    <header>
+     <div class="wrapper">
+      <div class="logo">
+       <a href="/CharterHigh/">
+        <img alt="Return to the home page" src="/CharterHigh/BlueKey/Templates/images/WhiteTorch.png"/>
+       </a>
+      </div>
+      <div class="schoolMenuToggle">
+       Explore
+      </div>
+     </div>
+    </header>
+    <div class="mainNav">
+     <div class="mainNavSearch">
+      <div class="mainNavSearch">
+       <div class="searchBox" id="ctl00_bkHeader_x_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_bkHeader_x_btnSearch')">
+        <label class="searchLabel" for="ctl00_bkHeader_x_txtWord" id="ctl00_bkHeader_x_lblSearch">
+         x:
+        </label>
+        <input id="ctl00_bkHeader_x_txtWord_exWatermark_ClientState" name="ctl00$bkHeader$x$txtWord_exWatermark_ClientState" type="hidden"/>
+        <input class="searchBox form-control" id="ctl00_bkHeader_x_txtWord" maxlength="1000" name="ctl00$bkHeader$x$txtWord" type="text"/>
+        <input class="searchButton btn btn-default" id="ctl00_bkHeader_x_btnSearch" name="ctl00$bkHeader$x$btnSearch" type="submit" value="GO"/>
+        <div class="predictiveSearchHolder" id="ctl00_bkHeader_x_pnlPredictiveResultsHolder">
+        </div>
+       </div>
+      </div>
+     </div>
+     <ul class="CMSListMenuUL" id="mainmenu">
+      <li class="CMSListMenuHighlightedLI">
+       <a class="CMSListMenuLinkHighlighted" href="/CharterHigh/" title="Home">
+        Home
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/About-Us" title="About Us">
+        About Us
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/School-Information" title="School Information">
+        School Information
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Graduation-2017" title="Graduation 2017">
+          Graduation 2017
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Lab-Hours" title="Lab Hours">
+          Lab Hours
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Calendar" title="Calendar">
+          Calendar
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Frequently-Asked-Questions" title="Frequently Asked Questions">
+          Frequently Asked Questions
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Directions" title="Directions">
+          Directions
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/School-Board" title="School Board">
+          School Board
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/School-Improvement-Council" title="School Improvement Council">
+          School Improvement Council
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/Contact-Us" title="Contact Us">
+        Contact Us
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="https://sites.google.com/a/richland2.org/chpassport/" title="Leadership">
+        Leadership
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/News" title="News">
+        News
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/Careers" title="Careers">
+        Careers
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/Student-Registration" title="Register Your Student">
+        Register Your Student
+       </a>
+      </li>
+     </ul>
+     <div class="mainNavSocial">
+      <h4>
+       Follow Us
+      </h4>
+      <a aria-label="Like us on Facebook" class="socialLink" href="https://www.facebook.com/r2charterhs" id="ctl00_bkHeader_fbLink" target="_blank">
+       <em class="fa fa-facebook">
+       </em>
+      </a>
+      <a aria-label="Follow us on Twitter" class="socialLink" href="https://twitter.com/r2charterhs" id="ctl00_bkHeader_twitterLink" target="_blank">
+       <em class="fa fa-twitter">
+       </em>
+      </a>
+      <a aria-label="Read our newsletter or blog" class="socialLink" href="http://r2charterhigh.blogspot.com/" id="ctl00_bkHeader_blogLink" target="_blank">
+       <em class="fa fa-rss">
+       </em>
+      </a>
+     </div>
+     <div class="mainNavTranslation">
+      <a aria-label="Click here for site translation options" href="/CharterHigh/Special-Pages/Site-Translations" style="color:#fff">
+       <img alt="Translate this page" height="24" src="/CharterHigh/BlueKey/Templates/images/Translate-512.png" width="24"/>
+       Traducciones ~ Translations ~ 번역
+      </a>
+     </div>
+     <div class="mainNavClose">
+     </div>
+    </div>
+    <!-- BEGIN PAGE SPECIFIC MARKUP-->
+    <div class="subBanner" style="background: url('/CharterHigh/CharterHigh/media/SchoolMediaLibrary/BannerImages/DefaultHomePageBannerImage.jpg') 50% 50% no-repeat; background-size: cover;" title="Home page image">
+    </div>
+    <div class="schoolHeroName" id="ctl00_mainContentPlaceHolder_shn" style="background:#0e3556">
+     Richland Two Charter High School
+    </div>
+    <div class="wrapper">
+     <div class="schoolIndexLeft">
+      <div class="iRow">
+       <div class="wrapper">
+        <h2 class="iRowHeader" id="ctl00_mainContentPlaceHolder_iRow" style="border-bottom: 2px solid #0e3556;">
+         From the News Room
+         <a class="viewAll" href="news" id="ctl00_mainContentPlaceHolder_va" style="color:#0e3556">
+          View All News
+         </a>
+        </h2>
+        <div class="newsWrapper">
+         <div class="schoolNewsBox">
+          <a aria-label="We're Hiring a Principal" href="/CharterHigh/News/We-re-Hiring-a-Principal" style="text-decoration:none;color:#000;font-weight:normal">
+           <div class="schoolNewsBoxThumb" style="background: url(/CharterHigh/getattachment/bdc32d43-b0b8-4cab-8a7e-1b737f42b219/teaser-image.aspx) 50% 50% no-repeat; background-size: contain;" title="We're Hiring a Principal">
+           </div>
+           <div class="schoolNewsBoxContent">
+            <h3>
+             We're Hiring a Principal
+            </h3>
+            Click Here for More Information.
+           </div>
+          </a>
+         </div>
+         <div class="schoolNewsBox">
+          <a aria-label="Welcome to Our New Website!" href="/CharterHigh/News/Welcome-to-Our-New-Website!" style="text-decoration:none;color:#000;font-weight:normal">
+           <div class="schoolNewsBoxThumb" style="background: url(/CharterHigh/getattachment/84fb36cd-3e5f-4e46-8bec-3dd0c7b684a0/teaser-image.aspx) 50% 50% no-repeat; background-size: contain;" title="Welcome to Our New Website!">
+           </div>
+           <div class="schoolNewsBoxContent">
+            <h3>
+             Welcome to Our New Website!
+            </h3>
+            Sleek. Shiny. Built for the future. Just like us.
+           </div>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+      <h2 class="iRowHeader" id="ctl00_mainContentPlaceHolder_iRow2" style="border-bottom: 2px solid #0e3556;">
+       Upcoming Events
+       <a class="viewAll" href="About-Our-School/Calendar" id="ctl00_mainContentPlaceHolder_va2" style="color:#0e3556">
+        View Calendar
+       </a>
+      </h2>
+      <a aria-label="Calendar Event: R2 Charter Board Meeting" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         15
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl00_evtM" style="background:#0e3556">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         R2 Charter Board Meeting
+        </h3>
+        <!--<p>22:00:00 - 23:00:00</p>-->
+       </div>
+      </a>
+      <a aria-label="Calendar Event: Last Day for Senior Virtual Student to turn in work--5:00 pm" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         19
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl01_evtM" style="background:#0e3556">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         Last Day for Senior Virtual Student to turn in work--5:00 pm
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+      <a aria-label="Calendar Event: Last Day for 9th-11th Grade Virtual Students to turn in work-5:00 pm" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         24
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl02_evtM" style="background:#0e3556">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         Last Day for 9th-11th Grade Virtual Students to turn in work-5:00 pm
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+      <a aria-label="Calendar Event: Memorial Day-District Holiday" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         29
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl03_evtM" style="background:#0e3556">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         Memorial Day-District Holiday
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+      <a aria-label="Calendar Event: R2 Charter High School Graduation" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         1
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl04_evtM" style="background:#0e3556">
+         JUN
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         R2 Charter High School Graduation
+        </h3>
+        <!--<p>21:00:00 - 22:00:00</p>-->
+       </div>
+      </a>
+      <a aria-label="Calendar Event: R2 Charter Board Meeting" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         19
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl05_evtM" style="background:#0e3556">
+         JUN
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         R2 Charter Board Meeting
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+     </div>
+     <div class="schoolIndexRight">
+      <img alt="School Logo" class="schoolHero" id="ctl00_mainContentPlaceHolder_schoolLogo" src="CharterHigh/media/SchoolMediaLibrary/Logos/SchoolLogo.png"/>
+      <div class="schoolConnect">
+       <div class="schoolSideHeader" id="ctl00_mainContentPlaceHolder_ssh" style="background:#0e3556">
+        Connected
+       </div>
+       <div class="schoolFacebookBox">
+        <div class="fb-page" data-adapt-container-width="true" data-hide-cover="false" data-href="https://www.facebook.com/r2charterhs/" data-show-facepile="true" data-small-header="false" data-tabs="timeline">
+         <blockquote cite="https://www.facebook.com/r2charterhs/" class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/r2charterhs/">
+           Richland Two Charter High
+          </a>
+         </blockquote>
+        </div>
+       </div>
+       <div>
+        <a class="twitter-timeline" data-height="600" href="https://twitter.com/r2charterhs">
+         Tweets by Charter High
+        </a>
+        <script async="" charset="utf-8" src="//platform.twitter.com/widgets.js">
+        </script>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- END PAGE SPECIFIC MARKUP-->
+    <footer class="schoolsFooter" id="ctl00_foot" style="background:#0e3556">
+     <div class="schoolNameFooter">
+      <a aria-label="Click here to return to the school's home page" href="/~" style="text-decoration:none">
+       Richland Two Charter High School
+      </a>
+     </div>
+     <p>
+      7900 Brookmont Lane  |  Columbia, SC 29203  |  Phone: (803)-419-1348 |  Fax: (803)-935-1212
+     </p>
+     <p>
+      <a aria-label="Click here to learn more about our accessibility efforts" href="https://www.richland2.org/accessibility.aspx" style="font-weight:normal">
+       Accessibility
+      </a>
+      | ©
+      <script lang="JavaScript" type="text/javascript">
+       document.write(new Date().getFullYear());
+      </script>
+      <a aria-label="Click here to return to the district's home page" href="https://www.richland2.org" style="font-weight:normal;">
+       Richland School District Two
+      </a>
+     </p>
+    </footer>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+(function() {var fn = function() {$get("ctl00_manScript_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+if (typeof(Sys.Browser.WebKit) == 'undefined') {
+    Sys.Browser.WebKit = {};
+}
+if (navigator.userAgent.indexOf('WebKit/') > -1) {
+    Sys.Browser.agent = Sys.Browser.WebKit;
+    Sys.Browser.version = parseFloat(navigator.userAgent.match(/WebKit\/(\d+(\.\d+)?)/)[1]);
+    Sys.Browser.name = 'WebKit';
+}
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+WebServiceCall('/CharterHigh/cmsapi/webanalytics', 'LogHit', '{"NodeAliasPath":"/Home","DocumentCultureCode":"en-US","UrlReferrer":""}')
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+WebForm_InitCallback();//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+var predictiveSearchObject_ctl00_bkHeader_x = new PredictiveSearchExtender('ctl00_bkHeader_x', 'ctl00_bkHeader_x_txtWord', 'ctl00_bkHeader_x_pnlPredictiveResultsHolder', 1, true, 'selectedResult', 'searchResultsPanel');
+predictiveSearchObject_ctl00_bkHeader_x.CallPredictiveSearch = function(arg, context) { WebForm_DoCallback('ctl00$bkHeader$x',arg,predictiveSearchObject_ctl00_bkHeader_x.RecieveSearchResults,context,null,false); }
+
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_bkHeader_x_txtWord_exWatermark_ClientState","WatermarkCssClass":"searchBox WatermarkText","WatermarkText":"Search","id":"ctl00_bkHeader_x_txtWord_exWatermark"}, null, null, $get("ctl00_bkHeader_x_txtWord"));
+});
+//]]>
+   </script>
+  </form>
+ </body>
+</html>URL:https://www.richland2.org/charterhigh/
+----------------------------------------------
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+ <head id="ctl00_Head1">
+  <title>
+   Home
+  </title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="no-cache" http-equiv="pragma"/>
+  <meta content="text/css" http-equiv="content-style-type"/>
+  <meta content="text/javascript" http-equiv="content-script-type"/>
+  <link href="/CharterHigh/BlueKey/Templates/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="/CharterHigh/BlueKey/Templates/images/favicon.ico" rel="icon" type="image/x-icon"/>
+  <!--<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1.0,initial-scale=1.0" />-->
+  <meta content="width=device-width,user-scalable=yes,initial-scale=1.0" name="viewport"/>
+  <link href="//fonts.googleapis.com/css?family=Arial:400,300,600,700|Raleway:400,300,600,700|Archivo+Narrow:400,700" rel="stylesheet"/>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+  <link href="/CharterHigh/CMSPages/GetResource.ashx?stylesheetfile=/BlueKey/Templates/css/main.css" rel="stylesheet"/>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript">
+  </script>
+  <script src="/BlueKey/Templates/js/general.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,de,es,gu,hi,ko,ms,te,tl,vi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+            }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript">
+  </script>
+  <script src="../../../Scripts/jquery.cookie.js">
+  </script>
+ </head>
+ <body class="LTR Safari Chrome Safari52 Chrome52 ENUS ContentBody school">
+  <div id="fb-root">
+  </div>
+  <script>
+   (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=150907861667387";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <form action="/CharterHigh/" id="aspnetForm" method="post" onsubmit="javascript:return WebForm_OnSubmit();">
+   <div class="aspNetHidden">
+    <input id="ctl00_manScript_HiddenField" name="ctl00_manScript_HiddenField" type="hidden" value=""/>
+    <input id="__CMSCsrfToken" name="__CMSCsrfToken" type="hidden" value="pmN7n8AI2Hda2BWeL7CFqWaMBTjWcvs+TZmUJVH/1yYrehRNRdwE5ZKNpnOgIlysxNO05KaJLTuNL5MXuXhSDu2FPEhssX7xqgxkKhUBjjE="/>
+    <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+    <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+   </script>
+   <script src="/CharterHigh/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZDBSZKl12dcPoeBVlmRcbvhjRYce6gWmhDmyFRRH4Wz_0KE3eZv1iOVEm3HL-8HtTA2&amp;t=636160660665894255" type="text/javascript">
+   </script>
+   <input id="lng" name="lng" type="hidden" value="en-US"/>
+   <script src="/CharterHigh/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fWebServiceCall.js" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+function PM_Postback(param) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); } if(window.CMSContentManager) { CMSContentManager.allowSubmit = true; }; __doPostBack('ctl00$CMSPortalManager$am',param); }
+function PM_Callback(param, callback, ctx) { if (window.top.HideScreenLockWarningAndSync) { window.top.HideScreenLockWarningAndSync(1080); }if (window.CMSContentManager) { CMSContentManager.storeContentChangedStatus(); };WebForm_DoCallback('ctl00$CMSPortalManager$am',param,callback,ctx,null,true); }
+//]]>
+   </script>
+   <script src="/CharterHigh/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSScripts%2fjquery%2fjquery-core.js" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/CMSPages/GetResource.ashx?scriptfile=%7e%2fCMSWebParts%2fSmartSearch%2fSearchBox_files%2fPredictiveSearch.js" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/ScriptResource.axd?d=x6wALODbMJK5e0eRC_p1LYLba0Ex6Wkyw0TUNzoXr5vgcTmd4EiP2UQbr-Z0k3yHlMiJROzDhl9X9v0VOZuM7PDMr3VpLjm3iVJVhruJFnC89FBu8wYOEff8VitAX1o90&amp;t=7c776dc1" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/ScriptResource.axd?d=P5lTttoqSeZXoYRLQMIScLzk7wQ4Ek8DePhm7YdfN8xy9rykRmq_SW7JYDIKDKs5dkr5Pu17RPaRTKS5nikHEppWuT-C24Qa-zmzATNed5U8FEaEsBuk8B6FMf4IvrSL0&amp;t=7c776dc1" type="text/javascript">
+   </script>
+   <script src="/CharterHigh/BlueKey/Templates/RichlandSchool/BKRichlandSchoolHomePage.aspx?_TSM_HiddenField_=ctl00_manScript_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d4.1.60919.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3aee051b62-9cd6-49a5-87bb-93c07bc43d63%3a475a4ef5%3aeffe2a26%3a7e63a579" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+var CMS = CMS || {};
+CMS.Application = {
+  "isRTL": "false",
+  "isDebuggingEnabled": true,
+  "applicationUrl": "/CharterHigh/",
+  "imagesUrl": "/CharterHigh/CMSPages/GetResource.ashx?image=%5bImages.zip%5d%2f",
+  "isDialog": false
+};
+
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+function WebForm_OnSubmit() {
+null;
+return true;
+}
+//]]>
+   </script>
+   <div class="aspNetHidden">
+    <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="A4F0556E"/>
+    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="QuA1MA0QGkjdC8ohDRFA48zYYz2YRV3o4lx3CEVwO0zLs9XJl8ruTu7ivTVdN6eefl3unTsXTeA8yGcoiFFN648+Xyut9+nfRZdZjJgBmwBcqSodEYaL3vK5BRFXfupf0R9VsU37WPnJYRvrEHw4DyVzBB1GD2oKYDGvPRtRcso="/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$manScript', 'aspnetForm', ['tctl00$ctxM',''], [], [], 90, 'ctl00');
+//]]>
+   </script>
+   <div id="ctl00_ctxM">
+   </div>
+   <div class="wide">
+    <style type="text/css">
+     .searchLabel{
+        display:none;
+    }
+    .searchResultsPanel{
+        background:#fff;
+        color:#000;
+    }
+    </style>
+    <header>
+     <div class="wrapper">
+      <div class="logo">
+       <a href="/CharterHigh/">
+        <img alt="Return to the home page" src="/CharterHigh/BlueKey/Templates/images/WhiteTorch.png"/>
+       </a>
+      </div>
+      <div class="schoolMenuToggle">
+       Explore
+      </div>
+     </div>
+    </header>
+    <div class="mainNav">
+     <div class="mainNavSearch">
+      <div class="mainNavSearch">
+       <div class="searchBox" id="ctl00_bkHeader_x_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_bkHeader_x_btnSearch')">
+        <label class="searchLabel" for="ctl00_bkHeader_x_txtWord" id="ctl00_bkHeader_x_lblSearch">
+         x:
+        </label>
+        <input id="ctl00_bkHeader_x_txtWord_exWatermark_ClientState" name="ctl00$bkHeader$x$txtWord_exWatermark_ClientState" type="hidden"/>
+        <input class="searchBox form-control" id="ctl00_bkHeader_x_txtWord" maxlength="1000" name="ctl00$bkHeader$x$txtWord" type="text"/>
+        <input class="searchButton btn btn-default" id="ctl00_bkHeader_x_btnSearch" name="ctl00$bkHeader$x$btnSearch" type="submit" value="GO"/>
+        <div class="predictiveSearchHolder" id="ctl00_bkHeader_x_pnlPredictiveResultsHolder">
+        </div>
+       </div>
+      </div>
+     </div>
+     <ul class="CMSListMenuUL" id="mainmenu">
+      <li class="CMSListMenuHighlightedLI">
+       <a class="CMSListMenuLinkHighlighted" href="/CharterHigh/" title="Home">
+        Home
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/About-Us" title="About Us">
+        About Us
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/School-Information" title="School Information">
+        School Information
+       </a>
+       <ul class="CMSListMenuUL">
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Graduation-2017" title="Graduation 2017">
+          Graduation 2017
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Lab-Hours" title="Lab Hours">
+          Lab Hours
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Calendar" title="Calendar">
+          Calendar
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Frequently-Asked-Questions" title="Frequently Asked Questions">
+          Frequently Asked Questions
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/Directions" title="Directions">
+          Directions
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/School-Board" title="School Board">
+          School Board
+         </a>
+        </li>
+        <li class="CMSListMenuLI">
+         <a class="CMSListMenuLink" href="/CharterHigh/School-Information/School-Improvement-Council" title="School Improvement Council">
+          School Improvement Council
+         </a>
+        </li>
+       </ul>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/Contact-Us" title="Contact Us">
+        Contact Us
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="https://sites.google.com/a/richland2.org/chpassport/" title="Leadership">
+        Leadership
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/News" title="News">
+        News
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/Careers" title="Careers">
+        Careers
+       </a>
+      </li>
+      <li class="CMSListMenuLI">
+       <a class="CMSListMenuLink" href="/CharterHigh/Student-Registration" title="Register Your Student">
+        Register Your Student
+       </a>
+      </li>
+     </ul>
+     <div class="mainNavSocial">
+      <h4>
+       Follow Us
+      </h4>
+      <a aria-label="Like us on Facebook" class="socialLink" href="https://www.facebook.com/r2charterhs" id="ctl00_bkHeader_fbLink" target="_blank">
+       <em class="fa fa-facebook">
+       </em>
+      </a>
+      <a aria-label="Follow us on Twitter" class="socialLink" href="https://twitter.com/r2charterhs" id="ctl00_bkHeader_twitterLink" target="_blank">
+       <em class="fa fa-twitter">
+       </em>
+      </a>
+      <a aria-label="Read our newsletter or blog" class="socialLink" href="http://r2charterhigh.blogspot.com/" id="ctl00_bkHeader_blogLink" target="_blank">
+       <em class="fa fa-rss">
+       </em>
+      </a>
+     </div>
+     <div class="mainNavTranslation">
+      <a aria-label="Click here for site translation options" href="/CharterHigh/Special-Pages/Site-Translations" style="color:#fff">
+       <img alt="Translate this page" height="24" src="/CharterHigh/BlueKey/Templates/images/Translate-512.png" width="24"/>
+       Traducciones ~ Translations ~ 번역
+      </a>
+     </div>
+     <div class="mainNavClose">
+     </div>
+    </div>
+    <!-- BEGIN PAGE SPECIFIC MARKUP-->
+    <div class="subBanner" style="background: url('/CharterHigh/CharterHigh/media/SchoolMediaLibrary/BannerImages/DefaultHomePageBannerImage.jpg') 50% 50% no-repeat; background-size: cover;" title="Home page image">
+    </div>
+    <div class="schoolHeroName" id="ctl00_mainContentPlaceHolder_shn" style="background:#0e3556">
+     Richland Two Charter High School
+    </div>
+    <div class="wrapper">
+     <div class="schoolIndexLeft">
+      <div class="iRow">
+       <div class="wrapper">
+        <h2 class="iRowHeader" id="ctl00_mainContentPlaceHolder_iRow" style="border-bottom: 2px solid #0e3556;">
+         From the News Room
+         <a class="viewAll" href="news" id="ctl00_mainContentPlaceHolder_va" style="color:#0e3556">
+          View All News
+         </a>
+        </h2>
+        <div class="newsWrapper">
+         <div class="schoolNewsBox">
+          <a aria-label="We're Hiring a Principal" href="/CharterHigh/News/We-re-Hiring-a-Principal" style="text-decoration:none;color:#000;font-weight:normal">
+           <div class="schoolNewsBoxThumb" style="background: url(/CharterHigh/getattachment/bdc32d43-b0b8-4cab-8a7e-1b737f42b219/teaser-image.aspx) 50% 50% no-repeat; background-size: contain;" title="We're Hiring a Principal">
+           </div>
+           <div class="schoolNewsBoxContent">
+            <h3>
+             We're Hiring a Principal
+            </h3>
+            Click Here for More Information.
+           </div>
+          </a>
+         </div>
+         <div class="schoolNewsBox">
+          <a aria-label="Welcome to Our New Website!" href="/CharterHigh/News/Welcome-to-Our-New-Website!" style="text-decoration:none;color:#000;font-weight:normal">
+           <div class="schoolNewsBoxThumb" style="background: url(/CharterHigh/getattachment/84fb36cd-3e5f-4e46-8bec-3dd0c7b684a0/teaser-image.aspx) 50% 50% no-repeat; background-size: contain;" title="Welcome to Our New Website!">
+           </div>
+           <div class="schoolNewsBoxContent">
+            <h3>
+             Welcome to Our New Website!
+            </h3>
+            Sleek. Shiny. Built for the future. Just like us.
+           </div>
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+      <h2 class="iRowHeader" id="ctl00_mainContentPlaceHolder_iRow2" style="border-bottom: 2px solid #0e3556;">
+       Upcoming Events
+       <a class="viewAll" href="About-Our-School/Calendar" id="ctl00_mainContentPlaceHolder_va2" style="color:#0e3556">
+        View Calendar
+       </a>
+      </h2>
+      <a aria-label="Calendar Event: R2 Charter Board Meeting" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         15
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl00_evtM" style="background:#0e3556">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         R2 Charter Board Meeting
+        </h3>
+        <!--<p>22:00:00 - 23:00:00</p>-->
+       </div>
+      </a>
+      <a aria-label="Calendar Event: Last Day for Senior Virtual Student to turn in work--5:00 pm" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         19
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl01_evtM" style="background:#0e3556">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         Last Day for Senior Virtual Student to turn in work--5:00 pm
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+      <a aria-label="Calendar Event: Last Day for 9th-11th Grade Virtual Students to turn in work-5:00 pm" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         24
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl02_evtM" style="background:#0e3556">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         Last Day for 9th-11th Grade Virtual Students to turn in work-5:00 pm
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+      <a aria-label="Calendar Event: Memorial Day-District Holiday" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         29
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl03_evtM" style="background:#0e3556">
+         MAY
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         Memorial Day-District Holiday
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+      <a aria-label="Calendar Event: R2 Charter High School Graduation" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         1
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl04_evtM" style="background:#0e3556">
+         JUN
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         R2 Charter High School Graduation
+        </h3>
+        <!--<p>21:00:00 - 22:00:00</p>-->
+       </div>
+      </a>
+      <a aria-label="Calendar Event: R2 Charter Board Meeting" class="eventBox" href="/CharterHigh/About-Our-School/Calendar">
+       <div class="eventDateBox">
+        <div class="eventDay">
+         19
+        </div>
+        <div class="eventMonth" id="ctl00_mainContentPlaceHolder_rptEvents_ctl05_evtM" style="background:#0e3556">
+         JUN
+        </div>
+       </div>
+       <div class="eventContent">
+        <h3>
+         R2 Charter Board Meeting
+        </h3>
+        <!--<p>00:00:00 - 00:00:00</p>-->
+       </div>
+      </a>
+     </div>
+     <div class="schoolIndexRight">
+      <img alt="School Logo" class="schoolHero" id="ctl00_mainContentPlaceHolder_schoolLogo" src="CharterHigh/media/SchoolMediaLibrary/Logos/SchoolLogo.png"/>
+      <div class="schoolConnect">
+       <div class="schoolSideHeader" id="ctl00_mainContentPlaceHolder_ssh" style="background:#0e3556">
+        Connected
+       </div>
+       <div class="schoolFacebookBox">
+        <div class="fb-page" data-adapt-container-width="true" data-hide-cover="false" data-href="https://www.facebook.com/r2charterhs/" data-show-facepile="true" data-small-header="false" data-tabs="timeline">
+         <blockquote cite="https://www.facebook.com/r2charterhs/" class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/r2charterhs/">
+           Richland Two Charter High
+          </a>
+         </blockquote>
+        </div>
+       </div>
+       <div>
+        <a class="twitter-timeline" data-height="600" href="https://twitter.com/r2charterhs">
+         Tweets by Charter High
+        </a>
+        <script async="" charset="utf-8" src="//platform.twitter.com/widgets.js">
+        </script>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- END PAGE SPECIFIC MARKUP-->
+    <footer class="schoolsFooter" id="ctl00_foot" style="background:#0e3556">
+     <div class="schoolNameFooter">
+      <a aria-label="Click here to return to the school's home page" href="/~" style="text-decoration:none">
+       Richland Two Charter High School
+      </a>
+     </div>
+     <p>
+      7900 Brookmont Lane  |  Columbia, SC 29203  |  Phone: (803)-419-1348 |  Fax: (803)-935-1212
+     </p>
+     <p>
+      <a aria-label="Click here to learn more about our accessibility efforts" href="https://www.richland2.org/accessibility.aspx" style="font-weight:normal">
+       Accessibility
+      </a>
+      | ©
+      <script lang="JavaScript" type="text/javascript">
+       document.write(new Date().getFullYear());
+      </script>
+      <a aria-label="Click here to return to the district's home page" href="https://www.richland2.org" style="font-weight:normal;">
+       Richland School District Two
+      </a>
+     </p>
+    </footer>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+(function() {var fn = function() {$get("ctl00_manScript_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+if (typeof(Sys.Browser.WebKit) == 'undefined') {
+    Sys.Browser.WebKit = {};
+}
+if (navigator.userAgent.indexOf('WebKit/') > -1) {
+    Sys.Browser.agent = Sys.Browser.WebKit;
+    Sys.Browser.version = parseFloat(navigator.userAgent.match(/WebKit\/(\d+(\.\d+)?)/)[1]);
+    Sys.Browser.name = 'WebKit';
+}
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+WebServiceCall('/CharterHigh/cmsapi/webanalytics', 'LogHit', '{"NodeAliasPath":"/Home","DocumentCultureCode":"en-US","UrlReferrer":""}')
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+WebForm_InitCallback();//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+var predictiveSearchObject_ctl00_bkHeader_x = new PredictiveSearchExtender('ctl00_bkHeader_x', 'ctl00_bkHeader_x_txtWord', 'ctl00_bkHeader_x_pnlPredictiveResultsHolder', 1, true, 'selectedResult', 'searchResultsPanel');
+predictiveSearchObject_ctl00_bkHeader_x.CallPredictiveSearch = function(arg, context) { WebForm_DoCallback('ctl00$bkHeader$x',arg,predictiveSearchObject_ctl00_bkHeader_x.RecieveSearchResults,context,null,false); }
+
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.TextBoxWatermarkBehavior, {"ClientStateFieldID":"ctl00_bkHeader_x_txtWord_exWatermark_ClientState","WatermarkCssClass":"searchBox WatermarkText","WatermarkText":"Search","id":"ctl00_bkHeader_x_txtWord_exWatermark"}, null, null, $get("ctl00_bkHeader_x_txtWord"));
+});
+//]]>
+   </script>
+  </form>
+ </body>
+</html>
