@@ -854,7 +854,7 @@ var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activ
   </noscript>
   <!-- end olark code -->
   <script type="text/javascript">
-   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":1560,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":1379,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
   </script>
  </body>
 </html>

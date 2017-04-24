@@ -328,17 +328,17 @@ img.emoji {
        <h2 class="sectionicontitle people">
         People
        </h2>
-       <a href="https://www.polk.edu/news/polks-associate-dean-of-student-services-yulonda-bell-has-built-a-career-on-putting-students-first/">
-        <img alt="" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/20140923_Hagerty-11-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/20140923_Hagerty-11-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/20140923_Hagerty-11-1200x675.jpg 1200w, https://www.polk.edu/wp-content/uploads/20140923_Hagerty-11-800x450.jpg 800w" width="400"/>
+       <a href="https://www.polk.edu/news/polk-state-trained-paramedic-the-patient-always-comes-first/">
+        <img alt="Jared vanHoek completed his paramedic training at Polk State and now works for Polk County Fire Rescue in Mulberry." class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/news-150109-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/news-150109-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/news-150109-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/news-150109-1100x619.jpg 1100w, https://www.polk.edu/wp-content/uploads/news-150109.jpg 1200w, https://www.polk.edu/wp-content/uploads/news-150109-800x450.jpg 800w" width="400"/>
        </a>
        <div class="text">
         <h4>
-         <a href="https://www.polk.edu/news/polks-associate-dean-of-student-services-yulonda-bell-has-built-a-career-on-putting-students-first/">
-          Polk’s Associate Dean of Student Services Yulonda Bell Has Built a Career on Putting Students First
+         <a href="https://www.polk.edu/news/polk-state-trained-paramedic-the-patient-always-comes-first/">
+          Polk State-Trained Paramedic: “The Patient Always Comes First”
          </a>
         </h4>
         <p>
-         It’s a weekday morning and Yulonda Bell has agreed to be interviewed about her new position as Polk State Winter…
+         Gov. Rick Scott has declared Jan. 5-9 First Responder Appreciation Week. Polk State College commends and thanks all those working…
         </p>
        </div>
       </div>
@@ -1224,7 +1224,7 @@ var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activ
   </noscript>
   <!-- end olark code -->
   <script type="text/javascript">
-   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgRLAlxQT1IdUkJcX0U=","queueTime":0,"applicationTime":1964,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgRLAlxQT1IdUkJcX0U=","queueTime":0,"applicationTime":1779,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
   </script>
  </body>
 </html>

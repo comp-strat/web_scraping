@@ -1352,17 +1352,17 @@ img.emoji {
        <h2 class="sectionicontitle people">
         People
        </h2>
-       <a href="https://www.polk.edu/news/respiratory-care-alumna-says-program-allowed-her-to-start-a-career-and-family-on-her-terms/">
-        <img alt="Ammany Shihaibar" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/untitled-291-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/untitled-291-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/untitled-291-1200x675.jpg 1200w, https://www.polk.edu/wp-content/uploads/untitled-291-800x450.jpg 800w" width="400"/>
+       <a href="https://www.polk.edu/news/florida-teacher-of-year-christie-bassett-very-thankful-for-polk-state-college/">
+        <img alt="Christie Bassett" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/ltb-news-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/ltb-news-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/ltb-news-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/ltb-news-1100x619.jpg 1100w, https://www.polk.edu/wp-content/uploads/ltb-news.jpg 1200w, https://www.polk.edu/wp-content/uploads/ltb-news-800x450.jpg 800w" width="400"/>
        </a>
        <div class="text">
         <h4>
-         <a href="https://www.polk.edu/news/respiratory-care-alumna-says-program-allowed-her-to-start-a-career-and-family-on-her-terms/">
-          Respiratory Care Alumna Says Program Allowed Her to Start a Career and Family on Her Terms
+         <a href="https://www.polk.edu/news/florida-teacher-of-year-christie-bassett-very-thankful-for-polk-state-college/">
+          Florida Teacher of Year Christie Bassett “Very Thankful” for Polk State College
          </a>
         </h4>
         <p>
-         Ammany Shihaibar knew where she wanted to end up in life, and with help from Polk State, she got there,…
+         As Florida’s 2015 Teacher of the Year, Christie Bassett is often asked about her own educational background, and each time…
         </p>
        </div>
       </div>
@@ -1637,7 +1637,7 @@ var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activ
   </noscript>
   <!-- end olark code -->
   <script type="text/javascript">
-   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":2051,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":2040,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
   </script>
  </body>
 </html>

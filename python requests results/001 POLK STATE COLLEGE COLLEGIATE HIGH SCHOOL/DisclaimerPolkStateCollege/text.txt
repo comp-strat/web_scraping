@@ -543,17 +543,19 @@ img.emoji {
        <h2 class="sectionicontitle people">
         People
        </h2>
-       <a href="https://www.polk.edu/news/professor-is-music-departments-missing-piece/">
-        <img alt="Michelle Manzi" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/michelle-manzi-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/michelle-manzi-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/michelle-manzi-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/michelle-manzi-1100x618.jpg 1100w, https://www.polk.edu/wp-content/uploads/michelle-manzi.jpg 1200w, https://www.polk.edu/wp-content/uploads/michelle-manzi-800x450.jpg 800w" width="400"/>
+       <a href="https://www.polk.edu/news/at-polk-kimberly-myers-finds-the-fuel-for-her-dream-of-becoming-a-scientist/">
+        <img alt="Kimberly Myers" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/IMG_1809-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/IMG_1809-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/IMG_1809-1200x675.jpg 1200w, https://www.polk.edu/wp-content/uploads/IMG_1809-800x450.jpg 800w" width="400"/>
        </a>
        <div class="text">
         <h4>
-         <a href="https://www.polk.edu/news/professor-is-music-departments-missing-piece/">
-          Professor Is Music Department’s “Missing Piece”
+         <a href="https://www.polk.edu/news/at-polk-kimberly-myers-finds-the-fuel-for-her-dream-of-becoming-a-scientist/">
+          At Polk, Kimberly Myers Finds the Fuel for Her Dream of Becoming a Scientist
          </a>
         </h4>
         <p>
-         In her five-year run as an adjunct professor, Michelle Manzi resurrected the Polk State Music Department’s emphasis on female vocals…
+         For as long as she can remember, Kimberly Myers has wanted to be a scientist.
+
+For nearly as long, she has…
         </p>
        </div>
       </div>
@@ -828,7 +830,7 @@ var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activ
   </noscript>
   <!-- end olark code -->
   <script type="text/javascript">
-   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":1493,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":1656,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
   </script>
  </body>
 </html>

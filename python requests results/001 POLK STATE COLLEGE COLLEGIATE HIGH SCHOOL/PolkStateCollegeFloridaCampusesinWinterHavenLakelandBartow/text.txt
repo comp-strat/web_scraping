@@ -256,35 +256,7 @@ img.emoji {
   </span>
   <div class="face slideshow">
    <div class="slides">
-    <div class="slide current" style="background-image:url(https://www.polk.edu/wp-content/uploads/20161214_Grad_Rotator_1200x380.jpg);">
-     <div class="centered">
-      <a class="text" href="/admission-aid/">
-       <h3 class="sectionicontitle general">
-        Polk State College
-       </h3>
-       <h1>
-        This Could be You, Apply Now to get Started!
-       </h1>
-      </a>
-     </div>
-     <!-- centered -->
-    </div>
-    <!-- slide -->
-    <div class="slide " style="background-image:url(https://www.polk.edu/wp-content/uploads/PresSearch_Rotator_1200x380.jpg);">
-     <div class="centered">
-      <a class="text" href="/presidential-search/">
-       <h3 class="sectionicontitle general">
-        Polk State College
-       </h3>
-       <h1>
-        Presidential Search
-       </h1>
-      </a>
-     </div>
-     <!-- centered -->
-    </div>
-    <!-- slide -->
-    <div class="slide " style="background-image:url(https://www.polk.edu/wp-content/uploads/baseball_rotator2_1200x380_20170308.jpg);">
+    <div class="slide current" style="background-image:url(https://www.polk.edu/wp-content/uploads/baseball_rotator2_1200x380_20170308.jpg);">
      <div class="centered">
       <a class="text" href="http://polkeagles.com#new_tab">
        <h3 class="sectionicontitle general">
@@ -320,6 +292,34 @@ img.emoji {
        </h3>
        <h1>
         Learn more!
+       </h1>
+      </a>
+     </div>
+     <!-- centered -->
+    </div>
+    <!-- slide -->
+    <div class="slide " style="background-image:url(https://www.polk.edu/wp-content/uploads/20161214_Grad_Rotator_1200x380.jpg);">
+     <div class="centered">
+      <a class="text" href="/admission-aid/">
+       <h3 class="sectionicontitle general">
+        Polk State College
+       </h3>
+       <h1>
+        This Could be You, Apply Now to get Started!
+       </h1>
+      </a>
+     </div>
+     <!-- centered -->
+    </div>
+    <!-- slide -->
+    <div class="slide " style="background-image:url(https://www.polk.edu/wp-content/uploads/PresSearch_Rotator_1200x380.jpg);">
+     <div class="centered">
+      <a class="text" href="/presidential-search/">
+       <h3 class="sectionicontitle general">
+        Polk State College
+       </h3>
+       <h1>
+        Presidential Search
        </h1>
       </a>
      </div>
@@ -447,20 +447,20 @@ img.emoji {
        </iframe>
       </div>
       <div class="sectionfeature">
-       <h2 class="sectionicontitle the-arts about academics">
-        The Arts
+       <h2 class="sectionicontitle health-sciences academics">
+        Health Sciences
        </h2>
-       <a href="/the-arts/">
-        <img alt="" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/the_arts_web_banner_b_killingsworth_500x281-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/the_arts_web_banner_b_killingsworth_500x281-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/the_arts_web_banner_b_killingsworth_500x281.jpg 500w" width="400"/>
+       <a href="/health-sciences">
+        <img alt="" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/Health-science-web-banner-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/Health-science-web-banner-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/Health-science-web-banner-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/Health-science-web-banner-1100x618.jpg 1100w, https://www.polk.edu/wp-content/uploads/Health-science-web-banner.jpg 1200w, https://www.polk.edu/wp-content/uploads/Health-science-web-banner-800x450.jpg 800w" width="400"/>
        </a>
        <div class="text">
         <h4>
-         <a href="/the-arts/">
-          The Arts
+         <a href="/health-sciences">
+          Health Sciences
          </a>
         </h4>
         <p>
-         Polk State arts students get the skills to turn their passions into careers.
+         Polk’s Health Sciences programs lead the state in test scores, job placements.
         </p>
        </div>
       </div>
@@ -468,19 +468,17 @@ img.emoji {
        <h2 class="sectionicontitle people">
         People
        </h2>
-       <a href="https://www.polk.edu/news/polk-county-sheriffs-sgt-you-have-to-have-your-education-to-be-successful/">
-        <img alt="Polk County Sheriff's Sgt. Austin Milligan" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/milligan_news_art_1200x675-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/milligan_news_art_1200x675-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/milligan_news_art_1200x675-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/milligan_news_art_1200x675-1100x619.jpg 1100w, https://www.polk.edu/wp-content/uploads/milligan_news_art_1200x675-800x450.jpg 800w, https://www.polk.edu/wp-content/uploads/milligan_news_art_1200x675.jpg 1200w" width="400"/>
+       <a href="https://www.polk.edu/news/respiratory-care-alumna-says-program-allowed-her-to-start-a-career-and-family-on-her-terms/">
+        <img alt="Ammany Shihaibar" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/untitled-291-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/untitled-291-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/untitled-291-1200x675.jpg 1200w, https://www.polk.edu/wp-content/uploads/untitled-291-800x450.jpg 800w" width="400"/>
        </a>
        <div class="text">
         <h4>
-         <a href="https://www.polk.edu/news/polk-county-sheriffs-sgt-you-have-to-have-your-education-to-be-successful/">
-          Polk County Sheriff’s Sgt.: “You Have to Have Your Education to Be Successful”
+         <a href="https://www.polk.edu/news/respiratory-care-alumna-says-program-allowed-her-to-start-a-career-and-family-on-her-terms/">
+          Respiratory Care Alumna Says Program Allowed Her to Start a Career and Family on Her Terms
          </a>
         </h4>
         <p>
-         Newly promoted Polk County Sheriff’s Sgt. Austin Milligan has some advice for law enforcement officers seeking a college degree:
-
-“College,” he…
+         Ammany Shihaibar knew where she wanted to end up in life, and with help from Polk State, she got there,…
         </p>
        </div>
       </div>
@@ -1245,7 +1243,7 @@ var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activ
   </noscript>
   <!-- end olark code -->
   <script type="text/javascript">
-   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgNLDlpNFEdRUFE=","queueTime":0,"applicationTime":1974,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgNLDlpNFEdRUFE=","queueTime":0,"applicationTime":2159,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
   </script>
  </body>
 </html>

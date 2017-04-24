@@ -508,20 +508,20 @@ img.emoji {
      <!-- recentnews -->
      <div class="sidebox sectionfeatures">
       <div class="sectionfeature">
-       <h2 class="sectionicontitle health-sciences academics">
-        Health Sciences
+       <h2 class="sectionicontitle business-engineering-technology academics">
+        Business, Engineering &amp; Technology
        </h2>
-       <a href="/health-sciences">
-        <img alt="" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/Health-science-web-banner-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/Health-science-web-banner-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/Health-science-web-banner-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/Health-science-web-banner-1100x618.jpg 1100w, https://www.polk.edu/wp-content/uploads/Health-science-web-banner.jpg 1200w, https://www.polk.edu/wp-content/uploads/Health-science-web-banner-800x450.jpg 800w" width="400"/>
+       <a href="/business-engineering-technology/">
+        <img alt="Business Engineering" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/Business-engineering5CB931-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/Business-engineering5CB931-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/Business-engineering5CB931-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/Business-engineering5CB931-1100x618.jpg 1100w, https://www.polk.edu/wp-content/uploads/Business-engineering5CB931.jpg 1200w, https://www.polk.edu/wp-content/uploads/Business-engineering5CB931-800x450.jpg 800w" width="400"/>
        </a>
        <div class="text">
         <h4>
-         <a href="/health-sciences">
-          Health Sciences
+         <a href="/business-engineering-technology/">
+          Business, Engineering &amp; Technology
          </a>
         </h4>
         <p>
-         Polk’s Health Sciences programs lead the state in test scores, job placements.
+         Polk’s Business, Engineering &amp; Technology programs deliver the cutting-edge training employers demand.
         </p>
        </div>
       </div>
@@ -529,17 +529,19 @@ img.emoji {
        <h2 class="sectionicontitle people">
         People
        </h2>
-       <a href="https://www.polk.edu/news/five-questions-joey-maier-shark-tagging-scuba-diving-living-dream-studying-teaching-biology/">
-        <img alt="Polk State Biology Professor Joey Maier" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/20160628_djames-4-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/20160628_djames-4-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/20160628_djames-4-1200x675.jpg 1200w, https://www.polk.edu/wp-content/uploads/20160628_djames-4-800x450.jpg 800w" width="400"/>
+       <a href="https://www.polk.edu/news/at-polk-kimberly-myers-finds-the-fuel-for-her-dream-of-becoming-a-scientist/">
+        <img alt="Kimberly Myers" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/IMG_1809-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/IMG_1809-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/IMG_1809-1200x675.jpg 1200w, https://www.polk.edu/wp-content/uploads/IMG_1809-800x450.jpg 800w" width="400"/>
        </a>
        <div class="text">
         <h4>
-         <a href="https://www.polk.edu/news/five-questions-joey-maier-shark-tagging-scuba-diving-living-dream-studying-teaching-biology/">
-          Five Questions with Joey Maier: Shark Tagging, Scuba Diving, and Living His Dream of Being a Biologist
+         <a href="https://www.polk.edu/news/at-polk-kimberly-myers-finds-the-fuel-for-her-dream-of-becoming-a-scientist/">
+          At Polk, Kimberly Myers Finds the Fuel for Her Dream of Becoming a Scientist
          </a>
         </h4>
         <p>
-         At 6, an age when most children are dreaming of becoming superheroes, firemen or rock stars, Joey Maier wanted to…
+         For as long as she can remember, Kimberly Myers has wanted to be a scientist.
+
+For nearly as long, she has…
         </p>
        </div>
       </div>
@@ -814,7 +816,7 @@ var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activ
   </noscript>
   <!-- end olark code -->
   <script type="text/javascript">
-   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":1544,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":1664,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
   </script>
  </body>
 </html>

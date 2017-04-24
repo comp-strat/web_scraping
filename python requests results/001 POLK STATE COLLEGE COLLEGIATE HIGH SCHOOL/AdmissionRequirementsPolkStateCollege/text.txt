@@ -925,19 +925,17 @@ img.emoji {
        <h2 class="sectionicontitle people">
         People
        </h2>
-       <a href="https://www.polk.edu/news/new-polk-dean-focused-on-accessibility-we-have-to-help-students-see-themselves-here/">
-        <img alt="Sylvester Little begins work as Polk State Lakeland's dean of student services on July 1. He is pictured here in his Winter Haven office, which is covered in pennants from schools from which Polk State alumni have graduated. Little, who is known at the College for his passion for student success, tells Polk State students that if they want to add a pennant to his wall, they have to complete their degree at that institution. It's just one of the ways he helps students visualize -- and ultimately achieve -- their goals." class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/20140619_Hagerty-2-copy-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/20140619_Hagerty-2-copy-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/20140619_Hagerty-2-copy-1200x675.jpg 1200w, https://www.polk.edu/wp-content/uploads/20140619_Hagerty-2-copy-800x450.jpg 800w" width="400"/>
+       <a href="https://www.polk.edu/news/polks-associate-dean-of-student-services-yulonda-bell-has-built-a-career-on-putting-students-first/">
+        <img alt="" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/20140923_Hagerty-11-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/20140923_Hagerty-11-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/20140923_Hagerty-11-1200x675.jpg 1200w, https://www.polk.edu/wp-content/uploads/20140923_Hagerty-11-800x450.jpg 800w" width="400"/>
        </a>
        <div class="text">
         <h4>
-         <a href="https://www.polk.edu/news/new-polk-dean-focused-on-accessibility-we-have-to-help-students-see-themselves-here/">
-          Polk Dean Focused on Accessibility: “We Have to Help Students See Themselves Here”
+         <a href="https://www.polk.edu/news/polks-associate-dean-of-student-services-yulonda-bell-has-built-a-career-on-putting-students-first/">
+          Polk’s Associate Dean of Student Services Yulonda Bell Has Built a Career on Putting Students First
          </a>
         </h4>
         <p>
-         For Polk State’s Sylvester Little, education — literally overnight — saved him from poverty.
-
-In the decades since, he’s helped countless students…
+         It’s a weekday morning and Yulonda Bell has agreed to be interviewed about her new position as Polk State Winter…
         </p>
        </div>
       </div>
@@ -1212,7 +1210,7 @@ var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activ
   </noscript>
   <!-- end olark code -->
   <script type="text/javascript">
-   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":2160,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":2001,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
   </script>
  </body>
 </html>

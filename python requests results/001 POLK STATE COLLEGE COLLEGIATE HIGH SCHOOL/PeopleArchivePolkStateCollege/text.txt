@@ -664,20 +664,20 @@ img.emoji {
      <!-- recentnews -->
      <div class="sidebox sectionfeatures">
       <div class="sectionfeature">
-       <h2 class="sectionicontitle business-engineering-technology academics">
-        Business, Engineering &amp; Technology
+       <h2 class="sectionicontitle early-childhood-education-and-management-certificate education academics">
+        Early Childhood Education and Management Certificate Programs
        </h2>
-       <a href="/business-engineering-technology/">
-        <img alt="Business Engineering" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/Business-engineering5CB931-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/Business-engineering5CB931-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/Business-engineering5CB931-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/Business-engineering5CB931-1100x618.jpg 1100w, https://www.polk.edu/wp-content/uploads/Business-engineering5CB931.jpg 1200w, https://www.polk.edu/wp-content/uploads/Business-engineering5CB931-800x450.jpg 800w" width="400"/>
+       <a href="/early-childhood-education/">
+        <img alt="" class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/Early-childhood-education-03-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/Early-childhood-education-03-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/Early-childhood-education-03-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/Early-childhood-education-03-1100x618.jpg 1100w, https://www.polk.edu/wp-content/uploads/Early-childhood-education-03.jpg 1200w, https://www.polk.edu/wp-content/uploads/Early-childhood-education-03-800x450.jpg 800w" width="400"/>
        </a>
        <div class="text">
         <h4>
-         <a href="/business-engineering-technology/">
-          Business, Engineering &amp; Technology
+         <a href="/early-childhood-education/">
+          Early Childhood Education
          </a>
         </h4>
         <p>
-         Polk’s Business, Engineering &amp; Technology programs deliver the cutting-edge training employers demand.
+         Polk’s Education graduates spark young minds and inspire learning.
         </p>
        </div>
       </div>
@@ -685,17 +685,17 @@ img.emoji {
        <h2 class="sectionicontitle people">
         People
        </h2>
-       <a href="https://www.polk.edu/news/with-push-from-polk-state-alumnus-has-built-his-life-on-music/">
-        <img alt="Polk State alumnus Jordan Burks is a music teacher at Auburndale Central Elementary." class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/music-teachers-news-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/music-teachers-news-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/music-teachers-news-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/music-teachers-news-1100x618.jpg 1100w, https://www.polk.edu/wp-content/uploads/music-teachers-news-800x450.jpg 800w, https://www.polk.edu/wp-content/uploads/music-teachers-news.jpg 1200w" width="400"/>
+       <a href="https://www.polk.edu/news/polk-nursing-alum-delivers-i-actually-do-care-to-patients-at-lrmcs-emergency-department/">
+        <img alt="Two-time Polk State alumnus Greg Baisden is now a nursing supervisor at Lakeland Regional Medical Center." class="attachment-psc_small size-psc_small wp-post-image" height="225" sizes="(max-width: 400px) 100vw, 400px" src="https://www.polk.edu/wp-content/uploads/news-guy-140908-400x225.jpg" srcset="https://www.polk.edu/wp-content/uploads/news-guy-140908-400x225.jpg 400w, https://www.polk.edu/wp-content/uploads/news-guy-140908-500x281.jpg 500w, https://www.polk.edu/wp-content/uploads/news-guy-140908-1100x618.jpg 1100w, https://www.polk.edu/wp-content/uploads/news-guy-140908-800x450.jpg 800w, https://www.polk.edu/wp-content/uploads/news-guy-140908.jpg 1200w" width="400"/>
        </a>
        <div class="text">
         <h4>
-         <a href="https://www.polk.edu/news/with-push-from-polk-state-alumnus-has-built-his-life-on-music/">
-          With Push From Polk State, Alumnus Has Built His Life on Music
+         <a href="https://www.polk.edu/news/polk-nursing-alum-delivers-i-actually-do-care-to-patients-at-lrmcs-emergency-department/">
+          Polk Nursing Alum Delivers “I Actually Do Care” to Patients at LRMC’s Emergency Department
          </a>
         </h4>
         <p>
-         On any given day, you might find Jordan Burks leading his Auburndale Central Elementary students in a discussion on the…
+         When Greg Baisden thinks about the difference he gets to make for patients every day, he thinks about an elderly…
         </p>
        </div>
       </div>
@@ -970,7 +970,7 @@ var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activ
   </noscript>
   <!-- end olark code -->
   <script type="text/javascript">
-   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":1342,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ae0508e4dc","applicationID":"16284233","transactionName":"blxVZEVVV0JQBk0IW1cWdlNDXVZfHgxXBVFB","queueTime":0,"applicationTime":1239,"atts":"QhtWEg1PREw=","errorBeacon":"bam.nr-data.net","agent":""}
   </script>
  </body>
 </html>
