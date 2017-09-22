@@ -1,2 +1,2 @@
-# scraping_Python
-Code and data for the URAP team that scrapes charter websites using Python.
+# web_scraping
+Code and data for the URAP team that scrapes and parses charter websites using Python.
