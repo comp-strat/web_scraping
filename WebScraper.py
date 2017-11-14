@@ -13,7 +13,6 @@ from selenium.common.exceptions import *
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
-import datetime
 
 driverPath = 'Driver/chromedriver'
 
