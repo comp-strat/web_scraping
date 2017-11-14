@@ -13,7 +13,7 @@ from selenium.common.exceptions import *
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
-'Statistics'
+import datetime
 
 driverPath = 'Driver/chromedriver'
 
