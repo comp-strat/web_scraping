@@ -42,6 +42,10 @@ class School(object):
         self.matcher = self.mainURL.split(".")[1]
         self.filePath = "results/" + self.name
         self.totalNumberofLinks = 0
+        self.htmlLinks = 0
+        self.htmlLinksClicked = 0
+        self.scriptLinks = 0
+        self.scriptLinksClicked = 0
         self.linksClicked = 0
 
     def gatherLinks(self) -> None:
@@ -64,8 +68,16 @@ class School(object):
             os.makedirs(self.filePath)
         for link in self.links:
             try:
+                if link.type == "html":
+                    self.htmlLinks += 1
+                elif link.type == "JavaScript":
+                    self.scriptLinks += 1
                 link.click()
                 self.linksClicked += 1
+                if link.type == "html":
+                    self.htmlLinksClicked += 1
+                elif link.type == "JavaScript":
+                    self.scriptLinksClicked += 1
             except ValueError:
                 print("Could not click link:" + str(link))
         htmlCount = 0
@@ -90,6 +102,8 @@ class School(object):
 
 
 class LinkException(Exception):
+    "Only called by link class. Add to switch statement as necessary"
+
     def __init__(self, switch=-1):
         if switch == 0:
             self.value = "ERROR: Link type was not html or JavaScript"
@@ -232,6 +246,10 @@ if not checkPathExists("diagnostics"):
 schools = readCSV('micro-sample_Apr17_rev3.csv')
 numberofLinksClicked = 0
 totalNumberOfLinks = 0
+htmlLinks = 0
+htmlLinksClicked = 0
+scriptLinks = 0
+scriptLinksClicked = 0
 "Time doesn't really account for timezones now, many be an issue later"
 now = datetime.datetime.now()
 formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
@@ -242,10 +260,26 @@ for school in schools:
     school.clickLinks()
     totalNumberOfLinks += school.totalNumberofLinks
     numberofLinksClicked += school.linksClicked
+    htmlLinks += school.htmlLinks
+    htmlLinksClicked += school.htmlLinksClicked
+    scriptLinks += school.scriptLinks
+    scriptLinks += school.scriptLinksClicked
     diagnosticsFile.write(
-        "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(school.linksClicked) +
-        " were clicked which is " + str(school.linksClicked / school.totalNumberofLinks) + "%\n")
-diagnosticsFile.write("Total number of links:"+ str(totalNumberOfLinks) +"\n")
-diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) +"\n")
-diagnosticsFile.write("% of links clicked:" + str(numberofLinksClicked/totalNumberOfLinks) +"\n")
+        "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
+            school.linksClicked) + " were clicked(" + str(school.linksClicked / school.totalNumberofLinks) + "%)\n")
+    diagnosticsFile.write(
+        "There were " + str(school.htmlLinks) + " html links and " + str(
+            school.htmlLinksClicked) + " were clicked(" + str(school.htmlLinks / school.htmlLinksClicked) +"%)\n"
+    )
+    diagnosticsFile.write(
+        "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
+            school.scriptLinksClicked) + " were clicked(" + str(school.scriptLinks / school.scriptLinksClicked) + "%)\n"
+    )
+diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
+diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
+diagnosticsFile.write("% of links clicked:" + str(numberofLinksClicked / totalNumberOfLinks) + "\n")
+diagnosticsFile.write("Number of HTML Links" + str(htmlLinks) +"\n")
+diagnosticsFile.write("% of HTML Links Clicked" + str(htmlLinks/htmlLinksClicked) +"\n")
+diagnosticsFile.write("Number of JavaScript Links" + str(scriptLinks) +"\n")
+diagnosticsFile.write("% of JavaScript Links Clicked" + str(scriptLinks/scriptLinksClicked) +"\n")
 diagnosticsFile.close()
