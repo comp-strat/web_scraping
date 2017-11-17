@@ -1,6 +1,8 @@
 import csv
 import datetime
 import os
+import random
+import string
 
 'Driver'
 from selenium import webdriver
@@ -15,6 +17,10 @@ from bs4.element import Comment
 
 
 driverPath = 'Driver/chromedriver'
+
+inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
+                "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
+                "span", "sub", "sup"]
 
 
 def readCSV(filename) -> list:
@@ -59,6 +65,8 @@ class School(object):
                 print(str(link))
             except ValueError:
                 print(elem.get_attribute("href") + " was not added as it did not match the main url")
+            # except LinkException:
+                # print("Got a link exception")
         driver.close()
         self.totalNumberofLinks += len(self.links)
 
@@ -148,14 +156,19 @@ class Link(object):
         return True
 
     def gatherText(self, driver) -> None:
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-        texts = soup.findAll(text=True)
-        visible_texts = list(filter(self.tag_visible, texts))
-        for i in range(len(visible_texts)):
-            if "\n" in visible_texts[i]:
-                visible_texts[i] = visible_texts[i].replace("\n", "")
-        filtered_text = list(filter(lambda a: a != "", visible_texts))
-        self.text = u" ".join(t.strip() for t in filtered_text)
+        page_source_replaced = driver.page_source
+        # Remove inline tags
+        for it in inline_tags:
+            page_source_replaced = page_source_replaced.replace("<" + it + ">", "")
+            page_source_replaced = page_source_replaced.replace("</" + it + ">", "")
+
+        # Create random string for tag delimiter
+        random_string = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=75))
+        soup = BeautifulSoup(page_source_replaced, 'lxml')
+        [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])] # remove non-visible tags
+        visible_text = soup.getText(random_string).replace("\n", "")
+        visible_text = visible_text.split(random_string)
+        self.text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
 
     def click(self) -> bool:
         driver = webdriver.Chrome(driverPath)
@@ -242,7 +255,7 @@ if not checkPathExists("results"):
 if not checkPathExists("diagnostics"):
     os.mkdir("diagnostics")
 
-schools = readCSV('micro-sample_Apr17_rev3.csv')
+schools = readCSV('micro-sample13_coded.csv')
 numberofLinksClicked = 0
 totalNumberOfLinks = 0
 htmlLinks = 0
@@ -254,6 +267,7 @@ now = datetime.datetime.now()
 formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
 diagnosticsFile = open(formattedTime + ".txt", "w")
 diagnosticsFile.write("Program was run at " + formattedTime + "\n")
+i = 0
 for school in schools:
     school.gatherLinks()
     school.clickLinks()
@@ -270,10 +284,11 @@ for school in schools:
         "There were " + str(school.htmlLinks) + " html links and " + str(
             school.htmlLinksClicked) + " were clicked(" + str(school.htmlLinks / school.htmlLinksClicked) +"%)\n"
     )
-    diagnosticsFile.write(
-        "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
-            school.scriptLinksClicked) + " were clicked(" + str(school.scriptLinks / school.scriptLinksClicked) + "%)\n"
-    )
+    if school.scriptLinksClicked != 0:
+        diagnosticsFile.write(
+            "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
+                school.scriptLinksClicked) + " were clicked(" + str(school.scriptLinks / school.scriptLinksClicked) + "%)\n"
+        )
 diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
 diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
 diagnosticsFile.write("% of links clicked:" + str(numberofLinksClicked / totalNumberOfLinks) + "\n")
