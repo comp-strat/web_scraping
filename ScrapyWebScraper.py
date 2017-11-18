@@ -92,12 +92,10 @@ class School(object):
                     self.scriptLinksClicked += 1
             except ValueError:
                 print("Could not click link:" + str(link))
-        htmlCount = 0
         scriptCount = 0
         for link in self.links:
             if link.type == "html":
-                link.writeFile(self.filePath, htmlCount)
-                htmlCount += 1
+                link.writeFile(self.filePath, 0)
             elif link.type == "JavaScript" and link.text != "":
                 link.writeFile(self.filePath, scriptCount)
                 scriptCount += 1
