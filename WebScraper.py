@@ -1,3 +1,4 @@
+from sys import platform
 import csv
 import datetime
 import os
@@ -16,6 +17,9 @@ from bs4 import BeautifulSoup
 from bs4.element import Comment
 
 
+"Display for headless mode"
+from pyvirtualdisplay import Display
+"Only use this if running on a non linux machine"
 driverPath = 'Driver/chromedriver'
 
 inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
@@ -31,6 +35,18 @@ def readCSV(filename) -> list:
             if reader.line_num != 1:
                 schools.append(School(row[0], row[1], row[2], row[3]))
     return schools
+def prepDriver():
+    if platform.startswith("linux"):
+        display = Display(visible=0, size=(1920, 1080))
+        display.start()
+        options = webdriver.ChromeOptions()
+        options.add_argument('headless')
+        options.add_argument('window-size=1920x1080')
+        driver = webdriver.Chrome(chrome_options=options)
+        return driver
+    elif platform.startswith("darwin") or platform.startswith("win32"):
+        driver = webdriver.Chrome(executable_path="Driver/chromedriver")
+        return driver
 
 
 class School(object):
@@ -54,22 +70,20 @@ class School(object):
         self.linksClicked = 0
 
     def gatherLinks(self) -> None:
-        driver = webdriver.Chrome(executable_path=driverPath)
+        driver = prepDriver()
         driver.get(self.mainURL)
         elems = driver.find_elements_by_xpath("//a[@href]")
-
         for elem in elems:
             try:
                 link = Link(elem.get_attribute("href"), self.mainURL, self.matcher, elems.index(elem))
                 self.links.append(link)
                 print(str(link))
-            except ValueError:
+            except LinkException:
                 print(elem.get_attribute("href") + " was not added as it did not match the main url")
             # except LinkException:
                 # print("Got a link exception")
         driver.close()
-        self.totalNumberofLinks += len(self.links)
-
+        self.totalNumberofLinks = len(self.links)
     def clickLinks(self):
         if not checkPathExists(self.filePath):
             os.makedirs(self.filePath)
@@ -169,7 +183,7 @@ class Link(object):
         self.text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
 
     def click(self) -> bool:
-        driver = webdriver.Chrome(driverPath)
+        driver = prepDriver()
         if self.type == "html":
             driver.get(self.hrefAttribute)
             self.gatherText(driver)
@@ -263,7 +277,7 @@ scriptLinksClicked = 0
 "Time doesn't really account for timezones now, many be an issue later"
 now = datetime.datetime.now()
 formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
-diagnosticsFile = open(formattedTime + ".txt", "w")
+diagnosticsFile = open("diagnostics/" + str(formattedTime) + ".txt", "w")
 diagnosticsFile.write("Program was run at " + formattedTime + "\n")
 i = 0
 for school in schools:
@@ -282,7 +296,8 @@ for school in schools:
         "There were " + str(school.htmlLinks) + " html links and " + str(
             school.htmlLinksClicked) + " were clicked(" + str(school.htmlLinks / school.htmlLinksClicked) +"%)\n"
     )
-    if school.scriptLinksClicked != 0:
+
+    if school.scriptLinks != 0:
         diagnosticsFile.write(
             "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
                 school.scriptLinksClicked) + " were clicked(" + str(school.scriptLinks / school.scriptLinksClicked) + "%)\n"
