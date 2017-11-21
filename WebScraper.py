@@ -71,6 +71,7 @@ class School(object):
             except LinkException:
                 print(elem.get_attribute("href") + " was not added as it did not match the main url")
         driver.close()
+        self.totalNumberofLinks = len(self.links)
     def clickLinks(self):
         if not checkPathExists(self.filePath):
             os.makedirs(self.filePath)
@@ -280,10 +281,11 @@ for school in schools:
         "There were " + str(school.htmlLinks) + " html links and " + str(
             school.htmlLinksClicked) + " were clicked(" + str(school.htmlLinks / school.htmlLinksClicked) +"%)\n"
     )
-    diagnosticsFile.write(
-        "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
-            school.scriptLinksClicked) + " were clicked(" + str(school.scriptLinks / school.scriptLinksClicked) + "%)\n"
-    )
+    if school.scriptLinks != 0:
+        diagnosticsFile.write(
+            "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
+                school.scriptLinksClicked) + " were clicked(" + str(school.scriptLinks / school.scriptLinksClicked) + "%)\n"
+        )
 diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
 diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
 diagnosticsFile.write("% of links clicked:" + str(numberofLinksClicked / totalNumberOfLinks) + "\n")
