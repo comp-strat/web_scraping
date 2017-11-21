@@ -13,7 +13,7 @@ from selenium.common.exceptions import *
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
-
+"Only use this if running on a non linux machine"
 driverPath = 'Driver/chromedriver'
 
 
@@ -25,6 +25,13 @@ def readCSV(filename) -> list:
             if reader.line_num != 1:
                 schools.append(School(row[0], row[1], row[2], row[3]))
     return schools
+def prepDriver():
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    options.add_argument('window-size=1920x1080')
+    driver = webdriver.Chrome(chrome_options=options)
+    return driver
+
 
 
 class School(object):
@@ -48,21 +55,17 @@ class School(object):
         self.linksClicked = 0
 
     def gatherLinks(self) -> None:
-        driver = webdriver.Chrome()
-        print("test")
-	driver.get(self.mainURL)
+        driver = prepDriver()
+        driver.get(self.mainURL)
         elems = driver.find_elements_by_xpath("//a[@href]")
-
         for elem in elems:
             try:
-                link = Link(elem.get_attribute("href"), self.mainURL, self.matcher, elems.index(elem))
+                link = Link(elem, self.mainURL, self.matcher)
                 self.links.append(link)
-                print(str(link))
+                print(elem.get_attribute("href") + " " + str(link))
             except ValueError:
                 print(elem.get_attribute("href") + " was not added as it did not match the main url")
         driver.close()
-        self.totalNumberofLinks += len(self.links)
-
     def clickLinks(self):
         if not checkPathExists(self.filePath):
             os.makedirs(self.filePath)
@@ -159,7 +162,7 @@ class Link(object):
         self.text = u" ".join(t.strip() for t in filtered_text)
 
     def click(self) -> bool:
-        driver = webdriver.Chrome()
+        driver = prepDriver()
         if self.type == "html":
             driver.get(self.hrefAttribute)
             self.gatherText(driver)
@@ -253,7 +256,7 @@ scriptLinksClicked = 0
 "Time doesn't really account for timezones now, many be an issue later"
 now = datetime.datetime.now()
 formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
-diagnosticsFile = open(formattedTime + ".txt", "w")
+diagnosticsFile = open("results/" + str(formattedTime) + ".txt", "w")
 diagnosticsFile.write("Program was run at " + formattedTime + "\n")
 for school in schools:
     school.gatherLinks()
