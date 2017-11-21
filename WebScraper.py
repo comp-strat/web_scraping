@@ -13,6 +13,9 @@ from selenium.common.exceptions import *
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
+
+"Display for headless mode"
+from pyvirtualdisplay import Display
 "Only use this if running on a non linux machine"
 driverPath = 'Driver/chromedriver'
 
@@ -26,6 +29,8 @@ def readCSV(filename) -> list:
                 schools.append(School(row[0], row[1], row[2], row[3]))
     return schools
 def prepDriver():
+    display = Display(visible=0, size=(1920, 1080))
+    display.start()
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('window-size=1920x1080')
