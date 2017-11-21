@@ -1,9 +1,10 @@
-from sys import platform
 import csv
 import datetime
 import os
 import random
 import string
+
+import scrapy
 
 'Driver'
 from selenium import webdriver
@@ -17,36 +18,24 @@ from bs4 import BeautifulSoup
 from bs4.element import Comment
 
 
-"Display for headless mode"
-from pyvirtualdisplay import Display
-"Only use this if running on a non linux machine"
 driverPath = 'Driver/chromedriver'
 
 inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
                 "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
-                "span", "sub", "sup"]
-
+                "span", "sub", "sup", "li"]
 
 def readCSV(filename) -> list:
     schools = []
     with open(filename, newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
+        i = 0
         for row in reader:
             if reader.line_num != 1:
-                schools.append(School(row[0], row[1], row[2], row[3]))
+                schools.append(School(row[0], row[1], row[2], row[4]))
+                i += 1
+                if i == 2:
+                    break
     return schools
-def prepDriver():
-    if platform.startswith("linux"):
-        display = Display(visible=0, size=(1920, 1080))
-        display.start()
-        options = webdriver.ChromeOptions()
-        options.add_argument('headless')
-        options.add_argument('window-size=1920x1080')
-        driver = webdriver.Chrome(chrome_options=options)
-        return driver
-    elif platform.startswith("darwin") or platform.startswith("win32"):
-        driver = webdriver.Chrome(executable_path="Driver/chromedriver")
-        return driver
 
 
 class School(object):
@@ -70,20 +59,22 @@ class School(object):
         self.linksClicked = 0
 
     def gatherLinks(self) -> None:
-        driver = prepDriver()
+        driver = webdriver.Chrome(executable_path=driverPath)
         driver.get(self.mainURL)
         elems = driver.find_elements_by_xpath("//a[@href]")
+
         for elem in elems:
             try:
                 link = Link(elem.get_attribute("href"), self.mainURL, self.matcher, elems.index(elem))
                 self.links.append(link)
                 print(str(link))
-            except LinkException:
+            except ValueError:
                 print(elem.get_attribute("href") + " was not added as it did not match the main url")
             # except LinkException:
                 # print("Got a link exception")
         driver.close()
-        self.totalNumberofLinks = len(self.links)
+        self.totalNumberofLinks += len(self.links)
+
     def clickLinks(self):
         if not checkPathExists(self.filePath):
             os.makedirs(self.filePath)
@@ -171,8 +162,8 @@ class Link(object):
         page_source_replaced = driver.page_source
         # Remove inline tags
         for it in inline_tags:
-            page_source_replaced = page_source_replaced.replace("<" + it + ">", "")
-            page_source_replaced = page_source_replaced.replace("</" + it + ">", "")
+            page_source_replaced = page_source_replaced.replace("<" + it + ">", " ")
+            page_source_replaced = page_source_replaced.replace("</" + it + ">", " ")
 
         # Create random string for tag delimiter
         random_string = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=75))
@@ -183,7 +174,7 @@ class Link(object):
         self.text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
 
     def click(self) -> bool:
-        driver = prepDriver()
+        driver = webdriver.Chrome(driverPath)
         if self.type == "html":
             driver.get(self.hrefAttribute)
             self.gatherText(driver)
@@ -267,46 +258,115 @@ if not checkPathExists("results"):
 if not checkPathExists("diagnostics"):
     os.mkdir("diagnostics")
 
-schools = readCSV('micro-sample13_coded.csv')
-numberofLinksClicked = 0
-totalNumberOfLinks = 0
-htmlLinks = 0
-htmlLinksClicked = 0
-scriptLinks = 0
-scriptLinksClicked = 0
-"Time doesn't really account for timezones now, many be an issue later"
-now = datetime.datetime.now()
-formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
-diagnosticsFile = open("diagnostics/" + str(formattedTime) + ".txt", "w")
-diagnosticsFile.write("Program was run at " + formattedTime + "\n")
-i = 0
-for school in schools:
-    school.gatherLinks()
-    school.clickLinks()
-    totalNumberOfLinks += school.totalNumberofLinks
-    numberofLinksClicked += school.linksClicked
-    htmlLinks += school.htmlLinks
-    htmlLinksClicked += school.htmlLinksClicked
-    scriptLinks += school.scriptLinks
-    scriptLinks += school.scriptLinksClicked
-    diagnosticsFile.write(
-        "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
-            school.linksClicked) + " were clicked(" + str(school.linksClicked / school.totalNumberofLinks) + "%)\n")
-    diagnosticsFile.write(
-        "There were " + str(school.htmlLinks) + " html links and " + str(
-            school.htmlLinksClicked) + " were clicked(" + str(school.htmlLinks / school.htmlLinksClicked) +"%)\n"
-    )
+# schools = readCSV('micro-sample13_coded.csv')
+# numberofLinksClicked = 0
+# totalNumberOfLinks = 0
+# htmlLinks = 0
+# htmlLinksClicked = 0
+# scriptLinks = 0
+# scriptLinksClicked = 0
+# "Time doesn't really account for timezones now, many be an issue later"
+# now = datetime.datetime.now()
+# formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
+# diagnosticsFile = open(formattedTime + ".txt", "w")
+# diagnosticsFile.write("Program was run at " + formattedTime + "\n")
+# i = 0
+# for school in schools:
+#     school.gatherLinks()
+#     school.clickLinks()
+#     totalNumberOfLinks += school.totalNumberofLinks
+#     numberofLinksClicked += school.linksClicked
+#     htmlLinks += school.htmlLinks
+#     htmlLinksClicked += school.htmlLinksClicked
+#     scriptLinks += school.scriptLinks
+#     scriptLinks += school.scriptLinksClicked
+#     diagnosticsFile.write(
+#         "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
+#             school.linksClicked) + " were clicked(" + str(school.linksClicked / school.totalNumberofLinks) + "%)\n")
+#     diagnosticsFile.write(
+#         "There were " + str(school.htmlLinks) + " html links and " + str(
+#             school.htmlLinksClicked) + " were clicked(" + str(school.htmlLinks / school.htmlLinksClicked) +"%)\n"
+#     )
+#     if school.scriptLinksClicked != 0:
+#         diagnosticsFile.write(
+#             "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
+#                 school.scriptLinksClicked) + " were clicked(" + str(school.scriptLinks / school.scriptLinksClicked) + "%)\n"
+#         )
+# diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
+# diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
+# diagnosticsFile.write("% of links clicked:" + str(numberofLinksClicked / totalNumberOfLinks) + "\n")
+# diagnosticsFile.write("Number of HTML Links" + str(htmlLinks) +"\n")
+# diagnosticsFile.write("% of HTML Links Clicked" + str(htmlLinks/htmlLinksClicked) +"\n")
+# diagnosticsFile.write("Number of JavaScript Links" + str(scriptLinks) +"\n")
+# diagnosticsFile.write("% of JavaScript Links Clicked" + str(scriptLinks/scriptLinksClicked) +"\n")
+# diagnosticsFile.close()
 
-    if school.scriptLinks != 0:
-        diagnosticsFile.write(
-            "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
-                school.scriptLinksClicked) + " were clicked(" + str(school.scriptLinks / school.scriptLinksClicked) + "%)\n"
-        )
-diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
-diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
-diagnosticsFile.write("% of links clicked:" + str(numberofLinksClicked / totalNumberOfLinks) + "\n")
-diagnosticsFile.write("Number of HTML Links" + str(htmlLinks) +"\n")
-diagnosticsFile.write("% of HTML Links Clicked" + str(htmlLinks/htmlLinksClicked) +"\n")
-diagnosticsFile.write("Number of JavaScript Links" + str(scriptLinks) +"\n")
-diagnosticsFile.write("% of JavaScript Links Clicked" + str(scriptLinks/scriptLinksClicked) +"\n")
-diagnosticsFile.close()
+
+def gatherText(driver):
+    page_source_replaced = driver.page_source
+    # Remove inline tags
+    for it in inline_tags:
+        page_source_replaced = page_source_replaced.replace("<" + it + ">", "")
+        page_source_replaced = page_source_replaced.replace("</" + it + ">", "")
+
+    # Create random string for tag delimiter
+    random_string = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=75))
+    soup = BeautifulSoup(page_source_replaced, 'lxml')
+    [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])] # remove non-visible tags
+    visible_text = soup.getText(random_string).replace("\n", "")
+    visible_text = visible_text.split(random_string)
+    return "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
+
+class SchoolSpider(scrapy.Spider):
+    name = "school_scraper"
+    schools = readCSV('micro-sample13_coded.csv')
+    start_urls = [schools[0].mainURL]
+
+
+    def __init__(self):
+        self.seen = set()
+        schools = readCSV('micro-sample13_coded.csv')
+        self.mainURL = schools[0].mainURL
+        if self.mainURL[-1] != "/":
+            self.mainURL[-1] += "/"
+        self.options = webdriver.ChromeOptions()
+        self.options.add_argument('headless')
+        self.options.add_argument('windows-size=1200x600')
+
+    def parse(self, response):
+        self.driver = webdriver.Chrome(chrome_options = self.options)
+        self.driver.get(response.url)
+        
+        # Stuff to get name for results file
+        file_name = response.url
+        if file_name[-1] != "/":
+            file_name += "/"
+        if file_name == self.mainURL:
+            file_name = "home"
+        else:
+            file_name = file_name.replace("/", "_")
+            file_name = file_name[len(self.mainURL):-1]
+
+        # Write results file
+        file = open("test_scrapy_results/" + file_name + ".txt", "w")
+        file_text = gatherText(self.driver)
+        if len(file_text) > 0:
+            file.write(file_text)
+        file.close()
+
+        # Get new links from current page
+        elems = self.driver.find_elements_by_xpath("//a[@href]")
+        new_links = []
+        for elem in elems:
+            if elem.get_attribute("href").lower().startswith(self.mainURL.lower()):
+                new_links.append(elem.get_attribute("href"))
+        self.driver.close()
+
+        # Make new scrapy requests to parse the new links
+        for elem in new_links:
+            try:
+                if elem not in self.seen:
+                    self.seen.add(elem)
+                    yield scrapy.Request(elem, callback=self.parse)
+            except ValueError:
+                print(elem + " was not added as it did not match the main url")
