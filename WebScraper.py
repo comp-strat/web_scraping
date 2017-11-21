@@ -48,8 +48,9 @@ class School(object):
         self.linksClicked = 0
 
     def gatherLinks(self) -> None:
-        driver = webdriver.Chrome(executable_path=driverPath)
-        driver.get(self.mainURL)
+        driver = webdriver.Chrome()
+        print("test")
+	driver.get(self.mainURL)
         elems = driver.find_elements_by_xpath("//a[@href]")
 
         for elem in elems:
@@ -158,7 +159,7 @@ class Link(object):
         self.text = u" ".join(t.strip() for t in filtered_text)
 
     def click(self) -> bool:
-        driver = webdriver.Chrome(driverPath)
+        driver = webdriver.Chrome()
         if self.type == "html":
             driver.get(self.hrefAttribute)
             self.gatherText(driver)
