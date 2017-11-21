@@ -1,3 +1,4 @@
+from sys import platform
 import csv
 import datetime
 import os
@@ -29,14 +30,17 @@ def readCSV(filename) -> list:
                 schools.append(School(row[0], row[1], row[2], row[3]))
     return schools
 def prepDriver():
-    display = Display(visible=0, size=(1920, 1080))
-    display.start()
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    options.add_argument('window-size=1920x1080')
-    driver = webdriver.Chrome(chrome_options=options)
-    return driver
-
+    if platform.startswith("linux"):
+        display = Display(visible=0, size=(1920, 1080))
+        display.start()
+        options = webdriver.ChromeOptions()
+        options.add_argument('headless')
+        options.add_argument('window-size=1920x1080')
+        driver = webdriver.Chrome(chrome_options=options)
+        return driver
+    elif platform.startswith("darwin") or platform.startswith("win32"):
+        driver = webdriver.Chrome(executable_path="Driver/chromedriver")
+        return driver
 
 
 class School(object):
@@ -262,7 +266,7 @@ scriptLinksClicked = 0
 "Time doesn't really account for timezones now, many be an issue later"
 now = datetime.datetime.now()
 formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
-diagnosticsFile = open("results/" + str(formattedTime) + ".txt", "w")
+diagnosticsFile = open("diagnostics/" + str(formattedTime) + ".txt", "w")
 diagnosticsFile.write("Program was run at " + formattedTime + "\n")
 for school in schools:
     school.gatherLinks()
