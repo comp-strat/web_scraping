@@ -68,7 +68,7 @@ class School(object):
                 link = Link(elem.get_attribute("href"), self.mainURL, self.matcher, elems.index(elem))
                 self.links.append(link)
                 print(str(link))
-            except ValueError:
+            except LinkException:
                 print(elem.get_attribute("href") + " was not added as it did not match the main url")
         driver.close()
     def clickLinks(self):
