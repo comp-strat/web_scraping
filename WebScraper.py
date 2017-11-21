@@ -65,7 +65,7 @@ class School(object):
         elems = driver.find_elements_by_xpath("//a[@href]")
         for elem in elems:
             try:
-                link = Link(elem, self.mainURL, self.matcher)
+                link = Link(elem, self.mainURL, self.matcher,elems.index(elem))
                 self.links.append(link)
                 print(elem.get_attribute("href") + " " + str(link))
             except ValueError:
