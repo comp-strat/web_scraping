@@ -1,0 +1,3035 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+<html lang="en">
+<head>
+    <title>
+        ECHO Charter School / Homepage</title>
+    <!--
+    <PageMap>
+    <DataObject type="document">
+    <Attribute name="siteid">4</Attribute>
+    </DataObject>
+    </PageMap>
+    -->
+
+    
+    
+    <!-- Begin swuc.GlobalJS -->
+<script type="text/javascript">
+ staticURL = "http://www.echo.charter.k12.mn.us/Static/V2_17_01/";
+ SessionTimeout = "0";
+</script>
+<!-- End swuc.GlobalJS -->
+
+
+    <!-- Stylesheets -->
+
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/webfonts/OpenSans-Light.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/webfonts/OpenSans-Italic.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/webfonts/OpenSans-Regular.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/webfonts/OpenSans-SemiBold.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Content/shepherd/shepherd-theme-default.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01/App_Themes/SW/jquery.jgrowl.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01//site/assets/styles/system.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01//site/assets/styles/apps.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01/App_Themes/SW/jQueryUI.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/webfonts/SchoolwiresMobile.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01//site/assets/styles/dashboard.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/Styles/Grid.css" />
+
+    <!-- Scripts -->
+    
+
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
+    <script src='http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/Scripts/min/jquery-migrate-1.2.1.js' type='text/javascript'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js' type='text/javascript'></script>
+    <script src='http://www.echo.charter.k12.mn.us/Scripts/tether.min.js' type='text/javascript'></script>
+    <script src='http://www.echo.charter.k12.mn.us/Scripts/shepherd/shepherd.min.js' type='text/javascript'></script>
+
+
+    
+
+    <!--  -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            SetCookie('SWScreenWidth', screen.width);
+            SetCookie('SWClientWidth', document.body.clientWidth);
+
+            //If small browser window and responsive template and first load, reload to get the off-canvas menu
+            var isResponsiveTemplatePreInit = 'False';
+            var isResponsive = 'False';
+
+            if (isResponsiveTemplatePreInit == 'False' && isResponsive == 'True' && document.body.clientWidth < 1024) {
+                window.location.reload(true);
+            }
+            
+            $("div.ui-article:last").addClass("last-article");
+            $("div.region .app:last").addClass("last-app");
+
+            // get on screen alerts
+            var isAnyActiveOSA = 'False';
+            var onscreenAlertCookie = GetCookie('Alerts');
+
+            if (onscreenAlertCookie == '' || onscreenAlertCookie == undefined) {
+                onscreenAlertCookie = "";
+            }
+            if (isAnyActiveOSA == 'True') {
+                GetContent(homeURL + "/cms/Tools/OnScreenAlerts/UserControls/OnScreenAlertDialogListWrapper.aspx?OnScreenAlertCookie=" + onscreenAlertCookie + "&SiteID=4", "onscreenalert-holder", 2, "OnScreenAlertCheckListItem();");
+            }
+
+            
+
+        });
+
+    // ADA SKIP NAV
+    $(document).ready(function () {
+        $(document).on('focus', '#skipLink', function () {
+            $("div.sw-skipnav-outerbar").animate({
+                marginTop: "0px"
+            }, 500);
+        });
+
+        $(document).on('blur', '#skipLink', function () {
+            $("div.sw-skipnav-outerbar").animate({
+                marginTop: "-30px"
+            }, 500);
+        });
+    });
+
+    // ADA MYSTART
+    $(document).ready(function () {
+        var top_level_nav = $('.sw-mystart-nav');
+
+        // Set tabIndex to -1 so that top_level_links can't receive focus until menu is open
+        // school dropdown
+        $(top_level_nav).find('ul').find('a').attr('tabIndex', -1);
+
+        // my account dropdown
+        $(top_level_nav).next('ul').find('a').attr('tabIndex', -1);
+
+        $(top_level_nav).focus(function () {
+            // hide open menus
+            hideMyStartBarMenu();
+
+            // show school dropdown
+            if ($(this).find('ul').length > 0) {
+                $(this).find('.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false');
+            }
+
+            // show my account dropdown
+            if ($(this).next('ul').length > 0) {
+                $(this).next('.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false');
+                $('#sw-mystart-account').addClass("clicked-state");
+            }
+        });
+
+        // Bind arrow keys for navigation
+        $(top_level_nav).keydown(function (e) {
+            if (e.keyCode == 37) { //key left
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).prev('.sw-mystart-nav').length == 0) {
+                    $(this).parents('div').find('.sw-mystart-nav').last().focus();
+                } else {
+                    $(this).prev('.sw-mystart-nav').focus();
+                }
+            } else if (e.keyCode == 38) { //key up
+                e.preventDefault();
+
+                // show school dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('div.sw-dropdown').css('display', 'block').find('ul').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+
+                // show my account dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('ul.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+            } else if (e.keyCode == 39) { //key right
+                e.preventDefault();
+
+                // This is the last item
+                if ($(this).next('.sw-mystart-nav').length == 0) {
+                    $(this).parents('div').find('.sw-mystart-nav').first().focus();
+                } else {
+                    $(this).next('.sw-mystart-nav').focus();
+                }
+            } else if (e.keyCode == 40) { //key down
+                e.preventDefault();
+
+                // show school dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('div.sw-dropdown').css('display', 'block').find('ul').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+                }
+
+                // show my account dropdown
+                if ($(this).next('ul').length > 0) {
+                    $(this).next('ul.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+                }
+            } else if (e.keyCode == 13 || e.keyCode == 32) { //enter key
+                // If submenu is hidden, open it
+                e.preventDefault();
+
+                $(this).parent('li').find('ul[aria-hidden=true]').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+            } else if (e.keyCode == 27) { //escape key
+                e.preventDefault();
+                hideMyStartBarMenu();
+            } else {
+                $(this).parent('.sw-mystart-nav').find('ul[aria-hidden=false] a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        return false;
+                    }
+                });
+            }
+        });
+
+        // school dropdown
+        var startbarlinks = $(top_level_nav).find('ul').find('a');
+        bindMyStartBarLinks(startbarlinks);
+
+        // my account dropdown
+        var myaccountlinks = $(top_level_nav).next('ul').find('a');
+        bindMyStartBarLinks(myaccountlinks);
+
+        function bindMyStartBarLinks(links) {
+            $(links).keydown(function (e) {
+                e.stopPropagation();
+
+                if (e.keyCode == 38) { //key up
+                    e.preventDefault();
+
+                    // This is the first item
+                    if ($(this).parent('li').prev('li').length == 0) {
+                        if ($(this).parents('ul').parents('.sw-mystart-nav').length > 0) {
+                            $(this).parents('ul').parents('.sw-mystart-nav').focus();
+                        } else {
+                            $(this).parents('ul').prev('.sw-mystart-nav').focus();
+                        }
+                    } else {
+                        $(this).parent('li').prev('li').find('a').first().focus();
+                    }
+                } else if (e.keyCode == 40) { //key down
+                    e.preventDefault();
+
+                    if ($(this).parent('li').next('li').length == 0) {
+                        if ($(this).parents('ul').parents('.sw-mystart-nav').length > 0) {
+                            $(this).parents('ul').parents('.sw-mystart-nav').focus();
+                        } else {
+                            $(this).parents('ul').prev('.sw-mystart-nav').focus();
+                        }
+                    } else {
+                        $(this).parent('li').next('li').find('a').first().attr('tabIndex', 0);
+                        $(this).parent('li').next('li').find('a').first().focus();
+                    }
+                } else if (e.keyCode == 27 || e.keyCode == 37) { // escape key or key left
+                    e.preventDefault();
+                    hideMyStartBarMenu();
+                } else if (e.keyCode == 32) { //enter key
+                    e.preventDefault();
+                    window.location = $(this).attr('href');
+                } else {
+                    var found = false;
+
+                    $(this).parent('div').nextAll('li').find('a').each(function () {
+                        if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                            $(this).focus();
+                            found = true;
+                            return false;
+                        }
+                    });
+
+                    if (!found) {
+                        $(this).parent('div').prevAll('li').find('a').each(function () {
+                            if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                                $(this).focus();
+                                return false;
+                            }
+                        });
+                    }
+                }
+            });
+        }
+
+        // Hide menu if click or focus occurs outside of navigation
+        $('#sw-mystart-inner').find('.sw-mystart-nav').last().keydown(function (e) {
+            if (e.keyCode == 9) {
+                // If the user tabs out of the navigation hide all menus
+                hideMyStartBarMenu();
+            }
+        });
+
+        /*$(document).click(function() { 
+            hideMyStartBarMenu();
+        });*/
+
+        // try to capture as many custom MyStart bars as possible
+        $('.sw-mystart-button').find('a').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#sw-mystart-inner').click(function (e) {
+            e.stopPropagation();
+        });
+
+        $('ul.sw-dropdown-list').blur(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-mypasskey').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-sitemanager').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-myview').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-signin').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-register').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        // button click events
+        $('div.sw-mystart-button.home a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.pw a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.manage a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('#sw-mystart-account').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).addClass('clicked-state');
+                $('#sw-myaccount-list').show();
+            }
+        });
+
+        $('#sw-mystart-mypasskey a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.signin a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.register a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+    });
+
+    function hideMyStartBarMenu() {
+        $('.sw-dropdown').attr('aria-hidden', 'true').css('display', 'none');
+        $('#sw-mystart-account').removeClass("clicked-state");
+    }
+
+    // ADA CHANNEL NAV
+    $(document).ready(function () {
+        var settings = {
+            menuHoverClass: 'hover'
+        };
+
+        // Add ARIA role to menubar and menu items
+        $('[id="channel-navigation"]').attr('role', 'menubar').find('li').attr('role', 'menuitem');
+
+        var top_level_links = $('[id="channel-navigation"]').find('> li > a');
+
+        // Set tabIndex to -1 so that top_level_links can't receive focus until menu is open
+        $(top_level_links).next('ul').attr({ 'aria-hidden': 'true', 'role': 'menu' }).find('a').attr('tabIndex', -1);
+
+        // Adding aria-haspopup for appropriate items
+        $(top_level_links).each(function () {
+            if ($(this).next('ul').length > 0)
+                $(this).parent('li').attr('aria-haspopup', 'true');
+        });
+
+        $(top_level_links).focus(function () {
+            //hide open menus
+            hideChannelMenu();
+
+            if ($(this).parent('li').find('ul').length > 0) {
+                $(this).parent('li').addClass(settings.menuHoverClass).find('ul').attr('aria-hidden', 'false').css('display', 'block');
+            }
+        });
+
+        // Bind arrow keys for navigation
+        $(top_level_links).keydown(function (e) {
+            if (e.keyCode == 37) { //key left
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).parent('li').prev('li').length == 0) {
+                    $(this).parents('ul').find('> li').last().find('a').first().focus();
+                } else {
+                    $(this).parent('li').prev('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 38) { //key up
+                e.preventDefault();
+
+                if ($(this).parent('li').find('ul').length > 0) {
+                    $(this).parent('li').addClass(settings.menuHoverClass).find('ul').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+            } else if (e.keyCode == 39) { //key right
+                e.preventDefault();
+
+                // This is the last item
+                if ($(this).parent('li').next('li').length == 0) {
+                    $(this).parents('ul').find('> li').first().find('a').first().focus();
+                } else {
+                    $(this).parent('li').next('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 40) { //key down
+                e.preventDefault();
+
+                if ($(this).parent('li').find('ul').length > 0) {
+                    $(this).parent('li')
+                         .addClass(settings.menuHoverClass)
+                         .find('ul').css('display', 'block')
+                         .attr('aria-hidden', 'false')
+                         .find('a').attr('tabIndex', 0)
+                         .first().focus();
+                }
+            } else if (e.keyCode == 13 || e.keyCode == 32) { //enter key
+                // If submenu is hidden, open it
+                e.preventDefault();
+
+                $(this).parent('li').find('ul[aria-hidden=true]').attr('aria-hidden', 'false').addClass(settings.menuHoverClass).find('a').attr('tabIndex', 0).first().focus();
+            } else if (e.keyCode == 27) { //escape key
+                e.preventDefault();
+                hideChannelMenu();
+            } else {
+                $(this).parent('li').find('ul[aria-hidden=false] a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        return false;
+                    }
+                });
+            }
+        });
+
+        var links = $(top_level_links).parent('li').find('ul').find('a');
+
+        $(links).keydown(function (e) {
+            if (e.keyCode == 38) {
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).parent('li').prev('li').length == 0) {
+                    $(this).parents('ul').parents('li').find('a').first().focus();
+                } else {
+                    $(this).parent('li').prev('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 40) {
+                e.preventDefault();
+
+                if ($(this).parent('li').next('li').length == 0) {
+                    $(this).parents('ul').parents('li').find('a').first().focus();
+                } else {
+                    $(this).parent('li').next('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 27 || e.keyCode == 37) {
+                e.preventDefault();
+
+                $(this).parents('ul').first().prev('a').focus().parents('ul').first().find('.' + settings.menuHoverClass).removeClass(settings.menuHoverClass);
+            } else if (e.keyCode == 32) {
+                e.preventDefault();
+                window.location = $(this).attr('href');
+            } else {
+                var found = false;
+
+                $(this).parent('li').nextAll('li').find('a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        found = true;
+                        return false;
+                    }
+                });
+
+                if (!found) {
+                    $(this).parent('li').prevAll('li').find('a').each(function () {
+                        if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                            $(this).focus();
+                            return false;
+                        }
+                    });
+                }
+            }
+        });
+
+        function hideChannelMenu() {
+            $('li.sw-channel-item.' + settings.menuHoverClass).removeClass(settings.menuHoverClass).find('ul').attr('aria-hidden', 'true').css('display', 'none').find('a').attr('tabIndex', -1);
+        }
+
+        // Hide menu if click or focus occurs outside of navigation
+        $('[id="channel-navigation"]').find('a').last().keydown(function (e) {
+            if (e.keyCode == 9) {
+                // If the user tabs out of the navigation hide all menus
+                hideChannelMenu();
+            }
+        });
+
+        $('[id="channel-navigation"]').find('a').first().keydown(function (e) {
+            if (e.keyCode == 9) {
+                // hide open MyStart Bar menus
+                hideMyStartBarMenu();
+            }
+        });
+
+        /*$(document).click(function() {
+            hideChannelMenu();
+        });*/
+
+        $('[id="channel-navigation"]').click(function (e) {
+            e.stopPropagation();
+        });
+    });
+    </script>
+
+    <!-- Page -->
+    
+    <style type="text/css">/* GroupBegin MyStart */
+div.sw-mystart-button.translateBack {
+	display:none;
+}
+#sw-mystart-outer, #sw-footer-outer {
+	width: 960px;
+}
+/* GroupEnd */
+
+/* GroupBegin Global */
+body {
+	background-color: #333333;
+}
+div.column {
+	float: left;
+}
+#gb-channel-list {
+	width: 960px;
+	height: auto;
+	background: #fff url(http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/nav_background.png);
+}
+div#gb-header-title:after {
+	clear:both;
+	visibility:hidden;
+	content:".";
+	display:block;
+	height:0px;
+}
+#gb-sitename {
+	padding:20px 0px 0px 20px;
+}
+#gb-logo {
+	text-align: left;
+	float:left;
+	display:none;
+	overflow: hidden;
+}
+#gb-name {
+	font-size: 29px;
+	text-shadow: 0.2em 0.2em 0.2em #333;
+	margin:0px;
+	padding-top:60px;
+}
+#gb-name.sp {
+	padding-top:0px;
+}
+h2#gb-tagline {
+	font-size: 18px;
+	text-shadow: 0.1em 0.1em 0.1em #333;
+	margin:0px;
+}
+#gb-global-icons {
+	position: absolute;
+	height: 63px;
+	bottom: 15px;
+	left: 18px;
+	text-align: center;
+	width: 400px;
+}
+#rounded-footer {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+div#gb-footer {
+	width: 920px;
+	height: auto;
+	background-color: #333;
+	margin: 0 auto 0 auto;
+	padding:15px 20px;
+}
+div#gb-footer:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+div.gb.footer.one {
+	float:left;
+	text-align:left;
+	width: 460px;
+}
+div.gb.footer.two {
+	float:left;
+	text-align:right;
+	width: 460px;
+}
+/* GroupEnd */
+
+/* GroupBegin App Styles */
+div.ui-widget.app {
+	padding: 15px;
+	background: transparent;
+}
+div.ui-widget.app div.ui-widget.app {
+	padding: 0px;
+}
+div.ui-article {
+	border-bottom: none;
+	min-height: 0px;
+	padding: 10px;
+}
+.ui-article-title {
+	font-family: 'Droid Sans', arial, sans-serif;
+	line-height: normal;
+}
+a.view-calendar-link {
+	display: block;
+	padding: 10px;
+}
+div.ui-widget.app .ui-widget-header h1 {
+	font-family: 'Droid Sans', arial, sans-serif;
+	color: #22201d;
+	font-size:22px;
+	margin:0;
+	padding:25px 10px 0px;
+	font-weight: normal;
+}
+div.ui-widget.app .ui-widget-header {
+	background:none;
+	border-bottom:none;
+}
+div.ui-widget-header h1 {
+	color: #fff;
+}
+div.upcomingevents div.ui-article {
+	padding-bottom: 0px;
+}
+div.upcomingevents div.ui-article h1, div.upcomingevents div.ui-article p {
+	margin: 0px;
+}
+#hp-page div.ui-widget.app .ui-widget-header {
+	
+}
+#hp-page div.ui-widget.app.shortcuts .ui-widget-detail {
+	margin: 0px 8px;
+	width: auto;
+}
+#hp-page div.ui-widget.app .ui-widget-header h1 {
+	font-family: 'Droid Sans', arial, sans-serif;
+	text-shadow: 0.05em 0.05em 0.1em #333;
+	color: #22201d;
+	font-size:22px;
+	margin:0;
+	padding:10px;
+	font-weight: normal;
+}
+div.hp.column.two div.ui-widget.app {
+	position: relative;
+}
+div.sp.two div.ui-widget.app {
+	padding: 5px;
+}
+div.sp.two div.ui-widget.app div.ui-widget.app {
+	padding: 0px;
+}
+.sp.column.one div.ui-widget.app .ui-widget-header h1 {
+	font-family: 'Droid Sans', arial, sans-serif;
+	text-shadow: 0.05em 0.05em 0.1em #333;
+	color: #22201d;
+	font-size:22px;
+	margin:0;
+	padding:10px;
+	font-weight: normal;
+}
+/* GroupEnd */
+
+/* GroupBegin Homepage */
+#hp-page {
+	width: 960px;
+	margin: 0 auto 0 auto;
+}
+#hp-header {
+	height: 282px;
+	width: 960px;
+	position: relative;
+	z-index: 3000;
+}
+#hp-page h1#gb-name, #hp-page h2#gb-tagline {
+	display: block;
+	color: #fff;
+	text-align: center;
+	font-family: 'Droid Sans', arial, sans-serif;
+	position: relative;
+	font-weight: normal;
+}
+#hp-schoolname-container a, #sp-schoolname-container a {
+	text-decoration: none;
+}
+#hp-schoolname-container {
+	height: 278px;
+	position: relative;
+	width: 400px;
+	overflow: hidden;
+	z-index: 3000;
+}
+#hp-upper-curve {
+	position: absolute;
+	top:0px;
+	left: 0px;
+	width: 565px;
+	height: 282px;
+	z-index: 3000;
+}
+#hp-content-outer {
+	width: 948px;
+	background: #fff;
+	min-height:300px;
+	height:auto!important;
+	height:300px;
+	padding-left: 12px;
+}
+#hp-bottom-curve {
+	width: 480px;
+	height: 170px;
+	background: #ddd URL(http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/bottom-curve.png);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.hp.column {
+	padding-bottom: 10px;
+}
+div.hp.column.one {
+	width: 228px;
+	background: #FFF URL(http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/rounded_header.png) no-repeat;
+	position: relative;
+}
+div.hp.column.two {
+	width: 480px;
+	background: #ccc URL(http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/region2_background.png) repeat-y;
+	position: relative;
+}
+div.hp.column.three {
+	width: 240px;
+	background: #ddd;
+}
+.hp.one.footer {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+#sw-content-container4 {
+	width: 648px;
+	height: 278px;
+	overflow: hidden;
+	float:right;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+/* GroupEnd */
+
+/* GroupBegin Photo Area */
+div#sw-content-container10 {
+	width: 648px;
+	height: 278px;
+	overflow: hidden;
+	float:right;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 2000;
+}
+#sw-content-container10.ui-hp div.ui-widget.app.file-library {
+	display:none;
+}
+/* GroupEnd */
+
+/* GroupBegin Subpage */
+#sp-page {
+	width: 960px;
+	margin: 0 auto 0 auto;
+}
+#sp-header {
+	width: 960px;
+	height: 120px;
+	position: relative;
+}
+#sp-header #accent-line {
+	top: 116px;
+}
+.sp.school-name, .sp.school-slogan {
+	display:block;
+	font-family: 'Droid Sans', arial, sans-serif;
+	position:relative;
+	text-align:left;
+}
+.sp.school-name {
+	font-size: 25px;
+	font-weight:bold;
+	padding:20px 20px 0;
+	text-shadow:0.2em 0.2em 0.2em #333333;
+}
+.sp.school-slogan {
+	font-size:15px;
+	padding:5px 10px;
+	text-shadow:0.1em 0.1em 0.1em #333333;
+}
+#sp-logo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#sp-upper-curve {
+	position: absolute;
+	left: 400px;
+	top: 0px;
+	width: 100px;
+	height: 120px;
+}
+#sp-schoolname-container {
+	width: 960px;
+	height: 120px;
+	top: 0px;
+	left: 0px;
+	position: relative;
+}
+#sp-global-container {
+	position: absolute;
+	width: 400px;
+	height: 63px;
+	overflow: hidden;
+	text-align: right;
+	right: 18px;
+	top: 25px;
+}
+#sp-content-outer {
+	background-color: #fff;
+	padding-left:12px;
+	width: 948px;
+}
+#sp-content-container {
+	background-color:#FFF;
+}
+#sp-leftnav-header {
+}
+#sp-leftnav-detail {
+	padding: 6px 0px;
+}
+div.sp.one {
+	background:url("http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/rounded_header.png") no-repeat scroll 0 0 #eee;
+	position:relative;
+	width:228px;
+	padding-bottom: 40px;
+	padding-top: 32px;
+}
+div.sp.two {
+	padding: 15px;
+	width: 690px;
+}
+/* GroupEnd */
+
+/* GroupBegin Subpage No Nav */
+#nn-page {
+	width: 960px;
+	margin: 0 auto 0 auto;
+}
+/* GroupEnd */
+
+/* GroupBegin Navigation */
+div.ui-widget.app.pagenavigation li.active > a, div.ui-widget.app.navigation li:hover > a {
+	text-decoration: underline;
+}
+div.ui-widget.app.navigation li div.bullet {
+	background-position: -5px -9px;
+}
+#sp-breadcrumbs {
+	margin: 0px 10px 10px 10px;
+	padding: 10px 0px 0px 0px;
+	display:none;
+}
+/* GroupEnd */
+
+/* GroupBegin Channels */
+ul.sw-channel-list li.sw-channel-item {
+	float:left;
+	height:40px;
+}
+li.sw-channel-item.hover > a, li.sw-channel-item.active > a {
+	background: URL(http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/nav_active.png);
+}
+li.sw-channel-item > a span {
+	padding: 12px 0px 0px 15px;
+}
+#sw-channel-list-container {
+	height: auto;
+}
+li.sw-channel-item > a span {
+	white-space: nowrap;
+}
+/* GroupEnd */
+
+/* GroupBegin Channels Dropdown */
+ul.sw-channel-dropdown {
+	background: none repeat scroll 0 0 #F3F3F3;
+	border: 1px solid #CCCCCC;
+	display: none;
+	font-size: 12px;
+	font-weight: normal;
+	left: 0;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 39px;
+	width: 180px;
+	z-index: 7001;
+}
+ul.sw-channel-dropdown li {
+	border: 0 none;
+	display: block;
+	height: auto;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	white-space: pre-wrap;
+	width: 180px;
+}
+ul.sw-channel-dropdown li a {
+	background: none repeat scroll 0 0 transparent;
+	color: #666666;
+	display: block;
+	padding: 7px 10px;
+	text-decoration: none;
+	width: 160px;
+}
+ul.sw-channel-dropdown li a:hover {
+	background: none repeat scroll 0 0 #E2E2E2;
+	color: #000000;
+}
+.sw-channel-more-li {
+	background-color: #333333;
+	background-position: right top;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+ul.sw-channel-dropdown li.sw-channel-more-li a:hover {
+	background-color: #333333;
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+.sw-channel-more-span {
+	color: #FFFFFF;
+}
+/* GroupEnd */
+        
+/* GroupBegin EditorStyles */
+body {
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1;
+	color: #000000;
+	background:transparent;
+}
+h1 {
+	font-size: 22px;
+	font-family: 'Droid Sans',arial,sans-serif;
+	text-shadow: 0.05em 0.05em 0.1em #333333;
+	padding: 0px;
+	margin: 0px;
+	line-height: 1.5;
+}
+h2 {
+	font-size: 20px;
+	font-family: 'Droid Sans',arial,sans-serif;
+	text-shadow: 0.05em 0.05em 0.1em #333333;
+	padding: 0px;
+	margin: 0px;
+	line-height: 1.5;
+}
+h3 {
+	font-size: 17px;
+	padding: 0px;
+	margin: 0px;
+	line-height: 1.2;
+}
+h4 {
+	font-size: 14px;
+	padding: 0px;
+	margin: 0px;
+	line-height: 1.2;
+}
+h5 {
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0px;
+	margin: 0px;
+	line-height: 1;
+}
+h6 {
+	font-size: 12px;
+	font-weight: normal;
+	font-style: italic;
+	padding: 0px;
+	margin: 0px;
+	line-height: 1;
+}
+.title {
+	font-weight:bold;
+}
+.subtitle {
+	font-style:italic;
+}
+/* GroupEnd */
+        
+        
+        </style>
+    <style>
+.sw-mystart-button.home     {
+display:none;
+}
+</style><link href="http://fonts.googleapis.com/css?family=Droid+Sans&amp;subset=latin" rel="stylesheet" type="text/css">
+<script src="http://extend.schoolwires.com/creative/scripts/joel/rotate.gallery/joel.photoGallery.rotate.v1.0.min.js"></script>
+<script language="javascript" src="http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/setup/_admin.txt"></script>
+<script language="javascript" src="http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/setup/_default.txt"></script>
+<script language="javascript" src="http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/scripts/jquery.ba-resize.min.js"></script>
+<script language="javascript" src="http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/scripts/jquery.cookies.2.2.0.min.js"></script>
+<script language="javascript" src="http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/scripts/jquery.translate.min.js"></script>
+<script language="javascript">
+	$(document).ready(function(){
+		templatePath = "/cms/lib07/MN01909325/Centricity/Template/9/";
+		schoolLevel();
+	});
+	function initialize(){
+		dynamicStylesheet();
+		customLogo();
+		useChannelForSection();
+		dynamicContent();
+		globalIcons();
+		loadFlash();
+		sameHeight($(".column"));
+		$("#sw-content-container10.region.ui-hp div.ui-widget.app.gallery").galleryRotate({
+			"width" : 645,
+			"height" : 285
+		});
+		templateLibrary();
+	}
+	function schoolLevel() {
+		if(schoolTextFiles == "on") {
+			$.ajax({
+			  url: "/cms/lib07/MN01909325/Centricity/Template/9/setup/www.echo.charter.k12.mn.us.txt",
+			  dataType: "script",
+			  success: function() {
+			    initialize();
+			  },
+			  error: function()
+			  {
+			  	alert("An error had occured in initializing setup files.");
+			  }
+			});
+		}
+		else
+		{
+			initialize();
+		}
+		
+	}
+	function dynamicStylesheet() {
+		var dynStyleSheet = document.createElement('style');
+		if(dynStyleSheet) {
+			dynStyleSheet.setAttribute('type', 'text/css');
+			var head = document.getElementsByTagName('head')[0];
+			if(head) {
+	      			head.appendChild(dynStyleSheet);
+			}
+			var dynStyles = 	"a, a:visited {" +
+						"	color:" + linkColor + ";" +
+						"	text-decoration:" + linkDecoration + ";" +
+						"}" +
+						"ul.sw-channel-list li.sw-channel-item > a {" +
+						"	color: " + channelTextColor + ";" +
+						"}" +
+						"ul.sw-channel-list li.sw-channel-item.active > a, ul.sw-channel-list li.sw-channel-item.hover > a, ul.sw-channel-list li.sw-channel-item > a:hover {" +
+						"	background-color: " + channelBarColorActive + ";" +
+						"	color: " + channelTextColorActive + ";" +
+						"}" +
+						"ul.sw-channel-dropdown li a {" +
+						"	color: " + channelDropdownTextColor + ";" +
+						"}" +
+						"ul.sw-channel-dropdown li a:hover {" +
+						"	background-color: " + channelDropdownColorHover + ";" +
+						"	color: " + channelDropdownTextColorHover + ";" +
+						"}";
+			var rules = document.createTextNode(dynStyles);
+			if(dynStyleSheet.styleSheet){// IE
+				dynStyleSheet.styleSheet.cssText = dynStyles;
+			} else {
+				dynStyleSheet.appendChild(rules);
+			}
+		}
+	}
+	function customLogo() {
+		if(customLogos != "none") {
+			if(customLogos == "on") {
+				$("#hp-schoolname-container #gb-logo a img").attr("src","/cms/lib07/MN01909325/Centricity/template/9/logos/_hp_www.echo.charter.k12.mn.us.png");
+				$("#sp-schoolname-container #gb-logo a img").attr("src","/cms/lib07/MN01909325/Centricity/template/9/logos/_sp_www.echo.charter.k12.mn.us.png");
+			} else {
+				$("#hp-schoolname-container #gb-logo a img").attr("src","/cms/lib07/MN01909325/Centricity/template/9/logos/_hp_logo.png");
+				$("#sp-schoolname-container #gb-logo a img").attr("src","/cms/lib07/MN01909325/Centricity/template/9/logos/_sp_logo.png");
+			}
+			$("#gb-logo").show(); 
+		}
+	}
+	function useChannelForSection() {
+		if(!$("div.sp.column.one .ui-widget-header h1").length > 0) {
+			$("div.sp.column.one .ui-widget-header").append("<h1></h1>");
+		}
+	}
+	function dynamicContent() {
+		//TOGGLES BREADCRUMBS ON/OFF
+		if(breadcrumbToggle == "on"){
+			$("#sp-breadcrumbs").show();
+		}
+		//SETS DISTRICT BUTTON ON/OFF
+		if (districtButton == "off"){
+			$(".sw-mystart-button.home").hide();
+		}
+		
+		//SETS BACKGROUND COLORS
+		$("body").css("background-color", backgroundColor);
+		
+		//SETS PRIMARY COLORS
+		$("#hp-header, #sp-header").css("background-color", primaryColor);
+		$(".hp.column.one").css("background-color", primaryColor);
+		$(".sp.column.one").css("background-color", primaryColor);
+		
+		//SETS SECONDARY COLORS
+		$(".hp.column.two").css("background-color", secondaryColor);
+		$("#hp-bottom-curve").css("background-color", secondaryColor);
+		$(".hp.column.three").css("background-color", secondaryColor);
+		
+		//SETS ACCENT COLORS
+		$("#gb-footer").css("background-color", accentColor);
+		
+		//SETS CHANNEL BAR STYLES
+		$("#sw-channel-list-container").css("background-color", channelBarColor);
+		$("ul.sw-channel-dropdown").css("background-color", channelDropdownColor);
+		$("ul.sw-channel-dropdown").css("border-color", backgroundColor);
+		//**DROPDOWN TEXT COLOR AND TEXT HOVER STATE IS SET IN THE DYNAMIC STYLESHEET FUNCTION**
+		
+		//SETS SCHOOLNAME
+		if (schoolNameText == "default") {
+			$("h1#gb-name a").html("ECHO Charter School");		
+		
+		} else {
+			$("h1#gb-name a").html(schoolNameText);	
+		}
+		//SETS SCHOOLNAME COLOR
+		$("h1#gb-name a").css("color",schoolNameColor);
+		
+		//SETS TAGLINE
+		$("h2#gb-tagline").html(taglineText);
+		//SETS TAGLINE COLOR
+		$("#hp-header h2#gb-tagline").css("color", taglineColor);
+		$("#sp-header h2#gb-tagline").css("color", taglineColor);
+		
+		//SETS REGION COLORS
+		//REGION 1
+		//HEADER COLOR
+		$(".hp.column.one div.ui-widget.app .ui-widget-header h1, .sp.column.one div.ui-widget.app .ui-widget-header h1").css("color", region1HeaderColor);
+		//BODY COLOR
+		$(".hp.column.one .ui-widget-detail").css("color", region1BodyColor);
+		//LINK COLOR
+		$(".hp.column.one a, ul.sw-pagenavigation-control li > a").css("color",region1LinkColor);
+		
+		//REGION 2
+		//HEADER COLOR
+		$(".hp.column.two div.ui-widget.app .ui-widget-header h1").css("color", region2HeaderColor);
+		//BODY COLOR
+		$(".hp.column.two .ui-widget-detail").css("color", region2BodyColor);
+		//LINK COLOR
+		$(".hp.column.two a").css("color",region2LinkColor);
+		
+		//REGION 3
+		//HEADER COLOR
+		$(".hp.column.three div.ui-widget.app .ui-widget-header h1").css("color", region3HeaderColor);
+		//BODY COLOR
+		$(".hp.column.three .ui-widget-detail").css("color", region3BodyColor);
+		//LINK COLOR
+		$(".hp.column.three a").css("color",region3LinkColor);
+		
+		//SETS FOOTER COLORS
+		$("#gb-footer, #gb-footer a").css("color", footerTextColor);
+		
+		//PAGE NAVIGATION
+		//HEADER COLOR
+		$(".sp.column.one .ui-widget-header h1").css("color",region1HeaderColor);
+		//BODY COLOR
+		$(".sp.column.one ").css("color",region1BodyColor);
+		//LINK COLOR
+		$(".sp.column.one a").css("color",region1LinkColor); 	     
+	}
+	function globalIcons() {
+   		//NEEDED FOR JOEYS COLOR CHANGING APP
+  	}
+  	function drawCurve() {
+   		//NEEDED FOR JOEYS COLOR CHANGING APP
+  	}
+	function loadFlash() {
+		if($("#hp-upper-curve").size()){
+	            var so = new SWFObject("/cms/lib07/MN01909325/Centricity/Template/9/lt-verticalCurve-uppercurve.swf","mymovie", "565", "282", "9", "#FFFFFF");
+	            so.addParam("wmode", "transparent");
+	            so.addVariable("primaryColor", primaryColor);
+	            so.addVariable("secondaryColor", secondaryColor);
+	            so.write("hp-upper-curve");
+	        }
+        	if($("#sp-upper-curve").size()){
+        	    var so = new SWFObject("/cms/lib07/MN01909325/Centricity/Template/9/lt-verticalCurve-secondaryPage.swf","mymovie", "100", "120", "9", "#FFFFFF");
+	            so.addParam("wmode", "transparent");
+	            so.addVariable("secondaryColor", secondaryColor);
+	            so.write("sp-upper-curve");
+        	
+        	}
+	}
+	function sameHeight(group) {
+		group.height(group.parent().height());
+		group.children().resize(function() {
+			group.height("");
+	      		group.height(group.parent().height());	
+                });
+	}
+	function templateLibrary() {
+        	if(window.location.host == "templatelibrary.schoolwires.net") {
+        		var parentAlias = "www.echo.charter.k12.mn.us";
+			if(parentAlias == "silver" || parentAlias == "bronze"){
+				$.ajax({
+				  url: "/cms/lib2/SW00000032/Centricity/Domain/4/scripts/templateDropdown.js",
+				  dataType: "script",
+				  success: function() {
+				  	modifyDropdown(parentAlias);
+				  },
+				  error: function() {
+				  	alert("An error has occured initializing dropdown modification.");
+				  }
+				});
+			}
+		}
+	}	
+</script>    
+
+    <!-- App Preview -->
+    
+
+
+    <style type="text/css">
+        /* HOMEPAGE EDIT THUMBNAIL STYLES */
+
+        div.region {
+            ;
+        }
+
+            div.region span.homepage-thumb-region-number {
+                font: bold 100px verdana;
+                color: #fff;
+            }
+
+        div.homepage-thumb-region {
+            background: #264867; /*dark blue*/
+            border: 5px solid #fff;
+            text-align: center;
+            padding: 40px 0 40px 0;
+            display: block;
+        }
+
+            div.homepage-thumb-region.region-1 {
+                background: #264867; /*dark blue*/
+            }
+
+            div.homepage-thumb-region.region-2 {
+                background: #5C1700; /*dark red*/
+            }
+
+            div.homepage-thumb-region.region-3 {
+                background: #335905; /*dark green*/
+            }
+
+            div.homepage-thumb-region.region-4 {
+                background: #B45014; /*dark orange*/
+            }
+
+            div.homepage-thumb-region.region-5 {
+                background: #51445F; /*dark purple*/
+            }
+
+            div.homepage-thumb-region.region-6 {
+                background: #3B70A0; /*lighter blue*/
+            }
+
+            div.homepage-thumb-region.region-7 {
+                background: #862200; /*lighter red*/
+            }
+
+            div.homepage-thumb-region.region-8 {
+                background: #417206; /*lighter green*/
+            }
+
+            div.homepage-thumb-region.region-9 {
+                background: #D36929; /*lighter orange*/
+            }
+
+            div.homepage-thumb-region.region-10 {
+                background: #6E5C80; /*lighter purple*/
+            }
+
+        /* END HOMEPAGE EDIT THUMBNAIL STYLES */
+    </style>
+
+    <style type="text/css" media="print">
+        .noprint {
+            display: none !important;
+        }
+    </style>
+
+    
+
+<!-- Begin Schoolwires Traffic Code --> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5173826-6']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+
+  _gaq.push(['_setCustomVar', 4, 'AccountNo', 'MN01909325', 1]);
+    _gaq.push(['_setCustomVar', 5, 'LoggedIn', 'False', 3]);
+    // Added Custom Variable to allow us to filter based on hosting type, so we can see stats for each environment. Pulls from web config.
+  _gaq.push(['_setCustomVar',
+    1,                // This custom var is set to slot #1.  Required parameter.
+    'Hosting Type',    // The name of the custom variable.  Required parameter.
+    'SAASC',        // The value of the custom variable.  Required parameter.
+                      //  (possible values might be Free, Bronze, Gold, and Platinum)
+    1                 // Sets the scope to visitor-level.  Optional parameter.
+  ]);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- End Schoolwires Traffic Code --> 
+
+    
+</head>
+<body>
+
+    <input type="hidden" id="hidFullPath" value="http://www.echo.charter.k12.mn.us/" />
+    <input type="hidden" id="hidActiveChannelNavType" value="-1" />
+    <input type="hidden" id="hidActiveChannel" value ="0" />
+    <input type="hidden" id="hidActiveSection" value="0" />
+
+    <!-- OnScreen Alert Dialog Start -->
+    <div id="onscreenalert-holder"></div>
+    <!-- OnScreen Alert Dialog End -->
+
+    <!-- ADA Skip Nav -->
+    <div class="sw-skipnav-outerbar">
+        <a href="index.html#sw-maincontent" id="skipLink" class="sw-skipnav" tabindex="0">Skip to Main Content</a>
+    </div>
+
+    <!-- DashBoard SideBar Start -->
+    
+    <!-- DashBoard SideBar End -->
+
+    <!-- off-canvas menu enabled-->
+    
+
+    
+
+<style type="text/css">
+	/* SPECIAL MODE BAR */
+	div.sw-special-mode-bar {
+		background: #FBC243 url('http://www.echo.charter.k12.mn.us/Static/V2_17_01//GlobalAssets/Images/special-mode-bar-background.png') no-repeat;
+		height: 30px;
+		text-align: left;
+		font-size: 12px;
+		position: relative;
+		z-index: 10000;
+	}
+	div.sw-special-mode-bar > div {
+		padding: 8px 0 0 55px;
+		font-weight: bold;
+	}
+	div.sw-special-mode-bar > div > a {
+		margin-left: 20px;
+		background: #A0803D;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		color: #fff;
+		padding: 4px 6px 4px 6px;
+		font-size: 11px;
+	}
+	
+	body.blue div.sw-special-mode-bar, body.green div.sw-special-mode-bar, body.red div.sw-special-mode-bar {
+	    display: none;
+	}
+
+	/* END SPECIAL MODE BAR */
+</style>
+
+<script type="text/javascript">
+	
+	function SWEndPreviewMode() { 
+		var data = "{}";
+		var success = "window.location='';";
+		var failure = "CallControllerFailure(result[0].errormessage);";
+		CallController("http://www.echo.charter.k12.mn.us/site/SiteController.aspx/EndPreviewMode", data, success, failure);
+	}
+	
+	function SWEndEmulationMode() {
+		SetUnescapedCookie('UserID', GetCookie('SourceEmulationUserID'));
+		DeleteCookie('SourceEmulationUserID');
+		window.location = 'http://www.echo.charter.k12.mn.us/ums/Users/Users.aspx';
+	}
+
+	function SWEndPreviewConfigMode() {
+	    var data = "{}";
+	    var success = "window.location='';";
+	    var failure = "CallControllerFailure(result[0].errormessage);";
+	    CallController("http://www.echo.charter.k12.mn.us/site/SiteController.aspx/EndPreviewConfigMode", data, success, failure);
+	}
+</script>
+            
+
+    <!-- BEGIN - MYSTART BAR -->
+<div id='sw-mystart-outer' class='noprint'>
+<div id='sw-mystart-inner'>
+<div id='sw-mystart-left'>
+<div class='sw-mystart-nav sw-mystart-button home'><a tabindex="0" href="http://www.echo.charter.k12.mn.us/Domain/4" alt="District Home" title="Return to the homepage on the district site."><span>District Home<div id='sw-home-icon'></div>
+</span></a></div>
+</div>
+<div id='sw-mystart-right'>
+<div id='ui-btn-signin' class='sw-mystart-button signin'><a href="http://www.echo.charter.k12.mn.us/site/Default.aspx?PageType=7&SiteID=4&IgnoreRedirect=true"><span>Sign In</span></a></div>
+<div id='ui-btn-register' class='sw-mystart-button register'><a href="http://www.echo.charter.k12.mn.us/site/Default.aspx?PageType=10&SiteID=4"><span>Register</span></a></div>
+<div id='sw-mystart-search' class='sw-mystart-nav'>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#sw-search-input').keyup(function(e) {        if (e.keyCode == 13) {
+            SWGoToSearchResultsPageswsearchinput();
+        }
+    });
+    $('#sw-search-input').val($('#swsearch-hid-word').val())});
+function SWGoToSearchResultsPageswsearchinput() {
+window.location.href="http://www.echo.charter.k12.mn.us/site/Default.aspx?PageType=6&SiteID=4&SearchString=" + $('#sw-search-input').val();
+}
+</script>
+<input id="sw-search-input" type="text" title="Search Term" aria-label="Search Term" placeholder="Search this Site..." />
+<a tabindex="0" id="sw-search-button" title="Search" aria-label="Search" onclick="SWGoToSearchResultsPageswsearchinput();"><span><img src="http://www.echo.charter.k12.mn.us/Static/V2_17_01//globalassets/images/sw-mystart-search.png" alt="Search" /></span></a>
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+<!-- END - MYSTART BAR -->
+<div id="hp-page">
+	<div id="gb-channel-list"><div id="sw-channel-list-container">
+<ul id="channel-navigation" class="sw-channel-list">
+<li id="navc-HP" class="sw-channel-item"><a href="http://www.echo.charter.k12.mn.us/Page/1"><span>Home</span></a></li>
+<li id="navc-9" class="sw-channel-item">
+<a href="http://www.echo.charter.k12.mn.us/domain/93">
+<span>For Parents</span></a>
+<ul class="sw-channel-dropdown">
+<li id="navs-93"><a href="http://www.echo.charter.k12.mn.us/domain/93"><span>Parent Information</span></a></li>
+<li id="navs-30"><a href="http://www.echo.charter.k12.mn.us/domain/30"><span>Fundraising</span></a></li>
+<li id="navs-99"><a href="https://www23.tiescloud.net/schoolview/sv_login_secure.asp?"><span>Parent Portal</span></a></li>
+<li id="navs-171"><a href="http://www.echo.charter.k12.mn.us/domain/171"><span>Student Handbook</span></a></li>
+</ul>
+</li><li id="navc-16" class="sw-channel-item">
+<a href="http://www.echo.charter.k12.mn.us/domain/36">
+<span>For Students</span></a>
+</li><li id="navc-19" class="sw-channel-item">
+<a href="http://www.echo.charter.k12.mn.us/domain/111">
+<span>Our District</span></a>
+<ul class="sw-channel-dropdown">
+<li id="navs-111"><a href="http://www.echo.charter.k12.mn.us/domain/111"><span>Authorizer Information</span></a></li>
+<li id="navs-116"><a href="http://www.echo.charter.k12.mn.us/domain/116"><span>Core Knowledge</span></a></li>
+<li id="navs-92"><a href="http://www.echo.charter.k12.mn.us/domain/92"><span>Director's Desk</span></a></li>
+<li id="navs-122"><a href="http://www.echo.charter.k12.mn.us/domain/122"><span>ECHO Charter School Forms</span></a></li>
+<li id="navs-175"><a href="http://www.echo.charter.k12.mn.us/domain/175"><span>Employment</span></a></li>
+<li id="navs-166"><a href="http://www.echo.charter.k12.mn.us/domain/166"><span>Food Services</span></a></li>
+<li id="navs-101"><a href="http://www.echo.charter.k12.mn.us/domain/101"><span>Literacy Plan</span></a></li>
+<li id="navs-37"><a href="http://www.echo.charter.k12.mn.us/domain/37"><span>Reports</span></a></li>
+<li id="navs-152"><a href="http://www.echo.charter.k12.mn.us/domain/152"><span>Rocket Learning Center</span></a></li>
+<li id="navs-107"><a href="http://www.echo.charter.k12.mn.us/domain/107"><span>School Board</span></a></li>
+<li id="navs-128"><a href="http://www.echo.charter.k12.mn.us/domain/128"><span>Title I</span></a></li>
+<li id="navs-165"><a href="http://www.echo.charter.k12.mn.us/domain/165"><span>Wellness Policy</span></a></li>
+<li id="navs-164"><a href="http://www.echo.charter.k12.mn.us/domain/164"><span>World's Best Workforce</span></a></li>
+<li id="navs-181"><a href="http://www.echo.charter.k12.mn.us/site/Default.aspx?PageID=516"><span>Nurse Forms</span></a></li>
+</ul>
+</li><li id="navc-156" class="sw-channel-item">
+<a href="http://www.echo.charter.k12.mn.us/domain/159">
+<span>Staff</span></a>
+</li><li id="navc-112" class="sw-channel-item">
+<a href="http://www.echo.charter.k12.mn.us/domain/112">
+<span>Why ECHO Charter?</span></a>
+<ul class="sw-channel-dropdown">
+</ul>
+</li><li id="navc-123" class="sw-channel-item">
+<a href="http://www.echo.charter.k12.mn.us/domain/124">
+<span>Athletics</span></a>
+</li><li id="navc-100" class="sw-channel-item">
+<a href="https://mail.echocharter.com/owa/">
+<span>Faculty Resources</span></a>
+<ul class="sw-channel-dropdown">
+<li id="navs-76"><a href="https://mail.echocharter.com/owa/"><span>Email</span></a></li>
+<li id="navs-85"><a href="http://asp.tiescloud.net/"><span>TIES</span></a></li>
+</ul>
+</li><li id="navc-CA" class="sw-channel-item "><a href="http://www.echo.charter.k12.mn.us/Page/2"><span>Calendar</span></a></li>
+</ul><div class='clear'></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        channelHoverIE();
+        channelTouch();
+        closeMenuByPressingKey();
+    });
+
+    function channelTouch() {
+        // this will change the dropdown behavior when it is touched vs clicked.
+        // channels will be clickable on second click. first click simply opens the menu.
+        $('#channel-navigation > .sw-channel-item > a').on({
+            'touchstart': function (e) {
+                
+                // see if has menu
+                if ($(this).siblings('ul.sw-channel-dropdown li').length > 0) {
+                    var button = $(this);
+
+                    // add href as property if not already set
+                    // then remove href attribute
+                    if (!button.prop('linkHref')) {
+                        button.prop('linkHref', button.attr('href'));
+                        button.removeAttr('href');
+                    }
+
+                    // check to see if menu is already open
+                    if ($(this).siblings('ul.sw-channel-dropdown').is(':visible')) {
+                        // if open go to link
+                        window.location.href = button.prop('linkHref');
+                    } 
+
+                } 
+            }
+        });
+    }
+
+
+    
+    function channelHoverIE(){
+		// set z-index for IE7
+		var parentZindex = $('#channel-navigation').parents('div:first').css('z-index');
+		var zindex = (parentZindex > 0 ? parentZindex : 8000);
+		$(".sw-channel-item").each(function(ind) {
+			$(this).css('z-index', zindex - ind);
+			zindex --;
+		});
+	    $(".sw-channel-item").hover(function(){
+	        var subList = $(this).children('ul');
+	        if ($.trim(subList.html()) !== "") {
+	            subList.show();
+	            subList.attr("aria-hidden", "false");
+		    }
+		    $(this).addClass("hover");
+	    }, function() {
+	        $(".sw-channel-dropdown").hide();
+	        $(this).removeClass("hover");
+	        var subList = $(this).children('ul');
+	        if ($.trim(subList.html()) !== "") {
+	            subList.attr("aria-hidden", "true");
+	        }
+	    });
+    }
+
+    function closeMenuByPressingKey() {
+        $(".sw-channel-item").each(function(ind) {
+            $(this).keyup(function (event) {
+                if (event.keyCode == 27) { // ESC
+                    $(".sw-channel-dropdown").hide();
+                    $(this).removeClass("hover");
+                    var subList = $(this).children('ul');
+                    if ($.trim(subList.html()) !== "") {
+                        subList.attr("aria-hidden", "true");
+                    }
+                    $(this).next().find('a:first').focus();
+                }
+            });
+        });
+
+        $(".sw-channel-dropdown li").each(function(ind) {
+            $(this).keyup(function (event) {
+                if (event.keyCode == 9) { // TAB
+                    $(".sw-channel-dropdown").hide();
+                    var parentMenuItem = $(this).parent().closest('li');
+                    parentMenuItem.removeClass("hover");
+                    var subList = parentMenuItem.children('ul');
+                    if ($.trim(subList.html()) !== "") {
+                        subList.attr("aria-hidden", "true");
+                    }
+                    parentMenuItem.next().find('a:first').focus();
+                }
+            });
+        });
+    }
+
+</script>
+
+
+		<div class="clear"></div>
+	</div>
+	
+	<div id="hp-header">
+		<a id="sw-maincontent" name="sw-maincontent" tabindex="0"></a><div id="sw-content-container10" class="region ui-hp"><div id='pmi-31'>
+<div id="module-content-35" >
+<div class="ui-widget app gallery json">
+<script type="text/javascript">
+var photoGallery31= {"Album": {"title":"Rotating Images: 648px x 278px","description":"","transitiondelay":"3","fadestyle":"NO","gallerywidth":"648","backgroundaudio":"/cms/lib07/MN01909325/Centricity/ModuleInstance/35/","loopaudio":"False","lgpath":"/cms/lib07/MN01909325/Centricity/ModuleInstance/35/large/","tnpath":"/cms/lib07/MN01909325/Centricity/ModuleInstance/35/thumbs/","Images": [{"photoname":"all school picture 2016-2017_001","src":"all school picture 2016-2017_001.jpg?rnd=0.702197307582105","caption":"","pause":"","link":"","target":"_self"},{"photoname":"IMG_1017","src":"IMG_1017.JPG?rnd=0.399568970035561","caption":"","pause":"","link":"","target":"_self"},{"photoname":"IMG_0413","src":"IMG_0413.JPG?rnd=0.346098115363204","caption":"","pause":"","link":"","target":"_self"},{"photoname":"GF3_0013","src":"GF3_0013.JPG?rnd=0.232617607914199","caption":"","pause":"","link":"","target":"_self"},{"photoname":"DSC_0429","src":"DSC_0429.JPG?rnd=0.758943064026042","caption":"","pause":"","link":"","target":"_self"},{"photoname":"ditch cleaning","src":"ditch cleaning.jpg?rnd=0.00767027680187965","caption":"","pause":"","link":"","target":"_self"},{"photoname":"DSC_0385","src":"DSC_0385.JPG?rnd=0.34749067311524","caption":"","pause":"","link":"","target":"_self"},{"photoname":"FB_IMG_1445469775311","src":"FB_IMG_1445469775311.jpg?rnd=0.798315989225319","caption":"","pause":"","link":"","target":"_self"},{"photoname":"FB_IMG_1443465024916","src":"FB_IMG_1443465024916.jpg?rnd=0.0841324814055732","caption":"","pause":"","link":"","target":"_self"},{"photoname":"IMG_1246","src":"IMG_1246.JPG?rnd=0.432226305097447","caption":"","pause":"","link":"","target":"_self"},{"photoname":"IMG_1304","src":"IMG_1304.JPG?rnd=0.613960238925163","caption":"","pause":"","link":"","target":"_self"},{"photoname":"IMG_1267","src":"IMG_1267.JPG?rnd=0.590171675938261","caption":"","pause":"","link":"","target":"_self"}]}}
+</script>
+</div>
+</div>
+</div>
+</div>
+		<div id="hp-upper-curve"></div>
+		<div id="hp-schoolname-container">
+			<div id="gb-header-title">
+				<div id="gb-logo">
+					<a href="http://www.echo.charter.k12.mn.us/www.echo.charter.k12.mn.us"><img alt="www.echo.charter.k12.mn.us" title="www.echo.charter.k12.mn.us" /></a>
+				</div>
+				<div id="gb-sitename">
+					<h1 id="gb-name"><a href="http://www.echo.charter.k12.mn.us/www.echo.charter.k12.mn.us"></a></h1>
+					<h2 id="gb-tagline"><a href="http://www.echo.charter.k12.mn.us/www.echo.charter.k12.mn.us"></a></h2>
+				</div>
+			</div>
+		</div>
+		</div>
+	
+		<div id="hp-content-outer">
+		<div class="hp column one">
+			<div id="sw-content-container1" class="region ui-hp"><div id='pmi-4'>
+
+
+
+<div id='sw-module-40'>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = '4';
+            var PageID = '1';
+            var RenderLoc = '0';
+            var MIID = '4';
+
+            //added to check to make sure moderated content doesn't bleed through the dialog
+            if ($('#dialog-overlay-WindowLargeModal-body.moderateContent').length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript('ModuleView');CheckScript('Mustache');
+ });</script>
+    
+    <div id="module-content-4" >
+<div class="ui-widget app announcements">
+	<div class="ui-widget-header">
+		<h1>Announcements</h1>
+	</div>
+	
+	<div class="ui-widget-detail">
+		<ul class="ui-articles">
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><p><a href="http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Domain/4/2016-2017.docx">2016-2017 Calendar</a></p></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;ModuleInstanceID=4&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=655&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><p><span style="font-size: medium;"><a href="http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Domain/4/Enrollment.pdf"><strong>Now enrolling for the 2017-2018 school year</strong> </a></span></p></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;ModuleInstanceID=4&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=643&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><p><span style="font-size: large;"><strong>Kindergarten Round - Up is Thursday, March 23, 2017 at 6:30pm</strong></span></p></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;ModuleInstanceID=4&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=639&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><p><span style="font-size: medium;">Interested in becoming an ECHO Charter School Board Member? &nbsp;In the spring of 2017 we will have&nbsp; one parent seat open.&nbsp; If you are interested in becoming a board member in the spring of 2017, please contact the school office.&nbsp; 507-925-4143.&nbsp;</span></p>
+<p><span style="font-size: medium;">&nbsp;</span></p></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;ModuleInstanceID=4&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=620&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+</ul>
+</div>
+	<div class="ui-widget-footer">
+		
+		<div class="app-level-social-follow"></div> <div class="app-level-social-rss"><a title='Subscribe to RSS Feed' tabindex='0' class='ui-btn-toolbar rss' href="http://www.echo.charter.k12.mn.us/site/Default.aspx?PageType=4&DomainID=4&ModuleInstanceID=4&PageID=1"><span>Subscribe to RSS Feed</span></a></div>
+		<div class="clear"></div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&EnableQuirksMode=0&ViewID=' + viewToUse + '&Tag=' + tag, container, 2, 'chkSidebar();');
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $('#hid-'+MIID+'-DetailView').val();
+   }
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&FlexDataID=' + flexDataID + '&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=0&Tag=' + tag + '&ViewID=' + targetView, container, 2, 'chkSidebar();');
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&Tag=' + tag + '&EnableQuirksMode=0&ViewID='+viewToUse, container, 2, 'chkSidebar();');
+}
+</script>
+</div>
+
+</div></div>
+<div id='pmi-9'>
+<div id="module-content-9" >
+<div class="ui-widget app navigation  siteshortcuts">
+	<div class="ui-widget-header"><h1>Site Shortcuts</h1></div>
+	<div class="ui-widget-detail">
+		<ul class="site-shortcuts">
+<li id="siteshortcut-12" class=""><a href="http://192.168.0.6/cataloging/servlet/presentadvancedsearchredirectorform.do?l2m=Library%20Search&amp;tm=Catalog&amp;l2m=Library+Search" target="_parent" >School Library </a>
+</li>
+<li id="siteshortcut-11" class=""><a href="http://www.echo.charter.k12.mn.us/Page/470" target="_blank" >Lunch Menu</a>
+</li>
+<li id="siteshortcut-10" class=""><a href="http://www.projectfoundry.org/" target="_blank" >Project Foundry</a>
+</li>
+<li id="siteshortcut-8" class=""><a href="https://www23.tiescloud.net/schoolview/sv_login_secure.asp?" target="_blank" >Parent Portal</a>
+</li>
+<li id="siteshortcut-1" class=""><a href="http://www.discoveryed.com" target="_parent"  title="Visit Discovery Education by clicking here. " >Discovery Education</a>
+</li></ul>
+<div class="app-level-social-follow"></div>
+	</div>
+	<div class="ui-widget-footer">
+	</div>
+</div></div>
+</div>
+</div>
+			<div id="rounded-footer"><img src="http://www.echo.charter.k12.mn.us/cms/lib07/MN01909325/Centricity/Template/9/rounded_footer.png" /></div>
+		</div>
+		<div class="hp column two">
+			<div id="hp-bottom-curve"></div>
+			<div id="sw-content-container2" class="region ui-hp"><div id='pmi-7'>
+
+
+
+<div id='sw-module-70'>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = '4';
+            var PageID = '1';
+            var RenderLoc = '0';
+            var MIID = '7';
+
+            //added to check to make sure moderated content doesn't bleed through the dialog
+            if ($('#dialog-overlay-WindowLargeModal-body.moderateContent').length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript('ModuleView');CheckScript('Mustache');
+ });</script>
+    
+    <div id="module-content-7" >
+<div class="ui-widget app flexpage">
+	<div class="ui-widget-header">
+		<h1>Welcome to the ECHO Charter School</h1>
+	</div>
+	
+	<div class="ui-widget-detail">
+		
+<div class="ui-article"><span ><p align="center"><span style="font-family: Verdana; font-size: 14pt;">Our Vision is to be, the most highly respected school in Southwest Minnesota noted for caring, innovating and preparing students to succeed. <br /></span></p><div align="center">&nbsp;</div><div align="center"><span style="font-family: Verdana; font-size: 14pt;">Our Mission: ECHO Charter School's mission is to be your school of choice by preparing students to achieve to their highest potential through an innovative and uniquely flexible curriculum. <br /></span></div><div><!--[if gte mso 9]><xml>
+ 
+  
+  
+ 
+</xml><![endif]-->
+
+<p align="center">ECHO Charter School&nbsp; is
+authorized by Innovative Quality Schools which is responsible for providing oversight of our school.&nbsp; For information about
+IQS&nbsp;go to <a href="https://mail.echocharter.com/owa/redir.aspx?SURL=MHCakj3Gtu1vn6478mjwcoZou7CC6WF6j8zxEwVAFwtYjvnp6QrSCGgAdAB0AHAAOgAvAC8AdwB3AHcALgBpAHEAcwBtAG4ALgBvAHIAZwAvAA..&amp;URL=http%3a%2f%2fwww.iqsmn.org%2f" target="_blank">www.iqsmn.org</a>&nbsp; The&nbsp;website will also provide you with&nbsp;names, phone numbers and email addresses. ECHO Charter Schools IQS contact person is Tom Tapper ttapper@iqsmn.org<br /></p>
+
+<!--[if gte mso 9]><xml>
+ 
+  Normal
+  0
+  
+  
+  
+  
+  false
+  false
+  false
+  
+  EN-US
+  X-NONE
+  X-NONE
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+</xml><![endif]--><!--[if gte mso 10]>
+
+<![endif]-->&nbsp;</div></span></div> 
+<div class="clear"></div>
+	
+	</div>
+	<div class="ui-widget-footer">
+		
+			
+		
+		<div class="clear"></div>
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&EnableQuirksMode=0&ViewID=' + viewToUse + '&Tag=' + tag, container, 2, 'chkSidebar();');
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $('#hid-'+MIID+'-DetailView').val();
+   }
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&FlexDataID=' + flexDataID + '&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=0&Tag=' + tag + '&ViewID=' + targetView, container, 2, 'chkSidebar();');
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&Tag=' + tag + '&EnableQuirksMode=0&ViewID='+viewToUse, container, 2, 'chkSidebar();');
+}
+</script>
+</div>
+
+</div></div>
+<div id='pmi-8'>
+
+
+
+<div id='sw-module-80'>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = '4';
+            var PageID = '1';
+            var RenderLoc = '0';
+            var MIID = '8';
+
+            //added to check to make sure moderated content doesn't bleed through the dialog
+            if ($('#dialog-overlay-WindowLargeModal-body.moderateContent').length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript('ModuleView');CheckScript('Mustache');
+ });</script>
+    
+    <div id="module-content-8" >
+<div class="ui-widget app headlines">
+	
+	<div class="ui-widget-header">
+		<h1>Headlines & Features</h1>
+	</div>
+	
+	<div class="ui-widget-detail" id="sw-app-headlines-8">
+		<ul class="ui-articles">
+<li>
+	<div  class="ui-article">
+		<a class="ui-article-thumb" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=645&amp;PageID=1" tabindex="-1" aria-hidden="true"><span class="img"><img alt="" height="280" width="283" src="http://www.echo.charter.k12.mn.us//cms/lib07/MN01909325/Centricity/Domain/4/IMG_1259.JPG" /></span></a>
+		<h1 class="ui-article-title"><a href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=645&amp;PageID=1"><span>Public Service Announcements done by ECHO Students</span></a></h1>
+	
+		<p class="ui-article-description"></p>
+		<div class="ui-article-controls">
+                	
+                	<a class="sub-link" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=645&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+	<div  class="ui-article">
+		<a class="ui-article-thumb" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=491&amp;PageID=1" tabindex="-1" aria-hidden="true"><span class="img"><img alt="" height="" width=""  /></span></a>
+		<h1 class="ui-article-title"><a href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=491&amp;PageID=1"><span>ECHO Alumni</span></a></h1>
+	
+		<p class="ui-article-description">Where are they now?</p>
+		<div class="ui-article-controls">
+                	
+                	<a class="sub-link" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=491&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+	<div  class="ui-article">
+		<a class="ui-article-thumb" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=359&amp;PageID=1" tabindex="-1" aria-hidden="true"><span class="img"><img alt="" height="" width=""  /></span></a>
+		<h1 class="ui-article-title"><a href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=359&amp;PageID=1"><span>Host An Exchange Student</span></a></h1>
+	
+		<p class="ui-article-description">Interested in or want to know more about hosting an exchange student?</p>
+		<div class="ui-article-controls">
+                	
+                	<a class="sub-link" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=359&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+	<div  class="ui-article">
+		<a class="ui-article-thumb" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=290&amp;PageID=1" tabindex="-1" aria-hidden="true"><span class="img"><img alt="" height="112" width="150" src="http://www.echo.charter.k12.mn.us//cms/lib07/MN01909325/Centricity/Domain/4/chem.jpg" /></span></a>
+		<h1 class="ui-article-title"><a href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=290&amp;PageID=1"><span>Project Based Education</span></a></h1>
+	
+		<p class="ui-article-description">Want to know more about Project Based Education? Find information here.</p>
+		<div class="ui-article-controls">
+                	
+                	<a class="sub-link" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=290&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+	<div  class="ui-article">
+		<a class="ui-article-thumb" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=595&amp;PageID=1" tabindex="-1" aria-hidden="true"><span class="img"><img alt="" height="" width=""  /></span></a>
+		<h1 class="ui-article-title"><a href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=595&amp;PageID=1"><span>Athletics</span></a></h1>
+	
+		<p class="ui-article-description"></p>
+		<div class="ui-article-controls">
+                	
+                	<a class="sub-link" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=595&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+	<div  class="ui-article">
+		<a class="ui-article-thumb" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=221&amp;PageID=1" tabindex="-1" aria-hidden="true"><span class="img"><img alt=" Coke Rewards" height="100" width="100" src="http://www.echo.charter.k12.mn.us//cms/lib07/MN01909325/Centricity/Domain/4/msr_logo_100x100.png" /></span></a>
+		<h1 class="ui-article-title"><a href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=221&amp;PageID=1"><span>Attention Parents </span></a></h1>
+	
+		<p class="ui-article-description">Easy ways to help ECHO Charter School!</p>
+		<div class="ui-article-controls">
+                	
+                	<a class="sub-link" href="http://www.echo.charter.k12.mn.us/site/default.aspx?PageType=3&amp;DomainID=4&amp;ModuleInstanceID=8&amp;ViewID=047E6BE3-6D87-4130-8424-D8E4E9ED6C2A&amp;RenderLoc=0&amp;FlexDataID=221&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+</ul>
+	</div>
+
+	<div class="ui-widget-footer">
+		
+		
+		<div class="clear"></div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('a.ui-article-thumb').click(function () {      
+        		window.location = $(this).attr('href');
+    		});
+    		
+		$('#sw-app-headlines-8').find('img').each(function() {
+			if ($.trim(this.src) == '' )
+			{
+				$(this).parent().parent().remove();
+			}
+		});
+
+	});
+</script>
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&EnableQuirksMode=0&ViewID=' + viewToUse + '&Tag=' + tag, container, 2, 'chkSidebar();');
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $('#hid-'+MIID+'-DetailView').val();
+   }
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&FlexDataID=' + flexDataID + '&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=0&Tag=' + tag + '&ViewID=' + targetView, container, 2, 'chkSidebar();');
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&Tag=' + tag + '&EnableQuirksMode=0&ViewID='+viewToUse, container, 2, 'chkSidebar();');
+}
+</script>
+</div>
+
+</div></div>
+<div id='pmi-32'>
+
+
+
+<div id='sw-module-360'>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = '4';
+            var PageID = '1';
+            var RenderLoc = '0';
+            var MIID = '36';
+
+            //added to check to make sure moderated content doesn't bleed through the dialog
+            if ($('#dialog-overlay-WindowLargeModal-body.moderateContent').length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript('ModuleView');CheckScript('Mustache');
+ });</script>
+    
+    <div id="module-content-36" >
+<script language="javascript">
+	<!--
+		var pageurl = window.location.href;
+		var showFaces = "";
+		if (showFaces == "True") {
+			showFaces = "true";
+		} else {
+			showFaces = "false";
+		}
+		
+        pageurl=pageurl.toLowerCase().replace("/site/default.aspx?domainid=", "/domain/");
+        pageurl=pageurl.toLowerCase().replace("/site/default.aspx?pageid=", "/page/");
+        
+		document.write("<div class='ui-widget app facebook-like'><iframe src='//www.facebook.com/plugins/like.php?href=" + pageurl +"&layout=standard&show_faces="+showFaces+"&width=292&action=like&font=arial&colorscheme=light&height=300' scrolling='auto' frameborder='0' style='border:none; overflow:hidden; width:450px; height=300px;' allowTransparency='true' alt=''></iframe></div>");
+	-->
+</script>
+
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&EnableQuirksMode=0&ViewID=' + viewToUse + '&Tag=' + tag, container, 2, 'chkSidebar();');
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $('#hid-'+MIID+'-DetailView').val();
+   }
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&FlexDataID=' + flexDataID + '&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=0&Tag=' + tag + '&ViewID=' + targetView, container, 2, 'chkSidebar();');
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.echo.charter.k12.mn.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=4&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&Tag=' + tag + '&EnableQuirksMode=0&ViewID='+viewToUse, container, 2, 'chkSidebar();');
+}
+</script>
+</div>
+
+</div></div>
+</div>
+		</div>
+		<div class="hp column three">
+			<div id="sw-content-container3" class="region ui-hp"><div id='pmi-10'>
+<div id="module-content-10" ><div class="ui-widget app upcomingevents">
+ <div class="ui-widget-header">
+     <h1>Upcoming Events</h1>
+ </div>
+ <div class="ui-widget-detail">
+		<ul class="ui-articles">
+<li>
+<div class="ui-article">
+     <h1 class="ui-article-title sw-calendar-block-date">Today</h1>
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">3:00 PM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.echo.charter.k12.mn.us/site/Default.aspx?PageID=2&PageType=17&DomainID=4&ModuleInstanceID=1&EventDateID=2041">Early Out </a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <h1 class="ui-article-title sw-calendar-block-date">Tomorrow</h1>
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">6:00 PM - 11:00 PM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.echo.charter.k12.mn.us/site/Default.aspx?PageID=2&PageType=17&DomainID=4&ModuleInstanceID=1&EventDateID=1915">Board Meeting</a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <h1 class="ui-article-title sw-calendar-block-date">March 15, 2017</h1>
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">3:00 PM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.echo.charter.k12.mn.us/site/Default.aspx?PageID=2&PageType=17&DomainID=4&ModuleInstanceID=1&EventDateID=2042">Early Out </a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <h1 class="ui-article-title sw-calendar-block-date">March 16, 2017</h1>
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-title"><a href="
+http://www.echo.charter.k12.mn.us/site/Default.aspx?PageID=2&PageType=17&DomainID=4&ModuleInstanceID=1&EventDateID=1916">End of 3rd Quarter</a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">4:30 PM - 7:00 PM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.echo.charter.k12.mn.us/site/Default.aspx?PageID=2&PageType=17&DomainID=4&ModuleInstanceID=1&EventDateID=2189">Carnival</a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <h1 class="ui-article-title sw-calendar-block-date">March 17, 2017</h1>
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-title"><a href="
+http://www.echo.charter.k12.mn.us/site/Default.aspx?PageID=2&PageType=17&DomainID=4&ModuleInstanceID=1&EventDateID=1917">Student/Teacher</a></span>
+     </p>
+</div>
+</li>
+	</ul>
+<a class='view-calendar-link' href="http://www.echo.charter.k12.mn.us/Page/2"><span>View Calendar</span></a>
+ </div>
+ <div class="ui-widget-footer">
+ </div>
+</div>
+</div>
+</div>
+</div>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="gb-footer">
+		<div class="gb footer one">101 Rocket Ave. <br />
+			Echo, MN 56237</div>
+		<div class="gb footer two">507-925-4143<br/>507-925-4165</div>
+	</div>
+</div>
+	
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- BEGIN - STANDARD FOOTER -->
+<div id='sw-footer-outer'>
+<div id='sw-footer-inner'>
+<div id='sw-footer-left'></div>
+<div id='sw-footer-right'>
+<div id='sw-footer-links'>
+<ul>
+<li><a title='Click to email the primary contact' href='mailto:webmaster@echo.charter.k12.mn.us'>Questions or Feedback?</a> | </li>
+<li><a href='http://www.schoolwires.com/privacy' target="_blank">Blackboard Web Community Manager Privacy Policy (Updated)</a> | </li>
+<li><a href='http://www.schoolwires.com/terms' target="_blank">Terms of Use</a></li>
+</ul>
+</div>
+<div id='sw-footer-copyright'>Copyright &copy; 2002-2017 Blackboard, Inc. All rights reserved.</div>
+<div id='sw-footer-logo'><a href='http://www.blackboard.com' title="Blackboard, Inc. All rights reserved.">
+<img src='http://www.echo.charter.k12.mn.us/Static/V2_17_01//GlobalAssets/Images/Navbar/blackboard_logo.png'
+ alt="Blackboard, Inc. All rights reserved."/>
+</a></div>
+</div>
+</div>
+</div>
+<!-- END - STANDARD FOOTER -->
+<script type="text/javascript">
+   $(document).ready(function(){
+      var beaconURL='http://analytics.schoolwires.com/analytics.asmx/Insert?AccountNumber=DDuntH5W7ssv6zABiGCR%2bw%3d%3d&SessionID=80cfe549-d7d8-4443-b7c2-3ef8d9b7bfc2&SiteID=4&ChannelID=0&SectionID=0&PageID=1&HitDate=3%2f8%2f2017+12%3a02%3a36+AM&Browser=Chrome+56.0&OS=Unknown&IPAddress=136.152.142.25';
+      try {
+         $.getJSON(beaconURL + '&jsonp=?', function(myData) {});
+      } catch(err) { 
+         // prevent site error for analytics
+      }
+   });
+</script>
+
+    <input type="hidden" id="hid-pageid" value="1" />
+
+    
+    
+
+    <div id='dialog-overlay-WindowMedium-base' class='ui-dialog-overlay-base' ><div id='WindowMedium'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowMedium");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowMedium-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowMedium-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowMedium-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowMedium-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowSmall-base' class='ui-dialog-overlay-base' ><div id='WindowSmall'  class='ui-dialog-overlay small' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowSmall");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowSmall-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowSmall-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowSmall-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowSmall-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowLarge-base' class='ui-dialog-overlay-base' ><div id='WindowLarge'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowLarge");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowLarge-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowLarge-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowLarge-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowLarge-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+    <div id='dialog-overlay-WindowMediumModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowMediumModal'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowMediumModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowMediumModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowMediumModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowMediumModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowMediumModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowSmallModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowSmallModal'  class='ui-dialog-overlay small' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowSmallModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowSmallModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowSmallModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowSmallModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowSmallModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowLargeModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowLargeModal'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowLargeModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowLargeModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowLargeModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowLargeModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowLargeModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowXLargeModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowXLargeModal'  class='ui-dialog-overlay xlarge' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowXLargeModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowXLargeModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowXLargeModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowXLargeModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowXLargeModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+    <div id='dialog-overlay-MyAccountSubscriptionOverlay-base' class='ui-dialog-overlay-base-modal' ><div id='MyAccountSubscriptionOverlay'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("MyAccountSubscriptionOverlay");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-MyAccountSubscriptionOverlay-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-MyAccountSubscriptionOverlay-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-MyAccountSubscriptionOverlay-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-MyAccountSubscriptionOverlay-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+    <div id='dialog-overlay-InsertOverlay-base' class='ui-dialog-overlay-base-modal' ><div id='InsertOverlay'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("InsertOverlay");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-InsertOverlay-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-InsertOverlay-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-InsertOverlay-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-InsertOverlay-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-InsertOverlay2-base' class='ui-dialog-overlay-base-modal' ><div id='InsertOverlay2'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("InsertOverlay2");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-InsertOverlay2-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-InsertOverlay2-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-InsertOverlay2-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-InsertOverlay2-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    
+    <style type="text/css">
+    #videowrapper {
+        position: fixed;
+        z-index: 20000;
+        background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+    #videodialog {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        right: 50px;
+        background: #FFF none repeat scroll 0% 0%;
+        z-index: 30000;
+        box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.65);
+        box-sizing: border-box;
+        border: 8px solid #FFF;
+    }
+
+    #videodialog .close-btn {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 0px 25px 0px 0px;
+        color: #666;
+        line-height: 1;
+        font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #videodialog .close-btn::after {
+        content: "X";
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        margin-top: -8px;
+        background: #999 none repeat scroll 0% 0%;
+        border-radius: 9px;
+        color: #FFF;
+        font-weight: bold;
+        line-height: 16px;
+        font-size: 9px;
+        text-align: center;
+    }
+        #videodialog-video {
+            margin-top:25px;
+        }
+    </style>
+    <script type="text/javascript">
+        function resizeVideoIframe() {
+            $("#videodialog-video iframe").css({ "width": "auto", "height": "auto" });
+            var screenWidth = $(window).width();
+            var screenHeight = $(window).height();
+            //alert('screen width =' + screenWidth + '  screen height=' + screenHeight);
+            var initVidW = 800, initVidH = 600;
+            var vidRatio = initVidH / initVidW;
+            var vidWidth = $("#videodialog-video").width();
+            //alert('videoWidth = ' +vidWidth);
+            var vidHeight = vidWidth * vidRatio;
+
+            if ((vidHeight + 100) > screenHeight) {
+                vidHeight = screenHeight - 140;
+            }
+
+            $("#videodialog-video").css({ "height": (vidHeight) });
+            $("#videodialog-video iframe").css({ "width": vidWidth, "height": vidHeight }); 
+        }
+
+        function resizeVideo() {
+            $("#videodialog-video video").css({ "width": "auto", "height": "auto" });
+            var screenWidth = $(window).width();
+            var screenHeight = $(window).height();
+            //alert('screen width =' + screenWidth + '  screen height=' + screenHeight);
+            var initVidW = 800, initVidH = 600;
+            var vidRatio = initVidH / initVidW;
+            var vidWidth = $("#videodialog-video").width();
+            //alert('videoWidth = ' +vidWidth);
+            var vidHeight = vidWidth * vidRatio;
+
+            if ((vidHeight + 100) > screenHeight) {
+                vidHeight = screenHeight - 140;
+            }
+
+            $("#videodialog-video").css({ "height": (vidHeight) });
+            $("#videodialog-video video").css({ "width": vidWidth, "height": vidHeight });
+            //$(".videoControl").css({ "bottom": $("#videodialog-video video").bottom() + 5, "width": 100 });
+        }
+
+        function closeVideoDialog() {
+            $('#videowrapper').addClass('ui-helper-hidden');
+            $('#videodialog-video').html('');
+            $(window).resize(function () { });
+        }
+    </script>
+    <div id="videowrapper" class="ui-helper-hidden">
+        <div id="videodialog">
+            <div id="videodialog-close" class="close-btn" onclick="closeVideoDialog();">CLOSE</div>
+            <div id="videodialog-video"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            removeBrokenImages();
+            checkSidebar();
+            RemoveCookie();
+
+            $('.navigation li.collapsible').each(function () {
+                if ($(this).find('ul').length == 0) {
+                    $(this).removeClass('collapsible');
+                }
+            });
+
+            // find page nav state cookie and add open chevron
+            var arrValues = GetCookie('SWPageNavState').split('~');
+
+            $.each(arrValues, function () {
+                if (this != '') {
+                    $('#' + this).addClass('collapsible').prepend("<div class='bullet collapsible' />");
+                }
+            });
+
+            // find remaining sub menus and add closed chevron and close menu
+            $('.navigation li > ul').each(function () {
+                var list = $(this);
+
+                if (list.parent().hasClass('active') && !list.parent().hasClass('collapsible')) {
+                    // open sub for currently selected page                    
+                    list.parent().addClass('collapsible').prepend("<div class='bullet collapsible' />");
+                } else {
+                    if (list.parent().hasClass('collapsible') && !list.siblings('div').hasClass('collapsible')) {
+                        // open sub for page with auto expand
+                        list.siblings('div.expandable').remove();
+                        list.parent().prepend("<div class='bullet collapsible' />");
+                    }
+                }
+
+                if (!list.siblings('div').hasClass('collapsible')) {
+                    // keep all closed that aren't already set to open
+                    list.parent().addClass('expandable').prepend("<div class='bullet expandable' />");
+                    ClosePageSubMenu(list.parent());
+                } else {
+                    OpenPageSubMenu(list.parent());
+                }
+            });
+
+            // remove bullet from hierarchy if no-bullet set
+            $('.navigation li.collapsible').each(function () {
+                if ($(this).hasClass('no-bullet')) {
+                    if (!$(this).hasClass('navigationgroup')) { $(this).removeClass('collapsible'); }
+                    $(this).children('div.collapsible').remove();
+                }
+            });
+
+            $('.navigation li.expandable').each(function () {
+                if ($(this).hasClass('no-bullet')) {
+                    if (!$(this).hasClass('navigationgroup')) { $(this).removeClass('expandable'); }
+                    $(this).children('div.expandable').remove();
+                }
+            });
+
+            $('.navigation li:not(.collapsible,.expandable,.no-bullet)').each(function () {
+                $(this).prepend("<div class='bullet' />");
+            });
+
+            $('.navigation li.active').parents('ul').each(function () {
+                if (!$(this).hasClass('page-navigation')) {
+                    OpenPageSubMenu($(this).parent());
+                }
+            });
+
+            // set click event for chevron
+            $(document).on('click', '.navigation div.collapsible', function () {
+                ClosePageSubMenu($(this).parent());
+            });
+
+            $(document).on('click', '.navigation div.expandable', function () {
+                OpenPageSubMenu($(this).parent());
+            });
+
+            // set navigation grouping links
+            $(document).on('click', '.navigationgroup.collapsible > a', function () {
+                ClosePageSubMenu($(this).parent());
+            });
+
+            $(document).on('click', '.navigationgroup.expandable > a', function () {
+                OpenPageSubMenu($(this).parent());
+            });
+
+            //SW MYSTART DROPDOWNS
+            $(document).on('click', '.sw-mystart-dropdown', function () {
+                $(this).children(".sw-dropdown").css("display", "block");
+            });
+
+            $(".sw-mystart-dropdown").hover(function () { }, function () {
+                $(this).children(".sw-dropdown").hide();
+                $(this).blur();
+            });
+
+            //SW ACCOUNT DROPDOWN
+            $(document).on('click', '#sw-mystart-account', function () {
+                $(this).children("#sw-myaccount-list").show();
+                $(this).addClass("clicked-state");
+            });
+
+            $("#sw-mystart-account, #sw-myaccount-list").hover(function () { }, function () {
+                $(this).children("#sw-myaccount-list").hide();
+                $(this).removeClass("clicked-state");
+                $("#sw-myaccount").blur();
+            });
+
+            // set hover class for page and section navigation
+            $('.ui-widget.app.pagenavigation, .ui-widget.app.sectionnavigation').find('li > a').hover(function () {
+                $(this).addClass('hover');
+            }, function () {
+                $(this).removeClass('hover');
+            });
+
+            // set active class on channel and section
+            var activeChannelNavType = $('input#hidActiveChannelNavType').val();
+            if (activeChannelNavType == -1) {
+                // homepage is active
+                $('#navc-HP').addClass('active');
+            } else if (activeChannelNavType == 1) {
+                // calendar page is active
+                $('#navc-CA').addClass('active');
+            } else {
+                // channel is active
+                var activeSelectorID = $('input#hidActiveChannel').val();
+                $('#navc-' + activeSelectorID).addClass('active');
+                activeSelectorID = $('input#hidActiveSection').val();
+                $('#navs-' + activeSelectorID).addClass('active');
+            }
+        }); // end document ready
+
+        function OpenPageSubMenu(li) {
+            if (li.prop('tagName').toLowerCase() == "li") {
+                if (li.hasClass('expandable')) {
+                    li.removeClass('expandable').addClass('collapsible');
+                }
+                if (li.find('div:first').hasClass('expandable')) {
+                    li.find('div:first').removeClass('expandable').addClass('collapsible');
+                }
+                li.find('ul:first').show();
+
+                PageNavigationStateCookie();
+            }
+        }
+
+        function ClosePageSubMenu(li) {
+            if (li.prop('tagName').toLowerCase() == "li") {
+                li.removeClass('collapsible').addClass('expandable');
+                li.find('div:first').removeClass('collapsible').addClass('expandable');
+                li.find('ul:first').hide();
+
+                PageNavigationStateCookie();
+            }
+        }
+
+        function PageNavigationStateCookie() {
+            var strCookie = "";
+
+            $('.pagenavigation li > ul').each(function () {
+                var item = $(this).parent('li');
+                if (item.hasClass('collapsible') && !item.hasClass('no-bullet')) {
+                    strCookie += $(this).parent().attr('id') + '~';
+                }
+            });
+
+            SetCookie('SWPageNavState', strCookie);
+        }
+
+        function checkSidebar() {
+            $(".ui-widget-sidebar").each(function () {
+                if ($.trim($(this).html()) != "") {
+                    $(this).show();
+                    $(this).siblings(".ui-widget-detail").addClass("with-sidebar");
+                }
+            });
+        }
+
+        function removeBrokenImages() {
+            //REMOVES ANY BROKEN IMAGES
+            $("span.img img").each(function () {
+                if ($(this).attr("src") !== undefined) {
+                    $(this).parent().parent().show();
+                    $(this).parent().parent().siblings().addClass("has-thumb");
+                }
+            });
+        }
+
+        function LoadEventDetailUE(moduleInstanceID, eventDateID, userRegID, isEdit) {
+            (userRegID === undefined ? userRegID = 0 : '');
+            (isEdit === undefined ? isEdit = false : '');
+            OpenDialogOverlay("WindowMediumModal", { LoadType: "U", LoadURL: "http://www.echo.charter.k12.mn.us//site/UserControls/Calendar/EventDetailWrapper.aspx?ModuleInstanceID=" + moduleInstanceID + "&EventDateID=" + eventDateID + "&UserRegID=" + userRegID + "&IsEdit=" + isEdit });
+        }
+
+        function RemoveCookie() {
+            // There are no sub page            
+            if ($('.pagenavigation li li').length == 0) {
+                //return false;
+                PageNavigationStateCookie();
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        function AddOffCanvasMenuHeightForSiteNav() {
+            var sitenavulHeight = 0;
+
+            if ($('#sw-pg-sitenav-ul').length > 0) {
+                sitenavulHeight = parseInt($("#sw-pg-sitenav-ul").height());
+            }
+
+            var swinnerwrapHeight = 0;
+
+            if ($('#sw-inner-wrap').length > 0) {
+                swinnerwrapHeight = parseInt($("#sw-inner-wrap").height());
+            }
+
+            // 360px is abount 5 li height
+            if (sitenavulHeight + 360 >= swinnerwrapHeight) {
+                $("#sw-inner-wrap").height(sitenavulHeight + 360);
+            }
+        }
+
+        function AddOffCanvasMenuHeightForSelectSchool() {
+            var selectschoolulHeight = 0;
+
+            if ($('#sw-pg-selectschool-ul').length > 0) {
+                selectschoolulHeight = parseInt($("#sw-pg-selectschool-ul").height());
+            }
+
+            var swinnerwrapHeight = 0;
+
+            if ($('#sw-inner-wrap').length > 0) {
+                swinnerwrapHeight = parseInt($("#sw-inner-wrap").height());
+            }
+
+            // 360px is abount 5 li height
+            if (selectschoolulHeight + 360 >= swinnerwrapHeight) {
+                $("#sw-inner-wrap").height(selectschoolulHeight + 360);
+            }
+        }
+
+        $(document).ready(function () {
+            if ($("#sw-pg-sitenav-a").length > 0) {
+                $(document).on('click', '#sw-pg-sitenav-a', function () {
+                    if ($("#sw-pg-sitenav-ul").hasClass('sw-pgmenu-closed')) {
+                        AddOffCanvasMenuHeightForSiteNav();
+
+                        $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+                        $("#sw-pg-sitenav-ul").removeClass('sw-pgmenu-closed');
+                        $("#sw-pg-sitenav-ul").addClass('sw-pgmenu-open');
+                    } else {
+                        $("#sw-pg-sitenav-ul").removeClass('sw-pgmenu-open');
+                        $("#sw-pg-sitenav-ul").addClass('sw-pgmenu-closed');
+                    }
+                });
+
+                $(document).on('click', '#sw-pg-selectschool-a', function () {
+                    if ($("#sw-pg-selectschool-ul").hasClass('sw-pgmenu-closed')) {
+                        AddOffCanvasMenuHeightForSelectSchool();
+
+                        $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+                        $("#sw-pg-selectschool-ul").removeClass('sw-pgmenu-closed');
+                        $("#sw-pg-selectschool-ul").addClass('sw-pgmenu-open');
+                    } else {
+                        $("#sw-pg-selectschool-ul").removeClass('sw-pgmenu-open');
+                        $("#sw-pg-selectschool-ul").addClass('sw-pgmenu-closed');
+                    }
+                });
+
+                $(document).on('click', '#sw-pg-myaccount-a', function () {
+                    if ($("#sw-pg-myaccount-ul").hasClass('sw-pgmenu-closed')) {
+                        $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+                        $("#sw-pg-myaccount-ul").removeClass('sw-pgmenu-closed');
+                        $("#sw-pg-myaccount-ul").addClass('sw-pgmenu-open');
+                    } else {
+                        $("#sw-pg-myaccount-ul").removeClass('sw-pgmenu-open');
+                        $("#sw-pg-myaccount-ul").addClass('sw-pgmenu-closed');
+                    }
+                });
+
+                $(document).on('click', '.pg-list-bullet', function () {
+                    $(this).prev().toggle();
+
+                    if ($(this).hasClass('closed')) {
+                        AddOffCanvasMenuHeightForSiteNav();
+
+                        $(this).removeClass('closed');
+                        $(this).addClass('open');
+                    } else {
+                        $(this).removeClass('open');
+                        $(this).addClass('closed');
+                    }
+                });
+
+                $(document).on('mouseover', '#sw-pg-selectschool', function () {
+                    $("#sw-pg-selectschool-firstli").removeClass('sw-pg-selectschool-firstli-mouseout').addClass('sw-pg-selectschool-firstli-mouseover');
+                    $("#sw-pg-selectschool-firstli a").addClass('sw-pg-selectschool-firstli-a-mouseover').removeClass('sw-pg-selectschool-firstli-a-mouseout');
+                });
+
+                $(document).on('mouseout', '#sw-pg-selectschool', function () {
+                    $("#sw-pg-selectschool-firstli").removeClass('sw-pg-selectschool-firstli-mouseover').addClass('sw-pg-selectschool-firstli-mouseout');
+                    $("#sw-pg-selectschool-firstli a").addClass('sw-pg-selectschool-firstli-a-mouseout').removeClass('sw-pg-selectschool-firstli-a-mouseover');
+                });
+
+                $(document).on('mouseover', '#sw-pg-myaccount', function () {
+                    $("#sw-pg-myaccount-firstli").removeClass('sw-pg-myaccount-firstli-mouseout').addClass('sw-pg-myaccount-firstli-mouseover');
+                    $("#sw-pg-myaccount-firstli a").addClass('sw-pg-myaccount-firstli-a-mouseover').removeClass('sw-pg-myaccount-firstli-a-mouseout');
+                });
+
+                $(document).on('mouseout', '#sw-pg-myaccount', function () {
+                    $("#sw-pg-myaccount-firstli").removeClass('sw-pg-myaccount-firstli-mouseover').addClass('sw-pg-myaccount-firstli-mouseout');
+                    $("#sw-pg-myaccount-firstli a").addClass('sw-pg-myaccount-firstli-a-mouseout').removeClass('sw-pg-myaccount-firstli-a-mouseover');
+                });
+
+                $(document).on('mouseover', '#sw-pg-sitenav', function () {
+                    $("#sw-pg-sitenav-firstli").removeClass('sw-pg-sitenav-firstli-mouseout').addClass('sw-pg-sitenav-firstli-mouseover');
+                    $("#sw-pg-sitenav-firstli a").addClass('sw-pg-sitenav-firstli-a-mouseover').removeClass('sw-pg-sitenav-firstli-a-mouseout');
+                });
+
+                $(document).on('mouseout', '#sw-pg-sitenav', function () {
+                    $("#sw-pg-sitenav-firstli").removeClass('sw-pg-sitenav-firstli-mouseover').addClass('sw-pg-sitenav-firstli-mouseout');
+                    $("#sw-pg-sitenav-firstli a").addClass('sw-pg-sitenav-firstli-a-mouseout').removeClass('sw-pg-sitenav-firstli-a-mouseover');
+                });
+
+                $(document).on('mouseover', '#sw-pg-district', function () {
+                    $("#sw-pg-district-firstli").removeClass('sw-pg-district-firstli-mouseout').addClass('sw-pg-district-firstli-mouseover');
+                    $("#sw-pg-district-firstli a").addClass('sw-pg-district-firstli-a-mouseover').removeClass('sw-pg-district-firstli-a-mouseout');
+                });
+
+                $(document).on('mouseout', '#sw-pg-district', function () {
+                    $("#sw-pg-district-firstli").removeClass('sw-pg-district-firstli-mouseover').addClass('sw-pg-district-firstli-mouseout');
+                    $("#sw-pg-district-firstli a").addClass('sw-pg-district-firstli-a-mouseout').removeClass('sw-pg-district-firstli-a-mouseover');
+                });
+            }
+        });
+
+
+    </script>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js' type='text/javascript'></script>
+    <script src="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/Scripts/min/SW-UI.min.js" type='text/javascript'></script>
+    <script src="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/Scripts/jquery.sectionlayer.js" type='text/javascript'></script>
+    <script src="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/Scripts/Initialize.js" type='text/javascript'></script>
+    <script src="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/Scripts/min/swfobject.min.js" type="text/javascript"></script>
+    <script src="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/Scripts/min/jquery.ajaxupload.min.js" type="text/javascript"></script>
+
+    <!-- Begin swuc.CheckScript -->
+  <script type="text/javascript" src="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/Scripts/ThirdParty/json2.js"></script>
+  <script type="text/javascript" src="http://www.echo.charter.k12.mn.us/Static/V2_17_01/GlobalAssets/Scripts/CheckScript.js"></script>
+<!-- End swuc.CheckScript -->
+
+
+    <!-- Server Load Time (07): 0.2184042 Seconds -->
+
+    
+
+    <!-- off-canvas menu enabled-->
+    
+
+</body>
+</html>

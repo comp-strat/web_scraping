@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>North Lakes Academy :: Login</title>
+<meta name="description" content="" />
+<meta name="generator" content="concrete5 - 5.6.3.4" />
+<script type="text/javascript">
+var CCM_DISPATCHER_FILENAME = '/index.php';var CCM_CID = 5;var CCM_EDIT_MODE = false;var CCM_ARRANGE_MODE = false;var CCM_IMAGE_PATH = "/updates/concrete5.6.3.4/concrete/images";
+var CCM_TOOLS_PATH = "/index.php/tools/required";
+var CCM_BASE_URL = "http://www.northlakesacademy.org";
+var CCM_REL = "";
+
+</script>
+
+	<link rel="shortcut icon" href="http://www.northlakesacademy.org/files/4113/7469/0157/paw.ico" type="image/x-icon" />
+	<link rel="icon" href="http://www.northlakesacademy.org/files/4113/7469/0157/paw.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="http://www.northlakesacademy.org/updates/concrete5.6.3.4/concrete/css/ccm.base.css" />
+<script type="text/javascript" src="http://www.northlakesacademy.org/updates/concrete5.6.3.4/concrete/js/jquery.js"></script>
+<script type="text/javascript" src="http://www.northlakesacademy.org/updates/concrete5.6.3.4/concrete/js/ccm.base.js"></script>
+
+<!-- insert CSS for Default Concrete Theme //-->
+<style type="text/css">@import "http://www.northlakesacademy.org/updates/concrete5.6.3.4/concrete/css/ccm.default.theme.css";</style>
+<style type="text/css">@import "http://www.northlakesacademy.org/updates/concrete5.6.3.4/concrete/css/ccm.install.css";</style>
+<style type="text/css">@import "http://www.northlakesacademy.org/updates/concrete5.6.3.4/concrete/css/ccm.app.css";</style>
+</head>
+<body>
+<div class="ccm-ui">
+
+<div id="ccm-logo"><img id="ccm-logo" src="http://www.northlakesacademy.org/updates/concrete5.6.3.4/concrete/images/logo_menu.png" width="49" height="49" alt="concrete5" title="concrete5" /></div>
+
+
+
+
+<div class="container">
+<div class="row">
+<div class="span10 offset1">
+</div>
+</div>
+<script type="text/javascript">
+$(function() {
+	$("input[name=uName]").focus();
+});
+</script>
+
+
+<div class="row">
+	<div class="span10 offset1">
+		<div class="page-header">
+			<h1>Sign in to North Lakes Academy</h1>
+		</div>
+	</div>
+</div>
+
+
+	<form method="post" action="http://www.northlakesacademy.org/index.php/login/do_login/" class="form-horizontal ccm-login-form">
+		<div class="row">
+			<div class="span5 offset1">
+				<fieldset>
+					<legend>User Account</legend>
+					<div class="control-group">
+						<label for="uName" class="control-label">Username</label>
+						<div class="controls">
+							<input type="text" name="uName" id="uName"  class="ccm-input-text" autofocus>
+						</div>
+					</div>
+					<div class="control-group">
+						<label for="uPassword" class="control-label">Password</label>
+						<div class="controls">
+							<input type="password" name="uPassword" id="uPassword" class="ccm-input-text" />
+						</div>
+					</div>
+				</fieldset>
+							</div>
+			<div class="span4 offset1">
+				<fieldset>
+					<legend>Options</legend>
+										<div class="control-group">
+						<label class="checkbox"><input type="checkbox"  class="ccm-input-checkbox" name="uMaintainLogin" id="uMaintainLogin" value="1"  /> <span>Remain logged in to website.</span></label>
+					</div>
+										<input type="hidden" name="rcID" value="" />
+				</fieldset>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span10 offset1">
+				<div class="actions">
+					<input type="submit" class="primary btn ccm-input-submit" id="submit" name="submit" value="Sign In &gt;" />				</div>
+			</div>
+		</div>
+	</form>
+
+	<a name="forgot_password"></a>
+	<form method="post" action="http://www.northlakesacademy.org/index.php/login/forgot_password/" class="form-horizontal ccm-forgot-password-form">
+		<div class="row">
+			<div class="span10 offset1">
+				<fieldset>
+					<legend>Forgot Your Password?</legend>
+					<p>Enter your email address below. We will send you instructions to reset your password.</p>
+					<input type="hidden" name="rcID" value="" />
+					<div class="control-group">
+						<label for="uEmail" class="control-label">Email Address</label>
+						<div class="controls">
+							<input type="text" name="uEmail" value="" class="ccm-input-text" >
+						</div>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span10 offset1">
+				<div class="actions">
+					<input type="submit" class="btn ccm-input-submit" id="submit" name="submit" value="Reset and Email Password &gt;" />				</div>
+			</div>
+		</div>
+	</form>
+
+	
+
+</div>
+</div>
+
+<script type="text/javascript" src="http://www.northlakesacademy.org/updates/concrete5.6.3.4/concrete/js/bootstrap.js"></script>
+
+</body>
+</html>

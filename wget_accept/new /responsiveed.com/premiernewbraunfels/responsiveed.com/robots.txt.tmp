@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /wordpress/
+Disallow: /old/
+Disallow: /bu/
+Disallow: /staging-wp-content/
+Disallow: /development/

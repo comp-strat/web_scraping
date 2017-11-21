@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+
+<title>Woodbridge N. Ferris Resource Site</title>
+  <meta name="description" content="Ferris Library for Information, Technology and Education (FLITE) is located in the heart of Ferris State University's main campus combining the collections and services of the former Timme and Health Science Libraries.  FLITE also houses the Media Production Department.  FLITE features a variety of public work and study spaces and over 600 active ports for computer connectivity.  FLITE is a Patent and Trademark Depository Library for western lower Michigan and is a depository for U.S. Bureau of the Census and State of Michigan publications.">
+  <meta name="keywords" content="Library, Ferris Library for Information, Technology and Education, FLITE, Woodbridge N. Ferris Resource Site">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<link rel="stylesheet" href="http://library.ferris.edu/homepagenew.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://library.ferris.edu/homepagenewprint.css" type="text/css" media="print" />
+<link href="http://library.ferris.edu/lightbox/css/lightbox.css" rel="stylesheet" />
+<link href="http://library.ferris.edu/tabber.css" rel="STYLESHEET" type="text/css" media="screen" />
+<link href="http://library.ferris.edu/primo.css" rel="STYLESHEET" type="text/css" media="screen" />
+
+<script src="http://library.ferris.edu/js/modernizr.js"></script>
+<script src="http://library.ferris.edu/js/Respond.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+<!-- include extern jQuery file but fall back to local file if extern one fails to load !-->
+<!--
+<script src="lightbox/js/lightbox.js"></script>
+-->
+<script type="text/javascript" src="http://library.ferris.edu/tabber.js"></script>
+
+<script type="text/javascript">
+
+
+/* Optional: Temporarily hide the "tabber" class so it does not "flash"
+   on the page as plain HTML. After tabber runs, the class is changed
+   to "tabberlive" and it will appear. */
+
+document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+</script>
+
+<script type="text/javascript"> 
+function searchPrimo()
+{
+document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value;
+document.forms["searchForm"].submit();
+}
+
+    function searchKeyPress(e)
+    {
+        if (typeof e == 'undefined' && window.event) { e = window.event; }
+        if (e.keyCode == 13)
+        {
+            document.getElementById('gosmart').click();
+        }
+    }
+</script>
+
+<script type="text/Javascript" src="http://www.ferris.edu/library/SpecCollections/WNF/encorelocationfacet.js">
+//script to refine encore search results to a collection
+</script>
+<script type="text/JavaScript">
+Date.prototype.getWeek = function() {
+var onejan = new Date(this.getFullYear(),0,1);
+return Math.ceil((((this - onejan) / 86400000) + onejan.getDay())/7);
+}
+var today = new Date();
+var weekno = today.getWeek();
+
+var feature_text = new Array ();
+feature_text[0] = "<p>The Manor Family Collection documents the dental technology programs at Ferris State College. Dr. Richard C. Manor was a professor of Dental Laboratory Technology of the College of Allied Health at Ferris State University from 1965 to 1979. The collection includes dental technology books, brochures, and manuals as well as miscellaneous dental instrumentation. For more information on what materials we have, take a look at the finding aid.<\/p>";
+feature_text[1] = "<p>Ferris has had a number of women's organizations throughout its history.  The Association of Ferris Women was an organization founded in 1958 to promote fellowship and to be of service to the Ferris Dames organization. Membership was open to all women faculty and wives of faculty. The organization provided a variety of activities and monthly programs that enabled the members fostered friendship with other Ferris women. Records include administrative records, committee records, financial records, membership lists and programs. For more information on this group, take a look at the finding aid.<\/p>";
+feature_text[2] = "<p>Ferris in 2009-2010 celebrated its 125th year.  Ferris has celebrated a number of anniversaries throughout its history.  One of the most elaborate celebrations was for our 100th year. The planning for the celebrations had begun in 1979 through an advisory committee created by President Robert L. Ewigleben. The Centennial Task Force records consist of the planning files and products of the celebration, as collected by the Centennial Task Force office and from the chairman.  For more information,  please view the finding aid.<\/p>";
+feature_text[3] = "<p>Dacho Dachoff directed the music program at Ferris State College from 1957-1977 and taught until his retirement in 1983. His activities including conducting the band, leading student groups and improving the role of all arts on the campus. The papers contain personal and teaching information, in addition to project data relating to projects promoting the arts on campus. For more information about music and the arts, please view the finding aid.<\/p>";
+feature_text[4] = "<p>Ever wonder when financial aid started at Ferris?  Before Ferris was a state institution, financial aid came largely from within.  The Ferris Loan Fund Association was formed in 1893 by Ferris faculty to provide a loan source for current students. The collection consists of a single minute book detailing disbursements of funds and membership. Review the finding aid for more information. <\/p>";
+feature_text[5] = "<p>The publication Ferris Institute News served as a combination of alumni journal, school newspaper and staff newsletter. Special editions were created about significant events such as Homecoming or the deaths of Woodbridge N. Ferris or Gerrit Masselink. The News provided information about the current events to the Ferris Institute students and Big Rapids residents. The last known issue was March 1931. For more information, please view the finding aid.<\/p>";
+feature_text[6] = "<p>The General Education Convocation Council (GECC) utilized college funds to bring in speakers, acts and films to educate students. It was the predecessor of the Arts and Lectures committee. The collection consists of administrative records, schedules and programs from the various events. To find out more about the types of events sponsored, please view the finding aid.<\/p>";
+feature_text[7] = "<p>Gerrit Masselink (1872-1929) was the second president and early instructor at the Ferris Institute. He taught mathematics, science and Bible study from 1898-1929. Masselink was also one of the earliest supporters of athletics at Ferris. As a politician, Masselink organized the Mecosta Bull Moose party, and later ran unsuccessfully as a Progressive Republican and Democratic candidate for several offices. The papers consist of correspondence, writings and subject files primarily relating to his involvement with the school and the first major fundraising campaign. For more information about this collection, please view the finding aid.<\/p>";
+feature_text[8] = "<p>Ferris successfully completed accreditation in 2011.  But it is not the first time we have gone through this process.  In 1939, President Merle Ward initiated the first review visit by members of the North Central Association. It was not until 1959 that Ferris received full accreditation. Accreditation occurred at periodic intervals subsequently as a result of the review process or a change in academic focus. Records include site visit records, self study reports, supporting documentation. For more information, please view the finding aid.<\/p>";
+feature_text[9] = "<p>Robert P. Gerholz (1897 -1985) served on the Ferris State Board of Control from 1967-1982. Gerholz was a 1916 graduate of Ferris Institute who became a prominent business leader in the real estate, construction and commercial development professions. From 1965-1966, he was the president of the National Chamber of Commerce. Gerholz was active in the post-World War II home building explosion but was also a civic leader, active in his Presbyterian Church of Flint, Michigan. The papers contain correspondence and programs relating to his involvement in various home building associations, and his political activities. There are also several photographs of Gerholz at a variety of events.  For more information, view the finding aid.<\/p>";
+feature_text[10] = "<p>Heddy S. Rossi (1891-1985) directed Ferris's Little Theatre (also called both the Ferris Playhouse and Ferris State Theatre) from 1946-1958. She and her husband emigrated to America prior to World War II.  She was an internationally known playwright who premiered some of her works at Ferris Institute. Her papers consist primarily of manuscript copies of plays and other writings.  For more information, please view the finding aid.<\/p>";
+feature_text[11] = "<p>The Pharmacy Seminar program began in 1953 as an avenue for pharmacy alumni to congregate and discuss current and controversial issues in the discipline. Programs included a full day of events, including meals. Seminars are still held annually. The records include brochures, correspondence, planning materials, programs, and registration lists.  It still continues today.  For information on the history of the program and past topics, please view the finding aid.<\/p>";
+feature_text[12] = "<p>Did you know that many of the buildings on campus have a cornerstone with items buried inside?  One of those time capsules was unearthed during the renovation of the Starr Building in the 1990s.  This  particular collection consists of the items placed into the Starr Educational Building cornerstone when the building was dedicated on January 7, 1962.  For more information, please view the finding aid.<\/p>";
+feature_text[13] = "<p>Student handbooks provide information about organizations, rules and the culture of a campus. They also include a calender to assist students in scheduling time. This collection contains the annual student handbooks and any supporting documentation. It was produced in 1931, and then from 1951-2008. For more information, please view the finding aid.<\/p>";
+feature_text[14] = "<p>Ever wondered about something that happened in Ferris history? This collection contains annotated newspaper clippings on topics that Lillian Wright, curator of the historical collections,  determined to be of significance to Ferris State University history. It is a snapshot on many different topics for history up to 1979.  For more information, review the finding aid.<\/p>";
+feature_text[15] = "<p>Mildred Ahlgren Miller was an active member of the Big Rapids educational community for over 30 years. She served as principal or instructor in nearly every district school. Miller had graduated from the Ferris Institute kindergarten and early education course in 1917. The papers consist of notes and projects completed as part of her coursework. For more information, please review the finding aid.<\/p>";
+feature_text[16] = "<p>Chauncy J. Howe, O.D., F.A.A.O. (b.1895), was a practicing optometrist and active member of Michigan optometrist associations from 1917-1972. He served on the Michigan Optometric Association and Michigan State Board of Examiners. The papers include materials relating to his association activities, and education as an optometrist. They span the dates 1909-1975. For more information, please review the finding aid.<\/p>";
+feature_text[17] = "<p>Abigail Smith Timme (1890-1986) was born in Manistee, Michigan. A 1912 secretarial graduate of Ferris Institute (Big Rapids, Mich.), Timme worked at the Berkey and Gay Furniture Company in Grand Rapids, Michigan. During the war, Timme moved to Washington D.C. and served on the staff of several high ranking officials. After the war, she took a position with Continental Casualty Company, where she met her husband Ernst G. Timme. Timme worked with her husband on development projects and was a strong supporter of Ferris. Much of the collection is photographs although there is limited correspondence and objects. For more information, please review the finding aid.<\/p>";
+feature_text[18] = "<p>The annual reports provide summaries of the activities, budget and enrollment of the institution. Not all presidents produced annual reports. The collection contains all known annual reports. For further information, please review the finding aid.<\/p>";
+var j = Math.round(weekno/3);
+
+</script>
+<script src="http://www.ferris.edu/library/SpecCollections/google-analytics.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="container">
+<header id="topstuff">
+	<a href="../../../HTMLS/index.html"><img src="http://library.ferris.edu/Ferris_Wordmark.png" alt="Link to Ferris Homepage" title="Link to Ferris Homepage" /></a>
+<h4>Ferris Library for Information, Technology, and Education</h4>
+<nav>
+<script type="text/javascript" src="http://library.ferris.edu/topbuttonsnew.js"></script>
+</nav>
+
+</header>
+<div id="left40">
+<article>
+<ul id="nav2">
+	<li><a href="http://www.ferris.edu/library/homepage.htm">Library Home</a></li>
+	<li><a href="index.html#">Get Help</a>
+	<ul>
+		<li><a href="../../reference/helppage.html">In Person</a></li>
+		<li><a href="../../reference/helppagechat.html">By Chat Reference</a></li>
+		<li><a href="../../reference/helppageemail.html">By Email</a></li>
+		<li><a href="../../reference/helppagetelephone.html">By Telephone</a></li>
+		<li><a href="../../reference/helppagetext.html">By Text Message (SMS)</a></li>
+	</ul>
+	</li>
+</ul>
+<div class="placeholder">
+<!-- This section is necessary to provide spacing between accordion menu and page menu  -->
+<p>&nbsp;</p>
+</div>
+</article>
+<article>
+<div class="grayboxmenu">
+<h2>Primary Sources</h2>
+<ul>
+<li><a href="http://www.ferris.edu/htmls/ferrisfaq/woodbridge/homepage.htm">Autobiography of Woodbridge Ferris</a></li>
+<li><a href="http://www.ferris.edu/library/SpecCollections/WNF/Imageexhibit1.html">Photographs and Images</a></li>
+<li><a href="http://www.ferris.edu/library/SpecCollections/WNF/Writings/WNFBibliography.html">Speeches and Writings</a></li>
+<li><a href="http://www.ferris.edu/library/SpecCollections/WNF/WoodbridgeFerrisLibrary.html">Ferris Library inventory</a></li>
+<li><a href="http://www.ferris.edu/library/SpecCollections/WNF/PrimarySources.html">Researching Ferris</a></li>
+</ul>
+<br>
+<h2>Secondary Sources</h2>
+<ul>
+<li><a href="http://www.ferris.edu/library/SpecCollections/WNF/WNFBiography.html">Biographical Information</a></li>
+<li><a href="http://www.ferris.edu/library/SpecCollections/WNF/WNFChronology.html">Chronology of life, 1853-1928</a></li>
+<li><a href="http://www.ferris.edu/library/SpecCollections/WNF/Death1928.html">Death of Woodbridge Ferris- 1928</a></li>
+<li><a href="http://www.ferris.edu/library/SpecCollections/WNF/Aboutsite.html">About this site</a></li>
+</ul>
+<br>
+<div>
+<script>
+  (function() {
+    var cx = '016635423448577047262:j6bj6tyzfnq';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+</div>
+</div>
+</article>
+<br class="clearall" />
+</div>
+<div id="middle30">
+<article>
+<h5>Woodbridge Nathan Ferris Resource Site</h5>
+<p>Woodbridge Nathan Ferris (1853-1928) was an educator, humanitarian and a statesman.  He was educated at Spencer Academy and Oswegeo Free Academy in New York and attended the University of Michigan.  In 1884, Woodbridge Ferris founded the Big Rapids Industrial School which later became Ferris State University.  He also served as Governor of Michigan and a United States Senator. </p>
+<p>Ferris State University is unique in its founder.  Very few public universities are named after the individual who founded them.  Also, not all founders of schools have ships named after them and served on all levels of government.  The following link will take you to <a href="http://www.ferris.edu/library/SpecCollections/WNF/Activities.html">activities</a> relating to the materials found on the site.  These activities are appropriate for a classroom setting or homework assignment.  These activities are designed for the FSUS 100 classes. </p>
+<p>Additionally, the University Archivist is available for classroom presentations on Woodbridge Ferris and the history of the university.  </p>
+<p><strong>Contact:</strong>  Melinda McMartin Isler, University Archivist<br>
+<strong><a href="http://library.ferris.edu/contact.php?EmailTo=MelindaIsler&amp;Name=Melinda%20Isler">Email</a></strong><br>  
+<strong>Telephone:</strong>  (231) 591-3731<br></p>
+<div class="clearall"></div>
+</article>
+</div>
+
+<div id="rightmain">
+<img src= "http://www.ferris.edu/library/SpecCollections/WNF/wnfbanner.jpg" alt="Photo of WNF 150th poster">
+<article>
+<div class="gradientbox">
+<h1>Ferris Funeral Video</h1>
+<p>A newsreel film of Ferris's funeral in 1928 has been digitized as part of the Reuther Library's Virtual Motor City project.  Click <a href="http://www.lib.wayne.edu/resources/digital_library/det_news/videos.php?start=26">here</a>, and look for Record 13_21.
+</p>
+</div>
+</article>
+</div>
+<div class="clearall"></div>
+</div>
+
+<script>
+var ww = document.body.clientWidth;
+
+$(document).ready(function() {
+$(".nav li a").each(function() {
+if ($(this).next().length > 0) {
+$(this).addClass("parent");
+};
+})
+
+$(".toggleMenu").click(function(e) {
+e.preventDefault();
+$(this).toggleClass("active");
+$(".nav").toggle();
+});
+adjustMenu();
+})
+
+$(window).bind('resize orientationchange', function() {
+ww = document.body.clientWidth;
+adjustMenu();
+});
+
+var adjustMenu = function() {
+if (ww < 769) {
+$(".toggleMenu").css("display", "inline-block");
+if (!$(".toggleMenu").hasClass("active")) {
+$(".nav").hide();
+} else {
+$(".nav").show();
+}
+$(".nav li").unbind('mouseenter mouseleave');
+$(".nav li a.parent").unbind('click').bind('click', function(e) {
+// must be attached to anchor element to prevent bubbling
+e.preventDefault();
+$(this).parent("li").toggleClass("hover");
+});
+}
+else if (ww >= 769) {
+$(".toggleMenu").css("display", "none");
+$(".nav").show();
+$(".nav li").removeClass("hover");
+$(".nav li a").unbind('click');
+$(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
+// must be attached to li so that mouseleave is not triggered when hover over submenu
+$(this).toggleClass('hover');
+});
+}
+}
+
+</script>
+<script>
+$(document).ready(function () {
+  $('#nav2 > li > a').click(function(){
+    if ($(this).attr('class') != 'active'){
+      $('#nav2 li ul').slideUp();
+      $(this).next().slideToggle();
+      $('#nav2 li a').removeClass('active');
+      $(this).addClass('active');
+    }
+    else {
+      $('#nav2 li ul').slideUp();
+      $('#nav2 li a').removeClass('active');
+	}
+  });
+});
+</script>
+
+<!-- This script is to compensate for the inline and float right bug in Webkit browsers  -->
+<script>
+var n = document.createTextNode(' ');
+$( window ).resize(function() {
+	$('#topstuff').hide();
+	$('#topstuff').get(0).offsetHeight; // no need to store this anywhere, the reference is enough
+	$('#topstuff').show();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2223 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+
+<html lang="en">
+<head>
+    <title>
+        Joseph K. Lumsden Bahweting Anishnabe PSA / HomePage</title>
+    <!--
+    <PageMap>
+    <DataObject type="document">
+    <Attribute name="siteid">1</Attribute>
+    </DataObject>
+    </PageMap>
+    -->
+
+    
+    
+    <!-- Begin swuc.GlobalJS -->
+<script type="text/javascript">
+ staticURL = "http://www.jklschool.org/Static/V2_13_01/";
+ SessionTimeout = "60";
+</script>
+<!-- End swuc.GlobalJS -->
+    
+    
+    <!-- Stylesheets -->
+
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/webfonts/OpenSans-Light.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/webfonts/OpenSans-Italic.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/webfonts/OpenSans-Regular.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/webfonts/OpenSans-SemiBold.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Content/shepherd/shepherd-theme-default.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Static/V2_13_01/App_Themes/SW/jquery.jgrowl.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Static/V2_13_01//site/assets/styles/system.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Static/V2_13_01//site/assets/styles/apps.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Static/V2_13_01/App_Themes/SW/jQueryUI.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/webfonts/SchoolwiresMobile.css" />
+    <link rel="Stylesheet" type="text/css" href="http://www.jklschool.org/Static/V2_13_01//site/assets/styles/dashboard.css" />
+
+    <!-- Scripts -->
+    
+
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
+    <script src='http://www.jklschool.org/Static/V2_13_01/GlobalAssets/Scripts/min/jquery-migrate-1.2.1.js' type='text/javascript'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js' type='text/javascript'></script>
+    <script src='http://www.jklschool.org/Scripts/tether.min.js' type='text/javascript'></script>
+    <script src='http://www.jklschool.org/Scripts/shepherd/shepherd.min.js' type='text/javascript'></script>
+
+
+    
+
+   <!--  -->
+    
+<script type="text/javascript">
+        $(document).ready(function () {
+        SetCookie('SWScreenWidth', screen.width);
+        SetCookie('SWClientWidth', document.body.clientWidth);
+
+        //If small browser window and responsive template and first load, reload to get the off-canvas menu
+        var isResponsiveTemplatePreInit = 'False';
+        var isResponsive = 'False';
+
+        if (isResponsiveTemplatePreInit == 'False' && isResponsive == 'True' && document.body.clientWidth < 1024) {
+            window.location.reload(true);
+        } 
+
+        $("div.ui-article:last").addClass("last-article");
+        $("div.region .app:last").addClass("last-app");
+       
+        // get on screen alerts
+            var isAnyActiveOSA = 'False';
+        var onscreenAlertCookie = GetCookie('Alerts');
+
+        if (onscreenAlertCookie == '' || onscreenAlertCookie == undefined) {
+            onscreenAlertCookie = "";
+        }
+            if (isAnyActiveOSA == 'True') {
+        GetContent(homeURL + "/cms/Tools/OnScreenAlerts/UserControls/OnScreenAlertDialogListWrapper.aspx?OnScreenAlertCookie=" + onscreenAlertCookie + "&SiteID=1", "onscreenalert-holder", 2, "OnScreenAlertCheckListItem();");
+            }
+
+            
+
+    });
+   
+    // ADA SKIP NAV
+    $(document).ready(function () {
+        $(document).on('focus', '#skipLink', function () {
+            $("div.sw-skipnav-outerbar").animate({
+                marginTop: "0px"
+            }, 500);
+        });
+
+        $(document).on('blur', '#skipLink', function () {
+            $("div.sw-skipnav-outerbar").animate({
+                marginTop: "-30px"
+            }, 500);
+        });
+    });
+
+    // ADA MYSTART
+    $(document).ready(function () {
+        var top_level_nav = $('.sw-mystart-nav');
+ 
+        // Set tabIndex to -1 so that top_level_links can't receive focus until menu is open
+        // school dropdown
+        $(top_level_nav).find('ul').find('a').attr('tabIndex', -1);
+
+        // my account dropdown
+        $(top_level_nav).next('ul').find('a').attr('tabIndex', -1);
+ 
+        $(top_level_nav).focus(function () {
+            // hide open menus
+            hideMyStartBarMenu();
+ 
+            // show school dropdown
+            if ($(this).find('ul').length > 0) {
+                $(this).find('.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false');
+            }
+
+            // show my account dropdown
+            if ($(this).next('ul').length > 0) {
+                $(this).next('.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false');
+                $('#sw-mystart-account').addClass("clicked-state");
+            }
+        });
+ 
+        // Bind arrow keys for navigation
+        $(top_level_nav).keydown(function (e) {
+            if (e.keyCode == 37) { //key left
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).prev('.sw-mystart-nav').length == 0) {
+                    $(this).parents('div').find('.sw-mystart-nav').last().focus();
+                } else {
+                    $(this).prev('.sw-mystart-nav').focus();
+                }
+            } else if (e.keyCode == 38) { //key up
+                e.preventDefault();
+
+                // show school dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('div.sw-dropdown').css('display', 'block').find('ul').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+
+                // show my account dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('ul.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+            } else if (e.keyCode == 39) { //key right
+                e.preventDefault();
+
+                // This is the last item
+                if ($(this).next('.sw-mystart-nav').length == 0) {
+                    $(this).parents('div').find('.sw-mystart-nav').first().focus();
+                } else {
+                    $(this).next('.sw-mystart-nav').focus();
+                }
+            } else if (e.keyCode == 40) { //key down
+                e.preventDefault();
+
+                // show school dropdown
+                if ($(this).find('ul').length > 0) {
+                    $(this).find('div.sw-dropdown').css('display', 'block').find('ul').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+                }
+
+                // show my account dropdown
+                if ($(this).next('ul').length > 0) {
+                    $(this).next('ul.sw-dropdown').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+                }
+            } else if (e.keyCode == 13 || e.keyCode == 32) { //enter key
+                // If submenu is hidden, open it
+                e.preventDefault();
+
+                $(this).parent('li').find('ul[aria-hidden=true]').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).first().focus();
+            } else if (e.keyCode == 27) { //escape key
+                e.preventDefault();
+                hideMyStartBarMenu();
+            } else {
+                $(this).parent('.sw-mystart-nav').find('ul[aria-hidden=false] a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        return false;
+                    }
+                });
+            }
+        });
+       
+        // school dropdown
+        var startbarlinks = $(top_level_nav).find('ul').find('a');
+        bindMyStartBarLinks(startbarlinks);
+
+        // my account dropdown
+        var myaccountlinks = $(top_level_nav).next('ul').find('a');
+        bindMyStartBarLinks(myaccountlinks);
+ 
+        function bindMyStartBarLinks(links) {
+            $(links).keydown(function (e) {
+                e.stopPropagation();
+
+                if (e.keyCode == 38) { //key up
+                    e.preventDefault();
+
+                    // This is the first item
+                    if ($(this).parent('li').prev('li').length == 0) {
+                        if ($(this).parents('ul').parents('.sw-mystart-nav').length > 0) {
+                            $(this).parents('ul').parents('.sw-mystart-nav').focus();
+                        } else {
+                            $(this).parents('ul').prev('.sw-mystart-nav').focus();
+                        }
+                    } else {
+                        $(this).parent('li').prev('li').find('a').first().focus();
+                    }
+                } else if (e.keyCode == 40) { //key down
+                    e.preventDefault();
+                    
+                    if ($(this).parent('li').next('li').length == 0) {
+                        if ($(this).parents('ul').parents('.sw-mystart-nav').length > 0) {
+                            $(this).parents('ul').parents('.sw-mystart-nav').focus();
+                        } else {
+                            $(this).parents('ul').prev('.sw-mystart-nav').focus();
+                        }
+                    } else {
+                        $(this).parent('li').next('li').find('a').first().attr('tabIndex', 0);
+                        $(this).parent('li').next('li').find('a').first().focus();
+                    }
+                } else if (e.keyCode == 27 || e.keyCode == 37) { // escape key or key left
+                    e.preventDefault();
+                    hideMyStartBarMenu();
+                } else if (e.keyCode == 32) { //enter key
+                    e.preventDefault();
+                    window.location = $(this).attr('href');
+                } else {
+                    var found = false;
+
+                    $(this).parent('div').nextAll('li').find('a').each(function () {
+                        if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                            $(this).focus();
+                            found = true;
+                            return false;
+                        }
+                    });
+                   
+                    if (!found) {
+                        $(this).parent('div').prevAll('li').find('a').each(function () {
+                            if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                                $(this).focus();
+                                return false;
+                            }
+                        });
+                    }
+                }
+            });
+        }
+ 
+        // Hide menu if click or focus occurs outside of navigation
+        $('#sw-mystart-inner').find('.sw-mystart-nav').last().keydown(function (e) {
+            if (e.keyCode == 9) {
+                // If the user tabs out of the navigation hide all menus
+                hideMyStartBarMenu();
+            }
+        });
+
+        /*$(document).click(function() { 
+            hideMyStartBarMenu();
+        });*/
+
+        // try to capture as many custom MyStart bars as possible
+        $('.sw-mystart-button').find('a').focus(function () {
+            hideMyStartBarMenu();
+        });
+       
+        $('#sw-mystart-inner').click(function (e) {
+            e.stopPropagation();
+        });
+
+        $('ul.sw-dropdown-list').blur(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-mypasskey').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-sitemanager').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-myview').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-signin').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        $('#ui-btn-register').focus(function () {
+            hideMyStartBarMenu();
+        });
+
+        // button click events
+        $('div.sw-mystart-button.home a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.pw a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.manage a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('#sw-mystart-account').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).addClass('clicked-state');
+                $('#sw-myaccount-list').show();
+            }
+        });
+
+        $('#sw-mystart-mypasskey a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.signin a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+
+        $('div.sw-mystart-button.register a').keydown(function (e) {
+            e.stopImmediatePropagation();
+
+            if (e.keyCode == 13) {
+                $(this).click();
+            }
+        });
+    });
+
+    function hideMyStartBarMenu() {
+        $('.sw-dropdown').attr('aria-hidden', 'true').css('display', 'none').find('a').attr('tabIndex', -1);
+        $('#sw-mystart-account').removeClass("clicked-state");
+    }
+
+    // ADA CHANNEL NAV
+    $(document).ready(function () {
+        var settings = {
+            menuHoverClass: 'hover'
+        };
+
+        // Add ARIA role to menubar and menu items
+        $('[id="channel-navigation"]').attr('role', 'menubar').find('li').attr('role', 'menuitem');
+
+        var top_level_links = $('[id="channel-navigation"]').find('> li > a');
+
+        // Set tabIndex to -1 so that top_level_links can't receive focus until menu is open
+        $(top_level_links).next('ul').attr({ 'aria-hidden': 'true', 'role': 'menu' }).find('a').attr('tabIndex', -1);
+
+        // Adding aria-haspopup for appropriate items
+        $(top_level_links).each(function () {
+            if ($(this).next('ul').length > 0)
+                $(this).parent('li').attr('aria-haspopup', 'true');
+        });
+
+        $(top_level_links).focus(function () {
+            //hide open menus
+            hideChannelMenu();
+
+            if ($(this).parent('li').find('ul').length > 0) {
+                $(this).parent('li').addClass(settings.menuHoverClass).find('ul').css('display', 'block');
+            }
+        });
+
+        // Bind arrow keys for navigation
+        $(top_level_links).keydown(function (e) {
+            if (e.keyCode == 37) { //key left
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).parent('li').prev('li').length == 0) {
+                    $(this).parents('ul').find('> li').last().find('a').first().focus();
+                } else {
+                    $(this).parent('li').prev('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 38) { //key up
+                e.preventDefault();
+
+                if ($(this).parent('li').find('ul').length > 0) {
+                    $(this).parent('li').addClass(settings.menuHoverClass).find('ul').css('display', 'block').attr('aria-hidden', 'false').find('a').attr('tabIndex', 0).last().focus();
+                }
+            } else if (e.keyCode == 39) { //key right
+                e.preventDefault();
+
+                // This is the last item
+                if ($(this).parent('li').next('li').length == 0) {
+                    $(this).parents('ul').find('> li').first().find('a').first().focus();
+                } else {
+                    $(this).parent('li').next('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 40) { //key down
+                e.preventDefault();
+
+                if ($(this).parent('li').find('ul').length > 0) {
+                    $(this).parent('li')
+                         .addClass(settings.menuHoverClass)
+                         .find('ul').css('display', 'block')
+                         .attr('aria-hidden', 'false')
+                         .find('a').attr('tabIndex', 0)
+                         .first().focus();
+                }
+            } else if (e.keyCode == 13 || e.keyCode == 32) { //enter key
+                // If submenu is hidden, open it
+                e.preventDefault();
+
+                $(this).parent('li').find('ul[aria-hidden=true]').attr('aria-hidden', 'false').addClass(settings.menuHoverClass).find('a').attr('tabIndex', 0).first().focus();
+            } else if (e.keyCode == 27) { //escape key
+                e.preventDefault();
+                hideChannelMenu();
+            } else {
+                $(this).parent('li').find('ul[aria-hidden=false] a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        return false;
+                    }
+                });
+            }
+        });
+
+        var links = $(top_level_links).parent('li').find('ul').find('a');
+
+        $(links).keydown(function (e) {
+            if (e.keyCode == 38) {
+                e.preventDefault();
+
+                // This is the first item
+                if ($(this).parent('li').prev('li').length == 0) {
+                    $(this).parents('ul').parents('li').find('a').first().focus();
+                } else {
+                    $(this).parent('li').prev('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 40) {
+                e.preventDefault();
+
+                if ($(this).parent('li').next('li').length == 0) {
+                    $(this).parents('ul').parents('li').find('a').first().focus();
+                } else {
+                    $(this).parent('li').next('li').find('a').first().focus();
+                }
+            } else if (e.keyCode == 27 || e.keyCode == 37) {
+                e.preventDefault();
+
+                $(this).parents('ul').first().prev('a').focus().parents('ul').first().find('.' + settings.menuHoverClass).attr('aria-hidden', 'true').removeClass(settings.menuHoverClass).find('a').attr('tabIndex', -1);
+            } else if (e.keyCode == 32) {
+                e.preventDefault();
+                window.location = $(this).attr('href');
+            } else {
+                var found = false;
+
+                $(this).parent('li').nextAll('li').find('a').each(function () {
+                    if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                        $(this).focus();
+                        found = true;
+                        return false;
+                    }
+                });
+
+                if (!found) {
+                    $(this).parent('li').prevAll('li').find('a').each(function () {
+                        if ($(this).text().substring(0, 1).toLowerCase() == keyCodeMap[e.keyCode]) {
+                            $(this).focus();
+                            return false;
+                        }
+                    });
+                }
+            }
+        });
+
+        function hideChannelMenu() {
+            $('li.sw-channel-item.' + settings.menuHoverClass).attr('aria-hidden', 'true').removeClass(settings.menuHoverClass).find('ul').css('display', 'none').find('a').attr('tabIndex', -1);
+        }
+
+        // Hide menu if click or focus occurs outside of navigation
+        $('[id="channel-navigation"]').find('a').last().keydown(function (e) {
+            if (e.keyCode == 9) {
+                // If the user tabs out of the navigation hide all menus
+                hideChannelMenu();
+            }
+        });
+
+        $('[id="channel-navigation"]').find('a').first().keydown(function (e) {
+            if (e.keyCode == 9) {
+                // hide open MyStart Bar menus
+                hideMyStartBarMenu();
+            }
+        });
+
+        /*$(document).click(function() {
+            hideChannelMenu();
+        });*/
+
+        $('[id="channel-navigation"]').click(function (e) {
+            e.stopPropagation();
+        });
+    });
+    </script>
+    
+    <!-- Page -->
+    
+    <style type="text/css">/* GroupBegin Mystart */
+div#sw-mystart-inner, div#sw-footer-inner {
+	width: 100%;
+}
+div#sw-mystart-outer {
+	border-bottom: 1px solid #FFFFFF;
+}
+div#sw-footer-outer {
+	background-color: #000000;
+}
+div.sw-mystart-button.home, div#sw-mystart-search {
+	display: none;
+}
+#sw-search-input {
+	width: 145px;
+}
+/* GroupEnd */  
+/* GroupBegin Global */ 
+div#gb-page-outer {
+	width: 100%;
+	height: auto;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/hp-top-fade.jpg) repeat-x scroll left top transparent;
+}
+div#gb-header {
+	width: 810px;
+        height: 110px;
+}
+#gb-logo {
+        width: 109px;
+        height: 109px;
+        float: left;
+        background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/gb-logo.png) no-repeat scroll left top transparent;
+}
+#gb-school-name {
+	width: 701px;
+	height: 109px;
+	float: left;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/gb-school-name.png) no-repeat scroll left top transparent;
+}
+/* GroupEnd */
+/* GroupBegin App Styles */
+div.ui-widget.app {
+	padding: 0px 5px 5px 5px;
+}
+div.ui-widget.app div.ui-widget-header h1, div.ui-widget.app.navigation div.ui-widget-header h1 {
+	color: #24251F;
+	font-family: Verdana;
+ 	font-size: 14px;
+	font-weight: bold;
+	padding-left: 5px;
+}
+div.ui-widget-title h1 {
+	/*STYLE LIKE H1*/
+}
+h1.ui-article-title {
+	/*STYLE LIKE H2*/
+}
+hr {
+	height: 1px;
+	border: 1px dashed #CCCCCC;
+}
+a.view-calendar-link {
+	font-weight: bold; 
+	color: #0000FF;
+}
+/* GroupEnd */
+/* GroupBegin Homepage */
+div.column {
+	float: left;
+}
+div#hp-page {
+	width: 810px;
+	height: auto;
+	margin: 0 auto 0 auto;
+}
+div#hp-channel-list-outer {
+	width: 800px;
+	height: 31px;
+	margin: 0px auto 0px auto;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/channel-nav-bg.png) no-repeat scroll left top transparent;
+}
+div#hp-content {
+	width: 810px;
+	height: auto;
+	min-height: 600px;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/gb-watermark.png) no-repeat scroll right bottom transparent;
+}
+div#hp-flash {
+	width: 806px;
+	height: 333px;
+}
+div.hp.column.one {
+	width: 250px;
+	height: auto;
+	min-height: 400px;
+}
+div.hp.column.two {
+	width: 280px;
+	height: auto;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/hp-bottom-side.png) no-repeat scroll 5px 20px transparent;
+	min-height: 400px;
+	padding: 0px 5px 0px 5px;
+}
+div.hp.column.three {
+	width: 260px;
+	height: auto;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/hp-bottom-side.png) no-repeat scroll 0px 170px transparent;
+	min-height: 400px;
+	padding: 0px 5px 0px 5px;
+}
+.hp-content-header {
+	margin: 20px 0px 0px 25px;
+}
+/* GroupEnd */
+/* GroupBegin Subpage */
+div#sp-page {
+	width: 833px;
+	height: auto;
+	margin: 0 auto 0 auto;
+}
+div#sp-channel-list-outer {
+	width: 816px;
+	height: 48px;
+	padding: 4px 0px 0px 20px;
+	margin: 0px auto 0px auto;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/sp-channel-nav-bg.png) no-repeat scroll left top transparent;
+}
+div#sp-content {
+	width: 833px;
+	height: auto;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/sp-left-bar.png) repeat-y scroll left top transparent;
+}
+div.sp.column.one {
+	width: 200px;
+	height: auto;
+}
+div.sp.column.two {
+	width: 633px;
+	height: auto;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/gb-watermark.png) no-repeat scroll right bottom transparent;
+}
+#sp-footer {
+    background-image: url("http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/sp-footer-bg.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 17px;
+    overflow: hidden;
+    width: 833px;
+}
+/* GroupEnd */
+/* GroupBegin Subpage No Nav */
+div#spn-content {
+	width: 803px;
+	height: auto;
+	padding: 0px 15px 0px 15px;
+	margin: -15px 0px 0px 0px;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/gb-watermark.png) no-repeat scroll right bottom #FFFFFF;
+}
+/* GroupEnd */ 
+/* GroupBegin Navigation Styles */
+div.ui-widget.app.navigation li div.bullet.expandable{
+	
+}
+div.ui-widget.app.navigation li div.bullet.collapsible{
+
+}
+div.ui-widget.app.navigation li div.bullet{
+	width: 27px;
+	background: url(http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/bullet.gif) no-repeat scroll -5px -2px transparent;
+}
+div.ui-widget.app.navigation li {
+    padding: 6px 10px;
+}
+div.ui-widget.app.navigation li a {
+    color: #000000;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: normal;
+}
+div.ui-widget.app.navigation li.active a, div.ui-widget.app.navigation li.hover a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.upcomingevents .sw-calendar-block-title a {
+	font-weight: bold;
+}
+/* GroupEnd */
+ 
+/* GroupBegin Channel Bar Styles */
+#sw-channel-list-container {
+	width: 800px;
+}
+ul.sw-channel-list li.sw-channel-item {
+	height: 31px;
+	margin: 0px 0px 0px 0px;
+}
+li.sw-channel-item > a {
+	font-family: Verdana;
+  	font-size: 12px;
+   	font-weight: bold;
+   	color: #000000;
+	padding: 0px 5px 0px 0px;
+}
+li.sw-channel-item > a span {
+	padding: 5px 0 12px 5px;
+}
+li.sw-channel-item.hover > a {
+        color: #FF0000;
+        font-weight: normal;
+        text-decoration: underline;
+}
+li.sw-channel-item.hover > a span {
+}
+li.sw-channel-item.active > a {
+        color: #696969;
+        font-weight: normal;
+        text-decoration: underline;
+}
+li.sw-channel-item.active > a span {
+}
+/* GroupEnd */ 
+/* GroupBegin Channels-Dropdown */
+ul.sw-channel-dropdown {
+	margin:0px;
+	padding: 0px;
+	position: absolute;
+	display: none;
+	list-style: none;
+	top:25px;
+	left:0px;
+	font-size:12px;
+	border:1px solid #000000;
+	width:180px;
+	z-index:7001;
+	background:#F3F3F3;
+	font-weight:normal;
+}
+ul.sw-channel-dropdown li {
+	margin:0px;
+	padding:0px;
+	border:0px;
+	list-style:none; 
+	display:block;
+	width:180px;
+	height:auto;
+	background:none;
+	white-space:pre-wrap;
+	text-align:left;
+}
+ul.sw-channel-dropdown li a {
+	color:#000;
+	text-decoration:none;
+	font-family: Verdana;
+	font-size:10px;
+	background:none;
+	width:174px;
+	padding: 3px 3px;
+	display:block;
+	font-size:11px;
+}
+ul.sw-channel-dropdown li a:hover {
+	background:none;
+	color:#000;
+	width:174px;
+	background:#E2E2E2;
+	padding: 3px 3px;
+}
+ul.sw-channel-dropdown li a span{
+}
+/* GroupEnd */ 
+/* GroupBegin EditorStyles */
+body {
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+h1 {
+	font-size: 20px;
+	line-height: 1.5;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h2 {
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h3 {
+	font-size: 16px;
+	line-height: 1.2;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+}
+h4 {
+	font-size: 14px;
+	line-height: 1.2;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+}
+h5 {
+	font-size: 12px;
+	line-height: 1;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: bold;
+}
+h6 {
+	font-size: 12px;
+	line-height: 1;		
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+	font-style: italic;
+}
+.title {
+	font-weight:bold;
+}
+.subtitle {
+	font-style:italic;
+}     
+/* GroupEnd */             
+        
+        
+        
+        
+        </style>
+    <script type="text/javascript">
+	$(document).ready(function(){
+		dynamicContent();
+		loadFlash();
+	});
+	function dynamicContent() {   
+		$("div#sp-content div.ui-widget.app.navigation div.ui-widget-header h1").html("");
+        }
+        function loadFlash() {
+		if($("#hp-flash").size()){
+	        var so = new SWFObject("/cms/lib/MI17000203/Centricity/Template/2/hp-flash.swf","mymovie", "806", "333", "9", "#FFFFFF");
+	            so.addParam("wmode", "transparent");
+	            so.addVariable("districtAbbr","jklschool");
+	            so.addVariable("schoolAbbr","jklschool");
+	            so.addVariable("homeURL", window.location.host);
+	            so.addVariable("SiteID", "1");
+	            so.write("hp-flash");
+	        }
+	}	
+</script>      
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript"> 
+var pageTracker = _gat._getTracker("UA-5173826-1");
+pageTracker._setDomainName("none");
+pageTracker._setAllowLinker(true);
+pageTracker._trackPageview();
+</script>         
+    
+    <!-- App Preview -->
+    
+	
+	
+	<style type="text/css">
+		/* HOMEPAGE EDIT THUMBNAIL STYLES */
+		
+		div.region {
+            ;
+		}
+		
+		div.region span.homepage-thumb-region-number {
+		    font: bold 100px verdana;
+		    color: #fff;  
+		}
+		
+		div.homepage-thumb-region {
+		    background: #264867; /*dark blue*/
+		    border: 5px solid #fff;
+		    text-align: center;
+		    padding: 40px 0 40px 0;
+		    display: block;
+		}
+
+		div.homepage-thumb-region.region-1 {
+		    background: #264867; /*dark blue*/
+		}
+
+		div.homepage-thumb-region.region-2 {
+		    background: #5C1700; /*dark red*/
+		}
+
+		div.homepage-thumb-region.region-3 {
+		    background: #335905; /*dark green*/
+		}
+
+		div.homepage-thumb-region.region-4 {
+		    background: #B45014; /*dark orange*/
+		}
+
+		div.homepage-thumb-region.region-5 {
+		    background: #51445F; /*dark purple*/
+		}
+
+		div.homepage-thumb-region.region-6 {
+		    background: #3B70A0; /*lighter blue*/
+		}
+
+		div.homepage-thumb-region.region-7 {
+		    background: #862200; /*lighter red*/
+		}
+
+		div.homepage-thumb-region.region-8 {
+		    background: #417206; /*lighter green*/
+		}
+
+		div.homepage-thumb-region.region-9 {
+		    background: #D36929; /*lighter orange*/
+		}
+
+		div.homepage-thumb-region.region-10 {
+		    background: #6E5C80; /*lighter purple*/
+		}
+		
+		/* END HOMEPAGE EDIT THUMBNAIL STYLES */
+	</style>
+	
+	<style type="text/css" media="print">
+       .noprint {
+           display: none !important;
+       }
+    </style>
+    
+    
+
+<!-- Begin Schoolwires Traffic Code --> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5173826-6']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+
+    // Added Custom Variable to allow us to filter based on hosting type, so we can see stats for each environment. Pulls from web config.
+  _gaq.push(['_setCustomVar',
+    1,                // This custom var is set to slot #1.  Required parameter.
+    'Hosting Type',    // The name of the custom variable.  Required parameter.
+    'EUPISD',        // The value of the custom variable.  Required parameter.
+                      //  (possible values might be Free, Bronze, Gold, and Platinum)
+    1                 // Sets the scope to visitor-level.  Optional parameter.
+  ]);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- End Schoolwires Traffic Code -->  
+ 
+    
+</head>
+<body>
+   
+    <!-- OnScreen Alert Dialog Start -->
+    <div id="onscreenalert-holder"></div>
+    <!-- OnScreen Alert Dialog End -->
+
+    <!-- ADA Skip Nav -->
+    <div class="sw-skipnav-outerbar">
+        <a href="index.html#sw-maincontent" id="skipLink" class="sw-skipnav" tabindex="1">Skip to Main Content</a>
+    </div>
+
+<!-- off-canvas menu enabled-->
+
+
+	
+
+<style type="text/css">
+	/* SPECIAL MODE BAR */
+	div.sw-special-mode-bar {
+		background: #FBC243 url('http://www.jklschool.org/Static/V2_13_01//GlobalAssets/Images/special-mode-bar-background.png') no-repeat;
+		height: 30px;
+		text-align: left;
+		font-size: 12px;
+		position: relative;
+		z-index: 10000;
+	}
+	div.sw-special-mode-bar > div {
+		padding: 8px 0 0 55px;
+		font-weight: bold;
+	}
+	div.sw-special-mode-bar > div > a {
+		margin-left: 20px;
+		background: #A0803D;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		color: #fff;
+		padding: 4px 6px 4px 6px;
+		font-size: 11px;
+	}
+	
+	body.blue div.sw-special-mode-bar, body.green div.sw-special-mode-bar, body.red div.sw-special-mode-bar {
+	    display: none;
+	}
+
+	/* END SPECIAL MODE BAR */
+</style>
+
+<script type="text/javascript">
+	
+	function SWEndPreviewMode() { 
+		var data = "{}";
+		var success = "window.location='';";
+		var failure = "CallControllerFailure(result[0].errormessage);";
+		CallController("http://www.jklschool.org/site/SiteController.aspx/EndPreviewMode", data, success, failure);
+	}
+	
+	function SWEndEmulationMode() {
+		SetUnescapedCookie('UserID', GetCookie('SourceEmulationUserID'));
+		DeleteCookie('SourceEmulationUserID');
+		window.location = 'http://www.jklschool.org/ums/Users/Users.aspx';
+	}
+
+	function SWEndPreviewConfigMode() {
+	    var data = "{}";
+	    var success = "window.location='';";
+	    var failure = "CallControllerFailure(result[0].errormessage);";
+	    CallController("http://www.jklschool.org/site/SiteController.aspx/EndPreviewConfigMode", data, success, failure);
+	}
+</script>
+            
+
+    <!-- BEGIN - MYSTART BAR -->
+<div id='sw-mystart-outer' class='noprint'>
+<div id='sw-mystart-inner'>
+<div id='sw-mystart-left'>
+<div class='sw-mystart-nav sw-mystart-button home'><a tabindex="0" href="http://www.jklschool.org/Domain/1" alt="District Home" title="Return to the homepage on the district site."><span>District Home<div id='sw-home-icon'></div>
+</span></a></div>
+</div>
+<div id='sw-mystart-right'>
+<div id='ui-btn-signin' class='sw-mystart-button signin'><a href="http://www.jklschool.org/site/Default.aspx?PageType=7&SiteID=1&IgnoreRedirect=true" title="Sign in to your website."><span>Sign In</span></a></div>
+<div id='sw-mystart-search' class='sw-mystart-nav'>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#sw-search-input').keyup(function(e) {        if (e.keyCode == 13) {
+            SWGoToSearchResultsPageswsearchinput();
+        }
+    });
+    $('#sw-search-input').val($('#swsearch-hid-word').val())});
+function SWGoToSearchResultsPageswsearchinput() {
+window.location.href="http://www.jklschool.org/site/Default.aspx?PageType=6&SiteID=1&SearchString=" + $('#sw-search-input').val();
+}
+</script>
+<input id="sw-search-input" type="text" title="Type the word to search for and click Search." placeholder="Search this Site..." />
+<a tabindex="0" id="sw-search-button" onclick="SWGoToSearchResultsPageswsearchinput();"><span><img src="http://www.jklschool.org/Static/V2_13_01//globalassets/images/sw-mystart-search.png" alt="Search" /></span></a>
+</div>
+<div class='clear'></div>
+</div>
+</div>
+</div>
+<!-- END - MYSTART BAR -->
+<div id="gb-page-outer">
+	<div id="hp-page">
+		<div id="gb-header">
+			<div id="gb-logo"></div>
+			<div id="gb-school-name"></div>
+		</div>
+		<div id="hp-flash"></div>
+		<div id="hp-channel-list-outer">
+			<div id="sw-channel-list-container">
+<ul id="channel-navigation" class="sw-channel-list">
+<li class="sw-channel-item active"><a href="http://www.jklschool.org/Page/1"><span>Home</span></a></li>
+<li class="sw-channel-item ">
+<a href="http://www.jklschool.org/domain/59">
+<span>School Information</span></a>
+<ul class="sw-channel-dropdown">
+<li class=""><a href="http://www.jklschool.org/domain/59"><span>School Information</span></a></li>
+<li class=""><a href="http://www.jklschool.org/domain/60"><span>Budget Salary Compensation Transparency Reporting</span></a></li>
+<li class=""><a href="http://www.jklschool.org/domain/61"><span>Annual Report</span></a></li>
+<li class=""><a href="http://www.jklschool.org/domain/64"><span>Employment</span></a></li>
+<li class=""><a href="http://www.jklschool.org/domain/65"><span>Request for Proposals</span></a></li>
+<li class=""><a href="http://www.jklschool.org/domain/85"><span>FOIA Requests</span></a></li>
+</ul>
+</li><li class="sw-channel-item ">
+<a href="http://www.jklschool.org/domain/67">
+<span>School Board</span></a>
+</li><li class="sw-channel-item ">
+<a href="http://www.jklschool.org/domain/69">
+<span>Departments</span></a>
+<ul class="sw-channel-dropdown">
+<li class=""><a href="http://www.jklschool.org/domain/69"><span>Food Services</span></a></li>
+<li class=""><a href="http://www.jklschool.org/domain/70"><span>Academic Services and Reading Recovery</span></a></li>
+<li class=""><a href="http://www.jklschool.org/site/Default.aspx?PageID=468"><span>Curriculum</span></a></li>
+<li class=""><a href="http://www.jklschool.org/domain/72"><span>Gifted and Talented</span></a></li>
+<li class=""><a href="http://www.jklschool.org/domain/73"><span>Media Center</span></a></li>
+<li class=""><a href="http://www.jklschool.org/domain/74"><span>Special Education</span></a></li>
+<li class=""><a href="http://www.jklschool.org/domain/75"><span>Technology</span></a></li>
+</ul>
+</li><li class="sw-channel-item ">
+<a href="http://www.jklschool.org/domain/78">
+<span>Parents/Students</span></a>
+</li><li class="sw-channel-item ">
+<a href="http://www.jklschool.org/domain/80">
+<span>Staff</span></a>
+</li><li class="sw-channel-item ">
+<a href="http://www.jklschool.org/domain/76">
+<span>Athletics</span></a>
+</li><li class="sw-channel-item "><a href="http://www.jklschool.org/Page/2"><span>Calendar</span></a></li>
+</ul><div class='clear'></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        channelHoverIE();
+        channelTouch();
+    });
+
+    function channelTouch() {
+        // this will change the dropdown behavior when it is touched vs clicked.
+        // channels will be clickable on second click. first click simply opens the menu.
+        $('#channel-navigation > .sw-channel-item > a').on({
+            'touchstart': function (e) {
+                
+                // see if has menu
+                if ($(this).siblings('ul.sw-channel-dropdown').length > 0) {
+                    var button = $(this);
+
+                    // add href as property if not already set
+                    // then remove href attribute
+                    if (!button.prop('linkHref')) {
+                        button.prop('linkHref', button.attr('href'));
+                        button.removeAttr('href');
+                    }
+
+                    // check to see if menu is already open
+                    if ($(this).siblings('ul.sw-channel-dropdown').is(':visible')) {
+                        // if open go to link
+                        window.location.href = button.prop('linkHref');
+                    } 
+
+                } 
+            }
+        });
+    }
+
+
+    
+    function channelHoverIE(){
+		// set z-index for IE7
+		var parentZindex = $('#channel-navigation').parents('div:first').css('z-index');
+		var zindex = (parentZindex > 0 ? parentZindex : 8000);
+		$(".sw-channel-item").each(function(ind) {
+			$(this).css('z-index', zindex - ind);
+			zindex --;
+		});
+	    $(".sw-channel-item").hover(function(){
+	        var subList = $(this).children('ul');
+	        if ($.trim(subList.html()) !== "") {
+		        subList.show();
+		    }
+		    $(this).addClass("hover");
+	    }, function(){
+		    $(".sw-channel-dropdown").hide();
+		    $(this).removeClass("hover");
+	    });
+    }
+
+</script>
+
+
+		</div>
+		<div id="hp-content" class="ui-clear">
+			<div class="hp column one">
+				<div class="hp-content-header">
+					<img src="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/announcements.png" alt="Announcements"/>
+				</div>	
+				<a id="sw-maincontent" name="sw-maincontent" tabindex="0"></a><div id="sw-content-container1" class="region ui-hp"><div id='pmi-115'>
+
+
+
+<div id='sw-module-2080'>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = '1';
+            var PageID = '1';
+            var RenderLoc = '0';
+            var MIID = '208';
+
+            //added to check to make sure moderated content doesn't bleed through the dialog
+            if ($('#dialog-overlay-WindowLargeModal-body.moderateContent').length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript('ModuleView');CheckScript('Mustache');
+ });</script>
+    
+    <div id="module-content-208" >
+<div class="ui-widget app announcements">
+	<div class="ui-widget-header ui-helper-hidden">
+		
+	</div>
+	
+	<div class="ui-widget-detail">
+		<ul class="ui-articles">
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><hr />
+<p><strong><span class="subtitle">Open Enrollment Timeline<br /></span></strong></p>
+<p><a href="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/67/Enrollment Timeline for 2017-2018 abbreviated for web site.pdf" target="_blank">2017/2018 Open Enrollment Timeline</a> </p></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.jklschool.org/site/default.aspx?PageType=3&amp;ModuleInstanceID=208&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=856&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><hr />
+<h3><span style="font-size: small;"><strong><span class="subtitle">&nbsp;<strong>Enrollment:</strong></span></strong></span></h3>
+<p><a href="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/1/2017-2018&#32;app.pdf">2017/2018 Enrollment Application</a></p>
+<hr /></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.jklschool.org/site/default.aspx?PageType=3&amp;ModuleInstanceID=208&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=797&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><hr />
+<p><em><span class="title">JKL Newsletter</span></em></p>
+<p>Please click <a href="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/1/newsletter&#32;updated&#32;2&#32;-&#32;1-17&#32;-&#32;pdf&#32;2.pdf">here</a> to view the JKL Newsletter.</p></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.jklschool.org/site/default.aspx?PageType=3&amp;ModuleInstanceID=208&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=865&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><div><hr /></div>
+<div><strong><span class="subtitle">Employment Opportunities</span></strong></div>
+<div>&nbsp;</div>
+<div><a href="http://www.jklschool.org/site/Default.aspx?PageID=440">Click Here </a>for more details</div></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.jklschool.org/site/default.aspx?PageType=3&amp;ModuleInstanceID=208&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=90&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><div><hr /></div>
+<h3><span style="font-size: small;"><strong><span class="subtitle">Sealed&nbsp;Bid Opportunities</span></strong></span></h3>
+<p><a href="http://www.jklschool.org/site/Default.aspx?PageID=442">Click Here for Open Bids/Request for Proposals</a></p></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.jklschool.org/site/default.aspx?PageType=3&amp;ModuleInstanceID=208&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=665&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><hr />
+<div><strong><span class="subtitle">Annual Report</span></strong></div>
+<p><a href="http://www.jklschool.org//site/Default.aspx?PageID=405">Click Here</a>&nbsp;for more details</p>
+<div><hr /></div></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.jklschool.org/site/default.aspx?PageType=3&amp;ModuleInstanceID=208&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=613&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+<li>
+    <div class="ui-article">
+		<div class="ui-article-description">
+			<span><hr />
+<h1><span style="color: crimson;"><em><strong>Parent Portal</strong></em></span></h1>
+<div><a href="https://bie.infinitecampus.com/campus/portal/bahweting.jsp" target="_blank"><img title="Parent Portal" src="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/1/Nasis__Parent_Portal.GIF" alt="Parent Portal" width="125" height="39" align="middle" border="1" /></a></div>
+<div><hr /></div></span>
+		</div>
+		<div class="ui-article-controls">
+        	<a class="sub-link" href="http://www.jklschool.org/site/default.aspx?PageType=3&amp;ModuleInstanceID=208&amp;ViewID=ed695a1c-ef13-4546-b4eb-4fefcdd4f389&amp;RenderLoc=0&amp;FlexDataID=91&amp;PageID=1"><span>Comments (-1)</span></a>
+			
+		</div>
+		<div class="clear"></div>
+	</div>
+</li>
+</ul>
+</div>
+	<div class="ui-widget-footer">
+		
+		<div class="app-level-social-follow"></div> 
+		<div class="clear"></div>
+	</div>
+</div>
+<input type="hidden" id="hidFullPath" value="http://www.jklschool.org/" />
+<input type="hidden" id="hidModuleInstanceID0" value="208"/>
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.jklschool.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=1&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&EnableQuirksMode=0&ViewID=' + viewToUse + '&Tag=' + tag, container, 2, 'chkSidebar();');
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $('#hid-'+MIID+'-DetailView').val();
+   }
+  GetContent('http://www.jklschool.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=1&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&FlexDataID=' + flexDataID + '&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=0&Tag=' + tag + '&ViewID=' + targetView, container, 2, 'chkSidebar();');
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.jklschool.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=1&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&Tag=' + tag + '&EnableQuirksMode=0&ViewID='+viewToUse, container, 2, 'chkSidebar();');
+}
+</script>
+</div>
+
+</div></div>
+<div id='pmi-576'>
+
+
+
+<div id='sw-module-6880'>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = '1';
+            var PageID = '1';
+            var RenderLoc = '0';
+            var MIID = '688';
+
+            //added to check to make sure moderated content doesn't bleed through the dialog
+            if ($('#dialog-overlay-WindowLargeModal-body.moderateContent').length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript('ModuleView');CheckScript('Mustache');
+ });</script>
+    
+    <div id="module-content-688" >
+<div class="ui-widget app headlines">
+	
+	<div class="ui-widget-header ui-helper-hidden">
+		
+	</div>
+	
+	<div class="ui-widget-detail" id="sw-app-headlines">
+		<ul class="ui-articles">
+</ul>  </div>   <div class="ui-widget-footer">         <div class="clear"></div>  </div> </div> <script type="text/javascript">  $(document).ready(function() {   $('a.ui-article-thumb').click(function () {                 window.location = $(this).attr('href');       });          $('#sw-app-headlines').find('img').each(function() {    if ($.trim(this.src) == '' )    {     $(this).parent().parent().remove();    }   });   }); </script>
+<input type="hidden" id="hidFullPath" value="http://www.jklschool.org/" />
+<input type="hidden" id="hidModuleInstanceID0" value="688"/>
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.jklschool.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=1&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&EnableQuirksMode=0&ViewID=' + viewToUse + '&Tag=' + tag, container, 2, 'chkSidebar();');
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $('#hid-'+MIID+'-DetailView').val();
+   }
+  GetContent('http://www.jklschool.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=1&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&FlexDataID=' + flexDataID + '&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=0&Tag=' + tag + '&ViewID=' + targetView, container, 2, 'chkSidebar();');
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.jklschool.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=1&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&Tag=' + tag + '&EnableQuirksMode=0&ViewID='+viewToUse, container, 2, 'chkSidebar();');
+}
+</script>
+</div>
+
+</div></div>
+<div id='pmi-577'>
+<div id="module-content-689" >
+<div class="ui-widget app navigation  siteshortcuts">
+	<div class="ui-widget-header"></div>
+	<div class="ui-widget-detail">
+		
+	</div>
+	<div class="ui-widget-footer">
+	</div>
+</div></div>
+</div>
+</div>
+			</div>
+			<div class="hp column two">
+				<div class="hp-content-header">
+					<img src="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/welcome.png" alt="Welcome!"/>
+				</div>	
+				<div id="sw-content-container5" class="region ui-hp"><div id='pmi-65'>
+
+
+
+<div id='sw-module-1450'>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = '1';
+            var PageID = '1';
+            var RenderLoc = '0';
+            var MIID = '145';
+
+            //added to check to make sure moderated content doesn't bleed through the dialog
+            if ($('#dialog-overlay-WindowLargeModal-body.moderateContent').length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript('ModuleView');CheckScript('Mustache');
+ });</script>
+    
+    <div id="module-content-145" >
+<div class="ui-widget app flexpage">
+	<div class="ui-widget-header ui-helper-hidden">
+		
+	</div>
+	
+	<div class="ui-widget-detail">
+		
+<div class="ui-article"><span ><div>
+<span style="color: red;"></span></div><div style="font-family: Verdana;"><u><span style="color: #c0c0c0;"></span><span style="background-color: #ffff99;"><span style="color: #c0c0c0;"><span style="color: #ff0000;"><span style="color: #ffffff; background-color: #ff0000;"></span></span></span></span></u></div><div>&nbsp;<br /><div align="center"><h2><span style="font-family: Trebuchet MS;">&nbsp;<span style="font-family: Verdana;">Regular Office Hours:</span></span>&nbsp;&nbsp;</h2></div></div><div style="font-family: Verdana;" align="center"><span style="font-family: Verdana;"></span></div><span><div style="font-family: Verdana;" align="center"><span style="font-family: Verdana;">Monday - Friday </span></div></span><div align="center"><span><div><span style="font-family: Verdana;">7:30 am - 4:30 pm</span></div><div>&nbsp;</div></span></div><div></div><div><hr />&nbsp;</div><span></span><div style="font-family: Verdana;" align="center"><h2><strong><span style="font-size: 12pt;">&nbsp;School Calendar:</span></strong> <br /></h2></div><div style="font-family: Verdana;" align="center"><a href="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/1/School&#32;Calendar&#32;2016-2017.pdf"><span style="font-size: 12pt;">2016-2017 School Calendar</span></a></div><div align="center">&nbsp;<div align="center"><img src="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/1/markyourcalendar.png" alt="Calendar " title="Calendar" height="78" width="85" /></div></div><div style="font-family: Verdana;" align="center"><hr /></div><div style="font-family: Verdana;" align="center"><h2>&nbsp;<strong style="font-size: 12pt;">Homework Form:</strong></h2></div><div style="font-family: Verdana;" align="center"><a href="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/67/Pre-Arranged Absence Form.pdf" target="_blank"><span style="font-size: 12pt;">Pre-Arranged Absence/ Homework Form </span></a></div><div>&nbsp;</div><div align="center"><img src="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/1/homework-clipart-jRiARd6cL.png" alt="Homework " title="Homework" height="60" width="85" />&nbsp;</div><div>&nbsp;</div><div style="font-family: Verdana;" align="center"><hr /></div><div style="font-family: Verdana;" align="center"><h2><span style="font-size: 12pt;">Facility Use</span></h2><div><a href="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/1/Blank&#32;Facility&#32;Use&#32;Request&#32;Form.pdf">Facility Use Request Form</a></div><div>&nbsp;</div><div><a href="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/1/Facility&#32;Use&#32;Instructions&#32;for&#32;School&#32;Website.pdf">Facility Use Request Instructions</a>&nbsp;</div><div>&nbsp;</div><hr /><div>&nbsp;</div><div><span style="font-size: 12pt;"> </span></div><div><span style="font-size: 12pt;"><strong>Managing Communicable </strong></span></div><div><h2><span style="font-size: 12pt;">Diseases in Schools</span></h2></div></div><div align="center"><a style="font-family: Verdana;" href="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/67/Managing Communicable Diseases in Schools.pdf" target="_blank">Managing Communicable Diseases in Schools&nbsp;</a></div><div>&nbsp;</div><div align="center"><img src="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/1/washing_hands.jpg" alt="Washing Hands " title="Washing Hands" height="62" width="85" />&nbsp;</div><div>&nbsp;</div></span></div> 
+<div class="clear"></div>
+	
+	</div>
+	<div class="ui-widget-footer">
+		
+			
+		
+		<div class="clear"></div>
+	</div>
+</div>
+<input type="hidden" id="hidFullPath" value="http://www.jklschool.org/" />
+<input type="hidden" id="hidModuleInstanceID0" value="145"/>
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.jklschool.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=1&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&EnableQuirksMode=1&ViewID=' + viewToUse + '&Tag=' + tag, container, 2, 'chkSidebar();');
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $('#hid-'+MIID+'-DetailView').val();
+   }
+  GetContent('http://www.jklschool.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=1&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&FlexDataID=' + flexDataID + '&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=1&Tag=' + tag + '&ViewID=' + targetView, container, 2, 'chkSidebar();');
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.jklschool.org//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=1&PageID=1&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&Tag=' + tag + '&EnableQuirksMode=1&ViewID='+viewToUse, container, 2, 'chkSidebar();');
+}
+</script>
+</div>
+
+</div></div>
+</div>
+			</div>
+			<div class="hp column three">
+				<a href="http://www.jklschool.org/Page/403" style="display: block; width: 170px; margin: 0px auto 0px auto;"><img width="150" height="150" border="0" src="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Domain/1/Transparency_Icon.jpeg" alt="Budget and Salary Compensation" title="Budget and Salary Compensation"></a>
+				<div class="hp-content-header">
+					<img src="http://www.jklschool.org/cms/lib/MI17000203/Centricity/Template/2/upcoming.png" alt="Upcoming Events"/>
+				</div>	
+				<div id="sw-content-container4" class="region ui-hp"><div id='pmi-89'>
+<div id="module-content-173" ><div class="ui-widget app upcomingevents">
+ <div class="ui-widget-header ui-helper-hidden"></div>
+ <div class="ui-widget-detail">
+		<ul class="ui-articles">
+<li>
+<div class="ui-article">
+     <h1 class="ui-article-title sw-calendar-block-date">Tomorrow</h1>
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">9:15 AM - 11:00 AM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.jklschool.org/site/Default.aspx?PageID=2&PageType=17&DomainID=1&ModuleInstanceID=172&EventDateID=5041">PBIS Bowling Fieldtrip @ Don Dee Lanes</a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <h1 class="ui-article-title sw-calendar-block-date">Friday</h1>
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">8:30 AM - 9:00 AM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.jklschool.org/site/Default.aspx?PageID=2&PageType=17&DomainID=1&ModuleInstanceID=172&EventDateID=5065">Regional Social Studies Fair @ LSSU Cisler Center</a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">11:40 AM - 11:55 AM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.jklschool.org/site/Default.aspx?PageID=2&PageType=17&DomainID=1&ModuleInstanceID=172&EventDateID=5066">Lunch @ LSSU Following the Social Studies Fair</a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">12:00 PM - 4:00 PM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.jklschool.org/site/Default.aspx?PageID=2&PageType=17&DomainID=1&ModuleInstanceID=172&EventDateID=4750">Noon Dismissal</a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <h1 class="ui-article-title sw-calendar-block-date">Monday</h1>
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">12:15 PM - 1:00 PM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.jklschool.org/site/Default.aspx?PageID=2&PageType=17&DomainID=1&ModuleInstanceID=172&EventDateID=5008">CANCELLED: Policy Committee Meeting</a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">12:15 PM - 1:00 PM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.jklschool.org/site/Default.aspx?PageID=2&PageType=17&DomainID=1&ModuleInstanceID=172&EventDateID=5060">Personnel Committee Meeting</a></span>
+     </p>
+</div>
+</li>
+<li>
+<div class="ui-article">
+     <p class="ui-article-description">
+         <span class="sw-calendar-block-time">6:00 PM - 8:30 PM</span>
+         <span class="sw-calendar-block-title"><a href="
+http://www.jklschool.org/site/Default.aspx?PageID=2&PageType=17&DomainID=1&ModuleInstanceID=172&EventDateID=5064">EUP Reads @ LSSU</a></span>
+     </p>
+</div>
+</li>
+	</ul>
+<a class='view-calendar-link' href="http://www.jklschool.org/Page/2"><span>View Calendar</span></a>
+ </div>
+ <div class="ui-widget-footer">
+ </div>
+</div>
+</div>
+</div>
+</div>
+			</div>
+		</div>
+	</div>  
+</div>     <!-- BEGIN - STANDARD FOOTER -->
+<div id='sw-footer-outer'>
+<div id='sw-footer-inner'>
+<div id='sw-footer-left'></div>
+<div id='sw-footer-right'>
+<div id='sw-footer-links'>
+<ul>
+<li><a title='Click to email the primary contact' href='mailto:mpatzwald@jklschool.org'>Questions or Feedback?</a> | </li>
+<li><a href='http://www.schoolwires.com/privacy' target="_blank">Blackboard Schoolwires Privacy Policy (Updated)</a> | </li>
+<li><a href='http://www.schoolwires.com/terms' target="_blank">Terms of Use</a></li>
+</ul>
+</div>
+<div id='sw-footer-copyright'>Copyright &copy; 2002-2017 Blackboard, Inc. All rights reserved.</div>
+<div id='sw-footer-logo'><a href='http://www.schoolwires.com' title="This site is powered by Schoolwires.">
+<img src='http://www.jklschool.org/Static/V2_13_01//GlobalAssets/Images/sw-footer-logo.png'
+ alt="Powered by Schoolwires logo"/>
+</a></div>
+</div>
+</div>
+</div>
+<!-- END - STANDARD FOOTER -->
+<script type="text/javascript">
+   $(document).ready(function(){
+      var beaconURL='http://analytics.schoolwires.com/analytics.asmx/Insert?AccountNumber=Od1Az0Y%2fjaQxoGozBuqn0Q%3d%3d&SessionID=b21342a3-d989-46c9-b092-f1418e81cf53&SiteID=1&ChannelID=0&SectionID=0&PageID=1&HitDate=3%2f8%2f2017+12%3a26%3a10+AM&Browser=Chrome+56.0&OS=Unknown&IPAddress=136.152.142.25';
+      try {
+         $.getJSON(beaconURL + '&jsonp=?', function(myData) {});
+      } catch(err) { 
+         // prevent site error for analytics
+      }
+   });
+</script>
+  
+    <input type="hidden" id="hid-pageid" value="1" />  
+ 
+    
+
+
+    <div id='dialog-overlay-WindowMedium-base' class='ui-dialog-overlay-base' ><div id='WindowMedium'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowMedium");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowMedium-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowMedium-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowMedium-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowMedium-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowSmall-base' class='ui-dialog-overlay-base' ><div id='WindowSmall'  class='ui-dialog-overlay small' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowSmall");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowSmall-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowSmall-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowSmall-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowSmall-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowLarge-base' class='ui-dialog-overlay-base' ><div id='WindowLarge'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close' title='Close.' onclick='CloseDialogOverlay("WindowLarge");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowLarge-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowLarge-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowLarge-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowLarge-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+    <div id='dialog-overlay-WindowMediumModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowMediumModal'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowMediumModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowMediumModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowMediumModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowMediumModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowMediumModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowSmallModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowSmallModal'  class='ui-dialog-overlay small' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowSmallModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowSmallModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowSmallModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowSmallModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowSmallModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowLargeModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowLargeModal'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowLargeModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowLargeModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowLargeModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowLargeModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowLargeModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-WindowXLargeModal-base' class='ui-dialog-overlay-base-modal' ><div id='WindowXLargeModal'  class='ui-dialog-overlay xlarge' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("WindowXLargeModal");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-WindowXLargeModal-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-WindowXLargeModal-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-WindowXLargeModal-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowXLargeModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+<div id='dialog-overlay-MyAccountSubscriptionOverlay-base' class='ui-dialog-overlay-base-modal' ><div id='MyAccountSubscriptionOverlay'  class='ui-dialog-overlay medium' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("MyAccountSubscriptionOverlay");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-MyAccountSubscriptionOverlay-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-MyAccountSubscriptionOverlay-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-MyAccountSubscriptionOverlay-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-MyAccountSubscriptionOverlay-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+    <div id='dialog-overlay-InsertOverlay-base' class='ui-dialog-overlay-base-modal' ><div id='InsertOverlay'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("InsertOverlay");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-InsertOverlay-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-InsertOverlay-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-InsertOverlay-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-InsertOverlay-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    <div id='dialog-overlay-InsertOverlay2-base' class='ui-dialog-overlay-base-modal' ><div id='InsertOverlay2'  class='ui-dialog-overlay large' ><div class='ui-dialog-overlay-close modal' title='Close.' onclick='CloseDialogOverlay("InsertOverlay2");' ></div><div class='ui-dialog-overlay-title-bar' id='dialog-overlay-InsertOverlay2-title-bar' ></div><div class='ui-dialog-overlay-body' id='dialog-overlay-InsertOverlay2-body' ></div><div class='ui-dialog-overlay-footer' id='dialog-overlay-InsertOverlay2-footer' ></div></div></div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-InsertOverlay2-base').appendTo('body');
+ 		
+		
+    });
+</script>
+    
+    <style type="text/css">
+    #videowrapper {
+        position: fixed;
+        z-index: 20000;
+        background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+    #videodialog {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        right: 50px;
+        background: #FFF none repeat scroll 0% 0%;
+        z-index: 30000;
+        box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.65);
+        box-sizing: border-box;
+        border: 8px solid #FFF;
+    }
+
+    #videodialog .close-btn {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 0px 25px 0px 0px;
+        color: #666;
+        line-height: 1;
+        font-family: "Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Tahoma,sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #videodialog .close-btn::after {
+        content: "X";
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        margin-top: -8px;
+        background: #999 none repeat scroll 0% 0%;
+        border-radius: 9px;
+        color: #FFF;
+        font-weight: bold;
+        line-height: 16px;
+        font-size: 9px;
+        text-align: center;
+    }
+        #videodialog-video {
+            margin-top:25px;
+        }
+    </style>
+    <script type="text/javascript">
+        function resizeVideoIframe() {
+            $("#videodialog-video iframe").css({ "width": "auto", "height": "auto" });
+            var screenWidth = $(window).width();
+            var screenHeight = $(window).height();
+            //alert('screen width =' + screenWidth + '  screen height=' + screenHeight);
+            var initVidW = 800, initVidH = 600;
+            var vidRatio = initVidH / initVidW;
+            var vidWidth = $("#videodialog-video").width();
+            //alert('videoWidth = ' +vidWidth);
+            var vidHeight = vidWidth * vidRatio;
+
+            if ((vidHeight + 100) > screenHeight) {
+                vidHeight = screenHeight - 140;
+            }
+
+            $("#videodialog-video").css({ "height": (vidHeight) });
+            $("#videodialog-video iframe").css({ "width": vidWidth, "height": vidHeight }); 
+        }
+
+        function resizeVideo() {
+            $("#videodialog-video video").css({ "width": "auto", "height": "auto" });
+            var screenWidth = $(window).width();
+            var screenHeight = $(window).height();
+            //alert('screen width =' + screenWidth + '  screen height=' + screenHeight);
+            var initVidW = 800, initVidH = 600;
+            var vidRatio = initVidH / initVidW;
+            var vidWidth = $("#videodialog-video").width();
+            //alert('videoWidth = ' +vidWidth);
+            var vidHeight = vidWidth * vidRatio;
+
+            if ((vidHeight + 100) > screenHeight) {
+                vidHeight = screenHeight - 140;
+            }
+
+            $("#videodialog-video").css({ "height": (vidHeight) });
+            $("#videodialog-video video").css({ "width": vidWidth, "height": vidHeight });
+            //$(".videoControl").css({ "bottom": $("#videodialog-video video").bottom() + 5, "width": 100 });
+        }
+
+        function closeVideoDialog() {
+            $('#videowrapper').addClass('ui-helper-hidden');
+            $('#videodialog-video').html('');
+            $(window).resize(function () { });
+        }
+    </script>
+    <div id="videowrapper" class="ui-helper-hidden">
+        <div id="videodialog">
+            <div id="videodialog-close" class="close-btn" onclick="closeVideoDialog();">CLOSE</div>
+            <div id="videodialog-video"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+			removeBrokenImages();
+			checkSidebar();
+			RemoveCookie();
+			
+            $('.navigation li.collapsible').each(function () {
+			    if ($(this).find('ul').length == 0) {
+			        $(this).removeClass('collapsible');
+			    } 
+			});
+			
+			// find page nav state cookie and add open chevron
+			var arrValues = GetCookie('SWPageNavState').split('~');
+
+            $.each(arrValues, function () {
+				if (this != '') {
+					$('#' + this).addClass('collapsible').prepend("<div class='bullet collapsible' />");
+				}
+			});
+
+			// find remaining sub menus and add closed chevron and close menu
+            $('.navigation li > ul').each(function () {
+			    var list = $(this);
+			    
+			    if (list.parent().hasClass('active') && !list.parent().hasClass('collapsible')) {
+			        // open sub for currently selected page                    
+			        list.parent().addClass('collapsible').prepend("<div class='bullet collapsible' />");
+			    } else {
+			        if (list.parent().hasClass('collapsible') && !list.siblings('div').hasClass('collapsible')) {
+			            // open sub for page with auto expand
+			            list.siblings('div.expandable').remove();
+			            list.parent().prepend("<div class='bullet collapsible' />");
+			        }
+			    }
+
+				if (!list.siblings('div').hasClass('collapsible')) {
+				    // keep all closed that aren't already set to open
+					list.parent().addClass('expandable').prepend("<div class='bullet expandable' />");
+					ClosePageSubMenu(list.parent());
+				} else {
+					OpenPageSubMenu(list.parent());
+				}
+			});
+			
+			// remove bullet from hierarchy if no-bullet set
+            $('.navigation li.collapsible').each(function () {
+			    if ($(this).hasClass('no-bullet')) {
+                    if (!$(this).hasClass('navigationgroup')) { $(this).removeClass('collapsible'); }
+			        $(this).children('div.collapsible').remove();
+			    }
+			});
+
+            $('.navigation li.expandable').each(function () {
+			    if ($(this).hasClass('no-bullet')) {
+                    if (!$(this).hasClass('navigationgroup')) { $(this).removeClass('expandable'); }
+			        $(this).children('div.expandable').remove();
+			    }
+			});
+			
+            $('.navigation li:not(.collapsible,.expandable,.no-bullet)').each(function () {
+			    $(this).prepend("<div class='bullet' />");
+			});
+		
+            $('.navigation li.active').parents('ul').each(function () {
+                if (!$(this).hasClass('page-navigation')) {
+                    OpenPageSubMenu($(this).parent());
+                }
+            });
+		
+			// set click event for chevron
+            $(document).on('click', '.navigation div.collapsible', function () {
+				ClosePageSubMenu($(this).parent());
+			});
+
+            $(document).on('click', '.navigation div.expandable', function () {
+				OpenPageSubMenu($(this).parent());
+            });
+            
+            // set navigation grouping links
+            $(document).on('click', '.navigationgroup.collapsible > a', function () {
+                ClosePageSubMenu($(this).parent());
+            });
+
+            $(document).on('click', '.navigationgroup.expandable > a', function () {
+                OpenPageSubMenu($(this).parent());
+            });				
+			
+			//SW MYSTART DROPDOWNS
+            $(document).on('click', '.sw-mystart-dropdown', function () {
+                $(this).children(".sw-dropdown").css("display", "block");
+			});
+
+            $(".sw-mystart-dropdown").hover(function () { }, function () {
+		        $(this).children(".sw-dropdown").hide();
+		        $(this).blur();
+            });
+
+		    //SW ACCOUNT DROPDOWN
+            $(document).on('click', '#sw-mystart-account', function () {
+		        $(this).children("#sw-myaccount-list").show();
+		        $(this).addClass("clicked-state");
+		    });
+
+            $("#sw-mystart-account, #sw-myaccount-list").hover(function () { }, function () {
+				$(this).children("#sw-myaccount-list").hide();
+				$(this).removeClass("clicked-state");
+				$("#sw-myaccount").blur();
+			});
+			   
+		   // set hover class for page and section navigation
+            $('.ui-widget.app.pagenavigation, .ui-widget.app.sectionnavigation').find('li > a').hover(function () {
+		        $(this).addClass('hover');
+            }, function () {
+		        $(this).removeClass('hover');
+		   });
+
+		}); // end document ready
+		
+		function OpenPageSubMenu(li) {
+            if (li.prop('tagName').toLowerCase() == "li") {
+                if (li.hasClass('expandable')) {  
+                    li.removeClass('expandable').addClass('collapsible');
+                }
+                if (li.find('div:first').hasClass('expandable')) {
+                    li.find('div:first').removeClass('expandable').addClass('collapsible');
+                }
+			    li.find('ul:first').show();
+
+			    PageNavigationStateCookie();
+            }
+		}
+		
+		function ClosePageSubMenu(li) {
+            if (li.prop('tagName').toLowerCase() == "li") {
+			    li.removeClass('collapsible').addClass('expandable');
+			    li.find('div:first').removeClass('collapsible').addClass('expandable');	 
+			    li.find('ul:first').hide();
+
+			    PageNavigationStateCookie();
+            }
+		}
+		
+		function PageNavigationStateCookie() {
+		    var strCookie = "";
+
+            $('.pagenavigation li > ul').each(function () {
+			    var item = $(this).parent('li');
+                if (item.hasClass('collapsible') && !item.hasClass('no-bullet')) {
+					strCookie += $(this).parent().attr('id') + '~';
+				}
+            });
+
+			SetCookie('SWPageNavState', strCookie);
+		}
+		
+        function checkSidebar() {
+            $(".ui-widget-sidebar").each(function () {
+                if ($.trim($(this).html()) != "") {
+				   $(this).show();
+				   $(this).siblings(".ui-widget-detail").addClass("with-sidebar");
+			   } 
+		   });
+        }
+
+        function removeBrokenImages() {
+		   //REMOVES ANY BROKEN IMAGES
+            $("span.img img").each(function () {
+		        if ($(this).attr("src") !== undefined) {
+		            $(this).parent().parent().show();
+		            $(this).parent().parent().siblings().addClass("has-thumb");
+		        } 
+		    });
+		}
+
+		function LoadEventDetailUE(moduleInstanceID, eventDateID, userRegID, isEdit) {
+		    (userRegID === undefined ? userRegID = 0 : '');
+		    (isEdit === undefined ? isEdit = false : '');
+		    OpenDialogOverlay("WindowMediumModal", { LoadType: "U", LoadURL: "http://www.jklschool.org//site/UserControls/Calendar/EventDetailWrapper.aspx?ModuleInstanceID=" + moduleInstanceID + "&EventDateID=" + eventDateID + "&UserRegID=" + userRegID + "&IsEdit=" + isEdit });
+		}
+
+		function RemoveCookie() {
+		    // There are no sub page            
+		    if ($('.pagenavigation li li').length == 0) {
+		        //return false;
+		        PageNavigationStateCookie();
+		    }
+		}
+	</script>
+	
+	<script type="text/javascript">
+
+	    function AddOffCanvasMenuHeightForSiteNav() {
+	        var sitenavulHeight = 0;
+
+	        if ($('#sw-pg-sitenav-ul').length > 0) {
+	            sitenavulHeight = parseInt($("#sw-pg-sitenav-ul").height());
+	        }
+
+	        var swinnerwrapHeight = 0;
+
+	        if ($('#sw-inner-wrap').length > 0) {
+	            swinnerwrapHeight = parseInt($("#sw-inner-wrap").height());
+	        }
+
+	        // 360px is abount 5 li height
+	        if (sitenavulHeight + 360 >= swinnerwrapHeight) {
+	            $("#sw-inner-wrap").height(sitenavulHeight + 360);
+	        }
+	    }
+
+	    function AddOffCanvasMenuHeightForSelectSchool() {
+	        var selectschoolulHeight = 0;
+
+	        if ($('#sw-pg-selectschool-ul').length > 0) {
+	            selectschoolulHeight = parseInt($("#sw-pg-selectschool-ul").height());
+	        }
+
+	        var swinnerwrapHeight = 0;
+
+	        if ($('#sw-inner-wrap').length > 0) {
+	            swinnerwrapHeight = parseInt($("#sw-inner-wrap").height());
+	        }
+
+	        // 360px is abount 5 li height
+	        if (selectschoolulHeight + 360 >= swinnerwrapHeight) {
+	            $("#sw-inner-wrap").height(selectschoolulHeight + 360);
+	        }
+	    }
+
+        $(document).ready(function () {
+	        if ($("#sw-pg-sitenav-a").length > 0) {
+                $(document).on('click', '#sw-pg-sitenav-a', function () {
+	                if ($("#sw-pg-sitenav-ul").hasClass('sw-pgmenu-closed')) {
+	                    AddOffCanvasMenuHeightForSiteNav();
+
+	                    $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+	                    $("#sw-pg-sitenav-ul").removeClass('sw-pgmenu-closed');
+	                    $("#sw-pg-sitenav-ul").addClass('sw-pgmenu-open');
+	                } else {
+	                    $("#sw-pg-sitenav-ul").removeClass('sw-pgmenu-open');
+	                    $("#sw-pg-sitenav-ul").addClass('sw-pgmenu-closed');
+	                }
+	            });
+
+                $(document).on('click', '#sw-pg-selectschool-a', function () {
+	                if ($("#sw-pg-selectschool-ul").hasClass('sw-pgmenu-closed')) {
+	                    AddOffCanvasMenuHeightForSelectSchool();
+
+	                    $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+	                    $("#sw-pg-selectschool-ul").removeClass('sw-pgmenu-closed');
+	                    $("#sw-pg-selectschool-ul").addClass('sw-pgmenu-open');
+	                } else {
+	                    $("#sw-pg-selectschool-ul").removeClass('sw-pgmenu-open');
+	                    $("#sw-pg-selectschool-ul").addClass('sw-pgmenu-closed');
+	                }
+	            });
+
+                $(document).on('click', '#sw-pg-myaccount-a', function () {
+	                if ($("#sw-pg-myaccount-ul").hasClass('sw-pgmenu-closed')) {
+	                    $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+	                    $("#sw-pg-myaccount-ul").removeClass('sw-pgmenu-closed');
+	                    $("#sw-pg-myaccount-ul").addClass('sw-pgmenu-open');
+	                } else {
+	                    $("#sw-pg-myaccount-ul").removeClass('sw-pgmenu-open');
+	                    $("#sw-pg-myaccount-ul").addClass('sw-pgmenu-closed');
+	                }
+	            });
+
+                $(document).on('click', '.pg-list-bullet', function () {
+	                $(this).prev().toggle();
+
+	                if ($(this).hasClass('closed')) {
+	                    AddOffCanvasMenuHeightForSiteNav();
+
+	                    $(this).removeClass('closed');
+	                    $(this).addClass('open');
+	                } else {
+	                    $(this).removeClass('open');
+	                    $(this).addClass('closed');
+	                }
+	            });
+
+                $(document).on('mouseover', '#sw-pg-selectschool', function () {
+	                $("#sw-pg-selectschool-firstli").removeClass('sw-pg-selectschool-firstli-mouseout').addClass('sw-pg-selectschool-firstli-mouseover');
+	                $("#sw-pg-selectschool-firstli a").addClass('sw-pg-selectschool-firstli-a-mouseover').removeClass('sw-pg-selectschool-firstli-a-mouseout');
+	            });
+
+                $(document).on('mouseout', '#sw-pg-selectschool', function () {
+	                $("#sw-pg-selectschool-firstli").removeClass('sw-pg-selectschool-firstli-mouseover').addClass('sw-pg-selectschool-firstli-mouseout');
+	                $("#sw-pg-selectschool-firstli a").addClass('sw-pg-selectschool-firstli-a-mouseout').removeClass('sw-pg-selectschool-firstli-a-mouseover');
+	            });
+
+                $(document).on('mouseover', '#sw-pg-myaccount', function () {
+	                $("#sw-pg-myaccount-firstli").removeClass('sw-pg-myaccount-firstli-mouseout').addClass('sw-pg-myaccount-firstli-mouseover');
+	                $("#sw-pg-myaccount-firstli a").addClass('sw-pg-myaccount-firstli-a-mouseover').removeClass('sw-pg-myaccount-firstli-a-mouseout');
+	            });
+
+                $(document).on('mouseout', '#sw-pg-myaccount', function () {
+	                $("#sw-pg-myaccount-firstli").removeClass('sw-pg-myaccount-firstli-mouseover').addClass('sw-pg-myaccount-firstli-mouseout');
+	                $("#sw-pg-myaccount-firstli a").addClass('sw-pg-myaccount-firstli-a-mouseout').removeClass('sw-pg-myaccount-firstli-a-mouseover');
+	            });
+
+                $(document).on('mouseover', '#sw-pg-sitenav', function () {
+	                $("#sw-pg-sitenav-firstli").removeClass('sw-pg-sitenav-firstli-mouseout').addClass('sw-pg-sitenav-firstli-mouseover');
+	                $("#sw-pg-sitenav-firstli a").addClass('sw-pg-sitenav-firstli-a-mouseover').removeClass('sw-pg-sitenav-firstli-a-mouseout');
+	            });
+
+                $(document).on('mouseout', '#sw-pg-sitenav', function () {
+	                $("#sw-pg-sitenav-firstli").removeClass('sw-pg-sitenav-firstli-mouseover').addClass('sw-pg-sitenav-firstli-mouseout');
+	                $("#sw-pg-sitenav-firstli a").addClass('sw-pg-sitenav-firstli-a-mouseout').removeClass('sw-pg-sitenav-firstli-a-mouseover');
+	            });
+
+                $(document).on('mouseover', '#sw-pg-district', function () {
+	                $("#sw-pg-district-firstli").removeClass('sw-pg-district-firstli-mouseout').addClass('sw-pg-district-firstli-mouseover');
+	                $("#sw-pg-district-firstli a").addClass('sw-pg-district-firstli-a-mouseover').removeClass('sw-pg-district-firstli-a-mouseout');
+	            });
+
+                $(document).on('mouseout', '#sw-pg-district', function () {
+	                $("#sw-pg-district-firstli").removeClass('sw-pg-district-firstli-mouseover').addClass('sw-pg-district-firstli-mouseout');
+	                $("#sw-pg-district-firstli a").addClass('sw-pg-district-firstli-a-mouseout').removeClass('sw-pg-district-firstli-a-mouseover');
+	            });
+	        }
+	    });	
+
+
+</script>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js' type='text/javascript'></script>
+    <script src="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/Scripts/min/SW-UI.min.js" type='text/javascript'></script>
+    <script src="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/Scripts/jquery.sectionlayer.js" type='text/javascript'></script>
+    <script src="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/Scripts/Initialize.js" type='text/javascript'></script>
+    <script src="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/Scripts/min/swfobject.min.js" type="text/javascript"></script>
+    <script src="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/Scripts/min/jquery.ajaxupload.min.js" type="text/javascript"></script> 
+
+<!-- Begin swuc.CheckScript -->
+  <script type="text/javascript" src="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/Scripts/ThirdParty/json2.js"></script>
+  <script type="text/javascript" src="http://www.jklschool.org/Static/V2_13_01/GlobalAssets/Scripts/CheckScript.js"></script>
+<!-- End swuc.CheckScript -->
+
+
+<!-- Server Load Time (EB): 0.1716055 Seconds -->
+
+    
+
+<!-- off-canvas menu enabled-->
+
+
+
+    <!-- DashBoard SideBar Start -->
+    
+    <!-- DashBoard SideBar End -->
+
+</body>
+</html>

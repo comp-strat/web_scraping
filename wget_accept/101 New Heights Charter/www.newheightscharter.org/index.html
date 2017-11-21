@@ -1,0 +1,761 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head><title>
+	
+			New Heights Charter School
+		
+</title><meta name="viewport" content="width=device-width" /><link href="http://fonts.googleapis.com/css?family=Arvo|Droid+Sans" rel="stylesheet" type="text/css" /><link href="http://www.newheightscharter.org/Themes/css/normalize.css" rel="stylesheet" type="text/css" /><link href="http://www.newheightscharter.org/Themes/css/foundation.css" rel="stylesheet" type="text/css" /><link rel="Stylesheet" type="text/css" href="http://cdn.schoolpointe.com/css/CalendarPopupStyle.css" /><link id="ctl00_ctl00_SiteCSS" rel="stylesheet" type="text/css" href="http://www.newheightscharter.org/siteCSS.aspx?&amp;page=%2findex.aspx" />
+	<script src="http://www.newheightscharter.org/js/vendor/jquery.js" type="text/javascript"></script>
+	
+	
+
+
+	
+	
+<link href="http://www.newheightscharter.org/js/nivo-slider/nivo-slider.css" rel="stylesheet" type="text/css" />
+	<script src="http://www.newheightscharter.org/js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+	<script src="http://www.newheightscharter.org/js/jquery.dropshadow.js" type="text/javascript"></script>
+	<script src="http://www.newheightscharter.org/js/search/SearchEngine.js" type="text/javascript"></script>
+	<script src="http://www.newheightscharter.org/js/jquery.hoverIntent.minified.js" type="text/javascript"></script>
+	<script src="http://www.newheightscharter.org/js/jquery.dropshadow.js" type="text/javascript"></script>
+	<script src="http://www.newheightscharter.org/js/jquery.guid.js" type="text/javascript"></script>
+	<script src="http://www.newheightscharter.org/js/jquery.dotimeout.js" type="text/javascript"></script>
+	<script src="http://www.newheightscharter.org/js/querystring.js" type="text/javascript"></script>
+	<script src="http://www.newheightscharter.org/js/jquery.shadowon.min.js" type="text/javascript"></script>
+	<script src="http://www.newheightscharter.org/js/nivo-slider/jquery.nivo.slider.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://www.newheightscharter.org/js/menu-collapsed.js"></script>
+	<script type="text/javascript" src="http://www.newheightscharter.org/js/menu.js"></script>
+	<script src="http://www.newheightscharter.org/js/jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="http://www.newheightscharter.org/js/foundation.min.js" type="text/javascript"></script>
+	<!--[if IE]>
+    <script src="/js/html5-ie.js" type="text/javascript" language="javascript"></script><![endif]-->
+	<!--[if lte IE 7]>
+	<style type="text/css">
+	#newsTickerInner{width:980px !important;}
+	</style>
+	<![endif]-->
+	
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="SI" content="/admin/districthome.aspx" />
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="http://www.newheightscharter.org/admin/css/social-links.css" />
+
+
+
+
+<link href="http://cdn.schoolpointe.com/js/video-js-5.11.7/video-js.min.css" rel="stylesheet">
+<script src="http://cdn.schoolpointe.com/js/video-js-5.11.7/video.min.js"></script>
+<style type="text/css">
+    .vjs-volume-menu-button.vjs-menu-button-inline .vjs-menu
+    {
+        opacity: 1;
+    }
+</style>
+
+<script type="text/javascript">
+    function loadVideo(guid, playlist)
+    {
+        videojs(guid, playlist, function ()
+        {
+            var origWidth = jQuery('#' + guid).parent().data('width');
+            var origHeight = jQuery('#' + guid).parent().data('height');
+
+            var actualWidth = jQuery('#' + guid).parent().width();
+            if (origWidth > actualWidth)
+            {
+                this.height(origHeight * (actualWidth / origWidth));
+                this.width(actualWidth);
+
+                //Retroactively fixes an issue with resizing videos
+                //the style attribute shouldn't be on the parent
+                jQuery('#' + guid).parent().removeAttr('style');
+
+            } else
+            {
+                this.height(origHeight);
+                this.width(origWidth);
+            }
+            if (playlist != '{}')
+            {
+                this.on('ended', function ()
+                {
+                    this.playlist.next();
+                });
+            }
+
+            //fixes issue in IE when going full screen
+            //video would be behind other content on the page
+            this.on('enterFullWindow', function ()
+            {
+                $(this.el).parents().not('html,body').each(function ()
+                {
+                    $(this)
+                        .data('oldzindex', $(this).css('z-index'))
+                        .css('z-index', 99999)
+                        .addClass('forcedzindex');
+                });
+            });
+            this.on('exitFullWindow', function ()
+            {
+                $('.forcedzindex').each(function ()
+                {
+                    $(this)
+                        .css('z-index', $(this).data('oldzindex'))
+                        .removeClass('forcedzindex')
+                        .removeData('oldzindex');
+                });
+
+            });
+        });
+    }
+
+    jQuery(window).load(function ()
+    {
+
+        //Create the input element
+        var reCaptchinput = $('#recaptcha_response_field');
+        if (reCaptchinput != "")
+        {
+            reCaptchinput.wrapAll("<label class=''  associatedcontrolid='recaptcha_response_field' text='recaptcha'>recaptcha </label>");
+        }
+
+
+        jQuery.browser = {}; (function ()
+        {
+            jQuery.browser.msie = false;
+            jQuery.browser.version = 0; if (navigator.userAgent.match(/MSIE ([0-9]+)\./))
+            {
+                jQuery.browser.msie = true; jQuery.browser.version = RegExp.$1;
+            }
+        })();
+        if (jQuery.browser.msie && jQuery.browser.version <= 7)
+        {
+            //we could do something else here...
+            console.log("You should really update your browser");
+        }
+
+        videojs.options.flash.iFrameMode = true;
+        jQuery('.videoplayer > .video-js').each(function ()
+        {
+            var guid = this.id;
+            var playlist = jQuery('#' + guid).parent().data('playlist');
+            if (playlist === undefined || playlist === null)
+            {
+                playlist = '{}';
+                loadVideo(guid, playlist);
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+
+    // needed for jquery bbq, needs jQuery.browser that had been deprecated.
+
+    jQuery.browser = {};
+    (function ()
+    {
+        jQuery.browser.msie = false;
+        jQuery.browser.version = 0;
+        if (navigator.userAgent.match(/MSIE ([0-9]+)\./))
+        {
+            jQuery.browser.msie = true;
+            jQuery.browser.version = RegExp.$1;
+        }
+    })();
+
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="http://cdn.schoolpointe.com/js/datetimepicker/jquery.datetimepicker.css" />
+<script src="http://cdn.schoolpointe.com/js/datetimepicker/jquery.datetimepicker.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://cdn.schoolpointe.com/js/jquery-frontier-cal-1.3.2/css/frontierCalendar/jquery-frontier-cal-1.3.2.css" />
+<link rel="stylesheet" type="text/css" href="http://cdn.schoolpointe.com/js/jquery-frontier-cal-1.3.2/css/colorpicker/colorpicker.css" />
+<link rel="Stylesheet" type="text/css" href="http://cdn.schoolpointe.com/css/CalendarPopupStyle.css" />
+<link href="http://cdn.schoolpointe.com/css/schoolpointe.css?version=1.1" rel="stylesheet" type="text/css" />
+<link href="http://cdn.schoolpointe.com/css/bully-report.css" rel="stylesheet" type="text/css" />
+
+
+
+<link rel="alternate" type="application/rss+xml" title='New Heights Charter School - News' href='http://www.newheightscharter.org/rssNews.ashx'>
+
+        <link rel="alternate" type="application/rss+xml" title='Upper Campus - News' href='http://www.newheightscharter.org/rssNews.ashx?schoolId=1'>
+    
+        <link rel="alternate" type="application/rss+xml" title='Lower Campus - News' href='http://www.newheightscharter.org/rssNews.ashx?schoolId=2'>
+    
+
+<script>
+    (function (i, s, o, g, r, a, m)
+    {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function ()
+        {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+		m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-58503126-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script src="http://cdn.schoolpointe.com/HTML_CodeSniffer-2.0.7/build/HTMLCS.js"></script>
+<script>
+
+    window['HtmlCodeSniffer_Done'] = false;
+
+    $(document).ready(function ()
+    {
+        $('#goog-gt-tt .logo > img').attr('alt', 'Google tanslate icon');
+
+        var submitErrors = function ()
+        {
+            try
+            {
+                var options = {
+                    path: "http://cdn.schoolpointe.com/HTML_CodeSniffer-2.0.7/build/"
+                };
+
+                HTMLCS.process("WCAG2AA", document,
+                    function (data)
+                    {
+                        var messages = HTMLCS.getMessages();
+                        var length = messages.length;
+
+                        if (length > 0)
+                        {
+                            messages = messages.filter(function (a)
+                            {
+                                return a.type == 1;
+                            });
+
+                            messages = messages.filter(function (a)
+                            {
+                                return a.code !== 'WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.AlignAttr'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_4.1_4_3.G18.Fail'
+                                       && a.code !== 'WCAG2AA.Principle4.Guideline4_1.4_1_1.F77'
+                                       && a.code !== 'WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.InputHidden.Name'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_3.1_3_1.F68'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_4.1_4_3.G145.Fail'
+                                       && a.code !== 'WCAG2AA.Principle3.Guideline3_2.3_2_2.H32.2'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Font'
+                                       && a.code !== 'WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.NoContent'
+                                       && a.code !== 'WCAG2AA.Principle4.Guideline4_1.4_1_2.H91.A.EmptyNoId'
+                                       && a.code !== 'WCAG2AA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchID'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_1.1_1_1.H67.1'
+                                       && a.code !== 'WCAG2AA.Principle1.Guideline1_3.1_3_1.H49.Center'
+                                       && a.code !== 'WCAG2AA.Principle2.Guideline2_4.2_4_2.H25.1.EmptyTitle';
+                            });
+
+                            var count = messages.length;
+
+                            window['HtmlCodeSniffer_Errors'] = count;
+
+                            if (count > 0)
+                            {
+                                $("#AdaErrorCount").text("ADA errors: " + count);
+                                $("#AdaErrorCount").css("cursor", "pointer");
+                                $("#AdaErrorCount").click(function ()
+                                {
+                                    window.open('http://wave.webaim.org/report#/' + window.location.href, '_blank')
+                                });
+                            }
+                            else
+                            {
+                                $("#AdaErrorCount").css("display", "none !important");
+                            }
+
+
+                            var data = {
+                                districtId: "CA_NewHeightsChtrSch",
+                                url: "/index.aspx",
+                                errorCount: count,
+                                value: parseInt("0", 10),
+                                forceUpdate: 'false' === 'true'
+                            };
+
+                            try
+                            {
+                                var methodUrl = "/admin/shared/AdaLog.asmx/RecordLog";
+                                $.ajax({
+                                    type: "POST",
+                                    url: methodUrl,
+                                    data: JSON.stringify(data),
+                                    contentType: "application/json; charset=utf-8",
+                                    dataType: "json",
+                                    success: function (msg)
+                                    {
+                                        window['HtmlCodeSniffer_Done'] = true;
+                                    },
+                                    error: function (e)
+                                    {
+                                        console.log(e);
+                                        window['HtmlCodeSniffer_Done'] = true;
+                                    }
+                                });
+                            } catch (ex)
+                            {
+                                window['HtmlCodeSniffer_Done'] = true;
+                            }
+
+                        }
+
+                    }, function (error)
+                    {
+                        console.log(error)
+                    });
+                } catch (ex)
+            {
+                    console.log(ex);
+                }
+        };
+
+        submitErrors();
+    });
+
+
+</script>
+
+</head>
+<body>
+	<form name="aspnetForm" method="post" action="index.html" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjEyMjcxNTQyMA9kFgJmD2QWAmYPZBYEAgEPZBYGZg9kFgJmD2QWAgIBDxYCHgRUZXh0BRpOZXcgSGVpZ2h0cyBDaGFydGVyIFNjaG9vbGQCBg8WAh4EaHJlZgUhL3NpdGVDU1MuYXNweD8mcGFnZT0lMmZpbmRleC5hc3B4ZAILD2QWAgIBDxYCHgtfIUl0ZW1Db3VudAICFgRmD2QWAmYPFQIMVXBwZXIgQ2FtcHVzATFkAgEPZBYCZg8VAgxMb3dlciBDYW1wdXMBMmQCAw9kFhACAQ9kFgICAw9kFgJmDxYCHwBlZAIFDxYCHwAFGk5ldyBIZWlnaHRzIENoYXJ0ZXIgU2Nob29sZAIHD2QWAmYPFgIfAAXNHDx1bCBjbGFzcz0nbGVmdCcgPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nLycgPkhvbWU8L2E+PC9saT48bGkgY2xhc3M9J2hhcy1kcm9wZG93biBub3QtY2xpY2snPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9MzQnID5JbmZvcm1hdGlvbjwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duJz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9OCcgPldlbGNvbWU8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9NCcgPkhpc3Rvcnk8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9MTYnID5RdWljayBGYWN0czwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD05NicgPiBDaGFydGVyIFBldGl0aW9uPC9hPjwvbGk+PGxpIGNsYXNzPSdoYXMtZHJvcGRvd24gbm90LWNsaWNrJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTgwJyA+R292ZXJuYW5jZTwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duJz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50LzgyJyA+Qm9hcmQgTWVldGluZyBDYWxlbmRhciA8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50Lzk0JyA+Qm9hcmQgbWVldGluZyBhZ2VuZGFzIGFuZCBtaW51dGVzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudC8xMDQnID5Cb2FyZCBNZW1iZXJzIDwvYT48L2xpPjwvdWw+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSdoYXMtZHJvcGRvd24gbm90LWNsaWNrJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTMyJyA+RW5yb2xsbWVudDwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duJz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9MTInID5XaHkgQ2hvb3NlIE5ldyBIZWlnaHRzPzwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD0xNCcgPlN0ZXBzIHRvIEFwcGx5PC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvQ29udGVudC8xMTYnID5Mb3R0ZXJ5IEFwcGxpY2F0aW9uPC9hPjwvbGk+PC91bD48L2xpPjxsaSBjbGFzcz0naGFzLWRyb3Bkb3duIG5vdC1jbGljayc+PGEgaHJlZj0nJyA+UGhpbG9zb3BoeTwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duJz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9MjQnID5TY2hvb2wgVmlzaW9uPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTIwJyA+U29jaWFsIGFuZCBFbW90aW9uYWwgRGV2ZWxvcG1lbnQ8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9MjInID5IZWFsdGggYW5kIFdlbGxuZXNzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTQ0JyA+VGhlIEFydHM8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSdoYXMtZHJvcGRvd24gbm90LWNsaWNrJz48YSBocmVmPScnID5Qcm9ncmFtczwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duJz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9NicgPkN1cnJpY3VsdW08L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9MjYnID5JbnN0cnVjdGlvbmFsIEZvY3VzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTMwJyA+VHJhbnNpdGlvbmFsIEtpbmRlcjwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD0xOCcgPkV4dGVuZGVkIERheSBQcm9ncmFtczwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD00MicgPkF0aGxldGljcyA8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSdoYXMtZHJvcGRvd24gbm90LWNsaWNrJz48YSBocmVmPScnID5TY2hvb2wgQ29tbXVuaXR5PC9hPjx1bCBjbGFzcz0nZHJvcGRvd24nPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD0yOCcgPlBhcmVudCBSb2xlPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTM4JyA+Vm9sdW50ZWVyaW5nIGF0IE5ldyBIZWlnaHRzIDwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD02MCcgPkRpZ2l0YWwgUG9ydGZvbGlvPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTY0JyA+UHJvcCAzMDwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD03MicgPlNBUkM8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy91c2VyZmlsZXMvMzcvbXkgZmlsZXMvdGl0bGUgaWlpIGdvYWwgMiB0ZW1wbGF0ZSAyMDE2LnBkZj9pZD0zNzQnIHRhcmdldD0nX2JsYW5rJz5UaXRsZSBJSUkgR29hbCAyIFBsYW4gYW5kIEJ1ZGdldCAyMDE2PC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvQ29udGVudC8xMDAnID5TaW5nbGUgU2Nob29sIERpc3RyaWN0IFBsYW4gPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTc2JyA+RVBBPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTc4JyA+TENBUDwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL0NvbnRlbnQvMTA2JyA+RW1wbG95ZWUgSGFuZGJvb2sgPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTc0JyA+QXJjaGl2ZWQgSW5mb3JtYXRpb248L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9Db250ZW50LzExMCcgPlVuaWZvcm0gQ29tcGxhaW50IFByb2NlZHVyZXM8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTkyJyA+RW1wbG95bWVudDwvYT48L2xpPjxsaSBjbGFzcz0naGFzLWRyb3Bkb3duIG5vdC1jbGljayc+PGEgaHJlZj0nL0NvbnRlbnQvMTAyJyA+Rm9ybXMgJiBMaW5rczwvYT48dWwgY2xhc3M9J2Ryb3Bkb3duJz48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9JycgPk5ld3M8L2E+PC9saT48L3VsPjwvbGk+PC91bD5kAgkPZBYCZg8WAh8ABdsJPHVsIGNsYXNzPSdsZWZ0IHF1aWNrbGlua3MnID48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy8nID5Ib21lPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTkwJyA+U2Nob29sIFBvbGljaWVzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTk4JyA+VGVhY2hlcnM8L2E+PC9saT48bGkgY2xhc3M9J2hhcy1kcm9wZG93biBub3QtY2xpY2snPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9NTgnID5QYXJlbnRzPC9hPjx1bCBjbGFzcz0nZHJvcGRvd24nPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD0yOCcgPlBhcmVudCBSb2xlPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTYwJyA+RGlnaXRhbCBQb3J0Zm9saW88L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9NjInID5SZWFkaW5nIExldmVsIEV4cGVjdGF0aW9ucyBieSBHcmFkZTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NhbE1vbnRoVmlldy5hc3B4P3M9MCcgPkNhbGVuZGFyIFZpZXc8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTQyJyA+QXRobGV0aWNzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTU2JyA+UGhvdG8gR2FsbGVyaWVzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTEwJyA+THVuY2ggTWVudTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD02NicgPkZvcm1zICYgTGlua3M8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb21tX3JlZ2lzdHJhdGlvbi5hc3B4JyA+RS1Db21tdW5pY2F0aW9uIFJlZ2lzdHJhdGlvbjwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2Rpc3RyaWN0X3N0YWZmLmFzcHgnID5TdGFmZiBEaXJlY3Rvcnk8L2E+PC9saT48L3VsPmQCCw9kFgJmDw8WAh4HVmlzaWJsZWhkZAIND2QWAgIBD2QWBAIBDxYCHwICARYCZg9kFgJmDxQrAgNkZAUid2ViLmpwZz9ub2NhY2hlPTYzNTU5MTAzMjAxNDkwMDk2OGQCAw8WAh8ABcsBPHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToyMnB4OyI+PHN0cm9uZz48c3BhbiBzdHlsZT0iY29sb3I6IzNBQkU0MDt0ZXh0LXNoYWRvdzogMXB4IDFweCAycHggcmdiYSgyNSwgMjUsIDI1LCAxKTsiPkRFRElDQVRFRCBUTyBIRUFMVEhZIERFVkVMT1BNRU5ULCBDUkVBVElWSVRZLCBBTkQgVEhFIFBPV0VSIE9GIElERUFTPC9zcGFuPjwvc3Ryb25nPjwvc3Bhbj5kAhEPZBYGAgEPZBYCAgEPZBYCZg8WAh8ABckJPHVsIGNsYXNzPSdzZi12ZXJ0aWNhbCcgPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nLycgPkhvbWU8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9OTAnID5TY2hvb2wgUG9saWNpZXM8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9OTgnID5UZWFjaGVyczwvYT48L2xpPjxsaSBjbGFzcz0naGFzLWZseW91dCc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD01OCcgPlBhcmVudHM8L2E+PHVsIGNsYXNzPSdmbHlvdXQnPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD0yOCcgPlBhcmVudCBSb2xlPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTYwJyA+RGlnaXRhbCBQb3J0Zm9saW88L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb250ZW50X3BhZ2UuYXNweD9jaWQ9NjInID5SZWFkaW5nIExldmVsIEV4cGVjdGF0aW9ucyBieSBHcmFkZTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NhbE1vbnRoVmlldy5hc3B4P3M9MCcgPkNhbGVuZGFyIFZpZXc8L2E+PC9saT48L3VsPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTQyJyA+QXRobGV0aWNzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTU2JyA+UGhvdG8gR2FsbGVyaWVzPC9hPjwvbGk+PGxpIGNsYXNzPSd3aXRob3V0LWltYWdlJz48YSBocmVmPScvY29udGVudF9wYWdlLmFzcHg/Y2lkPTEwJyA+THVuY2ggTWVudTwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2NvbnRlbnRfcGFnZS5hc3B4P2NpZD02NicgPkZvcm1zICYgTGlua3M8L2E+PC9saT48bGkgY2xhc3M9J3dpdGhvdXQtaW1hZ2UnPjxhIGhyZWY9Jy9jb21tX3JlZ2lzdHJhdGlvbi5hc3B4JyA+RS1Db21tdW5pY2F0aW9uIFJlZ2lzdHJhdGlvbjwvYT48L2xpPjxsaSBjbGFzcz0nd2l0aG91dC1pbWFnZSc+PGEgaHJlZj0nL2Rpc3RyaWN0X3N0YWZmLmFzcHgnID5TdGFmZiBEaXJlY3Rvcnk8L2E+PC9saT48L3VsPmQCBQ9kFgQCAQ8WAh8ABQlTUE9UTElHSFRkAgMPDxYCHwAFziY8cCBzdHlsZT0iY29sb3I6IHJnYigzNCwgMzQsIDM0KTsgZm9udC1mYW1pbHk6IGFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXN0eWxlOiBub3JtYWw7IGxpbmUtaGVpZ2h0OiBub3JtYWw7IHRleHQtYWxpZ246IGNlbnRlcjsiIHR5cGU9ImNpdGUiPiZuYnNwOzwvcD4NCg0KPHAgc3R5bGU9ImNvbG9yOiByZ2IoMzQsIDM0LCAzNCk7IGZvbnQtZmFtaWx5OiBhcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zdHlsZTogbm9ybWFsOyBsaW5lLWhlaWdodDogbm9ybWFsOyB0ZXh0LWFsaWduOiBjZW50ZXI7IiB0eXBlPSJjaXRlIj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjIycHg7Ij48c3Ryb25nPjx1Pk5ldyBIZWlnaHRzIENoYXJ0ZXIgU2Nob29sIFN0dWRlbnQgQ291bmNpbCZuYnNwOzwvdT48L3N0cm9uZz48L3NwYW4+PC9wPg0KDQo8cCBzdHlsZT0iY29sb3I6IHJnYigzNCwgMzQsIDM0KTsgZm9udC1mYW1pbHk6IGFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXN0eWxlOiBub3JtYWw7IGxpbmUtaGVpZ2h0OiBub3JtYWw7IHRleHQtYWxpZ246IGNlbnRlcjsiIHR5cGU9ImNpdGUiPjxzcGFuIHN0eWxlPSJjb2xvcjojRkY4QzAwOyI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxOHB4OyI+PHN0cm9uZz5TdHVkZW50IENvdW5jaWwgbWVtZWJlcnMgZG9uYXRlIHRveXMgcmFpc2VkIGZyb20gdGhlaXIgdG95IGRyaXZlIHRvIGhvbWVsZXNzIHlvdXRoPC9zdHJvbmc+Ljwvc3Bhbj4mbmJzcDs8L3NwYW4+PC9wPg0KDQo8cCBzdHlsZT0iY29sb3I6IHJnYigzNCwgMzQsIDM0KTsgZm9udC1mYW1pbHk6IGFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXN0eWxlOiBub3JtYWw7IGxpbmUtaGVpZ2h0OiBub3JtYWw7IHRleHQtYWxpZ246IGNlbnRlcjsiIHR5cGU9ImNpdGUiPjxpbWcgYWx0PSIiIHNyYz0iL3VzZXJmaWxlcy8zNy9teSBmaWxlcy9pbWdfNzI0My5qcGc/aWQ9MzcwJmFtcDt3aWR0aD01MDAiIHN0eWxlPSJ3aWR0aDogNTAwcHg7IGhlaWdodDogMzc1cHg7IiAvPjwvcD4NCg0KPHAgc3R5bGU9ImNvbG9yOiByZ2IoMzQsIDM0LCAzNCk7IGZvbnQtZmFtaWx5OiBhcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zdHlsZTogbm9ybWFsOyBsaW5lLWhlaWdodDogbm9ybWFsOyB0ZXh0LWFsaWduOiBjZW50ZXI7IiB0eXBlPSJjaXRlIj4mbmJzcDs8L3A+DQoNCjxwIHN0eWxlPSJjb2xvcjogcmdiKDM0LCAzNCwgMzQpOyBmb250LWZhbWlseTogYXJpYWwsIHNhbnMtc2VyaWY7IGZvbnQtc3R5bGU6IG5vcm1hbDsgbGluZS1oZWlnaHQ6IG5vcm1hbDsgdGV4dC1hbGlnbjogY2VudGVyOyIgdHlwZT0iY2l0ZSI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToyMnB4OyI+TmV3IEhlaWdodHMgQ2hhcnRlciBTY2hvb2wgQ2xhc3Mgb2YgMjAxNiZuYnNwOzwvc3Bhbj48L3A+DQoNCjxwIHN0eWxlPSJjb2xvcjogcmdiKDM0LCAzNCwgMzQpOyBmb250LWZhbWlseTogYXJpYWwsIHNhbnMtc2VyaWY7IGZvbnQtc3R5bGU6IG5vcm1hbDsgbGluZS1oZWlnaHQ6IG5vcm1hbDsgdGV4dC1hbGlnbjogY2VudGVyOyIgdHlwZT0iY2l0ZSI+PHNwYW4gc3R5bGU9ImNvbG9yOiNGRjhDMDA7Ij48c3BhbiBzdHlsZT0iZm9udC1zaXplOjIycHg7Ij5Db25ncmF0cyZuYnNwO3RvIG91ciAyMDE2IEdyYWRzITwvc3Bhbj48L3NwYW4+PC9wPg0KDQo8cCBzdHlsZT0iY29sb3I6IHJnYigzNCwgMzQsIDM0KTsgZm9udC1mYW1pbHk6IGFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXN0eWxlOiBub3JtYWw7IGxpbmUtaGVpZ2h0OiBub3JtYWw7IHRleHQtYWxpZ246IGNlbnRlcjsiIHR5cGU9ImNpdGUiPjxpbWcgYWx0PSIiIHNyYz0iL3VzZXJmaWxlcy8zNy9teSBmaWxlcy9pbWdfNzI0NCAoMSkuanBnP2lkPTM3MiZhbXA7d2lkdGg9NTAwIiBzdHlsZT0id2lkdGg6IDUwMHB4OyBoZWlnaHQ6IDM3NXB4OyIgLz48L3A+DQoNCjxibG9ja3F1b3RlIHN0eWxlPSJjb2xvcjogcmdiKDM0LCAzNCwgMzQpOyBmb250LWZhbWlseTogYXJpYWwsIHNhbnMtc2VyaWY7IGZvbnQtc3R5bGU6IG5vcm1hbDsgbGluZS1oZWlnaHQ6IG5vcm1hbDsgdGV4dC1hbGlnbjogY2VudGVyOyIgdHlwZT0iY2l0ZSI+Jm5ic3A7PC9ibG9ja3F1b3RlPg0KDQo8YmxvY2txdW90ZSBzdHlsZT0iY29sb3I6IHJnYigzNCwgMzQsIDM0KTsgZm9udC1mYW1pbHk6IGFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXN0eWxlOiBub3JtYWw7IGxpbmUtaGVpZ2h0OiBub3JtYWw7IHRleHQtYWxpZ246IGNlbnRlcjsiIHR5cGU9ImNpdGUiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IDE4cHg7Ij48YSBocmVmPSIvdXNlcmZpbGVzLzIvU3VwcG9ydCUyME91ciUyME5ldyUyMEhlaWdodHMlMjBTY2hvb2wlMjBDb21tdW5pdHklMjAyMDE0MTUuZG9jeCI+Q2xpY2sgaGVyZTwvYT4gZm9yIGluZm9ybWF0aW9uIG9uIGRvbmF0aW5nLjwvc3Bhbj48L2Jsb2NrcXVvdGU+DQoNCjxibG9ja3F1b3RlIHN0eWxlPSJjb2xvcjogcmdiKDM0LCAzNCwgMzQpOyBmb250LWZhbWlseTogYXJpYWwsIHNhbnMtc2VyaWY7IGZvbnQtc3R5bGU6IG5vcm1hbDsgbGluZS1oZWlnaHQ6IG5vcm1hbDsgdGV4dC1hbGlnbjogY2VudGVyOyIgdHlwZT0iY2l0ZSI+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZTogMThweDsiPjxpbWcgYWx0PSIiIHNyYz0iL3VzZXJmaWxlcy80L0FtYXpvbi5wbmciIHN0eWxlPSJ3aWR0aDogMjQ0cHg7IGhlaWdodDogMjA2cHg7IiAvPjwvc3Bhbj48L2Jsb2NrcXVvdGU+DQoNCjxibG9ja3F1b3RlIHN0eWxlPSJjb2xvcjogcmdiKDM0LCAzNCwgMzQpOyBmb250LWZhbWlseTogYXJpYWwsIHNhbnMtc2VyaWY7IGZvbnQtc3R5bGU6IG5vcm1hbDsgbGluZS1oZWlnaHQ6IG5vcm1hbDsgdGV4dC1hbGlnbjogY2VudGVyOyIgdHlwZT0iY2l0ZSI+PGEgaHJlZj0iaHR0cDovL3NtaWxlLmFtYXpvbi5jb20vY2gvMzctMTUxMDQzOSI+aHR0cDovL3NtaWxlLmFtYXpvbi5jb20vY2gvMzctMTUxMDQzOTwvYT48L2Jsb2NrcXVvdGU+DQoNCjxibG9ja3F1b3RlIHN0eWxlPSJjb2xvcjogcmdiKDM0LCAzNCwgMzQpOyBmb250LWZhbWlseTogYXJpYWwsIHNhbnMtc2VyaWY7IGZvbnQtc3R5bGU6IG5vcm1hbDsgbGluZS1oZWlnaHQ6IG5vcm1hbDsgdGV4dC1hbGlnbjogY2VudGVyOyIgdHlwZT0iY2l0ZSI+Jm5ic3A7PC9ibG9ja3F1b3RlPg0KDQo8cD48aW1nIGFsdD0iRGlzcGxheWluZyBGdWxsU2l6ZVJlbmRlci5qcGciIGFyaWEtaGlkZGVuPSJ0cnVlIiBjbGFzcz0iYUxGLWFQWC1KMS1KMyBhTEYtYVBYLWFMSy1heXItYXVSIiBzcmM9ImJsb2I6aHR0cHMlM0EvL21haWwuZ29vZ2xlLmNvbS81OGVmYjJjMC1hNDEyLTQ5ODgtOGUwNy02NmMwNzYxZjIzYTgiIC8+PGltZyBhbHQ9IkRpc3BsYXlpbmcgRnVsbFNpemVSZW5kZXIuanBnIiBhcmlhLWhpZGRlbj0idHJ1ZSIgY2xhc3M9ImFMRi1hUFgtSjEtSjMgYUxGLWFQWC1hTEstYXlyLWF1UiIgc3JjPSJibG9iOmh0dHBzJTNBLy9tYWlsLmdvb2dsZS5jb20vNThlZmIyYzAtYTQxMi00OTg4LThlMDctNjZjMDc2MWYyM2E4IiAvPjwvcD4NCg0KPGJsb2NrcXVvdGUgc3R5bGU9ImNvbG9yOiByZ2IoMzQsIDM0LCAzNCk7IGZvbnQtZmFtaWx5OiBhcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zdHlsZTogbm9ybWFsOyBsaW5lLWhlaWdodDogbm9ybWFsOyB0ZXh0LWFsaWduOiBjZW50ZXI7IiB0eXBlPSJjaXRlIj4mbmJzcDs8L2Jsb2NrcXVvdGU+DQoNCjxibG9ja3F1b3RlIHN0eWxlPSJjb2xvcjogcmdiKDM0LCAzNCwgMzQpOyBmb250LWZhbWlseTogYXJpYWwsIHNhbnMtc2VyaWY7IGZvbnQtc3R5bGU6IG5vcm1hbDsgbGluZS1oZWlnaHQ6IG5vcm1hbDsgdGV4dC1hbGlnbjogY2VudGVyOyIgdHlwZT0iY2l0ZSI+PGJyIC8+DQombmJzcDsgJm5ic3A7Jm5ic3A7PC9ibG9ja3F1b3RlPg0KDQo8YmxvY2txdW90ZSBzdHlsZT0iY29sb3I6IHJnYigzNCwgMzQsIDM0KTsgZm9udC1mYW1pbHk6IGFyaWFsLCBzYW5zLXNlcmlmOyBmb250LXN0eWxlOiBub3JtYWw7IGxpbmUtaGVpZ2h0OiBub3JtYWw7IHRleHQtYWxpZ246IGNlbnRlcjsiIHR5cGU9ImNpdGUiPiZuYnNwOzwvYmxvY2txdW90ZT4NCg0KPGJsb2NrcXVvdGUgc3R5bGU9ImNvbG9yOiByZ2IoMzQsIDM0LCAzNCk7IGZvbnQtZmFtaWx5OiBhcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zdHlsZTogbm9ybWFsOyBsaW5lLWhlaWdodDogbm9ybWFsOyB0ZXh0LWFsaWduOiBjZW50ZXI7IiB0eXBlPSJjaXRlIj4mbmJzcDs8L2Jsb2NrcXVvdGU+DQoNCjxibG9ja3F1b3RlIHN0eWxlPSJjb2xvcjogcmdiKDM0LCAzNCwgMzQpOyBmb250LWZhbWlseTogYXJpYWwsIHNhbnMtc2VyaWY7IGZvbnQtc3R5bGU6IG5vcm1hbDsgbGluZS1oZWlnaHQ6IG5vcm1hbDsgdGV4dC1hbGlnbjogY2VudGVyOyIgdHlwZT0iY2l0ZSI+PHNwYW4gc3R5bGU9ImNvbG9yOiByZ2IoMzQsIDM0LCAzNCk7IGZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxMnB4OyBsaW5lLWhlaWdodDogbm9ybWFsOyI+Q0RFIGlzIHJlcXVlc3RpbmcgTEVBcyBwb3N0IHRoZSBmb2xsb3dpbmcgbGluayB0byBDREUmcnNxdW87cyBXZWIgc2l0ZSwmbmJzcDs8L3NwYW4+PGEgaHJlZj0iaHR0cDovL3d3dy5jZGUuY2EuZ292L21vcmdhbmhpbGxjYXNlIiBzdHlsZT0iY29sb3I6IHJnYigxNywgODUsIDIwNCk7IGZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxMnB4OyBsaW5lLWhlaWdodDogbm9ybWFsOyIgdGFyZ2V0PSJfYmxhbmsiPmh0dHA6Ly93d3cuY2RlLmNhLmdvdi88d2JyIC8+bW9yZ2FuaGlsbGNhc2U8L2E+PHNwYW4gc3R5bGU9ImNvbG9yOiByZ2IoMzQsIDM0LCAzNCk7IGZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjsgZm9udC1zaXplOiAxMnB4OyBsaW5lLWhlaWdodDogbm9ybWFsOyI+LCB0byBwcm92aWRlIHRoZSBOb3RpY2UgYW5kIE9iamVjdGlvbiBGb3JtIHJlcXVpcmVkIGJ5IEZFUlBBLjwvc3Bhbj48L2Jsb2NrcXVvdGU+ZGQCBw9kFgQCAQ9kFgQCAQ88KwAKAQAPFggeDURheU5hbWVGb3JtYXQLKidTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkRheU5hbWVGb3JtYXQCHg1OZXh0TW9udGhUZXh0BS8+PjxzcGFuIGNsYXNzPSdvYnNjdXJlJz5HbyB0byBuZXh0IG1vbnRoPC9zcGFuPh4NUHJldk1vbnRoVGV4dAUzPDw8c3BhbiBjbGFzcz0nb2JzY3VyZSc+R28gdG8gcHJldmlvdXMgbW9udGg8L3NwYW4+HgJTRBYBBgBAaxC2ZdQIZGQCAw8PFgYeBlRhcmdldAUGX2JsYW5rHwAFElZpZXcgRnVsbCBDYWxlbmRhch4LTmF2aWdhdGVVcmwFJS9jYWxNb250aFZpZXcuYXNweD9zPTAmeT0yMDE3Jm09MyZ0PTBkZAIDD2QWBgIBDxYCHwJmZAIFDw8WAh8JBSEvY2FsTW9udGhWaWV3LmFzcHg/cz0wJnk9MjAxNyZtPTNkZAIHDw8WAh8JBUQvY2FsZW5kYXJXZWVrVmlldy5hc3B4P3NjaG9vbHM9MCZzY2hvb2xpZD0wJnR5cGVzPSZ2aWV3RGF0ZT0zLzgvMjAxN2RkAhUPZBYKZg8WAh4JaW5uZXJodG1sBRpOZXcgSGVpZ2h0cyBDaGFydGVyIFNjaG9vbGQCAQ8WAh8KBTwyMjAyIFcuIE1hcnRpbiBMdXRoZXIgS2luZyBCbHZkLiA8YnIvPiBMb3MgQW5nZWxlcywgQ0EgOTAwMDhkAgIPFgIfAQVVaHR0cDovL21hcHMuZ29vZ2xlLmNvbS9tYXBzP3E9MjIwMiBXLiBNYXJ0aW4gTHV0aGVyIEtpbmcgQmx2ZC4gKyBMb3MgQW5nZWxlcytDQSs5MDAwOGQCAw9kFgICAQ8WAh8KBRNQaG9uZTogMzIzLjUwOC4wMTU1ZAIED2QWAgIBDxYCHwoFEUZheDogMzIzLjUwOC4wMTU2ZGRBYg8LjtB625WgMulqK8eyXM67hQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="http://www.newheightscharter.org/WebResource.axd?d=ciQs-AUcGllikzvJxOn4IY9qdpn5WXYfT_PMnTK91Xt8dksb258BJxYsmn4olEPTocq6JTsZH-_-9MV4tnJ7755rEvo1&amp;t=635875512900000000" type="text/javascript"></script>
+
+		
+
+<a id="skip-link" class="obscure" href="index.html#start-content">Skip to main content</a>
+
+
+
+
+
+		<header id="site-head" class="row">
+			<div id="head-shape1" class="artifact">
+			</div>
+			<div id="head-shape2" class="artifact">
+			</div>
+			<div id="head-shape3" class="artifact">
+			</div>
+			
+	
+		
+<div class="columns medium-6 large-6">
+<a href="index.html" class="logo"><img src="http://www.newheightscharter.org/customers/CA/NewHeightsChtrSch/sysimages/custom/New-Heights-Logo.jpg" alt="New Heights Charter School"/></a></div>
+<div class="columns medium-6 large-6 hide-for-small">
+    <div class="rightTop">
+        <div class="translator AddInfo" style="">
+            <div style="display: block; float: left;">
+            </div>
+            <!-- Add English to Chinese (Simplified) BETA -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Czh-CN&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-Chinese (Simplified) BETA">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-Chinese (Simplified) BETA" src="http://cdn.schoolpointe.com/images/translator-flags/chinese.png"
+                    height="12" title="Google-Translate-Chinese (Simplified) BETA" />
+            </a>
+            <!-- END English to Chinese (Simplified) BETA-->
+            <!-- Add English to French -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Cfr&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-English to French ">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-English to French " src="http://cdn.schoolpointe.com/images/translator-flags/french.png"
+                    height="12" title="Google-Translate-English to French " />
+            </a>
+            <!-- END English to French -->
+            <!-- Add English to German -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Cde&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-English to German">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-English to German" src="http://cdn.schoolpointe.com/images/translator-flags/german.png"
+                    height="12" title="Google-Translate-English to German" />
+            </a>
+            <!-- END English to German -->
+            <!-- Add English to Italian -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Cit&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-English to Italian">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-English to Italian" src="http://cdn.schoolpointe.com/images/translator-flags/italian.png"
+                    height="12" title="Google-Translate-English to Italian" />
+            </a>
+            <!-- END English to Italian -->
+            <!-- Add English to Japanese BETA -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Cja&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-English to Japanese BETA">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-English to Japanese BETA" src="http://cdn.schoolpointe.com/images/translator-flags/japanese.png"
+                    height="12" title="Google-Translate-English to Japanese BETA" />
+            </a>
+            <!-- END English to Japanese BETA -->
+            <!-- Add English to Korean BETA -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Cko&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-English to Korean BETA">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-English to Korean BETA" src="http://cdn.schoolpointe.com/images/translator-flags/korean.png"
+                    height="12" title="Google-Translate-English to Korean BETA" />
+            </a>
+            <!-- END English to Korean BETA -->
+            <!-- Add English to Russian BETA -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Cru&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-English to Russian BETA ">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-English to Russian BETA " src="http://cdn.schoolpointe.com/images/translator-flags/russian.png"
+                    height="12" title="Google-Translate-English to Russian BETA " />
+            </a>
+            <!-- END English to Russian BETA -->
+            <!-- Add English to Spanish -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Ces&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-English to Spanish ">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-English to Spanish " src="http://cdn.schoolpointe.com/images/translator-flags/spanish.png"
+                    height="12" title="Google-Translate-English to Spanish " />
+            </a>
+            <!-- END English to Spanish -->
+            <!-- Add English to Spanish -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Ctl&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-English to Tagalog ">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-English to Tagalog " src="http://cdn.schoolpointe.com/images/translator-flags/tagalog.png"
+                    height="12" title="Google-Translate-English to Tagalog " />
+            </a>
+            <!-- END English to Spanish -->
+            <!-- Add English to Spanish -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Cpt&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-English to Portuguese ">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-English to Portuguese " src="http://cdn.schoolpointe.com/images/translator-flags/porgtuguese.png"
+                    height="12" title="Google-Translate-English to Portuguese " />
+            </a>
+            <!-- END English to Spanish -->
+            <!-- Add English to Spanish -->
+            <a target="_blank" rel="nofollow" style="cursor: pointer; cursor: hand; width: 17px;
+                height: 14px;" onclick="window.open('http://www.google.com/translate?u='+encodeURIComponent(location.href)+'&langpair=en%7Cvi&hl=en&ie=UTF8'); return false;"
+                title="Google-Translate-English to Vietnamese ">
+                <img border="0" style="cursor: pointer; cursor: hand;" width="12" align="absbottom"
+                    alt="Google-Translate-English to Vietnamese " src="http://cdn.schoolpointe.com/images/translator-flags/vietnamese.png"
+                    height="12" title="Google-Translate-English to Vietnamese " />
+            </a>
+            <!-- END English to Spanish -->
+        </div>
+        <div class="search">
+            <div style="height: 27px;">
+                <div valign="top" style="" class="searchPad">
+                    <label for="txtSearch" class="obscure">Search site using Google</label><input id="txtSearch" class="watermark inputSearch" type="text" />
+                </div>
+                <div style="display: inline; float: right;" class="searchgo">
+                    <a class="bSearch" alt="Search" title="Search" style="color: white; font-family: Verdana;
+                        text-decoration: none;"></a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a href="http://www.newheightscharter.org/login.aspx" class="signin">Sign in to OLC</a>
+        </div>
+    </div>
+</div>
+
+	
+
+		</header>
+		<div id="middle-nav">
+			<nav class="top-bar" data-topbar>
+				<ul class="title-area">
+					<li class="name">
+						New Heights Charter School</li>
+					<li class="toggle-topbar menu-icon"><a href="index.html#"><span>Menu</span></a></li>
+				</ul>
+				<section class="top-bar-section">
+					<ul class='left' ><li class='without-image'><a href='index.html' >Home</a></li><li class='has-dropdown not-click'><a href='http://www.newheightscharter.org/Content/34' >Information</a><ul class='dropdown'><li class='without-image'><a href='http://www.newheightscharter.org/Content/8' >Welcome</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/4' >History</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/16' >Quick Facts</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/96' > Charter Petition</a></li><li class='has-dropdown not-click'><a href='http://www.newheightscharter.org/Content/80' >Governance</a><ul class='dropdown'><li class='without-image'><a href='http://www.newheightscharter.org/content/82' >Board Meeting Calendar </a></li><li class='without-image'><a href='http://www.newheightscharter.org/content/94' >Board meeting agendas and minutes</a></li><li class='without-image'><a href='http://www.newheightscharter.org/content/104' >Board Members </a></li></ul></li></ul></li><li class='has-dropdown not-click'><a href='http://www.newheightscharter.org/Content/32' >Enrollment</a><ul class='dropdown'><li class='without-image'><a href='http://www.newheightscharter.org/Content/12' >Why Choose New Heights?</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/14' >Steps to Apply</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/116' >Lottery Application</a></li></ul></li><li class='has-dropdown not-click'><a href='index.html' >Philosophy</a><ul class='dropdown'><li class='without-image'><a href='http://www.newheightscharter.org/Content/24' >School Vision</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/20' >Social and Emotional Development</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/22' >Health and Wellness</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/44' >The Arts</a></li></ul></li><li class='has-dropdown not-click'><a href='index.html' >Programs</a><ul class='dropdown'><li class='without-image'><a href='http://www.newheightscharter.org/Content/6' >Curriculum</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/26' >Instructional Focus</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/30' >Transitional Kinder</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/18' >Extended Day Programs</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/42' >Athletics </a></li></ul></li><li class='has-dropdown not-click'><a href='index.html' >School Community</a><ul class='dropdown'><li class='without-image'><a href='http://www.newheightscharter.org/Content/28' >Parent Role</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/38' >Volunteering at New Heights </a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/60' >Digital Portfolio</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/64' >Prop 30</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/72' >SARC</a></li><li class='without-image'><a href='http://www.newheightscharter.org/userfiles/37/my&#32;files/title&#32;iii&#32;goal&#32;2&#32;template&#32;2016.pdf?id=374' target='_blank'>Title III Goal 2 Plan and Budget 2016</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/100' >Single School District Plan </a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/76' >EPA</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/78' >LCAP</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/106' >Employee Handbook </a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/74' >Archived Information</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/110' >Uniform Complaint Procedures</a></li></ul></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/92' >Employment</a></li><li class='has-dropdown not-click'><a href='http://www.newheightscharter.org/Content/102' >Forms & Links</a><ul class='dropdown'><li class='without-image'><a href='index.html' >News</a></li></ul></li></ul>
+
+					<ul class="quicklinks">
+						<li class="qlTitle">QUICK LINKS</li>
+					</ul>
+					<ul class='left quicklinks' ><li class='without-image'><a href='index.html' >Home</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/90' >School Policies</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/98' >Teachers</a></li><li class='has-dropdown not-click'><a href='http://www.newheightscharter.org/Content/58' >Parents</a><ul class='dropdown'><li class='without-image'><a href='http://www.newheightscharter.org/Content/28' >Parent Role</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/60' >Digital Portfolio</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/62' >Reading Level Expectations by Grade</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Calendar/0' >Calendar View</a></li></ul></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/42' >Athletics</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/56' >Photo Galleries</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/10' >Lunch Menu</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/66' >Forms & Links</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Communication' >E-Communication Registration</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Staff' >Staff Directory</a></li></ul>
+
+				</section>
+			</nav>
+		</div>
+		<div class="row">
+			
+		</div>
+		
+	
+        <script type="text/javascript">
+            $(window).load(function () {
+                $('#slideshow .slides').nivoSlider();
+            });
+    </script>
+    <div class="row">
+            <div id="slideshow">
+            <div class="slides">
+                
+                        <img title='' alt='' src='http://www.newheightscharter.org/images/full/web.jpg?nocache=635591032014900968' />
+                    
+            </div>
+        </div>
+        </div>
+            <div class="row longmiddle">
+                <span style="font-size:22px;"><strong><span style="color:#3ABE40;text-shadow: 1px 1px 2px rgba(25, 25, 25, 1);">DEDICATED TO HEALTHY DEVELOPMENT, CREATIVITY, AND THE POWER OF IDEAS</span></strong></span>
+            </div>
+
+  
+
+
+		
+		
+		<div class="shadowoverlay">
+			<div class="row MiddleContent">
+				<div id="body-shape1" class="artifact">
+				</div>
+				<div id="body-shape2" class="artifact">
+				</div>
+				<div id="body-shape3" class="artifact">
+				</div>
+				
+	<div class="hide-for-small medium-3 large-3 columns three navlinks">
+		<div class="clearfix panel">
+			
+				<h1>Quick Links</h1>
+				<ul class='sf-vertical' ><li class='without-image'><a href='index.html' >Home</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/90' >School Policies</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/98' >Teachers</a></li><li class='has-flyout'><a href='http://www.newheightscharter.org/Content/58' >Parents</a><ul class='flyout'><li class='without-image'><a href='http://www.newheightscharter.org/Content/28' >Parent Role</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/60' >Digital Portfolio</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/62' >Reading Level Expectations by Grade</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Calendar/0' >Calendar View</a></li></ul></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/42' >Athletics</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/56' >Photo Galleries</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/10' >Lunch Menu</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Content/66' >Forms & Links</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Communication' >E-Communication Registration</a></li><li class='without-image'><a href='http://www.newheightscharter.org/Staff' >Staff Directory</a></li></ul>
+
+<script type='text/javascript'>
+	$(document).ready(function ()
+	{
+		$('.sf-vertical').superfish({
+			animation: { height: 'show' }, delay: 500, speed: 'fast'
+		});
+	});
+</script>
+
+			
+			
+			
+		</div>
+	</div>
+	<div class="small-12 medium-6 large-6 columns six">
+		<div class="clearfix panel">
+			
+         <div id="start-content"></div> <h1 id="middle3Column">SPOTLIGHT</h1>
+    <div style="">
+  <span id="ctl00_ctl00_MasterContent_ContentColumnMiddle_Pcontenttext"><p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite">&nbsp;</p>
+
+<p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><span style="font-size:22px;"><strong><u>New Heights Charter School Student Council&nbsp;</u></strong></span></p>
+
+<p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><span style="color:#FF8C00;"><span style="font-size:18px;"><strong>Student Council memebers donate toys raised from their toy drive to homeless youth</strong>.</span>&nbsp;</span></p>
+
+<p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><img alt="" src="http://www.newheightscharter.org/userfiles/37/my&#32;files/img_7243.jpg?id=370&amp;width=500" style="width: 500px; height: 375px;" /></p>
+
+<p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite">&nbsp;</p>
+
+<p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><span style="font-size:22px;">New Heights Charter School Class of 2016&nbsp;</span></p>
+
+<p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><span style="color:#FF8C00;"><span style="font-size:22px;">Congrats&nbsp;to our 2016 Grads!</span></span></p>
+
+<p style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><img alt="" src="http://www.newheightscharter.org/userfiles/37/my&#32;files/img_7244&#32;(1).jpg?id=372&amp;width=500" style="width: 500px; height: 375px;" /></p>
+
+<blockquote style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite">&nbsp;</blockquote>
+
+<blockquote style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><span style="font-size: 18px;"><a href="http://www.newheightscharter.org/userfiles/2/Support%20Our%20New%20Heights%20School%20Community%20201415.docx">Click here</a> for information on donating.</span></blockquote>
+
+<blockquote style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><span style="font-size: 18px;"><img alt="" src="http://www.newheightscharter.org/userfiles/4/Amazon.png" style="width: 244px; height: 206px;" /></span></blockquote>
+
+<blockquote style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><a href="http://smile.amazon.com/ch/37-1510439">http://smile.amazon.com/ch/37-1510439</a></blockquote>
+
+<blockquote style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite">&nbsp;</blockquote>
+
+<p><img alt="Displaying FullSizeRender.jpg" aria-hidden="true" class="aLF-aPX-J1-J3 aLF-aPX-aLK-ayr-auR" src="blob:https%3A//mail.google.com/58efb2c0-a412-4988-8e07-66c0761f23a8" /><img alt="Displaying FullSizeRender.jpg" aria-hidden="true" class="aLF-aPX-J1-J3 aLF-aPX-aLK-ayr-auR" src="blob:https%3A//mail.google.com/58efb2c0-a412-4988-8e07-66c0761f23a8" /></p>
+
+<blockquote style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite">&nbsp;</blockquote>
+
+<blockquote style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><br />
+&nbsp; &nbsp;&nbsp;</blockquote>
+
+<blockquote style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite">&nbsp;</blockquote>
+
+<blockquote style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite">&nbsp;</blockquote>
+
+<blockquote style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-style: normal; line-height: normal; text-align: center;" type="cite"><span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 12px; line-height: normal;">CDE is requesting LEAs post the following link to CDE&rsquo;s Web site,&nbsp;</span><a href="http://www.cde.ca.gov/morganhillcase" style="color: rgb(17, 85, 204); font-family: Arial, sans-serif; font-size: 12px; line-height: normal;" target="_blank">http://www.cde.ca.gov/<wbr />morganhillcase</a><span style="color: rgb(34, 34, 34); font-family: Arial, sans-serif; font-size: 12px; line-height: normal;">, to provide the Notice and Objection Form required by FERPA.</span></blockquote></span></div>
+
+
+		</div>
+	</div>
+	<div class="small-12 medium-3 large-3 columns three">
+		<div class="clearfix panel">
+			
+<h1>Calendar/Events</h1>
+ 
+<section id="calendar">
+	<table id="ctl00_ctl00_MasterContent_ContentColumnRight_ctl00_cal_events" class="calendar" cellspacing="0" cellpadding="2" title="Calendar" border="0" style="border-width:0px;border-collapse:collapse;">
+	<tr><td colspan="7" style="background-color:Silver;"><table class="calendar" cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">
+		<tr><td style="width:15%;"><a href="javascript:__doPostBack('ctl00$ctl00$MasterContent$ContentColumnRight$ctl00$cal_events','V6241')" style="color:Black" title="Go to the previous month"><<<span class='obscure'>Go to previous month</span></a></td><td align="center" style="width:70%;">March 2017</td><td align="right" style="width:15%;"><a href="javascript:__doPostBack('ctl00$ctl00$MasterContent$ContentColumnRight$ctl00$cal_events','V6300')" style="color:Black" title="Go to the next month">>><span class='obscure'>Go to next month</span></a></td></tr>
+	</table></td></tr><tr><th align="center" abbr="Sunday" scope="col">S</th><th align="center" abbr="Monday" scope="col">M</th><th align="center" abbr="Tuesday" scope="col">T</th><th align="center" abbr="Wednesday" scope="col">W</th><th align="center" abbr="Thursday" scope="col">T</th><th align="center" abbr="Friday" scope="col">F</th><th align="center" abbr="Saturday" scope="col">S</th></tr><tr><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=2/26/2017">26</a></td><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=2/27/2017">27</a></td><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=2/28/2017">28</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/1/2017">1</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/2/2017">2</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/3/2017">3</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/4/2017">4</a></td></tr><tr><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/5/2017">5</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/6/2017">6</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/7/2017">7</a></td><td class=" today" align="center" style="color:White;background-color:Silver;width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/8/2017">8</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/9/2017">9</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/10/2017">10</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/11/2017">11</a></td></tr><tr><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/12/2017">12</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/13/2017">13</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/14/2017">14</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/15/2017">15</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/16/2017">16</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/17/2017">17</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/18/2017">18</a></td></tr><tr><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/19/2017">19</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/20/2017">20</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/21/2017">21</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/22/2017">22</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/23/2017">23</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/24/2017">24</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/25/2017">25</a></td></tr><tr><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/26/2017">26</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/27/2017">27</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/28/2017">28</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/29/2017">29</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/30/2017">30</a></td><td class=" this-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=3/31/2017">31</a></td><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=4/1/2017">1</a></td></tr><tr><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=4/2/2017">2</a></td><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=4/3/2017">3</a></td><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=4/4/2017">4</a></td><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=4/5/2017">5</a></td><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=4/6/2017">6</a></td><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=4/7/2017">7</a></td><td class=" other-month" align="center" style="width:14%;"><a href="http://www.newheightscharter.org/calendarWeekView.aspx?schools=0&amp;schoolid=0&amp;types=1,2,24,25,26,32,56,57&amp;viewDate=4/8/2017">8</a></td></tr>
+</table>
+	<footer>
+		<a id="ctl00_ctl00_MasterContent_ContentColumnRight_ctl00_aCal" class="view-full-calendar" href="http://www.newheightscharter.org/calMonthView.aspx?s=0&amp;y=2017&amp;m=3&amp;t=0" target="_blank" style="padding-left: 10px;">View Full Calendar</a>
+	</footer>
+</section>
+
+  <div style="">
+    
+
+
+<div id="event-wrapper">
+            
+</div>
+
+
+<footer>
+    
+    
+</footer>
+</div>
+
+
+		</div>
+	</div>
+
+				<div class="clr">
+				</div>
+			</div>
+		</div>
+		
+	
+	
+
+		<footer id="site-foot">
+			
+<div class="row">
+    <div class="columns medium-6 large-6 small-12">
+     <h6>
+                Contact Us</h6>
+        <div id="school-map" class="row">
+                <div class="columns small-6 medium-6 large-6" >
+       
+            <div style=" margin-right:30px;">
+                <span id="ctl00_ctl00_ctl11_hName">New Heights Charter School</span><span id="ctl00_ctl00_ctl11_hAddress">2202 W. Martin Luther King Blvd. <br/> Los Angeles, CA 90008</span>
+            </div>
+             </div>
+           <div class=" columns small-6 medium-6 large-6" >
+                <span id="AddInfo"><a href="http://maps.google.com/maps?q=2202 W. Martin Luther King Blvd. + Los Angeles+CA+90008" id="ctl00_ctl00_ctl11_mapLink">
+                    <img src="http://cdn.schoolpointe.com/images/new/locationWhite.png" alt="location icon white"/>&nbsp;&nbsp;View Map & Directions</a></span>
+                <span id="AddInfo">
+                    <div id="ctl00_ctl00_ctl11_dphone">
+                        <img src="http://cdn.schoolpointe.com/images/new/phoneWhite.png" alt="phone icon white" />&nbsp;&nbsp;<span id="ctl00_ctl00_ctl11_hPhone" style="display: inline;">Phone: 323.508.0155</span></div>
+                </span><span id="AddInfo">
+                    <div id="ctl00_ctl00_ctl11_dfax">
+                        <img src="http://cdn.schoolpointe.com/images/new/letterWhite.png" alt="fax icon white"/>&nbsp;&nbsp;<span id="ctl00_ctl00_ctl11_hfax" style="display: inline;">Fax: 323.508.0156</span></div>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="columns medium-6 large-6 small-12">
+        <div id="social-links">
+          
+            <h6>
+                Stay connected to your school</h6>
+                  <div class="centerlinks">
+            <a href="http://www.newheightscharter.org/login.aspx" id="ctl00_ctl00_ctl11_A1" title="CMS Login" class="cms"><span class="obscure">Link to login page</span></a>
+            <a href="http://www.newheightscharter.org/Login/Intranet" id="ctl00_ctl00_ctl11_A2" title="Intranet Login" class="intranet"><span class="obscure">Link to Intranet login page</span>
+            </a>
+            <a href="http://www.newheightscharter.org/rssNews.ashx" id="ctl00_ctl00_ctl11_A4" title="RSS" class="rss"><span class="obscure">Link to news RSS feed</span></a>
+            
+            <div class="clr">
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="column large-6 small-6">
+    </div>
+    <div class="column large-6 small-6">
+        <a href="http://www.schoolpointe.com" target="_blank" title="School Pointe"
+            class="schoolpointe">
+            <img src="http://cdn.schoolpointe.com/images/new/SPwhite.png" alt="School Pointe white logo" /></a>
+    </div>
+</div>
+
+
+<script>
+
+	if (typeof ga === "undefined")
+	{
+		(function (i, s, o, g, r, a, m)
+		{
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function ()
+			{
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	}
+
+	ga('create', 'UA-38672601-36', 'auto', { 'name': 'SchoolPointeTracker' });
+	ga('SchoolPointeTracker.send', 'pageview');
+
+</script>
+
+
+		</footer>
+	
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAC3dAneWA1zr3ktJS0fw5JJfm3KZ4Rw42Qv01BXdFjnsuJDlLo7jbhnG/nVZ2ICvL3OJnFdc+RbXgXTW9pchBl+jQovAmf31D5B6BqiZmuijTwx5mHiYNbv1FdqpqBQrMzM1K+QpKql9H/gcATpXgSPV4wgTY3WnopWBV6ByCYJZOPjDlRtpam5M6vNI9jhA3Jf/6Ul2Mo2Lk5F7xwZr8W7qo9L1JY8sNIfM6pxcghayl7m45kT/Rkax7YQAHfebMwgI5/t6MueklaSeA70lVxB5Xs/H0U8GVXsbd8WSDSmNRhRhLV9oza2OzzduA+hFQ2xZv78SxyfhZWJcPpC5/cbD+mdOTDzrcpG6gGTTTzP72LQUTxSL7qUmgHgzzsIWYKTptAacO0gt4dLDg8xxwTsQle+xat86NTKboBVJkTfbNi9upJQZr/igY/E4Q0wYK/mvwyGGM4KkMfaCyVRvgHVWRP3R8y5AtqaOyJZgMcluYNv1tACb+4uicqih97a4vfNsFZ9p9Acq5KLujbhXJ7W+JuK9A/ceH/DTcx9a+hY7kRvzj8JlaxiHauGcGf1z2NTH3u85H0XF7AS1sX4y08uBqINmSFOEt1K+EZ4CWrq4yRy99BTEVOII1b0VL2Lv/mHUP0+nOC4m0ER9CVInjRT5HW1YA3KXZ3fA9IKgQfcrsJOrV/Nj3FWr6TyeWeDVdZuYKVc3QjtvbnDm39mxViA7MuhQCWf1gIoy6GE28vsVg6wsFzUUCOocBUtt7mzQVZ2mkIfOcW44HKag+TSehi3QUrc8a3sO9j40fSU6zpjiyzRibQPwvwW4p5MPdybz8AtEi3f9GF43BPhRcAIl2Xo5xP+a2fsty0ytdLP/3WjGYLtwHKI22iX+MLgrnydmr1RKUWcHYT7+PCjksQd1cTZA3hMfQX56VdTSfk0XA89RIgVrwEr3IvrVjazLhKdOxNWBXkzMI3VaXPeT+E6sqVZtYPkK4g==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
+</form>
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>

@@ -1,0 +1,886 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>MN International Middle School</title>
+
+                        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- YUI 3 CSS Reset files -->
+    <link rel="stylesheet" type="text/css" href="http://www.mninternationalmiddleschool.org/css/L10/fonts-min.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.mninternationalmiddleschool.org/css/L10/reset-min.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.mninternationalmiddleschool.org/css/L10/base-min.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="http://www.mninternationalmiddleschool.org/css/L10/screen/style.css?v=161215" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="http://www.mninternationalmiddleschool.org/css/L10/screen/weather.css?v=160919" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="http://www.mninternationalmiddleschool.org/css/L10/screen/calendarHighlights.css?v=161101" />
+
+          <link rel="stylesheet" type="text/css" media="screen, projection" href="http://www.mninternationalmiddleschool.org/css/L10/screen/mainPage.css" />
+    
+    <link rel="stylesheet" type="text/css" href="http://www.mninternationalmiddleschool.org/css/backend/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write(unescape('%3Cscript src="/javascripts/jquery/jquery-1.8.3.min.js"%3E%3C/script%3E'))</script>
+    
+<script>window.Modernizr || document.write(unescape('%3Cscript src="/javascripts/modernizr/modernizr.touch.js"%3E%3C/script%3E'))</script><script src="http://www.mninternationalmiddleschool.org/javascripts/jquery/plugins/jquery.cookie.js"></script><script>
+;(function($) {
+  function redirect() {
+    var href = window.location.href;
+    href += (href.indexOf('?') === -1) ? '?template=m' : '&template=m';
+    window.location = href;
+  }
+
+  // Don't switch for bing crawls (otherwise we'll get template=m URLs at top of search results):
+  if (navigator.userAgent.indexOf('bingbot') != -1 ||
+      navigator.userAgent.indexOf('msnbot') != -1 ||
+      navigator.userAgent.indexOf('BingPreview') != -1)
+     return false;
+
+  // User chose NOT to use the mobile template, do nothing and leave...
+  if ( 1 != 1 )
+    return false;
+
+  var winWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if (winWidth <= 480) {
+    // Assuming any device <= 480px in width is a "mobile" device.
+    redirect();
+  } else if (winWidth <= 1024 && Modernizr.touch) {
+    // Assuming any device <= 1024px in width AND has touch capability is a "mobile" device.
+    redirect();
+  }
+
+})(jQuery);
+</script>
+    <script type="text/javascript" src="http://www.mninternationalmiddleschool.org/javascripts/jquery/plugins/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="http://www.mninternationalmiddleschool.org/javascripts/jquery/plugins/jquery.hoverIntent.minified.js"></script>
+          <script type="text/javascript" src="http://www.mninternationalmiddleschool.org/javascripts/jquery/plugins/jquery.imageRotator.js"></script>
+        <script type="text/javascript" src="http://www.mninternationalmiddleschool.org/javascripts/jquery/plugins/jquery.calendarList.js"></script>
+
+    
+<link rel="stylesheet" type="text/css" media="print" href="http://www.mninternationalmiddleschool.org/css/L10/print/print.css" />
+<link rel="stylesheet" type="text/css" media="print" href="http://www.mninternationalmiddleschool.org/css/L10/screen/forms.css?v=160919" />
+
+
+   <script src="http://www.mninternationalmiddleschool.org/javascripts/jquery/plugins/jquery.imagesloaded-3.1.7.min.js"></script>
+
+  
+      
+    <link rel="stylesheet" href="http://www.mninternationalmiddleschool.org/css/L10/features.css?v=160919">
+  
+<script type="text/javascript" src="http://www.mninternationalmiddleschool.org/javascripts/flash_detect_min.js"></script>
+    <script type="text/javascript" src="http://www.mninternationalmiddleschool.org/javascripts/cstools.js"></script>
+          <script type="text/javascript">
+var display_private_sections = 0;
+var allowed_section_ids = ""
+</script>
+      
+      <script>if (typeof($.cookie) != "function") document.write('<script src="http://www.mninternationalmiddleschool.org/javascripts/jquery/plugins/jquery.cookie-1.4.1.min.js">\x3C/script>');</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  var tempOStype="n/a";
+
+  if ($.cookie("device_uuid") == undefined)
+    tempOStype = "no";
+  else
+    tempOStype = ($.cookie("device_uuid").length>16)?"ios":"android";
+
+  _gaq.push(
+    ['_setCustomVar',1,'siteURL','http://mninternationalmiddleschool.socs.net'],
+    ['_setCustomVar',2,'template','L10'],
+    ['_setCustomVar',3,'protocol',document.location.protocol],
+    ['_setCustomVar',4,'socsApp',tempOStype],
+    ['_setAccount', 'UA-36782344-1'],
+    ['_trackPageview'],
+    ['_deleteCustomVar',1],
+    ['_deleteCustomVar',2],
+    ['_deleteCustomVar',3],
+    ['_deleteCustomVar',4]
+    );
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>    
+  </head>
+
+
+
+<!--[if lte IE 6]><body class="ie6 mainPage  mastheadStyle3"><![endif]--><!--[if IE 7]><body class="ie7 mainPage  mastheadStyle3"><![endif]--><!--[if IE 8]><body class="ie8 mainPage  mastheadStyle3"><![endif]--><!--[if gte IE 9]><body class="ie9 mainPage  mastheadStyle3"><![endif]--><!--[if !IE]>--><body class="mainPage  mastheadStyle3"><!--<![endif]-->
+
+
+<h4 class="sr-only">Quick Links</h4>
+<a class="sr-only sr-only-focusable" href="http://www.mninternationalmiddleschool.org/#mainContent" title="Skips to the main content.">Skip to main content</a>
+<a class="sr-only sr-only-focusable" href="http://www.mninternationalmiddleschool.org/#navigation" title="Skips to the main menu.">Skip to navigation</a>
+<!--[if lte IE 6]>
+<div id="upgradeBrowser"><div>
+  <p>If you want to experience this site as it was designed, <a href="http://socs.fes.org/vnews/display.v?page=upgrade_browser" target="_blank">click here</a>.</p>
+</div></div>
+<![endif]-->
+
+      <div id="leaderBoard" class="clearfix"><div id="leaderBoard1"><div id="leaderBoard2">
+      
+    </div></div></div>
+  
+  <div id="hdmast"><div id="hdmast1"><div id="hdmast2"><div id="hdmast3">
+    
+
+
+  
+
+
+  <div id="masthead">
+
+  <h1 id="logo">
+    <a id="logoImage" href="http://www.mninternationalmiddleschool.org/"><img src="http://www.mninternationalmiddleschool.org/vimages/L10/print_flag.gif" alt="MN International Middle School Logo" width="770" height="107" /><span class="sr-only">Minnesota International Middle School</span></a>
+  </h1>
+  <div id="imgRotator">
+    <img src="http://www.mninternationalmiddleschool.org/vimages/L10/spacer.gif" alt="" width="370" height="250" />
+  </div>
+
+      <div id="imgRotatorMask"></div>
+  </div>
+
+  
+
+<script type="text/javascript">
+(function($){
+  $(function() {
+
+          var imgs = [
+                  "/pages/image_rotator/1_MN.jpg"
+                        ];
+      var links = [
+              ];
+
+      $('#imgRotator').imageRotator({
+        images: imgs,
+        links: links,
+        containerID: 'imgRotator',
+        maskID: 'imgRotatorMask',
+        pauseTime: 5000,
+        animSpeed: 1000,
+        sortImages: 1
+      });
+    
+  });
+})(jQuery);
+</script>
+  </div></div></div></div>
+  <div id="hdnav"><div id="hdnav1"><div id="hdnav2"><div id="hdnav3">
+    <script type="text/javascript">var _globalNav_IE6test = false;</script><!--[if lt IE 7]><script type="text/javascript">_globalNav_IE6test = true;</script><![endif]--><h4 class="hiddenNav"><a name="navigation"></a>Main Navigation</h4><div class="clearfix"><ul id="nav"><li class="first"><a href="http://www.mninternationalmiddleschool.org/" accesskey="1" class="selected"><span class="top">Front Page</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/About%20MIMS"><span class="top">About MIMS</span></a><ul class="level2"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/About%20MIMS%7CMission%20and%20Vision"><em class="sr-only">About MIMS - </em><span>Mission and Vision</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/About%20MIMS%7CSchool%20Information"><em class="sr-only">About MIMS - </em><span class="navArrow">School Information</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/About%20MIMS%7CSchool%20Information%3E%3ECalendar"><em class="sr-only">About MIMS - School Information - </em><span>Calendar</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/About%20MIMS%7CSchool%20Information%3E%3EDaily%20Schedule"><em class="sr-only">About MIMS - School Information - </em><span>Daily Schedule</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/About%20MIMS%7CSchool%20Information%3E%3EDress%20Code"><em class="sr-only">About MIMS - School Information - </em><span>Dress Code</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/About%20MIMS%7CSchool%20Information%3E%3EGrading%20Procedure"><em class="sr-only">About MIMS - School Information - </em><span>Grading Procedure</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/About%20MIMS%7CSchool%20Information%3E%3ETardy%20Practice"><em class="sr-only">About MIMS - School Information - </em><span>Tardy Practice</span></a></li></ul></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments"><span class="top">Academics and Departments</span></a><ul class="level2"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments%7CEnglish%20Language%20Arts"><em class="sr-only">Academics and Departments - </em><span>English Language Arts</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments%7CLibrary"><em class="sr-only">Academics and Departments - </em><span class="navArrow">Library</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments%7CLibrary%3E%3EOnline%20Resources"><em class="sr-only">Academics and Departments - Library - </em><span>Online Resources</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments%7CLibrary%3E%3EType%20To%20Learn"><em class="sr-only">Academics and Departments - Library - </em><span>Type To Learn</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments%7CMathematics"><em class="sr-only">Academics and Departments - </em><span>Mathematics</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments%7CPhysical%20Education/%20Health"><em class="sr-only">Academics and Departments - </em><span>Physical Education/ Health</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments%7CReading"><em class="sr-only">Academics and Departments - </em><span>Reading</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments%7CScience"><em class="sr-only">Academics and Departments - </em><span>Science</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments%7CSocial%20Studies"><em class="sr-only">Academics and Departments - </em><span>Social Studies</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages"><span class="top">Teacher Pages</span></a><ul class="level2"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C5th%20Grade"><em class="sr-only">Teacher Pages - </em><span class="navArrow">5th Grade</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C5th%20Grade%3E%3EMr.%20Tyler"><em class="sr-only">Teacher Pages - 5th Grade - </em><span>Mr. Tyler</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C5th%20Grade%3E%3EMr.Jimmy"><em class="sr-only">Teacher Pages - 5th Grade - </em><span>Mr.Jimmy</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C5th%20Grade%3E%3EMs.%20Crystal"><em class="sr-only">Teacher Pages - 5th Grade - </em><span>Ms. Crystal</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C5th%20Grade%3E%3EMs.%20Mandy"><em class="sr-only">Teacher Pages - 5th Grade - </em><span>Ms. Mandy</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C5th%20Grade%3E%3EMs.Katie"><em class="sr-only">Teacher Pages - 5th Grade - </em><span>Ms.Katie</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C6th%20Grade"><em class="sr-only">Teacher Pages - </em><span class="navArrow">6th Grade</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C6th%20Grade%3E%3EMr.%20Brian"><em class="sr-only">Teacher Pages - 6th Grade - </em><span>Mr. Brian</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C6th%20Grade%3E%3EMr.%20Scott"><em class="sr-only">Teacher Pages - 6th Grade - </em><span>Mr. Scott</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C6th%20Grade%3E%3EMs.%20Sarah"><em class="sr-only">Teacher Pages - 6th Grade - </em><span>Ms. Sarah</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C6th%20Grade%3E%3EMs.%20Tessa"><em class="sr-only">Teacher Pages - 6th Grade - </em><span>Ms. Tessa</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C7th%20Grade"><em class="sr-only">Teacher Pages - </em><span class="navArrow">7th Grade</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C7th%20Grade%3E%3EMr.%20Daniel"><em class="sr-only">Teacher Pages - 7th Grade - </em><span>Mr. Daniel</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C7th%20Grade%3E%3EMr.%20Marcus"><em class="sr-only">Teacher Pages - 7th Grade - </em><span>Mr. Marcus</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C7th%20Grade%3E%3EMs.%20Elisha"><em class="sr-only">Teacher Pages - 7th Grade - </em><span>Ms. Elisha</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C7th%20Grade%3E%3EMs.%20Jamie"><em class="sr-only">Teacher Pages - 7th Grade - </em><span>Ms. Jamie</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C8th%20Grade"><em class="sr-only">Teacher Pages - </em><span class="navArrow">8th Grade</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C8th%20Grade%3E%3EMr.%20Adam"><em class="sr-only">Teacher Pages - 8th Grade - </em><span>Mr. Adam</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C8th%20Grade%3E%3EMr.%20Joel"><em class="sr-only">Teacher Pages - 8th Grade - </em><span>Mr. Joel</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C8th%20Grade%3E%3EMs.%20Rachael"><em class="sr-only">Teacher Pages - 8th Grade - </em><span>Ms. Rachael</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7C8th%20Grade%3E%3ESchofield%2C%20Micheal"><em class="sr-only">Teacher Pages - 8th Grade - </em><span>Schofield, Micheal</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CPhysical%20Education"><em class="sr-only">Teacher Pages - </em><span class="navArrow">Physical Education</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CPhysical%20Education%3E%3ELapham%2C%20Erica"><em class="sr-only">Teacher Pages - Physical Education - </em><span>Lapham, Erica</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CPhysical%20Education%3E%3EMr.%20Chris"><em class="sr-only">Teacher Pages - Physical Education - </em><span>Mr. Chris</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CSpecialists"><em class="sr-only">Teacher Pages - </em><span class="navArrow">Specialists</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CSpecialists%3E%3EChristenson%2C%20Jennifer"><em class="sr-only">Teacher Pages - Specialists - </em><span>Christenson, Jennifer</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CSpecialists%3E%3EEngler%2C%20James"><em class="sr-only">Teacher Pages - Specialists - </em><span>Engler, James</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CSpecialists%3E%3EMr.%20Ahmed"><em class="sr-only">Teacher Pages - Specialists - </em><span>Mr. Ahmed</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CSpecialists%3E%3EMr.%20Joseph"><em class="sr-only">Teacher Pages - Specialists - </em><span>Mr. Joseph</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CSpecialists%3E%3EMs.%20Ceri"><em class="sr-only">Teacher Pages - Specialists - </em><span>Ms. Ceri</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CSpecialists%3E%3EMr.%20Cyprian"><em class="sr-only">Teacher Pages - Specialists - </em><span>Mr. Cyprian</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CSpecialists%3E%3EMs.%20Suhair"><em class="sr-only">Teacher Pages - Specialists - </em><span>Ms. Suhair</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CSpecialists%3E%3EMs.%20Katelyn"><em class="sr-only">Teacher Pages - Specialists - </em><span>Ms. Katelyn</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Teacher%20Pages%7CSpecialists%3E%3EMs.%20Anna%20and%20Mr.Joe"><em class="sr-only">Teacher Pages - Specialists - </em><span>Ms. Anna and Mr.Joe</span></a></li></ul></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Students"><span class="top">For Students</span></a><ul class="level2"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Students%7CAcademics%20and%20Departments"><em class="sr-only">For Students - </em><span>Academics and Departments</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Students%7CDaily%20Schedule"><em class="sr-only">For Students - </em><span>Daily Schedule</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Students%7CIXL%20Math"><em class="sr-only">For Students - </em><span>IXL Math</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Students%7CSchool%20Information"><em class="sr-only">For Students - </em><span>School Information</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Students%7CSchool%20Supply%20Lists"><em class="sr-only">For Students - </em><span>School Supply Lists</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Students%7CStudent%20Practice%20Links"><em class="sr-only">For Students - </em><span>Student Practice Links</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Students%7CYearbook"><em class="sr-only">For Students - </em><span>Yearbook</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Parents"><span class="top">For Parents</span></a><ul class="level2"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Parents%7CConference%20Information"><em class="sr-only">For Parents - </em><span>Conference Information</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Parents%7CHealth%20and%20Wellness"><em class="sr-only">For Parents - </em><span>Health and Wellness</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Parents%7CNewsletter"><em class="sr-only">For Parents - </em><span>Newsletter</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Parents%7CParent%20Portal"><em class="sr-only">For Parents - </em><span>Parent Portal</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Parents%7CVolunteering"><em class="sr-only">For Parents - </em><span>Volunteering</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Staff"><span class="top">For Staff</span></a><ul class="level2"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Staff%7CHuman%20Resources"><em class="sr-only">For Staff - </em><span class="navArrow">Human Resources</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Staff%7CHuman%20Resources%3E%3EBenefit%20Highlights"><em class="sr-only">For Staff - Human Resources - </em><span>Benefit Highlights</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Staff%7CHuman%20Resources%3E%3EOffice%20Forms"><em class="sr-only">For Staff - Human Resources - </em><span>Office Forms</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Staff%7CLinks"><em class="sr-only">For Staff - </em><span>Links</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Staff%7CLicense%20Renewal%20Information"><em class="sr-only">For Staff - </em><span class="navArrow">License Renewal Information</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Staff%7CLicense%20Renewal%20Information%3E%3EClock%20Hours"><em class="sr-only">For Staff - License Renewal Information - </em><span>Clock Hours</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Staff%7CLicense%20Renewal%20Information%3E%3ERelicensure%20Committee"><em class="sr-only">For Staff - License Renewal Information - </em><span>Relicensure Committee</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Staff%7CLicense%20Renewal%20Information%3E%3EProcedures%20and%20Forms"><em class="sr-only">For Staff - License Renewal Information - </em><span>Procedures and Forms</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/For%20Staff%7CMN%20Association%20of%20Charter%20Schools"><em class="sr-only">For Staff - </em><span>MN Association of Charter Schools</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information"><span class="top">District Information</span></a><ul class="level2"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CAnnual%20Report"><em class="sr-only">District Information - </em><span>Annual Report</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CAssessments"><em class="sr-only">District Information - </em><span>Assessments</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CAuthorizer"><em class="sr-only">District Information - </em><span>Authorizer</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CBoard%20of%20Directors"><em class="sr-only">District Information - </em><span class="navArrow">Board of Directors</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CBoard%20of%20Directors%3E%3EMeeting%20Schedule"><em class="sr-only">District Information - Board of Directors - </em><span>Meeting Schedule</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CBoard%20of%20Directors%3E%3EAgendas%20%26%20Minutes"><em class="sr-only">District Information - Board of Directors - </em><span>Agendas & Minutes</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CBoard%20of%20Directors%3E%3EPublic%20Participation"><em class="sr-only">District Information - Board of Directors - </em><span>Public Participation</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CBoard%20of%20Directors%3E%3EDistrict%20Policies"><em class="sr-only">District Information - Board of Directors - </em><span>District Policies</span></a></li></ul></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CEducational%20Partners"><em class="sr-only">District Information - </em><span>Educational Partners</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CEmployment%20Opportunities"><em class="sr-only">District Information - </em><span>Employment Opportunities</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CEnrollment"><em class="sr-only">District Information - </em><span>Enrollment</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CEvents"><em class="sr-only">District Information - </em><span>Events</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CFood%20Services"><em class="sr-only">District Information - </em><span>Food Services</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CProcess%20for%20Request%20of%20Proposals"><em class="sr-only">District Information - </em><span>Process for Request of Proposals</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CSchool%20Closings"><em class="sr-only">District Information - </em><span>School Closings</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CTransportation"><em class="sr-only">District Information - </em><span>Transportation</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CWorld%27s%20Best%20Workforce"><em class="sr-only">District Information - </em><span class="navArrow">World's Best Workforce</span></a><ul class="level3"><li class="first"><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CWorld%27s%20Best%20Workforce%3E%3E2014-2015%20Strategic%20Plan"><em class="sr-only">District Information - World's Best Workforce - </em><span>2014-2015 Strategic Plan</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CWorld%27s%20Best%20Workforce%3E%3EDistrict%20Advisory%20Committee"><em class="sr-only">District Information - World's Best Workforce - </em><span>District Advisory Committee</span></a></li></ul></li></ul></li>        </ul></div><h4 class="hiddenNav"><a href="http://www.mninternationalmiddleschool.org/#top">Top</a></h4><script type="text/javascript">
+(function($){
+  $(function() {
+    // Add "last" class to the list items
+    $('#nav > li:last').addClass('last');
+    $('#nav > li').each(function() {
+      if ($(this).has('ul.level2')) {
+        $(this).find('ul.level2 > li:last').addClass('last');
+        $(this).find('ul.level2 > li').each(function() {
+          if ($(this).has('ul.level3')) $(this).find('ul.level3 > li:last').addClass('last');
+        });
+      }
+    });
+
+    // Calc the right edge of the browser (plus a little extra to keep it off the chrome).
+    // Don't want menus extending past it.
+    var winRightEdge = $(window).width() - 10;
+    
+    // Get the selected 1st-level item - default to first (ie. Home) if nothing is selected.
+    var selected = $('#nav>li a.selected').parent().eq(0);
+    if (selected.length === 0) selected = $('#nav>li:first');
+
+    // Re-position the navIndicator when the browser is resized.
+    $(window).resize(function() {
+      // Re-calc the right edge, too.
+      winRightEdge = $(window).width() - 10;
+    });
+
+    // Display: 2nd-level drop-down menu - keep it inside the right edge of the container
+    var $li = null, liOffset = 0;
+    function displayDropDownMenu() {
+      // Calc the right edge of the drop-down menu
+      var ul = $("ul:first", $li);
+      var ulWidth = ul.width();
+      var ulRightEdge = liOffset.left + ulWidth;
+      
+      // Default the CSS Left property to 'auto', but override if drop-down extends past right edge.
+      var cssLeft = 'auto';
+      if (ulRightEdge > winRightEdge) cssLeft = winRightEdge - ulWidth;
+      
+      // Will the 3rd-level flyout extend past the right edge?
+      if (ulRightEdge + ulWidth + 5 > winRightEdge) {
+        // If so, switch the fly-out arrow indicators to the left side of the drop-down menu.
+        $('span.navArrow', $li).each(function() {
+          $(this).addClass('left');
+        });
+      } else {
+        // Reset the fly-out arrow indicators to the right side of the drop-down menu.
+        $('span.navArrow', $li).each(function() {
+          $(this).removeClass('left');
+        });
+
+      }
+
+      ul.css({
+        display: 'block',
+        left: cssLeft,
+        height: 'auto'
+      });
+    }
+    
+    // Display: 1st-level horizontal menu
+    $('#nav>li').each(function() {
+      $(this).hoverIntent({
+        timeout: 0,
+        over: function() {
+          $li = $(this);
+          liOffset = $li.offset();
+          var liWidth = $li.width();
+          
+          displayDropDownMenu();
+        },
+        out: function() {
+          // Are the two jQuery objects pointing to the same element?
+          if ($(this)[0] != selected[0]) $(this).find('>a').removeClass('selected');
+          // Hide: 2nd-level drop-down menu
+          $('ul:first', this).stop().css('display', 'none');
+        }
+      });
+    });
+    
+    // 3rd-level fly-out menu
+    $('#nav ul ul').each(function() {
+      var ulWidth = $(this).width();
+      $(this).parent().eq(0).hoverIntent({
+        timeout: 0,
+        over: function() {
+          if ($('span.left', this).length) {
+            $('ul:first', this).css({
+              display: 'block',
+              left: -(ulWidth + 2)
+            });
+          } else {
+            $('ul:first', this).css({
+              display: 'block',
+              left: '100%'
+            });
+          }
+
+        },
+        out: function() {
+          $('ul:first', this).css('display', 'none');
+        }
+      });
+    });
+
+  });
+})(jQuery);
+</script>
+  </div></div></div></div>
+
+<div id="bd"><div id="bd1"><div id="bd2"><div id="bd3">
+  <div id="content" class="clearfix">
+    
+        <div id="contentMain">
+            <div id="topBanner" class="clearfix">
+      <div><p><font color="black" size="5"> 
+<marquee bgcolor="white" scrolldelay="180">No School on Monday,February 20th!</marquee></font></p>
+</div>
+    </div>
+        <a name="mainContent" accesskey="2"></a>
+       
+
+<div id="features">
+
+  <h3 class="hidden">Top Stories</h3>
+
+                  <div class="socs-features socs-features-stacked socs-features-fp"><div class="socs-feature clearfix"><a class="socs-feature-img odd" href="http://www.mninternationalmiddleschool.org/vnews/display.v/ART/5609a1ab01461"><img class="img-responsive"src="http://www.mninternationalmiddleschool.org/vimages/shared/vnews/stories/5609a1ab01461/fp-1_20161024_162101.jpg" alt="Feature image"></a><h3><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/ART/5609a1ab01461">Welcome to MIMS!</a></h3><div><p style="text-align: center;"><span style="color:#000080;"><span style="font-family:comic sans ms,cursive;">Welcome to the 2016-2017 Academic Year</span></span></p>
+
+<p style="text-align: center;"><span style="color:#000080;">We at MIMS are very excited to begin our sixteenth year serving Twin Cities Metropolitan Area. &nbsp;</span></p>
+
+<h2 style="font-style:italic;"><span style="font-size:11px;"><span style="color:#000080;">Please note the following Information:</span></span></h2>
+
+<p><span style="color:#000080;"><span style="font-size:14px;"><span style="font-family:comic sans ms,cursive;">1) End of Trimester 2&nbsp;Friday March 10th. </span></span></span></p>
+
+<p><span style="color:#000080;"><span style="font-size:14px;"><span style="font-family:comic sans ms,cursive;">​2) 6th grade field Trip Thursday to Crayola Experience</span></span></span></p>
+
+<p><span style="color:#000080;"><span style="font-size:14px;"><span style="font-family:comic sans ms,cursive;">​3) 2 more weeks of after school (last day Thursday March 16th)</span></span></span></p>
+
+<p><span style="color:#000080;"><span style="font-size:14px;"><span style="font-family:comic sans ms,cursive;">4) 8th grade Engineering club has been building bridges and competed at&nbsp;a competition at the&nbsp;University of Minnesota&nbsp;last Friday Feb. 24.</span></span></span></p>
+
+<p><img src="http://www.mninternationalmiddleschool.org/vimages/shared/vnews/stories/5609a1ab01461/Bridge&#32;Building.jpg" style="width: 150px; height: 113px;" /><img src="http://www.mninternationalmiddleschool.org/vimages/shared/vnews/stories/5609a1ab01461/Engineering&#32;Group.jpg" style="width: 200px; height: 150px;" /><img src="http://www.mninternationalmiddleschool.org/vimages/shared/vnews/stories/5609a1ab01461/Bridges.jpg" style="width: 200px; height: 150px;" /></p>
+
+<p><span style="color:#000080;"><span style="font-size:14px;"><span style="font-family:comic sans ms,cursive;">​5) Congrats to our 5th graders who went to the capital to participate the &quot;We The People&quot; state competition and WON!!</span></span></span></p>
+
+<p><span style="color:#000080;"><span style="font-size:14px;"><span style="font-family:comic sans ms,cursive;">​6) Student council spent the day serving others at Feed My Starving Children.&nbsp; We bagged food to be sent to </span></span><strong><font face="Segoe UI Semibold">Honduras!</font></strong></span></p>
+
+<p><br />
+<img src="http://www.mninternationalmiddleschool.org/vimages/shared/vnews/stories/5609a1ab01461/image.png" style="width: 200px; height: 113px; float: left;" /><img src="http://www.mninternationalmiddleschool.org/vimages/shared/vnews/stories/5609a1ab01461/20161213_104811.jpg" style="width: 200px; height: 113px;" /><img src="http://www.mninternationalmiddleschool.org/vimages/shared/vnews/stories/5609a1ab01461/20161213_135640.jpg" style="width: 200px; height: 113px;" /><img src="http://www.mninternationalmiddleschool.org/vimages/shared/vnews/stories/5609a1ab01461/20170124_093123.jpg" style="width: 200px; height: 150px;" /></p>
+
+<p><img src="http://www.mninternationalmiddleschool.org/vimages/shared/vnews/stories/5609a1ab01461/20170124_095503.jpg" style="width: 200px; height: 150px;" /></p>
+
+<p>&nbsp;</p>
+</div></div></div>
+      </div>
+    </div>
+
+                <div id="contentSide">
+        <div id="sideHd">
+          
+<div id="weather"><div id="wf55401" class="weatherForecast" style="display:none;">
+  <div class="wForecastNight">
+    <div class="wFBorderNight">
+      <em>Current conditions as of 7 Mar 22:53 pm CST</em>
+      <h3>Partly cloudy</h3>
+      <table><tbody><tr>
+        <td class="stats">
+          <dl>
+            <dt>Location:</dt>
+            <dd>Minneapolis</dd>
+            <dt>Feels like:</dt>
+            <dd>27&deg</dd>
+            <dt>Humidity:</dt>
+            <dd>31</dd>
+            <dt>Wind:</dt>
+            <dd>W 17 mph</dd>
+          </dl>
+        </td>
+        <td class="weatherForecastGraphic">
+          <img src="data:image/;base64,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" alt="Partly cloudy" width="58" height="58" />
+        </td>
+        <td class="weatherForecastTemp">37&deg;</td>
+      </tr></tbody></table>
+      <div class="tomorrowNight">
+        <table><tbody><tr>
+          <td class="tomorrowStats">
+            <p>Tonight</p>
+            <span>A slight chance of snow showers between midnight and 5am.  Mostly cloudy, with a low around 23. Breezy, with a west wind 15 to 25 mph, with gusts as high as 35 mph.  Chance of precipitation is 20%.</span>
+          </td>
+        </tr></tbody></table>
+      </div>
+      <div class="tomorrowNight">
+        <table><tbody><tr>
+          <td class="tomorrowStats">
+            <p>Wednesday</p>
+            <span>Mostly sunny, with a high near 36. Breezy, with a west northwest wind 15 to 25 mph, with gusts as high as 35 mph. </span>
+          </td>
+        </tr></tbody></table>
+      </div>
+      <div class="tomorrowNight">
+        <table><tbody><tr>
+          <td class="tomorrowStats">
+            <p>Wednesday Night</p>
+            <span>Mostly cloudy, with a low around 19. West northwest wind 5 to 10 mph. </span>
+          </td>
+        </tr></tbody></table>
+      </div>
+      <div class="provider">Weather forecast provided by weather.gov.</div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+(function($){
+  $(function() {
+
+          var $forecast = $('#wf55401');
+
+      // Move it from inside the weather div to the body tag
+      $forecast.remove();
+      $('body').append($forecast);
+
+      // Create the HTML for the weather and setup the hover events
+      $('#weather')
+        .append('<a href="http://forecast.weather.gov/MapClick.php?lat=44.9836543&lon=-93.2693572" target="_blank" title="Click for detailed weather forecast">37&deg F Minneapolis<\/a>')
+        .hoverIntent({
+          timeout: 300,
+          over: function() {
+            var $this = $(this);
+            var os = $this.offset();
+
+            $forecast.css({
+              'left': os.left,
+              'top': os.top + $this.height()
+            }).stop().fadeIn();
+          },
+          out: function() {
+            $forecast.stop().fadeOut('fast', function () { $(this).css('left', '-999em'); });
+          }
+        });
+
+                $('.tomorrowStats').each(function() {
+          if ($.trim($(this).text()).length === 0) $(this).closest('div').css('display', 'none');
+        });
+
+    
+  });
+})(jQuery);
+</script>
+</div>                        <div id="siteSearchForm">    <form method="get" action="http://www.mninternationalmiddleschool.org/vnews/display.v/search">
+      <label for="Fkeywords" accesskey="4" class="sr-only">Search site</label>
+      <input type="text" class="textInput" size="15" name="Fkeywords" id="Fkeywords" value="" />
+      <input type="image" src="http://www.mninternationalmiddleschool.org/vimages/L10/searchButton.jpg" alt="Go" id="searchButton" name="submit" />
+      <input type="hidden" name="search_type" value="vnews" />
+    </form>
+  </div>    <script type="text/javascript">
+    (function($){
+      $(function() {
+        // Search field at top of page
+        var $Fkeywords = $('#Fkeywords');
+
+        // Search field "get focus"/"lose focus" behavior
+        $Fkeywords.focus(function() {
+          if ($(this).val() === 'Search') {
+            $(this).val('').css('color','#000');
+          } else {
+            $(this).select();
+          }
+        });
+        $Fkeywords.blur(function() {
+          if ($(this).val() === '') {
+            $(this).val('Search').css('color', '#888');
+          }
+        });
+
+        // Setup the search field
+        $Fkeywords.val('Search').css('color', '#888');
+      });
+    })(jQuery);
+  </script>
+                  </div>
+        <div id="sideTabs">
+          
+<ul class="tabsNav"><li><a href="http://www.mninternationalmiddleschool.org/#tb_quicklinks">Quick Links<span class="sr-only"> Tab</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/#tb_highlights">Highlights<span class="sr-only"> Tab</span></a></li><li><a href="http://www.mninternationalmiddleschool.org/#tb_calendar">Calendar<span class="sr-only"> Tab</span></a></li></ul><div class="sidePanels"><div id="tb_quicklinks" class="sidePanel"><div id="vButtons"><ul><li><a class="vbutton-image" href="http://www.mninternationalmiddleschool.org/vnews/display.v/ART/55ef03921da37" title="" target="_blank"><img src="http://www.mninternationalmiddleschool.org/pages/uploaded_images/buttons/Icon-announcements2.jpg" alt="Announcements"></a></li><li><a class="vbutton-image" href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/Academics%20and%20Departments%7CLibrary" title="" target="_blank"><img src="http://www.mninternationalmiddleschool.org/pages/uploaded_images/buttons/Icon-book2.jpg" alt="Book of the Month"></a></li><li><a class="vbutton-image" href="http://www.mninternationalmiddleschool.org/vnews/display.v/SEC/District%20Information%7CFood%20Services" title="" target="_blank"><img src="http://www.mninternationalmiddleschool.org/pages/uploaded_images/buttons/Icon-menu2.jpg" alt="Menu"></a></li></ul></div></div><div id="tb_highlights" class="sidePanel">
+
+
+<div id="chSlider">
+      <div class="chSlide">
+            <div class="chText">
+        <h3><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/ART/5605696ec8ee0">Daily Schedule</a></h3>
+                <p> 
+	 
+		 
+			  Daily Schedule  
+		 
+		 
+			     
+		 
+		 
+			 
+			 
+				 
+					 
+						 
+						   Monday-Thursday . . . </p>
+              </div>
+    </div>
+      <div class="chSlide">
+            <div class="chText">
+        <h3><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/ART/5605a7fc5dc15">School Closings</a></h3>
+                <p> 
+	 
+		 
+			 
+			  School Closings  
+			 
+		 
+		 
+			     
+		 
+		 
+			 
+			  Sometimes, poor weather or other emergencies can cause ISD 4078 to . . . </p>
+                  <p class="chFooter">
+                          <span class="publishDate noFeedback">Sep 25, 2015</span>                      </p>
+              </div>
+    </div>
+      <div class="chSlide">
+            <div class="chText">
+        <h3><a href="http://www.mninternationalmiddleschool.org/vnews/display.v/ART/55ef033e6a56c">Vision & Mission</a></h3>
+                <p>     VISION     
+
+   Minnesota International Middle School embraces all students and values the skills, knowledge and creativity each student . . . </p>
+              </div>
+    </div>
+  </div>
+</div><div id="tb_calendar" class="sidePanel">  </div></div><script type="text/javascript">
+(function($){
+  // Hide the tabs that don't have any content
+  // Check for vButtons
+  if ($('#tb_quicklinks ul').length == 0) $('#sideTabs ul.tabsNav a[href$="quicklinks"]').parent().addClass('hidden');
+  // Check for calendar month/list
+  if ($('#tb_calendar div').length == 0) $('#sideTabs ul.tabsNav a[href$="calendar"]').parent().addClass('hidden');
+  // Check for vpoll
+  if ($('#tb_poll div').length == 0) $('#sideTabs ul.tabsNav a[href$="poll"]').parent().addClass('hidden');
+
+  // Add "first" and "last" classes
+  $('#sideTabs ul.tabsNav').find('li:visible:first').addClass('first').end().find('li:visible:last').addClass('last');
+
+  // If all tabs are hidden - no content - hide the ul, too
+  if ($('#sideTabs ul.tabsNav li:visible').length == 0) $('#sideTabs ul.tabsNav').css('display', 'none');
+
+  $(function() {
+    // sideTabs vars
+    var $links = $('#sideTabs .tabsNav a:visible'),
+      panelIds = $links.map(function() { return this.hash; }).get().join(","),
+      $panels = $(panelIds),
+      $panelWrapper = $panels.first().parent(),
+      tabDelay = 500,
+      tabDisableEvent = false;
+    
+    // slider vars
+    var $slides = $('#chSlider .chSlide'),
+      slideCount = $slides.length,
+      slideDelay = 500,
+      slideDisableEvent = false,
+      currIndex = 0,
+      intervalID = 0,
+      slideInterval = 7000,
+      $navLinks = '';
+
+    // sideTabs -------------------------------------------
+    $panels.css('display', 'none').first().fadeIn();
+    $links.first().addClass('selected');
+    
+    $links.click(function() {
+      var link = this, $link = $(this);
+
+      // Ignore if already visible
+      if ($link.is('.selected')) return false;
+
+      // Don't want multiple clicks on different "tabs" to screw things up - process one click at a time
+      if (tabDisableEvent) return false;
+      tabDisableEvent = true;
+      
+      // Clear any height that may have been set by the CH Slider and stop the timer
+      $panelWrapper.css('height', '');
+      clearInterval(intervalID);
+      
+      // Get the ID of the panel matching this ling
+      var panelID = $links.filter('.selected').attr('href');
+            
+      $links.removeClass('selected');
+      $link.addClass('selected');
+      
+      $(panelID).children('div').stop().fadeOut(tabDelay);
+      
+      $(panelID).stop().slideUp(tabDelay, function() {
+        $(this).children('div').show();
+        $(link.hash).slideDown(tabDelay, function() {
+          // If the control nav for the Current Highlights slider is visible, then we
+          // can assume that the highlights tab is active and we can restart the slider timer.
+          if ($navLinks.length && $navLinks.is(':visible')) intervalID = setTimeout(timerDisplaySlide, slideInterval);
+          
+          tabDisableEvent = false;
+        });
+      });
+      
+      return false;
+    });
+
+    // Current Highlights Slider --------------------------
+    $slides.css('display', 'none').first().fadeIn();
+
+    // If there isn't 2 or more articles in Current Highlights, we don't need a slider, so leave
+    if (slideCount <= 1) {
+      // Move the single slide up to occupy some of the gap left by the non-existent navigation control.
+      $('#chSlider').css('margin-top', '15px');
+      return false;
+    }
+    
+    // Create the HTML for the navigation control
+    var $controlNav = $('<div class="chSlider-controlNav">').appendTo('#chSlider');
+    for (var i=0; i < slideCount; i++) {
+      if (i == 0) {
+        $controlNav.append('<a rel="' + i + '" class="active">' + (i + 1) + '<\/a>');
+      } else {
+        $controlNav.append('<a rel="' + i + '">' + (i + 1) + '<\/a>');
+      }
+    }
+
+    // Setup the event handler for the navigation control
+    $navLinks = $('#chSlider .chSlider-controlNav a');
+    $navLinks.click(clickDisplaySlide);
+
+    function timerDisplaySlide() {
+      // Stop the timer if the slider isn't visible - another "tab" is active
+      if (!$navLinks.is(':visible')) return false;
+      
+      currIndex++;
+      if (currIndex >= slideCount) currIndex = 0;
+
+      // Get index for the currently visible slide
+      var oldIndex = $navLinks.filter('.active').attr('rel');
+
+      // Change the class that controls the appearance of the "active" bullet
+      $navLinks.removeClass('active');
+      $navLinks.eq(currIndex).addClass('active');
+
+      var $newSlide = $slides.eq(currIndex);
+
+      // If the new slide is taller than the container animate it
+      if ($newSlide.height() > $panelWrapper.height()) {
+        $panelWrapper.animate({'height': $newSlide.height()}, 'fast');
+      } else {
+        $panelWrapper.css('height', '');
+      }
+
+      $newSlide.css('position', 'absolute');
+      $slides.eq(oldIndex).stop().fadeOut(slideDelay);
+      $newSlide.stop().fadeIn(slideDelay, function() {
+        $(this).css('position', 'static');
+        intervalID = setTimeout(timerDisplaySlide, slideInterval);  
+      });
+    }
+    
+    function clickDisplaySlide() {
+      var $navLink = $(this);
+      
+      // Ignore if already visible
+      if ($navLink.is('.active')) return false;
+
+      // Don't want multiple clicks on different "bullets" to screw things up - process one click at a time
+      if (slideDisableEvent) return false;
+      slideDisableEvent = true;
+
+      // Turn off the automated slider timer once we know we're actually going to do something
+      clearInterval(intervalID);
+      
+      // Get indexes for the old and new
+      var oldIndex = $navLinks.filter('.active').attr('rel');
+      var newIndex = $navLink.attr('rel');
+      
+      // Set the slider timer current index to the one just clicked
+      currIndex = newIndex;
+      
+      // Change the class that controls the appearance of the "active" bullet
+      $navLinks.removeClass('active');
+      $navLink.addClass('active');
+
+      var $newSlide = $slides.eq(newIndex);
+
+      // If the new slide is taller than the container animate it
+      if ($newSlide.height() > $panelWrapper.height()) {
+        $panelWrapper.animate({'height': $newSlide.height()}, 'fast');
+      } else {
+        $panelWrapper.css('height', '');
+      }
+
+      $newSlide.css('position', 'absolute');
+      $slides.eq(oldIndex).stop().fadeOut(slideDelay);
+      $newSlide.stop().fadeIn(slideDelay, function() {
+        $(this).css('position', 'static');
+        // Restart the slider timer
+        intervalID = setTimeout(timerDisplaySlide, slideInterval);
+        slideDisableEvent = false;
+      });
+    }
+    
+    intervalID = setTimeout(timerDisplaySlide, slideInterval);
+
+  });
+})(jQuery);
+</script>        </div>
+      </div>
+    
+    <div id="socialMediaBar">
+ 
+</div>
+  </div>
+
+      
+  
+</div></div></div></div>
+
+<div id="ft"><div id="ft1"><div id="ft2"><div id="ft3">
+  <div id="ftRow1"><div id="ftRow1-1"><div id="ftRow1-2"><div id="ftRow1-3" class="clearfix">
+    <div id="schoolAddress"><p class="addressLine"><span class="first">Minnesota International Middle School</span><span class="last">277 12th Ave North</span></p><p class="addressLine"><span class="first">Minneapolis, MN &nbsp;55401</span><span class="last">612-465-8465 </span></p></div>          
+
+
+<div id="vlist">
+
+    <form method="post" action="http://www.mninternationalmiddleschool.org/vnotifier/vlistproc.v">
+    <p>Sign up for the News Update.</p>
+    <div>
+      <label for="email" class="sr-only">(enter email address)</label>
+      <input type="text" size="10" class="textInput" id="email" name="email" value="" placeholder="(enter email address)" />
+      <input type="image" src="http://www.mninternationalmiddleschool.org/vimages/L10/vlistGoButton.png" alt="Go" id="goButtonEmail" name="submit" />
+      <input type="hidden" name="site_url" value="www.mninternationalmiddleschool.socs.net//vnews/display.v?page=vlist_thankyou" />
+      <input type="hidden" name="listdata[]" value="mims:district@lists.mninternationalmiddleschool.org" />
+    </div>
+  </form>
+  <ul>
+    <li><a href="http://www.mninternationalmiddleschool.org/vnews/display.v?page=vlist_signup">more info</a></li>
+  </ul>
+  
+    
+  
+<script type="text/javascript">var socsSignedIn = 0;</script>
+<script type="text/javascript">
+  (function($){
+    $(function() {
+      if (socsSignedIn) {
+        $('<li><a href="http://www.mninternationalmiddleschool.org/vcalendar/?FROMPAGE=Nav_Signout" title="Signed in as ' + socsUserFullName + '">Sign Out<\/a><\/li>').appendTo('#vlist ul');
+      } else {
+        $('<li><a href="http://www.mninternationalmiddleschool.org/vcalendar/?FROMPAGE=Nav_Signin">Sign In<\/a><\/li>').appendTo('#vlist ul');
+      }
+    });
+  })(jQuery);
+</script>
+</div>
+
+<script type="text/javascript">
+(function($){
+  $(function() {
+
+    // Is the "Secure Login" link in the ul?
+    var $links = $('#vlist li a');
+    var x = $.grep($links, function(n, i) {
+      return ($(n).text().toLowerCase() == 'login' || $(n).text().toLowerCase() == 'logout');
+    });
+    // If yes, add a class that will tweak the display
+    if (x.length) {
+      // Is the "More Info" link in the ul?
+      var y = $.grep($links, function(n, i) {
+        return ($(n).text().toLowerCase() == 'more info');
+      });
+      if (y.length) {
+        // Single list signup with the secure login
+        $('#vlist').addClass('secureLoginSingle');
+      } else {
+        // Multiple lists signup with the secure login
+        $('#vlist').addClass('secureLoginMulti');
+      }
+    }
+
+  });
+})(jQuery);
+</script>
+      </div></div></div></div>
+  <div id="ftRow2"><div id="ftRow2-1"><div id="ftRow2-2"><div id="ftRow2-3">
+    <div class="clearfix">
+      <p id="copyRight">
+  <span class="first"><a href="http://socs.fes.org" target="_blank" title="SOCS-Simplified Online Communication System  (socs03.fes.org)"><img
+    src="http://socshelp.socs.net/sharedimages/socs_banner_white.png" alt="SOCS-Simplified Online Communication System  (socs03.fes.org)" /></a>
+  </span>
+  <span>&copy; 2017 Minnesota International Middle School</span>
+  <span><a href="http://socs.fes.org/vnews/display.v?page=accessibility_statement" target="_blank" accesskey="0">Accessibility</a></span>
+  <span><a href="http://socs.fes.org/vnews/display.v?page=privacy_pledge" target="_blank">Privacy Pledge</a></span>
+   
+  <span class="last"><a class="mobileSite" title="Switch to the mobile template" href="http://www.mninternationalmiddleschool.org/?template=m">Mobile</a></span>
+</p>
+<script type="text/javascript">
+  ;(function($) {
+    var href = window.location.href;
+    if (href.indexOf('?') === -1) {
+      href += '?template=m';
+    } else {
+      href += '&template=m';
+    }
+    $('#copyRight .mobileSite').attr('href', href).click(function() {
+      // Reset the session cookie to redirect to mobile.
+      $.cookie('socs_MobileSwitch', 'y', { path: '/' });
+    });
+  })(jQuery);
+</script>      <div class="translate">
+  <form method="post" action="http://www.mninternationalmiddleschool.org/vnews/display.v?TARGET=translate">
+    <p><a href="https://support.google.com/translate">Translate this Page</a></p>
+    <p>
+      <label for="language" class="sr-only">Languages</label>
+      <select name="language" id="language">
+        <optgroup label="Common">
+  <option value="es" selected="selected">Spanish</option>
+  <option value="de">German</option>
+  <option value="fr">French</option>
+  <option value="it">Italian</option>
+  <option value="pt">Portuguese</option>
+  <option value="ko">Korean</option>
+  <option value="zh-CN">Chinese</option>
+  <option value="ja">Japanese</option>
+</optgroup>
+<optgroup label="A-H">
+  <option value="af">Afrikaans</option>
+  <option value="sq">Albanian</option>
+  <option value="ar">Arabic</option>
+  <option value="hy">Armenian</option>
+  <option value="az">Azerbaijani</option>
+  <option value="eu">Basque</option>
+  <option value="be">Belarusian</option>
+  <option value="bn">Bengali</option>
+  <option value="bg">Bulgarian</option>
+  <option value="ca">Catalan</option>
+  <option value="hr">Croatian</option>
+  <option value="cs">Czech</option>
+  <option value="da">Danish</option>
+  <option value="nl">Dutch</option>
+  <option value="eo">Esperanto</option>
+  <option value="et">Estonian</option>
+  <option value="tl">Filipino</option>
+  <option value="fi">Finnish</option>
+  <option value="gl">Galician</option>
+  <option value="ka">Georgian</option>
+  <option value="el">Greek</option>
+  <option value="gu">Gujarati</option>
+  <option value="ht">Haitian Creole</option>
+  <option value="iw">Hebrew</option>
+  <option value="hi">Hindi</option>
+  <option value="hu">Hungarian</option>
+</optgroup>
+<optgroup label="I-Z">
+  <option value="is">Icelandic</option>
+  <option value="id">Indonesian</option>
+  <option value="ga">Irish</option>
+  <option value="kn">Kannada</option>
+  <option value="la">Latin</option>
+  <option value="lv">Latvian</option>
+  <option value="lt">Lithuanian</option>
+  <option value="mk">Macedonian</option>
+  <option value="ms">Malay</option>
+  <option value="mt">Maltese</option>
+  <option value="no">Norwegian</option>
+  <option value="fa">Persian</option>
+  <option value="pl">Polish</option>
+  <option value="ro">Romanian</option>
+  <option value="ru">Russian</option>
+  <option value="sr">Serbian</option>
+  <option value="sk">Slovak</option>
+  <option value="sl">Slovenian</option>
+  <option value="sw">Swahili</option>
+  <option value="sv">Swedish</option>
+  <option value="ta">Tamil</option>
+  <option value="te">Telugu</option>
+  <option value="th">Thai</option>
+  <option value="tr">Turkish</option>
+  <option value="uk">Ukrainian</option>
+  <option value="ur">Urdu</option>
+  <option value="vi">Vietnamese</option>
+  <option value="cy">Welsh</option>
+  <option value="yi">Yiddish</option>
+</optgroup>      </select>
+      <input type="submit" value="Go" />
+    </p>
+    <script type="text/javascript">
+      document.write('<input type="hidden" name="href" value="' + escape(location.href) + '" />');
+    </script>
+  </form>
+</div>
+    </div>
+          <div id="bottomBanner" class="clearfix">
+      
+    </div>
+    </div></div></div></div>
+</div></div></div></div>
+
+<p class="hiddenNav"><a href="http://www.mninternationalmiddleschool.org/#top">Back To Top</a></p>
+
+ </body>
+</html>

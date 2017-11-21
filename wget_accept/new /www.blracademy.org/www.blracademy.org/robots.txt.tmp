@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /calendar-2/action~posterboard/
+Disallow: /calendar-2/action~agenda/
+Disallow: /calendar-2/action~oneday/
+Disallow: /calendar-2/action~month/
+Disallow: /calendar-2/action~week/
+Disallow: /calendar-2/action~stream/
+Disallow: /cal-test/action~posterboard/
+Disallow: /cal-test/action~agenda/
+Disallow: /cal-test/action~oneday/
+Disallow: /cal-test/action~month/
+Disallow: /cal-test/action~week/
+Disallow: /cal-test/action~stream/

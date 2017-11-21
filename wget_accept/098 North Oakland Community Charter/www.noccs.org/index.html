@@ -1,0 +1,315 @@
+<?php header('Content-Language: en'); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>North Oakland Community Charter School</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<script type="text/javascript" src="http://www.noccs.org/html/noccs_menu.js"></script>
+<link rel=stylesheet href="http://www.noccs.org/html/noccs_style.css" type="text/css" media=screen></link>
+<link rel=stylesheet href="http://www.noccs.org/html/noccs_printstyle.css" type="text/css" media=print></link>
+
+<style type="text/css">
+<!-- 
+#menu {
+	width:700px;
+	position: absolute;
+	top: 104px;
+	left: 160px;
+	z-index:100;
+	visibility: visible;
+}
+#bottom_menu {
+	position:absolute;
+	width:706px;
+	height:21px;
+	z-index:2;
+	left: 164px;
+	top: 25px;
+	bottom: 0px;
+}
+#bottom_menu_border {
+	position: absolute;
+	width: 910px;
+	height: 70px;
+	z-index: 1;
+	left: -4px;
+	top: 1040px;
+	background-color: #ffffff;
+	visibility: visible;
+}
+#family_connection {
+	position:absolute;
+	width:213px;
+	height:29px;
+	z-index:100;
+	left: 697px;
+	text-align: center;
+	padding-top: 6px;
+	background-color: #7a9c00;
+}
+#google_translate_element {
+	position:absolute;
+	width:216px;
+	height:52px;
+	z-index:100;
+	left: 694px;
+	top: 40px;
+	text-align: center;
+	padding-top: 6px;
+	background-color: #7a9c00;
+}
+
+
+@media print { #family_connection {z-index: 49;}}
+
+#Layer1 {
+	position:absolute;
+	width:832px;
+	height:138px;
+	z-index:50;
+	top: 0px;
+}
+#Layer2 {
+	position:absolute;
+	width:365px;
+	height:181px;
+	z-index:50;
+	top: 134px;
+}
+#Layer3 {
+	position: absolute;
+	width: 399px;
+	height: 650px;
+	z-index: 101;
+	top: 387px;
+	background-color: #fff4d5;
+	left: 0px;
+}
+#Layer4 {
+	position:absolute;
+	width:508px;
+	height:161px;
+	z-index:1;
+	top: 134px;
+	left: 400px;
+	background-color: #ffffff;
+}
+#Layer5 {
+	position: absolute;
+	width: 509px;
+	height: 740px;
+	z-index: 2;
+	top: 297px;
+	left: 400px;
+	background-color: #f47221;
+}
+
+#Layer6 {
+	position:absolute;
+	width:225px;
+	height:300px;
+	z-index:2;
+	top: 435px;
+	left:80px;
+	background-color: #ffffff;
+}
+
+#Layer7 {
+	float:left;
+	width:90px;
+	height:78px;
+	z-index:101;
+	top: 443px;
+	background-color: #fff4d5;
+	left: 12px;
+
+}
+
+#Layer8 {
+	position:absolute;
+	width:260px;
+	height:80px;
+	z-index:101;
+	background-color: #fff4d5;
+	left: 70px;
+	top: 310px;
+}
+-->
+</style>
+</head>
+
+<body class="home">	<!-- set id to main menu category -->	
+
+<div id="wrapper">
+	<!-- ****** start Top Menu ********* -->
+	<div id="menu">
+		<dl>
+			<dt onmouseover="javascript:show_menu('nomenu');"><a id="homenav" href="index.html">home</a></dt>
+			<dd id="nomenu" onmouseover="javascript:show_menu('nomenu');" onmouseout="javascript:show_menu('');"></dd>
+		</dl>
+	
+		<dl>			
+			<dt onmouseover="javascript:show_menu('smenu1');"><a id="admissionsnav" href="html/admit_overview.html">admissions</a></dt>
+			<dd id="smenu1" onmouseover="javascript:show_menu('smenu1');" onmouseout="javascript:show_menu('');">
+				<ul>
+					<li><a href="html/admit_overview.html">Overview</a></li>
+					<li><a href="html/admit_tours.html">Tours</a></li>
+				</ul>
+			</dd>
+		</dl>
+	
+		<dl>	
+			<dt onmouseover="javascript:show_menu('smenu2');"><a id="aboutnav" href="html/about_general.html">about</a></dt>
+			<dd id="smenu2" onmouseover="javascript:show_menu('smenu2');" onmouseout="javascript:show_menu('');">
+				<ul>
+					<li><a href="html/about_general.html">General Information</a></li>
+					<li><a href="html/about_mission.html">Mission</a></li>
+					<li><a href="html/about_history.html">History</a></li>
+					<li><a href="html/about_staff.html">Staff</a></li>
+					<li><a href="html/about_board.html">Board of Directors</a></li>
+					<li><a href="html/about_FAQ.html">FAQ</a></li>
+					<li><a href="html/about_jobs.html">Jobs</a></li>
+				</ul>
+			</dd>
+		</dl>
+	
+		<dl>	
+			<dt onmouseover="javascript:show_menu('smenu3');"><a id="curriculumnav" href="html/curric_philos.html">curriculum</a></dt>
+			<dd id="smenu3" onmouseover="javascript:show_menu('smenu3');" onmouseout="javascript:show_menu('');">
+				<ul>
+					<li><a href="html/curric_philos.html">Educational Philosophy</a></li>
+					<li><a href="html/curric_prog.html">Educational Programs</a></li>
+					<li><a href="html/curric_core.html">Core Curriculum</a></li>
+					<li><a href="html/curric_assess.html">Student Assessment</a></li>
+					<li><a href="html/curric_devel.html">Professional Development</a></li>
+				</ul>
+			</dd>
+		</dl>
+	
+		<dl>	
+			<dt onmouseover="javascript:show_menu('smenu4');"><a id="communitynav" href="html/commun_family.html">community</a></dt>
+			<dd id="smenu4" onmouseover="javascript:show_menu('smenu4');" onmouseout="javascript:show_menu('');">
+				<ul>
+					<li><a href="html/commun_family.html">Family Involvement</a></li>
+					<li><a href="html/commun_volunteer.html">Volunteering at NOCCS</a></li>
+					<li><a href="html/commun_partner.html">Community Partners</a></li>
+				</ul>
+			</dd>
+		</dl>
+	
+		<dl>	
+			<dt onmouseover="javascript:show_menu('smenu5');"><a id="givingnav" href="html/giving_donate.html">giving</a></dt>
+			<dd id="smenu5" onmouseover="javascript:show_menu('smenu5');" onmouseout="javascript:show_menu('');">
+				<ul>
+					<li><a href="html/giving_donate.html">Donate to NOCCS</a></li>
+					<li><a href="html/giving_fundraise.html">Fundraising Events</a></li>
+				</ul>
+			</dd>
+		</dl>
+		<dl>	
+			<dt onmouseover="javascript:show_menu('smenu6');"><a id="afterschoolnav" href="html/EDP.html">extended day</a></dt>
+		</dl>
+	</div>
+	<div class="noccs_family_conn_text" id="family_connection"><a href="http://noccs-familyconnections.weebly.com">FAMILY CONNECTION</a></div>
+    
+	<!-- Google Translate code -->
+  <div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,bn,de,en,es,fr,hi,it,ja,ko,pa,pt,ru,ur,zh-CN,zh-TW'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    
+  <!-- ****** end Top Menu ********* -->
+
+	<div id="Layer1"><img src="http://www.noccs.org/images/header_nomenu.gif" alt="" width="910" height="134" /></div>
+  <div id="Layer2"><img src="http://www.noccs.org/images/noccs_kids1.jpg" alt="NOCCS kids" width="400" height="251" /></div>
+  <div id="Layer3">
+  		<p class="big_info" align="center">What's New at NOCCS</p>
+
+<!--        
+<p class="noccs_bodycopy" align="center"><strong>We are looking for great educators to join the NOCCS team for 2015-16.</strong><br /><br />
+See our <a href="html/about_jobs.html">Jobs Page.</a>
+<br /><br /><hr />
+
+
+<p class="noccs_bodycopy" align="center"><a href="
+http://www.noccs.org/auction" target="_blank"><img src="images/auction-banner_sml.jpg" width="400" height="219" alt="NOCCS Auction" /></a><br /><br /></p>
+
+<hr />
+-->
+
+<p class="noccs_bodycopy" align="center">
+
+<a href="
+https://secure.lglforms.com/form_engine/s/Gw8z46wQyTLBaAY2qrjiSA" target="_blank"><img src="http://www.noccs.org/images/DonateButton.gif" width="300" height="236" alt="Donate to NOCCS" /></a><br /><br /></p>
+
+<hr />
+
+
+<!--
+    <br />
+    <p class="noccs_bodycopy" align="center"><a href="
+https://secure.lglforms.com/form_engine/s/Gw8z46wQyTLBaAY2qrjiSA" target="_blank">
+    <img src="images/Donate-to-Walkathon.gif" width="300" height="194" alt=""/></a><br /></p>
+    <hr />
+
+
+        <div id="Layer7"><img src="images/BO-PP2013-1.jpg" alt="" width="80" height="78" /></div><div id="Layer8"><p class="noccs_bodycopy">
+  NOCCS was named the <a href="http://www.parentspress.com/Parents-Press/July-2013/The-Best-of-2013/
+" target="_blank">best charter K-5 and 6-8 in the East Bay</a> for 2013 by Parents Press</p></div><br /><br /><hr />
+-->
+
+
+
+<p class="noccs_bodycopy" align="center">Interested in enrolling your child at NOCCS? </p>
+<p class="noccs_bodycopy" align="center"><strong>We now accept applications online only.</strong></p>
+<p class="noccs_bodycopy" align="center">See our <a href="html/admit_overview.html">Admissions Page.</a></p>
+
+<br /><hr />
+        
+        <p class="noccs_bodycopy" align="center">
+<!--         <a href="download/North Oakland Community Charter School 2012 - 2013 Calendar Overview1.pdf" target="_blank">2012-2013 Calendar Overview</a><br /> -->
+      <br />
+      <a href="http://www.google.com/calendar/embed?src=noccs.org_4umoo6dqq5jqltvmqoh0m6g17g@group.calendar.google.com&amp;ctz=America/Los_Angeles" target="_blank">NOCCS School Calendar</a> (updated online)</p>
+        <p class="noccs_bodycopy" align="center">&nbsp;</p>
+<!--        <p class="noccs_bodycopy" align="center"><a href="download/2015-16_NOCCS_School_Calendar_Summary.pdf" target="_blank">2015-16 School Year Summary&nbsp;</a> (one page pdf)</p>
+        <p class="noccs_bodycopy" align="center">&nbsp;</p> -->
+        <p class="noccs_bodycopy" align="center"><a href="http://www.noccs.org/download/2016-17_NOCCS_School_Calendar_Summary.pdf" target="_blank">2016-17 School Year Summary&nbsp;</a> (one page pdf)</p>
+<br /><br /><hr />
+        
+        <p class="noccs_bodycopy" align="center"><br /><br />
+<a href="http://www.youtube.com/noccsrocks#p/a/f/0/36wGmv_57VQ" target="_blank">NOCCS Videos on YouTube</a><br /><br />
+                
+</div>
+<div id="Layer4">
+    <p class="welcome_text">Welcome to<br />the North Oakland<br />Community Charter School</p>
+  </div>
+  <div id="Layer5">
+	<p class="small_info">The North Oakland Community Charter School (NOCCS) is a public K-8 school dedicated to helping children to become thoughtful, informed, and inquisitive citizens.  <br /><br />NOCCS is a vibrant, diverse learning community driven by respect for each child&rsquo;s unique intelligence and history.  Our school&rsquo;s dynamic and challenging educational approach deepens the intellectual and social capacities of each child that we serve. <br /><br />NOCCS is a public school open to all school-aged children residing in California. <br />
+		  <br />
+	  <br />
+	North Oakland Community Charter School<br />
+	  1000 42nd Street<br />
+	  Oakland, CA 94608<br />
+	  (510) 655.0540
+</p>
+  </div>
+
+	<!-- ****** start Bottom Menu ********* -->
+	<div id="bottom_menu_border">
+	<div id="bottom_menu">
+		<dl><dt><a id="homenav" href="index.html">home</a></dt></dl>
+		<dl><dt><a id="admissionsnav" href="html/admit_overview.html">admissions</a></dt></dl>
+		<dl><dt><a id="aboutnav" href="html/about_general.html">about</a></dt></dl>
+		<dl><dt><a id="curriculumnav" href="html/curric_philos.html">curriculum</a></dt></dl>
+		<dl><dt><a id="communitynav" href="html/commun_family.html">community</a></dt></dl>
+		<dl><dt><a id="givingnav" href="html/giving_donate.html">giving</a></dt></dl>
+		<dl><dt><a id="afterschoolnav" href="html/EDP.html">extended day</a></dt></dl>
+	</div>
+</div>
+	<!-- ****** end Bottom Menu ********* -->
+</div>
+</body>
+</html>
