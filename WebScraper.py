@@ -132,7 +132,6 @@ class Link(object):
     to), a fallback url, and an index value (used for JavaScript Links)"""
 
     def __init__(self, hrefAttribute, callingURL, matcher, index):
-        print(hrefAttribute)
         self.type = ""
         self.hrefAttribute = ""
         self.fallbackURL = callingURL
