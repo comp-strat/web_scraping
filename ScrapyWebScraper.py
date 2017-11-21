@@ -1,30 +1,33 @@
 import csv
-import datetime
+# import datetime
 import os
 import random
 import string
 
 import scrapy
 
-'Driver'
-from selenium import webdriver
-from selenium.webdriver.common.action_chains import ActionChains
-
-'Driver Exceptions'
-from selenium.common.exceptions import *
-
-'Parser'
+# Parser
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
+# Driver
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+
+# Driver Exceptions
+from selenium.common.exceptions import *
+
+# Display for headless mode
+from pyvirtualdisplay import Display
 
 driverPath = 'Driver/chromedriver'
 
 inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
-                "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
-                "span", "sub", "sup", "li"]
+               "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
+               "span", "sub", "sup", "li"]
 
-def readCSV(filename) -> list:
+
+def read_csv(filename) -> list:
     schools = []
     with open(filename, newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
@@ -38,16 +41,27 @@ def readCSV(filename) -> list:
     return schools
 
 
-class School(object):
-    """Class that holds schools. Each school is comprised of an ID number, Name, Geographical Address and a url that goes to the schools hompage. The matcher is used to
-    filer out links that go to places outside the schools main domain, like facebook or instagram. The links attribute is an array used to store all of the links on the homepage using
-    the Links class"""
+def prep_driver():
+    display = Display(visible=0, size=(1920, 1080))
+    display.start()
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    options.add_argument('window-size=1920x1080')
+    driver = webdriver.Chrome(chrome_options=options)
+    return driver
 
-    def __init__(self, id, name, address, mainURL):
-        self.id = id
+
+class School(object):
+    """Class that holds schools. Each school is comprised of an ID number, Name, Geographical Address and a url that
+    goes to the schools hompage. The matcher is used to filer out links that go to places outside the schools main
+    domain, like facebook or instagram. The links attribute is an array used to store all of the links on the homepage
+    using the Links class"""
+
+    def __init__(self, school_id, name, address, main_url):
+        self.id = school_id
         self.name = name
         self.address = address
-        self.mainURL = mainURL
+        self.mainURL = main_url
         self.links = []
         self.matcher = self.mainURL.split(".")[1]
         self.filePath = "results/" + self.name
@@ -58,8 +72,8 @@ class School(object):
         self.scriptLinksClicked = 0
         self.linksClicked = 0
 
-    def gatherLinks(self) -> None:
-        driver = webdriver.Chrome(executable_path=driverPath)
+    def gather_links(self) -> None:
+        driver = prep_driver()
         driver.get(self.mainURL)
         elems = driver.find_elements_by_xpath("//a[@href]")
 
@@ -68,15 +82,13 @@ class School(object):
                 link = Link(elem.get_attribute("href"), self.mainURL, self.matcher, elems.index(elem))
                 self.links.append(link)
                 print(str(link))
-            except ValueError:
+            except LinkException:
                 print(elem.get_attribute("href") + " was not added as it did not match the main url")
-            # except LinkException:
-                # print("Got a link exception")
         driver.close()
         self.totalNumberofLinks += len(self.links)
 
-    def clickLinks(self):
-        if not checkPathExists(self.filePath):
+    def click_links(self):
+        if not check_path_exists(self.filePath):
             os.makedirs(self.filePath)
         for link in self.links:
             try:
@@ -90,15 +102,15 @@ class School(object):
                     self.htmlLinksClicked += 1
                 elif link.type == "JavaScript":
                     self.scriptLinksClicked += 1
-            except ValueError:
+            except LinkException:
                 print("Could not click link:" + str(link))
-        scriptCount = 0
+        script_count = 0
         for link in self.links:
             if link.type == "html":
-                link.writeFile(self.filePath, 0)
+                link.write_file(self.filePath, 0)
             elif link.type == "JavaScript" and link.text != "":
-                link.writeFile(self.filePath, scriptCount)
-                scriptCount += 1
+                link.write_file(self.filePath, script_count)
+                script_count += 1
 
     def __str__(self) -> str:
         s = ""
@@ -112,7 +124,7 @@ class School(object):
 
 
 class LinkException(Exception):
-    "Only called by link class. Add to switch statement as necessary"
+    """Only called by link class. Add to switch statement as necessary"""
 
     def __init__(self, switch=-1):
         if switch == 0:
@@ -122,43 +134,48 @@ class LinkException(Exception):
         elif switch == 2:
             self.value = "ERROR: Link is JavaScript based but an index value was not set"
         elif switch == -1:
-            self.value = "No value was specified in LinkException Switch. Make sure you are properly calling this expception"
+            self.value = "No value was specified in LinkException Switch. " \
+                         "Make sure you are properly calling this exception"
 
     def __str__(self) -> str:
         return str(self.value)
 
 
 class Link(object):
-    """Class that stores all of the information regarding a link. Each link has a type (either html of JavaScript), the href attribute (what the link redirects
+    """Class that stores all of the information regarding a link. Each link has a type (either html of JavaScript),
+    the href attribute (what the link redirects
     to), a fallback url, and an index value (used for JavaScript Links)"""
 
-    def __init__(self, hrefAttribute, callingURL, matcher, index):
+    def __init__(self, href_attribute, calling_url, matcher, index):
         self.type = ""
         self.hrefAttribute = ""
-        self.fallbackURL = callingURL
+        self.fallbackURL = calling_url
         self.index = None
         self.matcher = matcher
         self.index = 0
-        if (hrefAttribute.startswith("http") and hrefAttribute.split(".")[1] == matcher and len(hrefAttribute) > len(
-                callingURL)):
+        if (href_attribute.startswith("http") and href_attribute.split(".")[1] == matcher and len(href_attribute) > len(
+                calling_url)):
             self.type = "html"
-            self.hrefAttribute = hrefAttribute
-        elif (hrefAttribute.startswith("javascript")):
+            self.hrefAttribute = href_attribute
+        elif href_attribute.startswith("javascript"):
             self.type = "JavaScript"
-            self.hrefAttribute = hrefAttribute
+            self.hrefAttribute = href_attribute
             self.index = index
         else:
             raise LinkException(0)
-        self.gatherName(delimiter="-")
+        self.gather_name(delimiter="-")
+        self.text = ""
+        self.name = ""
 
-    def tag_visible(self, element) -> bool:
+    @staticmethod
+    def tag_visible(element) -> bool:
         if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]']:
             return False
         if isinstance(element, Comment):
             return False
         return True
 
-    def gatherText(self, driver) -> None:
+    def gather_text(self, driver) -> None:
         page_source_replaced = driver.page_source
         # Remove inline tags
         for it in inline_tags:
@@ -168,16 +185,18 @@ class Link(object):
         # Create random string for tag delimiter
         random_string = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=75))
         soup = BeautifulSoup(page_source_replaced, 'lxml')
-        [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])] # remove non-visible tags
+
+        # remove non-visible tags
+        [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])]
         visible_text = soup.getText(random_string).replace("\n", "")
         visible_text = visible_text.split(random_string)
         self.text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
 
     def click(self) -> bool:
-        driver = webdriver.Chrome(driverPath)
+        driver = prep_driver()
         if self.type == "html":
             driver.get(self.hrefAttribute)
-            self.gatherText(driver)
+            self.gather_text(driver)
             driver.close()
             return True
         elif self.type == "JavaScript":
@@ -186,7 +205,7 @@ class Link(object):
             driver.get(self.fallbackURL)
             try:
                 driver.find_elements_by_xpath("//a[@href]")[self.index].click()
-                self.gatherText(driver)
+                self.gather_text(driver)
             except (WebDriverException, ElementNotVisibleException, ElementNotInteractableException,
                     ElementNotSelectableException):
                 link = driver.find_elements_by_xpath("//a[@href]")[self.index]
@@ -194,7 +213,7 @@ class Link(object):
                 move.perform()
                 try:
                     link.click()
-                    self.gatherText(driver)
+                    self.gather_text(driver)
                     driver.close()
                 except (WebDriverException, ElementNotVisibleException, ElementNotInteractableException,
                         ElementNotSelectableException):
@@ -203,25 +222,25 @@ class Link(object):
         else:
             raise LinkException(0)
 
-    def gatherName(self, delimiter=" ") -> None:
+    def gather_name(self, delimiter=" ") -> None:
         if self.type == "html":
-            unfilteredName = self.hrefAttribute[
+            unfiltered_name = self.hrefAttribute[
                              len(self.hrefAttribute) - (len(self.hrefAttribute) - len(self.fallbackURL)):
                              len(self.hrefAttribute)]
-            unfilteredName = unfilteredName.split("/")
+            unfiltered_name = unfiltered_name.split("/")
             self.name = ""
-            if len(unfilteredName) != 1:
-                for i in range(len(unfilteredName)):
-                    self.name += unfilteredName[i] + delimiter
+            if len(unfiltered_name) != 1:
+                for i in range(len(unfiltered_name)):
+                    self.name += unfiltered_name[i] + delimiter
             else:
-                self.name = unfilteredName[0]
+                self.name = unfiltered_name[0]
         elif self.type == "JavaScript":
             self.name = ""
 
-    def writeFile(self, filepath, counter):
-        fileName = self.name
+    def write_file(self, filepath, counter):
+        file_name = self.name
         if self.type == "html":
-            file = open(str(filepath) + "/" + fileName + ".txt", "w")
+            file = open(str(filepath) + "/" + file_name + ".txt", "w")
         elif self.type == "JavaScript":
             file = open(str(filepath) + "/" + "JavaScript Link " + str(counter) + ".txt", "w")
         else:
@@ -247,62 +266,19 @@ def tag_visible(element) -> bool:
     return True
 
 
-def checkPathExists(path):
+def check_path_exists(path):
     if os.path.exists(path):
         return True
     return False
 
 
-if not checkPathExists("results"):
+if not check_path_exists("results"):
     os.mkdir("results")
-if not checkPathExists("diagnostics"):
+if not check_path_exists("diagnostics"):
     os.mkdir("diagnostics")
 
-# schools = readCSV('micro-sample13_coded.csv')
-# numberofLinksClicked = 0
-# totalNumberOfLinks = 0
-# htmlLinks = 0
-# htmlLinksClicked = 0
-# scriptLinks = 0
-# scriptLinksClicked = 0
-# "Time doesn't really account for timezones now, many be an issue later"
-# now = datetime.datetime.now()
-# formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
-# diagnosticsFile = open(formattedTime + ".txt", "w")
-# diagnosticsFile.write("Program was run at " + formattedTime + "\n")
-# i = 0
-# for school in schools:
-#     school.gatherLinks()
-#     school.clickLinks()
-#     totalNumberOfLinks += school.totalNumberofLinks
-#     numberofLinksClicked += school.linksClicked
-#     htmlLinks += school.htmlLinks
-#     htmlLinksClicked += school.htmlLinksClicked
-#     scriptLinks += school.scriptLinks
-#     scriptLinks += school.scriptLinksClicked
-#     diagnosticsFile.write(
-#         "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
-#             school.linksClicked) + " were clicked(" + str(school.linksClicked / school.totalNumberofLinks) + "%)\n")
-#     diagnosticsFile.write(
-#         "There were " + str(school.htmlLinks) + " html links and " + str(
-#             school.htmlLinksClicked) + " were clicked(" + str(school.htmlLinks / school.htmlLinksClicked) +"%)\n"
-#     )
-#     if school.scriptLinksClicked != 0:
-#         diagnosticsFile.write(
-#             "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
-#                 school.scriptLinksClicked) + " were clicked(" + str(school.scriptLinks / school.scriptLinksClicked) + "%)\n"
-#         )
-# diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
-# diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
-# diagnosticsFile.write("% of links clicked:" + str(numberofLinksClicked / totalNumberOfLinks) + "\n")
-# diagnosticsFile.write("Number of HTML Links" + str(htmlLinks) +"\n")
-# diagnosticsFile.write("% of HTML Links Clicked" + str(htmlLinks/htmlLinksClicked) +"\n")
-# diagnosticsFile.write("Number of JavaScript Links" + str(scriptLinks) +"\n")
-# diagnosticsFile.write("% of JavaScript Links Clicked" + str(scriptLinks/scriptLinksClicked) +"\n")
-# diagnosticsFile.close()
 
-
-def gatherText(driver):
+def gather_text(driver):
     page_source_replaced = driver.page_source
     # Remove inline tags
     for it in inline_tags:
@@ -312,29 +288,34 @@ def gatherText(driver):
     # Create random string for tag delimiter
     random_string = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=75))
     soup = BeautifulSoup(page_source_replaced, 'lxml')
-    [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])] # remove non-visible tags
+    [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])]  # remove non-visible tags
     visible_text = soup.getText(random_string).replace("\n", "")
     visible_text = visible_text.split(random_string)
     return "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
 
+
 class SchoolSpider(scrapy.Spider):
     name = "school_scraper"
-    schools = readCSV('micro-sample13_coded.csv')
-    start_urls = [schools[0].mainURL]
-
+    schools = read_csv('micro-sample13_coded.csv')
+    start_urls = [schools[i].mainURL for i in range(10)]
 
     def __init__(self):
+        scrapy.Spider.__init__(self)  # lol I doubt this is necessary, PyCharm
         self.seen = set()
-        schools = readCSV('micro-sample13_coded.csv')
+        schools = read_csv('micro-sample13_coded.csv')
+        # for school in schools:
+        #     school.gather_links()
+        #     school.click_links()
         self.mainURL = schools[0].mainURL
         if self.mainURL[-1] != "/":
             self.mainURL[-1] += "/"
         self.options = webdriver.ChromeOptions()
         self.options.add_argument('headless')
         self.options.add_argument('windows-size=1200x600')
+        self.driver = None
 
     def parse(self, response):
-        self.driver = webdriver.Chrome(chrome_options = self.options)
+        self.driver = prep_driver()
         self.driver.get(response.url)
         
         # Stuff to get name for results file
@@ -349,7 +330,7 @@ class SchoolSpider(scrapy.Spider):
 
         # Write results file
         file = open("test_scrapy_results/" + file_name + ".txt", "w")
-        file_text = gatherText(self.driver)
+        file_text = gather_text(self.driver)
         if len(file_text) > 0:
             file.write(file_text)
         file.close()
@@ -368,5 +349,5 @@ class SchoolSpider(scrapy.Spider):
                 if elem not in self.seen:
                     self.seen.add(elem)
                     yield scrapy.Request(elem, callback=self.parse)
-            except ValueError:
+            except LinkException:
                 print(elem + " was not added as it did not match the main url")
