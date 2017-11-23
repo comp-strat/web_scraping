@@ -276,8 +276,7 @@ if not checkPathExists("results"):
     os.mkdir("results")
 if not checkPathExists("diagnostics"):
     os.mkdir("diagnostics")
-
-schools = readCSV('micro-sample13_coded.csv')
+schools = readCSV("data/micro-sample13_coded.csv")
 numberofLinksClicked = 0
 totalNumberOfLinks = 0
 htmlLinks = 0
