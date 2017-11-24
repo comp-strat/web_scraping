@@ -183,7 +183,7 @@ class Link(object):
             page_source_replaced = page_source_replaced.replace("</" + it + ">", "")
 
         # Create random string for tag delimiter
-        random_string = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=75))
+        random_string = os.urandom(75)
         soup = BeautifulSoup(page_source_replaced, 'lxml')
         [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])] # remove non-visible tags
         visible_text = soup.getText(random_string).replace("\n", "")
