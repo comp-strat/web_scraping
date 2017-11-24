@@ -33,7 +33,6 @@ def readCSV(filename) -> list:
     with open(filename, newline='',encoding="Latin-1") as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         for row in reader:
-
             try:
                 if reader.line_num != 1:
                     schools.append(School(row[0], row[1], row[2], row[4]))
@@ -183,9 +182,10 @@ class Link(object):
             page_source_replaced = page_source_replaced.replace("</" + it + ">", "")
 
         # Create random string for tag delimiter
-        random_string = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=75))
+        random_string = "".join(map(chr, os.urandom(75)))
         soup = BeautifulSoup(page_source_replaced, 'lxml')
-        [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])] # remove non-visible tags
+        # remove non-visible tags
+        [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])]
         visible_text = soup.getText(random_string).replace("\n", "")
         visible_text = visible_text.split(random_string)
         self.text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
@@ -287,7 +287,7 @@ scriptLinksClicked = 0
 now = datetime.datetime.now()
 formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
 diagnosticsFile = open("diagnostics/" + str(formattedTime) + ".txt", "w")
-diagnosticsFile.write("Program was run at " + formattedTime + "\n")
+diagnosticsFile.write("Program was run aprintt " + formattedTime + "\n")
 i = 0
 startTime = datetime.datetime.now()
 for school in schools:
