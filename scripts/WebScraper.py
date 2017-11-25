@@ -86,8 +86,6 @@ class School(object):
             except LinkException:
                 print(elem.get_attribute(
                     "href") + " was not added as it did not match the main url or was not longer than main url")
-                # except LinkException:
-                # print("Got a link exception")
         driver.close()
         self.totalNumberofLinks = len(self.links)
 
@@ -133,7 +131,7 @@ class School(object):
 class LinkException(Exception):
     "Only called by link class. Add to switch statement as necessary"
 
-    def __init__(self, switch=-1):
+    def __init__(self, switch=1):
         if switch == 0:
             self.value = "ERROR: Link type was not html or JavaScript"
         elif switch == 1:
