@@ -14,28 +14,30 @@ from selenium.common.exceptions import *
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
-
 "Display for headless mode"
 from pyvirtualdisplay import Display
+
 "Only use this if running on a non linux machine"
 driverPath = 'Driver/chromedriver'
 
 inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
-                "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
-                "span", "sub", "sup"]
+               "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
+               "span", "sub", "sup"]
 
 
 def readCSV(filename) -> list:
     schools = []
-    with open(filename, newline='',encoding="Latin-1") as csvfile:
+    with open(filename, newline='', encoding="Latin-1") as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         for row in reader:
             try:
                 if reader.line_num != 1:
                     schools.append(School(row[0], row[1], row[2], row[4]))
             except ValueError:
-                print("ERROR: School " + str(row[1]) +" was not scraped as it did not have a URL")
+                print("ERROR: School " + str(row[1]) + " was not scraped as it did not have a URL")
     return schools
+
+
 def prepDriver():
     if platform.startswith("linux"):
         display = Display(visible=0, size=(1920, 1080))
@@ -82,11 +84,13 @@ class School(object):
                 self.links.append(link)
                 print(str(link))
             except LinkException:
-                print(elem.get_attribute("href") + " was not added as it did not match the main url or was not longer than main url")
-            # except LinkException:
+                print(elem.get_attribute(
+                    "href") + " was not added as it did not match the main url or was not longer than main url")
+                # except LinkException:
                 # print("Got a link exception")
         driver.close()
         self.totalNumberofLinks = len(self.links)
+
     def clickLinks(self):
         if not checkPathExists(self.filePath):
             os.makedirs(self.filePath)
@@ -302,16 +306,19 @@ for school in schools:
     scriptLinks += school.scriptLinksClicked
     diagnosticsFile.write(
         "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
-            school.linksClicked) + " were clicked(" + str((school.linksClicked / school.totalNumberofLinks)) * 100 + "%)\n")
+            school.linksClicked) + " were clicked(" + str(
+            (school.linksClicked / school.totalNumberofLinks) * 100) + "%)\n")
     diagnosticsFile.write(
         "There were " + str(school.htmlLinks) + " html links and " + str(
-            school.htmlLinksClicked) + " were clicked(" + str((school.htmlLinks / school.htmlLinksClicked) * 100) +"%)\n"
+            school.htmlLinksClicked) + " were clicked(" + str(
+            (school.htmlLinks / school.htmlLinksClicked) * 100) + "%)\n"
     )
 
     if school.scriptLinks != 0:
         diagnosticsFile.write(
             "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
-                school.scriptLinksClicked) + " were clicked(" + str((school.scriptLinks / school.scriptLinksClicked) * 100) + "%)\n"
+                school.scriptLinksClicked) + " were clicked(" + str(
+                (school.scriptLinks / school.scriptLinksClicked) * 100) + "%)\n"
         )
     diagnosticsFile.write("It took " + str(schoolTimeElapsed) + " to click on the links for this school\n")
 timeElapsed = datetime.datetime.now() - startTime
@@ -319,9 +326,9 @@ timeElapsed = datetime.datetime.now() - startTime
 diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
 diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
 diagnosticsFile.write("% of links clicked:" + str(numberofLinksClicked / totalNumberOfLinks) + "\n")
-diagnosticsFile.write("Number of HTML Links" + str(htmlLinks) +"\n")
-diagnosticsFile.write("% of HTML Links Clicked" + str(htmlLinks/htmlLinksClicked) +"\n")
-diagnosticsFile.write("Number of JavaScript Links" + str(scriptLinks) +"\n")
-diagnosticsFile.write("% of JavaScript Links Clicked" + str(scriptLinks/scriptLinksClicked) +"\n")
+diagnosticsFile.write("Number of HTML Links" + str(htmlLinks) + "\n")
+diagnosticsFile.write("% of HTML Links Clicked" + str(htmlLinks / htmlLinksClicked) + "\n")
+diagnosticsFile.write("Number of JavaScript Links" + str(scriptLinks) + "\n")
+diagnosticsFile.write("% of JavaScript Links Clicked" + str(scriptLinks / scriptLinksClicked) + "\n")
 diagnosticsFile.write("Time taken to click all links + " + str(timeElapsed))
 diagnosticsFile.close()
