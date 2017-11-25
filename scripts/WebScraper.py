@@ -112,6 +112,7 @@ class School(object):
         scriptCount = 0
         print("Done Clickling links")
         for link in self.links:
+            print("Writing link to file")
             if link.type == "html":
                 link.writeFile(self.filePath, 0)
             elif link.type == "JavaScript" and link.text != "":
@@ -311,14 +312,14 @@ for school in schools:
     diagnosticsFile.write(
         "There were " + str(school.htmlLinks) + " html links and " + str(
             school.htmlLinksClicked) + " were clicked(" + str(
-            (school.htmlLinks / school.htmlLinksClicked) * 100) + "%)\n"
+            (school.htmlLinksClicked / school.htmlLinks) * 100) + "%)\n"
     )
 
     if school.scriptLinks != 0:
         diagnosticsFile.write(
             "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
                 school.scriptLinksClicked) + " were clicked(" + str(
-                (school.scriptLinks / school.scriptLinksClicked) * 100) + "%)\n"
+                (school.scriptLinksClicked / school.scriptLinks) * 100) + "%)\n"
         )
     diagnosticsFile.write("It took " + str(schoolTimeElapsed) + " to click on the links for this school\n")
 timeElapsed = datetime.datetime.now() - startTime
