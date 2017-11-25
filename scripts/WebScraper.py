@@ -1,10 +1,7 @@
-from sys import platform
 import csv
 import datetime
 import os
-import random
-import string
-import lxml
+from sys import platform
 
 'Driver'
 from selenium import webdriver
@@ -109,6 +106,7 @@ class School(object):
             except LinkException:
                 print("Could not click link:" + str(link))
         scriptCount = 0
+        print("Done Clickling links")
         for link in self.links:
             if link.type == "html":
                 link.writeFile(self.filePath, 0)
@@ -155,6 +153,7 @@ class Link(object):
         self.index = None
         self.matcher = matcher
         self.index = 0
+        self.text = ""
         if (hrefAttribute.startswith("http") and hrefAttribute.split(".")[1] == matcher and len(hrefAttribute) > len(
                 callingURL)):
             self.type = "html"
@@ -287,7 +286,7 @@ scriptLinksClicked = 0
 now = datetime.datetime.now()
 formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
 diagnosticsFile = open("diagnostics/" + str(formattedTime) + ".txt", "w")
-diagnosticsFile.write("Program was run aprintt " + formattedTime + "\n")
+diagnosticsFile.write("Program was run at " + formattedTime + "\n")
 i = 0
 startTime = datetime.datetime.now()
 for school in schools:
