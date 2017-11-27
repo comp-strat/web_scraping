@@ -40,11 +40,9 @@ def readCSV(filename) -> list:
 
 def prepDriver():
     if platform.startswith("linux"):
-        display = Display(visible=0, size=(1920, 1080))
-        display.start()
         chromeOptions = webdriver.ChromeOptions()
-        chromeOptions.add_argument('headless')
-        chromeOptions.add_argument('window-size=1920x1080')
+        """chromeOptions.add_argument('headless')
+        chromeOptions.add_argument('window-size=1920x1080')"""
         chromeOptions.add_argument('--no-sandbox')
         driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chromeOptions)
         return driver
@@ -273,6 +271,9 @@ def checkPathExists(path):
     return False
 
 
+if platform.startswith("linux"):
+    display = Display(visible=0, size=(1920, 1080))
+    display.start()
 if not checkPathExists("results"):
     os.mkdir("results")
 if not checkPathExists("diagnostics"):
@@ -330,3 +331,5 @@ diagnosticsFile.write("Number of JavaScript Links" + str(scriptLinks) + "\n")
 diagnosticsFile.write("% of JavaScript Links Clicked" + str(scriptLinks / scriptLinksClicked) + "\n")
 diagnosticsFile.write("Time taken to click all links + " + str(timeElapsed))
 diagnosticsFile.close()
+if platform.startswith("linux"):
+    display.stop()
