@@ -93,14 +93,16 @@ class School(object):
     def clickLinks(self):
         if not checkPathExists(self.filePath):
             os.makedirs(self.filePath)
+        counter = 1
         for link in self.links:
             try:
                 if link.type == "html":
                     self.htmlLinks += 1
                 elif link.type == "JavaScript":
                     self.scriptLinks += 1
-                print("Clicking Link")
+                print("Clicking Link " + str(counter) + " out of " + str(self.totalNumberofLinks))
                 link.click()
+                counter += 1
                 self.linksClicked += 1
                 if link.type == "html":
                     self.htmlLinksClicked += 1
