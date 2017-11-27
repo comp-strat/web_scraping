@@ -310,7 +310,7 @@ for school in schools:
         diagnosticsFile.write(
             "There were " + str(school.htmlLinks) + " html links and " + str(
                 school.htmlLinksClicked) + " were clicked(" + str(
-                round((school.htmlLinksClicked / school.htmlLinks) * 100), 3) + "%)\n"
+                round((school.htmlLinksClicked / school.htmlLinks) * 100, 3)) + "%)\n"
         )
     except ZeroDivisionError:
         diagnosticsFile.write("This school had 0 html links")
@@ -319,7 +319,7 @@ for school in schools:
         diagnosticsFile.write(
             "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
                 school.scriptLinksClicked) + " were clicked(" + str(round(
-                (school.scriptLinksClicked / school.scriptLinks) * 100), 3) + "%)\n"
+                (school.scriptLinksClicked / school.scriptLinks) * 100, 3)) + "%)\n"
         )
     except ZeroDivisionError:
         diagnosticsFile.write("This school had 0 JavaScript Links")
