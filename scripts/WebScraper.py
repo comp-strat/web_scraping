@@ -42,10 +42,11 @@ def prepDriver():
     if platform.startswith("linux"):
         display = Display(visible=0, size=(1920, 1080))
         display.start()
-        options = webdriver.ChromeOptions()
-        options.add_argument('headless')
-        options.add_argument('window-size=1920x1080')
-        driver = webdriver.Chrome(chrome_options=options)
+        chromeOptions = webdriver.ChromeOptions()
+        chromeOptions.add_argument('headless')
+        chromeOptions.add_argument('window-size=1920x1080')
+        chromeOptions.add_argument('--no-sandbox')
+        driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chromeOptions)
         return driver
     elif platform.startswith("darwin") or platform.startswith("win32"):
         driver = webdriver.Chrome(executable_path="Driver/chromedriver")
@@ -226,9 +227,7 @@ class Link(object):
         if delimiter == "/":
             raise ValueError("ERROR: Delimiter cannot be a slash")
         if self.type == "html":
-            unfilteredName = self.hrefAttribute[
-                             len(self.hrefAttribute) - (len(self.hrefAttribute) - len(self.fallbackURL)):
-                             len(self.hrefAttribute)]
+            unfilteredName = self.hrefAttribute[self.hrefAttribute.index(self.matcher):len(self.hrefAttribute)]
             unfilteredName = unfilteredName.split("/")
             self.name = ""
             if len(unfilteredName) != 1:
