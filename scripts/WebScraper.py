@@ -27,8 +27,8 @@ inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
 
 def readCSV(filename) -> list:
     schools = []
-    with open(filename, newline='', encoding="Latin-1") as csvfile:
-        reader = csv.reader(csvfile, delimiter=',')
+    with open(filename, newline='', encoding="Latin-1") as csvFile:
+        reader = csv.reader(csvFile, delimiter=',')
         for row in reader:
             try:
                 if reader.line_num != 1:
@@ -306,18 +306,24 @@ for school in schools:
         "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
             school.linksClicked) + " were clicked(" + str(
             (school.linksClicked / school.totalNumberofLinks) * 100) + "%)\n")
-    diagnosticsFile.write(
-        "There were " + str(school.htmlLinks) + " html links and " + str(
-            school.htmlLinksClicked) + " were clicked(" + str(
-            (school.htmlLinksClicked / school.htmlLinks) * 100) + "%)\n"
-    )
+    try:
+        diagnosticsFile.write(
+            "There were " + str(school.htmlLinks) + " html links and " + str(
+                school.htmlLinksClicked) + " were clicked(" + str(
+                round((school.htmlLinksClicked / school.htmlLinks) * 100), 3) + "%)\n"
+        )
+    except ZeroDivisionError:
+        diagnosticsFile.write("This school had 0 html links")
 
-    if school.scriptLinks != 0:
+    try:
         diagnosticsFile.write(
             "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
-                school.scriptLinksClicked) + " were clicked(" + str(
-                (school.scriptLinksClicked / school.scriptLinks) * 100) + "%)\n"
+                school.scriptLinksClicked) + " were clicked(" + str(round(
+                (school.scriptLinksClicked / school.scriptLinks) * 100), 3) + "%)\n"
         )
+    except ZeroDivisionError:
+        diagnosticsFile.write("This school had 0 JavaScript Links")
+
     diagnosticsFile.write("It took " + str(schoolTimeElapsed) + " to click on the links for this school\n")
 timeElapsed = datetime.datetime.now() - startTime
 
