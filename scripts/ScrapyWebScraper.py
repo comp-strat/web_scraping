@@ -1,6 +1,5 @@
 from sys import platform
 import csv
-# import datetime
 import os
 import random
 import string
@@ -21,7 +20,7 @@ from bs4.element import Comment
 # Display for headless mode
 from pyvirtualdisplay import Display
 # Only use this if running on a non linux machine
-driverPath = 'Driver/chromedriver'
+driverPath = '../Driver/chromedriver'
 
 inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
                "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
@@ -38,7 +37,7 @@ def prep_driver():
         driver = webdriver.Chrome(chrome_options=options)
         return driver
     elif platform.startswith("darwin") or platform.startswith("win32"):
-        driver = webdriver.Chrome(executable_path="Driver/chromedriver")
+        driver = webdriver.Chrome(executable_path="../Driver/chromedriver")
         return driver
 
 
@@ -54,7 +53,7 @@ class LinkException(Exception):
             self.value = "ERROR: Link is JavaScript based but an index value was not set"
         elif switch == -1:
             self.value = "No value was specified in LinkException Switch. " \
-                         "Make sure you are properly calling this expception"
+                         "Make sure you are properly calling this exception"
 
     def __str__(self) -> str:
         return str(self.value)
@@ -116,22 +115,23 @@ class Link(object):
         visible_text = visible_text.split(random_string)
         self.text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
 
-    def click_and_yield(self) -> bool:
+    def click_and_yield(self) -> list:
         driver = prep_driver()
         if self.type == "html":
             driver.get(self.hrefAttribute)
             self.gather_text(driver)
-            self.yield_new_links(driver, self.hrefAttribute)  # Yield new links
+            new_links = self.get_new_links(driver, self.hrefAttribute)  # Yield new links
             driver.close()
-            return True
+            return new_links
         elif self.type == "JavaScript":
             if self.index is None:
                 raise LinkException(2)
             driver.get(self.fallbackURL)
-            self.yield_new_links(driver, self.fallbackURL)  # Yield new links
+            new_links = self.get_new_links(driver, self.fallbackURL)  # Yield new links
             try:
                 driver.find_elements_by_xpath("//a[@href]")[self.index].click_and_yield()
                 self.gather_text(driver)
+                return new_links
             except (WebDriverException, ElementNotVisibleException, ElementNotInteractableException,
                     ElementNotSelectableException):
                 link = driver.find_elements_by_xpath("//a[@href]")[self.index]
@@ -141,6 +141,7 @@ class Link(object):
                     link.click_and_yield()
                     self.gather_text(driver)
                     driver.close()
+                    return new_links
                 except (WebDriverException, ElementNotVisibleException, ElementNotInteractableException,
                         ElementNotSelectableException):
                     driver.close()
@@ -183,17 +184,18 @@ class Link(object):
         s += "Index (Only used for JS):" + str(self.index) + " "
         return s
 
-    def yield_new_links(self, driver, calling_url) -> None:
+    def get_new_links(self, driver, calling_url) -> list:
         elems = driver.find_elements_by_xpath("//a[@href]")
+        new_requests = []
         for elem in elems:
+            if not elem.get_attribute("href").lower().startswith(calling_url.lower()):
+                continue
             try:
                 link = Link(elem.get_attribute("href"), self.matcher, calling_url=calling_url, index=elems.index(elem))
-                print("FUCK",str(link))
-                request = scrapy.Request(elem, callback=SchoolSpider.parse)
-                request.meta["link"] = link
-                yield request
+                new_requests.append(link)
             except LinkException:
                 print(elem.get_attribute("href") + " was not added as it did not match the main url")
+        return new_requests
 
 
 def check_path_exists(path):
@@ -208,88 +210,36 @@ if not check_path_exists("diagnostics"):
     os.mkdir("diagnostics")
 
 
-class LinkRequest(scrapy.Request):
-
-    def __init__(self, url, link):
-        scrapy.Request.__init__(self, url, callback=SchoolSpider.parse)
-        self.link = link
+def read_csv(filename) -> list:
+    requests = []
+    import codecs
+    with codecs.open(filename, "r", encoding='utf-8', errors='ignore') as csvfile:
+        reader = csv.reader(csvfile, delimiter=',')
+        for row in reader:
+            if reader.line_num != 1 and row[4] != "0":
+                if row[4][:-1] == "/":
+                    requests.append(row[4][:-1])
+                else:
+                    requests.append(row[4])
+    return requests
 
 
 class SchoolSpider(scrapy.Spider):
     name = "school_scraper"
-
-    def __init__(self):
-        scrapy.Spider.__init__(self)  # lol I highly doubt this is necessary, PyCharm
-        self.start_urls = [SchoolSpider.read_csv('micro-sample13_coded.csv')[i] for i in range(10)]
-        # self.seen = set()
-        # schools = read_csv('micro-sample13_coded.csv')
-        # self.mainURL = schools[0].mainURL
-        # if self.mainURL[-1] != "/":
-        #     self.mainURL[-1] += "/"
-
-    @staticmethod
-    def read_csv(filename) -> list:
-        requests = []
-        import codecs
-        with codecs.open(filename, "r", encoding='utf-8', errors='ignore') as csvfile:
-            reader = csv.reader(csvfile, delimiter=',')
-            for row in reader:
-                if reader.line_num != 1 and row[4] != "0":
-                    # request = scrapy.Request(row[4], callback=SchoolSpider.parse)
-                    # request.meta["link"] = Link(row[4])
-                    requests.append(row[4])
-        return requests
+    start_urls = [read_csv('../data/micro-sample13_coded.csv')[i] for i in range(1)]
 
     def parse(self, response):
-        # self.driver = prep_driver()
-        # self.driver.get(response.url)
-
-        # Stuff to get name for results file
-        # file_name = response.url
-        # if file_name[-1] != "/":
-        #     file_name += "/"
-        # if file_name == self.mainURL:
-        #     file_name = "home"
-        # else:
-        #     file_name = file_name.replace("/", "_")
-        #     file_name = file_name[len(self.mainURL):-1]
-
-        # Write results file
-        # file = open("test_scrapy_results/" + file_name + ".txt", "w")
-        # file_text = gather_text(self.driver)
-        # if len(file_text) > 0:
-        #     file.write(file_text)
-        # file.close()
-
-        # Get new links from current page
-        # elems = self.driver.find_elements_by_xpath("//a[@href]")
-        # new_links = []
-        # for elem in elems:
-        #     if elem.get_attribute("href").lower().startswith(self.mainURL.lower()):
-        #         new_links.append(elem.get_attribute("href"))
-        # self.driver.close()
+        with open("seen_responses.txt", "a") as textfile:
+            textfile.write(response.url + "\n")
         if "link" not in response.meta:
             link = Link(response.url)
         else:
             link = response.meta["link"]
         try:
-            link.click_and_yield()
+            new_links = link.click_and_yield()
+            for l in new_links:
+                request = scrapy.Request(l.hrefAttribute, callback=self.parse)
+                request.meta["link"] = l
+                yield request
         except LinkException:
             print("Could not click link:" + str(link))
-        # print(link.text)
-
-        # Make new scrapy requests to parse the new links
-        # for elem in new_links:
-        #     try:
-        #         if elem not in self.seen:
-        #             self.seen.add(elem)
-        #             yield scrapy.Request(elem, callback=self.parse)
-        #     except LinkException:
-        #         print(elem + " was not added as it did not match the main url")
-
-    # def parse2(self, response, link):
-    #     try:
-    #         link.click_and_yield()
-    #     except LinkException:
-    #         print("Could not click link:" + str(link))
-    #     print(link.text)
