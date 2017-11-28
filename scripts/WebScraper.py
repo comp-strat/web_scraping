@@ -305,7 +305,7 @@ startTime = datetime.datetime.now()
 for school in schools:
     school.gatherLinks()
     schoolStartTime = datetime.datetime.now()
-    'school.clickLinks()'
+    school.clickLinks()
     schoolTimeElapsed = datetime.datetime.now() - startTime
     totalNumberOfLinks += school.totalNumberofLinks
     numberofLinksClicked += school.linksClicked
