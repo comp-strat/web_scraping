@@ -66,7 +66,10 @@ class School(object):
         self.address = address
         self.mainURL = mainURL
         self.links = []
-        self.matcher = self.mainURL.split(".")[1]
+        if self.mainURL.split("://")[1] == "www.":
+            self.matcher = self.mainURL.split(".")[1]
+        else:
+            self.matcher = self.mainURL.split("://")[1].split(".")[0]
         self.filePath = "results/" + self.name
         self.totalNumberofLinks = 0
         self.htmlLinks = 0
@@ -78,10 +81,12 @@ class School(object):
     def gatherLinks(self) -> None:
         driver = prepDriver()
         driver.get(self.mainURL)
-        elems = driver.find_elements_by_xpath("//a[@href]")
-        for elem in elems:
+        numberOfLinks = len(driver.find_elements_by_xpath("//a[@href]"))
+        for i in range(numberOfLinks):
             try:
-                link = Link(elem.get_attribute("href"), self.mainURL, self.matcher, elems.index(elem))
+                elems = driver.find_elements_by_xpath("//a[@href]")
+                elem = elems[i]
+                link = Link(elem.get_attribute("href"), self.mainURL, self.matcher, i)
                 self.links.append(link)
                 print(str(link))
             except LinkException:
@@ -160,11 +165,16 @@ class Link(object):
         self.matcher = matcher
         self.index = 0
         self.text = ""
-        if (hrefAttribute.startswith("http") and hrefAttribute.split(".")[1] == matcher and len(hrefAttribute) > len(
-                callingURL)):
-            self.type = "html"
-            self.hrefAttribute = hrefAttribute
-        elif (hrefAttribute.startswith("javascript")):
+        if hrefAttribute.startswith("http"):
+            if (hrefAttribute.split("://")[1] == "www." and hrefAttribute.split(".")[1] == matcher and len(
+                    hrefAttribute) > len(callingURL)) or (
+                            hrefAttribute.split("://")[1].split(".")[0] == matcher and len(hrefAttribute) > len(
+                        callingURL)):
+                self.type = "html"
+                self.hrefAttribute = hrefAttribute
+            else:
+                raise LinkException(0)
+        elif hrefAttribute.startswith("javascript"):
             self.type = "JavaScript"
             self.hrefAttribute = hrefAttribute
             self.index = index
@@ -291,12 +301,11 @@ now = datetime.datetime.now()
 formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
 diagnosticsFile = open("diagnostics/" + str(formattedTime) + ".txt", "w")
 diagnosticsFile.write("Program was run at " + formattedTime + "\n")
-i = 0
 startTime = datetime.datetime.now()
 for school in schools:
     school.gatherLinks()
     schoolStartTime = datetime.datetime.now()
-    school.clickLinks()
+    'school.clickLinks()'
     schoolTimeElapsed = datetime.datetime.now() - startTime
     totalNumberOfLinks += school.totalNumberofLinks
     numberofLinksClicked += school.linksClicked
