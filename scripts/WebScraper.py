@@ -315,7 +315,7 @@ for school in schools:
                 round((school.htmlLinksClicked / school.htmlLinks) * 100, 3)) + "%)\n"
         )
     except ZeroDivisionError:
-        diagnosticsFile.write("This school had 0 html links")
+        diagnosticsFile.write("This school had 0 html links \n")
 
     try:
         diagnosticsFile.write(
@@ -324,7 +324,7 @@ for school in schools:
                 (school.scriptLinksClicked / school.scriptLinks) * 100, 3)) + "%)\n"
         )
     except ZeroDivisionError:
-        diagnosticsFile.write("This school had 0 JavaScript Links")
+        diagnosticsFile.write("This school had 0 JavaScript Links \n")
 
     diagnosticsFile.write("It took " + str(schoolTimeElapsed) + " to click on the links for this school\n")
 timeElapsed = datetime.datetime.now() - startTime
