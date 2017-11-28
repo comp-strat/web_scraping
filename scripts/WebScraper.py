@@ -1,10 +1,7 @@
-from sys import platform
 import csv
 import datetime
 import os
-import random
-import string
-import lxml
+from sys import platform
 
 'Driver'
 from selenium import webdriver
@@ -17,37 +14,39 @@ from selenium.common.exceptions import *
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 
-
 "Display for headless mode"
 from pyvirtualdisplay import Display
+
 "Only use this if running on a non linux machine"
 driverPath = 'Driver/chromedriver'
 
 inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
-                "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
-                "span", "sub", "sup"]
+               "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
+               "span", "sub", "sup"]
 
 
 def readCSV(filename) -> list:
     schools = []
-    with open(filename, newline='',encoding="Latin-1") as csvfile:
-        reader = csv.reader(csvfile, delimiter=',')
+    with open(filename, newline='', encoding="Latin-1") as csvFile:
+        reader = csv.reader(csvFile, delimiter=',')
         for row in reader:
-
             try:
                 if reader.line_num != 1:
                     schools.append(School(row[0], row[1], row[2], row[4]))
             except ValueError:
-                print("ERROR: School " + str(row[1]) +" was not scraped as it did not have a URL")
+                print("ERROR: School " + str(row[1]) + " was not scraped as it did not have a URL")
     return schools
+
+
 def prepDriver():
     if platform.startswith("linux"):
         display = Display(visible=0, size=(1920, 1080))
         display.start()
-        options = webdriver.ChromeOptions()
-        options.add_argument('headless')
-        options.add_argument('window-size=1920x1080')
-        driver = webdriver.Chrome(chrome_options=options)
+        chromeOptions = webdriver.ChromeOptions()
+        chromeOptions.add_argument('headless')
+        chromeOptions.add_argument('window-size=1920x1080')
+        chromeOptions.add_argument('--no-sandbox')
+        driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chromeOptions)
         return driver
     elif platform.startswith("darwin") or platform.startswith("win32"):
         driver = webdriver.Chrome(executable_path="Driver/chromedriver")
@@ -86,22 +85,24 @@ class School(object):
                 self.links.append(link)
                 print(str(link))
             except LinkException:
-                print(elem.get_attribute("href") + " was not added as it did not match the main url or was not longer than main url")
-            # except LinkException:
-                # print("Got a link exception")
+                print(elem.get_attribute(
+                    "href") + " was not added as it did not match the main url or was not longer than main url")
         driver.close()
         self.totalNumberofLinks = len(self.links)
+
     def clickLinks(self):
         if not checkPathExists(self.filePath):
             os.makedirs(self.filePath)
+        counter = 1
         for link in self.links:
             try:
                 if link.type == "html":
                     self.htmlLinks += 1
                 elif link.type == "JavaScript":
                     self.scriptLinks += 1
-                print("Clicking Link")
+                print("Clicking Link " + str(counter) + " out of " + str(self.totalNumberofLinks))
                 link.click()
+                counter += 1
                 self.linksClicked += 1
                 if link.type == "html":
                     self.htmlLinksClicked += 1
@@ -110,7 +111,9 @@ class School(object):
             except LinkException:
                 print("Could not click link:" + str(link))
         scriptCount = 0
+        print("Done Clickling links")
         for link in self.links:
+            print("Writing link to file")
             if link.type == "html":
                 link.writeFile(self.filePath, 0)
             elif link.type == "JavaScript" and link.text != "":
@@ -131,7 +134,7 @@ class School(object):
 class LinkException(Exception):
     "Only called by link class. Add to switch statement as necessary"
 
-    def __init__(self, switch=-1):
+    def __init__(self, switch=1):
         if switch == 0:
             self.value = "ERROR: Link type was not html or JavaScript"
         elif switch == 1:
@@ -156,6 +159,7 @@ class Link(object):
         self.index = None
         self.matcher = matcher
         self.index = 0
+        self.text = ""
         if (hrefAttribute.startswith("http") and hrefAttribute.split(".")[1] == matcher and len(hrefAttribute) > len(
                 callingURL)):
             self.type = "html"
@@ -183,9 +187,10 @@ class Link(object):
             page_source_replaced = page_source_replaced.replace("</" + it + ">", "")
 
         # Create random string for tag delimiter
-        random_string = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=75))
+        random_string = "".join(map(chr, os.urandom(75)))
         soup = BeautifulSoup(page_source_replaced, 'lxml')
-        [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])] # remove non-visible tags
+        # remove non-visible tags
+        [s.extract() for s in soup(['style', 'script', 'head', 'title', 'meta', '[document]'])]
         visible_text = soup.getText(random_string).replace("\n", "")
         visible_text = visible_text.split(random_string)
         self.text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
@@ -224,9 +229,7 @@ class Link(object):
         if delimiter == "/":
             raise ValueError("ERROR: Delimiter cannot be a slash")
         if self.type == "html":
-            unfilteredName = self.hrefAttribute[
-                             len(self.hrefAttribute) - (len(self.hrefAttribute) - len(self.fallbackURL)):
-                             len(self.hrefAttribute)]
+            unfilteredName = self.hrefAttribute[self.hrefAttribute.index(self.matcher):len(self.hrefAttribute)]
             unfilteredName = unfilteredName.split("/")
             self.name = ""
             if len(unfilteredName) != 1:
@@ -303,26 +306,35 @@ for school in schools:
     scriptLinks += school.scriptLinksClicked
     diagnosticsFile.write(
         "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
-            school.linksClicked) + " were clicked(" + str((school.linksClicked / school.totalNumberofLinks)) * 100 + "%)\n")
-    diagnosticsFile.write(
-        "There were " + str(school.htmlLinks) + " html links and " + str(
-            school.htmlLinksClicked) + " were clicked(" + str((school.htmlLinks / school.htmlLinksClicked) * 100) +"%)\n"
-    )
+            school.linksClicked) + " were clicked(" + str(
+            (school.linksClicked / school.totalNumberofLinks) * 100) + "%)\n")
+    try:
+        diagnosticsFile.write(
+            "There were " + str(school.htmlLinks) + " html links and " + str(
+                school.htmlLinksClicked) + " were clicked(" + str(
+                round((school.htmlLinksClicked / school.htmlLinks) * 100, 3)) + "%)\n"
+        )
+    except ZeroDivisionError:
+        diagnosticsFile.write("This school had 0 html links")
 
-    if school.scriptLinks != 0:
+    try:
         diagnosticsFile.write(
             "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
-                school.scriptLinksClicked) + " were clicked(" + str((school.scriptLinks / school.scriptLinksClicked) * 100) + "%)\n"
+                school.scriptLinksClicked) + " were clicked(" + str(round(
+                (school.scriptLinksClicked / school.scriptLinks) * 100, 3)) + "%)\n"
         )
+    except ZeroDivisionError:
+        diagnosticsFile.write("This school had 0 JavaScript Links")
+
     diagnosticsFile.write("It took " + str(schoolTimeElapsed) + " to click on the links for this school\n")
 timeElapsed = datetime.datetime.now() - startTime
 
 diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
 diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
 diagnosticsFile.write("% of links clicked:" + str(numberofLinksClicked / totalNumberOfLinks) + "\n")
-diagnosticsFile.write("Number of HTML Links" + str(htmlLinks) +"\n")
-diagnosticsFile.write("% of HTML Links Clicked" + str(htmlLinks/htmlLinksClicked) +"\n")
-diagnosticsFile.write("Number of JavaScript Links" + str(scriptLinks) +"\n")
-diagnosticsFile.write("% of JavaScript Links Clicked" + str(scriptLinks/scriptLinksClicked) +"\n")
+diagnosticsFile.write("Number of HTML Links" + str(htmlLinks) + "\n")
+diagnosticsFile.write("% of HTML Links Clicked" + str(htmlLinks / htmlLinksClicked) + "\n")
+diagnosticsFile.write("Number of JavaScript Links" + str(scriptLinks) + "\n")
+diagnosticsFile.write("% of JavaScript Links Clicked" + str(scriptLinks / scriptLinksClicked) + "\n")
 diagnosticsFile.write("Time taken to click all links + " + str(timeElapsed))
 diagnosticsFile.close()
