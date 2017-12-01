@@ -10,7 +10,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
 'Driver Exceptions'
-from selenium.common.exceptions import
+from selenium.common.exceptions import *
 
 'Parser'
 from bs4 import BeautifulSoup
