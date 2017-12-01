@@ -25,10 +25,8 @@ driverPath = 'Driver/chromedriver'
 inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
                "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
                "span", "sub", "sup"]
-if platform.startswith("linux"):
-    display = Display(visible=0, size=(1920, 1080))
 
-
+display = Display(visible=0, size=(1920, 1080))
 def prepDriver():
     if platform.startswith("linux"):
         display.start()
@@ -41,6 +39,7 @@ def prepDriver():
     elif platform.startswith("darwin") or platform.startswith("win32"):
         driver = webdriver.Chrome(executable_path="Driver/chromedriver")
         return driver
+
 
 
 def readCSV(filename) -> list:
@@ -357,7 +356,7 @@ try:
 except Exception as e:
     'To general of a try except here, only used to stop display from taking up server resources. '
     if platform.startswith("linux"):
-        display.stop()
+        display.sendstop()
     driver = prepDriver()
     driver.quit()
     traceback.print_exc(file=sys.stdout)
