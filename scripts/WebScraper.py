@@ -97,7 +97,6 @@ class School(object):
             except LinkException:
                 print(str(hrefAttributes[i]) + (
                     "href") + " was not added as it did not match the main url or was not longer than main url")
-        driver.close()
         self.totalNumberofLinks = len(self.links)
 
     def clickLinks(self):
@@ -215,7 +214,6 @@ class Link(object):
         if self.type == "html":
             driver.get(self.hrefAttribute)
             self.gatherText(driver)
-            driver.close()
             return True
         elif self.type == "JavaScript":
             if self.index is None:
@@ -232,10 +230,8 @@ class Link(object):
                 try:
                     link.click()
                     self.gatherText(driver)
-                    driver.close()
                 except (WebDriverException, ElementNotVisibleException, ElementNotInteractableException,
                         ElementNotSelectableException):
-                    driver.close()
                     raise LinkException(1)
         else:
             raise LinkException(0)
