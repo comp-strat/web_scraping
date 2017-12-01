@@ -1,6 +1,8 @@
 import csv
 import datetime
 import os
+import sys
+import traceback
 from sys import platform
 
 'Driver'
@@ -40,13 +42,12 @@ def readCSV(filename) -> list:
 
 def prepDriver():
     if platform.startswith("linux"):
-        display = Display(visible=0, size=(1920, 1080))
-        display.start()
         chromeOptions = webdriver.ChromeOptions()
         chromeOptions.add_argument('headless')
         chromeOptions.add_argument('window-size=1920x1080')
         chromeOptions.add_argument('--no-sandbox')
         driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chromeOptions)
+
         return driver
     elif platform.startswith("darwin") or platform.startswith("win32"):
         driver = webdriver.Chrome(executable_path="Driver/chromedriver")
@@ -81,21 +82,31 @@ class School(object):
     def gatherLinks(self) -> None:
         driver = prepDriver()
         driver.get(self.mainURL)
+        x = driver.find_elements_by_xpath("//a[@href]")
         numberOfLinks = len(driver.find_elements_by_xpath("//a[@href]"))
-        for i in range(numberOfLinks):
+        oldElems = driver.find_elements_by_xpath("//a[@href]")
+        hrefAttributes = []
+        count = 0
+        for x in oldElems:
+            if count == 0:
+                hrefAttributes.append(oldElems[count].get_attribute("href"))
+            else:
+                hrefAttributes.append(newElems[count].get_attribute("href"))
+            newElems = driver.find_elements_by_xpath("//a[@href]")
+            count += 1
+        for i in range(len(hrefAttributes)):
             try:
-                elems = driver.find_elements_by_xpath("//a[@href]")
-                elem = elems[i]
-                link = Link(elem.get_attribute("href"), self.mainURL, self.matcher, i)
+                link = Link(hrefAttributes[i], self.mainURL, self.matcher, i)
                 self.links.append(link)
                 print(str(link))
             except LinkException:
-                print(elem.get_attribute(
+                print(str(hrefAttributes[i]) + (
                     "href") + " was not added as it did not match the main url or was not longer than main url")
         driver.close()
         self.totalNumberofLinks = len(self.links)
 
     def clickLinks(self):
+
         if not checkPathExists(self.filePath):
             os.makedirs(self.filePath)
         counter = 1
@@ -147,7 +158,7 @@ class LinkException(Exception):
         elif switch == 2:
             self.value = "ERROR: Link is JavaScript based but an index value was not set"
         elif switch == -1:
-            self.value = "No value was specified in LinkException Switch. Make sure you are properly calling this expception"
+            self.value = "No value was specified in LinkException Switch. Make sure you are properly calling this exception"
 
     def __str__(self) -> str:
         return str(self.value)
@@ -302,48 +313,72 @@ formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
 diagnosticsFile = open("diagnostics/" + str(formattedTime) + ".txt", "w")
 diagnosticsFile.write("Program was run at " + formattedTime + "\n")
 startTime = datetime.datetime.now()
-for school in schools:
-    school.gatherLinks()
-    schoolStartTime = datetime.datetime.now()
-    school.clickLinks()
-    schoolTimeElapsed = datetime.datetime.now() - startTime
-    totalNumberOfLinks += school.totalNumberofLinks
-    numberofLinksClicked += school.linksClicked
-    htmlLinks += school.htmlLinks
-    htmlLinksClicked += school.htmlLinksClicked
-    scriptLinks += school.scriptLinks
-    scriptLinks += school.scriptLinksClicked
-    diagnosticsFile.write(
-        "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
-            school.linksClicked) + " were clicked(" + str(
-            (school.linksClicked / school.totalNumberofLinks) * 100) + "%)\n")
-    try:
+if platform.startswith("linux"):
+    display = Display(visible=0, size=(1920, 1080))
+    display.start()
+try:
+    for school in schools:
+        school.gatherLinks()
+        schoolStartTime = datetime.datetime.now()
+        school.clickLinks()
+        schoolTimeElapsed = datetime.datetime.now() - startTime
+        totalNumberOfLinks += school.totalNumberofLinks
+        numberofLinksClicked += school.linksClicked
+        htmlLinks += school.htmlLinks
+        htmlLinksClicked += school.htmlLinksClicked
+        scriptLinks += school.scriptLinks
+        scriptLinks += school.scriptLinksClicked
         diagnosticsFile.write(
-            "There were " + str(school.htmlLinks) + " html links and " + str(
-                school.htmlLinksClicked) + " were clicked(" + str(
-                round((school.htmlLinksClicked / school.htmlLinks) * 100, 3)) + "%)\n"
-        )
-    except ZeroDivisionError:
-        diagnosticsFile.write("This school had 0 html links \n")
+            "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
+                school.linksClicked) + " were clicked(" + str(
+                (school.linksClicked / school.totalNumberofLinks) * 100) + "%)\n")
+        try:
+            diagnosticsFile.write(
+                "There were " + str(school.htmlLinks) + " html links and " + str(
+                    school.htmlLinksClicked) + " were clicked(" + str(
+                    round((school.htmlLinksClicked / school.htmlLinks) * 100, 3)) + "%)\n"
+            )
+        except ZeroDivisionError:
+            diagnosticsFile.write("This school had 0 html links \n")
 
-    try:
-        diagnosticsFile.write(
-            "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
-                school.scriptLinksClicked) + " were clicked(" + str(round(
-                (school.scriptLinksClicked / school.scriptLinks) * 100, 3)) + "%)\n"
-        )
-    except ZeroDivisionError:
-        diagnosticsFile.write("This school had 0 JavaScript Links \n")
+        try:
+            diagnosticsFile.write(
+                "There were " + str(school.scriptLinks) + " JavaScript links and " + str(
+                    school.scriptLinksClicked) + " were clicked(" + str(round(
+                    (school.scriptLinksClicked / school.scriptLinks) * 100, 3)) + "%)\n"
+            )
+        except ZeroDivisionError:
+            diagnosticsFile.write("This school had 0 JavaScript Links \n")
 
-    diagnosticsFile.write("It took " + str(schoolTimeElapsed) + " to click on the links for this school\n")
+        diagnosticsFile.write("It took " + str(schoolTimeElapsed) + " to click on the links for this school\n")
+except Exception as e:
+    'To general of a try except here, only used to stop display from taking up server resources. '
+    if platform.startswith("linux"):
+        display.stop()
+    driver = prepDriver()
+    driver.quit()
+    traceback.print_exc(file=sys.stdout)
+    sys.exit()
+
+
 timeElapsed = datetime.datetime.now() - startTime
-
 diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
 diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
-diagnosticsFile.write("% of links clicked:" + str(numberofLinksClicked / totalNumberOfLinks) + "\n")
+try:
+    diagnosticsFile.write(
+        "% of links clicked:" + str(round((numberofLinksClicked / totalNumberOfLinks) * 100, 3)) + "\n")
+except ZeroDivisionError:
+    diagnosticsFile.write("There were 0 Total  Links\n")
 diagnosticsFile.write("Number of HTML Links" + str(htmlLinks) + "\n")
-diagnosticsFile.write("% of HTML Links Clicked" + str(htmlLinks / htmlLinksClicked) + "\n")
+try:
+    diagnosticsFile.write("% of HTML Links Clicked" + str(round((htmlLinks / htmlLinksClicked) * 100, 3)) + "\n")
+except ZeroDivisionError:
+    diagnosticsFile.write("There were 0 HTML links")
 diagnosticsFile.write("Number of JavaScript Links" + str(scriptLinks) + "\n")
-diagnosticsFile.write("% of JavaScript Links Clicked" + str(scriptLinks / scriptLinksClicked) + "\n")
+try:
+    diagnosticsFile.write(
+        "% of JavaScript Links Clicked" + str(round((scriptLinks / scriptLinksClicked) * 100, 3)) + "\n")
+except ZeroDivisionError:
+    diagnosticsFile.write("There were 0 JavaScript Links")
 diagnosticsFile.write("Time taken to click all links + " + str(timeElapsed))
 diagnosticsFile.close()
