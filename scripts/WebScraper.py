@@ -115,7 +115,6 @@ class School(object):
                     self.scriptLinks += 1
                 print("Clicking Link " + str(counter) + " out of " + str(self.totalNumberofLinks))
                 link.click()
-                counter += 1
                 self.linksClicked += 1
                 if link.type == "html":
                     self.htmlLinksClicked += 1
@@ -123,6 +122,7 @@ class School(object):
                     self.scriptLinksClicked += 1
             except LinkException:
                 print("Could not click link:" + str(link))
+            counter += 1
         scriptCount = 0
         print("Done Clickling links")
         for link in self.links:
@@ -226,7 +226,7 @@ class Link(object):
                 driver.find_elements_by_xpath("//a[@href]")[self.index].click()
                 self.gatherText(driver)
             except (WebDriverException, ElementNotVisibleException, ElementNotInteractableException,
-                    ElementNotSelectableException):
+                    ElementNotSelectableException, IndexError):
                 link = driver.find_elements_by_xpath("//a[@href]")[self.index]
                 move = ActionChains(driver).move_to_element(link)
                 move.perform()
@@ -234,7 +234,7 @@ class Link(object):
                     link.click()
                     self.gatherText(driver)
                 except (WebDriverException, ElementNotVisibleException, ElementNotInteractableException,
-                        ElementNotSelectableException):
+                        ElementNotSelectableException, IndexError):
                     raise LinkException(1)
         else:
             raise LinkException(0)
