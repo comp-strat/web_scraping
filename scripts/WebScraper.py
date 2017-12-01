@@ -10,7 +10,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
 'Driver Exceptions'
-from selenium.common.exceptions import *
+from selenium.common.exceptions import
 
 'Parser'
 from bs4 import BeautifulSoup
@@ -25,6 +25,22 @@ driverPath = 'Driver/chromedriver'
 inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
                "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
                "span", "sub", "sup"]
+if platform.startswith("linux"):
+    display = Display(visible=0, size=(1920, 1080))
+
+
+def prepDriver():
+    if platform.startswith("linux"):
+        display.start()
+        chromeOptions = webdriver.ChromeOptions()
+        chromeOptions.add_argument('headless')
+        chromeOptions.add_argument('window-size=1920x1080')
+        chromeOptions.add_argument('--no-sandbox')
+        driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chromeOptions)
+        return driver
+    elif platform.startswith("darwin") or platform.startswith("win32"):
+        driver = webdriver.Chrome(executable_path="Driver/chromedriver")
+        return driver
 
 
 def readCSV(filename) -> list:
@@ -38,20 +54,6 @@ def readCSV(filename) -> list:
             except ValueError:
                 print("ERROR: School " + str(row[1]) + " was not scraped as it did not have a URL")
     return schools
-
-
-def prepDriver():
-    if platform.startswith("linux"):
-        chromeOptions = webdriver.ChromeOptions()
-        chromeOptions.add_argument('headless')
-        chromeOptions.add_argument('window-size=1920x1080')
-        chromeOptions.add_argument('--no-sandbox')
-        driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chromeOptions)
-
-        return driver
-    elif platform.startswith("darwin") or platform.startswith("win32"):
-        driver = webdriver.Chrome(executable_path="Driver/chromedriver")
-        return driver
 
 
 class School(object):
@@ -82,8 +84,6 @@ class School(object):
     def gatherLinks(self) -> None:
         driver = prepDriver()
         driver.get(self.mainURL)
-        x = driver.find_elements_by_xpath("//a[@href]")
-        numberOfLinks = len(driver.find_elements_by_xpath("//a[@href]"))
         oldElems = driver.find_elements_by_xpath("//a[@href]")
         hrefAttributes = []
         count = 0
@@ -102,7 +102,9 @@ class School(object):
             except LinkException:
                 print(str(hrefAttributes[i]) + (
                     "href") + " was not added as it did not match the main url or was not longer than main url")
+        raise ValueError()
         driver.close()
+        display.stop()
         self.totalNumberofLinks = len(self.links)
 
     def clickLinks(self):
@@ -222,6 +224,7 @@ class Link(object):
             driver.get(self.hrefAttribute)
             self.gatherText(driver)
             driver.close()
+            display.stop()
             return True
         elif self.type == "JavaScript":
             if self.index is None:
@@ -239,9 +242,11 @@ class Link(object):
                     link.click()
                     self.gatherText(driver)
                     driver.close()
+                    display.stop()
                 except (WebDriverException, ElementNotVisibleException, ElementNotInteractableException,
                         ElementNotSelectableException):
                     driver.close()
+                    display.stop()
                     raise LinkException(1)
         else:
             raise LinkException(0)
@@ -313,9 +318,7 @@ formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
 diagnosticsFile = open("diagnostics/" + str(formattedTime) + ".txt", "w")
 diagnosticsFile.write("Program was run at " + formattedTime + "\n")
 startTime = datetime.datetime.now()
-if platform.startswith("linux"):
-    display = Display(visible=0, size=(1920, 1080))
-    display.start()
+
 try:
     for school in schools:
         school.gatherLinks()
@@ -359,7 +362,6 @@ except Exception as e:
     driver.quit()
     traceback.print_exc(file=sys.stdout)
     sys.exit()
-
 
 timeElapsed = datetime.datetime.now() - startTime
 diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")

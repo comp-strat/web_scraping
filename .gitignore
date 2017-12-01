@@ -1,7 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 *.idea
 *.xml
-__pycache__/
+__pycache__/`
 *.py[cod]
 *$py.class
 *.so
