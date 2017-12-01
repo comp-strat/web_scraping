@@ -259,7 +259,7 @@ class Link(object):
             file = open(str(filepath) + "/" + "JavaScript Link " + str(counter) + ".txt", "w")
         else:
             raise LinkException(0)
-        file.write(self.text.encode('utf8'))
+        file.write(str(self.text.encode('utf-8'), encoding='utf-8'))
         file.close()
 
     def __str__(self) -> str:
