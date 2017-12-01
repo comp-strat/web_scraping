@@ -1,0 +1,72 @@
+Data Security Policy    
+School Loop Data Security:
+General Security Practices and Policies
+(Updated August 2017)
+Introduction
+There are many concerns today over how education technology companies protect data and whether they profit from the sale of that data or advertising. From its launch in 2004, School Loop has never and will never sell any student or parent data (or any system data for that matter). We don't sell ads or carry advertising. And we regularly review and update our industry-standard security practices and systems.  
+This document discusses data security in general, FERPA compliance, and the requirements of AB1584, SB177 SOPIPA Compliance.
+Email: 
+data_security@schoolloop.com
+Phone: (415) 952-5667
+Section I: General security.
+Password Security. All passwords are treated securely and one-way encrypted. We cannot decrypt the passwords and do not provide information concerning Admin accounts (ROOT Admin, container Admin, local administrator or domain administrator) or their equivalent to any persons. We encourage our districts to use LDAP integration so that they have complete control over user access and passwords. 
+Security of District Systems. We never gain or try to gain unauthorized access to or modify district systems including file servers, routers, switches, NdS and Internet services. 
+Privacy. We adhere to all provisions of the Federal Family Educational Rights and Privacy Act (FERPA, 20 U.S.C. 123g), California Education Code and district policies regarding the protection and confidentiality of data. We consider all data collected in the course of our duties to be protected and confidential. Release of this data can only be authorized by district leadership and by appropriate state and federal officials.
+With regards to FERPA and the use of School Loop, in general, districts are guided by the 
+U.S. Department of Education's ruling
+ on Edline and the Clark County School District (Las Vegas, Nevada). Edline was competitor offering similar services. The Department of Education conclusion is as follows:
+Based on the information provided, it appears that the arrangement schools within the District have with Edline meets these requirements for disclosing specified information from education records to Edline as a "school official" under this FERPA exception. In particular, 1) Edline provides online hosting services that permit parents to view some of their children's education records, and Edline uses the information from education records to perform those services that would otherwise be provided by school employees; 2) Edline's online access services provide it with "legitimate educational interests" in the information disclosed to Edline by each school; and 3) Edline's use and maintenance of personally identifiable information from education records is subject to the direct control of each school within the District. Each school or the District must ensure that Edline does not redisclose or permit the redisclosure of any personally identifiable information from education records except as specifically authorized by the school or District that is responsible for the contract. The school (or District), in turn, remains responsible for any FERPA violations committed by its service provider. In that regard, we note that Edline takes reasonable and appropriate steps to ensure that information from education records is not disclosed or made available to other parties and does not use the information for any other purpose.
+Based on this guidance, districts in California and across the country use systems like School Loop and stay within the law.
+As noted, School Loop offers a variety of account types and settings that help districts enforce their policies. These accounts have access to different types of content. Access to those accounts can be controlled in various ways.
+School Loop offers roles for certificated employees (teachers, principals, and certificated staff), classified employees (we call those accounts Associates), parents, students, and a class of account we label Afterschool Professional (ASP). ASP accounts are optional for districts and allow districts and parents to approve accounts for tutors, social workers, people who run after school programs, and others they deem fit.
+Parents and students can only see their own grades and attendance information, and other such information published specifically to them as members of classes and schools. Parents and students self-register, and districts are given the choice of approving each account before any access is granted (approval being whatever process they set up to verify that the registrant is legit), or allowing limited access to parents and requiring verification for grades and attendance. Additionally, all parents and students have a tool that allows them to challenge the membership of any other person who registers as a parent. This Challenge tool sends an alert to administrators, and admins can then suspend or delete the account, ignore the challenge, or ask for more information.
+School Loop has account types for administrators, certificated staff, classified staff, other non-staff members, students, and parents. Each type of account is designed to align with privacy regulations. Districts assign these roles, so it is the district's responsibility to ensure that individuals are assigned the correct type of account.
+The combination of account types, access rights, control over account registration, and control over access to content has proved successful at helping hundreds of districts enforce their privacy policies in different ways. In addition, there are a variety of fine-tuning settings that allow you to further limit access, mask the identity of a student, and restrict parent accounts for students.
+Over our history, we have repeatedly refined these tools to help districts use School Loop safely and within their policy guidelines. We are quite concerned over privacy and protecting students, and take our responsibilities to do so seriously.
+Reuse: We do not copy, duplicate, sell, repackage or use for demonstration purposes any district data.
+Transport: We provide a secure channel encrypted via SFTP or SMTP for the district to send us data. We do not have direct access to district systems.
+External Security: We secure our system against external hacking and attacks. We use CloudFlare to protect our services against various denial of service attacks. Our servers are protected behind Juniper and Cisco firewalls and are hardened to restrict access to only those services required for operation. All administrative access occurs over an SSL encrypted connection with dual-factor authentication.
+Internal Security: We secure our system against internal hacking and attacks. District data is protected by segmenting the data into databases that can only be accessed through district portals. When a district uploads encrypted data, the import server determines the appropriate portal and sends the encrypted data to that portal. A process on the portal decrypts and processes the data, importing it into the database where it can be accessed only by that particular portal. The data is never decrypted by the import server and any transitory copy of the data is deleted upon transmission to the portal.
+Database backups are performed on a daily basis and are encrypted in memory using 256-bit AES before they are ever written to disk. Encrypted backups are retained on the backup server for three days, on a local archive server for 45 days, and on an off-site archive server for 90 days. One monthly encrypted backup is retained perpetually while the district is under contract. Access to all backup and archive servers is restricted exclusively to School Loop administrative staff via the aforementioned VPN.
+District Access to District Data: During the term of our contract with a district, the district has complete access to all District Data.
+Handling Data at Contract Termination: Upon termination of an executed contract we will depersonalize all personally identifiable data within 60 days.  We will also destroy the data.
+Section II: AB1584 Compliance
+Data Ownership. In all cases, the district retains ownership and control of all student data.
+Students Access to Student Created Content. Students can download content they create via link available in their DropBox.
+Third-party use of Data. We do not allow third-parties use of student information beyond those purposes defined in the executed contract with the district.
+School Loop receives personally identifiable information directly from parents, legal guardians and students and as exported from the district and imported into School Loop. Parents, legal guardians and students can view any personally identifiable information they enter or that we import from the district.  Parents, legal guardians and students can correct any information they enter.  Corrections to information from the district must be made by the district.
+Data Security. We take the following steps to ensure that student data is kept secure. Confidential Student data is stored in a database that can only be accessed via user login at the school portal or mobile app. The portal application allows access to the student data only by (1) the student (2) the student's parents, (3) certificated members of the school staff (4) After-School Professional who have been approved by approved parents. Districts can set the approval process for parent access to require that parent's establish their identity to a staff member. See the FERPA discussion above for more detail.
+Notification of Breach. The following is our procedure to communicate with affected parents, legal guardians and eligible students if there is an unauthorized disclosure of student records:
+School Loop implements industry-standard security procedures for storing and accessing information to avoid the loss or theft of any data, with an emphasis on protecting personal data, defined as login credentials, permanent student IDs, addresses, phone numbers. If we detect a breach involving the loss or theft of personal data our notification plan is as follows: 
+Within 24 hours:
+School Loop CEO, CTO, IT Lead, and Support Lead will meet to discuss what is known about the breach and identify the steps necessary to resolve the issue. 
+The Support Team will notify affected districts and explain the actions we have taken, our plan moving forward, and the timeline for resolution. Our goal is resolution within 72 hours. 
+The breach will be reported to local law enforcement in conjunction with the district, if required.
+We will notify affected users, explain the impact of the breach, our plan moving forward, and the timeline for resolution, in conjunction with the district. District may elect to notify users independently and directly.  
+If more than 500 users are affected, a notice of breach will be posted on our corporate website, unless such notification is restricted by legal authorities.
+Upon resolution:
+We will notify the district, provide details of the resolution, and outline safeguards to prevent a recurrence.
+We will notify affected users, provide details of the resolution, outline safeguards to prevent a recurrence, and define steps they can take to safeguard their information, all in conjunction with the district, unless such notification is restricted by legal authorities. 
+Within 60 days (CA only):
+In California, by law, if more than 500 residents are affected, the Attorney General will be notified.
+Data and Third-Parties Post Contract. We certify that student records will not be available to a third party once the district contract has expired or is canceled.
+No Target Advertising. We do not use personally identifiable information from student records to target advertising to students.
+Section III: SB 1177 SOPIPA Compliance
+No Target Advertising. We do not sell or carry advertising, and we do not target advertising on our website or any other website using information acquired from students.
+No Student Profile. We do not create a profile for a student except for school purposes as defined in an executed contract with the District.
+No Selling Student Information. We do not sell student information.
+Information Disclosure. We do not disclose student information unless for legal, regulatory, judicial, or safety reasons, and then only to authorized parties and with the approval of the district.
+Reasonable Security Practices. Student information is protected through reasonable security procedures and practices. Student information is stored in a database that is accessible only via the portal that hosts the student's school. And student information transmitted from the district is encrypted before leaving the district computers and not decrypted until it is processed by the portal itself. Any backups of the portal database are encrypted before they are ever stored on disk.
+Deletion of Student Data. Upon termination of an executed contract we will dispose of all personally identifiable data and transfer that data to the district within 60 days of the end of the contract.
+Information Disclosure when Required by Law. We will disclose student information when required by law, and to authorized educational agencies when requested.
+        © 2017-2018    
+Powered by,
+School Loop
+Contact
+Privacy Notice
+User Agreement
+Security & Data Policy
+Previous
+Next
+Slideshow
+Close
