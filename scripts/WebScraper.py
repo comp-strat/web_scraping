@@ -78,7 +78,6 @@ class School(object):
         self.linksClicked = 0
 
     def gatherLinks(self) -> None:
-        driver = prepDriver()
         driver.get(self.mainURL)
         oldElems = driver.find_elements_by_xpath("//a[@href]")
         hrefAttributes = []
