@@ -26,9 +26,10 @@ inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
                "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
                "span", "sub", "sup"]
 
-display = Display(visible=0, size=(1920, 1080))
+
 def prepDriver():
     if platform.startswith("linux"):
+        display = Display(visible=0, size=(1920, 1080))
         display.start()
         chromeOptions = webdriver.ChromeOptions()
         chromeOptions.add_argument('headless')
@@ -102,7 +103,6 @@ class School(object):
                 print(str(hrefAttributes[i]) + (
                     "href") + " was not added as it did not match the main url or was not longer than main url")
         driver.close()
-        display.stop()
         self.totalNumberofLinks = len(self.links)
 
     def clickLinks(self):
@@ -222,7 +222,6 @@ class Link(object):
             driver.get(self.hrefAttribute)
             self.gatherText(driver)
             driver.close()
-            display.stop()
             return True
         elif self.type == "JavaScript":
             if self.index is None:
@@ -240,11 +239,9 @@ class Link(object):
                     link.click()
                     self.gatherText(driver)
                     driver.close()
-                    display.stop()
                 except (WebDriverException, ElementNotVisibleException, ElementNotInteractableException,
                         ElementNotSelectableException):
                     driver.close()
-                    display.stop()
                     raise LinkException(1)
         else:
             raise LinkException(0)
@@ -354,8 +351,6 @@ try:
         diagnosticsFile.write("It took " + str(schoolTimeElapsed) + " to click on the links for this school\n")
 except Exception as e:
     'To general of a try except here, only used to stop display from taking up server resources. '
-    if platform.startswith("linux"):
-        display.sendstop()
     driver = prepDriver()
     driver.quit()
     traceback.print_exc(file=sys.stdout)
