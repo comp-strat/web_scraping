@@ -65,7 +65,7 @@ class School(object):
         self.address = address
         self.mainURL = mainURL
         self.links = []
-        if self.mainURL.split("://")[1] == "www.":
+        if self.mainURL.split("://")[1].startswith("www"):
             self.matcher = self.mainURL.split(".")[1]
         else:
             self.matcher = self.mainURL.split("://")[1].split(".")[0]
@@ -174,7 +174,7 @@ class Link(object):
         self.index = 0
         self.text = ""
         if hrefAttribute.startswith("http"):
-            if (hrefAttribute.split("://")[1] == "www." and hrefAttribute.split(".")[1] == matcher and len(
+            if (hrefAttribute.split("://")[1].startswith("www") and hrefAttribute.split(".")[1] == matcher and len(
                     hrefAttribute) > len(callingURL)) or (
                             hrefAttribute.split("://")[1].split(".")[0] == matcher and len(hrefAttribute) > len(
                         callingURL)):
@@ -319,10 +319,13 @@ try:
         htmlLinksClicked += school.htmlLinksClicked
         scriptLinks += school.scriptLinks
         scriptLinks += school.scriptLinksClicked
-        diagnosticsFile.write(
-            "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
-                school.linksClicked) + " were clicked(" + str(
-                (school.linksClicked / school.totalNumberofLinks) * 100) + "%)\n")
+        try:
+            diagnosticsFile.write(
+                "School " + str(school.name) + " had " + str(school.totalNumberofLinks) + " links and " + str(
+                    school.linksClicked) + " were clicked(" + str(
+                    (school.linksClicked / school.totalNumberofLinks) * 100) + "%)\n")
+        except ZeroDivisionError:
+            diagnosticsFile.write("School " + str(school.name) + " had 0 links. Check the matcher for this school ")
         try:
             diagnosticsFile.write(
                 "There were " + str(school.htmlLinks) + " html links and " + str(
