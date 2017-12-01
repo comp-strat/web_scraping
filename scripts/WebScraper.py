@@ -26,20 +26,16 @@ inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
                "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
                "span", "sub", "sup"]
 
-
-def prepDriver():
-    if platform.startswith("linux"):
-        display = Display(visible=0, size=(1920, 1080))
-        display.start()
-        chromeOptions = webdriver.ChromeOptions()
-        chromeOptions.add_argument('headless')
-        chromeOptions.add_argument('window-size=1920x1080')
-        chromeOptions.add_argument('--no-sandbox')
-        driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chromeOptions)
-        return driver
-    elif platform.startswith("darwin") or platform.startswith("win32"):
-        driver = webdriver.Chrome(executable_path="Driver/chromedriver")
-        return driver
+if platform.startswith("linux"):
+    display = Display(visible=0, size=(1920, 1080))
+    display.start()
+    chromeOptions = webdriver.ChromeOptions()
+    chromeOptions.add_argument('headless')
+    chromeOptions.add_argument('window-size=1920x1080')
+    chromeOptions.add_argument('--no-sandbox')
+    driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chromeOptions)
+elif platform.startswith("darwin") or platform.startswith("win32"):
+    driver = webdriver.Chrome(executable_path="Driver/chromedriver")
 
 
 
@@ -217,7 +213,6 @@ class Link(object):
         self.text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
 
     def click(self) -> bool:
-        driver = prepDriver()
         if self.type == "html":
             driver.get(self.hrefAttribute)
             self.gatherText(driver)
@@ -351,7 +346,8 @@ try:
         diagnosticsFile.write("It took " + str(schoolTimeElapsed) + " to click on the links for this school\n")
 except Exception as e:
     'To general of a try except here, only used to stop display from taking up server resources. '
-    driver = prepDriver()
+    if platform.startswith("linux"):
+        display.sendstop()
     driver.quit()
     traceback.print_exc(file=sys.stdout)
     sys.exit()
