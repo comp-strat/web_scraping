@@ -83,10 +83,13 @@ class School(object):
         hrefAttributes = []
         count = 0
         for x in oldElems:
-            if count == 0:
-                hrefAttributes.append(oldElems[count].get_attribute("href"))
-            else:
-                hrefAttributes.append(newElems[count].get_attribute("href"))
+            try:
+                if count == 0:
+                    hrefAttributes.append(oldElems[count].get_attribute("href"))
+                else:
+                    hrefAttributes.append(newElems[count].get_attribute("href"))
+            except IndexError:
+                break
             newElems = driver.find_elements_by_xpath("//a[@href]")
             count += 1
         for i in range(len(hrefAttributes)):
