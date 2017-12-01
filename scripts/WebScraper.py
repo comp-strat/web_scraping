@@ -101,7 +101,6 @@ class School(object):
             except LinkException:
                 print(str(hrefAttributes[i]) + (
                     "href") + " was not added as it did not match the main url or was not longer than main url")
-        raise ValueError()
         driver.close()
         display.stop()
         self.totalNumberofLinks = len(self.links)
