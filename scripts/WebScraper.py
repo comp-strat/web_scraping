@@ -2,6 +2,7 @@ import csv
 import datetime
 import os
 import sys
+import time
 import traceback
 from sys import platform
 
@@ -36,7 +37,6 @@ if platform.startswith("linux"):
     driver = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chromeOptions)
 elif platform.startswith("darwin") or platform.startswith("win32"):
     driver = webdriver.Chrome(executable_path="Driver/chromedriver")
-
 
 
 def readCSV(filename) -> list:
@@ -305,14 +305,17 @@ now = datetime.datetime.now()
 formattedTime = now.strftime("%Y-%m-%d %H:%M:%S")
 diagnosticsFile = open("diagnostics/" + str(formattedTime) + ".txt", "w")
 diagnosticsFile.write("Program was run at " + formattedTime + "\n")
-startTime = datetime.datetime.now()
+startTime = time.time()
 
 try:
     for school in schools:
         school.gatherLinks()
-        schoolStartTime = datetime.datetime.now()
+        schoolStartTime = time.time()
         school.clickLinks()
-        schoolTimeElapsed = datetime.datetime.now() - startTime
+        endTime = time.time()
+        schoolTimeElapsed = endTime - schoolStartTime
+        print("Elapsed Time :%s (seconds) %s (minutes)" % (
+            str(schoolTimeElapsed), str(schoolTimeElapsed / 60)))
         totalNumberOfLinks += school.totalNumberofLinks
         numberofLinksClicked += school.linksClicked
         htmlLinks += school.htmlLinks
@@ -344,16 +347,19 @@ try:
         except ZeroDivisionError:
             diagnosticsFile.write("This school had 0 JavaScript Links \n")
 
-        diagnosticsFile.write("It took " + str(schoolTimeElapsed) + " to click on the links for this school\n")
+        diagnosticsFile.write("It took " + str(round(schoolTimeElapsed / 60, 3)) +
+                              " minutes to click on the links for this school\n")
 except Exception as e:
-    'To general of a try except here, only used to stop display from taking up server resources. '
+    'To general of a try-except here, only used to stop display from taking up server resources. '
+    timeElapsed = time.time() - startTime
+    diagnosticsFile.write("It took " + str(round(timeElapsed / 60, 3)) + " minutes to click all links")
     if platform.startswith("linux"):
         display.sendstop()
     driver.quit()
     traceback.print_exc(file=sys.stdout)
     sys.exit()
 
-timeElapsed = datetime.datetime.now() - startTime
+timeElapsed = timeit.default_timer() - startTime
 diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
 diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
 try:
@@ -372,5 +378,5 @@ try:
         "% of JavaScript Links Clicked" + str(round((scriptLinks / scriptLinksClicked) * 100, 3)) + "\n")
 except ZeroDivisionError:
     diagnosticsFile.write("There were 0 JavaScript Links")
-diagnosticsFile.write("Time taken to click all links + " + str(timeElapsed))
+diagnosticsFile.write("It took " + str(round(timeElapsed, 3)) + " minutes to click all links")
 diagnosticsFile.close()
