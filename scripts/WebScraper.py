@@ -359,7 +359,7 @@ except Exception as e:
     traceback.print_exc(file=sys.stdout)
     sys.exit()
 
-timeElapsed = timeit.default_timer() - startTime
+timeElapsed = time.time() - startTime
 diagnosticsFile.write("Total number of links:" + str(totalNumberOfLinks) + "\n")
 diagnosticsFile.write("Number of Links Clicked:" + str(numberofLinksClicked) + "\n")
 try:
