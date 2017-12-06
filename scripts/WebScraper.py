@@ -166,6 +166,9 @@ class Link(object):
     to), a fallback url, and an index value (used for JavaScript Links)"""
 
     def __init__(self, hrefAttribute, callingURL, matcher, index):
+        """
+
+        """
         self.type = ""
         self.hrefAttribute = ""
         self.fallbackURL = callingURL
