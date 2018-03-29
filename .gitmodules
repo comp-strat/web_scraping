@@ -1,0 +1,3 @@
+[submodule "scrapy-cluster"]
+	path = scrapy-cluster
+	url = https://github.com/istresearch/scrapy-cluster
