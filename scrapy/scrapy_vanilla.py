@@ -1,8 +1,8 @@
 import scrapy
 from scrapy.linkextractors import LinkExtractor
-from scrapy.spiders import CrawlSpider, Rule
+from scrapy.spiders import Rule #, CrawlSpider
 
-from charter.items import CharterItem
+#from charter.items import CharterItem
 
 
 class CharterSchoolSpider(scrapy.Spider):
