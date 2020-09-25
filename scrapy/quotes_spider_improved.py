@@ -10,7 +10,7 @@ class QuotesSpider(scrapy.Spider):
         name = "quotes"
         def start_requests(self):
             urls = []
-            with open("big.csv", "r") as f:
+            with open("test_urls.csv", "r") as f:
                 reader = csv.reader(f, delimiter="\t",quoting=csv.QUOTE_NONE)
                 r,nr= 0, 0
                 for i, line in enumerate(reader):
