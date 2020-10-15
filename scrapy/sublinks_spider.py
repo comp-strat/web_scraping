@@ -28,13 +28,13 @@ def check(url):
     try:
         urlopen(url)
     except urllib.error.URLError:
-        print(url + " :URLError")
+#         print(url + " :URLError")
         return False
     except urllib.error.HTTPError:
-        print(url +' :HTTPError')
+#         print(url +' :HTTPError')
         return False
     except SocketError:
-        print(url + 'SocketError')
+#         print(url + 'SocketError')
         return False
     return True
 
@@ -53,16 +53,20 @@ def check_url(url):
             return True
     except:
         pass
-    print("Encountered this invalid link: " + str(url) +" ---Error code: " + str(code))
+#     print("Encountered this invalid link: " + str(url) +" ---Error code: " + str(code))
     return False
 
 
 def get_children_links(url_parent, hostname, visited, depth, useless):
+    # useless = list of links that aren't valid according to check_url [added by Psalm]
+    # Every new call to this function through getLinks has depth = 1
+    # Question: Should check_url and depth == 0 be switched? # added by Psalm
+#     print(url_parent, hostname, visited, depth, useless) # [added by Psalm]
     if depth == 0 or url_parent in visited or url_parent in useless:
-        return set()
+        return visited
     if not check_url(url_parent):
         useless.add(url_parent)
-        return set()
+        return visited
 
     #get the html page
 
@@ -73,6 +77,7 @@ def get_children_links(url_parent, hostname, visited, depth, useless):
 
     #we visited url_parent, updated into the set
     visited.add(url_parent)
+#     print("URL successfully added to visited list: ", visited) # added by Psalm
 
     #now checking its children
     for link in soup.findAll('a'):
@@ -85,16 +90,23 @@ def get_children_links(url_parent, hostname, visited, depth, useless):
 
             #check if the link is within the domain (hostname)
             if hostname in current_link:
-                get_children_links(current_link, hostname, visited, depth -1, useless)
+#                 print("We have a sublink") # added by Psalm
+                get_children_links(current_link, hostname, visited, depth -1, useless) 
+
         except:
+#             print("No child link scraped") #added by Psalm
             pass
+#     print("SUBLINKS:", visited) # added by Psalm
     return visited
 
 
 def getLinks(url, depth):
     text,useless = set(), set()
     hostname = urlparse(url).hostname
-    return get_children_links(url, hostname, text, depth, useless)
+
+    return_val = get_children_links(url, hostname, text, depth, useless)
+    return return_val
+    
 
 # adding in the quotes_spider.py into this file to use as a 2nd scrapy spider specifically for sublinks
 inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
@@ -103,10 +115,9 @@ inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
 
 class SublinkSpider(scrapy.Spider):
         name = "sublinks"
-        
         def start_requests(self):
             urls = []
-            with open("url.csv", "r") as f:
+            with open("test_urls.csv", "r") as f:
                 reader = csv.reader(f, delimiter="\t",quoting=csv.QUOTE_NONE)
                 r,nr= 0, 0
                 for i, line in enumerate(reader):
@@ -117,12 +128,13 @@ class SublinkSpider(scrapy.Spider):
                         urls.append(urllst[1])
                         #adding in the sublinks for every valid url to the urls list 
                         for sublink in getLinks(urllst[1], 1):
-                            print("THIS IS A SUBLINK: ",sublink)
+#                             print("THIS IS A SUBLINK: ",sublink)
                             urls.append(sublink)
                         r+=1
                     else:
                         nr+=1
-                print("COUNT IS THIS ", r, "AND THIS ",nr)
+#                 print("COUNT IS THIS ", r, "AND THIS ",nr)
+#             print("----URLs: ", set(urls))
             for url in urls:
                 yield scrapy.Request(url=url, callback=self.parse)
 
@@ -133,6 +145,7 @@ class SublinkSpider(scrapy.Spider):
             with open(filename, 'wb') as f:
                 f.write(response.body)
             self.log('Saved file %s' % filename)
+
             
             # adding the sublink tracer subroutine
             txt_body = response.body
