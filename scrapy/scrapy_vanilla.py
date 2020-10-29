@@ -8,7 +8,7 @@ from scrapy.spiders import Rule #, CrawlSpider
 class CharterSchoolSpider(scrapy.Spider):
     name = 'to be renamed'
     allowed_domains = ['https://ggcs.cyberschool.com/']
-    start_urls = ['http://https://ggcs.cyberschool.com//']
+    start_urls = ['http://https://ggcs.cyberschool.com/']
     rules = [
         Rule(
             LinkExtractor(
