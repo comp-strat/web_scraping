@@ -62,19 +62,11 @@ def get_children_links(url_parent, hostname, visited, depth, useless):
     # Every new call to this function through getLinks has depth = 1
     # Question: Should check_url and depth == 0 be switched? # added by Psalm
 #     print(url_parent, hostname, visited, depth, useless) # [added by Psalm]
-<<<<<<< HEAD
-    if depth == 0 or url_parent in visited or url_parent in useless:
-        return visited
-    if not check_url(url_parent):
-        useless.add(url_parent)
-        return visited
-=======
     if depth == -1 or url_parent in visited or url_parent in useless:
-        return
+        return visited
     if not check_url(url_parent):
         useless.add(url_parent)
-        return
->>>>>>> master
+        return visited
 
     #get the html page
 
@@ -84,12 +76,8 @@ def get_children_links(url_parent, hostname, visited, depth, useless):
     soup = BeautifulSoup(html_page.text, "lxml")
 
     #we visited url_parent, updated into the set
-<<<<<<< HEAD
     visited.add(url_parent)
-=======
-    visited.append(url_parent)
->>>>>>> master
-#     print("URL successfully added to visited list: ", visited) # added by Psalm
+    print("URL successfully added to visited list: ", visited) # added by Psalm
 
     #now checking its children
     for link in soup.findAll('a'):
@@ -108,23 +96,18 @@ def get_children_links(url_parent, hostname, visited, depth, useless):
         except:
 #             print("No child link scraped") #added by Psalm
             pass
-<<<<<<< HEAD
-#     print("SUBLINKS:", visited) # added by Psalm
+#   print("SUBLINKS:", visited) # added by Psalm
     return visited
-=======
->>>>>>> master
 
 
-def getLinks(url, depth, urls):
-    useless = set()
+def getLinks(url, depth):
+    text,useless = set(), set()
     hostname = urlparse(url).hostname
 
-<<<<<<< HEAD
     return_val = get_children_links(url, hostname, text, depth, useless)
+    print(url + "returns ")
+    print(return_val)
     return return_val
-=======
-    get_children_links(url, hostname, urls, depth, useless)
->>>>>>> master
     
 
 # adding in the quotes_spider.py into this file to use as a 2nd scrapy spider specifically for sublinks
@@ -133,7 +116,7 @@ inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
                                       "span", "sub", "sup"]
 
 class SublinkSpider(scrapy.Spider):
-        name = "sublinks"
+        name = "sublinks-p"
         def start_requests(self):
             urls = []
             with open("test_urls.csv", "r") as f:
@@ -144,20 +127,17 @@ class SublinkSpider(scrapy.Spider):
                         continue
                     urllst = line[0].split(",",1)
                     if "http" in urllst[1]:
-<<<<<<< HEAD
                         urls.append(urllst[1])
                         #adding in the sublinks for every valid url to the urls list 
-                        for sublink in getLinks(urllst[1], 1):
-#                             print("THIS IS A SUBLINK: ",sublink)
+                        for sublink in getLinks(urllst[1], 3):
+#                            print("THIS IS A SUBLINK: ", sublink)
                             urls.append(sublink)
-=======
-                        getLinks(urllst[1], 1, urls)
->>>>>>> master
+                            #print("current URLs:", urls)
                         r+=1
                     else:
                         nr+=1
 #                 print("COUNT IS THIS ", r, "AND THIS ",nr)
-#             print("----URLs: ", set(urls))
+            print("----URLs: ", set(urls)) # added by Psalm
             for url in urls:
                 yield scrapy.Request(url=url, callback=self.parse)
 
@@ -191,7 +171,8 @@ class SublinkSpider(scrapy.Spider):
             
             txtfilename = '%s.txt' % page
             with open(txtfilename, 'w') as f:
-                f.write(visible_text)
+                f.write("")
+                #f.write("\n" + response.url + ": " + visible_text)
 
 
 
