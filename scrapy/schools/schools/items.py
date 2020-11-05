@@ -6,8 +6,12 @@
 from scrapy.item import Item, Field
 
 class CharterItem(Item):
-    url_from = Field()
-    url_to = Field()
+    """
+    The url of the item, the text with tags stripped,
+    and the depth as defined by DepthMiddleware. 
+    """
+    url = Field()
     text = Field()
+    depth = Field()
     
     

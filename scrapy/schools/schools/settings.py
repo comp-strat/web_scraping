@@ -46,9 +46,9 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    'schools.middlewares.SchoolsSpiderMiddleware': 543,
-#}
+SPIDER_MIDDLEWARES = {
+    'scrapy.spidermiddlewares.depth.DepthMiddleware': 1
+}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html

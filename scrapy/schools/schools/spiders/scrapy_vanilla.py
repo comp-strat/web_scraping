@@ -39,7 +39,9 @@ class CharterSchoolSpider(CrawlSpider):
 
         item = CharterItem()
 
-        item['url_from'] = response.url
+        item['url'] = response.url
         soup = BeautifulSoup(response.body, 'lxml')
         item['text'] = soup.text
+        # uses DepthMiddleware
+        item['depth'] = response.request.meta['depth']
         yield item
