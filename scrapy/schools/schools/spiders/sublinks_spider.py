@@ -177,11 +177,11 @@ class SublinkSpider(scrapy.Spider):
             
             txtfilename = '%s/%s.txt' % (base_url, base_url)
             
-                
+            # To start over, use f.write(" ")!
             with open(txtfilename, 'w') as f:
-                f.write(" ")
-                #f.write(visible_text)
-                #f.write("\n")
+                #f.write(" ")
+                f.write(visible_text)
+                f.write("\n")
 
 
 
