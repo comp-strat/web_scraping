@@ -1,3 +1,4 @@
+from bs4 import BeautifulSoup
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
@@ -15,9 +16,9 @@ class CharterSchoolSpider(CrawlSpider):
         'emmajewelcharter.com/pages/Emma_Jewel_Charter'
     ]
     start_urls = [
-        'http://www.charlottesecondary.org/', 
-        'http://www.kippcharlotte.org/',
-        'http://www.socratesacademy.us/'
+        'http://www.charlottesecondary.org/'
+#         'http://www.kippcharlotte.org/',
+#         'http://www.socratesacademy.us/'
 #         'https://ggcs.cyberschool.com/',
 #         'http://www.emmajewelcharter.com/pages/Emma_Jewel_Charter'
     ]
@@ -39,5 +40,6 @@ class CharterSchoolSpider(CrawlSpider):
         item = CharterItem()
 
         item['url_from'] = response.url
-
+        soup = BeautifulSoup(response.body, 'lxml')
+        item['text'] = soup.text
         yield item

@@ -8,5 +8,6 @@ from scrapy.item import Item, Field
 class CharterItem(Item):
     url_from = Field()
     url_to = Field()
+    text = Field()
     
     
