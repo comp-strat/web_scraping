@@ -175,13 +175,13 @@ class SublinkSpider(scrapy.Spider):
             visible_text = visible_text.split(random_string)
             visible_text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
             
-            txtfilename = '%s/%s.txt' % (base_url, base_url)
+            txtfilename = '%s/%s.txt' % (base_url, page)
             
             # To start over, use f.write(" ")!
             with open(txtfilename, 'w') as f:
-                #f.write(" ")
-                f.write(visible_text)
-                f.write("\n")
+                f.write(" ")
+                #f.write(visible_text)
+                #f.write("\n")
 
 
 
