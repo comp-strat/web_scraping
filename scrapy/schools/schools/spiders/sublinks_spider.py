@@ -57,16 +57,16 @@ def check_url(url):
     return False
 
 
-def get_children_links(url_parent, hostname, visited, depth, useless):
+def get_children_links(url_parent, hostname, urls, depth, useless):
     # useless = list of links that aren't valid according to check_url [added by Psalm]
     # Every new call to this function through getLinks has depth = 1
     # Question: Should check_url and depth == 0 be switched? # added by Psalm
 #     print(url_parent, hostname, visited, depth, useless) # [added by Psalm]
-    if depth == 0 or url_parent in visited or url_parent in useless:
-        return visited
+    if depth == -1 or url_parent in urls or url_parent in useless:
+        return urls
     if not check_url(url_parent):
         useless.add(url_parent)
-        return visited
+        return urls
 
     #get the html page
 
@@ -76,7 +76,7 @@ def get_children_links(url_parent, hostname, visited, depth, useless):
     soup = BeautifulSoup(html_page.text, "lxml")
 
     #we visited url_parent, updated into the set
-    visited.add(url_parent)
+    urls.add(url_parent)
 #     print("URL successfully added to visited list: ", visited) # added by Psalm
 
     #now checking its children
@@ -91,20 +91,20 @@ def get_children_links(url_parent, hostname, visited, depth, useless):
             #check if the link is within the domain (hostname)
             if hostname in current_link:
 #                 print("We have a sublink") # added by Psalm
-                get_children_links(current_link, hostname, visited, depth -1, useless) 
+                get_children_links(current_link, hostname, urls, depth -1, useless) 
 
         except:
 #             print("No child link scraped") #added by Psalm
             pass
 #     print("SUBLINKS:", visited) # added by Psalm
-    return visited
+    return urls
 
 
-def getLinks(url, depth):
-    text,useless = set(), set()
+def getLinks(url, maxdepth):
+    urls,useless = set(), set()
     hostname = urlparse(url).hostname
 
-    return_val = get_children_links(url, hostname, text, depth, useless)
+    return_val = get_children_links(url, hostname, urls, maxdepth, useless)
     return return_val
     
 
@@ -127,7 +127,7 @@ class SublinkSpider(scrapy.Spider):
                     if "http" in urllst[1]:
                         urls.append(urllst[1])
                         #adding in the sublinks for every valid url to the urls list 
-                        for sublink in getLinks(urllst[1], 1):
+                        for sublink in getLinks(urllst[1], 3): # GOAL: maxdepth = 10
 #                             print("THIS IS A SUBLINK: ",sublink)
                             urls.append(sublink)
                         r+=1
@@ -136,12 +136,21 @@ class SublinkSpider(scrapy.Spider):
 #                 print("COUNT IS THIS ", r, "AND THIS ",nr)
 #             print("----URLs: ", set(urls))
             for url in urls:
+               
                 yield scrapy.Request(url=url, callback=self.parse)
 
 
         def parse(self, response):
+            print(response.url)
+            base_url = re.findall(r'(http|ftp)s?://(.*?)/', response.url)[0][1]
+            print("URL:", base_url)
+            if not os.path.exists(base_url):
+                os.makedirs(base_url)
+            
             page = response.url.split("/")[-2]
-            filename = '%s.html' % page
+            print(page)
+            filename = '%s/%s.html' % (base_url, page)
+           
             with open(filename, 'wb') as f:
                 f.write(response.body)
             self.log('Saved file %s' % filename)
@@ -166,9 +175,13 @@ class SublinkSpider(scrapy.Spider):
             visible_text = visible_text.split(random_string)
             visible_text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
             
-            txtfilename = '%s.txt' % page
+            txtfilename = '%s/%s.txt' % (base_url, base_url)
+            
+                
             with open(txtfilename, 'w') as f:
-                f.write(visible_text)
+                f.write(" ")
+                #f.write(visible_text)
+                #f.write("\n")
 
 
 
