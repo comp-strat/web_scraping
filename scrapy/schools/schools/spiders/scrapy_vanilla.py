@@ -30,11 +30,9 @@ CREDITS
     Inspired by script in this private repo: https://github.com/lisasingh/covid-19/blob/master/scraping/generic.py
 
 TODO
-    - Use current text parser (see `scrapy_vanilla.py`)
-    - Incorporate link recursion using `LinkExtractor` (https://docs.scrapy.org/en/latest/topics/link-extractors.html)
+    - Alternative to hardcoding allowed_domains?
+    - Make the CSV_INPUT a command line argument.
     - Fine tune which items to keep (https://medium.com/swlh/how-to-use-scrapy-items-05-python-scrapy-tutorial-for-beginners-f25ff2dceaa9)
-    - Configure not to follow robots.txt (customize settings?)
-    - Spoof the user-agent to prevent websites blocking scrapy
     - Indicate failed responses -- currently it simply does not append to output
     - Scrape text from PDFs and record that was PDF (as in https://github.com/URAP-charter/scrapy-cluster/blob/master/crawler/crawling/spiders/parsing_link_spider_w_im.py)
 """
@@ -52,18 +50,11 @@ class CharterSchoolSpider(CrawlSpider):
     name = 'schoolspider'
     allowed_domains = [
         'charlottesecondary.org', 
-        'kippcharlotte.org', # may not be crawled
+        'kippcharlotte.org',
         'socratesacademy.us',
         'ggcs.cyberschool.com',
         'emmajewelcharter.com/pages/Emma_Jewel_Charter'
     ]
-#     start_urls = [
-#         'http://www.charlottesecondary.org/'
-# #         'http://www.kippcharlotte.org/',
-# #         'http://www.socratesacademy.us/'
-# #         'https://ggcs.cyberschool.com/',
-# #         'http://www.emmajewelcharter.com/pages/Emma_Jewel_Charter'
-#     ]
     rules = [
         Rule(
             LinkExtractor(
@@ -76,10 +67,14 @@ class CharterSchoolSpider(CrawlSpider):
     ]
     def start_requests(self):
         """
-        Generate request URLs from input CSV file
-        Rows in the csv are 1d arrays.
-        ex: row == ['3.70014E+11,http://www.charlottesecondary.org/']
+        Generate request URLs from input CSV file.
+        
+        Note about the CSV's format:
+        1. The first row is meta data that is ignored.
+        2. Rows in the csv are 1d arrays.
+        ex: row == ['3.70014E+11,http://www.charlottesecondary.org/'].
         """
+        requests = []
         with open(CSV_INPUT, 'r') as f:
             reader = csv.reader(f, delimiter="\t",quoting=csv.QUOTE_NONE)
             first_row = True
@@ -91,11 +86,13 @@ class CharterSchoolSpider(CrawlSpider):
                 url = row.split(",")[1]
                 # Generate request and include original data as kwargs
                 # `dont_filter` ensures there are no duplicate requests
-                yield scrapy.Request(
+                request = scrapy.Request(
                     url=url,
                     dont_filter=True,
                     callback=self.parse_items
                 )
+                requests.append(request)
+        return requests
 
 
     # note: make sure we ignore robot.txt
