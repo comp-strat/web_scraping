@@ -15,8 +15,17 @@ USAGE
     Pass in the start_urls from a a csv file.
     For example, within web_scraping/scrapy/schools/school, run:
     
-        scrapy crawl schoolspider -a input_csv=spiders/test_urls.csv
+        scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv
         
+    To append output to a file, run:
+        
+        scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv -o schoolspider_output.json
+   
+    This output can be saved into other file types as well.
+    
+    NOTE: -o will APPEND output. This can be misleading(!) when debugging since the output
+          file may contain more than just the most recent output.
+
     # Run spider with logging, and append to an output JSON file
     scrapy runspider generic.py \
         -L WARNING \
@@ -34,7 +43,6 @@ CREDITS
 
 TODO
     - Alternative to hardcoding allowed_domains?
-    - Make the CSV_INPUT a command line argument.
     - Fine tune which items to keep (https://medium.com/swlh/how-to-use-scrapy-items-05-python-scrapy-tutorial-for-beginners-f25ff2dceaa9)
     - Indicate failed responses -- currently it simply does not append to output
     - Scrape text from PDFs and record that was PDF (as in https://github.com/URAP-charter/scrapy-cluster/blob/master/crawler/crawling/spiders/parsing_link_spider_w_im.py)
@@ -86,7 +94,7 @@ class CharterSchoolSpider(CrawlSpider):
         2. Rows in the csv are 1d arrays.
         ex: row == ['3.70014E+11,http://www.charlottesecondary.org/'].
         
-        Note: start_requests() isn't use since it doesn't work
+        Note: start_requests() isn't used since it doesn't work
         well with CrawlSpider Rules.
         """
         if not csv_input:
