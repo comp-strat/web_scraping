@@ -12,8 +12,11 @@ CSV is expected to be structured with a school ID (called NCES school number of 
 |   1225558292157620224 | http://www.emmajewelcharter.com/pages/Emma_Jewel_Charter |
 
 USAGE
-    Currently, can only run in web_scraping/scrapy/schools/school.
-
+    Pass in the start_urls from a a csv file.
+    For example, within web_scraping/scrapy/schools/school, run:
+    
+        scrapy crawl schoolspider -a input_csv=spiders/test_urls.csv
+        
     # Run spider with logging, and append to an output JSON file
     scrapy runspider generic.py \
         -L WARNING \
@@ -45,7 +48,6 @@ from scrapy.spiders import Rule, CrawlSpider
 
 from schools.items import CharterItem
 
-CSV_INPUT = "spiders/test_urls.csv"
 class CharterSchoolSpider(CrawlSpider):
     name = 'schoolspider'
     allowed_domains = [
@@ -65,17 +67,32 @@ class CharterSchoolSpider(CrawlSpider):
             callback="parse_items"
         )
     ]
-    def start_requests(self):
+    def __init__(self, csv_input=None, *args, **kwargs):
         """
-        Generate request URLs from input CSV file.
+        Overrides default constructor to set start_urls.
+        """
+        super(CharterSchoolSpider, self).__init__(*args, **kwargs)
+        self.start_urls = self.generate_start_urls(csv_input)
+
         
-        Note about the CSV's format:
+        
+    def generate_start_urls(self, csv_input):
+        """
+        Generate request URLs from the input CSV file.
+        csv_input is the path string to this file.
+        
+        CSV's format:
         1. The first row is meta data that is ignored.
         2. Rows in the csv are 1d arrays.
         ex: row == ['3.70014E+11,http://www.charlottesecondary.org/'].
+        
+        Note: start_requests() isn't use since it doesn't work
+        well with CrawlSpider Rules.
         """
-        requests = []
-        with open(CSV_INPUT, 'r') as f:
+        if not csv_input:
+            return []
+        urls = []
+        with open(csv_input, 'r') as f:
             reader = csv.reader(f, delimiter="\t",quoting=csv.QUOTE_NONE)
             first_row = True
             for row in reader:
@@ -84,15 +101,8 @@ class CharterSchoolSpider(CrawlSpider):
                     continue
                 row = row[0]
                 url = row.split(",")[1]
-                # Generate request and include original data as kwargs
-                # `dont_filter` ensures there are no duplicate requests
-                request = scrapy.Request(
-                    url=url,
-                    dont_filter=True,
-                    callback=self.parse_items
-                )
-                requests.append(request)
-        return requests
+                urls.append(url)
+        return urls
 
 
     # note: make sure we ignore robot.txt
@@ -100,7 +110,6 @@ class CharterSchoolSpider(CrawlSpider):
     def parse_items(self, response):
 
         item = CharterItem()
-
         item['url'] = response.url
         soup = BeautifulSoup(response.body, 'lxml')
         item['text'] = soup.text
