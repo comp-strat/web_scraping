@@ -42,11 +42,15 @@ CREDITS
     Inspired by script in this private repo: https://github.com/lisasingh/covid-19/blob/master/scraping/generic.py
 
 TODO
+    - Make sure urls in start_urls are also scraped.
     - Alternative to hardcoding allowed_domains?
     - Fine tune which items to keep (https://medium.com/swlh/how-to-use-scrapy-items-05-python-scrapy-tutorial-for-beginners-f25ff2dceaa9)
     - Indicate failed responses -- currently it simply does not append to output
     - Scrape text from PDFs and record that was PDF (as in https://github.com/URAP-charter/scrapy-cluster/blob/master/crawler/crawling/spiders/parsing_link_spider_w_im.py)
 """
+
+# This is a 3rd party library
+import tldextract
 
 import csv
 from bs4 import BeautifulSoup
@@ -58,13 +62,6 @@ from schools.items import CharterItem
 
 class CharterSchoolSpider(CrawlSpider):
     name = 'schoolspider'
-    allowed_domains = [
-        'charlottesecondary.org', 
-        'kippcharlotte.org',
-        'socratesacademy.us',
-        'ggcs.cyberschool.com',
-        'emmajewelcharter.com/pages/Emma_Jewel_Charter'
-    ]
     rules = [
         Rule(
             LinkExtractor(
@@ -77,12 +74,23 @@ class CharterSchoolSpider(CrawlSpider):
     ]
     def __init__(self, csv_input=None, *args, **kwargs):
         """
-        Overrides default constructor to set start_urls.
+        Overrides default constructor to set start_urls
         """
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
         self.start_urls = self.generate_start_urls(csv_input)
+        self.allowed_domains = [self.get_domain(url) for url in self.start_urls]
+    
+    # note: make sure we ignore robot.txt
+    # Method for parsing items
+    def parse_items(self, response):
 
-        
+        item = CharterItem()
+        item['url'] = response.url
+        soup = BeautifulSoup(response.body, 'lxml')
+        item['text'] = soup.text
+        # uses DepthMiddleware
+        item['depth'] = response.request.meta['depth']
+        yield item    
         
     def generate_start_urls(self, csv_input):
         """
@@ -112,15 +120,20 @@ class CharterSchoolSpider(CrawlSpider):
                 urls.append(url)
         return urls
 
+    def get_domain(self, url):
+        """
+        Given the url, gets the top level domain using the
+        tldextract library.
+        
+        Ex:
+        >>> get_domain('http://www.charlottesecondary.org/')
+        charlottesecondary.org
+        >>> get_domain('https://www.socratesacademy.us/our-school')
+        socratesacademy.us
+        
+        """
+        extracted = tldextract.extract(url)
+        return f'{extracted.domain}.{extracted.suffix}'
 
-    # note: make sure we ignore robot.txt
-    # Method for parsing items
-    def parse_items(self, response):
+    
 
-        item = CharterItem()
-        item['url'] = response.url
-        soup = BeautifulSoup(response.body, 'lxml')
-        item['text'] = soup.text
-        # uses DepthMiddleware
-        item['depth'] = response.request.meta['depth']
-        yield item
