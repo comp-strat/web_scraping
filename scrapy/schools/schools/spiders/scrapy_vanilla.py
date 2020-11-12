@@ -43,7 +43,6 @@ CREDITS
 
 TODO
     - Make sure urls in start_urls are also scraped.
-    - Alternative to hardcoding allowed_domains?
     - Fine tune which items to keep (https://medium.com/swlh/how-to-use-scrapy-items-05-python-scrapy-tutorial-for-beginners-f25ff2dceaa9)
     - Indicate failed responses -- currently it simply does not append to output
     - Scrape text from PDFs and record that was PDF (as in https://github.com/URAP-charter/scrapy-cluster/blob/master/crawler/crawling/spiders/parsing_link_spider_w_im.py)
@@ -51,6 +50,7 @@ TODO
 
 # This is a 3rd party library
 import tldextract
+import uuid 
 
 import csv
 from bs4 import BeautifulSoup
@@ -74,7 +74,7 @@ class CharterSchoolSpider(CrawlSpider):
     ]
     def __init__(self, csv_input=None, *args, **kwargs):
         """
-        Overrides default constructor to set start_urls
+        Overrides default constructor to set start_urls.
         """
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
         self.start_urls = self.generate_start_urls(csv_input)
@@ -86,8 +86,7 @@ class CharterSchoolSpider(CrawlSpider):
 
         item = CharterItem()
         item['url'] = response.url
-        soup = BeautifulSoup(response.body, 'lxml')
-        item['text'] = soup.text
+        item['text'] = self.get_text(response)
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
         yield item    
@@ -99,7 +98,7 @@ class CharterSchoolSpider(CrawlSpider):
         
         CSV's format:
         1. The first row is meta data that is ignored.
-        2. Rows in the csv are 1d arrays.
+        2. Rows in the csv are 1d arrays with one element.
         ex: row == ['3.70014E+11,http://www.charlottesecondary.org/'].
         
         Note: start_requests() isn't used since it doesn't work
@@ -134,6 +133,31 @@ class CharterSchoolSpider(CrawlSpider):
         """
         extracted = tldextract.extract(url)
         return f'{extracted.domain}.{extracted.suffix}'
+    
+    def get_text(self, response):
+#         # adding the sublink tracer subroutine
+#         txt_body = response.body
+#         # Remove inline tags
+#         txt_body = BeautifulSoup(txt_body, "lxml").text
 
+#         # Create random string for tag delimiter
+#         random_string = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=75))
+#         random_string = str(uuid.uuid4().hex.upper())
+#         soup = BeautifulSoup(txt_body, 'lxml')
+
+#         # remove non-visible tags
+#         [s.extract() for s in soup(['head', 'title', '[document]'])]
+#         visible_text = soup.getText(random_string).replace("\n", "")
+#         visible_text = visible_text.split(random_string)
+#         visible_text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
+#         return visible_text
+        soup = BeautifulSoup(response.body)
+        [s.extract() for s in soup(['style', 'script', '[document]', 'head', 'title'])]
+        visible_text = soup.getText()
+        visible_text = visible_text.replace("\n", "")
+        visible_text = visible_text.replace("\t", "")
+        return visible_text
+
+                                     
     
 
