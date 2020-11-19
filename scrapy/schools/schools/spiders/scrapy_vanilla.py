@@ -135,29 +135,21 @@ class CharterSchoolSpider(CrawlSpider):
         return f'{extracted.domain}.{extracted.suffix}'
     
     def get_text(self, response):
-#         # adding the sublink tracer subroutine
-#         txt_body = response.body
-#         # Remove inline tags
-#         txt_body = BeautifulSoup(txt_body, "lxml").text
-
-#         # Create random string for tag delimiter
-#         random_string = ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase + string.digits, k=75))
-#         random_string = str(uuid.uuid4().hex.upper())
-#         soup = BeautifulSoup(txt_body, 'lxml')
-
-#         # remove non-visible tags
-#         [s.extract() for s in soup(['head', 'title', '[document]'])]
-#         visible_text = soup.getText(random_string).replace("\n", "")
-#         visible_text = visible_text.split(random_string)
-#         visible_text = "\n".join(list(filter(lambda vt: vt.split() != [], visible_text)))
-#         return visible_text
+        """
+        Gets the readable text from a website's body.
+        Ex:
+        if response.body == "\u00a0OUR \tSCHOOLPARENTSACADEMICSSUPPORT \u200b\u200bOur Mission"
+        >>> get_text(response)
+        OUR SCHOOLPARENTSACADEMICSSUPPORT Our Mission
+        """
         soup = BeautifulSoup(response.body)
-        [s.extract() for s in soup(['style', 'script', '[document]', 'head', 'title'])]
-        visible_text = soup.getText()
+        visible_text = soup.get_text()
+        # Remove tabs, linebreaks, and ascii (such as "\u00").
         visible_text = visible_text.replace("\n", "")
         visible_text = visible_text.replace("\t", "")
+        visible_text = (visible_text.encode('ascii', 'ignore')).decode("utf-8")
         return visible_text
 
-                                     
+
     
 
