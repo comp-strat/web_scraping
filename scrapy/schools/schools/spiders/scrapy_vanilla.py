@@ -90,7 +90,23 @@ class CharterSchoolSpider(CrawlSpider):
         item['text'] = soup.text
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
+        print("DEPTH: ", response.request.meta['depth'])
+        
+        #item['image_urls'] = response.xpath('//*[@itemprop="image"][1]/@src').extract()
+        item['image_urls'] = []
+        for image in response.xpath('//img/@src').extract():
+            # make each one into a full URL and add to item[]
+            item['image_urls'].append(response.urljoin(image))
+  
+        
         yield item    
+    
+    def url_join(self, urls, response):
+        joined_urls = []
+        for url in urls:
+            joined_urls.append(response.urljoin(url))
+
+        return joined_urls
         
     def generate_start_urls(self, csv_input):
         """

@@ -44,17 +44,28 @@ ROBOTSTXT_OBEY = False
 #   'Accept-Language': 'en',
 #}
 
-# Enable or disable spider middlewares
+# Enable or disable spider middlewares. These are set by default, but explicitly stated for the sake of highlighting what needs configuration.
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
-    'scrapy.spidermiddlewares.depth.DepthMiddleware': 1
+    'scrapy.spidermiddlewares.depth.DepthMiddleware': 100, 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware': 200, 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware': 300
+  
 }
+
+# Configure depth 
+DEPTH_LIMIT = 10
+
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'schools.middlewares.SchoolsDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   'schools.middlewares.SchoolsDownloaderMiddleware': 543, 'scrapy.downloadermiddlewares.retry.RetryMiddleware': 4
+}
+
+# Configure times retried after receiving an error
+RETRY_TIMES = 5
+
+# Configure delay before downloading.
+DOWNLOADS_DELAY = 10
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -70,16 +81,16 @@ SPIDER_MIDDLEWARES = {
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
-# AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_ENABLED = True
 # The initial download delay
-#AUTOTHROTTLE_START_DELAY = 5
+AUTOTHROTTLE_START_DELAY = 5
 # The maximum download delay to be set in case of high latencies
-#AUTOTHROTTLE_MAX_DELAY = 60
+AUTOTHROTTLE_MAX_DELAY = 60
 # The average number of requests Scrapy should be sending in parallel to
 # each remote server
-#AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
+AUTOTHROTTLE_TARGET_CONCURRENCY = 1.0
 # Enable showing throttling stats for every response received:
-#AUTOTHROTTLE_DEBUG = False
+AUTOTHROTTLE_DEBUG = False
 
 # Enable and configure HTTP caching (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
@@ -88,3 +99,14 @@ SPIDER_MIDDLEWARES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+# Item pipelines
+ITEM_PIPELINES = {
+    'scrapy.pipelines.images.ImagesPipeline': 1,
+'scrapy.pipelines.files.FilesPipeline': 2, 
+    #'stack.pipelines.MongoDBPipeline': 3, 
+}
+
+IMAGES_STORE = 'images'
+FILES_STORE = 'files'
+

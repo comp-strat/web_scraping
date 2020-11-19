@@ -20,3 +20,10 @@ class CharterItem(Item):
     id = Field() # int this is school id or ncessch
     timestamp = Field() # datetime
     date_archived = Field() # datetime
+    
+    # Collecting Media
+    image_urls = Field()
+    images = Field()
+    
+    file_urls = Field()
+    files = Field()
