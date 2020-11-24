@@ -91,14 +91,27 @@ class CharterSchoolSpider(CrawlSpider):
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
         print("DEPTH: ", response.request.meta['depth'])
-        
-        #item['image_urls'] = response.xpath('//*[@itemprop="image"][1]/@src').extract()
+      
+        # iterate over the list of images and append urls
         item['image_urls'] = []
         for image in response.xpath('//img/@src').extract():
             # make each one into a full URL and add to item[]
             item['image_urls'].append(response.urljoin(image))
-  
+        #file_url = response.css('.downloadline::attr(href)').get()
+        #file_url = response.urljoin(file_url)
+        #print(file_url)
+        #file_extension = file_url.split('.')[-1]
+        #print("file extension", file_extension)
+        #if file_extension not in ('pdf'):
+        #    yield item
+        #item['file_urls'] = [file_url]
         
+        item['file_urls'] = []
+        selector = 'a[href$=".pdf"]::attr(href)'
+        print("hrepresent", response.css(selector).extract())
+        for href in response.css(selector).extract():
+            item['file_urls'] += [href]
+    
         yield item    
     
     def url_join(self, urls, response):
