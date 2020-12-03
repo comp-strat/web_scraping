@@ -48,10 +48,12 @@ TODO
     - Scrape text from PDFs and record that was PDF (as in https://github.com/URAP-charter/scrapy-cluster/blob/master/crawler/crawling/spiders/parsing_link_spider_w_im.py)
 """
 
-# This is a 3rd party library
+# The follow two imports are 3rd party libraries
 import tldextract
-import uuid 
+import regex
 
+import uuid 
+import re
 import csv
 from bs4 import BeautifulSoup
 import scrapy
@@ -89,36 +91,7 @@ class CharterSchoolSpider(CrawlSpider):
         item['text'] = self.get_text(response)
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
-        print("DEPTH: ", response.request.meta['depth'])
-      
-        # iterate over the list of images and append urls
-        item['image_urls'] = []
-        for image in response.xpath('//img/@src').extract():
-            # make each one into a full URL and add to item[]
-            item['image_urls'].append(response.urljoin(image))
-        #file_url = response.css('.downloadline::attr(href)').get()
-        #file_url = response.urljoin(file_url)
-        #print(file_url)
-        #file_extension = file_url.split('.')[-1]
-        #print("file extension", file_extension)
-        #if file_extension not in ('pdf'):
-        #    yield item
-        #item['file_urls'] = [file_url]
-        
-        item['file_urls'] = []
-        selector = 'a[href$=".pdf"]::attr(href)'
-        print("hrepresent", response.css(selector).extract())
-        for href in response.css(selector).extract():
-            item['file_urls'] += [href]
-    
         yield item    
-    
-    def url_join(self, urls, response):
-        joined_urls = []
-        for url in urls:
-            joined_urls.append(response.urljoin(url))
-
-        return joined_urls
         
     def generate_start_urls(self, csv_input):
         """
@@ -158,7 +131,6 @@ class CharterSchoolSpider(CrawlSpider):
         charlottesecondary.org
         >>> get_domain('https://www.socratesacademy.us/our-school')
         socratesacademy.us
-        
         """
         extracted = tldextract.extract(url)
         return f'{extracted.domain}.{extracted.suffix}'
@@ -167,16 +139,22 @@ class CharterSchoolSpider(CrawlSpider):
         """
         Gets the readable text from a website's body.
         Ex:
-        if response.body == "\u00a0OUR \tSCHOOLPARENTSACADEMICSSUPPORT \u200b\u200bOur Mission"
+        if response.body == "\u00a0OUR \tSCHOOL\t\t\tPARENTSACADEMICSSUPPORT \u200b\u200bOur Mission"
         >>> get_text(response)
         OUR SCHOOLPARENTSACADEMICSSUPPORT Our Mission
+        
+        For another example, see filter_text_ex.txt
         """
         soup = BeautifulSoup(response.body)
         visible_text = soup.get_text()
-        # Remove tabs, linebreaks, and ascii (such as "\u00").
-        visible_text = visible_text.replace("\n", "")
-        visible_text = visible_text.replace("\t", "")
+        # Replace all consecutive white spaces or "|"s with a single space. This includes tabs and linebreaks.
+        visible_text = regex.sub(r"[\s|\|]+", " ", visible_text)
+        # Remove json strings: https://stackoverflow.com/questions/21994677/find-json-strings-in-a-string
+        # Uses the regex 3rd party library to support recursive Regex.
+        visible_text = regex.sub(r"{(?:[^{}]*|(?R))*}", " ", visible_text)
+        # Remove ascii (such as "\u00").
         visible_text = (visible_text.encode('ascii', 'ignore')).decode("utf-8")
+
         return visible_text
 
 
