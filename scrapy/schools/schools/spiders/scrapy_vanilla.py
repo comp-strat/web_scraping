@@ -137,25 +137,26 @@ class CharterSchoolSpider(CrawlSpider):
     
     def get_text(self, response):
         """
-        Gets the readable text from a website's body.
+        Gets the readable text from a website's body and filters it.
         Ex:
         if response.body == "\u00a0OUR \tSCHOOL\t\t\tPARENTSACADEMICSSUPPORT \u200b\u200bOur Mission"
         >>> get_text(response)
-        OUR SCHOOLPARENTSACADEMICSSUPPORT Our Mission
+        'OUR SCHOOL PARENTSACADEMICSSUPPORT Our Mission'
         
         For another example, see filter_text_ex.txt
         """
         soup = BeautifulSoup(response.body)
         visible_text = soup.get_text()
+        # Remove ascii (such as "\u00").
+        filtered_text = (visible_text.encode('ascii', 'ignore')).decode("utf-8")
         # Replace all consecutive white spaces or "|"s with a single space. This includes tabs and linebreaks.
-        visible_text = regex.sub(r"[\s|\|]+", " ", visible_text)
+        filtered_text = regex.sub(r"[\s|\|]+", " ", filtered_text)
         # Remove json strings: https://stackoverflow.com/questions/21994677/find-json-strings-in-a-string
         # Uses the regex 3rd party library to support recursive Regex.
-        visible_text = regex.sub(r"{(?:[^{}]*|(?R))*}", " ", visible_text)
-        # Remove ascii (such as "\u00").
-        visible_text = (visible_text.encode('ascii', 'ignore')).decode("utf-8")
+        filtered_text = regex.sub(r"{(?:[^{}]*|(?R))*}", " ", filtered_text)
 
-        return visible_text
+        # Remove spaces at the beginning and at the end of the string.
+        return filtered_text.strip()
 
 
     

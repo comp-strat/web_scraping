@@ -1,5 +1,4 @@
 # Define your item pipelines here
-#
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
@@ -13,7 +12,7 @@ import pymongo
 
 # class MongoPipeline(object):
 
-#     collection_name = 'charter-schools'
+#     collection_name = 'school-spider-output'
 
 #     def __init__(self, mongo_uri, mongo_db):
 #         self.mongo_uri = mongo_uri
