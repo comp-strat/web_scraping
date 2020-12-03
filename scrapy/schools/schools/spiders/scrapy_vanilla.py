@@ -148,7 +148,7 @@ class CharterSchoolSpider(CrawlSpider):
         soup = BeautifulSoup(response.body)
         visible_text = soup.get_text()
         # Remove ascii (such as "\u00").
-        filtered_text = (visible_text.encode('ascii', 'ignore')).decode("utf-8")
+        filtered_text = (visible_text.encode('ascii', 'ignore')).decode('ascii')
         # Replace all consecutive white spaces or "|"s with a single space. This includes tabs and linebreaks.
         filtered_text = regex.sub(r"[\s|\|]+", " ", filtered_text)
         # Remove json strings: https://stackoverflow.com/questions/21994677/find-json-strings-in-a-string
