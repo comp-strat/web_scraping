@@ -26,7 +26,32 @@ from schools.items import CharterItem
 import logging
 # third party
 import pymongo
+from urllib.parse import urlparse
 
+from scrapy.pipelines.files import FilesPipeline
+from scrapy.pipelines.images import ImagesPipeline
+
+class MyFilesPipeline(FilesPipeline):
+    
+       
+    def file_path(self, request, response=None, info=None, *, item=None):
+        print(urlparse(item['url']).netloc)
+        
+        original_url = urlparse(item['url']).netloc
+        return original_url + "/" + os.path.basename(urlparse(request.url).path)
+
+class MyImagesPipeline(ImagesPipeline):
+    
+       
+    def file_path(self, request, response=None, info=None, *, item=None):
+        print(urlparse(item['url']).netloc)
+        
+        original_url = urlparse(item['url']).netloc
+        
+        #name taken from base url
+        return original_url + "/" + os.path.basename(urlparse(request.url).path)
+
+    
 # TODO: add error handling
 
 class MongoDBPipeline(object):
