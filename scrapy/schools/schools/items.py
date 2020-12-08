@@ -17,10 +17,9 @@ class CharterItem(Item):
     is_doc = Field() # bool
     is_im = Field() # bool
     status = Field() # int
-    id = Field() # int this is school id or ncessch
+    school_id = Field() # float this is school id or ncessch
     timestamp = Field() # datetime
     date_archived = Field() # datetime
-    
     # Collecting Media
     image_urls = Field()
     images = Field()

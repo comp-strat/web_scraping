@@ -78,8 +78,27 @@ class CharterSchoolSpider(CrawlSpider):
         """
         Overrides default constructor to set custom
         instance attributes.
+        
+        Attributes:
+        
+        - start_urls:
+            Used by scrapy.spiders.Spider. A list of URLs where the
+            spider will begin to crawl.
+
+        - allowed_domains:
+            Used by scrapy.spiders.Spider. An optional list of
+            strings containing domains that this spider is allowed
+            to crawl.
+
+        - domain_to_id:
+            A custom attribute used to map a string domain to
+            a number representing the school id defined by
+            csv_input.
         """
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
+        self.start_urls = []
+        self.allowed_domains = []
+        self.domain_to_id = {}
         self.init_from_csv(csv_input)
 
     # note: make sure we ignore robot.txt
@@ -89,7 +108,8 @@ class CharterSchoolSpider(CrawlSpider):
         item = CharterItem()
         item['url'] = response.url
         item['text'] = self.get_text(response)
-        item['id'] = 
+        domain = self.get_domain(response.url)
+        item['school_id'] = self.domain_to_id[domain]
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
         yield item    
@@ -110,37 +130,26 @@ class CharterSchoolSpider(CrawlSpider):
         Args:
             csv_input: Is the path string to this file.
         Returns:
-            Nothing is returned. However, the following attributes
-            are set:
-            - start_urls:
-                Used by scrapy.spiders.Spider. A list of URLs where the
-                spider will begin to crawl.
-
-            - allowed_domains:
-                Used by scrapy.spiders.Spider. An optional list of
-                strings containing domains that this spider is allowed
-                to crawl.
-
-            - domain_to_id:
-                A custom attribute used to map a string domain to
-                a number representing the school id defined by
-                csv_input.
-                
+            Nothing is returned. However, start_urls,
+            allowed_domains, and domain_to_id are initialized.
         """
         if not csv_input:
             return
-        self.start_urls = []
         with open(csv_input, 'r') as f:
             reader = csv.reader(f, delimiter="\t",quoting=csv.QUOTE_NONE)
             first_row = True
-            for row in reader:
+            for raw_row in reader:
                 if first_row:
                     first_row = False
                     continue
-                row = row[0]
-                
-                url = row.split(",")[1]
+                csv_row = raw_row[0]
+                school_id, url = csv_row.split(",")
+                domain = self.get_domain(url)
+                # set instance attributes
                 self.start_urls.append(url)
+                self.allowed_domains.append(domain)
+                # note: float('3.70014E+11') == 370014000000.0
+                self.domain_to_id[domain] = float(school_id)
 
                 
     def get_domain(self, url):
