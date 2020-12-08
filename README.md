@@ -82,15 +82,3 @@ docker-compose down
 ```
 No output json file is created through this method. Rather, the primary method of storing data is through MongoDB
 (if it's enabled). Data inside MongoDB is persisted through a volume defined in `docker-compose.yml`.
-
-
-
-
-## Legacy comments
-
-Currently, the main file being used to analyze the data is **scripts/WebScraper.py**. However, this file can take a reasonable amount of time
- for large data sets, **scripts/ScrapyWebScraper** and **scripts/selenium_spider** are being used to speed up the scraping process.  The main file uses selenium and beautiful soup to 
-visit a hompage for each school, gather all of the links that the hompage points to, and scrapes the text off of each link. 
-Each time the program is run, the results directory is updated.
-The diagnostics folder is where data about the time it took to run the program, 
-and the accuracy of the program is stored.
