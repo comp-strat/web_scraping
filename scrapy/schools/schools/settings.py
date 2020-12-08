@@ -101,7 +101,11 @@ ITEM_PIPELINES = {
     'scrapy.pipelines.files.FilesPipeline': 2, 
     'schools.pipelines.MongoDBPipeline': 3, 
 }
-MONGO_URI = 'mongodb://localhost' # running locally
+# running locally without containers
+# MONGO_URI = 'mongodb://localhost' 
+# connect to MongoDB which is running in mongodb_container.
+MONGO_URI = 'mongodb://mongodb_container:27017'
+
 MONGO_DATABASE = 'schoolSpider' # database (not collection) name
 
 

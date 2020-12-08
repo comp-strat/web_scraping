@@ -173,7 +173,7 @@ class CharterSchoolSpider(CrawlSpider):
         
         For another example, see filter_text_ex.txt
         """
-        soup = BeautifulSoup(response.body)
+        soup = BeautifulSoup(response.body, 'html.parser')
         visible_text = soup.get_text()
         # Remove ascii (such as "\u00").
         filtered_text = (visible_text.encode('ascii', 'ignore')).decode('ascii')
