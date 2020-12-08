@@ -45,7 +45,8 @@ scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv -o schoolspider_out
 ```
 
 This line means to run the schoolspider crawler with the given csv input file
-and save the output to a json file. Not specified in this command, is that data is saved behind the scenes
+and append the output to a json file. Note that subsequent runs of the crawler will append output, rather than replace. 
+Appending to a json file is optional and the crawler can be run without doing this. Not specified in this command, is that data is saved behind the scenes
 to a MongoDB database named "schoolSpider" if the MongoDB pipeline is used.
 
 
@@ -79,7 +80,8 @@ docker-compose up --build -d
 # to shutdown when finished
 docker-compose down
 ```
-Data is persisted through a volume defined in `docker-compose.yml`.
+No output json file is created through this method. Rather, the primary method of storing data is through MongoDB
+(if it's enabled). Data inside MongoDB is persisted through a volume defined in `docker-compose.yml`.
 
 
 
