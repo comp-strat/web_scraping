@@ -52,11 +52,8 @@ TODO
 import tldextract
 import regex
 
-import uuid 
-import re
 import csv
 from bs4 import BeautifulSoup
-import scrapy
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
 
