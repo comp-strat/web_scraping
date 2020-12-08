@@ -64,16 +64,16 @@ class MongoDBPipeline(object):
         To check if an item already exists, filter by the item's
         url field.
         """
-        # Only store CharterItems.
-        if not isinstance(item, CharterItem):
-            return item
-        # Finds the document with the matching url.
-        query = {'url': item['url']}
-        # upsert=True means insert the document if the query doesn't find a match.
-        self.db[self.collection_name].replace_one(
-            query,
-            ItemAdapter(item).asdict(),
-            upsert=True
-        )
-        logging.debug(f"MongoDB: Inserted {item['url']}.")
+        # # Only store CharterItems.
+        # if not isinstance(item, CharterItem):
+        #     return item
+        # # Finds the document with the matching url.
+        # query = {'url': item['url']}
+        # # upsert=True means insert the document if the query doesn't find a match.
+        # self.db[self.collection_name].replace_one(
+        #     query,
+        #     ItemAdapter(item).asdict(),
+        #     upsert=True
+        # )
+        # logging.debug(f"MongoDB: Inserted {item['url']}.")
         return item
