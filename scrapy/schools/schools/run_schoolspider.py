@@ -5,10 +5,12 @@ In scrapy/schools, use the command
 
 To run the schoolspider.
 The primary purpose of this file is for the Scrapy Dockerfile.
+
+NOTE: by default, data doesn’t persist when that container no longer exists.
 """
 from scrapy import cmdline
 
 # See scrapy_vanilla.py for the meaning of this command.
-scrapy_run_cmd = "scrapy crawl schoolspider -a csv_input=schools/spiders/test_urls.csv -o schools/schoolspider_output.json"
+scrapy_run_cmd = "scrapy crawl schoolspider -a csv_input=schools/spiders/test_urls.csv"
 
 cmdline.execute(scrapy_run_cmd.split())
