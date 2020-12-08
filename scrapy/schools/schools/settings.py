@@ -73,14 +73,6 @@ DOWNLOADS_DELAY = 10
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 
-# Configure item pipelines
-# See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#     'reddit.pipelines.MongoPipeline': 300,
-# }
-# MONGO_URI = 'mongodb://localhost:27017' # replace
-# MONGO_DATABASE = 'school-spider-output'
-
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 AUTOTHROTTLE_ENABLED = True
@@ -103,11 +95,15 @@ AUTOTHROTTLE_DEBUG = False
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # Item pipelines
+# See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'scrapy.pipelines.images.ImagesPipeline': 1,
-'scrapy.pipelines.files.FilesPipeline': 2, 
-    #'stack.pipelines.MongoDBPipeline': 3, 
+    'scrapy.pipelines.files.FilesPipeline': 2, 
+    'schools.pipelines.MongoDBPipeline': 3, 
 }
+MONGO_URI = 'mongodb://localhost' # running locally
+MONGO_DATABASE = 'schoolSpider' # database (not collection) name
+
 
 IMAGES_STORE = 'images'
 FILES_STORE = 'files'
