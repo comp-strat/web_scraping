@@ -19,8 +19,14 @@ source .venv/bin/activate
 # Install dependencies.
 pip3 install -r requirements.txt
 ```
+If you want to store results into MongoDB, ensure that:
 
-Ensure that in `/web_scraping/scrapy/schools/schools/settings.py`, that:
+```python
+'schools.pipelines.MongoDBPipeline': 3
+```
+is one of the key-value pairs of `ITEM_PIPELINES` in `/web_scraping/scrapy/schools/schools/settings.py`. If you don't want to use the pipeline, remove the element.
+
+Furthermore, ensure that in `/web_scraping/scrapy/schools/schools/settings.py`, that:
 ```python
 # This next line must NOT be commented.
 MONGO_URI = 'mongodb://localhost' 
@@ -40,7 +46,7 @@ scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv -o schoolspider_out
 
 This line means to run the schoolspider crawler with the given csv input file
 and save the output to a json file. Not specified in this command, is that data is saved behind the scenes
-to a MongoDB database named "schoolSpider".
+to a MongoDB database named "schoolSpider" if the MongoDB pipeline is used.
 
 
 When you're finished and you don't need to run the scraper anymore run:
@@ -49,23 +55,28 @@ When you're finished and you don't need to run the scraper anymore run:
 deactivate
 ```
 
-### Method 2: Install and run in a container.
+### Method 2: install and run in a container.
 
 Firstly, [get Docker](https://docs.docker.com/get-docker/).
 
-Then, ensure that in `/web_scraping/scrapy/schools/schools/settings.py`, that:
+If you want to use MongoDB, ensure that in `/web_scraping/scrapy/schools/schools/settings.py`, that:
 ```python
 # This next line is commented.
 # MONGO_URI = 'mongodb://localhost' 
 # This next line must NOT be commented.
 MONGO_URI = 'mongodb://mongodb_container:27017'
 ```
+And, that:
+```python
+'schools.pipelines.MongoDBPipeline': 3
+```
+is one of the key-value pairs in of `ITEM_PIPELINES` in `/web_scraping/scrapy/schools/schools/settings.py`. If you don't want to use the pipeline, remove the element.
 
 Finally, inside `/web_scraping`, run:
 ```bash
 # build the containers and run in the background
 docker-compose up --build -d 
-# to shutdown
+# to shutdown when finished
 docker-compose down
 ```
 Data is persisted through a volume defined in `docker-compose.yml`.

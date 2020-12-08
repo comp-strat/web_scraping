@@ -1,5 +1,6 @@
-# credit: https://dev.to/sonyarianto/how-to-spin-mongodb-server-with-docker-and-docker-compose-2lef
-# not there is no authentication currently.
+# Allows Scrapy and MongoDB to work together in separate containers through
+# docker-compose: https://docs.docker.com/compose/.
+# For info on use, see the README.md.
 version: '3.7'
 services:
   crawler:
@@ -8,6 +9,8 @@ services:
       - 27017 # Opens up this port so it can talk to mongodb_container.
     depends_on:
       - mongodb_container
+  # credit: https://dev.to/sonyarianto/how-to-spin-mongodb-server-with-docker-and-docker-compose-2lef
+  # note there is no MongoDB authentication currently.
   mongodb_container:
     container_name: mongodb_container
     image: mongo:latest
