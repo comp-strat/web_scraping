@@ -109,6 +109,22 @@ class CharterSchoolSpider(CrawlSpider):
         item['school_id'] = self.domain_to_id[domain]
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
+        
+        # iterate over the list of images and append urls for downloading
+        item['image_urls'] = []
+        for image in response.xpath('//img/@src').extract():
+            # make each one into a full URL and add to item[]
+            item['image_urls'].append(response.urljoin(image))
+        
+        # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
+        item['file_urls'] = []
+        selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
+        print("PDF FOUND", response.css(selector).extract())
+        for href in response.css(selector).extract():
+            item['file_urls'] += [href]
+            print("pdfo")
+            print(response.url)
+            
         yield item    
         
     def init_from_csv(self, csv_input):
