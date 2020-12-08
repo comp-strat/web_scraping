@@ -1,5 +1,5 @@
 # web_scraping
-Code and data for the URAP team that scrapes and parses charter websites using Python.
+Code and data for the URAP team that scrapes and parses charter websites using Python, Scrapy, and Beautiful Soup. The data scraped is saved into MongoDB.
 
 ## Running the web scraper
 The most recent webscraper is `scrapy/schools/schools/spiders/scrapy_vanilla.py`.
@@ -8,7 +8,7 @@ The most recent webscraper is `scrapy/schools/schools/spiders/scrapy_vanilla.py`
 
 If not yet installed, [install MongoDB](https://docs.mongodb.com/manual/installation/).
 
-Navigate to the `scrapy/schools` directory.
+Navigate to the `/web_scraping/scrapy/schools` directory.
 Then run the following commands:
 ```bash
 # Create and start a virtual environment for Python dependencies.
@@ -18,9 +18,9 @@ source .venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-Ensure that in `scrapy/schools/schools/settings.py`, that:
+Ensure that in `/web_scraping/scrapy/schools/schools/settings.py`, that:
 ```python
-# This next line must be NOT be commented.
+# This next line must NOT be commented.
 MONGO_URI = 'mongodb://localhost' 
 # This next line is commented.
 # MONGO_URI = 'mongodb://mongodb_container:27017'
@@ -30,7 +30,7 @@ Start MongoDB. This step depends on the operating system. On Ubuntu 18.04, this 
 sudo systemctl -l start mongodb
 ```
 
-Finally to run, navigate to `scrapy/schools/schools/` and run.
+Finally to run, navigate to `/web_scraping/scrapy/schools/schools/` and run.
 
 ```bash
 scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv -o schoolspider_output.json
@@ -46,6 +46,28 @@ When you're finished and you don't need to run the scraper anymore run:
 # Deactivate the environment.
 deactivate
 ```
+
+### Method 2: Install and run in a container.
+
+Firstly, [get Docker](https://docs.docker.com/get-docker/).
+
+Then, ensure that in `/web_scraping/scrapy/schools/schools/settings.py`, that:
+```python
+# This next line is commented.
+# MONGO_URI = 'mongodb://localhost' 
+# This next line must NOT be commented.
+MONGO_URI = 'mongodb://mongodb_container:27017'
+```
+
+Finally, inside `/web_scraping`, run
+```bash
+# build the containers and run in the background
+docker-compose up --build -d 
+# to shutdown
+docker-compose down
+```
+Data is persisted through a volume defined in `docker-compose.yml`.
+
 
 
 
