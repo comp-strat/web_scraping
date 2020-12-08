@@ -1,8 +1,10 @@
 # web_scraping
 Code and data for the URAP team that scrapes and parses charter websites using Python, Scrapy, and Beautiful Soup. The data scraped is saved into MongoDB and/or in local files.
 
+The most recent web scraper is `scrapy/schools/schools/spiders/scrapy_vanilla.py`.
+
+
 ## Running the web scraper
-The most recent webscraper is `scrapy/schools/schools/spiders/scrapy_vanilla.py`.
 
 ### Method 1: install and run locally
 
@@ -30,7 +32,7 @@ Start MongoDB. This step depends on the operating system. On Ubuntu 18.04, this 
 sudo systemctl -l start mongodb
 ```
 
-Finally to run, navigate to `/web_scraping/scrapy/schools/schools/` and run.
+Finally to run, navigate to `/web_scraping/scrapy/schools/schools/` and run:
 
 ```bash
 scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv -o schoolspider_output.json
@@ -59,7 +61,7 @@ Then, ensure that in `/web_scraping/scrapy/schools/schools/settings.py`, that:
 MONGO_URI = 'mongodb://mongodb_container:27017'
 ```
 
-Finally, inside `/web_scraping`, run
+Finally, inside `/web_scraping`, run:
 ```bash
 # build the containers and run in the background
 docker-compose up --build -d 
