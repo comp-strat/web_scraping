@@ -76,12 +76,12 @@ class CharterSchoolSpider(CrawlSpider):
     ]
     def __init__(self, csv_input=None, *args, **kwargs):
         """
-        Overrides default constructor to set start_urls.
+        Overrides default constructor to set custom
+        instance attributes.
         """
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
-        self.start_urls = self.generate_start_urls(csv_input)
-        self.allowed_domains = [self.get_domain(url) for url in self.start_urls]
-    
+        self.init_from_csv(csv_input)
+
     # note: make sure we ignore robot.txt
     # Method for parsing items
     def parse_items(self, response):
@@ -89,14 +89,15 @@ class CharterSchoolSpider(CrawlSpider):
         item = CharterItem()
         item['url'] = response.url
         item['text'] = self.get_text(response)
+        item['id'] = 
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
         yield item    
         
-    def generate_start_urls(self, csv_input):
+    def init_from_csv(self, csv_input):
         """
-        Generate request URLs from the input CSV file.
-        csv_input is the path string to this file.
+        Generate's this spider's instance attributes
+        from the input CSV file.
         
         CSV's format:
         1. The first row is meta data that is ignored.
@@ -105,10 +106,30 @@ class CharterSchoolSpider(CrawlSpider):
         
         Note: start_requests() isn't used since it doesn't work
         well with CrawlSpider Rules.
+        
+        Args:
+            csv_input: Is the path string to this file.
+        Returns:
+            Nothing is returned. However, the following attributes
+            are set:
+            - start_urls:
+                Used by scrapy.spiders.Spider. A list of URLs where the
+                spider will begin to crawl.
+
+            - allowed_domains:
+                Used by scrapy.spiders.Spider. An optional list of
+                strings containing domains that this spider is allowed
+                to crawl.
+
+            - domain_to_id:
+                A custom attribute used to map a string domain to
+                a number representing the school id defined by
+                csv_input.
+                
         """
         if not csv_input:
-            return []
-        urls = []
+            return
+        self.start_urls = []
         with open(csv_input, 'r') as f:
             reader = csv.reader(f, delimiter="\t",quoting=csv.QUOTE_NONE)
             first_row = True
@@ -117,10 +138,11 @@ class CharterSchoolSpider(CrawlSpider):
                     first_row = False
                     continue
                 row = row[0]
+                
                 url = row.split(",")[1]
-                urls.append(url)
-        return urls
+                self.start_urls.append(url)
 
+                
     def get_domain(self, url):
         """
         Given the url, gets the top level domain using the
