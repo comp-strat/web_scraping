@@ -97,8 +97,10 @@ AUTOTHROTTLE_DEBUG = False
 # Item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'scrapy.pipelines.images.ImagesPipeline': 1,
-    'scrapy.pipelines.files.FilesPipeline': 2, 
+    # Item pipelines
+ITEM_PIPELINES = {
+    'schools.pipelines.MyImagesPipeline': 1,
+    'schools.pipelines.MyFilesPipeline': 2,
     'schools.pipelines.MongoDBPipeline': 3, 
 }
 # running locally without containers
