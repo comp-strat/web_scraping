@@ -21,7 +21,8 @@ USAGE
         
         scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv -o schoolspider_output.json
    
-    This output can be saved into other file types as well.
+    This output can be saved into other file types as well. Output can also be saved
+    in MongoDb (see MongoDBPipeline in pipelines.py).
     
     NOTE: -o will APPEND output. This can be misleading(!) when debugging since the output
           file may contain more than just the most recent output.
@@ -42,7 +43,6 @@ CREDITS
     Inspired by script in this private repo: https://github.com/lisasingh/covid-19/blob/master/scraping/generic.py
 
 TODO
-    - Make sure urls in start_urls are also scraped.
     - Fine tune which items to keep (https://medium.com/swlh/how-to-use-scrapy-items-05-python-scrapy-tutorial-for-beginners-f25ff2dceaa9)
     - Indicate failed responses -- currently it simply does not append to output
     - Scrape text from PDFs and record that was PDF (as in https://github.com/URAP-charter/scrapy-cluster/blob/master/crawler/crawling/spiders/parsing_link_spider_w_im.py)

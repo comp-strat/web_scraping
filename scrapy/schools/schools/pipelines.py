@@ -5,12 +5,16 @@
 
 
 """
+This pipeline stores CharterItem items into MongoDb.
 
 To view the output of this pipeline, run
 
 $ mongo
 > use schoolSpider # switch to DATABASE_NAME database name
 > db.outputItems.find().pretty() # print contents of COLLECTION_NAME
+
+This code is taken from https://alysivji.github.io/mongodb-pipelines-in-scrapy.html
+and slightly modified (most modifications are in the process_item() method).
 
 For more info on how items are inserted into the database, read:
 https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.replace_one
@@ -35,20 +39,20 @@ class MongoDBPipeline(object):
 
     @classmethod
     def from_crawler(cls, crawler):
-        ## pull in information from settings.py
+        # pull in information from settings.py
         return cls(
             mongo_uri=crawler.settings.get('MONGO_URI'),
             mongo_db=crawler.settings.get('MONGO_DATABASE')
         )
 
     def open_spider(self, spider):
-        ## initializing spider
-        ## opening db connection
+        # initializing spider
+        # opening db connection
         self.client = pymongo.MongoClient(self.mongo_uri)
         self.db = self.client[self.mongo_db]
 
     def close_spider(self, spider):
-        ## clean up when spider is closed
+        # clean up when spider is closed
         self.client.close()
 
     def process_item(self, item, spider):
@@ -60,11 +64,12 @@ class MongoDBPipeline(object):
         To check if an item already exists, filter by the item's
         url field.
         """
-        # Only store CharterItems, if in the future there are other items.
+        # Only store CharterItems.
         if not isinstance(item, CharterItem):
             return item
         # Finds the document with the matching url.
         query = {'url': item['url']}
+        # upsert=True means insert the document if the query doesn't find a match.
         self.db[self.collection_name].replace_one(
             query,
             ItemAdapter(item).asdict(),
