@@ -52,7 +52,7 @@ SPIDER_MIDDLEWARES = {
 }
 
 # Configure depth 
-DEPTH_LIMIT = 10
+DEPTH_LIMIT = 5
 
 
 # Enable or disable downloader middlewares
