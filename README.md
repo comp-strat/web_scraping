@@ -1,5 +1,5 @@
 # web_scraping
-Code and data for the URAP team that scrapes and parses charter websites using Python, Scrapy, and Beautiful Soup. The data scraped is saved into MongoDB.
+Code and data for the URAP team that scrapes and parses charter websites using Python, Scrapy, and Beautiful Soup. The data scraped is saved into MongoDB and/or in local files.
 
 ## Running the web scraper
 The most recent webscraper is `scrapy/schools/schools/spiders/scrapy_vanilla.py`.
