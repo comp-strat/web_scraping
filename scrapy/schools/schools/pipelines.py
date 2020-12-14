@@ -28,6 +28,9 @@ import logging
 import pymongo
 from urllib.parse import urlparse
 
+# This is a 3rd party library used for finding the base URL.
+import tldextract
+
 from scrapy.pipelines.files import FilesPipeline
 from scrapy.pipelines.images import ImagesPipeline
 
@@ -39,6 +42,23 @@ class MyFilesPipeline(FilesPipeline):
         
         original_url = urlparse(item['url']).netloc
         return original_url + "/" + os.path.basename(urlparse(request.url).path)
+    
+    def get_domain(self, url):
+        """
+        Given the url, gets the top level domain using the
+
+        library.
+
+        Ex:
+        >>> get_domain('http://www.charlottesecondary.org/')
+        charlottesecondary.org
+        >>> get_domain('https://www.socratesacademy.us/our-school')
+        socratesacademy.us
+
+        """
+    
+        extracted = tldextract.extract(url)
+        return f'{extracted.domain}.{extracted.suffix}'
 
 class MyImagesPipeline(ImagesPipeline):
     
@@ -50,6 +70,23 @@ class MyImagesPipeline(ImagesPipeline):
         
         #name taken from base url
         return original_url + "/" + os.path.basename(urlparse(request.url).path)
+    
+    def get_domain(self, url):
+        """
+        Given the url, gets the top level domain using the
+
+        library.
+
+        Ex:
+        >>> get_domain('http://www.charlottesecondary.org/')
+        charlottesecondary.org
+        >>> get_domain('https://www.socratesacademy.us/our-school')
+        socratesacademy.us
+
+        """
+    
+        extracted = tldextract.extract(url)
+        return f'{extracted.domain}.{extracted.suffix}'
 
     
 # TODO: add error handling
