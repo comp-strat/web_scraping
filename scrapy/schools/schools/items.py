@@ -26,3 +26,6 @@ class CharterItem(Item):
     
     file_urls = Field()
     files = Field()
+    
+    # Collecting text from document parsing (.pdf/.doc/.docx)
+    file_text = Field()
