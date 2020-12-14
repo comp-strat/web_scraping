@@ -147,6 +147,8 @@ class CharterSchoolSpider(CrawlSpider):
         item['file_urls'] = []
         selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
         print("PDF FOUND", response.css(selector).extract())
+        
+        item['file_text'] = []
         for href in response.css(selector).extract():
             # Check if href is complete.
             if "http" not in href:
