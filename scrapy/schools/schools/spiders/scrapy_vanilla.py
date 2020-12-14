@@ -59,6 +59,31 @@ from scrapy.spiders import Rule, CrawlSpider
 
 from schools.items import CharterItem
 
+# The following are required for parsing File text
+import io
+import os
+from schools.items import CharterItem
+from tempfile import NamedTemporaryFile
+import textract
+from itertools import chain
+import re
+from urllib.parse import urlparse
+import requests
+
+
+# Used for extracting text from PDFs
+control_chars = ''.join(map(chr, chain(range(0, 9), range(11, 32), range(127, 160))))
+CONTROL_CHAR_RE = re.compile('[%s]' % re.escape(control_chars))
+TEXTRACT_EXTENSIONS = [".pdf", ".doc", ".docx", ""]
+
+class CustomLinkExtractor(LinkExtractor):
+    def __init__(self, *args, **kwargs):
+        super(CustomLinkExtractor, self).__init__(*args, **kwargs)
+        # Keep the default values in "deny_extensions" *except* for those types we want.
+        self.deny_extensions = [ext for ext in self.deny_extensions if ext not in TEXTRACT_EXTENSIONS]
+
+
+
 class CharterSchoolSpider(CrawlSpider):
     name = 'schoolspider'
     rules = [
@@ -95,8 +120,10 @@ class CharterSchoolSpider(CrawlSpider):
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
         self.start_urls = []
         self.allowed_domains = []
+        self.rules = (Rule(CustomLinkExtractor(), follow=True, callback="parse_items"),)
         self.domain_to_id = {}
         self.init_from_csv(csv_input)
+        
 
     # note: make sure we ignore robot.txt
     # Method for parsing items
@@ -121,9 +148,14 @@ class CharterSchoolSpider(CrawlSpider):
         selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
         print("PDF FOUND", response.css(selector).extract())
         for href in response.css(selector).extract():
+            # Check if href is complete.
+            if "http" not in href:
+                href = "http://" + domain + href
+            # Add file URL to pipeline
             item['file_urls'] += [href]
-            print("pdfo")
-            print(response.url)
+            
+            # Parse file text and it to list of file texts
+            item['file_text'] += [self.parse_file(href, item['url'])]
             
         yield item    
         
@@ -201,6 +233,62 @@ class CharterSchoolSpider(CrawlSpider):
 
         # Remove spaces at the beginning and at the end of the string.
         return filtered_text.strip()
+
+    def parse_file(self, href, parent_url):
+        """
+        Given the file's url and its parent url, 
+        scrape the text from the file and return it. 
+        This will also create a .txt file within the user's subdirectory.
+        At the top of this .txt file, you will also see the file's Base URL, Parent URL, and File URL. 
+        
+        Ex:
+        >>> parse_pdf('https://www.imagescape.com/media/uploads/zinnia/2018/08/20/sampletext.pdf',
+                'https://www.imagescape.com/media/uploads/zinnia/2018/08/20/scrape_me.html')
+            
+            Base URL: imagescape.com
+            Parent URL: https://www.imagescape.com/media/uploads/zinnia/2018/08/20/scrape_me.html
+            File URL: https://www.imagescape.com/media/uploads/zinnia/2018/08/20/sampletext.pdf
+            "This is a caterwauling test of a transcendental PDF."
+        
+        """
+
+        # Parse text from file and add to .txt file AND item
+        response_href = requests.get(href)
+
+        extension = list(filter(lambda x: response_href.url.lower().endswith(x), TEXTRACT_EXTENSIONS))[0]
+      
+
+        tempfile = NamedTemporaryFile(suffix=extension)
+        tempfile.write(response_href.content)
+        tempfile.flush()
+
+        extracted_data = textract.process(tempfile.name)
+        extracted_data = extracted_data.decode('utf-8')
+        extracted_data = CONTROL_CHAR_RE.sub('', extracted_data)
+        tempfile.close()
+        base_url = self.get_domain(parent_url)
+        
+        # Create a filepath for the .txt file
+        txt_file_name = "files" + "/" + base_url + "/" + os.path.basename(urlparse(href).path).replace(extension, ".txt")
+        
+        # If subdirectory does not exist yet, create it.
+        if not os.path.isdir("files" + "/" + base_url):
+            os.mkdir("files" + "/" + base_url)
+            
+        with open(txt_file_name, "w") as f:
+
+            f.write("Domain: " + base_url)
+            f.write("\n")
+            f.write("Parent URL (url where this file was found): " + parent_url)
+            f.write("\n")
+            f.write("FILE URL: " + response_href.url.upper())
+
+            f.write("\n")
+            f.write(extracted_data)
+            f.write("\n\n")
+            
+        return extracted_data 
+    
 
 
     
