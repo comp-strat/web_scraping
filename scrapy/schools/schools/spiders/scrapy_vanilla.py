@@ -279,11 +279,11 @@ class CharterSchoolSpider(CrawlSpider):
             
         with open(txt_file_name, "w") as f:
 
-            f.write("Domain: " + base_url)
+            f.write("Base URL: " + base_url)
             f.write("\n")
-            f.write("Parent URL (url where this file was found): " + parent_url)
+            f.write("Parent URL: " + parent_url)
             f.write("\n")
-            f.write("FILE URL: " + response_href.url.upper())
+            f.write("File URL: " + response_href.url.upper())
 
             f.write("\n")
             f.write(extracted_data)
