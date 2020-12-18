@@ -38,9 +38,8 @@ class MyFilesPipeline(FilesPipeline):
     
        
     def file_path(self, request, response=None, info=None, *, item=None):
-        print(urlparse(item['url']).netloc)
-        
-        original_url = urlparse(item['url']).netloc
+        # Set file path for saving files.
+        original_url = self.get_domain(item['url'])
         return original_url + "/" + os.path.basename(urlparse(request.url).path)
     
     def get_domain(self, url):
@@ -63,10 +62,9 @@ class MyFilesPipeline(FilesPipeline):
 class MyImagesPipeline(ImagesPipeline):
     
        
-    def file_path(self, request, response=None, info=None, *, item=None):
-        print(urlparse(item['url']).netloc)
-        
-        original_url = urlparse(item['url']).netloc
+    def file_path(self, request, response=None, info=None, *, item=None):  
+        # Set file path for saving images.
+        original_url = self.get_domain(item['url'])
         
         #name taken from base url
         return original_url + "/" + os.path.basename(urlparse(request.url).path)
