@@ -43,9 +43,10 @@ CREDITS
     Inspired by script in this private repo: https://github.com/lisasingh/covid-19/blob/master/scraping/generic.py
 
 TODO
-    - Fine tune which items to keep (https://medium.com/swlh/how-to-use-scrapy-items-05-python-scrapy-tutorial-for-beginners-f25ff2dceaa9)
     - Indicate failed responses -- currently it simply does not append to output
-    - Scrape text from PDFs and record that was PDF (as in https://github.com/URAP-charter/scrapy-cluster/blob/master/crawler/crawling/spiders/parsing_link_spider_w_im.py)
+    - Implement middleware for backup crawling of failed cases
+    - Configure for distributed crawling with Spark & Hadoop
+    - Configure for historical crawling with Internet Archive's Wayback Machine API
 """
 
 # The follow two imports are 3rd party libraries
@@ -53,7 +54,9 @@ import tldextract
 import regex
 
 import csv
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup # BS reads and parses even poorly/unreliably coded HTML 
+from bs4.element import Comment # helps with detecting inline/junk tags when parsing with BS
+import html5lib # slower but more accurate bs4 parser for messy HTML
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
 
@@ -76,12 +79,17 @@ control_chars = ''.join(map(chr, chain(range(0, 9), range(11, 32), range(127, 16
 CONTROL_CHAR_RE = re.compile('[%s]' % re.escape(control_chars))
 TEXTRACT_EXTENSIONS = [".pdf", ".doc", ".docx", ""]
 
+# Define inline tags for cleaning out HTML
+inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
+               "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
+               "span", "sub", "sup"]
+
+
 class CustomLinkExtractor(LinkExtractor):
     def __init__(self, *args, **kwargs):
         super(CustomLinkExtractor, self).__init__(*args, **kwargs)
-        # Keep the default values in "deny_extensions" *except* for those types we want.
+        # Keep the default values in "deny_extensions" *except* for those types we want
         self.deny_extensions = [ext for ext in self.deny_extensions if ext not in TEXTRACT_EXTENSIONS]
-
 
 
 class CharterSchoolSpider(CrawlSpider):
@@ -161,6 +169,7 @@ class CharterSchoolSpider(CrawlSpider):
             
         yield item    
         
+        
     def init_from_csv(self, csv_input):
         """
         Generate's this spider's instance attributes
@@ -213,6 +222,7 @@ class CharterSchoolSpider(CrawlSpider):
         extracted = tldextract.extract(url)
         return f'{extracted.domain}.{extracted.suffix}'
     
+    
     def get_text(self, response):
         """
         Gets the readable text from a website's body and filters it.
@@ -223,19 +233,32 @@ class CharterSchoolSpider(CrawlSpider):
         
         For another example, see filter_text_ex.txt
         """
-        soup = BeautifulSoup(response.body, 'html.parser')
-        visible_text = soup.get_text()
-        # Remove ascii (such as "\u00").
-        filtered_text = (visible_text.encode('ascii', 'ignore')).decode('ascii')
-        # Replace all consecutive white spaces or "|"s with a single space. This includes tabs and linebreaks.
-        filtered_text = regex.sub(r"[\s|\|]+", " ", filtered_text)
+        # Load HTML into BeautifulSoup, extract text
+        soup = BeautifulSoup(response.body, 'html5lib') # slower but more accurate parser for messy HTML
+        # Remove non-visible tags from soup
+        [s.extract() for s in soup(['head', 'title', '[document]'])]
+        # Extract text, remove <p> tags
+        visible_text = soup.get_text(strip = True) # removes extra white spaces from each text chunk; splits by space
+        
+        # Remove inline tags from text
+        for it in inline_tags:
+            visible_text = visible_text.replace("<" + it + ">", "")
+            visible_text = visible_text.replace("</" + it + ">", "")
+        # Remove ascii (such as "\u00")
+        filtered_text = visible_text.encode('ascii', 'ignore').decode('ascii').encode('utf-8').decode('utf-8')
+        
+        # Replace all consecutive spaces (including in unicode), tabs, or "|"s with a single space
+        filtered_text = regex.sub(r"[ \t\h\|]+", " ", filtered_text)
+        # Replace any consecutive linebreaks with a single newline
+        filtered_text = regex.sub(r"[\n\r\f\v]+", "\n", filtered_text)
         # Remove json strings: https://stackoverflow.com/questions/21994677/find-json-strings-in-a-string
-        # Uses the regex 3rd party library to support recursive Regex.
+        # Uses the regex 3rd party library to support recursive Regex
         filtered_text = regex.sub(r"{(?:[^{}]*|(?R))*}", " ", filtered_text)
 
-        # Remove spaces at the beginning and at the end of the string.
+        # Remove white spaces at beginning and end of string; return
         return filtered_text.strip()
 
+    
     def parse_file(self, href, parent_url):
         """
         Given the file's url and its parent url, 
@@ -273,7 +296,7 @@ class CharterSchoolSpider(CrawlSpider):
         # Create a filepath for the .txt file
         txt_file_name = "files" + "/" + base_url + "/" + os.path.basename(urlparse(href).path).replace(extension, ".txt")
         
-        # If subdirectory does not exist yet, create it.
+        # If subdirectory does not exist yet, create it
         if not os.path.isdir("files" + "/" + base_url):
             os.mkdir("files" + "/" + base_url)
             
