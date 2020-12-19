@@ -46,7 +46,7 @@ TODO
     - Configure for historical crawling with Internet Archive's Wayback Machine API
 """
 
-# The follow two imports are 3rd party libraries
+# make sure the dependencies are installed
 import tldextract
 import regex
 
@@ -60,7 +60,7 @@ from scrapy.spiders import Rule, CrawlSpider
 from schools.items import CharterItem
 
 # The following are required for parsing File text
-import io
+
 import os
 from schools.items import CharterItem
 from tempfile import NamedTemporaryFile
