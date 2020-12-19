@@ -39,9 +39,6 @@ USAGE
         -o school_output_test.json \
         -a input=test_urls.csv &
 
-CREDITS
-    Inspired by script in this private repo: https://github.com/lisasingh/covid-19/blob/master/scraping/generic.py
-
 TODO
     - Indicate failed responses -- currently it simply does not append to output
     - Implement middleware for backup crawling of failed cases
@@ -198,8 +195,8 @@ class CharterSchoolSpider(CrawlSpider):
                 if first_row:
                     first_row = False
                     continue
-                csv_row = raw_row[0]
-                school_id, url = csv_row.split(",")
+                #csv_row = raw_row[0]
+                school_id, url = raw_row #csv_row.split("\t")
                 domain = self.get_domain(url)
                 # set instance attributes
                 self.start_urls.append(url)
@@ -314,7 +311,4 @@ class CharterSchoolSpider(CrawlSpider):
             
         return extracted_data 
     
-
-
     
-
