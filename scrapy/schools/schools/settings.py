@@ -12,6 +12,11 @@ BOT_NAME = 'schools'
 SPIDER_MODULES = ['schools.spiders']
 NEWSPIDER_MODULE = 'schools.spiders'
 
+# How to log spider output
+LOG_ENABLED = True
+LOG_LEVEL = 'INFO'
+LOG_FILE = 'schoolspider_log.log'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'schools (+http://www.yourdomain.com)'
@@ -52,7 +57,7 @@ SPIDER_MIDDLEWARES = {
 }
 
 # Configure depth 
-DEPTH_LIMIT = 10
+DEPTH_LIMIT = 5
 
 
 # Enable or disable downloader middlewares
@@ -98,15 +103,16 @@ AUTOTHROTTLE_DEBUG = False
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'schools.pipelines.MyImagesPipeline': 1,
-    'schools.pipelines.MyFilesPipeline': 2,
-    'schools.pipelines.MongoDBPipeline': 3, 
+    'schools.pipelines.MyFilesPipeline': 2
 }
+#    'schools.pipelines.MongoDBPipeline': 3, 
+
 # running locally without containers
 # MONGO_URI = 'mongodb://localhost' 
 # connect to MongoDB which is running in mongodb_container.
-MONGO_URI = 'mongodb://mongodb_container:27017'
+#MONGO_URI = 'mongodb://mongodb_container:27017'
 
-MONGO_DATABASE = 'schoolSpider' # database (not collection) name
+#MONGO_DATABASE = 'schoolSpider' # database (not collection) name
 
 
 IMAGES_STORE = 'images'
@@ -115,6 +121,6 @@ FILES_STORE = 'files'
 FILES_EXPIRES = 365
 IMAGES_EXPIRES = 365
 MEDIA_ALLOW_REDIRECTS = True
-IMAGES_MIN_HEIGHT = 110
-IMAGES_MIN_WIDTH = 110
+IMAGES_MIN_HEIGHT = 150
+IMAGES_MIN_WIDTH = 150
 

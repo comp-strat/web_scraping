@@ -88,7 +88,7 @@ class MyImagesPipeline(ImagesPipeline):
 
     
 # TODO: add error handling
-
+'''
 class MongoDBPipeline(object):
 
     collection_name = 'outputItems'
@@ -137,3 +137,4 @@ class MongoDBPipeline(object):
         )
         logging.debug(f"MongoDB: Inserted {item['url']}.")
         return item
+        '''
