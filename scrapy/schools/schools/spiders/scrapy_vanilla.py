@@ -53,7 +53,7 @@ import regex
 import csv
 from bs4 import BeautifulSoup # BS reads and parses even poorly/unreliably coded HTML 
 from bs4.element import Comment # helps with detecting inline/junk tags when parsing with BS
-import html5lib # slower but more accurate bs4 parser for messy HTML
+import html5lib # slower but more accurate bs4 parser for messy HTML # lxml faster
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
 
@@ -86,7 +86,7 @@ class CustomLinkExtractor(LinkExtractor):
     def __init__(self, *args, **kwargs):
         super(CustomLinkExtractor, self).__init__(*args, **kwargs)
         # Keep the default values in "deny_extensions" *except* for those types we want
-        self.deny_extensions = [ext for ext in self.deny_extensions if ext not in TEXTRACT_EXTENSIONS]
+        #self.deny_extensions = [ext for ext in self.deny_extensions if ext not in TEXTRACT_EXTENSIONS]
 
 
 class CharterSchoolSpider(CrawlSpider):
@@ -142,6 +142,7 @@ class CharterSchoolSpider(CrawlSpider):
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
         
+        
         # iterate over the list of images and append urls for downloading
         item['image_urls'] = []
         for image in response.xpath('//img/@src').extract():
@@ -163,6 +164,7 @@ class CharterSchoolSpider(CrawlSpider):
             
             # Parse file text and it to list of file texts
             item['file_text'] += [self.parse_file(href, item['url'])]
+            
             
         yield item    
         
@@ -231,7 +233,7 @@ class CharterSchoolSpider(CrawlSpider):
         For another example, see filter_text_ex.txt
         """
         # Load HTML into BeautifulSoup, extract text
-        soup = BeautifulSoup(response.body, 'html5lib') # slower but more accurate parser for messy HTML
+        soup = BeautifulSoup(response.body, 'html5lib') # slower but more accurate parser for messy HTML # lxml faster
         # Remove non-visible tags from soup
         [s.extract() for s in soup(['head', 'title', '[document]'])]
         # Extract text, remove <p> tags
@@ -310,5 +312,4 @@ class CharterSchoolSpider(CrawlSpider):
             f.write("\n\n")
             
         return extracted_data 
-    
     
