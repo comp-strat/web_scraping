@@ -102,8 +102,8 @@ AUTOTHROTTLE_DEBUG = False
 # Item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'schools.pipelines.MyImagesPipeline': 1,
-    'schools.pipelines.MyFilesPipeline': 2
+    'schools.pipelines.CustomImagesPipeline': 3,
+    'schools.pipelines.CustomFilesPipeline': 4
 }
 #    'schools.pipelines.MongoDBPipeline': 3, 
 
@@ -118,7 +118,7 @@ ITEM_PIPELINES = {
 IMAGES_STORE = 'images'
 FILES_STORE = 'files'
 
-FILES_EXPIRES = 365
+#FILES_EXPIRES = 365
 IMAGES_EXPIRES = 365
 MEDIA_ALLOW_REDIRECTS = True
 IMAGES_MIN_HEIGHT = 150

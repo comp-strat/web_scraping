@@ -22,6 +22,7 @@ https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.col
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 from schools.items import CharterItem
+import os
 
 import logging
 # third party
@@ -33,15 +34,23 @@ import tldextract
 
 from scrapy.pipelines.files import FilesPipeline
 from scrapy.pipelines.images import ImagesPipeline
+from itemadapter import ItemAdapter
 
-class MyFilesPipeline(FilesPipeline):
+
+class CustomFilesPipeline(FilesPipeline):
     
        
     def file_path(self, request, response=None, info=None, *, item=None):
-        # Set file path for saving files.
+        """
+        Returns the file path for downloaded files origininating from the specified response. 
+        This is customized to save files from the downloaded item's domain to the 
+        respective domain folder in the 'files' directory.
+
+        """
         original_url = self.get_domain(item['url'])
-        return original_url + "/" + os.path.basename(urlparse(request.url).path)
-    
+        new_file_path = original_url + "/" + os.path.basename(urlparse(request.url).path)
+        return new_file_path
+
     def get_domain(self, url):
         """
         Given the url, gets the top level domain using the
@@ -59,14 +68,17 @@ class MyFilesPipeline(FilesPipeline):
         extracted = tldextract.extract(url)
         return f'{extracted.domain}.{extracted.suffix}'
 
-class MyImagesPipeline(ImagesPipeline):
+class CustomImagesPipeline(ImagesPipeline):
     
        
     def file_path(self, request, response=None, info=None, *, item=None):  
-        # Set file path for saving images.
+        """
+        Returns the file path for downloaded images origininating from the specified response. 
+        This is customized to save files from the downloaded item's domain to the 
+        respective domain folder in the 'images' directory.
+
+        """        
         original_url = self.get_domain(item['url'])
-        
-        #name taken from base url
         return original_url + "/" + os.path.basename(urlparse(request.url).path)
     
     def get_domain(self, url):

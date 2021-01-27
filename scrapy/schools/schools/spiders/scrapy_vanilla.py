@@ -142,33 +142,12 @@ class CharterSchoolSpider(CrawlSpider):
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
         
+        item['image_urls'] = self.collect_image_URLs(response)
         
-        # iterate over the list of images and append urls for downloading
-        item['image_urls'] = []
-        for image in response.xpath('//img/@src').extract():
-            # make each one into a full URL and add to item[]
-            item['image_urls'].append(response.urljoin(image))
+        item['file_urls'], item['file_text'] = self.collect_file_URLs(domain, item, response)
         
-        # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
-        item['file_urls'] = []
-        selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
-        print("PDF FOUND", response.css(selector).extract())
-        
-        item['file_text'] = []
-        for href in response.css(selector).extract():
-            # Check if href is complete.
-            if "http" not in href:
-                href = "http://" + domain + href
-            # Add file URL to pipeline
-            item['file_urls'] += [href]
-            
-            # Parse file text and it to list of file texts
-            item['file_text'] += [self.parse_file(href, item['url'])]
-            
-            
         yield item    
-        
-        
+
     def init_from_csv(self, csv_input):
         """
         Generate's this spider's instance attributes
@@ -257,6 +236,42 @@ class CharterSchoolSpider(CrawlSpider):
         # Remove white spaces at beginning and end of string; return
         return filtered_text.strip()
 
+    def collect_image_URLs(self, response):
+        """
+        Collects and returns the image URLs found on a given webpage
+        to store in the Item for downloading.
+        """
+        image_urls = []
+        for image_url in response.xpath('//img/@src').extract():
+            # make each image_url into a readable URL and add to image_urls
+           
+            image_urls.append(response.urljoin(image_url))
+        return image_urls
+    
+    def collect_file_URLs(self, domain, item, response):
+        """
+        Collects and returns the file URLs found on a given webpage
+        to store in the Item for downloading. 
+        
+        Additionally, parses the file for text and appends to a separate text file.
+        """
+        file_urls = []
+        selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
+        #print("PDF FOUND", response.css(selector).extract())
+        
+        # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
+        file_text = []
+        for href in response.css(selector).extract():
+            # Check if href is complete.
+            if "http" not in href:
+                href = "http://" + domain + href
+            # Add file URL to pipeline
+            file_urls += [href]
+            
+            # Parse file text and it to list of file texts
+            file_text += [self.parse_file(href, item['url'])]
+            
+        return file_urls, file_text
     
     def parse_file(self, href, parent_url):
         """
