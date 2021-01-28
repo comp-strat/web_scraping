@@ -210,21 +210,28 @@ class CharterSchoolSpider(CrawlSpider):
         'OUR SCHOOL PARENTSACADEMICSSUPPORT Our Mission'
         
         For another example, see filter_text_ex.txt
+        
+        More options for cleaning HTML: 
+        https://stackoverflow.com/questions/699468/remove-html-tags-not-on-an-allowed-list-from-a-python-string/812785#812785
+        Especially consider: `from lxml.html.clean import clean_html`
         """
         # Load HTML into BeautifulSoup, extract text
         soup = BeautifulSoup(response.body, 'html5lib') # slower but more accurate parser for messy HTML # lxml faster
         # Remove non-visible tags from soup
         [s.extract() for s in soup(['head', 'title', '[document]'])]
         # Extract text, remove <p> tags
-        visible_text = soup.get_text(strip = True) # removes extra white spaces from each text chunk; splits by space
+        visible_text = soup.get_text(strip = False) # removes extra white spaces from each text chunk; splits by space
         
         # Remove inline tags from text
         for it in inline_tags:
             visible_text = visible_text.replace("<" + it + ">", "")
             visible_text = visible_text.replace("</" + it + ">", "")
         # Remove ascii (such as "\u00")
-        filtered_text = visible_text.encode('ascii', 'ignore').decode('ascii').encode('utf-8').decode('utf-8')
+        filtered_text = visible_text.encode('ascii', 'ignore').decode('ascii')
         
+        # Remove ad junk
+        cleaned_text = re.sub(r'\b\S*pic.twitter.com\/\S*', '', cleaned_text) 
+        cleaned_text = re.sub(r'\b\S*cnxps\.cmd\.push\(.+\)\;', '', cleaned_text) 
         # Replace all consecutive spaces (including in unicode), tabs, or "|"s with a single space
         filtered_text = regex.sub(r"[ \t\h\|]+", " ", filtered_text)
         # Replace any consecutive linebreaks with a single newline
