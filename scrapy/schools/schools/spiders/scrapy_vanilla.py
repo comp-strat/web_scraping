@@ -77,9 +77,9 @@ CONTROL_CHAR_RE = re.compile('[%s]' % re.escape(control_chars))
 TEXTRACT_EXTENSIONS = [".pdf", ".doc", ".docx", ""]
 
 # Define inline tags for cleaning out HTML
-inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
-               "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
-               "span", "sub", "sup"]
+inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn", "kbd", 
+               "samp", "var", "bdo", "map", "object", "q", "span", "sub", "sup", "head", 
+               "title", "[document]", "script", "style", "meta", "noscript"]
 
 
 class CustomLinkExtractor(LinkExtractor):
@@ -218,14 +218,10 @@ class CharterSchoolSpider(CrawlSpider):
         # Load HTML into BeautifulSoup, extract text
         soup = BeautifulSoup(response.body, 'html5lib') # slower but more accurate parser for messy HTML # lxml faster
         # Remove non-visible tags from soup
-        [s.extract() for s in soup(['head', 'title', '[document]'])]
+        [s.decompose() for s in soup(inline_tags)] # quick method for BS
         # Extract text, remove <p> tags
-        visible_text = soup.get_text(strip = False) # removes extra white spaces from each text chunk; splits by space
+        visible_text = soup.get_text(strip = False) # get text from each chunk, leave unicode spacing (e.g., `\xa0`) for now to avoid globbing words
         
-        # Remove inline tags from text
-        for it in inline_tags:
-            visible_text = visible_text.replace("<" + it + ">", "")
-            visible_text = visible_text.replace("</" + it + ">", "")
         # Remove ascii (such as "\u00")
         filtered_text = visible_text.encode('ascii', 'ignore').decode('ascii')
         
