@@ -48,7 +48,7 @@ TODO
 
 # make sure the dependencies are installed
 import tldextract
-import regex
+import regex # 3rd party library supports recursion and unicode handling
 
 import csv
 from bs4 import BeautifulSoup # BS reads and parses even poorly/unreliably coded HTML 
@@ -181,7 +181,7 @@ class CharterSchoolSpider(CrawlSpider):
                 domain = self.get_domain(url)
                 # set instance attributes
                 self.start_urls.append(url)
-                self.allowed_domains.append(domain)
+                self.allowed_domains.append(url) # use `domain` to get top level
                 # note: float('3.70014E+11') == 370014000000.0
                 self.domain_to_id[domain] = float(school_id)
 
@@ -197,8 +197,11 @@ class CharterSchoolSpider(CrawlSpider):
         >>> get_domain('https://www.socratesacademy.us/our-school')
         socratesacademy.us
         """
-        extracted = tldextract.extract(url)
-        return f'{extracted.domain}.{extracted.suffix}'
+        #extracted = tldextract.extract(url)
+        #permissive_domain = f'{extracted.domain}.{extracted.suffix}' # gets top level domain: very permissive crawling
+        specific_domain = re.sub(r'https?\:\/\/', '', url) # full URL without http
+        
+        return specific_domain # use `permissive_domain` to scrape much more broadly 
     
     
     def get_text(self, response):
@@ -226,14 +229,13 @@ class CharterSchoolSpider(CrawlSpider):
         filtered_text = visible_text.encode('ascii', 'ignore').decode('ascii')
         
         # Remove ad junk
-        cleaned_text = re.sub(r'\b\S*pic.twitter.com\/\S*', '', cleaned_text) 
-        cleaned_text = re.sub(r'\b\S*cnxps\.cmd\.push\(.+\)\;', '', cleaned_text) 
+        filtered_text = re.sub(r'\b\S*pic.twitter.com\/\S*', '', filtered_text) 
+        filtered_text = re.sub(r'\b\S*cnxps\.cmd\.push\(.+\)\;', '', filtered_text) 
         # Replace all consecutive spaces (including in unicode), tabs, or "|"s with a single space
         filtered_text = regex.sub(r"[ \t\h\|]+", " ", filtered_text)
         # Replace any consecutive linebreaks with a single newline
         filtered_text = regex.sub(r"[\n\r\f\v]+", "\n", filtered_text)
         # Remove json strings: https://stackoverflow.com/questions/21994677/find-json-strings-in-a-string
-        # Uses the regex 3rd party library to support recursive Regex
         filtered_text = regex.sub(r"{(?:[^{}]*|(?R))*}", " ", filtered_text)
 
         # Remove white spaces at beginning and end of string; return
