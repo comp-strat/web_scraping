@@ -101,11 +101,15 @@ class CharterSchoolSpider(CrawlSpider):
             callback="parse_items"
         )
     ]
-    def __init__(self, csv_input=None, *args, **kwargs):
+    def __init__(self, school_list=None, *args, **kwargs):
         """
         Overrides default constructor to set custom
         instance attributes.
         
+        Parameters:
+        - school_list: csv or tsv format
+            List of charter schools containing string domains and school ids.
+            
         Attributes:
         
         - start_urls:
@@ -125,9 +129,10 @@ class CharterSchoolSpider(CrawlSpider):
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
         self.start_urls = []
         self.allowed_domains = []
-        self.rules = (Rule(CustomLinkExtractor(), follow=True, callback="parse_items"),)
+        self.rules = (Rule(CustomLinkExtractor(), follow=True, callback=lambda a: None),)
         self.domain_to_id = {}
-        self.init_from_csv(csv_input)
+        print("hi")
+        self.init_from_school_list(school_list)
         
 
     # note: make sure we ignore robot.txt
@@ -137,23 +142,25 @@ class CharterSchoolSpider(CrawlSpider):
         item = CharterItem()
         item['url'] = response.url
         item['text'] = self.get_text(response)
-        domain = self.get_domain(response.url)
+        domain = self.get_domain(response.url)            
         item['school_id'] = self.domain_to_id[domain]
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
-        
+        print("Domain Name: ", domain)
+        print("Full URL: ", response.url)
+        print("Depth: ", item['depth'])
         item['image_urls'] = self.collect_image_URLs(response)
         
         item['file_urls'], item['file_text'] = self.collect_file_URLs(domain, item, response)
         
         yield item    
 
-    def init_from_csv(self, csv_input):
+    def init_from_school_list(self, school_list):
         """
         Generate's this spider's instance attributes
-        from the input CSV file.
+        from the input school list, formatted as a CSV or TSV.
         
-        CSV's format:
+        School List's format:
         1. The first row is meta data that is ignored.
         2. Rows in the csv are 1d arrays with one element.
         ex: row == ['3.70014E+11,http://www.charlottesecondary.org/'].
@@ -162,23 +169,32 @@ class CharterSchoolSpider(CrawlSpider):
         well with CrawlSpider Rules.
         
         Args:
-            csv_input: Is the path string to this file.
+            school_list: Is the path string to this file.
         Returns:
             Nothing is returned. However, start_urls,
             allowed_domains, and domain_to_id are initialized.
         """
-        if not csv_input:
+        print("start the party")
+        if not school_list:
             return
-        with open(csv_input, 'r') as f:
-            reader = csv.reader(f, delimiter="\t",quoting=csv.QUOTE_NONE)
+        with open(school_list, 'r') as f:
+            is_csv = "csv" in school_list
+            print(is_csv)
+            delim = "," if is_csv else "\t"
+            reader = csv.reader(f, delimiter=delim,quoting=csv.QUOTE_NONE)
             first_row = True
+            print(first_row)
             for raw_row in reader:
                 if first_row:
                     first_row = False
                     continue
-                #csv_row = raw_row[0]
-                school_id, url = raw_row #csv_row.split("\t")
+                
+                print(raw_row)
+                school_id, url = raw_row
+
                 domain = self.get_domain(url)
+                if "realtytrac" in domain or "google" in domain:
+                    continue
                 # set instance attributes
                 self.start_urls.append(url)
                 self.allowed_domains.append(domain)
@@ -257,7 +273,7 @@ class CharterSchoolSpider(CrawlSpider):
         """
         file_urls = []
         selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
-        #print("PDF FOUND", response.css(selector).extract())
+        print("PDF FOUND", response.css(selector).extract())
         
         # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
         file_text = []
