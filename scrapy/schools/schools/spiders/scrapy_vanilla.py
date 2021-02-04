@@ -131,7 +131,6 @@ class CharterSchoolSpider(CrawlSpider):
         self.allowed_domains = []
         self.rules = (Rule(CustomLinkExtractor(), follow=True, callback=lambda a: None),)
         self.domain_to_id = {}
-        print("hi")
         self.init_from_school_list(school_list)
         
 
@@ -174,27 +173,20 @@ class CharterSchoolSpider(CrawlSpider):
             Nothing is returned. However, start_urls,
             allowed_domains, and domain_to_id are initialized.
         """
-        print("start the party")
         if not school_list:
             return
         with open(school_list, 'r') as f:
-            is_csv = "csv" in school_list
-            print(is_csv)
-            delim = "," if is_csv else "\t"
+            delim = "," if "csv" in school_list else "\t"
             reader = csv.reader(f, delimiter=delim,quoting=csv.QUOTE_NONE)
             first_row = True
-            print(first_row)
             for raw_row in reader:
                 if first_row:
                     first_row = False
                     continue
                 
-                print(raw_row)
                 school_id, url = raw_row
 
                 domain = self.get_domain(url)
-                if "realtytrac" in domain or "google" in domain:
-                    continue
                 # set instance attributes
                 self.start_urls.append(url)
                 self.allowed_domains.append(domain)
