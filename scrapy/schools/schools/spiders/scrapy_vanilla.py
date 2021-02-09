@@ -15,11 +15,11 @@ USAGE
     Pass in the start_urls from a a csv file.
     For example, within web_scraping/scrapy/schools/school, run:
     
-        scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv
+        scrapy crawl schoolspider -a school_list=spiders/test_urls.csv
         
     To append output to a file, run:
         
-        scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv -o schoolspider_output.json
+        scrapy crawl schoolspider -a school_list=spiders/test_urls.csv -o schoolspider_output.json
    
     This output can be saved into other file types as well. Output can also be saved
     in MongoDb (see MongoDBPipeline in pipelines.py).
@@ -129,7 +129,7 @@ class CharterSchoolSpider(CrawlSpider):
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
         self.start_urls = []
         self.allowed_domains = []
-        self.rules = (Rule(CustomLinkExtractor(), follow=True, callback=lambda a: None),)
+        self.rules = (Rule(CustomLinkExtractor(), follow=True, callback=parse_items),)
         self.domain_to_id = {}
         self.init_from_school_list(school_list)
         
@@ -142,11 +142,7 @@ class CharterSchoolSpider(CrawlSpider):
         item['url'] = response.url
         item['text'] = self.get_text(response)
         domain = self.get_domain(response.url)    
-        print(domain in self.domain_to_id)
-        if domain not in self.domain_to_id:
-            print(self.domain_to_id)
-        print(response.url)
-        print("Parse_items and the domain:", domain)
+
         item['school_id'] = self.domain_to_id[domain]
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
@@ -192,8 +188,6 @@ class CharterSchoolSpider(CrawlSpider):
                 school_id, url = raw_row
 
                 domain = self.get_domain(url)
-                if "google" in domain or "realtrac" in domain:
-                    continue
                 # set instance attributes
                 self.start_urls.append(url)
                 self.allowed_domains.append(domain)
