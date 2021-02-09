@@ -51,11 +51,11 @@ sudo systemctl -l start mongodb
 Finally to run, navigate to `/web_scraping/scrapy/schools/schools/` and run:
 
 ```bash
-scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv -o schoolspider_output.json
+scrapy crawl schoolspider -a school_list=spiders/test_urls.csv -o schoolspider_output.json
 ```
 
-This line means to run the schoolspider crawler with the given csv input file
-and append the output to a json file. Note that subsequent runs of the crawler will append output, rather than replace. 
+This line means to run the schoolspider crawler with the given csv or tsv input file
+and append the output to a json file. Note that subsequent runs of the crawler wsill append output, rather than replace. 
 Appending to a json file is optional and the crawler can be run without doing this. Not specified in this command, is that data is saved behind the scenes
 to a MongoDB database named "schoolSpider" if the MongoDB pipeline is used.
 
