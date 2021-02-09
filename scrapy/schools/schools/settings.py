@@ -13,9 +13,9 @@ SPIDER_MODULES = ['schools.spiders']
 NEWSPIDER_MODULE = 'schools.spiders'
 
 # How to log spider output
-LOG_ENABLED = True
-LOG_LEVEL = 'INFO'
-LOG_FILE = 'schoolspider_log.log'
+#LOG_ENABLED = True
+#LOG_LEVEL = 'INFO'
+#LOG_FILE = 'schoolspider_log.log'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
