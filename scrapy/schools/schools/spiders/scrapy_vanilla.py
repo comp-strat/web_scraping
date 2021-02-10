@@ -129,7 +129,7 @@ class CharterSchoolSpider(CrawlSpider):
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
         self.start_urls = []
         self.allowed_domains = []
-        self.rules = (Rule(CustomLinkExtractor(), follow=True, callback=parse_items),)
+        self.rules = (Rule(CustomLinkExtractor(), follow=True, callback="parse_items"),)
         self.domain_to_id = {}
         self.init_from_school_list(school_list)
         
