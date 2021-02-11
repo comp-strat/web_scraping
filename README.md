@@ -32,20 +32,33 @@ pip3 install -r requirements.txt
 If you want to store results into MongoDB, ensure that:
 
 ```python
-'schools.pipelines.MongoDBPipeline': 3
+'schools.pipelines.MongoDBPipeline': 300
 ```
-is one of the key-value pairs of `ITEM_PIPELINES` in `/web_scraping/scrapy/schools/schools/settings.py`. If you don't want to use the pipeline, remove the element.
+is one of the key-value pairs of `ITEM_PIPELINES` in `/web_scraping/scrapy/schools/schools/settings.py` by uncommenting the line. If you don't want to use the pipeline, remove the element.
 
 Furthermore, ensure that in `/web_scraping/scrapy/schools/schools/settings.py`, that:
 ```python
 # This next line must NOT be commented.
-MONGO_URI = 'mongodb://localhost' 
+MONGO_URI = 'mongodb://localhost:27017' 
 # This next line is commented.
 # MONGO_URI = 'mongodb://mongodb_container:27017'
+
+Also, ensure the line
+MONGO_DATABASE = 'schoolSpider'
+is uncommented.
 ```
 Start MongoDB. This step depends on the operating system. On Ubuntu 18.04, this is:
 ```bash
 sudo systemctl -l start mongodb
+```
+With Docker, you can start it with:
+```bash
+docker pull mongo
+docker run -p 27017:27017 --name mongodb mongo
+```
+To stop MongoDB running in Docker:
+```bash
+docker stop mongodb
 ```
 
 Finally to run, navigate to `/web_scraping/scrapy/schools/schools/` and run:
