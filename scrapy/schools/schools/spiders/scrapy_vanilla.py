@@ -15,11 +15,11 @@ USAGE
     Pass in the start_urls from a a csv file.
     For example, within web_scraping/scrapy/schools/school, run:
     
-        scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv
+        scrapy crawl schoolspider -a school_list=spiders/test_urls.csv
         
     To append output to a file, run:
         
-        scrapy crawl schoolspider -a csv_input=spiders/test_urls.csv -o schoolspider_output.json
+        scrapy crawl schoolspider -a school_list=spiders/test_urls.csv -o schoolspider_output.json
    
     This output can be saved into other file types as well. Output can also be saved
     in MongoDb (see MongoDBPipeline in pipelines.py).
@@ -48,7 +48,7 @@ TODO
 
 # make sure the dependencies are installed
 import tldextract
-import regex
+import regex # 3rd party library supports recursion and unicode handling
 
 import csv
 from bs4 import BeautifulSoup # BS reads and parses even poorly/unreliably coded HTML 
@@ -77,9 +77,9 @@ CONTROL_CHAR_RE = re.compile('[%s]' % re.escape(control_chars))
 TEXTRACT_EXTENSIONS = [".pdf", ".doc", ".docx", ""]
 
 # Define inline tags for cleaning out HTML
-inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn",
-               "em", "kbd", "strong", "samp", "var", "bdo", "map", "object", "q",
-               "span", "sub", "sup"]
+inline_tags = ["b", "big", "i", "small", "tt", "abbr", "acronym", "cite", "dfn", "kbd", 
+               "samp", "var", "bdo", "map", "object", "q", "span", "sub", "sup", "head", 
+               "title", "[document]", "script", "style", "meta", "noscript"]
 
 
 class CustomLinkExtractor(LinkExtractor):
@@ -101,11 +101,15 @@ class CharterSchoolSpider(CrawlSpider):
             callback="parse_items"
         )
     ]
-    def __init__(self, csv_input=None, *args, **kwargs):
+    def __init__(self, school_list=None, *args, **kwargs):
         """
         Overrides default constructor to set custom
         instance attributes.
         
+        Parameters:
+        - school_list: csv or tsv format
+            List of charter schools containing string domains and school ids.
+            
         Attributes:
         
         - start_urls:
@@ -127,7 +131,7 @@ class CharterSchoolSpider(CrawlSpider):
         self.allowed_domains = []
         self.rules = (Rule(CustomLinkExtractor(), follow=True, callback="parse_items"),)
         self.domain_to_id = {}
-        self.init_from_csv(csv_input)
+        self.init_from_school_list(school_list)
         
 
     # note: make sure we ignore robot.txt
@@ -137,44 +141,26 @@ class CharterSchoolSpider(CrawlSpider):
         item = CharterItem()
         item['url'] = response.url
         item['text'] = self.get_text(response)
-        domain = self.get_domain(response.url)
+        domain = self.get_domain(response.url)    
+
         item['school_id'] = self.domain_to_id[domain]
         # uses DepthMiddleware
         item['depth'] = response.request.meta['depth']
+        print("Domain Name: ", domain)
+        print("Full URL: ", response.url)
+        print("Depth: ", item['depth'])
+        item['image_urls'] = self.collect_image_URLs(response)
         
+        item['file_urls'], item['file_text'] = self.collect_file_URLs(domain, item, response)
         
-        # iterate over the list of images and append urls for downloading
-        item['image_urls'] = []
-        for image in response.xpath('//img/@src').extract():
-            # make each one into a full URL and add to item[]
-            item['image_urls'].append(response.urljoin(image))
-        
-        # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
-        item['file_urls'] = []
-        selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
-        print("PDF FOUND", response.css(selector).extract())
-        
-        item['file_text'] = []
-        for href in response.css(selector).extract():
-            # Check if href is complete.
-            if "http" not in href:
-                href = "http://" + domain + href
-            # Add file URL to pipeline
-            item['file_urls'] += [href]
-            
-            # Parse file text and it to list of file texts
-            item['file_text'] += [self.parse_file(href, item['url'])]
-            
-            
         yield item    
-        
-        
-    def init_from_csv(self, csv_input):
+
+    def init_from_school_list(self, school_list):
         """
         Generate's this spider's instance attributes
-        from the input CSV file.
+        from the input school list, formatted as a CSV or TSV.
         
-        CSV's format:
+        School List's format:
         1. The first row is meta data that is ignored.
         2. Rows in the csv are 1d arrays with one element.
         ex: row == ['3.70014E+11,http://www.charlottesecondary.org/'].
@@ -183,26 +169,28 @@ class CharterSchoolSpider(CrawlSpider):
         well with CrawlSpider Rules.
         
         Args:
-            csv_input: Is the path string to this file.
+            school_list: Is the path string to this file.
         Returns:
             Nothing is returned. However, start_urls,
             allowed_domains, and domain_to_id are initialized.
         """
-        if not csv_input:
+        if not school_list:
             return
-        with open(csv_input, 'r') as f:
-            reader = csv.reader(f, delimiter="\t",quoting=csv.QUOTE_NONE)
+        with open(school_list, 'r') as f:
+            delim = "," if "csv" in school_list else "\t"
+            reader = csv.reader(f, delimiter=delim,quoting=csv.QUOTE_NONE)
             first_row = True
             for raw_row in reader:
                 if first_row:
                     first_row = False
                     continue
-                #csv_row = raw_row[0]
-                school_id, url = raw_row #csv_row.split("\t")
+                
+                school_id, url = raw_row
+
                 domain = self.get_domain(url)
                 # set instance attributes
                 self.start_urls.append(url)
-                self.allowed_domains.append(domain)
+                self.allowed_domains.append(url) # use `domain` to get top level
                 # note: float('3.70014E+11') == 370014000000.0
                 self.domain_to_id[domain] = float(school_id)
 
@@ -218,8 +206,11 @@ class CharterSchoolSpider(CrawlSpider):
         >>> get_domain('https://www.socratesacademy.us/our-school')
         socratesacademy.us
         """
-        extracted = tldextract.extract(url)
-        return f'{extracted.domain}.{extracted.suffix}'
+        #extracted = tldextract.extract(url)
+        #permissive_domain = f'{extracted.domain}.{extracted.suffix}' # gets top level domain: very permissive crawling
+        specific_domain = re.sub(r'https?\:\/\/', '', url) # full URL without http
+        
+        return specific_domain # use `permissive_domain` to scrape much more broadly 
     
     
     def get_text(self, response):
@@ -231,32 +222,70 @@ class CharterSchoolSpider(CrawlSpider):
         'OUR SCHOOL PARENTSACADEMICSSUPPORT Our Mission'
         
         For another example, see filter_text_ex.txt
+        
+        More options for cleaning HTML: 
+        https://stackoverflow.com/questions/699468/remove-html-tags-not-on-an-allowed-list-from-a-python-string/812785#812785
+        Especially consider: `from lxml.html.clean import clean_html`
         """
         # Load HTML into BeautifulSoup, extract text
         soup = BeautifulSoup(response.body, 'html5lib') # slower but more accurate parser for messy HTML # lxml faster
         # Remove non-visible tags from soup
-        [s.extract() for s in soup(['head', 'title', '[document]'])]
+        [s.decompose() for s in soup(inline_tags)] # quick method for BS
         # Extract text, remove <p> tags
-        visible_text = soup.get_text(strip = True) # removes extra white spaces from each text chunk; splits by space
+        visible_text = soup.get_text(strip = False) # get text from each chunk, leave unicode spacing (e.g., `\xa0`) for now to avoid globbing words
         
-        # Remove inline tags from text
-        for it in inline_tags:
-            visible_text = visible_text.replace("<" + it + ">", "")
-            visible_text = visible_text.replace("</" + it + ">", "")
         # Remove ascii (such as "\u00")
-        filtered_text = visible_text.encode('ascii', 'ignore').decode('ascii').encode('utf-8').decode('utf-8')
+        filtered_text = visible_text.encode('ascii', 'ignore').decode('ascii')
         
+        # Remove ad junk
+        filtered_text = re.sub(r'\b\S*pic.twitter.com\/\S*', '', filtered_text) 
+        filtered_text = re.sub(r'\b\S*cnxps\.cmd\.push\(.+\)\;', '', filtered_text) 
         # Replace all consecutive spaces (including in unicode), tabs, or "|"s with a single space
         filtered_text = regex.sub(r"[ \t\h\|]+", " ", filtered_text)
         # Replace any consecutive linebreaks with a single newline
         filtered_text = regex.sub(r"[\n\r\f\v]+", "\n", filtered_text)
         # Remove json strings: https://stackoverflow.com/questions/21994677/find-json-strings-in-a-string
-        # Uses the regex 3rd party library to support recursive Regex
         filtered_text = regex.sub(r"{(?:[^{}]*|(?R))*}", " ", filtered_text)
 
         # Remove white spaces at beginning and end of string; return
         return filtered_text.strip()
 
+    def collect_image_URLs(self, response):
+        """
+        Collects and returns the image URLs found on a given webpage
+        to store in the Item for downloading.
+        """
+        image_urls = []
+        for image_url in response.xpath('//img/@src').extract():
+            # make each image_url into a readable URL and add to image_urls
+           
+            image_urls.append(response.urljoin(image_url))
+        return image_urls
+    
+    def collect_file_URLs(self, domain, item, response):
+        """
+        Collects and returns the file URLs found on a given webpage
+        to store in the Item for downloading. 
+        
+        Additionally, parses the file for text and appends to a separate text file.
+        """
+        file_urls = []
+        selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
+        print("PDF FOUND", response.css(selector).extract())
+        
+        # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
+        file_text = []
+        for href in response.css(selector).extract():
+            # Check if href is complete.
+            if "http" not in href:
+                href = "http://" + domain + href
+            # Add file URL to pipeline
+            file_urls += [href]
+            
+            # Parse file text and it to list of file texts
+            file_text += [self.parse_file(href, item['url'])]
+            
+        return file_urls, file_text
     
     def parse_file(self, href, parent_url):
         """

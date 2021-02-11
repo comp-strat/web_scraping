@@ -13,9 +13,9 @@ SPIDER_MODULES = ['schools.spiders']
 NEWSPIDER_MODULE = 'schools.spiders'
 
 # How to log spider output
-LOG_ENABLED = True
-LOG_LEVEL = 'INFO'
-LOG_FILE = 'schoolspider_log.log'
+#LOG_ENABLED = True
+#LOG_LEVEL = 'INFO'
+#LOG_FILE = 'schoolspider_log.log'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -104,9 +104,10 @@ AUTOTHROTTLE_DEBUG = False
 ITEM_PIPELINES = {
     'schools.pipelines.MyImagesPipeline': 1,
 #    'schools.pipelines.MyFilesPipeline': 2,
-
+    'schools.pipelines.CustomImagesPipeline': 3,
+    'schools.pipelines.CustomFilesPipeline': 4
 #    'schools.pipelines.MongoDBPipeline': 300,
-    }
+}
 # running locally without containers
 #MONGO_URI = 'mongodb://localhost:27017' 
 # connect to MongoDB which is running in mongodb_container.
@@ -118,7 +119,7 @@ ITEM_PIPELINES = {
 IMAGES_STORE = 'images'
 FILES_STORE = 'files'
 
-FILES_EXPIRES = 365
+#FILES_EXPIRES = 365
 IMAGES_EXPIRES = 365
 MEDIA_ALLOW_REDIRECTS = True
 IMAGES_MIN_HEIGHT = 150
