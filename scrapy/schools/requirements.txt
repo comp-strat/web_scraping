@@ -25,7 +25,7 @@ olefile==0.46
 parsel==1.6.0
 pdfminer.six==20181108
 Pillow==8.0.1
-pkg-resources==0.0.0
+#pkg-resources==0.0.0
 Protego==0.1.16
 pyasn1==0.4.8
 pyasn1-modules==0.2.8

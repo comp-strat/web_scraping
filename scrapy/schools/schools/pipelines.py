@@ -65,7 +65,7 @@ class MyImagesPipeline(ImagesPipeline):
     def file_path(self, request, response=None, info=None, *, item=None):  
         # Set file path for saving images.
         original_url = self.get_domain(item['url'])
-        
+        print("Original Url (file_path): " + str(original_url)) 
         #name taken from base url
         return original_url + "/" + os.path.basename(urlparse(request.url).path)
     
@@ -88,7 +88,7 @@ class MyImagesPipeline(ImagesPipeline):
 
     
 # TODO: add error handling
-'''
+
 class MongoDBPipeline(object):
 
     collection_name = 'outputItems'
@@ -102,18 +102,23 @@ class MongoDBPipeline(object):
         # pull in information from settings.py
         return cls(
             mongo_uri=crawler.settings.get('MONGO_URI'),
-            mongo_db=crawler.settings.get('MONGO_DATABASE')
+            mongo_db=crawler.settings.get('MONGO_DATABASE', 'items')
         )
 
     def open_spider(self, spider):
         # initializing spider
         # opening db connection
+        print("MONGO URI: " + str(self.mongo_uri))
         self.client = pymongo.MongoClient(self.mongo_uri)
+        print("MONGO CLIENT SET UP SUCCESSFULLY")
+        print("Self MONGO DB: " + str(self.mongo_db))
         self.db = self.client[self.mongo_db]
+        print("CONNECTED TO MONGO DB")
 
     def close_spider(self, spider):
         # clean up when spider is closed
         self.client.close()
+        print("Mongo Client closed")
 
     def process_item(self, item, spider):
         """
@@ -124,6 +129,7 @@ class MongoDBPipeline(object):
         To check if an item already exists, filter by the item's
         url field.
         """
+        print("Processing item...")
         # Only store CharterItems.
         if not isinstance(item, CharterItem):
             return item
@@ -135,6 +141,7 @@ class MongoDBPipeline(object):
             ItemAdapter(item).asdict(),
             upsert=True
         )
+#        self.db[self.collection_name].insert(dict(item))
         logging.debug(f"MongoDB: Inserted {item['url']}.")
         return item
-        '''
+        
