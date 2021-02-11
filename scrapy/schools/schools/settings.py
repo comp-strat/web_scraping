@@ -102,13 +102,14 @@ AUTOTHROTTLE_DEBUG = False
 # Item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
+    'schools.pipelines.MyImagesPipeline': 1,
+#    'schools.pipelines.MyFilesPipeline': 2,
     'schools.pipelines.CustomImagesPipeline': 3,
     'schools.pipelines.CustomFilesPipeline': 4
+#    'schools.pipelines.MongoDBPipeline': 300,
 }
-#    'schools.pipelines.MongoDBPipeline': 3, 
-
 # running locally without containers
-# MONGO_URI = 'mongodb://localhost' 
+#MONGO_URI = 'mongodb://localhost:27017' 
 # connect to MongoDB which is running in mongodb_container.
 #MONGO_URI = 'mongodb://mongodb_container:27017'
 

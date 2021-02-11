@@ -22,7 +22,6 @@ https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.col
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 from schools.items import CharterItem
-import os
 
 import logging
 # third party
@@ -34,23 +33,15 @@ import tldextract
 
 from scrapy.pipelines.files import FilesPipeline
 from scrapy.pipelines.images import ImagesPipeline
-from itemadapter import ItemAdapter
 
-
-class CustomFilesPipeline(FilesPipeline):
+class MyFilesPipeline(FilesPipeline):
     
        
     def file_path(self, request, response=None, info=None, *, item=None):
-        """
-        Returns the file path for downloaded files origininating from the specified response. 
-        This is customized to save files from the downloaded item's domain to the 
-        respective domain folder in the 'files' directory.
-
-        """
+        # Set file path for saving files.
         original_url = self.get_domain(item['url'])
-        new_file_path = original_url + "/" + os.path.basename(urlparse(request.url).path)
-        return new_file_path
-
+        return original_url + "/" + os.path.basename(urlparse(request.url).path)
+    
     def get_domain(self, url):
         """
         Given the url, gets the top level domain using the
@@ -68,17 +59,14 @@ class CustomFilesPipeline(FilesPipeline):
         extracted = tldextract.extract(url)
         return f'{extracted.domain}.{extracted.suffix}'
 
-class CustomImagesPipeline(ImagesPipeline):
+class MyImagesPipeline(ImagesPipeline):
     
        
     def file_path(self, request, response=None, info=None, *, item=None):  
-        """
-        Returns the file path for downloaded images origininating from the specified response. 
-        This is customized to save files from the downloaded item's domain to the 
-        respective domain folder in the 'images' directory.
-
-        """        
+        # Set file path for saving images.
         original_url = self.get_domain(item['url'])
+        print("Original Url (file_path): " + str(original_url)) 
+        #name taken from base url
         return original_url + "/" + os.path.basename(urlparse(request.url).path)
     
     def get_domain(self, url):
@@ -100,7 +88,7 @@ class CustomImagesPipeline(ImagesPipeline):
 
     
 # TODO: add error handling
-'''
+
 class MongoDBPipeline(object):
 
     collection_name = 'outputItems'
@@ -114,18 +102,23 @@ class MongoDBPipeline(object):
         # pull in information from settings.py
         return cls(
             mongo_uri=crawler.settings.get('MONGO_URI'),
-            mongo_db=crawler.settings.get('MONGO_DATABASE')
+            mongo_db=crawler.settings.get('MONGO_DATABASE', 'items')
         )
 
     def open_spider(self, spider):
         # initializing spider
         # opening db connection
+        print("MONGO URI: " + str(self.mongo_uri))
         self.client = pymongo.MongoClient(self.mongo_uri)
+        print("MONGO CLIENT SET UP SUCCESSFULLY")
+        print("Self MONGO DB: " + str(self.mongo_db))
         self.db = self.client[self.mongo_db]
+        print("CONNECTED TO MONGO DB")
 
     def close_spider(self, spider):
         # clean up when spider is closed
         self.client.close()
+        print("Mongo Client closed")
 
     def process_item(self, item, spider):
         """
@@ -136,6 +129,7 @@ class MongoDBPipeline(object):
         To check if an item already exists, filter by the item's
         url field.
         """
+        print("Processing item...")
         # Only store CharterItems.
         if not isinstance(item, CharterItem):
             return item
@@ -147,6 +141,7 @@ class MongoDBPipeline(object):
             ItemAdapter(item).asdict(),
             upsert=True
         )
+#        self.db[self.collection_name].insert(dict(item))
         logging.debug(f"MongoDB: Inserted {item['url']}.")
         return item
-        '''
+        
