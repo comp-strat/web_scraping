@@ -34,7 +34,7 @@ import tldextract
 from scrapy.pipelines.files import FilesPipeline
 from scrapy.pipelines.images import ImagesPipeline
 
-class MyFilesPipeline(FilesPipeline):
+class CustomFilesPipeline(FilesPipeline):
     
        
     def file_path(self, request, response=None, info=None, *, item=None):
@@ -59,7 +59,7 @@ class MyFilesPipeline(FilesPipeline):
         extracted = tldextract.extract(url)
         return f'{extracted.domain}.{extracted.suffix}'
 
-class MyImagesPipeline(ImagesPipeline):
+class CustomImagesPipeline(ImagesPipeline):
     
        
     def file_path(self, request, response=None, info=None, *, item=None):  
