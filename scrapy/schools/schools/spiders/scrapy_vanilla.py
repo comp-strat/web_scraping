@@ -190,7 +190,7 @@ class CharterSchoolSpider(CrawlSpider):
                 domain = self.get_domain(url)
                 # set instance attributes
                 self.start_urls.append(url)
-                self.allowed_domains.append(url) # use `domain` to get top level
+                self.allowed_domains.append(domain)
                 # note: float('3.70014E+11') == 370014000000.0
                 self.domain_to_id[domain] = float(school_id)
 
