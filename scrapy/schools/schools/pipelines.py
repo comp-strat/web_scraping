@@ -34,12 +34,17 @@ import tldextract
 from scrapy.pipelines.files import FilesPipeline
 from scrapy.pipelines.images import ImagesPipeline
 
+import os
+
 class CustomFilesPipeline(FilesPipeline):
     
        
     def file_path(self, request, response=None, info=None, *, item=None):
         # Set file path for saving files.
         original_url = self.get_domain(item['url'])
+        print("file paths et")
+        print(original_url)
+        print(original_url + "/" + os.path.basename(urlparse(request.url).path))
         return original_url + "/" + os.path.basename(urlparse(request.url).path)
     
     def get_domain(self, url):
