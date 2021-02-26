@@ -5,10 +5,10 @@ version: '3.7'
 services:
   crawler:
     build: scrapy/schools # Build the Scrapy Dockerfile.
-    expose: 
-      - 27017 # Opens up this port so it can talk to mongodb_container.
     depends_on:
       - mongodb_container
+    links:
+      - "mongodb_container:mongodb_container" # Allow connection to mongodb via the container name
   # credit: https://dev.to/sonyarianto/how-to-spin-mongodb-server-with-docker-and-docker-compose-2lef
   # note there is no MongoDB authentication currently.
   mongodb_container:
@@ -16,6 +16,8 @@ services:
     image: mongo:latest
     ports:
       - 27017:27017
+    expose:
+      - 27017
     volumes:
       - mongodb_data_container:/data/db
 
