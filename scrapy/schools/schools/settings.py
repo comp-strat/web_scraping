@@ -109,8 +109,8 @@ ITEM_PIPELINES = {
 # running locally without containers
 #MONGO_URI = 'mongodb://localhost:27017' 
 # connect to MongoDB which is running in mongodb_container.
-#MONGO_URI = 'mongodb://mongodb_container:27017'
-MONGO_URI = 'someBadURI'
+MONGO_URI = 'mongodb://mongodb_container:27017'
+#MONGO_URI = 'someBadURI'
 
 MONGO_DATABASE = 'schoolSpider' # database (not collection) name
 

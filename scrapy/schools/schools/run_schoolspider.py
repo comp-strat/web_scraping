@@ -9,9 +9,24 @@ The primary purpose of this file is for the Scrapy Dockerfile.
 NOTE: by default, data doesn’t persist when that container no longer exists.
 """
 from scrapy import cmdline
+import multiprocessing
+import os
+import execute_scrapy_from_file
+
+INPUT_FILENAME = './schools/spiders/charter_school_URLs_2019.tsv'
+
+SPLIT_PREFIX = 'split_urls'
 
 # See scrapy_vanilla.py for the meaning of this command.
-#scrapy_run_cmd = "scrapy crawl schoolspider -a csv_input=schools/spiders/test_urls.csv"
-scrapy_run_cmd = "scrapy crawl schoolspider -a school_list=./schools/spiders/charter_school_URLs_2019.tsv"
+SCRAPY_RUN_CMD = "scrapy crawl schoolspider -a school_list="
 
-cmdline.execute(scrapy_run_cmd.split())
+pool = multiprocessing.Pool(multiprocessing.cpu_count())
+
+list_files = ['./schools/spiders/' + file for file in os.listdir('./schools/spiders/') if file.startswith(SPLIT_PREFIX)]
+
+print(list_files)
+
+pool.map(execute_scrapy_from_file.execute_scrapy_from_file, list_files)
+
+pool.close()
+pool.join()
