@@ -129,7 +129,7 @@ class CharterSchoolSpider(CrawlSpider):
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
         self.start_urls = []
         self.allowed_domains = []
-        self.rules = (Rule(CustomLinkExtractor(), follow=True, callback="parse_items"),)
+        self.rules = (Rule(CustomLinkExtractor(allow_domains = self.allowed_domains), follow=True, callback="parse_items"),)
         self.domain_to_id = {}
         self.init_from_school_list(school_list)
         
@@ -137,7 +137,7 @@ class CharterSchoolSpider(CrawlSpider):
     # note: make sure we ignore robot.txt
     # Method for parsing items
     def parse_items(self, response):
-
+        
         item = CharterItem()
         item['url'] = response.url
         item['text'] = self.get_text(response)
@@ -152,7 +152,7 @@ class CharterSchoolSpider(CrawlSpider):
         item['image_urls'] = self.collect_image_URLs(response)
         
         item['file_urls'], item['file_text'] = self.collect_file_URLs(domain, item, response)
-        
+        print(item['file_urls'])
         yield item    
 
     def init_from_school_list(self, school_list):
@@ -187,7 +187,7 @@ class CharterSchoolSpider(CrawlSpider):
                 
                 school_id, url = raw_row
 
-                domain = self.get_domain(url)
+                domain = self.get_domain(url, True)
                 # set instance attributes
                 self.start_urls.append(url)
                 self.allowed_domains.append(domain)
@@ -195,20 +195,39 @@ class CharterSchoolSpider(CrawlSpider):
                 self.domain_to_id[domain] = float(school_id)
 
                 
-    def get_domain(self, url):
+    def get_domain(self, url, init = False):
         """
         Given the url, gets the top level domain using the
         tldextract library.
         
+        Args:
+            init (Boolean): True if this function is called while initializing the Spider, else False
         Ex:
         >>> get_domain('http://www.charlottesecondary.org/')
         charlottesecondary.org
         >>> get_domain('https://www.socratesacademy.us/our-school')
         socratesacademy.us
         """
-        #extracted = tldextract.extract(url)
-        #permissive_domain = f'{extracted.domain}.{extracted.suffix}' # gets top level domain: very permissive crawling
-        specific_domain = re.sub(r'https?\:\/\/', '', url) # full URL without http
+        extracted = tldextract.extract(url)
+        permissive_domain = f'{extracted.domain}.{extracted.suffix}' # gets top level domain: very permissive crawling
+        #specific_domain = re.sub(r'https?\:\/\/', '', url) # full URL without http
+        specific_domain = re.sub(r'https?\:\/\/w{0,3}\.?', '', url) # full URL without http and www. to compare w/ permissive
+        print("Permissive:", permissive_domain)
+        print("Specific:", specific_domain)
+        top_level = len(specific_domain.replace("/", "")) == len(permissive_domain) # compare specific and permissive domain
+        
+        if init: # Check if this is the initialization period for the Spider.
+            if top_level:
+                return permissive_domain
+            else:
+                return specific_domain
+        
+        # secondary round
+        if permissive_domain in self.allowed_domains:
+            return permissive_domain
+        
+        #implement dictionary for if specific domain is used in original allowed_domains; key is specific_domain?
+        
         
         return specific_domain # use `permissive_domain` to scrape much more broadly 
     
