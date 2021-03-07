@@ -56,6 +56,7 @@ from bs4.element import Comment # helps with detecting inline/junk tags when par
 import html5lib # slower but more accurate bs4 parser for messy HTML # lxml faster
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
+from scrapy.exceptions import NotSupported
 
 from schools.items import CharterItem
 
@@ -275,9 +276,13 @@ class CharterSchoolSpider(CrawlSpider):
         to store in the Item for downloading.
         """
         image_urls = []
-        for image_url in response.xpath('//img/@src').extract():
+        try:
+            extracted_urls = response.xpath('//img/@src').extract()
+        except NotSupported:
+            print("No text at this url to parse")
+            extracted_urls = []
+        for image_url in extracted_urls:
             # make each image_url into a readable URL and add to image_urls
-           
             image_urls.append(response.urljoin(image_url))
         return image_urls
     
@@ -290,11 +295,16 @@ class CharterSchoolSpider(CrawlSpider):
         """
         file_urls = []
         selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
-        print("PDF FOUND", response.css(selector).extract())
+        try:
+            extracted_links = response.css(selector).extract()
+        except NotSupported:
+            extracted_links = []
+            print("Cannot extract file. Domain is: " + str(domain))
+        print("PDF FOUND", extracted_links)
         
         # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
         file_text = []
-        for href in response.css(selector).extract():
+        for href in extracted_links:
             # Check if href is complete.
             if "http" not in href:
                 href = "http://" + domain + href
