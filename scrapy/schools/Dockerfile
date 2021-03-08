@@ -15,7 +15,11 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 # Copy the project source code from the local host to the filesystem of the container at the working directory.
 COPY . .
 
+<<<<<<< HEAD
 RUN split -l 50 ./schools/spiders/charter_school_URLs_2019.tsv ./schools/spiders/split_urls
+=======
+RUN split -l 100 ./schools/spiders/charter_school_URLs_2019.tsv ./schools/spiders/split_urls
+>>>>>>> b98016697498049a2be6292ec6e2f53a4432bb41
 
 RUN ls
 
