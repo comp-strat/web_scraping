@@ -299,7 +299,11 @@ class CharterSchoolSpider(CrawlSpider):
             extracted_links = response.css(selector).extract()
         except NotSupported:
             extracted_links = []
-            print("Cannot extract file. Domain is: " + str(domain))
+            if 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' in str(response.headers['Content-Type']) or 'application/pdf' in str(response.headers['Content-Type']):
+                extracted_links.append(response.url)
+#            print("Cannot extract file. Domain is: " + str(domain))
+#            print("Content-Type Header: " + str(response.headers['Content-Type']))
+#            print("\n\n\n\nHeaders: " + str(response.headers.keys()) + "\n\n\n\n")
         print("PDF FOUND", extracted_links)
         
         # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
