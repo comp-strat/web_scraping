@@ -295,14 +295,31 @@ class CharterSchoolSpider(CrawlSpider):
         """
         file_urls = []
         selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
-        try:
+        if 'text/html' in str(response.headers['Content-Type']):
             extracted_links = response.css(selector).extract()
-        except NotSupported:
+            print("Reading response HTML")
+        else:
             extracted_links = []
-            if 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' in str(response.headers['Content-Type']) or 'application/pdf' in str(response.headers['Content-Type']):
-                extracted_links.append(response.url)
+            if 'application/pdf' in str(response.headers['Content-Type']):
+                if response.url.endswith('/'):
+                    file_url = response.url[:-1] + '.pdf'
+                else:
+                    file_url = response.url + '.pdf'
+                extracted_links.append(file_url)
+            elif 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' in str(response.headers['Content-Type']):
+                if response.url.endswith('/'):
+                    file_url = response.url[:-1] + '.docx'
+                else:
+                    file_url = response.url + '.docx'
+                extracted_links.append(file_url)
+            elif 'application/msword' in str(response.headers['Content-Type']):
+                if response.url.endswith('/'):
+                    file_url = response.url[:-1] + '.doc'
+                else:
+                    file_url = response.url + '.doc'
+                extracted_links.append(file_url)
 #            print("Cannot extract file. Domain is: " + str(domain))
-#            print("Content-Type Header: " + str(response.headers['Content-Type']))
+        print("Content-Type Header: " + str(response.headers['Content-Type']))
 #            print("\n\n\n\nHeaders: " + str(response.headers.keys()) + "\n\n\n\n")
         print("PDF FOUND", extracted_links)
         
