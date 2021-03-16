@@ -56,6 +56,7 @@ from bs4.element import Comment # helps with detecting inline/junk tags when par
 import html5lib # slower but more accurate bs4 parser for messy HTML # lxml faster
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
+from scrapy.exceptions import NotSupported
 
 from schools.items import CharterItem
 
@@ -129,7 +130,7 @@ class CharterSchoolSpider(CrawlSpider):
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
         self.start_urls = []
         self.allowed_domains = []
-        self.rules = (Rule(CustomLinkExtractor(), follow=True, callback="parse_items"),)
+        self.rules = (Rule(CustomLinkExtractor(allow_domains = self.allowed_domains), follow=True, callback="parse_items"),)
         self.domain_to_id = {}
         self.init_from_school_list(school_list)
         
@@ -137,7 +138,7 @@ class CharterSchoolSpider(CrawlSpider):
     # note: make sure we ignore robot.txt
     # Method for parsing items
     def parse_items(self, response):
-
+        
         item = CharterItem()
         item['url'] = response.url
         item['text'] = self.get_text(response)
@@ -152,7 +153,7 @@ class CharterSchoolSpider(CrawlSpider):
         item['image_urls'] = self.collect_image_URLs(response)
         
         item['file_urls'], item['file_text'] = self.collect_file_URLs(domain, item, response)
-        
+        print(item['file_urls'])
         yield item    
 
     def init_from_school_list(self, school_list):
@@ -187,7 +188,7 @@ class CharterSchoolSpider(CrawlSpider):
                 
                 school_id, url = raw_row
 
-                domain = self.get_domain(url)
+                domain = self.get_domain(url, True)
                 # set instance attributes
                 self.start_urls.append(url)
                 self.allowed_domains.append(domain)
@@ -195,20 +196,39 @@ class CharterSchoolSpider(CrawlSpider):
                 self.domain_to_id[domain] = float(school_id)
 
                 
-    def get_domain(self, url):
+    def get_domain(self, url, init = False):
         """
         Given the url, gets the top level domain using the
         tldextract library.
         
+        Args:
+            init (Boolean): True if this function is called while initializing the Spider, else False
         Ex:
         >>> get_domain('http://www.charlottesecondary.org/')
         charlottesecondary.org
         >>> get_domain('https://www.socratesacademy.us/our-school')
         socratesacademy.us
         """
-        #extracted = tldextract.extract(url)
-        #permissive_domain = f'{extracted.domain}.{extracted.suffix}' # gets top level domain: very permissive crawling
-        specific_domain = re.sub(r'https?\:\/\/', '', url) # full URL without http
+        extracted = tldextract.extract(url)
+        permissive_domain = f'{extracted.domain}.{extracted.suffix}' # gets top level domain: very permissive crawling
+        #specific_domain = re.sub(r'https?\:\/\/', '', url) # full URL without http
+        specific_domain = re.sub(r'https?\:\/\/w{0,3}\.?', '', url) # full URL without http and www. to compare w/ permissive
+        print("Permissive:", permissive_domain)
+        print("Specific:", specific_domain)
+        top_level = len(specific_domain.replace("/", "")) == len(permissive_domain) # compare specific and permissive domain
+        
+        if init: # Check if this is the initialization period for the Spider.
+            if top_level:
+                return permissive_domain
+            else:
+                return specific_domain
+        
+        # secondary round
+        if permissive_domain in self.allowed_domains:
+            return permissive_domain
+        
+        #implement dictionary for if specific domain is used in original allowed_domains; key is specific_domain?
+        
         
         return specific_domain # use `permissive_domain` to scrape much more broadly 
     
@@ -256,9 +276,13 @@ class CharterSchoolSpider(CrawlSpider):
         to store in the Item for downloading.
         """
         image_urls = []
-        for image_url in response.xpath('//img/@src').extract():
+        try:
+            extracted_urls = response.xpath('//img/@src').extract()
+        except NotSupported:
+            print("No text at this url to parse")
+            extracted_urls = []
+        for image_url in extracted_urls:
             # make each image_url into a readable URL and add to image_urls
-           
             image_urls.append(response.urljoin(image_url))
         return image_urls
     
@@ -271,11 +295,20 @@ class CharterSchoolSpider(CrawlSpider):
         """
         file_urls = []
         selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
-        print("PDF FOUND", response.css(selector).extract())
+        try:
+            extracted_links = response.css(selector).extract()
+        except NotSupported:
+            extracted_links = []
+            if 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' in str(response.headers['Content-Type']) or 'application/pdf' in str(response.headers['Content-Type']):
+                extracted_links.append(response.url)
+#            print("Cannot extract file. Domain is: " + str(domain))
+#            print("Content-Type Header: " + str(response.headers['Content-Type']))
+#            print("\n\n\n\nHeaders: " + str(response.headers.keys()) + "\n\n\n\n")
+        print("PDF FOUND", extracted_links)
         
         # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
         file_text = []
-        for href in response.css(selector).extract():
+        for href in extracted_links:
             # Check if href is complete.
             if "http" not in href:
                 href = "http://" + domain + href
