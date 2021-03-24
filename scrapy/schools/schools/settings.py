@@ -114,6 +114,9 @@ MONGO_URI = 'mongodb://localhost:27017'
 
 MONGO_DATABASE = 'schoolSpider' # database (not collection) name
 
+MONGO_USERNAME = 'admin' # could probably make a "schoolCrawler" user to use here instead
+
+MONGO_PASSWORD = 'someSecretPasswordThatWeWillNotForget' # Replace with actual password
 
 IMAGES_STORE = 'images'
 FILES_STORE = 'files'
