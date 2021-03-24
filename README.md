@@ -99,6 +99,8 @@ And, that:
 ```
 is one of the key-value pairs in of `ITEM_PIPELINES` in `/web_scraping/scrapy/schools/schools/settings.py` by uncommenting the line. If you don't want to use the pipeline, remove the element.
 
+You will also need to set the "MONGO\_USERNAME" and "MONGO\_PASSWORD" properties in order to connect to MongoDB. 
+
 Finally, inside `/web_scraping`, run:
 ```bash
 # build the containers and run in the background
