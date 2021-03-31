@@ -41,7 +41,7 @@ import time
 # Set directories and file paths
 dir_prefix = './' # Set working directory 
 temp_dir = dir_prefix + "data" # Directory in which to save logging and data files
-source_file = 'data/filtered_schools.csv' # Set source file path
+source_file = 'data/filtered_schools-1.csv' # Set source file path
 output_file = dir_prefix + 'data/final_school_output.csv' # Set file path for final collection
 
 '''
@@ -80,12 +80,16 @@ logging.info(str(bad_sites))
 
 def dict_to_csv(dictionary, file_name, header):
     '''This helper function writes a dictionary associated with a school to file_name.csv, with column names given in header.'''
-    #print(file_name)
+    file_exists = os.path.isfile(file_name)
+
     with open(file_name, 'a') as output_file:
 
         logging.info("Saving school to " + str(file_name) + " ...")
         dict_writer = csv.DictWriter(output_file, header)
-        #dict_writer.writeheader()
+
+        if not file_exists:
+            dict_writer.writeheader()  # file doesn't exist yet, write a header
+            
         dict_writer.writerow(dictionary)
         
 def count_left(list_of_dicts, varname):
