@@ -6,7 +6,7 @@
 # Creator: Jaren Haber, PhD Candidate
 # Institution: Department of Sociology, University of California, Berkeley
 # Date created: Summer 2017
-# Date last edited: March 15, 2021
+# Date last edited: March 31, 2021
 
 
 """This script uses two related functions to scrape the best URL from online sources: 
@@ -41,8 +41,8 @@ import time
 # Set directories and file paths
 dir_prefix = './' # Set working directory 
 temp_dir = dir_prefix + "data" # Directory in which to save logging and data files
-source_file = 'data/filtered_schools.csv' # Set source file path
-output_file = dir_prefix + 'data/final_school_output.csv' # Set file path for final collection
+source_file = 'data/filtered_schools-2.csv' # Set source file path
+output_file = dir_prefix + 'data/final_school_output-2.csv' # Set file path for final collection
 
 '''
 if os.path.exists(output_file):  # first, check if modified file (with some data written already) is available on disk
@@ -80,12 +80,16 @@ logging.info(str(bad_sites))
 
 def dict_to_csv(dictionary, file_name, header):
     '''This helper function writes a dictionary associated with a school to file_name.csv, with column names given in header.'''
-    #print(file_name)
+    file_exists = os.path.isfile(file_name)
+
     with open(file_name, 'a') as output_file:
 
         logging.info("Saving school to " + str(file_name) + " ...")
         dict_writer = csv.DictWriter(output_file, header)
-        #dict_writer.writeheader()
+        
+        if not file_exists:
+            dict_writer.writeheader()  # file doesn't exist yet, write a header
+            
         dict_writer.writerow(dictionary)
         
 def count_left(list_of_dicts, varname):
@@ -231,8 +235,8 @@ def getURL(school_name, address, bad_sites_list): # manual_url
     elif k>0:
         logging.info(str(k) + " bad Google result has been omitted. Check this URL!")
     elif exceptionThrown:
-        logging.info("You have received an HTTPError, so scraper will sleep for 10 hours to avoid rate limiting. Please return to this URL by hand: ", + url)
-        time.sleep(36000)
+        logging.info("You have received an HTTPError, so scraper will sleep for 10 hours to avoid rate limiting. Please return to this school by hand: " + school_name)
+        time.sleep(21600)
 
 
     else: 
@@ -270,6 +274,11 @@ logging.info(" ".join([key for key in sample[1].keys()]))
 ### Implement this later --> check for what's left at the START of the scraping
 # count_left(sample, 'URL')
 
+### If working with an old output_file:
+if os.path.exists(output_file):
+    print("output exists")
+    old_output = pd.read_csv(output_file)
+    
 # Create new "URL" and "QUERY_RANKING" variables for each school, without overwriting any with data there already:
 for school in sample:
     try:
@@ -295,19 +304,15 @@ keys = sample[0].keys()  # define keys for writing function
 
 for school in tqdm(sample, desc="Scraping URLs"): # loop through list of schools
     
-    if school["URL"] == "":  # if URL is missing, fill that in by scraping
-        numschools += 1
-        school["QUERY_RANKING"], school["URL"] = getURL(school["SCH_NAME"], school["ADDRESSES"], bad_sites) 
-    
-    else:
-        if school["URL"]:
-            pass  # If URL exists, don't bother scraping it again
+    if school["URL"] or school["SCH_NAME"] in list(old_output.SCH_NAME): # handles case of output file being the same as input file AND case of input to output file
+        logging.info("School & URL already exist in our output_file!")
+        pass  # If URL exists, don't bother scraping it again
 
-        else:  # If URL hasn't been defined, then scrape it!
-            numschools += 1
-            school["QUERY_RANKING"], school["URL"] = "", "" # start with empty strings
-            school["QUERY_RANKING"], school["URL"] = getURL(school["SCH_NAME"], school["ADDRESSES"], bad_sites) 
-    dict_to_csv(school, output_file, keys) # appends to output_file at the end of every result
+    else:  # If URL hasn't been defined, then scrape it!
+        numschools += 1
+        school["QUERY_RANKING"], school["URL"] = "", "" # start with empty strings
+        school["QUERY_RANKING"], school["URL"] = getURL(school["SCH_NAME"], school["ADDRESSES"], bad_sites) 
+        dict_to_csv(school, output_file, keys) # appends to output_file at the end of every result
 
 
     
