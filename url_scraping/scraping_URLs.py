@@ -235,7 +235,7 @@ def getURL(school_name, address, bad_sites_list): # manual_url
     elif k>0:
         logging.info(str(k) + " bad Google result has been omitted. Check this URL!")
     elif exceptionThrown:
-        logging.info("You have received an HTTPError, so scraper will sleep for 10 hours to avoid rate limiting. Please return to this school by hand: " + school_name)
+        logging.info("You have received an HTTPError, so scraper will sleep for 6.5 hours to avoid rate limiting. Please return to this school by hand: " + school_name)
         time.sleep(21600)
 
 
