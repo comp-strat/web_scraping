@@ -201,7 +201,7 @@ def getURL(school_name, address, bad_sites_list): # manual_url
     
     # Loop through google search output to find first good result:
     try:
-        print("Try out a search")
+        print("Try out a search for " + school_name)
         new_urls = list(search(search_terms, stop=numgoo, pause=wait_time))  # Grab first numgoo Google results (URLs)
         print("Search successful")
         logging.info("  Successfully collected Google search results.")
@@ -235,8 +235,8 @@ def getURL(school_name, address, bad_sites_list): # manual_url
     elif k>0:
         logging.info(str(k) + " bad Google result has been omitted. Check this URL!")
     elif exceptionThrown:
-        logging.info("You have received an HTTPError, so scraper will sleep for 10 hours to avoid rate limiting. Please return to this URL by hand: ", + url)
-        time.sleep(36000)
+        logging.info("You have received an HTTPError, so scraper will sleep for 10 hours to avoid rate limiting. Please return to this school by hand: " + school_name)
+        time.sleep(21600)
 
 
     else: 
@@ -274,6 +274,12 @@ logging.info(" ".join([key for key in sample[1].keys()]))
 ### Implement this later --> check for what's left at the START of the scraping
 # count_left(sample, 'URL')
 
+### If working with an old output_file:
+if os.path.exists(output_file):
+    print("output exists")
+    old_output = pd.read_csv(output_file)
+    
+
 # Create new "URL" and "QUERY_RANKING" variables for each school, without overwriting any with data there already:
 for school in sample:
     try:
@@ -298,23 +304,18 @@ keys = sample[0].keys()  # define keys for writing function
 
 
 for school in tqdm(sample, desc="Scraping URLs"): # loop through list of schools
-    
-    if school["URL"] == "":  # if URL is missing, fill that in by scraping
+
+    if school["URL"] or school["SCH_NAME"] in list(old_output.SCH_NAME): # handles case of output file being the same as input file AND case of input to output file
+        logging.info("School & URL already exist in our output_file!")
+        pass  # If URL exists, don't bother scraping it again
+
+    else:  # If URL hasn't been defined, then scrape it!
         numschools += 1
+        school["QUERY_RANKING"], school["URL"] = "", "" # start with empty strings
         school["QUERY_RANKING"], school["URL"] = getURL(school["SCH_NAME"], school["ADDRESSES"], bad_sites) 
-    
-    else:
-        if school["URL"]:
-            pass  # If URL exists, don't bother scraping it again
-
-        else:  # If URL hasn't been defined, then scrape it!
-            numschools += 1
-            school["QUERY_RANKING"], school["URL"] = "", "" # start with empty strings
-            school["QUERY_RANKING"], school["URL"] = getURL(school["SCH_NAME"], school["ADDRESSES"], bad_sites) 
-    dict_to_csv(school, output_file, keys) # appends to output_file at the end of every result
+        dict_to_csv(school, output_file, keys) # appends to output_file at the end of every result
 
 
-    
 print("\n\nURLs discovered for " + str(numschools) + " schools.")
 logging.info("URLs discovered for " + str(numschools) + " schools.")
 
