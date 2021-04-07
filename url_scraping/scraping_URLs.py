@@ -6,7 +6,7 @@
 # Creator: Jaren Haber, PhD Candidate
 # Institution: Department of Sociology, University of California, Berkeley
 # Date created: Summer 2017
-# Date last edited: March 15, 2021
+# Date last edited: March 31, 2021
 
 
 """This script uses two related functions to scrape the best URL from online sources: 
@@ -235,7 +235,7 @@ def getURL(school_name, address, bad_sites_list): # manual_url
     elif k>0:
         logging.info(str(k) + " bad Google result has been omitted. Check this URL!")
     elif exceptionThrown:
-        logging.info("You have received an HTTPError, so scraper will sleep for 10 hours to avoid rate limiting. Please return to this school by hand: " + school_name)
+        logging.info("You have received an HTTPError, so scraper will sleep for 6.5 hours to avoid rate limiting. Please return to this school by hand: " + school_name)
         time.sleep(21600)
 
 
@@ -279,7 +279,6 @@ if os.path.exists(output_file):
     print("output exists")
     old_output = pd.read_csv(output_file)
     
-
 # Create new "URL" and "QUERY_RANKING" variables for each school, without overwriting any with data there already:
 for school in sample:
     try:
