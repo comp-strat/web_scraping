@@ -4,7 +4,7 @@ Our current goal is to collect quality URLs for all 100K+ open public schools in
 The most recent copy of the URL scraper can be found in scraping_URLs.py.
 
 ## Usage notes
-Running the scraper will create a log 'dataURL_scraping_{datetime}.log'. This will provide updates on progress during the processing of each school entry, in addition to the use of the tqdm module in the main script.
+Running the scraper will create a log 'dataURL_scraping_{datetime}.log'. This will provide updates on progress during the processing of each school entry, in addition to the use of the 'tqdm' module in the main script for providing progress in the terminal. (More info on 'tqdm' here: https://tqdm.github.io)
 
 'data/filtered_schools.csv' contains values for the following columns: "SCH_NAME" (school name), "ADDRESSES" (address), "NCESSCH" (unique school ID).
 
@@ -17,7 +17,8 @@ If a URL is found, we will add to a new .csv file 'data/final_school_output.csv'
 If an error is caught during runtime (i.e. we are rate limited by Google), the scraper will sleep for 6.5 hours before resuming its crawl. Any school entries left without URLs will be checked once more at the end of the process.
 
 ## Running the URL scraper
-Run the following command `python3 scraping_URLs.py`. 
+Run the following command `python3 scraping_URLs.py` from the url_scraping directory.
+This should create the log 'dataURL_scraping_{datetime}.log' in the url_scraping directory, as well as create or append to final_school_output.csv.
 
 ## Updates to come
 - Updating the scraping_URLs.ipynb for a more interactive and segmented approach to scraping

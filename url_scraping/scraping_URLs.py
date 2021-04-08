@@ -41,8 +41,8 @@ import time
 # Set directories and file paths
 dir_prefix = './' # Set working directory 
 temp_dir = dir_prefix + "data" # Directory in which to save logging and data files
-source_file = 'data/filtered_schools-2.csv' # Set source file path
-output_file = dir_prefix + 'data/final_school_output-2.csv' # Set file path for final collection
+source_file = 'data/filtered_schools.csv' # Set source file path
+output_file = dir_prefix + 'data/final_school_output.csv' # Set file path for final collection
 
 '''
 if os.path.exists(output_file):  # first, check if modified file (with some data written already) is available on disk
