@@ -86,7 +86,7 @@ def dict_to_csv(dictionary, file_name, header):
 
         logging.info("Saving school to " + str(file_name) + " ...")
         dict_writer = csv.DictWriter(output_file, header)
-        
+
         if not file_exists:
             dict_writer.writeheader()  # file doesn't exist yet, write a header
             
@@ -201,7 +201,7 @@ def getURL(school_name, address, bad_sites_list): # manual_url
     
     # Loop through google search output to find first good result:
     try:
-        print("Try out a search")
+        print("Try out a search for " + school_name)
         new_urls = list(search(search_terms, stop=numgoo, pause=wait_time))  # Grab first numgoo Google results (URLs)
         print("Search successful")
         logging.info("  Successfully collected Google search results.")
@@ -303,7 +303,7 @@ keys = sample[0].keys()  # define keys for writing function
 
 
 for school in tqdm(sample, desc="Scraping URLs"): # loop through list of schools
-    
+
     if school["URL"] or school["SCH_NAME"] in list(old_output.SCH_NAME): # handles case of output file being the same as input file AND case of input to output file
         logging.info("School & URL already exist in our output_file!")
         pass  # If URL exists, don't bother scraping it again
@@ -315,7 +315,6 @@ for school in tqdm(sample, desc="Scraping URLs"): # loop through list of schools
         dict_to_csv(school, output_file, keys) # appends to output_file at the end of every result
 
 
-    
 print("\n\nURLs discovered for " + str(numschools) + " schools.")
 logging.info("URLs discovered for " + str(numschools) + " schools.")
 
