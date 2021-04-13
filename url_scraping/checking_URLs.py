@@ -1,12 +1,14 @@
 """
-The goal of this script is to check the validity of the scraped URLs. In it, we:
-- Insert a new column "URL_Confirmed"
-- Mark False if:
-1. Check association
-2. Clear URL 
+SCRIPT USAGE:
+- Modifies the input file to mark whether specific rows are confirmed to be valid ("validity_confirmed").
+- Produces a new file containing the rows that are confirmed to be valid for easy access.
 
-Produces a fresh file containing the rows that are confirmed.
-Modifies the input file to mark whether specific rows are confirmed.
+The goal of this script is to check the validity of the scraped URLs for a given 'input_file'. 
+We create a new column in 'input_file' named "validity_confirmed", which contains boolean values for each school depending on 2 predefined cases.
+For a row's value for "validity_confirmed" to be True, both cases must be satisfied:
+1. The school entry's value for "QUERY_RANKING" is less than or equal to 5.
+2. The school name must be found in the website found (using RegEx or simple scraping technique).
+
 
 Cases to deal with
 - URL not originally found (blank)
@@ -72,7 +74,7 @@ with open(input_file, 'r', encoding = 'utf-8') as csvfile:
             url_confirmations += [True]
 
 print(url_confirmations)
-df['URL_confirmed'] = url_confirmations
+df['validity_confirmed'] = url_confirmations
 
 df.to_csv(input_file, index=False)
 
