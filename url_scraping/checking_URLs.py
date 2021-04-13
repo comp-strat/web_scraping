@@ -10,9 +10,9 @@ For a row's value for "validity_confirmed" to be True, both cases must be satisf
 2. The school name must be found in the website found (using RegEx or simple scraping technique).
 
 
-Cases to deal with
+TODO:
 - URL not originally found (blank)
-- school name not found in webpage
+- school name not found in webpage (scraper)
 
 """
 
@@ -57,25 +57,24 @@ with open(input_file, 'r', encoding = 'utf-8') as csvfile:
     url_confirmations = []
     i = 1
     for row in reader: # loop through rows in input file
-        print(i)
-        print(url_confirmations)
-        i += 1
+
         if list(row.values()) == ["", "", "", "", ""]:
             print("End of file")
             break
+
         elif old_exists and row["SCH_NAME"] in list(old_output.SCH_NAME):
             print("Skip because entry exists in output file.")
             pass
         
+
         elif int(row["QUERY_RANKING"]) > 5:
             url_confirmations += [False]
-        else:
+
+        else: # Add new row to 'output_file'
             dict_to_csv(row, output_file, list(row.keys()))
             url_confirmations += [True]
 
-print(url_confirmations)
 df['validity_confirmed'] = url_confirmations
-
-df.to_csv(input_file, index=False)
+df.to_csv(input_file, index=False) # update 'input_file' with new values for "validity_confirmed"
 
 
