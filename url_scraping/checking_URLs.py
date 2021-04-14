@@ -22,6 +22,8 @@ from tqdm import tqdm
 import logging
 from datetime import datetime
 
+from bs4 import BeautifulSoup
+import requests
 # ### Define helper functions
 
 
@@ -38,6 +40,13 @@ def dict_to_csv(dictionary, file_name, header):
             dict_writer.writeheader()  # file doesn't exist yet, write a header
             
         dict_writer.writerow(dictionary)
+
+def check_schoolstr_website(url):
+    source = requests.get(url)
+
+    soup = BeautifulSoup(source.text, 'html.parser')
+    print(soup.text)
+    return True
 
 ### Main Function
 
@@ -57,20 +66,30 @@ with open(input_file, 'r', encoding = 'utf-8') as csvfile:
     url_confirmations = []
     i = 1
     for row in reader: # loop through rows in input file
+        #schoolstr_in_website = check_schoolstr_website(row["URL"]) # Check if the entry's string can be found in the website found. If not, return False.
 
         if list(row.values()) == ["", "", "", "", ""]:
             print("End of file")
             break
 
         elif old_exists and row["SCH_NAME"] in list(old_output.SCH_NAME):
-            print("Skip because entry exists in output file.")
-            pass
-        
+            the_input = pd.read_csv(input_file)
 
+            if 'validity_confirmed' in list(the_input.columns):
+                url_confirmations += [row['validity_confirmed']] # take old value for 'validity_confirmed'
+            else:
+                url_confirmations += []
+            pass
+    
         elif int(row["QUERY_RANKING"]) > 5:
+            print("Query Ranking > 5")
             url_confirmations += [False]
 
+        #elif not schoolstr_in_website:
+        #    print("School String not found in website")
+
         else: # Add new row to 'output_file'
+            print("confirming validity of school's URL!")
             dict_to_csv(row, output_file, list(row.keys()))
             url_confirmations += [True]
 
