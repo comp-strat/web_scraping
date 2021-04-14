@@ -6,13 +6,13 @@ SCRIPT USAGE:
 The goal of this script is to check the validity of the scraped URLs for a given 'input_file'. 
 We create a new column in 'input_file' named "validity_confirmed", which contains boolean values for each school depending on 2 predefined cases.
 For a row's value for "validity_confirmed" to be True, both cases must be satisfied:
-1. The school entry's value for "QUERY_RANKING" is less than or equal to 5.
-2. The school name must be found in the website found (using RegEx or simple scraping technique).
+1. The school entry's value for "QUERY_RANKING" is less than or equal to 5. These entries are more likely to have a valid URL.
+2. The school name must be found in the given URL (using RegEx or simple scraping technique).
 
 
 TODO:
-- URL not originally found (blank)
-- school name not found in webpage (scraper)
+- Add docstrings to helper functions
+- Create more checks for URL validity
 
 """
 
@@ -21,9 +21,15 @@ import csv, re, os # Standard packages
 from tqdm import tqdm
 import logging
 from datetime import datetime
+import time
 
 from bs4 import BeautifulSoup
 import requests
+from requests.auth import HTTPBasicAuth, HTTPDigestAuth
+
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+}
 # ### Define helper functions
 
 
@@ -42,15 +48,20 @@ def dict_to_csv(dictionary, file_name, header):
         dict_writer.writerow(dictionary)
 
 def check_schoolstr_website(school_name, url):
-    source = requests.get(url)
-
-    soup = BeautifulSoup(source.text, 'html.parser')
+    time.sleep(15)
+    try:
+        source = requests.get(url, auth=HTTPDigestAuth('user', 'pass'), headers=HEADERS, timeout=5)
+        soup = BeautifulSoup(source.text, 'html.parser')
+        print("Checking the soup") 
+    except:
+        print("something wrong in request of url")
+        return False
     return school_name in soup.text
 
 ### Main Function
 
-input_file = './data/sample_o.csv'
-output_file = "./data/test_output.csv"
+input_file = './data/final_school_output.csv'
+output_file = "./data/test_output-1.csv"
 df = pd.read_csv(input_file)
 output_file_cols = df.keys()
 
@@ -65,6 +76,7 @@ with open(input_file, 'r', encoding = 'utf-8') as csvfile:
     url_confirmations = []
     i = 1
     for row in reader: # loop through rows in input file
+        print(row)
         schoolstr_in_website = check_schoolstr_website(row["SCH_NAME"], row["URL"]) # Check if the entry's string can be found in the website found. If not, return False.
 
         if list(row.values()) == ["", "", "", "", ""]:
@@ -73,7 +85,7 @@ with open(input_file, 'r', encoding = 'utf-8') as csvfile:
 
         elif old_exists and row["SCH_NAME"] in list(old_output.SCH_NAME):
             if 'validity_confirmed' in list(row.keys()):
-                url_confirmations += [bool(row['validity_confirmed'])] # take old value for 'validity_confirmed'
+                url_confirmations += [bool(row['validity_confirmed'])] # take pre-existing value for 'validity_confirmed'
             else:
                 url_confirmations += []
             pass
@@ -87,11 +99,10 @@ with open(input_file, 'r', encoding = 'utf-8') as csvfile:
             url_confirmations += [False]
 
         else: # Add new row to 'output_file'
-            print("confirming validity of school's URL!")
+            print("Confirmed validity of school's URL!")
             dict_to_csv(row, output_file, list(row.keys()))
             url_confirmations += [True]
 
-print(url_confirmations)
 df['validity_confirmed'] = url_confirmations
 df.to_csv(input_file, index=False) # update 'input_file' with new values for "validity_confirmed"
 
