@@ -72,6 +72,14 @@ and append the output to a json file. Note that subsequent runs of the crawler w
 Appending to a json file is optional and the crawler can be run without doing this. Not specified in this command, is that data is saved behind the scenes
 to a MongoDB database named "schoolSpider" if the MongoDB pipeline is used.
 
+## Adding Logging
+To add a log output file, you'll need to add '-L' and '--logfile' flags. The -L flag specifies the level of logging, such as 'INFO', 'DEBUG', or 'ERROR', and specifies what types of log messages appear in the log file. The --logfile flag specifies the output file location, such as './schoolspider\_log\_1\_1\_2021.log'
+
+A sample command with a log file:
+
+```bash
+scrapy crawl schoolspider -a school_list=spiders/test_urls.csv -o schoolspider_output.json -L INFO --logfile ../logs/schoolspider_log_4_13_2021.log
+```
 
 When you're finished and you don't need to run the scraper anymore run:
 ```
