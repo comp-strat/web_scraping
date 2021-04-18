@@ -56,12 +56,12 @@ def check_schoolstr_website(school_name, url):
     except:
         print("something wrong in request of url")
         return False
-    return school_name in soup.text
+    return school_name.lower() in soup.text.lower()
 
 ### Main Function
 
-input_file = './data/final_school_output.csv'
-output_file = "./data/test_output-1.csv"
+input_file = './data/final_school_output-2.csv'
+output_file = "./data/test_output-2.csv"
 df = pd.read_csv(input_file)
 output_file_cols = df.keys()
 
@@ -77,24 +77,23 @@ with open(input_file, 'r', encoding = 'utf-8') as csvfile:
     i = 1
     for row in reader: # loop through rows in input file
         print(row)
-        schoolstr_in_website = check_schoolstr_website(row["SCH_NAME"], row["URL"]) # Check if the entry's string can be found in the website found. If not, return False.
 
         if list(row.values()) == ["", "", "", "", ""]:
             print("End of file")
             break
 
-        elif old_exists and row["SCH_NAME"] in list(old_output.SCH_NAME):
+        if old_exists and row["SCH_NAME"] in list(old_output.SCH_NAME):
             if 'validity_confirmed' in list(row.keys()):
                 url_confirmations += [bool(row['validity_confirmed'])] # take pre-existing value for 'validity_confirmed'
+                pass
             else:
-                url_confirmations += []
-            pass
+                print("Need to look at validity")
     
-        elif int(row["QUERY_RANKING"]) > 5:
+        if int(row["QUERY_RANKING"]) > 5:
             print("Query Ranking > 5")
             url_confirmations += [False]
-
-        elif not schoolstr_in_website:
+        
+        elif not check_schoolstr_website(row["SCH_NAME"], row["URL"]):    # Check if the entry's string can be found in the website found. If not, return False.
             print("School String not found in website")
             url_confirmations += [False]
 
