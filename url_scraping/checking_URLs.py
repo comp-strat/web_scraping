@@ -20,7 +20,7 @@ import pandas as pd
 import csv, re, os # Standard packages
 from tqdm import tqdm
 import logging
-from datetime import datetime
+from datetime import datetime # For timestamping files
 import time
 
 from bs4 import BeautifulSoup
@@ -30,8 +30,12 @@ from requests.auth import HTTPBasicAuth, HTTPDigestAuth
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
 }
-# ### Define helper functions
 
+# Set logging options
+log_file = temp_dir + "URL_scraping_" + str(datetime.today()) + ".log"
+logging.basicConfig(format='%(message)s', filename=log_file,level=logging.INFO)
+
+# ### Define helper functions
 
 def dict_to_csv(dictionary, file_name, header):
     '''This helper function writes a dictionary associated with a school to file_name.csv, with column names given in header.'''
@@ -76,29 +80,30 @@ with open(input_file, 'r', encoding = 'utf-8') as csvfile:
     url_confirmations = []
     i = 1
     for row in reader: # loop through rows in input file
-        print(row)
-
         if list(row.values()) == ["", "", "", "", ""]:
-            print("End of file")
+            logging.info("End of file")
             break
+
+        logging.info("[%s]" % str(datetime.today()) + " Checking validity for " + row["SCH_NAME"]) # show school name & address
 
         if old_exists and row["SCH_NAME"] in list(old_output.SCH_NAME):
             if 'validity_confirmed' in list(row.keys()):
                 url_confirmations += [bool(row['validity_confirmed'])] # take pre-existing value for 'validity_confirmed'
+                logging.info("Taking previously found value for validity_confirmed: " + bool(row['validity_confirmed']))
                 pass
             else:
-                print("Need to look at validity")
+                logging.info("Need to look at validity! This value is currently empty.")
     
         if int(row["QUERY_RANKING"]) > 5:
-            print("Query Ranking > 5")
+            logging.info("INVALID: Query Ranking > 5")
             url_confirmations += [False]
         
         elif not check_schoolstr_website(row["SCH_NAME"], row["URL"]):    # Check if the entry's string can be found in the website found. If not, return False.
-            print("School String not found in website")
+            logging.info("INVALID: School String not found in website")
             url_confirmations += [False]
 
         else: # Add new row to 'output_file'
-            print("Confirmed validity of school's URL!")
+            logging.info("VALID: Confirmed validity of school's URL!")
             dict_to_csv(row, output_file, list(row.keys()))
             url_confirmations += [True]
 
