@@ -1,28 +1,513 @@
 SCH_NAME,ADDRESSES,NCESSCH,URL,QUERY_RANKING
-BAYLESS ELEMENTARY,"4531 WEBER RD, ST LOUIS, MO 63123",290450000043,http://el.baylessk12.org/administration.html,1
-HANNAH COLE PRIMARY,"1700 WEST ASHLEY ROAD, BOONVILLE, MO 65233",290558000102,https://hcp.bpsk12.net/,1
-BRADLEYVILLE ELEM.,"16474 N STATE HWY 125, BRADLEYVILLE, MO 65614",290570000117,https://www.elementaryschool.me/schooldetails/51083/bradleyville-elem.,1
-BUCHANAN ELEMENTARY,"1000 BUCHANAN ROAD, BRANSON, MO 65616",290576003237,https://www.branson.k12.mo.us/Domain/11,1
-Carl Junction High School,"206 S Roney, Carl Junction, MO 64834",290735000198,https://www.cjr1.org/,1
-CLAYTON HIGH,"#1 MARK TWAIN CIRCLE, CLAYTON, MO 63105",290972000275,https://en.wikipedia.org/wiki/Clayton_High_School_(Missouri),3
-COOTER ELEM.,"MAIN ST, COOTER, MO 63839",291014000325,"https://missouri.hometownlocator.com/schools/profiles,n,cooter%20elem.,z,63839,t,pb,i,1066027.cfm",3
-ANTONIA MIDDLE SCHOOL,"6798 ST. LUKE'S CHURCH ROAD, BARNHART, MO 63012",291230003151,http://antoniams.fox.k12.mo.us/,1
-HOLLISTER HIGH,"2112 STATE HWY BB, HOLLISTER, MO 65672",291455000684,https://www.hollister.k12.mo.us/256244_2,2
-HOLLISTER MIDDLE,"1798 STATE HWY BB, HOLLISTER, MO 65672",291455001120,https://www.hollister.k12.mo.us/259824_2,2
-KENNETT MIDDLE,"510 COLLEGE AVE, KENNETT, MO 63857",291650002654,https://www.kennett.k12.mo.us/schools/kennett-middle-school,1
-LATHROP MIDDLE,"612 CENTER, LATHROP, MO 64465",291797001684,https://www.lathropschools.com/o/lms/page/welcome-to-lathrop-middle-school,1
-NORTH CALLAWAY HIGH,"2700 THUNDERBIRD DR, KINGDOM CITY, MO 65262",292274001254,https://www.nc.k12.mo.us/north-callaway-high-school,1
-ODESSA HIGH,"713 S THIRD ST, ODESSA, MO 64076",292310001325,https://www.odessar7.net/vnews/display.v/SEC/High%20School,1
-Orchard Farm Elementary,"2135 Hwy V, St. Charles, MO 63301",292316001329,http://ofsd.sharpschool.com/schools,1
-Orchard Farm Middle School,"2195 Hwy V, ST CHARLES, MO 63301",292316001330,http://ofsd.sharpschool.com/district/about_us/our_schools,1
-Orchard Farm High School,"2175 Hwy V, St. Charles, MO 63301",292316001331,http://ofsd.sharpschool.com/district/about_us/our_schools,1
-Discovery Elementary,"500 Discovery Path Lane, St. Charles, MO 63301",292316003177,http://ofsd.sharpschool.com/schools/discovery_elementary_school,2
-Early Learning Center,"3489 Boschertown Road, St. Charles, MO 63301",292316003290,http://ofsd.sharpschool.com/schools/early_learning_center,1
-PACIFIC HIGH,"425 INDIAN WARPATH DR, PACIFIC, MO 63069",292346001356,https://www.mvr3.k12.mo.us/o/phs,1
-WESTVIEW MIDDLE,"1950 NEMNICH, ST LOUIS, MO 63136",292667002687,https://westviewmiddle.mo.rge.schoolinsites.com/,1
-Roscoe Elementary,"1515 SW 300 RD, Osceola, MO 64776",292694001637,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=782,4
-Maple Elementary School,"600 MAPLE ST, SMITHVILLE, MO 64089",292841001753,https://www.smithvilleschooldistrict.net/Domain/11,1
-Horizon Elementary School,"695 S COMMERCIAL AVE, SMITHVILLE, MO 64089",292841002274,https://www.smithvilleschooldistrict.net/Domain/10,1
-CARR LANE VPA MIDDLE,"1004 N JEFFERSON AVE, ST LOUIS, MO 63106",292928000792,https://www.slps.org/carrlane,1
-ROOSEVELT HIGH,"3230 HARTFORD ST, ST LOUIS, MO 63118",292928001994,https://www.slps.org/roosevelt,1
-VASHON HIGH,"3035 CASS AVE, ST LOUIS, MO 63106",292928002011,https://www.slps.org/vashon,1
+BAYLESS ELEMENTARY,"4531 WEBER RD, ST LOUIS, MO 63123",2.9045E+11,http://el.baylessk12.org/administration.html,1
+BAYLESS JUNIOR HIGH,"4530 WEBER RD, ST LOUIS, MO 63123",2.9045E+11,http://www.baylessk12.org/,1
+HILLCREST STEAM ACADEMY,"106 S HILLCREST RD, BELTON, MO 64012",2.90462E+11,https://www.beltonschools.org/Page/151,1
+BELTON HIGH,"801 W. North Avenue, BELTON, MO 64012",2.90462E+11,https://www.beltonschools.org/page/79,3
+BERNIE ELEM.,"121 S SPIKER, BERNIE, MO 63822",2.90495E+11,https://www.hisawyer.com/listings/schools/96017-bernie-elem,3
+BEVIER HIGH,"400 BLOOMINGTON ST, BEVIER, MO 63532",2.90498E+11,https://www.realtor.com/realestateandhomes-detail/400-Bloomington-St_Bevier_MO_63532_M86233-84830,1
+BLUE SPRINGS HIGH,"2000 NW ASHTON DR, BLUE SPRINGS, MO 64015",2.90531E+11,https://bshs.bssd.net/a_b_o_u_t_u_s,1
+VALLEY VIEW HIGH,"5000 NW VALLEY VIEW RD, BLUE SPRINGS, MO 64015",2.90531E+11,https://vvhs.bssd.net/,1
+LIGGETT TRAIL EDUCATION CENTER,"3575 SW LIGGETT RD, BLUE SPRINGS, MO 64015",2.90531E+11,https://ltec.bssd.net/,1
+BRITTANY HILL MIDDLE,"2701 NW 1ST ST, BLUE SPRINGS, MO 64014",2.90531E+11,https://bhms.bssd.net/,3
+MORELAND RIDGE MIDDLE,"900 SW BISHOP DR, BLUE SPRINGS, MO 64015",2.90531E+11,https://mrms.bssd.net/,1
+FRESHMAN CTR. - G. BAKER BLDG.,"2103 NW VESPER, BLUE SPRINGS, MO 64015",2.90531E+11,https://www.hisawyer.com/listings/schools/96038-freshman-ctr-g-baker-bldg,2
+DELTA WOODS MIDDLE,"4401 NE LAKEWOOD WAY, LEE'S SUMMIT, MO 64064",2.90531E+11,https://dwms.bssd.net/,1
+PAUL KINDER MIDDLE SCHOOL,"3930 SOUTH R D MIZE RD, BLUE SPRINGS, MO 64015",2.90531E+11,https://pkms.bssd.net/,1
+BOLIVAR PRIMARY,"706 N LEONARD PL, BOLIVAR, MO 65613",2.90537E+11,http://bolivarschoolsbps.ss18.sharpschool.com/,1
+BOLIVAR HIGH,"1401 N HWY D, BOLIVAR, MO 65613",2.90537E+11,http://bolivarschoolsbhs.ss18.sharpschool.com/,1
+BOLIVAR MIDDLE,"604 W JACKSON, BOLIVAR, MO 65613",2.90537E+11,http://bolivarschoolsbms.ss18.sharpschool.com/,1
+HANNAH COLE PRIMARY,"1700 WEST ASHLEY ROAD, BOONVILLE, MO 65233",2.90558E+11,https://hcp.bpsk12.net/,1
+DAVID BARTON ELEM.,"814 LOCUST ST, BOONVILLE, MO 65233",2.90558E+11,https://www.hisawyer.com/listings/schools/96067-david-barton-elem,2
+BOONVILLE HIGH,"1 PIRATE DRIVE, BOONVILLE, MO 65233",2.90558E+11,https://bhs.bpsk12.net/,1
+LAURA SPEED ELLIOTT MIDDLE,"700 MAIN ST, BOONVILLE, MO 65233",2.90558E+11,https://lse.bpsk12.net/,1
+BOSWORTH ELEM.,"102 E ELDRIDGE ST, BOSWORTH, MO 64623",2.90561E+11,https://www.hisawyer.com/listings/providers/96069-bosworth-elem,4
+BOSWORTH HIGH,"102 E ELDRIDGE ST, BOSWORTH, MO 64623",2.90561E+11,https://www.mshsaa.org/Schools/AccountInfo.aspx?s=222,1
+BOURBON ELEMENTARY SCHOOL,"357 JOST STREET, BOURBON, MO 65441",2.90564E+11,https://crawfordbes.ss11.sharpschool.com/,1
+BOWLING GREEN MIDDLE,"700 W ADAMS STREET, BOWLING GREEN, MO 63334",2.90566E+11,http://bgms.bgschools.k12.mo.us/,4
+BRADLEYVILLE ELEM.,"16474 N STATE HWY 125, BRADLEYVILLE, MO 65614",2.9057E+11,https://www.elementaryschool.me/schooldetails/51083/bradleyville-elem.,1
+BRADLEYVILLE HIGH,"16474 N STATE HWY 125, BRADLEYVILLE, MO 65614",2.9057E+11,https://www.schoolsnearme.net/en/public/bradleyville-high-school/49488,3
+BRANSON HIGH,"935 BUCHANAN RD, BRANSON, MO 65616",2.90576E+11,https://www.branson.k12.mo.us/Domain/14,3
+CEDAR RIDGE ELEMENTARY,"396 CEDAR RIDGE DR, BRANSON, MO 65616",2.90576E+11,https://www.branson.k12.mo.us/Domain/9,1
+CEDAR RIDGE PRIMARY,"402 CEDAR RIDGE DR, BRANSON, MO 65616",2.90576E+11,https://www.branson.k12.mo.us/Domain/8,1
+BUCHANAN INTERMEDIATE,"766 BUCHANAN RD, BRANSON, MO 65616",2.90576E+11,https://www.branson.k12.mo.us/BI,1
+CEDAR RIDGE INTERMEDIATE,"308 CEDAR RIDGE DRIVE, BRANSON, MO 65616",2.90576E+11,https://www.branson.k12.mo.us/Domain/10,1
+BUCHANAN ELEMENTARY,"1000 BUCHANAN ROAD, BRANSON, MO 65616",2.90576E+11,https://www.branson.k12.mo.us/Domain/11,1
+BRECKENRIDGE HIGH,"400 W COLFAX ST, BRECKENRIDGE, MO 64625",2.90585E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=241,1
+BRENTWOOD HIGH,"2221 HIGH SCHOOL DR, BRENTWOOD, MO 63144",2.90588E+11,https://bhs.brentwoodmoschools.org/,1
+BRENTWOOD MIDDLE,"9127 WHITE AVE, BRENTWOOD, MO 63144",2.90588E+11,https://bms.brentwoodmoschools.org/,1
+BROOKFIELD HIGH,"124 PERSHING RD, BROOKFIELD, MO 64628",2.90594E+11,http://www.hs.brookfield.k12.mo.us/,1
+BROOKFIELD MIDDLE,"126 PERSHING RD, BROOKFIELD, MO 64628",2.90594E+11,http://www.ms.brookfield.k12.mo.us/,1
+DALLAS COUNTY TECHNICAL CENTER,"33 VO-TECH RD, LOUISBURG, MO 65685",2.90612E+11,https://www.bisonpride.org/Domain/11,1
+BUFFALO HIGH,"500 W MAIN, BUFFALO, MO 65622",2.90612E+11,https://www.bisonpride.org/Domain/8,1
+BUFFALO MIDDLE,"1001 W TRUMAN RD, BUFFALO, MO 65622",2.90612E+11,https://www.hisawyer.com/listings/providers/96115-buffalo-middle,2
+CABOOL HIGH,"720 PEABODY AVENUE, CABOOL, MO 65689",2.90643E+11,https://www.hisawyer.com/listings/schools/96125-cabool-high,3
+CALIFORNIA HIGH,"1501 W BUCHANAN ST, CALIFORNIA, MO 65018",2.90651E+11,https://www.californiak12.org/apps/events/2019/12/calendar/print/?id=21,3
+CAMDENTON MIDDLE,"119 SERVICE RD, CAMDENTON, MO 65020",2.90699E+11,https://www.camdentonschools.org/,1
+CAMDENTON HIGH,"119 SERVICE RD, CAMDENTON, MO 65020",2.90699E+11,https://www.camdentonschools.org/,1
+OAK RIDGE INTERMEDIATE,"119 SERVICE RD, CAMDENTON, MO 65020",2.90699E+11,https://oakridge.camdentonschools.org/,1
+CAMERON HIGH,"1022 S CHESTNUT, CAMERON, MO 64429",2.90702E+11,https://www.cameron.k12.mo.us/o/cameron-high-school/athletics,3
+CAMERON VETERANS MIDDLE,"1015 S. PARK, CAMERON, MO 64429",2.90702E+11,https://www.cameron.k12.mo.us/o/cameron-veteran-middle-school,1
+CAMERON INTERMEDIATE SCHOOL,"915 S. PARK, CAMERON, MO 64429",2.90702E+11,https://www.cameron.k12.mo.us/o/cameron-intermediate-school,1
+CAMPBELL HIGH,"801 S STATE RTE 53, CAMPBELL, MO 63933",2.90705E+11,https://www.mshsaa.org/Schools/AccountInfo.aspx?s=253,4
+CANTON HIGH,"200 S FOURTH ST, CANTON, MO 63435",2.90708E+11,https://www.canton.k12.mo.us/,2
+CENTRAL HIGH,"1000 S SILVER SPRINGS RD, CAPE GIRARDEAU, MO 63703",2.90712E+11,https://chs.capetigers.com/,1
+CENTRAL MIDDLE,"1900 THILENIUS, CAPE GIRARDEAU, MO 63701",2.90712E+11,https://cms.capetigers.com/,1
+Carl Junction High School,"206 S Roney, Carl Junction, MO 64834",2.90735E+11,https://www.cjr1.org/,1
+MIDDLE SCHOOL,"300 E NINTH STREET, CARROLLTON, MO 64633",2.90738E+11,https://www.trojans.k12.mo.us/contact-information,1
+CARROLLTON ELEMENTARY SCHOOL,"207 E NINTH ST, CARROLLTON, MO 64633",2.90738E+11,https://www.trojans.k12.mo.us/contact-information,1
+CARTHAGE HIGH SCHOOL,"2600 SOUTH RIVER, CARTHAGE, MO 64836",2.90746E+11,https://chs-carthage-mo.schoolloop.com/,1
+CARTHAGE INTERMEDIATE CENTER,"2851 S. Chapel, CARTHAGE, MO 64836",2.90746E+11,https://cms-carthage-mo.schoolloop.com/,1
+EARLY CHILDHOOD AND PAT CENTER,"625 E. FAIRVIEW, CARTHAGE, MO 64836",2.90746E+11,https://www.hisawyer.com/listings/schools/96179-early-childhood-and-pat-center,4
+CARUTHERSVILLE HIGH,"1708 WARD AVE, CARUTHERSVILLE, MO 63830",2.90747E+11,https://www.cps18.org/vnews/display.v/SEC/District%20Information%7CContact%20Information,1
+CARUTHERSVILLE MIDDLE,"1705 WARD AVE, CARUTHERSVILLE, MO 63830",2.90747E+11,https://www.schoolsnearme.net/en/public/caruthersville-middle-school/49593,5
+CASSVILLE HIGH,"1501 MAIN ST, CASSVILLE, MO 65625",2.90817E+11,https://cassville.k12.mo.us/,1
+CASSVILLE MIDDLE,"1501 MAIN ST, CASSVILLE, MO 65625",2.90817E+11,https://cassville.k12.mo.us/,1
+CENTER MIDDLE,"326 E 103RD ST, KANSAS CITY, MO 64114",2.90825E+11,https://www.center.k12.mo.us/center-middle-school,1
+CENTER ALTERNATIVE,"8434 PASEO, KANSAS CITY, MO 64131",2.90825E+11,https://www.center.k12.mo.us/center-alternative-school,1
+FLINT HILL ELEMENTARY,"587 MEXICO ROAD, WENTZVILLE, MO 63385",2.90837E+11,https://fhe.fz.k12.mo.us/,1
+CHESTER BOREN MIDDLE,"110 N JEFFERSON, CENTRALIA, MO 65240",2.9084E+11,http://www.cr6.org/cbms/,1
+CENTRALIA HIGH,"849 S JEFFERSON, CENTRALIA, MO 65240",2.9084E+11,http://www.cr6.org/chs/,1
+CENTRALIA INTERMEDIATE,"550 W LAKEVIEW, CENTRALIA, MO 65240",2.9084E+11,http://www.cr6.org/cis/,2
+CHADWICK HIGH,"7090 STATE HWY 125 S, CHADWICK, MO 65629",2.90843E+11,https://www.realtor.com/realestateandhomes-detail/7090-State-Highway-125-S_Chadwick_MO_65629_M85564-59539,1
+CHAMOIS HIGH,"614 S POPLAR ST, CHAMOIS, MO 65024",2.90849E+11,https://www.realtor.com/realestateandhomes-detail/614-S-Poplar-St_Chamois_MO_65024_M75834-13710,4
+CHARLESTON HIGH,"606 S. THORN ST, CHARLESTON, MO 63834",2.90867E+11,https://www.hisawyer.com/listings/providers/96233-charleston-high,2
+CHARLESTON MIDDLE,"S MAIN ST, CHARLESTON, MO 63834",2.90867E+11,https://www.charlestonbluejays.org/apps/pages/CMS/,1
+CHILLICOTHE HIGH,"2801 HORNET RD, CHILLICOTHE, MO 64601",2.90876E+11,http://www.chillicotheschools.com/,3
+CHILLICOTHE MIDDLE,"1529 CALHOUN, CHILLICOTHE, MO 64601",2.90876E+11,https://www.chillicotheschools.org/o/cms/,3
+CLAYTON HIGH,"#1 MARK TWAIN CIRCLE, CLAYTON, MO 63105",2.90972E+11,https://en.wikipedia.org/wiki/Clayton_High_School_(Missouri),3
+CLEARWATER HIGH,"RTE 4 BOX 1004, PIEDMONT, MO 63957",2.90975E+11,https://www.hisawyer.com/listings/schools/96255-clearwater-high,1
+CLEARWATER MIDDLE,"RTE 4 BOX 1004, PIEDMONT, MO 63957",2.90975E+11,https://www.hisawyer.com/listings/schools/96254-clearwater-middle,2
+CLEVER HIGH,"6800 W HWY 14, CLEVER, MO 65631",2.90978E+11,https://www.hisawyer.com/listings/schools/96258-clever-high,1
+CLINTON MIDDLE,"600 E CLINTON, CLINTON, MO 64735",2.90986E+11,https://cms.clintoncardinals.org/about_our_school/contact_us,1
+CLINTON INTERMEDIATE SCHOOL,"709 S 8TH STREET, CLINTON, MO 64735",2.90986E+11,https://cis.clintoncardinals.org/about_our_school/contact_us,1
+CLINTON EARLY CHILDHOOD CENTER,"502 S 5TH STREET, CLINTON, MO 64735",2.90986E+11,https://cecc.clintoncardinals.org/about_our_school/contact_us,1
+BLAIR OAKS MIDDLE SCHOOL,"6124 FALCON LN, JEFFERSON CITY, MO 65101",2.90993E+11,https://bms-bosd-mo.schoolloop.com/,1
+COMMUNITY HIGH,"35063 HWY BB, LADDONIA, MO 63352",2.91002E+11,https://www.cr6.net/,1
+CONCORDIA HIGH,"117 SW 11TH ST, CONCORDIA, MO 64020",2.91008E+11,https://www.concordia.k12.mo.us/vnews/display.v/SEC/CHS,1
+COOTER ELEM.,"MAIN ST, COOTER, MO 63839",2.91014E+11,"https://missouri.hometownlocator.com/schools/profiles,n,cooter%20elem.,z,63839,t,pb,i,1066027.cfm",3
+COOTER HIGH,"MAIN ST, COOTER, MO 63839",2.91014E+11,https://www.cooterwildcats.org/,3
+COUCH HIGH,"21922 Highway 142, MYRTLE, MO 65778",2.9102E+11,https://www.couch.k12.mo.us/,4
+COWGILL ELEM.,"341 E 6TH ST, COWGILL, MO 64637",2.91023E+11,https://www.hisawyer.com/listings/schools/96284-cowgill-elem,4
+CRANE HIGH,"209 PIRATE LN, CRANE, MO 65633",2.91029E+11,https://www.hisawyer.com/listings/schools/96287-crane-high,3
+CROCKER HIGH,"601 N COMMERCIAL, CROCKER, MO 65452",2.91035E+11,https://www.crockerschools.org/,3
+CRYSTAL CITY HIGH,"1100 MISSISSIPPI, CRYSTAL CITY, MO 63019",2.91038E+11,https://crystalcchs.ss4.sharpschool.com/,1
+CUBA MIDDLE,"1 WILDCAT PRIDE DR, CUBA, MO 65453",2.91041E+11,http://www.cuba.k12.mo.us/?page_id=13,1
+CUBA HIGH,"1 WILDCAT PRIDE DR, CUBA, MO 65453",2.91041E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=289,1
+RUSHVILLE ELEM.,"8681 SW STATE RTE 116, RUSHVILLE, MO 64484",2.91059E+11,https://www.hisawyer.com/listings/schools/96310-rushville-elem,4
+DELTA HIGH,"324 LIBERTY ST, DELTA, MO 63744",2.91062E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=269,1
+DEXTER HIGH,"1101 W GRANT ST, DEXTER, MO 63841",2.91077E+11,https://www.dexter.k12.mo.us/article/81932?org=dexter-high-school,1
+DIXON ELEM.,"102 N PINE STREET, DIXON, MO 65459",2.91083E+11,https://www.hisawyer.com/listings/schools/96323-dixon-elem,2
+DIXON MIDDLE,"200 E. 5th Street, DIXON, MO 65459",2.91083E+11,https://www.dixonr1.com/o/dixonr1/events,1
+CURRENT RIVER CAREER CENTER,"301 SPRING ST, DONIPHAN, MO 63935",2.91092E+11,https://crcc.doniphanr1.k12.mo.us/,1
+DONIPHAN HIGH,"5 BALL PARK RD, DONIPHAN, MO 63935",2.91092E+11,https://dhs.doniphanr1.k12.mo.us/,1
+DONIPHAN MIDDLE,"651 SUMMIT, DONIPHAN, MO 63935",2.91092E+11,https://www.hisawyer.com/listings/providers/96327-doniphan-middle,2
+EAST PRAIRIE HIGH,"304 E WALNUT, EAST PRAIRIE, MO 63845",2.91122E+11,https://www.eastprairie.org/departments,1
+ELDON MIDDLE,"1400 N GRAND AVE, ELDON, MO 65026",2.91134E+11,https://www.hisawyer.com/listings/schools/96353-eldon-middle,3
+ELDON HIGH,"101 S PINE ST, ELDON, MO 65026",2.91134E+11,http://eldonmustangs.org/eldon-high-school/contact/,1
+ELSBERRY HIGH,"138 TOMAHAWK DR, ELSBERRY, MO 63343",2.9114E+11,http://www.elsberryschools.com/,1
+EMINENCE HIGH,"505 SOUTH 6TH STREET, EMINENCE, MO 65466",2.91145E+11,https://www.hisawyer.com/listings/providers/96359-eminence-high,3
+ELKHORN ELEMENTARY,"34684 HWY 10, EXCELSIOR SPRINGS, MO 64024",2.91165E+11,http://excelsiorsee.ss9.sharpschool.com/,1
+LEWIS ELEMENTARY,"501 LEAVENWORTH, EXCELSIOR SPRINGS, MO 64024",2.91165E+11,http://excelsiorsle.ss9.sharpschool.com/,1
+EXCELSIOR SPRINGS MIDDLE,"701 CROWN HILL RD, EXCELSIOR SPRINGS, MO 64024",2.91165E+11,http://excelsiorsms.ss9.sharpschool.com/,1
+EXCELSIOR SPRINGS HIGH,"612 TIGER DR, EXCELSIOR SPRINGS, MO 64024",2.91165E+11,http://excelsiorshs.ss9.sharpschool.com/,1
+WESTVIEW ELEMENTARY,"500 N JESSE JAMES, EXCELSIOR SPRINGS, MO 64024",2.91165E+11,http://excelsiorswe.ss9.sharpschool.com/,1
+COMMUNITY FOR KIDS,"104 Main St., Fairfax, MO 64446",2.91176E+11,https://www.hisawyer.com/listings/schools/96381-community-for-kids,2
+TRUMAN LEARNING CENTER,"209 W COLLEGE, FARMINGTON, MO 63640",2.91191E+11,https://www.fsdknights.com/apps/pages/index.jsp?uREC_ID=1188399&type=d,1
+FARMINGTON MIDDLE,"506 S FLEMING ST, FARMINGTON, MO 63640",2.91191E+11,https://www.fsdknights.com/apps/pages/index.jsp?uREC_ID=1188394&type=d&pREC_ID=1433093,2
+LINCOLN INTERMEDIATE,"708 S FLEMING, FARMINGTON, MO 63640",2.91191E+11,https://www.schoolsnearme.net/en/public/lincoln-intermediate/49801,2
+FAYETTE HIGH,"510 CLEVELAND AVE, FAYETTE, MO 65248",2.91199E+11,https://www.hisawyer.com/listings/schools/96397-fayette-high,1
+CROSS KEYS MIDDLE,"14205 COUGAR DR, FLORISSANT, MO 63033",2.91201E+11,https://www.fergflor.org/cross-keys-middle,1
+FERGUSON MIDDLE,"701 JANUARY AVE, FERGUSON, MO 63135",2.91201E+11,https://www.fergflor.org/ferguson-middle,1
+MCCLUER NORTH HIGH,"705 WATERFORD DR, FLORISSANT, MO 63033",2.91201E+11,https://www.fergflor.org/mccluer-north-high,1
+MCCLUER HIGH,"1896 S FLORISSANT RD, FLORISSANT, MO 63031",2.91201E+11,https://www.fergflor.org/domain/367,1
+EARLY EDUCATION CENTER,"1005 WATERFORD DR, FLORISSANT, MO 63033",2.91201E+11,https://www.hisawyer.com/listings/schools/96398-early-education-center,2
+MCCLUER SOUTH-BERKELEY HIGH,"201 BROTHERTON LN, FERGUSON, MO 63135",2.91201E+11,https://www.fergflor.org/mccluer-south-berkeley-high,1
+FESTUS SR. HIGH,"501 WESTWIND DR, FESTUS, MO 63028",2.91203E+11,https://www.realtor.com/realestateandhomes-detail/501-Westwind-Dr_Festus_MO_63028_M79749-72257,2
+FESTUS MIDDLE,"1717 W MAIN, FESTUS, MO 63028",2.91203E+11,https://www.waze.com/live-map/directions/festus-middle-school-w-main-st-1717-festus?to=place.w.176685438.1766723310.2296810,4
+FESTUS INTERMEDIATE,"1501 MID-MEADOW LN, FESTUS, MO 63028",2.91203E+11,https://www.festus.k12.mo.us/vnews/display.v/SEC/Intermediate%7CAdministrators%20%26%20Office%20Staff,1
+FORDLAND MIDDLE,"1230 SCHOOL ST, FORDLAND, MO 65652",2.91218E+11,https://www.fordland.k12.mo.us/,1
+FORSYTH HIGH,"178 PANTHER ST, FORSYTH, MO 65653",2.91224E+11,https://forsythpanthers.org/,1
+FORSYTH MIDDLE,"178 PANTHER ST, FORSYTH, MO 65653",2.91224E+11,https://forsythpanthers.org/,1
+OSAGE TRAIL MIDDLE,"2101 N TWYMAN RD, INDEPENDENCE, MO 64058",2.91229E+11,https://www.fortosage.net/OsageTrail,1
+FORT OSAGE HIGH,"2101 N TWYMAN RD, INDEPENDENCE, MO 64058",2.91229E+11,https://www.fortosage.net/,1
+FOX MIDDLE,"743 JEFFCO BLVD, ARNOLD, MO 63010",2.9123E+11,http://foxms.fox.k12.mo.us/,1
+RIDGEWOOD MIDDLE,"1401 RIDGEWOOD SCHOOL RD, ARNOLD, MO 63010",2.9123E+11,http://foxridgewood.ss4.sharpschool.com/,1
+SECKMAN MIDDLE,"2810 SECKMAN RD, IMPERIAL, MO 63052",2.9123E+11,https://www.hisawyer.com/listings/providers/96450-seckman-middle,2
+ANTONIA MIDDLE SCHOOL,"6798 ST. LUKE'S CHURCH ROAD, BARNHART, MO 63012",2.9123E+11,http://antoniams.fox.k12.mo.us/,1
+KELLY A BURLISON MIDDLE SCHOOL,"825 Highway 72 East, FREDERICKTOWN, MO 63645",2.91254E+11,https://www.hisawyer.com/listings/schools/96466-kelly-a-burlison-middle-school,2
+FULTON MIDDLE,"403 E TENTH, FULTON, MO 65251",2.91255E+11,https://www.fulton58.org/fultonmiddle,1
+GALENA HIGH,"30925 STATE HWY 413, GALENA, MO 65656",2.91263E+11,https://hs.galena.k12.mo.us/about_us,1
+GALLATIN HIGH,"602 S OLIVE, GALLATIN, MO 64640",2.91266E+11,https://www.gallatin.k12.mo.us/contact-us,1
+GIDEON HIGH,"400 MAIN, GIDEON, MO 63848",2.91278E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=300,3
+GILMAN CITY HIGH,"141 LINDSEY AVE, GILMAN CITY, MO 64642",2.91287E+11,https://www.gilman.k12.mo.us/,1
+GOLDEN CITY HIGH,"1208 WALNUT ST, GOLDEN CITY, MO 64748",2.91293E+11,https://www.hisawyer.com/listings/schools/96488-golden-city-high,5
+GRAIN VALLEY HIGH,"551 SW EAGLES PKWY, GRAIN VALLEY, MO 64029",2.91308E+11,http://gvhs.grainvalleyschools.org/,1
+GRANDVIEW MIDDLE,"12650 MANCHESTER, GRANDVIEW, MO 64030",2.91314E+11,https://gms.grandviewc4.net/apps/pages/index.jsp?uREC_ID=432279&type=d&pREC_ID=940936,1
+HIGH GROVE Early Childhood,"2500 HIGH GROVE RD, GRANDVIEW, MO 64030",2.91314E+11,https://hgecc.grandviewc4.net/,1
+GRANDVIEW MIDDLE,"11470 HWY C, HILLSBORO, MO 63050",2.91317E+11,https://www.grandviewr2.com/,1
+GRANDVIEW HIGH,"11470 HWY C, HILLSBORO, MO 63050",2.91317E+11,https://www.grandviewr2.com/,1
+GREENVILLE HIGH,"178 WALNUT ST, GREENVILLE, MO 63944",2.91338E+11,https://www.hisawyer.com/listings/schools/96518-greenville-high,2
+HALLSVILLE INTERMEDIATE,"411 HWY 124 E, HALLSVILLE, MO 65255",2.91356E+11,http://his.hallsville.org/,1
+HALLSVILLE HIGH,"421 HWY 124 E, HALLSVILLE, MO 65255",2.91356E+11,http://www.hallsville.org/,1
+HALLSVILLE MIDDLE,"421 HWY 124 E, HALLSVILLE, MO 65255",2.91356E+11,http://hms.hallsville.org/,1
+HALLSVILLE PRIMARY,"6401 HWY 124 E, HALLSVILLE, MO 65255",2.91356E+11,http://hps.hallsville.org/,1
+PENNEY HIGH,"903 N DAVIS, HAMILTON, MO 64644",2.91359E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=410,1
+HANNIBAL SR. HIGH,"4500 MCMASTERS AVE, HANNIBAL, MO 63401",2.91365E+11,https://www.hisawyer.com/listings/schools/96537-hannibal-sr-high,4
+HANNIBAL MIDDLE,"4700 MCMASTERS AVE, HANNIBAL, MO 63401",2.91365E+11,https://hms.hannibal60.com/,3
+HARRISONVILLE HIGH,"1504 E ELM, HARRISONVILLE, MO 64701",2.91376E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=73,5
+HARRISONVILLE MIDDLE,"601 S HIGHLAND, HARRISONVILLE, MO 64701",2.91376E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=623,2
+WALLACE MIDDLE SCHOOL,"400 E CLEVELAND, HAYTI, MO 63851",2.9138E+11,https://elementaryschools.org/directory/mo/cities/hayti/wallace-middle-school/291380000610/,5
+HAYTI HIGH,"500 N FOURTH ST, HAYTI, MO 63851",2.9138E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=74,1
+BROWN ELEM.,"3325 CHICORY CREEK LN, FLORISSANT, MO 63031",2.91383E+11,https://www.hisawyer.com/listings/schools/96589-brown-elem,1
+HAZELWOOD CENTRAL HIGH,"15875 NEW HALLS FERRY RD, FLORISSANT, MO 63031",2.91383E+11,https://www.hazelwoodschools.org/centralhigh,1
+NORTHWEST MIDDLE,"1605 SHACKELFORD RD, FLORISSANT, MO 63031",2.91383E+11,https://www.hazelwoodschools.org/domain/314,1
+HAZELWOOD WEST HIGH,"1 WILDCAT LN, HAZELWOOD, MO 63042",2.91383E+11,https://www.hazelwoodschools.org/westhigh,1
+EAST MIDDLE,"11300 DUNN RD, ST LOUIS, MO 63138",2.91383E+11,https://www.hazelwoodschools.org/domain/304,1
+HAZELWOOD EAST HIGH,"11300 DUNN RD, ST LOUIS, MO 63138",2.91383E+11,https://www.hazelwoodschools.org/easthigh,1
+WEST MIDDLE,"12834 MISSOURI BOTTOM RD, HAZELWOOD, MO 63042",2.91383E+11,https://www.hazelwoodschools.org/domain/325,2
+NORTH MIDDLE,"4420 VAILE AVE, FLORISSANT, MO 63034",2.91383E+11,https://www.hazelwoodschools.org/northmiddle,1
+SOUTHEAST MIDDLE,"918 PRIGGE RD, ST LOUIS, MO 63138",2.91383E+11,https://www.hazelwoodschools.org/southeastmiddle,1
+HERCULANEUM HIGH,"1 BLACKCAT DR, HERCULANEUM, MO 63048",2.91425E+11,https://www.dunklin.k12.mo.us/domain/145,1
+SENN-THOMAS MIDDLE,"200 SENN THOMAS DR, HERCULANEUM, MO 63048",2.91425E+11,https://www.dunklin.k12.mo.us/STMS,2
+HERMANN HIGH,"176 BEARCAT CROSSING, HERMANN, MO 65041",2.91428E+11,http://hs.hermann.k12.mo.us/,1
+HERMANN MIDDLE,"164 BLUE PRIDE DR, HERMANN, MO 65041",2.91428E+11,http://ms.hermann.k12.mo.us/,1
+HERMITAGE HIGH,"E END POLK ST, HERMITAGE, MO 65668",2.91431E+11,https://www.hisawyer.com/listings/schools/96601-hermitage-high,2
+HERMITAGE MIDDLE,"E END POLK ST, HERMITAGE, MO 65668",2.91431E+11,https://www.hisawyer.com/listings/schools/96600-hermitage-middle,2
+SKYLINE HIGH,"RTE 1 BOX 838, URBANA, MO 65767",2.91432E+11,https://www.hisawyer.com/listings/schools/96603-skyline-high,1
+SKYLINE MIDDLE,"RTE 1 BOX 838, URBANA, MO 65767",2.91432E+11,https://www.schoolsnearme.net/en/public/skyline-middle-school/50020,1
+COMPASS ELEMENTARY,"11115 BENNINGTON, KANSAS CITY, MO 64137",2.91434E+11,https://www.citydirectory.us/school-compass-elementary-kansas-city-mo.html,2
+FREDA MARKLEY EARLY CHILDHOOD,"9201 E. BANNISTER ROAD, KANSAS CITY, MO 64134",2.91434E+11,https://www.hickmanmills.org/Domain/21,1
+RUSKIN HIGH SCHOOL,"7000 E 111TH STREET, KANSAS CITY, MO 64134",2.91434E+11,https://www.hickmanmills.org/ruskin,1
+SMITH-HALE MIDDLE,"8925 LONGVIEW ROAD, KANSAS CITY, MO 64134",2.91434E+11,https://www.waze.com/en-GB/live-map/directions/smith-hale-middle-school-longview-rd-8925-kansas-city?to=place.w.173998469.1740115763.3279095,2
+HICKMAN MILLS FRESHMAN CENTER,"9010 OLD SANTA FE ROAD, KANSAS CITY, MO 64138",2.91434E+11,https://www.hickmanmills.org/domain/1130,2
+HIGBEE HIGH,"101 EVANS ST, HIGBEE, MO 65257",2.91437E+11,https://www.hisawyer.com/listings/providers/96621-higbee-high,5
+HILLSBORO HIGH,"123 LEON HALL PKWY, HILLSBORO, MO 63050",2.91443E+11,https://www.hsdr3.org/o/hillsboro-high-school,1
+HILLSBORO PRIMARY,"101 LEON HALL PKWY, HILLSBORO, MO 63050",2.91443E+11,https://www.hsdr3.org/o/hillsboro-primary,1
+HOLCOMB HIGH,"102 S CHERRY, HOLCOMB, MO 63852",2.91446E+11,https://www.realtor.com/realestateandhomes-detail/102-S-Cherry_Holcomb_MO_63852_M81749-58853,1
+HOLDEN MIDDLE,"301 EAGLE DR, HOLDEN, MO 64040",2.91449E+11,https://www.holdenschools.org/domain/524,1
+HOLDEN HIGH,"1901 S MAIN, HOLDEN, MO 64040",2.91449E+11,https://www.holdenschools.org/Page/2668,2
+HOLLISTER HIGH,"2112 STATE HWY BB, HOLLISTER, MO 65672",2.91455E+11,https://www.hollister.k12.mo.us/256244_2,2
+HOLLISTER MIDDLE,"1798 STATE HWY BB, HOLLISTER, MO 65672",2.91455E+11,https://www.hollister.k12.mo.us/259824_2,2
+HUMANSVILLE HIGH,"300 N OAK ST, HUMANSVILLE, MO 65674",2.9153E+11,https://www.humansville.k12.mo.us/,4
+HURLEY HIGH,"86 HOLT SPRING RD, HURLEY, MO 65675",2.91539E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=324,1
+TRUMAN HIGH,"3301 S NOLAND RD, INDEPENDENCE, MO 64055",2.91548E+11,http://sites.isdschools.org/truman,1
+WILLIAM CHRISMAN HIGH,"1223 N NOLAND RD, INDEPENDENCE, MO 64050",2.91548E+11,http://sites.isdschools.org/williamchrisman,1
+HANTHORN EARLY EDUCATION,"1511 KINGS HWY, INDEPENDENCE, MO 64055",2.91548E+11,http://sites.isdschools.org/hanthorn,1
+INDEPENDENCE ACADEMY,"600 W MECHANIC AVE, INDEPENDENCE, MO 64050",2.91548E+11,https://www.isdschools.org/independence-academy/,1
+BINGHAM MIDDLE,"1716 S SPECK RD, INDEPENDENCE, MO 64057",2.91548E+11,http://sites.isdschools.org/bingham,1
+CLIFFORD H. NOWLIN MIDDLE,"2800 S HARDY AVE, INDEPENDENCE, MO 64052",2.91548E+11,https://sites.isdschools.org/nowlin,1
+SUNSHINE CENTER,"18400 EAST SALISBURY ROAD, INDEPENDENCE, MO 64056",2.91548E+11,https://www.isdschools.org/sunshine-center/,1
+ABRAHAM MALLINSON ELEMENTARY,"709 NORTH FOREST AVE, SUGAR CREEK, MO 64054",2.91548E+11,http://sites.isdschools.org/abrahammallinson,2
+LITTLE BLUE ELEMENTARY,"2020 QUAIL DRIVE, INDEPENDENCE, MO 64057",2.91548E+11,http://sites.isdschools.org/littleblue,1
+JACKSON MIDDLE,"1651 W INDEPENDENCE ST, JACKSON, MO 63755",2.9156E+11,https://ms.jacksonr2schools.com/,1
+EAST ELEMENTARY,"455 N. LACEY STREET, JACKSON, MO 63755",2.9156E+11,https://ees.jacksonr2schools.com/,1
+NORTH DAVIESS HIGH,"413 E SECOND ST, JAMESON, MO 64647",2.91563E+11,https://www.schoolsnearme.net/en/public/north-daviess-high-school/50121,2
+LEWIS AND CLARK MIDDLE,"325 LEWIS AND CLARK DR, JEFFERSON CITY, MO 65101",2.91619E+11,https://www.jcschools.us/Domain/20,1
+THOMAS JEFFERSON MIDDLE,"1201 FAIRGROUNDS RD, JEFFERSON CITY, MO 65109",2.91619E+11,https://www.jcschools.us/jefferson,1
+JEFFERSON CITY HIGH,"609 UNION, JEFFERSON CITY, MO 65101",2.91619E+11,https://www.jcschools.us/Domain/23,1
+PIONEER TRAIL ELEMENTARY,"301 PIONEER TRAIL, JEFFERSON CITY, MO 65109",2.91619E+11,https://www.jcschools.us/pioneertrail,1
+PLATTIN PRIMARY,"2400 R7 SCHOOL RD, FESTUS, MO 63028",2.91623E+11,http://jr7plattin.sharpschool.net/,1
+DANBY-RUSH TOWER MIDDLE,"1250 DOOLING HOLLOW RD, FESTUS, MO 63028",2.91623E+11,http://jr7danby.sharpschool.net/,1
+TELEGRAPH INTERMEDIATE,"1265 DOOLING HOLLOW RD, FESTUS, MO 63028",2.91623E+11,http://jr7telegraph.sharpschool.net/,1
+JEFFERSON HIGH SCHOOL,"7 BLUE JAY WAY, FESTUS, MO 63028",2.91623E+11,http://jr7jefferson.sharpschool.net/,1
+FAIRVIEW PRIMARY,"7047 EMMA, JENNINGS, MO 63136",2.91629E+11,http://fairviewprimary.mo.jsp.schoolinsites.com/?PageName=Directions,1
+FAIRVIEW INTERMEDIATE,"7053 EMMA, JENNINGS, MO 63136",2.91629E+11,https://www.hisawyer.com/listings/schools/96734-fairview-intermediate,3
+COLUMBIA ELEM.,"610 W F ST, JOPLIN, MO 64802",2.91635E+11,https://www.hisawyer.com/listings/schools/96753-columbia-elem,2
+FRANKLIN TECHNOLOGY CTR.,"2104 INDIANA AVE, JOPLIN, MO 64802",2.91635E+11,https://www.hisawyer.com/listings/schools/96754-franklin-technology-ctr,1
+JOPLIN HIGH,"2104 INDIANA AVE, JOPLIN, MO 64802",2.91635E+11,http://jhs.joplinschools.org/about_j_h_s/about/j_h_s_campuses___directions,1
+SOUTH MIDDLE,"900 E 50TH ST, JOPLIN, MO 64802",2.91635E+11,http://south.joplinschools.org/,1
+IRVING ELEMENTARY,"2901 MCCLELLAND BLVD, JOPLIN, MO 64802",2.91635E+11,http://irving.joplinschools.org/,1
+EARLY CHILDHOOD CENTER,"566 E Commercial, Kahoka, MO 63445",2.91638E+11,https://www.hisawyer.com/listings/schools/96755-early-childhood-center,1
+BORDER STAR MONTESSORI,"6321 WORNALL RD, KANSAS CITY, MO 64113",2.9164E+11,https://borderstar.kcpublicschools.org/,1
+FAXON ELEMENTARY,"1320 E 32ND TERR, KANSAS CITY, MO 64109",2.9164E+11,https://faxon.kcpublicschools.org/,2
+CARVER DUAL LANGUAGE SCHOOL,"4600 ELMWOOD AVE, KANSAS CITY, MO 64130",2.9164E+11,https://carver.kcpublicschools.org/,1
+NORTHEAST HIGH,"415 S VAN BRUNT, KANSAS CITY, MO 64124",2.9164E+11,https://northeast.kcpublicschools.org/,1
+CONTRACT,"3708 LINWOOD, KANSAS CITY, MO 64128",2.9164E+11,http://gadwoodgroup.com/Schools/17217d92d6dac0ecda2562ce85768204/,4
+EAST HIGH SCHOOL,"1924 VAN BRUNT BLVD, KANSAS CITY, MO 64127",2.9164E+11,https://east.kcpublicschools.org/,1
+ROGERS ELEMENTARY,"6400 E 23RD ST, KANSAS CITY, MO 64129",2.9164E+11,https://showmekcschools.org/search/j-a-rogers-elementary-school/,2
+FOREIGN LANGUAGE ACADEMY,"3450 WARWICK, KANSAS CITY, MO 64111",2.9164E+11,https://www.kcpublicschools.org/schools/signature/fla,1
+SOUTHEAST HIGH SCHOOL,"3500 E MEYER  BLVD, KANSAS CITY, MO 64131",2.9164E+11,https://southeast.kcpublicschools.org/,1
+SUCCESS ACADEMY,"1601 FOREST AVENUE, KANSAS CITY, MO 64108",2.9164E+11,https://anderson.kcpublicschools.org/,1
+CENTRAL MIDDLE SCHOOL,"3611 EAST LINWOOD, KANSAS CITY, MO 64128",2.9164E+11,https://cms.kcpublicschools.org/,1
+HALE COOK ELEMENTARY,"7302 PENNSYLVANIA, KANSAS CITY, MO 64114",2.9164E+11,https://halecook.kcpublicschools.org/,1
+NORTHEAST MIDDLE SCHOOL,"4904 INDEPENDENCE AVENUE, KANSAS CITY, MO 64124",2.9164E+11,https://nems.kcpublicschools.org/,1
+KANSAS CITY NEIGHBORHOOD ACAD,"1619 E 24th Terrace, Kansas City, MO 64108",2.9164E+11,https://www.citydirectory.us/school-kansas-city-neighborhood-academy-kansas-city-mo.html,4
+KEARNEY HIGH,"715 E 19TH ST, KEARNEY, MO 64060",2.91645E+11,https://khs.ksdr1.net/,1
+KEARNEY MIDDLE,"200 E 5TH ST, KEARNEY, MO 64060",2.91645E+11,https://kms.ksdr1.net/,1
+KENNETT HIGH,"1400 W WASHINGTON ST, KENNETT, MO 63857",2.9165E+11,https://www.realtor.com/realestateandhomes-detail/1400-W-Washington-St_Kennett_MO_63857_M81073-03834,3
+KENNETT MIDDLE,"510 COLLEGE AVE, KENNETT, MO 63857",2.9165E+11,https://www.kennett.k12.mo.us/schools/kennett-middle-school,1
+KINGSVILLE HIGH,"101 E ADRIATIC, KINGSVILLE, MO 64061",2.91666E+11,http://kingsville.k12.mo.us/,1
+KIRBYVILLE MIDDLE,"6225 STATE HWY 76 E, KIRBYVILLE, MO 65679",2.91671E+11,https://www.kirbyville.k12.mo.us/,1
+KIRKSVILLE PRIMARY,"1815 E HAMILTON, KIRKSVILLE, MO 63501",2.91674E+11,https://www.kirksville.k12.mo.us/vnews/display.v/SEC/Kirksville%20Primary%20School,1
+WILLIAM MATTHEW MIDDLE SCHOOL,"1515 S COTTAGE GROVE, KIRKSVILLE, MO 63501",2.91674E+11,https://www.kirksville.k12.mo.us/vnews/display.v/SEC/William%20Matthew%20Middle%20School,1
+NIPHER MIDDLE,"700 S KIRKWOOD RD, KIRKWOOD, MO 63122",2.91677E+11,https://www.kirkwoodschools.org/nipher,1
+NORTH KIRKWOOD MIDDLE,"11287 MANCHESTER RD, KIRKWOOD, MO 63122",2.91677E+11,https://www.kirkwoodschools.org/Domain/10,1
+KNOB NOSTER HIGH,"504 S WASHINGTON, KNOB NOSTER, MO 65336",2.91683E+11,http://hs.knobnoster.k12.mo.us/,1
+KNOB NOSTER MIDDLE,"211 E WIMER, KNOB NOSTER, MO 65336",2.91683E+11,http://ms.knobnoster.k12.mo.us/,1
+KOSHKONONG HIGH,"SCHOOL ST, KOSHKONONG, MO 65692",2.91686E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=98,1
+LOCKWOOD SPECL. EDUC. COOP.,"208 E. 5TH STREET, LOCKWOOD, MO 65682",2.91785E+11,https://www.hisawyer.com/listings/schools/96855-lockwood-specl-educ-coop,5
+LAMAR MIDDLE,"202 W 7TH, LAMAR, MO 64759",2.91785E+11,https://www.lamar.k12.mo.us/,1
+EAST ELEM.,"1600 E 12TH ST, LAMAR, MO 64759",2.91785E+11,https://www.hisawyer.com/listings/schools/96857-east-elem,3
+LATHROP MIDDLE,"612 CENTER, LATHROP, MO 64465",2.91797E+11,https://www.lathropschools.com/o/lms/page/welcome-to-lathrop-middle-school,1
+LAWSON MIDDLE,"602 BOB GILL DR, LAWSON, MO 64062",2.91822E+11,https://www.schoolsnearme.net/en/public/lawson-middle-school/50285,3
+LAWSON HIGH,"600 BOB GILL DR, LAWSON, MO 64062",2.91822E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=112,1
+WEST COUNTY HIGH,"768 HWY M, PARK HILLS, MO 63601",2.91824E+11,http://www.wcr4.org/?cat=6,1
+LEBANON MIDDLE SCHOOL,"2700 Buzz Pride Drive, LEBANON, MO 65536",2.91827E+11,https://lebanonr3.org/our_schools/lebanon_middle_school/contact_info,1
+HILLCREST EDUCATION CENTER,"301 HOOVER, LEBANON, MO 65536",2.91827E+11,https://lebanonr3.org/our_schools/hillcrest_education_center/contact_info,1
+BERNARD C. CAMPBELL MIDDLE,"1201 NE COLBERN RD, LEE'S SUMMIT, MO 64086",2.9183E+11,https://bcms.lsr7.org/,1
+MEADOW LANE ELEM.,"1421 N INDEPENDENCE AVE, LEE'S SUMMIT, MO 64086",2.9183E+11,https://www.hisawyer.com/listings/schools/96895-meadow-lane-elem,1
+PLEASANT LEA MIDDLE,"630 W PERSEL, LEE'S SUMMIT, MO 64081",2.9183E+11,https://plms.lsr7.org/,1
+LEE'S SUMMIT NORTH HIGH,"901 NE DOUGLAS ST, LEE'S SUMMIT, MO 64086",2.9183E+11,https://lsnhs.lsr7.org/,1
+LEE'S SUMMIT WEST HIGH,"2600 SW WARD RD, LEE'S SUMMIT, MO 64082",2.9183E+11,https://lswhs.lsr7.org/,1
+SUMMIT LAKES MIDDLE,"3500 SW WINDEMERE DR, LEE'S SUMMIT, MO 64082",2.9183E+11,https://slms.lsr7.org/,1
+MILLER PARK CENTER,"600 SE MILLER STREET, LEE'S SUMMIT, MO 64063",2.9183E+11,https://mp.lsr7.org/,1
+LEETON MIDDLE,"500 N MAIN, LEETON, MO 64761",2.91836E+11,https://www.leeton.k12.mo.us/,1
+LESTERVILLE RANCH CAMPUS,"525 COUNTY ROAD 816, BLACK, MO 63625",2.91845E+11,https://www.hisawyer.com/listings/schools/96914-lesterville-ranch-campus,4
+LEXINGTON MIDDLE,"1111 S 24TH ST, LEXINGTON, MO 64067",2.91848E+11,http://www.schoolmap.org/School/Lexington-Middle/,3
+LIBERAL ELEM.,"401 YALE, LIBERAL, MO 64762",2.91851E+11,https://www.hisawyer.com/listings/schools/96921-liberal-elem,3
+LIBERAL MIDDLE,"205 N PAYNE, LIBERAL, MO 64762",2.91851E+11,https://www.liberalbulldogs.org/contact,1
+LIBERTY HIGH,"200 BLUEJAY DR, LIBERTY, MO 64068",2.91854E+11,https://www.lps53.org/lhs,3
+LIBERTY ACADEMY,"8 VICTORY LN, LIBERTY, MO 64068",2.91854E+11,https://www.lps53.org/districtfacilities,1
+LIBERTY MIDDLE SCHOOL,"1500 S WITHERS, LIBERTY, MO 64068",2.91854E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=963,1
+SOUTH VALLEY MIDDLE,"1000 MIDJAY DR, LIBERTY, MO 64068",2.91854E+11,https://www.lps53.org/svms,1
+LIBERTY NORTH HIGH SCHOOL,"1000 N.E. 104TH STREET, LIBERTY, MO 64068",2.91854E+11,https://www.lps53.org/lnhs,1
+DISCOVERY MIDDLE SCHOOL,"800 MIDJAY DRIVE, LIBERTY, MO 64068",2.91854E+11,https://www.lps53.org/dms,1
+HERITAGE MIDDLE SCHOOL,"600 W KANSAS, LIBERTY, MO 64068",2.91854E+11,https://www.lps53.org/hms,1
+EPIC ELEMENTARY,"650 CONISTOR LANE, LIBERTY, MO 64068",2.91854E+11,https://www.lps53.org/epic,1
+LINCOLN HIGH,"101 W LAMINE ST, LINCOLN, MO 65338",2.91867E+11,https://www.lincoln.k12.mo.us/,1
+TRUMAN MIDDLE SCHOOL,"12225 EDDIE AND PARK ROAD, ST. LOUIS, MO 63127",2.91869E+11,https://go.lindberghschools.ws/truman,1
+LOCKWOOD HIGH,"400 W 4TH ST, LOCKWOOD, MO 65682",2.91914E+11,https://www.schoolsnearme.net/en/public/lockwood-high-school/50380,2
+LOCKWOOD MIDDLE SCHOOL,"408 Locust St., Lockwood, MO 65682",2.91914E+11,https://www.hisawyer.com/listings/schools/96958-lockwood-middle-school,1
+LOGAN-ROGERSVILLE HIGH,"4700 S STATE HIGHWAY 125, ROGERSVILLE, MO 65742",2.91917E+11,https://www.hisawyer.com/listings/schools/96962-logan-rogersville-high,2
+LOGAN-ROGERSVILLE MIDDLE,"8225 E FARM ROAD 174, ROGERSVILLE, MO 65742",2.91917E+11,https://www.hisawyer.com/listings/schools/96961-logan-rogersville-middle,3
+LOGAN-ROGERSVILLE PRIMARY,"512 S SENTRY DR, ROGERSVILLE, MO 65742",2.91917E+11,https://ps.logrog.net/22061_1,1
+LOGAN-ROGERSVILLE ELEMENTARY,"7297 E FARM ROAD 164, ROGERSVILLE, MO 65742",2.91917E+11,https://es.logrog.net/22069_1,1
+LONE JACK HIGH,"313 S BYNUM RD, LONE JACK, MO 64070",2.91923E+11,https://lonejackc6.net/,1
+LOUISIANA MIDDLE,"3321 W GEORGIA ST, LOUISIANA, MO 63353",2.91926E+11,http://louisianalms.ss16.sharpschool.com/,3
+LOUISIANA HIGH,"3321 W GEORGIA ST, LOUISIANA, MO 63353",2.91926E+11,http://www.louisiana.k12.mo.us/,1
+MACKS CREEK HIGH,"245 STATE RD N, MACKS CREEK, MO 65786",2.91938E+11,https://www.mcreek.k12.mo.us/,1
+MALTA BEND HIGH,"200 S LINN, MALTA BEND, MO 65339",2.91992E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=352,1
+WILDER ELEM.,"414 W OHIO ST, MANSFIELD, MO 65704",2.91998E+11,https://www.hisawyer.com/listings/schools/96990-wilder-elem,2
+MANSFIELD HIGH,"315 W OHIO ST, MANSFIELD, MO 65704",2.91998E+11,https://www.mansfieldschool.net/high-school,1
+MARCELINE HIGH,"314 E SANTA FE, MARCELINE, MO 64658",2.92005E+11,https://www.mshsaa.org/Schools/AccountInfo.aspx?s=354,2
+MARCELINE MIDDLE,"314 E SANTA FE, MARCELINE, MO 64658",2.92005E+11,https://www.hisawyer.com/listings/schools/96996-marceline-middle,2
+MARIONVILLE HIGH,"17725 HIGHWAY 14, MARIONVILLE, MO 65705",2.92031E+11,https://marionville.us/schools/high/,3
+MARIONVILLE MIDDLE,"College and O'Dell, Marionville, MO 65705",2.92031E+11,https://www.hisawyer.com/listings/schools/97003-marionville-middle,1
+BUEKER MIDDLE,"565 S ODELL, MARSHALL, MO 65340",2.92041E+11,https://www.marshallschools.com/o/bms,1
+MARSHFIELD JR. HIGH,"660 N LOCUST ST, MARSHFIELD, MO 65706",2.92043E+11,https://www.hisawyer.com/listings/providers/97019-marshfield-jr-high,2
+EDWIN P. HUBBLE ELEM.,"600 N LOCUST ST, MARSHFIELD, MO 65706",2.92043E+11,https://www.hisawyer.com/listings/schools/97018-edwin-p-hubble-elem,5
+MARSHFIELD HIGH,"370 STATE HWY DD, MARSHFIELD, MO 65706",2.92043E+11,https://www.mjays.us/,1
+MARYVILLE HIGH,"1503 S MUNN AVE, MARYVILLE, MO 64468",2.92049E+11,http://www.mhs.maryville.k12.mo.us/,1
+MARYVILLE MIDDLE,"525 W SOUTH HILLS DR, MARYVILLE, MO 64468",2.92049E+11,http://www.mms.maryville.k12.mo.us/,2
+NW MO SPECL. ED. COOP.,"1210A S MAIN ST, MARYVILLE, MO 64468",2.92049E+11,https://schola.io/schools/missouri/maryville/special/nw-mo-specl-ed-coop_85315,3
+MCDONALD COUNTY HIGH,"100 MUSTANG DR, ANDERSON, MO 64831",2.92061E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=120,1
+ANDERSON MIDDLE,"135 MUSTANG DR, ANDERSON, MO 64831",2.92061E+11,https://www.hisawyer.com/listings/schools/97028-anderson-middle,2
+NOEL PRIMARY,"14762 W STATE HWY 90, NOEL, MO 64854",2.92061E+11,https://www.mcdonaldr1.net/o/nps,1
+PINEVILLE PRIMARY,"340 PLEASANT RIDGE RD, ANDERSON, MO 64831",2.92061E+11,https://www.mcdonaldr1.net/o/pps,1
+MEADVILLE HIGH,"101 W CRANDALL, MEADVILLE, MO 64659",2.92064E+11,https://www.mshsaa.org/Schools/AccountInfo.aspx?s=363,1
+MEHLVILLE HIGH SCHOOL,"3200 LEMAY FERRY RD, ST LOUIS, MO 63125",2.92067E+11,https://mehlvillehigh.ss11.sharpschool.com/,1
+OAKVILLE MIDDLE,"5950 TELEGRAPH RD, ST LOUIS, MO 63129",2.92067E+11,https://mehlvilleoakvillemiddle.ss11.sharpschool.com/,1
+WASHINGTON MIDDLE,"5165 AMBS RD, ST LOUIS, MO 63128",2.92067E+11,https://mehlvillewashingtonmiddle.ss11.sharpschool.com/,1
+BERNARD MIDDLE,"1054 FORDER RD, ST LOUIS, MO 63129",2.92067E+11,https://mehlvillebernardmiddle.ss11.sharpschool.com/,1
+SCOTLAND CO. ELEM.,"438 West Lovers Lane, MEMPHIS, MO 63555",2.9207E+11,https://www.hisawyer.com/listings/schools/97057-scotland-co-elem,2
+MEXICO MIDDLE,"1200 WEST BLVD, MEXICO, MO 65265",2.92081E+11,http://mexicomms.ss16.sharpschool.com/,2
+MEXICO HIGH,"639 N WADE, MEXICO, MO 65265",2.92081E+11,http://mexicomhs.ss16.sharpschool.com/,1
+MIAMI HIGH,"7638 NW STATE ROUTE J, AMORET, MO 64722",2.92082E+11,https://www.miamir1.net/high-school.html,1
+MIDDLE GROVE ELEM.,"11476 RTE M, MADISON, MO 65263",2.92088E+11,https://www.hisawyer.com/listings/schools/97070-middle-grove-elem,2
+MILLER HIGH,"110 W 6TH ST, MILLER, MO 65707",2.921E+11,http://www.mshsaa.org/Schools/AccountInfo.aspx?s=369,2
+MOBERLY MIDDLE,"920 KWIX RD, MOBERLY, MO 65270",2.9211E+11,http://www.moberly.k12.mo.us/mmsfaculty.html,1
+MONETT MIDDLE,"710 NINTH ST, MONETT, MO 65708",2.92112E+11,https://www.monettschools.org/o/mms/page/connected-learning-office-hours,3
+MONETT HIGH,"ONE DAVID SIPPY DR, MONETT, MO 65708",2.92112E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=133,1
+MONETT INTERMEDIATE,"711 9TH ST, MONETT, MO 65708",2.92112E+11,https://www.monettschools.org/o/mis,1
+MONROE CITY MIDDLE,"430 N WASHINGTON, MONROE CITY, MO 63456",2.92121E+11,https://www.hisawyer.com/listings/schools/97092-monroe-city-middle,3
+MONTROSE HIGH,"307 E 2ND ST, MONTROSE, MO 64770",2.92136E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=135,1
+MOUNTAIN GROVE HIGH,"420 N MAIN, MOUNTAIN GROVE, MO 65711",2.92151E+11,https://www.mg.k12.mo.us/hs/,2
+MOUNTAIN GROVE MIDDLE,"400 E 17TH ST, MOUNTAIN GROVE, MO 65711",2.92151E+11,https://www.mg.k12.mo.us/mgms/,1
+BIRCH TREE ELEM.,"OLD HWY 60 EAST, BIRCH TREE, MO 65438",2.92154E+11,https://www.hisawyer.com/listings/schools/97113-birch-tree-elem,2
+LIBERTY MIDDLE,"2 HWY 60 EAST, MOUNTAIN VIEW, MO 65548",2.92154E+11,https://www.hisawyer.com/listings/schools/97110-liberty-middle,5
+NEELYVILLE HIGH,"289 BROADWAY ST, NEELYVILLE, MO 63954",2.92175E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=374,2
+NEOSHO HIGH,"511 NEOSHO BLVD, NEOSHO, MO 64850",2.92181E+11,https://www.neoshosd.org/domain/595,1
+BENTON ELEM.,"500 E VERNON ST, NEVADA, MO 64772",2.92184E+11,https://www.hisawyer.com/listings/schools/97140-benton-elem,3
+BRYAN ELEM.,"400 W LEE ST, NEVADA, MO 64772",2.92184E+11,https://www.hisawyer.com/listings/providers/97142-bryan-elem,3
+NEVADA HIGH,"800 W HICKORY ST, NEVADA, MO 64772",2.92184E+11,https://www.hisawyer.com/listings/schools/97139-nevada-high,3
+NEVADA MIDDLE,"900 N OLIVE ST, NEVADA, MO 64772",2.92184E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=687,1
+NEW HAVEN HIGH,"100 PARK DR, NEW HAVEN, MO 63068",2.92196E+11,http://www.newhavenschools.org/contact_us,1
+NEW HAVEN MIDDLE,"100 PARK DR, NEW HAVEN, MO 63068",2.92196E+11,http://www.newhavenschools.org/contact_us,1
+NEWBURG HIGH,"701 WOLF PRIDE DR, NEWBURG, MO 65550",2.92214E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=379,1
+NIXA HIGH,"514 South Nicholas Road, NIXA, MO 65714",2.92253E+11,https://www.hisawyer.com/listings/schools/97170-nixa-high,4
+EARLY LEARNING CENTER,"301 South Main Street, Nixa, MO 65714",2.92253E+11,https://www.hisawyer.com/listings/schools/97165-early-learning-center,3
+NORMANDY HIGH,"6701 ST CHARLES ROCK RD, ST LOUIS, MO 63133",2.92265E+11,https://www.normandysc.org/NormandyVikings,1
+NORTH CALLAWAY HIGH,"2700 THUNDERBIRD DR, KINGDOM CITY, MO 65262",2.92274E+11,https://www.nc.k12.mo.us/north-callaway-high-school,1
+ANTIOCH MIDDLE,"2100 NE 65TH ST, GLADSTONE, MO 64118",2.9228E+11,https://www.nkcschools.org/site/default.aspx?PageType=3&ModuleInstanceID=4992&ViewID=503a3e79-9340-40fd-8d85-f3b476c2baf0&RenderLoc=0&FlexDataID=8541&PageID=2907,1
+MEADOWBROOK ELEM.,"6301 N MICHIGAN DR, GLADSTONE, MO 64118",2.9228E+11,https://www.hisawyer.com/listings/providers/97199-meadowbrook-elem,1
+NEW MARK MIDDLE,"515 NE 106TH ST, KANSAS CITY, MO 64155",2.9228E+11,https://www.nkcschools.org/Page/3941,1
+NORTH KANSAS CITY HIGH,"620 E 23RD AVE, KANSAS CITY, MO 64116",2.9228E+11,https://www.nkcschools.org/Page/3980,1
+OAK PARK HIGH,"825 NE 79TH TERR, KANSAS CITY, MO 64118",2.9228E+11,https://www.nkcschools.org/Page/4000,2
+WINNETONKA HIGH,"5815 NE 48TH ST, KANSAS CITY, MO 64119",2.9228E+11,https://www.nkcschools.org/Page/4035,2
+NORTHGATE MIDDLE,"2117 NE 48TH ST, KANSAS CITY, MO 64118",2.9228E+11,https://www.nkcschools.org/Page/3951,1
+STALEY HIGH,"2800 NE SHOAL CREEK PKWY, KANSAS CITY, MO 64156",2.9228E+11,https://www.nkcschools.org/Page/4025,1
+BELL PRAIRIE ELEMENTARY,"3000 NE 108TH ST, KANSAS CITY, MO 64156",2.9228E+11,https://www.nkcschools.org/Domain/8,1
+NORTH PLATTE INTERMEDIATE,"900 LEWIS, EDGERTON, MO 64444",2.92283E+11,https://npis.nppanthers.org/,1
+NORTHWESTERN ELEM.,"18475 HWY 11, MENDON, MO 64660",2.92292E+11,https://www.hisawyer.com/listings/providers/97241-northwestern-elem,1
+NORTHWESTERN HIGH,"18475 HWY 11, MENDON, MO 64660",2.92292E+11,https://www.hisawyer.com/listings/schools/97240-northwestern-high,1
+NORWOOD HIGH,"675 N HAWK AVE, NORWOOD, MO 65717",2.92295E+11,https://www.norwood.k12.mo.us/index.php/hs,1
+OAK GROVE PRIMARY,"500 SE 17TH, OAK GROVE, MO 64075",2.92301E+11,http://oakgrove-ogpr.ss10.sharpschool.com/,1
+OAK GROVE HIGH,"605 SE 12TH, OAK GROVE, MO 64075",2.92301E+11,http://oakgrove-oghs.ss10.sharpschool.com/,1
+OAK GROVE MIDDLE,"401 SE 12TH ST, OAK GROVE, MO 64075",2.92301E+11,http://oakgrove-ogms.ss10.sharpschool.com/,1
+ODESSA HIGH,"713 S THIRD ST, ODESSA, MO 64076",2.9231E+11,https://www.odessar7.net/vnews/display.v/SEC/High%20School,1
+ODESSA MIDDLE,"607 S FIFTH ST, ODESSA, MO 64076",2.9231E+11,https://www.hisawyer.com/listings/schools/97255-odessa-middle,3
+ORAN ELEMENTARY SCHOOL,"310 CHURCH ST, ORAN, MO 63771",2.92313E+11,http://www.oran.k12.mo.us/,1
+Orchard Farm Elementary,"2135 Hwy V, St. Charles, MO 63301",2.92316E+11,http://ofsd.sharpschool.com/schools,1
+Orchard Farm Middle School,"2195 Hwy V, ST CHARLES, MO 63301",2.92316E+11,http://ofsd.sharpschool.com/district/about_us/our_schools,1
+Orchard Farm High School,"2175 Hwy V, St. Charles, MO 63301",2.92316E+11,http://ofsd.sharpschool.com/district/about_us/our_schools,1
+Discovery Elementary,"500 Discovery Path Lane, St. Charles, MO 63301",2.92316E+11,http://ofsd.sharpschool.com/schools/discovery_elementary_school,2
+Early Learning Center,"3489 Boschertown Road, St. Charles, MO 63301",2.92316E+11,http://ofsd.sharpschool.com/schools/early_learning_center,1
+OWENSVILLE HIGH,"3336 HWY 19, OWENSVILLE, MO 65066",2.92334E+11,https://www.hisawyer.com/listings/providers/97276-owensville-high,1
+OWENSVILLE MIDDLE,"3340 HWY 19, OWENSVILLE, MO 65066",2.92334E+11,https://oms.dutchmen.us/,1
+LUTIE HIGH,"5802 US HWY 160, THEODOSIA, MO 65761",2.9234E+11,http://www.lutieschool.org/,1
+OZARK MIDDLE SCHOOL,"3600 N HWY NN, OZARK, MO 65721",2.92343E+11,https://www.ozarktigers.org/Domain/12,1
+OZARK HIGH,"1350 W BLUFF DR, OZARK, MO 65721",2.92343E+11,https://www.ozarktigers.org/Domain/14,1
+PACIFIC HIGH,"425 INDIAN WARPATH DR, PACIFIC, MO 63069",2.92346E+11,https://www.mvr3.k12.mo.us/o/phs,1
+PALMYRA MIDDLE,"600 W LINE ST, PALMYRA, MO 63461",2.92349E+11,https://www.palmyra.k12.mo.us/o/palmyra-middle,1
+PALMYRA HIGH,"1703 S MAIN ST, PALMYRA, MO 63461",2.92349E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=155,2
+PARIS HIGH,"25686 BUS HWY 24, PARIS, MO 65275",2.92353E+11,https://www.hisawyer.com/listings/schools/97301-paris-high,2
+PLAZA MIDDLE,"6501 NW 72ND ST, KANSAS CITY, MO 64151",2.92355E+11,http://plaza.parkhill.k12.mo.us/,2
+PARK HILL HIGH,"7701 NW BARRY RD, KANSAS CITY, MO 64153",2.92355E+11,http://phhs.parkhill.k12.mo.us/about_our_school/a__program/contact,1
+PARK HILL SOUTH HIGH,"4500 NW RIVER PARK DR, RIVERSIDE, MO 64150",2.92355E+11,http://phs.parkhill.k12.mo.us/,1
+CONGRESS MIDDLE,"8150 N CONGRESS AVE, KANSAS CITY, MO 64153",2.92355E+11,http://congress.parkhill.k12.mo.us/,1
+LAKEVIEW MIDDLE,"6720 NW 64TH ST, KANSAS CITY, MO 64151",2.92355E+11,http://lakeview.parkhill.k12.mo.us/about_our_school,1
+NORTH HIGH,"12860 FEE FEE RD, ST LOUIS, MO 63146",2.92358E+11,https://uwgkc.myresourcedirectory.com/index.php/component/cpx/?task=resource.view&id=3001050,4
+SOUTH HIGH,"801 HANNA RD, MANCHESTER, MO 63021",2.92358E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=162,5
+WEST HIGH,"14653 CLAYTON RD, BALLWIN, MO 63011",2.92358E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=163,3
+SOUTHWEST MIDDLE,"701 WREN AVE, BALLWIN, MO 63021",2.92358E+11,https://www.homevaluestore.com/school/Southwest-Middle-Ballwin-MO,4
+HOLMAN MIDDLE,"11055 ST CHARLES ROCK RD, ST ANN, MO 63074",2.9237E+11,https://holman.psdr3.org/,1
+PATTONVILLE HEIGHTS MIDDLE,"195 FEE FEE RD, MARYLAND HEIGHTS, MO 63043",2.9237E+11,https://www.riverfronttimes.com/stlouis/pattonville-heights-middle-school/Location?oid=2689875,3
+TRADITIONAL SCH.,"102 FEE FEE RD, MARYLAND HEIGHTS, MO 63043",2.9237E+11,https://www.hisawyer.com/listings/schools/97353-traditional-sch,1
+RAYMORE-PECULIAR EAST MIDDLE,"17509 E. STATE ROUTE 58, RAYMORE, MO 64083",2.92373E+11,http://www.raypec.k12.mo.us/100/Raymore-Peculiar-East-Middle-School,1
+BRIDLE RIDGE ELEMENTARY,"900 E 195TH ST, RAYMORE, MO 64083",2.92373E+11,https://www.raypec.k12.mo.us/95/Bridle-Ridge-Elementary,1
+EAGLE GLEN ELEMENTARY,"100 S FOXRIDGE DR, RAYMORE, MO 64083",2.92373E+11,https://www.raypec.k12.mo.us/97/Eagle-Glen-Elementary,1
+ROSS ELEM.,"128 STATE HWY A, PORTAGEVILLE, MO 63873",2.92376E+11,http://northpem.k12.mo.us/extended%20pages/elementary/elem.htm,1
+EARLY CHILD. SPECIAL ED. CTR.,"326 COLLEGE ST, PERRYVILLE, MO 63775",2.92453E+11,https://www.hisawyer.com/listings/schools/97380-early-child-special-ed-ctr,1
+PLATTE CITY MIDDLE,"900 PIRATE DR, PLATTE CITY, MO 64079",2.92523E+11,https://pcms.plattecountyschooldistrict.com/,3
+PLATTE COUNTY HIGH,"1501 BRANCH ST, PLATTE CITY, MO 64079",2.92523E+11,https://pchs.plattecountyschooldistrict.com/,1
+PLATTSBURG HIGH,"800 W FROST ST, PLATTSBURG, MO 64477",2.92529E+11,https://ccr3.k12.mo.us/,1
+PLEASANT HILL MIDDLE,"1301 MYRTLE, PLEASANT HILL, MO 64080",2.92533E+11,https://ms.pleasanthillschools.com/apps/maps/,1
+PLEASANT HILL PRIMARY,"304 EKLUND ST, PLEASANT HILL, MO 64080",2.92533E+11,https://ps.pleasanthillschools.com/,1
+PLEASANT HILL HIGH,"1 ROOSTER WAY, PLEASANT HILL, MO 64080",2.92533E+11,https://hs.pleasanthillschools.com/,1
+PLEASANT HILL INTERMEDIATE,"1204 E 163RD ST, PLEASANT HILL, MO 64080",2.92533E+11,https://is.pleasanthillschools.com/,1
+POTOSI HIGH,"1 TROJAN DR, POTOSI, MO 63664",2.9255E+11,https://potosir3.org/index.php/potosi-high-school/,1
+TROJAN INTERMEDIATE,"367 INTERMEDIATE DR, POTOSI, MO 63664",2.9255E+11,https://potosir3.org/index.php/trojan-intermediate-school/,1
+PURDY MIDDLE,"201 S Gabby Gibbons Dr, PURDY, MO 65734",2.92562E+11,https://www.citydirectory.us/school-purdy-middle-purdy-mo.html,4
+MARK TWAIN JR. HIGH,"21622 HWY 19, CENTER, MO 63436",2.92571E+11,http://www.k12guides.com/school/Mark-Twain-Jr-High:292571001034.html,4
+RALLS COUNTY ELEMENTARY,"21700 HWY 19, CENTER, MO 63436",2.92571E+11,https://mpscroos.com.au/rallscountyelementary/,3
+RAYTOWN MIDDLE,"4900 PITTMAN RD, KANSAS CITY, MO 64133",2.92607E+11,https://www.raytownschools.org/Domain/19,1
+RAYTOWN CENTRAL MIDDLE,"10601 E 59TH ST, RAYTOWN, MO 64133",2.92607E+11,https://www.raytownschools.org/Domain/17,3
+REEDS SPRING MIDDLE,"345 MORRILL LANE, REEDS SPRING, MO 65737",2.92616E+11,https://ms.rs-wolves.com/,1
+REEDS SPRING PRIMARY,"257 ELEMENTARY RD, REEDS SPRING, MO 65737",2.92616E+11,https://ps.rs-wolves.com/,1
+REEDS SPRING HIGH,"20277A STATE HWY 413, REEDS SPRING, MO 65737",2.92616E+11,https://hs.rs-wolves.com/,1
+REEDS SPRING INTERMEDIATE,"175 ELEMENTARY RD, REEDS SPRING, MO 65737",2.92616E+11,https://is.rs-wolves.com/,1
+NEW HORIZONS ALTERNATIVE,"386 WEST STATE HIGHWAY 76, REEDS SPRING, MO 65737",2.92616E+11,https://www.citydirectory.us/school-new-horizons-alternative-reeds-spring-mo.html,2
+REPUBLIC HIGH,"4370 S. REPMO DRIVE, REPUBLIC, MO 65738",2.92622E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=423,1
+REPUBLIC MIDDLE,"#1 TIGER DRIVE, REPUBLIC, MO 65738",2.92622E+11,https://www.republicschools.org/Domain/14,1
+PRICE ELEMENTARY,"518 N HAMPTON, REPUBLIC, MO 65738",2.92622E+11,https://www.republicschools.org/price,1
+MCCULLOCH ELEMENTARY,"234 E. ANDERSON, REPUBLIC, MO 65738",2.92622E+11,https://www.republicschools.org/mcculloch,1
+LYON ELEMENTARY,"201 E. HIGHWAY 174, REPUBLIC, MO 65738",2.92622E+11,https://www.republicschools.org/domain/590,1
+SCHOFIELD ELEMENTARY,"235 E. ANDERSON, REPUBLIC, MO 65738",2.92622E+11,https://www.republicschools.org/schofield,1
+SWEENY ELEMENTARY,"720 N. MAIN, REPUBLIC, MO 65738",2.92622E+11,https://www.republicschools.org/sweeny,1
+RICHLAND HIGH,"24456 STATE HWY 114, ESSEX, MO 63846",2.9264E+11,https://www.schoolsnearme.net/en/public/richland-high-school/50913,2
+RICHLAND HIGH,"714 E JEFFERSON, RICHLAND, MO 65556",2.92643E+11,https://www.richlandbears.us/news,2
+RICHMOND HIGH,"451 E SOUTH, RICHMOND, MO 64085",2.92648E+11,https://www.richmond.k12.mo.us/o/rhs,2
+RICHMOND MIDDLE,"715 S WELLINGTON ST, RICHMOND, MO 64085",2.92648E+11,https://www.hisawyer.com/listings/schools/97491-richmond-middle,2
+RIDGEWAY HIGH,"305 MAIN ST, RIDGEWAY, MO 64481",2.92649E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=427,4
+RISCO ELEM.,"HWY 62, RISCO, MO 63874",2.92661E+11,https://www.realtor.com/realestateandhomes-detail/102-US-Highway-62_Risco_MO_63874_M73756-49325,1
+HOECH MIDDLE,"3312 ASHBY RD, ST ANN, MO 63074",2.92664E+11,https://www.ritenour.k12.mo.us/Hoech,1
+RITENOUR MIDDLE,"2500 MARSHALL AVE, ST LOUIS, MO 63114",2.92664E+11,https://www.ritenour.k12.mo.us/Domain/15,2
+WESTVIEW MIDDLE,"1950 NEMNICH, ST LOUIS, MO 63136",2.92667E+11,https://westviewmiddle.mo.rge.schoolinsites.com/,1
+LITZSINGER,"10094 LITZSINGER RD, LADUE, MO 63124",2.92676E+11,https://www.ssdmo.org/Litzsinger,1
+NORTH TECHNICAL,"1700 DERHAKE RD, FLORISSANT, MO 63033",2.92676E+11,https://www.ssdmo.org/northtech,1
+SOUTH TECHNICAL,"12721 W WATSON RD, SUNSET HILLS, MO 63127",2.92676E+11,https://www.ssdmo.org/southtech,1
+SOUTHVIEW,"11660 EDDIE AND PARK RD, CRESTWOOD, MO 63126",2.92676E+11,https://www.ssdmo.org/southview,2
+NORTHVIEW,"1520 Derhake Rd., Florissant, MO 63033",2.92676E+11,https://www.ssdmo.org/Northview,1
+CRESTVIEW MIDDLE,"16025 CLAYTON RD, ELLISVILLE, MO 63011",2.92685E+11,https://www.rsdmo.org/crestview/Pages/default.aspx,1
+LASALLE SPRINGS MIDDLE,"3300 HWY 109, WILDWOOD, MO 63038",2.92685E+11,https://www.rsdmo.org/lasalle/Pages/default.aspx,1
+ROCKWOOD SOUTH MIDDLE,"1628 HAWKINS RD, FENTON, MO 63026",2.92685E+11,https://www.rsdmo.org/rsouth/Pages/default.aspx,1
+SELVIDGE MIDDLE,"235 NEW BALLWIN RD, BALLWIN, MO 63021",2.92685E+11,https://www.rsdmo.org/selvidge/Pages/default.aspx,1
+ROCKWOOD VALLEY MIDDLE,"1220 BABLER PARK DR, WILDWOOD, MO 63038",2.92685E+11,https://www.rsdmo.org/rvalley/Pages/default.aspx,1
+WILDWOOD MIDDLE,"17401 MANCHESTER RD, WILDWOOD, MO 63038",2.92685E+11,https://www.rsdmo.org/wildwood/Pages/default.aspx,1
+ROLLA MIDDLE,"1111 SOEST RD, ROLLA, MO 65401",2.92689E+11,https://rms.rolla31.org/,1
+Roscoe Elementary,"1515 SW 300 RD, Osceola, MO 64776",2.92694E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=782,4
+BENTON HIGH,"5655 S FOURTH, ST JOSEPH, MO 64504",2.92706E+11,https://benton.sjsd.k12.mo.us/about_us,1
+BODE MIDDLE,"720 N NOYES BLVD, ST JOSEPH, MO 64506",2.92706E+11,https://bode.sjsd.k12.mo.us/,1
+LAFAYETTE HIGH,"412 HIGHLAND AVE, ST JOSEPH, MO 64505",2.92706E+11,https://lafayette.sjsd.k12.mo.us/about_us/directions/home,1
+LAKE ELEM.,"1800 ALABAMA, ST JOSEPH, MO 64504",2.92706E+11,https://www.hisawyer.com/listings/schools/97585-lake-elem,3
+ROBIDOUX MIDDLE,"4212 ST JOSEPH AVE, ST JOSEPH, MO 64505",2.92706E+11,https://robidoux.sjsd.k12.mo.us/,1
+SPRING GARDEN MIDDLE,"5802 S 22ND, ST JOSEPH, MO 64503",2.92706E+11,https://springgarden.sjsd.k12.mo.us/,1
+TRUMAN MIDDLE,"3227 OLIVE, ST JOSEPH, MO 64507",2.92706E+11,https://truman.sjsd.k12.mo.us/,1
+ALT. RESOURCE CTR.,"3510 FREDERICK AVE, ST JOSEPH, MO 64506",2.92706E+11,https://www.hisawyer.com/listings/schools/97577-colgan-alt-resource-ctr,1
+CARDEN PARK ELEM,"1510 Duncan, St. Joseph, MO 64501",2.92706E+11,https://cardenpark.sjsd.k12.mo.us/,1
+OAK GROVE ELEM,"4901 Cook Rd, St. Joseph, MO 64505",2.92706E+11,https://oakgrove.sjsd.k12.mo.us/,2
+SALEM MIDDLE SCHOOL,"1400 TIGER PRIDE DR, SALEM, MO 65560",2.92709E+11,https://www.salemr80.org/middle-school.html,1
+SAVANNAH MIDDLE,"10500 STATE ROUTE T, SAVANNAH, MO 64485",2.92757E+11,https://www.savannahr3.com/o/middle-school,1
+SAVANNAH HIGH,"701 STATE RTE E, SAVANNAH, MO 64485",2.92757E+11,https://www.savannahr3.com/o/high-school,2
+NORTHEAST VERNON CO. R-I ELEM.,"150 N Hickory St, SCHELL CITY, MO 64783",2.9276E+11,https://www.hisawyer.com/listings/schools/97620-northeast-vernon-co-r-i-elem,3
+HERITAGE ELEMENTARY,"1501 SCHOOL ROAD, LAKE OZARK, MO 65049",2.92763E+11,https://osageschools.org/home,1
+SMITH-COTTON HIGH SCHOOL,"2010 TIGER PRIDE BOULEVARD, SEDALIA, MO 65301",2.92783E+11,https://www.sedalia200.org/domain/30,1
+SEDALIA MIDDLE SCHOOL,"2205 S INGRAM, SEDALIA, MO 65301",2.92783E+11,https://www.sedalia200.org/domain/33,1
+SENECA HIGH,"1110 NEOSHO ST, SENECA, MO 64865",2.9279E+11,http://senecar7hs.ss16.sharpschool.com/,1
+SENECA JUNIOR HIGH,"925 ONEIDA, SENECA, MO 64865",2.9279E+11,http://senecar7jhs.ss16.sharpschool.com/our_school/about_seneca_jr__high,1
+SENECA INTERMEDIATE SCHOOL,"1817 ST. EUGENE, SENECA, MO 64865",2.9279E+11,http://senecar7is.ss16.sharpschool.com/,1
+SHELDON HIGH,"100 E GENE LATHROP DR, SHELDON, MO 64784",2.92817E+11,https://www.hisawyer.com/listings/schools/97654-sheldon-high,2
+SLATER HIGH,"515 N ELM, SLATER, MO 65349",2.92836E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=193,2
+SMITHTON HIGH,"505 S MYRTLE, SMITHTON, MO 65350",2.92838E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=444,2
+SMITHVILLE MIDDLE,"675 S COMMERCIAL AVE, SMITHVILLE, MO 64089",2.92841E+11,https://www.smithvilleschooldistrict.net/domain/174,2
+Maple Elementary School,"600 MAPLE ST, SMITHVILLE, MO 64089",2.92841E+11,https://www.smithvilleschooldistrict.net/Domain/11,1
+SMITHVILLE HIGH,"645 S COMMERCIAL AVE, SMITHVILLE, MO 64089",2.92841E+11,https://www.smithvilleschooldistrict.net/shs,2
+Horizon Elementary School,"695 S COMMERCIAL AVE, SMITHVILLE, MO 64089",2.92841E+11,https://www.smithvilleschooldistrict.net/Domain/10,1
+SOUTH CALLAWAY EARLY CHD PK-02,"10103 State Road C, Mokane, MO 65059",2.92843E+11,https://www.hisawyer.com/listings/schools/97676-south-callaway-early-chd-pk-02,3
+SOUTHERN BOONE MIDDLE,"303 N MAIN, ASHLAND, MO 65010",2.92856E+11,https://www.ashland.k12.mo.us/Page/11,1
+SOUTHERN BOONE HIGH,"14520 CRUMP LN, ASHLAND, MO 65010",2.92856E+11,https://www.ashland.k12.mo.us/sbhs,1
+SOUTHERN BOONE PRIMARY,"803 S HENRY CLAY BLVD, ASHLAND, MO 65010",2.92856E+11,https://www.ashland.k12.mo.us/page/15,1
+ELLINGTON HIGH SCHOOL,"1 SCHOOL ST, ELLINGTON, MO 63638",2.92859E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=452,1
+SOUTHWEST HIGH,"529 E. PINEVILLE ROAD, WASHBURN, MO 65772",2.92871E+11,https://www.swr5.net/hs,2
+SPARTA MIDDLE,"217 DIVISION ST, SPARTA, MO 65753",2.92874E+11,https://www.realtor.com/realestateandhomes-detail/217-Division-St_Sparta_MO_65753_M84347-11704,1
+SPARTA HIGH,"8520 STATE HWY14E, SPARTA, MO 65753",2.92874E+11,https://www.hisawyer.com/listings/schools/97700-sparta-high,1
+SPARTA PK CENTER,"113 Division St, Sparta, MO 65753",2.92874E+11,https://www.schoolsnearme.net/en/public/sparta-pk-center/51131,3
+SPOKANE MIDDLE,"1130 SPOKANE RD, SPOKANE, MO 65754",2.9288E+11,https://www.realtor.com/realestateandhomes-detail/Spokane-Rd_Spokane_MO_65754_M87022-06640,3
+SPOKANE HIGH,"1123 SPOKANE RD, SPOKANE, MO 65754",2.9288E+11,https://www.mshsaa.org/MySchool/SchoolInfo.aspx?s=457,5
+CARVER MIDDLE,"3325 W BATTLEFIELD, SPRINGFIELD, MO 65807",2.92886E+11,https://www.sps.org/carver,1
+CHEROKEE MIDDLE,"420 E FARM RD 182, SPRINGFIELD, MO 65810",2.92886E+11,https://www.sps.org/cherokee,2
+GLENDALE HIGH,"2727 S INGRAM MILL, SPRINGFIELD, MO 65804",2.92886E+11,https://www.sps.org/Glendale/ContactUs,1
+HILLCREST HIGH,"3319 N GRANT, SPRINGFIELD, MO 65803",2.92886E+11,https://www.sps.org/hillcrest,1
+JARRETT MIDDLE,"840 S JEFFERSON, SPRINGFIELD, MO 65806",2.92886E+11,https://www.sps.org/jarrett,1
+KICKAPOO HIGH,"3710 S JEFFERSON, SPRINGFIELD, MO 65807",2.92886E+11,https://www.sps.org/Kickapoo/ContactUs,1
+PARKVIEW HIGH,"516 W MEADOWMERE, SPRINGFIELD, MO 65807",2.92886E+11,https://www.sps.org/Parkview/ContactUs,1
+PIPKIN MIDDLE,"1215 BOONVILLE, SPRINGFIELD, MO 65802",2.92886E+11,https://www.sps.org/pipkin,1
+WESTPORT MIDDLE SCHOOL,"415 S. Golden Ave, SPRINGFIELD, MO 65802",2.92886E+11,https://www.sps.org/westport,1
+DAVID HARRISON ELEMENTARY,"3055 W KILDEE LANE, SPRINGFIELD, MO 65810",2.92886E+11,https://www.sps.org/Harrison,1
+JEFFERSON INTERMEDIATE SCHOOL,"2660 ZUMBEHL RD, ST CHARLES, MO 63301",2.92892E+11,https://mo01910164.schoolwires.net/jefferson,1
+ST. CHARLES HIGH,"725 N KINGSHIGHWAY ST, ST CHARLES, MO 63301",2.92892E+11,https://www.stcharlessd.org/schs,2
+HARDIN MIDDLE,"1950 ELM ST, ST CHARLES, MO 63301",2.92892E+11,https://www.stcharlessd.org/site/default.aspx?PageType=3&ModuleInstanceID=54&ViewID=82ad4dc1-ff8e-4c91-9428-7a2a172acda0&RenderLoc=0&FlexDataID=16&PageID=36,1
+BLACKHURST ELEMENTARY,"2000 Elm Street, ST. CHARLES, MO 63301",2.92892E+11,https://www.stcharlessd.org/blackhurst,1
+FRANCIS HOWELL MIDDLE,"825 O'FALLON RD, ST CHARLES, MO 63304",2.92895E+11,https://fhms.fhsdschools.org/,1
+HOLLENBECK MIDDLE,"4555 CENTRAL SCHOOL RD, ST CHARLES, MO 63304",2.92895E+11,https://hollenbeck.fhsdschools.org/,1
+FRANCIS HOWELL HIGH,"7001 HWY 94 SOUTH, ST CHARLES, MO 63304",2.92895E+11,https://fhh.fhsdschools.org/,1
+SAEGER MIDDLE,"5201 HWY N, ST CHARLES, MO 63304",2.92895E+11,https://saeger.fhsdschools.org/about_us/directions,1
+BARNWELL MIDDLE,"1035 JUNGS STATION RD, ST CHARLES, MO 63303",2.92895E+11,https://barnwell.fhsdschools.org/,1
+BRYAN MIDDLE,"605 INDEPENDENCE RD, ST CHARLES, MO 63304",2.92895E+11,https://bryan.fhsdschools.org/,1
+HERITAGE LANDING,"1400 GETTYSBURG LANDING, ST CHARLES, MO 63303",2.92895E+11,https://www.loopnet.com/property/1400-gettysburg-landing-st-charles-mo-63303/29183-30010753500000A0000000/,1
+ST. CLAIR JR. HIGH,"925 HIGH SCHOOL DR, ST CLAIR, MO 63077",2.9291E+11,https://jrhigh.stcmo.org/,1
+ST. CLAIR HIGH,"1015 HIGH SCHOOL DR, ST CLAIR, MO 63077",2.9291E+11,https://highschool.stcmo.org/,1
+ST. JAMES HIGH,"101 E SCIOTO, ST JAMES, MO 65559",2.92925E+11,https://stjschools.org/sjhs/,1
+ST. JAMES MIDDLE,"1 TIGER DR, ST JAMES, MO 65559",2.92925E+11,https://stjschools.org/sjms/,1
+GATEWAY HIGH,"5101 MCREE AVE, ST LOUIS, MO 63110",2.92928E+11,https://www.slps.org/gatewaystem,1
+SOLDAN INTERNATIONAL STUDIES,"918 N UNION BLVD, ST LOUIS, MO 63108",2.92928E+11,https://www.slps.org/Domain/2754,1
+CARR LANE VPA MIDDLE,"1004 N JEFFERSON AVE, ST LOUIS, MO 63106",2.92928E+11,https://www.slps.org/carrlane,1
+GATEWAY MIDDLE,"1200 N JEFFERSON AVE, ST LOUIS, MO 63106",2.92928E+11,https://www.slps.org/domain/3493,1
+VO. TECH. TUITION,"801 N 11TH ST, ST LOUIS, MO 63101",2.92928E+11,https://www.homevaluestore.com/school/Vo-Tech-Tuition-St-Louis-MO,1
+COMMUNITY ACCESS JOB TRAINING,"4915 DONOVAN AVE, ST LOUIS, MO 63109",2.92928E+11,https://www.hisawyer.com/listings/schools/97857-community-access-job-training,5
+COMPTON-DREW ILC MIDDLE,"5130 OAKLAND AVE, ST LOUIS, MO 63110",2.92928E+11,https://www.slps.org/comptondrew,1
+METRO HIGH,"4015 MCPHERSON AVE, ST LOUIS, MO 63108",2.92928E+11,https://www.slps.org/Domain/2483,1
+ROOSEVELT HIGH,"3230 HARTFORD ST, ST LOUIS, MO 63118",2.92928E+11,https://www.slps.org/roosevelt,1
+ST. LOUIS CHILDREN'S HOSPITAL,"400 S KINGSHIGHWAY BLVD, ST LOUIS, MO 63110",2.92928E+11,https://www.stlouischildrens.org/,1
+SUMNER HIGH,"4248 COTTAGE AVE, ST LOUIS, MO 63113",2.92928E+11,https://www.mshsaa.org/Schools/AccountInfo.aspx?s=208,1
+VASHON HIGH,"3035 CASS AVE, ST LOUIS, MO 63106",2.92928E+11,https://www.slps.org/vashon,1
