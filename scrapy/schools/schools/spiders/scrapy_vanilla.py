@@ -69,6 +69,7 @@ from itertools import chain
 import re
 from urllib.parse import urlparse
 import requests
+import pandas as pd
 
 
 # Used for extracting text from PDFs
@@ -176,6 +177,15 @@ class CharterSchoolSpider(CrawlSpider):
         """
         if not school_list:
             return
+        if isinstance(school_list, pd.DataFrame):
+            for i, row in school_list.iterrows():
+                school_id = row['NCESSCH']
+                url = row['URL_2019']
+                domain = self.get_domain(url)
+                self.start_urls.append(url)
+                self.allowed_domains.append(domain)
+                self.domain_to_id[domain] = float(school_id)
+                return
         with open(school_list, 'r') as f:
             delim = "," if "csv" in school_list else "\t"
             reader = csv.reader(f, delimiter=delim,quoting=csv.QUOTE_NONE)
