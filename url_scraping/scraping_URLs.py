@@ -38,11 +38,13 @@ import pandas as pd
 
 import time
 
+''' TODO: REPLACE 'SOURCE-FILE.csv' and 'OUTPUT-FILE.csv' with the corresponding filenames you want. '''
+
 # Set directories and file paths
 dir_prefix = './' # Set working directory 
 temp_dir = dir_prefix + "data" # Directory in which to save logging and data files
-source_file = 'data/trial.csv' #filtered_schools.csv' # Set source file path
-output_file = dir_prefix + 'data/trial_output.csv' # Set file path for final collection
+source_file = 'data/SOURCE-FILE.csv' # Set source file path 
+output_file = dir_prefix + 'data/OUTPUT-FILE.csv' # Set file path for final collection 
 
 # Set logging options
 log_file = temp_dir + "URL_scraping_" + str(datetime.today()) + ".log"
@@ -72,6 +74,7 @@ logging.info(str(bad_sites))
 
 def dict_to_csv(dictionary, file_name, header):
     '''This helper function writes a dictionary associated with a school to file_name.csv, with column names given in header.'''
+    print(dictionary)
     file_exists = os.path.isfile(file_name)
 
     with open(file_name, 'a') as output_file:
@@ -156,8 +159,6 @@ def getURL(school_name, address, bad_sites_list): # manual_url
                 logging.info("  Bad site detected. Moving on.")
                 continue
             
-            # TO DO: If URL contains the words "location", "campus", "contact", or "our-school"/"our_school"/"ourschool", or if it has more then 3 "/" characters, then set "CHECK"=1.
-            
             else:
                 good_url = url
                 logging.info("    Success! URL obtained by Google search with " + str(k) + " bad URLs avoided. Query ranking is %s!" % str(k + 1))
@@ -217,7 +218,8 @@ def scrape_URLs():
     # count_left(sample, 'URL')
 
     ### If working with an old output_file:
-    if os.path.exists(output_file):
+    old_output_exists = os.path.exists(output_file)
+    if old_output_exists:
         print("output exists")
         old_output = pd.read_csv(output_file)
         
@@ -245,8 +247,8 @@ def scrape_URLs():
 
 
     for school in tqdm(sample, desc="Scraping URLs"): # loop through list of schools
-
-        if school["URL"] or school["SCH_NAME"] in list(old_output.SCH_NAME): # handles case of output file being the same as input file AND case of input to output file
+        school["SCH_NAME"] = format_name(school["SCH_NAME"])
+        if school["URL"] or (old_output_exists and school["SCH_NAME"] in list(old_output.SCH_NAME)): # handles case of output file being the same as input file AND case of input to output file
             logging.info("School & URL already exist in our output_file!")
             pass  # If URL exists, don't bother scraping it again
 
@@ -266,13 +268,13 @@ def scrape_URLs():
 
     for school in tqdm(sample, desc="Scraping URLs Part 2"):
         school["SCH_NAME"] = format_name(school["SCH_NAME"])
-        school["SEARCH"] = school["SCH_NAME"] + " " + school["ADDRESSES"] # ADD NEW KEY TO DICTIONARY FOR SEARCH QUERY
+        search_query = school["SCH_NAME"] + " " + school["ADDRESSES"] # Variable for search query based on school name and addresses
         if school["URL"] == "":
             k = 0  # initialize counter for number of URLs skipped
             school["QUERY_RANKING"] = ""
 
-            print("Scraping URL for " + school["SEARCH"] + "...")
-            urls_list = list(search(school["SEARCH"], stop=30, pause=20.0))
+            print("Scraping URL for " + search_query + "...")
+            urls_list = list(search(search_query, stop=30, pause=20.0))
             print("  URLs list collected successfully!")
 
             for url in urls_list:

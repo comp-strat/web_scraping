@@ -31,9 +31,11 @@ HEADERS = {
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
 }
 
+''' TODO: REPLACE 'SOURCE-FILE.csv' and 'OUTPUT-FILE.csv' with the corresponding filenames you want. '''
+
 # Set filepaths
-input_file = './data/trial_output.csv'
-output_file = "./data/trial_final_output.csv"
+input_file = './data/SOURCE-FILE.csv'
+output_file = "./data/OUTPUT-FILE.csv"
 
 # Set logging options
 log_file =  "./URL_scraping_" + str(datetime.today()) + ".log"
