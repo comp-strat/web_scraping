@@ -41,8 +41,8 @@ import time
 # Set directories and file paths
 dir_prefix = './' # Set working directory 
 temp_dir = dir_prefix + "data" # Directory in which to save logging and data files
-source_file = 'data/filtered_schools.csv' # Set source file path
-output_file = dir_prefix + 'data/final_school_output.csv' # Set file path for final collection
+source_file = 'data/trial.csv' #filtered_schools.csv' # Set source file path
+output_file = dir_prefix + 'data/trial_output.csv' # Set file path for final collection
 
 # Set logging options
 log_file = temp_dir + "URL_scraping_" + str(datetime.today()) + ".log"
@@ -94,6 +94,13 @@ def count_left(list_of_dicts, varname):
 
     print(str(count) + " schools in this data are missing " + str(varname) + "s.")
 
+def format_name(school_name):
+    '''This helper function formats school names for consistency. In particular, it alters
+    the string such that only the first letter of each word is capitalized, and
+    the possible abbreviations of "ELEM." and "HS" are converted to "Elementary" and "High School" respectively.
+    '''
+    formatted_name = school_name.title()
+    return formatted_name.replace("Elem.", "Elementary").replace(" Hs ", " High School ")
 
 # ## Define core URL scraping function
 
@@ -258,7 +265,8 @@ def scrape_URLs():
     # different approach for 75 remaining sites--do them by hand!
 
     for school in tqdm(sample, desc="Scraping URLs Part 2"):
-        school["SEARCH"] = school["SCH_NAME"] + " " + SCHOOL["ADDRESSES"] # ADD NEW KEY TO DICTIONARY FOR SEARCH QUERY
+        school["SCH_NAME"] = format_name(school["SCH_NAME"])
+        school["SEARCH"] = school["SCH_NAME"] + " " + school["ADDRESSES"] # ADD NEW KEY TO DICTIONARY FOR SEARCH QUERY
         if school["URL"] == "":
             k = 0  # initialize counter for number of URLs skipped
             school["QUERY_RANKING"] = ""

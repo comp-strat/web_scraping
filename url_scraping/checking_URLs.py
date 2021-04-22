@@ -32,8 +32,8 @@ HEADERS = {
 }
 
 # Set filepaths
-input_file = './data/final_school_output-2.csv'
-output_file = "./data/test_output-2.csv"
+input_file = './data/trial_output.csv'
+output_file = "./data/trial_final_output.csv"
 
 # Set logging options
 log_file =  "./URL_scraping_" + str(datetime.today()) + ".log"
