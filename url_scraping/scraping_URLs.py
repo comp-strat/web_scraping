@@ -96,6 +96,9 @@ def count_left(list_of_dicts, varname):
             count += 1
 
     print(str(count) + " schools in this data are missing " + str(varname) + "s.")
+    logging.info(str(count) + " schools in this data are missing " + str(varname) + "s.")
+
+
 
 def format_name(school_name):
     '''This helper function formats school names for consistency. In particular, it alters
@@ -262,42 +265,7 @@ def scrape_URLs():
     print("\n\nURLs discovered for " + str(numschools) + " schools.")
     logging.info("URLs discovered for " + str(numschools) + " schools.")
 
-
-
-    # different approach for 75 remaining sites--do them by hand!
-
-    for school in tqdm(sample, desc="Scraping URLs Part 2"):
-        school["SCH_NAME"] = format_name(school["SCH_NAME"])
-        search_query = school["SCH_NAME"] + " " + school["ADDRESSES"] # Variable for search query based on school name and addresses
-        if school["URL"] == "":
-            k = 0  # initialize counter for number of URLs skipped
-            school["QUERY_RANKING"] = ""
-
-            print("Scraping URL for " + search_query + "...")
-            urls_list = list(search(search_query, stop=30, pause=20.0))
-            print("  URLs list collected successfully!")
-
-            for url in urls_list:
-                if any(domain in url for domain in bad_sites):
-                    k+=1    # If this url is in bad_sites_list, add 1 to counter and move on
-                    print("  Bad site detected. Moving on.")
-                else:
-                    good_url = url
-                    print("    Success! URL obtained by Google search with " + str(k) + " bad URLs avoided.")
-
-                    school["URL"] = good_url
-                    school["QUERY_RANKING"] = k + 1
-                    
-                    dict_to_csv(school, output_file, keys)
-                    count_left(sample, 'URL')
-                    break    # Exit for loop after first good url is found                               
-                                            
-        else:
-            pass
-
-
-    #dicts_to_csv(sample, output_file, keys)
-    count_left(sample, 'URL')
+    count_left(sample, 'URL') # Print and log remaining number of URLs to be found.
 
 if __name__ == "__main__":
     scrape_URLs()
