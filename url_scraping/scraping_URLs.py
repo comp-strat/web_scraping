@@ -6,7 +6,7 @@
 # Creator: Jaren Haber, PhD Candidate
 # Institution: Department of Sociology, University of California, Berkeley
 # Date created: Summer 2017
-# Date last edited: March 31, 2021
+# Date last edited: April 22, 2021
 
 
 """This script uses two related functions to scrape the best URL from online sources: 
@@ -43,14 +43,6 @@ dir_prefix = './' # Set working directory
 temp_dir = dir_prefix + "data" # Directory in which to save logging and data files
 source_file = 'data/filtered_schools.csv' # Set source file path
 output_file = dir_prefix + 'data/final_school_output.csv' # Set file path for final collection
-
-'''
-if os.path.exists(output_file):  # first, check if modified file (with some data written already) is available on disk
-    file_path = output_file
-else:  # use original data if no existing results are available on disk
-    file_path = dir_prefix + 'data/schools15withURLS.csv'
-    '''
-
 
 # Set logging options
 log_file = temp_dir + "URL_scraping_" + str(datetime.today()) + ".log"
@@ -137,63 +129,8 @@ def getURL(school_name, address, bad_sites_list): # manual_url
     
     search_terms = school_name + " " + address
     logging.info("[%s]" % str(datetime.today()) + " Getting URL for " + str(school_name) + ", " + str(address) + "...")    # show school name & address
-    
-    
-##### COMMENTED OUT UNTIL FURTHER NOTICE 
 
-    ## FIRST URL-SCRAPE ATTEMPT: GOOGLE PLACES API
-    # Search for nearest school with this name within radsearch km of this address
-    
-#    try:
-#        query_result = google_places.nearby_search(
-#            location=address, name=school_name,
-#            radius=radsearch, types=[types.TYPE_SCHOOL], rankby='distance')
-        
-#        for place in query_result.places:
-#            place.get_details()  # Make further API call to get detailed info on this place
-
-#            found_name = place.name  # Compare this name in Places API to school's name on file
-#            found_address = place.formatted_address  # Compare this address in Places API to address on file
-
-#             try: 
-#                 url = place.website  # Grab school URL from Google Places API, if it's there
-
-#                 if any(domain in url for domain in bad_sites_list):
-#                     k+=1    # If this url is in bad_sites_list, add 1 to counter and move on
-#                     logging.info("  URL in Google Places API is a bad site. Moving on.")
-#                     continue
-                  
-#                 # TO DO: If URL contains the words "location", "campus", "contact", or "our-school"/"our_school"/"ourschool", or if it has more then 3 "/" characters, then set "CHECK"=1. 
-
-#                 else:
-#                     good_url = url
-#                     logging.info("    Success! URL obtained from Google Places API with " + str(k) + " bad URLs avoided. Query ranking is %s!" % str(k + 1))
-                    
-#                     # For testing/ debugging purposes:
-#                     '''logging.info("  VALIDITY CHECK: Is the discovered URL of " + good_url + \
-#                           " consistent with the known URL of " + manual_url + " ?")
-#                     logging.info("  Also, is the discovered name + address of " + found_name + " " + found_address + \
-#                           " consistent with the known name/address of: " + search_terms + " ?")
-                    
-#                     if manual_url != "":
-#                         if manual_url == good_url:
-#                             logging.info("    Awesome! The known and discovered URLs are the SAME!")'''
-                            
-#                     return(k, good_url)  # Returns valid URL of the Place discovered in Google Places API
-        
-#             except Exception as e:  # No URL in the Google database? Then try next API result or move on to Google searching.
-#                 logging.info("  Error collecting URL from Google Places API. Moving on.\n  ")
-#                 logging.debug(str(e))
-#                 pass
-    
-#     except Exception as e:
-#         logging.info("  Google Places API search failed. Moving on to Google search.\n  ")
-#         logging.debug(str(e))
-#         pass
-    
-#####    
-
-    ## SECOND URL-SCRAPE ATTEMPT: FILTERED GOOGLE SEARCH
+    ## URL-SCRAPE ATTEMPT: FILTERED GOOGLE SEARCH
     # Automate Google search and take first result that doesn't have a bad_sites_list element in it.
     
     # check if exception was thrown
@@ -238,10 +175,8 @@ def getURL(school_name, address, bad_sites_list): # manual_url
         logging.info("You have received an HTTPError, so scraper will sleep for 6.5 hours to avoid rate limiting. Please return to this school by hand: " + school_name)
         time.sleep(21600)
 
-
     else: 
         logging.info("  No bad sites detected. Reliable URL!")
-    
     
     '''if manual_url != "":
         if manual_url == good_url:
@@ -252,104 +187,107 @@ def getURL(school_name, address, bad_sites_list): # manual_url
     
     return(k + 1, good_url)
 
+def scrape_URLs():
+    # ### Reading in data
 
-# ### Reading in data
+    sample = []  # make empty list in which to store the dictionaries
 
-sample = []  # make empty list in which to store the dictionaries
+    with open(source_file, 'r', encoding = 'utf-8') as csvfile: # open file                      
+        logging.info('  Reading in ' + str(source_file) + ' ...')
+        reader = csv.DictReader(csvfile)  # create a reader
+        for row in reader:  # loop through rows
+            sample.append(row)  # append each row to the list
+            
+    # Take a look at the first entry's contents and the variables list in our sample (a list of dictionaries)
+    logging.info(str(sample[1]["SCH_NAME"]))
+    logging.info(str(sample[1]["ADDRESSES"]))
+    logging.info(str(sample[1]["NCESSCH"]))
+    logging.info(" Keys in this dicts list are:  ")
+    logging.info(" ".join([key for key in sample[1].keys()]))
 
-with open(source_file, 'r', encoding = 'utf-8') as csvfile: # open file                      
-    logging.info('  Reading in ' + str(source_file) + ' ...')
-    reader = csv.DictReader(csvfile)  # create a reader
-    for row in reader:  # loop through rows
-        sample.append(row)  # append each row to the list
         
-# Take a look at the first entry's contents and the variables list in our sample (a list of dictionaries)
-logging.info(str(sample[1]["SCH_NAME"]))
-logging.info(str(sample[1]["ADDRESSES"]))
-logging.info(str(sample[1]["NCESSCH"]))
-logging.info(" Keys in this dicts list are:  ")
-logging.info(" ".join([key for key in sample[1].keys()]))
+    ### Implement this later --> check for what's left at the START of the scraping
+    # count_left(sample, 'URL')
 
-    
-### Implement this later --> check for what's left at the START of the scraping
-# count_left(sample, 'URL')
+    ### If working with an old output_file:
+    if os.path.exists(output_file):
+        print("output exists")
+        old_output = pd.read_csv(output_file)
+        
+    # Create new "URL" and "QUERY_RANKING" variables for each school, without overwriting any with data there already:
+    for school in sample:
+        try:
+            if len(school["URL"]) > 0:
+                pass
+            
+        except (KeyError, NameError):
+            school["URL"] = ""
 
-### If working with an old output_file:
-if os.path.exists(output_file):
-    print("output exists")
-    old_output = pd.read_csv(output_file)
-    
-# Create new "URL" and "QUERY_RANKING" variables for each school, without overwriting any with data there already:
-for school in sample:
-    try:
-        if len(school["URL"]) > 0:
+    for school in sample:
+        try:
+            if school["QUERY_RANKING"]:
+                pass
+            
+        except (KeyError, NameError):
+            school["QUERY_RANKING"] = ""
+            
+    # ### Scraping URLs
+
+    numschools = 0  # initialize scraping counter
+    keys = sample[0].keys()  # define keys for writing function
+
+
+    for school in tqdm(sample, desc="Scraping URLs"): # loop through list of schools
+
+        if school["URL"] or school["SCH_NAME"] in list(old_output.SCH_NAME): # handles case of output file being the same as input file AND case of input to output file
+            logging.info("School & URL already exist in our output_file!")
+            pass  # If URL exists, don't bother scraping it again
+
+        else:  # If URL hasn't been defined, then scrape it!
+            numschools += 1
+            school["QUERY_RANKING"], school["URL"] = "", "" # start with empty strings
+            school["QUERY_RANKING"], school["URL"] = getURL(school["SCH_NAME"], school["ADDRESSES"], bad_sites) 
+            dict_to_csv(school, output_file, keys) # appends to output_file at the end of every result
+
+
+    print("\n\nURLs discovered for " + str(numschools) + " schools.")
+    logging.info("URLs discovered for " + str(numschools) + " schools.")
+
+
+
+    # different approach for 75 remaining sites--do them by hand!
+
+    for school in tqdm(sample, desc="Scraping URLs Part 2"):
+        school["SEARCH"] = school["SCH_NAME"] + " " + SCHOOL["ADDRESSES"] # ADD NEW KEY TO DICTIONARY FOR SEARCH QUERY
+        if school["URL"] == "":
+            k = 0  # initialize counter for number of URLs skipped
+            school["QUERY_RANKING"] = ""
+
+            print("Scraping URL for " + school["SEARCH"] + "...")
+            urls_list = list(search(school["SEARCH"], stop=30, pause=20.0))
+            print("  URLs list collected successfully!")
+
+            for url in urls_list:
+                if any(domain in url for domain in bad_sites):
+                    k+=1    # If this url is in bad_sites_list, add 1 to counter and move on
+                    print("  Bad site detected. Moving on.")
+                else:
+                    good_url = url
+                    print("    Success! URL obtained by Google search with " + str(k) + " bad URLs avoided.")
+
+                    school["URL"] = good_url
+                    school["QUERY_RANKING"] = k + 1
+                    
+                    dict_to_csv(school, output_file, keys)
+                    count_left(sample, 'URL')
+                    break    # Exit for loop after first good url is found                               
+                                            
+        else:
             pass
-        
-    except (KeyError, NameError):
-        school["URL"] = ""
-
-for school in sample:
-    try:
-        if school["QUERY_RANKING"]:
-            pass
-        
-    except (KeyError, NameError):
-        school["QUERY_RANKING"] = ""
-        
-# ### Scraping URLs
-
-numschools = 0  # initialize scraping counter
-keys = sample[0].keys()  # define keys for writing function
 
 
-for school in tqdm(sample, desc="Scraping URLs"): # loop through list of schools
+    #dicts_to_csv(sample, output_file, keys)
+    count_left(sample, 'URL')
 
-    if school["URL"] or school["SCH_NAME"] in list(old_output.SCH_NAME): # handles case of output file being the same as input file AND case of input to output file
-        logging.info("School & URL already exist in our output_file!")
-        pass  # If URL exists, don't bother scraping it again
-
-    else:  # If URL hasn't been defined, then scrape it!
-        numschools += 1
-        school["QUERY_RANKING"], school["URL"] = "", "" # start with empty strings
-        school["QUERY_RANKING"], school["URL"] = getURL(school["SCH_NAME"], school["ADDRESSES"], bad_sites) 
-        dict_to_csv(school, output_file, keys) # appends to output_file at the end of every result
-
-
-print("\n\nURLs discovered for " + str(numschools) + " schools.")
-logging.info("URLs discovered for " + str(numschools) + " schools.")
-
-
-
-# different approach for 75 remaining sites--do them by hand!
-
-for school in tqdm(sample, desc="Scraping URLs Part 2"):
-    school["SEARCH"] = school["SCH_NAME"] + " " + SCHOOL["ADDRESSES"] # ADD NEW KEY TO DICTIONARY FOR SEARCH QUERY
-    if school["URL"] == "":
-        k = 0  # initialize counter for number of URLs skipped
-        school["QUERY_RANKING"] = ""
-
-        print("Scraping URL for " + school["SEARCH"] + "...")
-        urls_list = list(search(school["SEARCH"], stop=30, pause=20.0))
-        print("  URLs list collected successfully!")
-
-        for url in urls_list:
-            if any(domain in url for domain in bad_sites):
-                k+=1    # If this url is in bad_sites_list, add 1 to counter and move on
-                print("  Bad site detected. Moving on.")
-            else:
-                good_url = url
-                print("    Success! URL obtained by Google search with " + str(k) + " bad URLs avoided.")
-
-                school["URL"] = good_url
-                school["QUERY_RANKING"] = k + 1
-                
-                dict_to_csv(school, output_file, keys)
-                count_left(sample, 'URL')
-                break    # Exit for loop after first good url is found                               
-                                           
-    else:
-        pass
-
-
-#dicts_to_csv(sample, output_file, keys)
-count_left(sample, 'URL')
+if __name__ == "__main__":
+    scrape_URLs()
