@@ -100,7 +100,7 @@ def format_name(school_name):
     the possible abbreviations of "ELEM." and "HS" are converted to "Elementary" and "High School" respectively.
     '''
     formatted_name = school_name.title()
-    return formatted_name.replace("Elem.", "Elementary").replace(" Hs ", " High School ")
+    return formatted_name.replace("Elem.", "Elementary").replace(" Hs", " High School")
 
 # ## Define core URL scraping function
 
