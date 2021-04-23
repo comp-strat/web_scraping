@@ -32,8 +32,8 @@ HEADERS = {
 }
 
 ''' TODO: IF RUNNING AS AN INDEPENDENT SCRIPT, 
-REPLACE 'SOURCE-FILE.csv' and 'FILTERED-OUTPUT-FILE.csv' with the corresponding filenames you want. '''
-source_file = SOURCE-FILE.csv # TODO: Replace!
+REPLACE 'RAW-OUTPUT-FILE.csv' and 'FILTERED-OUTPUT-FILE.csv' with the corresponding filenames you want. '''
+raw_output_file = RAW-OUTPUT-FILE.csv # TODO: Replace!
 filtered_output_file = FILTERED-OUTPUT-FILE.csv # TODO: Replace!
 
 # Set logging options
@@ -69,7 +69,7 @@ def check_schoolstr_website(school_name, url):
 
     ### Main Function
 def check_URLs():
-    df = pd.read_csv(source_file)
+    df = pd.read_csv(raw_output_file)
     output_file_cols = df.keys()
 
     old_exists = False
@@ -78,7 +78,7 @@ def check_URLs():
         old_exists = True
         old_output = pd.read_csv(filtered_output_file)
         
-    with open(source_file, 'r', encoding = 'utf-8') as csvfile:
+    with open(raw_output_file, 'r', encoding = 'utf-8') as csvfile:
         reader = csv.DictReader(csvfile) # create a reader
         url_confirmations = []
         explanations = []
@@ -116,7 +116,7 @@ def check_URLs():
 
     df['VALIDITY_CONFIRMED'] = url_confirmations
     df['EXPLANATIONS'] = explanations
-    df.to_csv(source_file, index=False) # update 'input_file' with new values for "validity_confirmed"
+    df.to_csv(raw_output_file, index=False) # update 'input_file' with new values for "validity_confirmed"
 
 if __name__ == "__main__":
     check_URLs()
