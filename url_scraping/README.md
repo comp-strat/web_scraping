@@ -20,7 +20,7 @@ Running the scraper will create a log 'dataURL_scraping_{datetime}.log'. This wi
 After completion of the script, 'raw_output_file' contains the following columns: "SCH_NAME", "ADDRESSES", "NCESSCH", "URL", and "QUERY_RANKING". 
 
 ### Running the URL scraper
-1. Make sure that 'source_file' contains the columns: "SCH_NAME" (school name), "ADDRESSES", and "NCESSCH" (school ID).
+1. Make sure that the corresponding 'source_file' contains the columns: "SCH_NAME" (school name), "ADDRESSES", and "NCESSCH" (school ID).
 
 2. Replace the filepath strings currently in the variables 'source_file' AND 'raw_output_file' -- i.e. data/[SOME SOURCE FILE].
 
@@ -44,7 +44,7 @@ After completion of the script, 'raw_output_file' contains the following columns
 'filtered_output_file' contains the following columns: "SCH_NAME", "ADDRESSES", "NCESSCH", "URL", and "QUERY_RANKING". 
 
 ### Running the URL checker
-1. Make sure that 'raw_output_file' contains the columns: "SCH_NAME", "ADDRESSES", "NCESSCH", "URL", and "QUERY_RANKING".
+1. Make sure that the corresponding 'raw_output_file' contains the columns: "SCH_NAME", "ADDRESSES", "NCESSCH", "URL", and "QUERY_RANKING".
 
 2. Replace the filepath strings currently in the variables 'raw_output_file' AND 'filtered_output_file' -- i.e. data/[SOME SOURCE FILE].
 
