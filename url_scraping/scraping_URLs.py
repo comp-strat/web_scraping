@@ -35,19 +35,18 @@ import logging # for logging output, to help with troubleshooting
 from datetime import datetime # For timestamping files
 
 import pandas as pd
-
+import sys
 import time
 
-''' TODO: REPLACE 'SOURCE-FILE.csv' and 'OUTPUT-FILE.csv' with the corresponding filenames you want. '''
+''' TODO: IF RUNNING AS AN INDEPENDENT SCRIPT, 
+REPLACE 'SOURCE-FILE.csv' and 'OUTPUT-FILE.csv' with the corresponding filenames you want. '''
 
 # Set directories and file paths
-dir_prefix = './' # Set working directory 
-temp_dir = dir_prefix + "data" # Directory in which to save logging and data files
-source_file = 'data/SOURCE-FILE.csv' # Set source file path 
-output_file = dir_prefix + 'data/OUTPUT-FILE.csv' # Set file path for final collection 
+#source_file = SOURCE-FILE.csv # TODO: Replace!
+#output_file = OUTPUT-FILE.csv # TODO: Replace!
 
 # Set logging options
-log_file = temp_dir + "URL_scraping_" + str(datetime.today()) + ".log"
+log_file = "./URL_scraping_" + str(datetime.today()) + ".log"
 logging.basicConfig(format='%(message)s', filename=log_file,level=logging.INFO)
 
 ##### COMMENTED OUT UNTIL FURTHER NOTICE
@@ -62,7 +61,7 @@ logging.basicConfig(format='%(message)s', filename=log_file,level=logging.INFO)
 
 # Create list of "bad sites" or common Google results we want to filter out:
 bad_sites = []
-with open(dir_prefix + '/data/bad_sites.csv', 'r', encoding = 'utf-8') as csvfile:
+with open('./data/bad_sites.csv', 'r', encoding = 'utf-8') as csvfile:
     for row in csvfile:
         bad_sites.append(re.sub('\n', '', row))
 
@@ -197,7 +196,7 @@ def getURL(school_name, address, bad_sites_list): # manual_url
     
     return(k + 1, good_url)
 
-def scrape_URLs():
+def scrape_URLs(source_file, raw_output_file):
     # ### Reading in data
 
     sample = []  # make empty list in which to store the dictionaries
@@ -220,10 +219,10 @@ def scrape_URLs():
     # count_left(sample, 'URL')
 
     ### If working with an old output_file:
-    old_output_exists = os.path.exists(output_file)
+    old_output_exists = os.path.exists(raw_output_file)
     if old_output_exists:
         print("output exists")
-        old_output = pd.read_csv(output_file)
+        old_output = pd.read_csv(raw_output_file)
         
     # Create new "URL" and "QUERY_RANKING" variables for each school, without overwriting any with data there already:
     for school in sample:
@@ -258,7 +257,7 @@ def scrape_URLs():
             numschools += 1
             school["QUERY_RANKING"], school["URL"] = "", "" # start with empty strings
             school["QUERY_RANKING"], school["URL"] = getURL(school["SCH_NAME"], school["ADDRESSES"], bad_sites) 
-            dict_to_csv(school, output_file, keys) # appends to output_file at the end of every result
+            dict_to_csv(school, raw_output_file, keys) # appends to output_file at the end of every result
 
 
     print("\n\nURLs discovered for " + str(numschools) + " schools.")
@@ -267,4 +266,4 @@ def scrape_URLs():
     count_left(sample, 'URL') # Print and log remaining number of URLs to be found.
 
 if __name__ == "__main__":
-    scrape_URLs()
+    scrape_URLs(sys.argv[1], sys.argv[2])

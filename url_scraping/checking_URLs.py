@@ -22,7 +22,7 @@ from tqdm import tqdm
 import logging
 from datetime import datetime # For timestamping files
 import time
-
+import sys
 from bs4 import BeautifulSoup
 import requests
 from requests.auth import HTTPBasicAuth, HTTPDigestAuth
@@ -31,11 +31,8 @@ HEADERS = {
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
 }
 
-''' TODO: REPLACE 'SOURCE-FILE.csv' and 'OUTPUT-FILE.csv' with the corresponding filenames you want. '''
-
-# Set filepaths
-input_file = './data/SOURCE-FILE.csv'
-output_file = "./data/OUTPUT-FILE.csv"
+''' TODO: IF RUNNING AS AN INDEPENDENT SCRIPT, 
+REPLACE 'SOURCE-FILE.csv' and 'FILTERED-OUTPUT-FILE.csv' with the corresponding filenames you want. '''
 
 # Set logging options
 log_file =  "./URL_checking_" + str(datetime.today()) + ".log"
@@ -69,17 +66,17 @@ def check_schoolstr_website(school_name, url):
     return school_name.lower() in soup.text.lower()
 
     ### Main Function
-def check_URLs():
-    df = pd.read_csv(input_file)
+def check_URLs(source_file, filtered_output_file):
+    df = pd.read_csv(source_file)
     output_file_cols = df.keys()
 
     old_exists = False
-    if os.path.exists(output_file):
+    if os.path.exists(filtered_output_file):
         print("An output file with this name already exists. Will avoid duplicate entries.")
         old_exists = True
-        old_output = pd.read_csv(output_file)
+        old_output = pd.read_csv(filtered_output_file)
         
-    with open(input_file, 'r', encoding = 'utf-8') as csvfile:
+    with open(source_file, 'r', encoding = 'utf-8') as csvfile:
         reader = csv.DictReader(csvfile) # create a reader
         url_confirmations = []
         explanations = []
@@ -112,13 +109,13 @@ def check_URLs():
 
             else: # Add new row to 'output_file'
                 logging.info("VALID: Confirmed validity of school's URL!")
-                dict_to_csv(row, output_file, list(row.keys()))
+                dict_to_csv(row, filtered_output_file, list(row.keys()))
                 url_confirmations += [True]
                 explanations += ["Validity is confirmed according to current tests."]
 
     df['VALIDITY_CONFIRMED'] = url_confirmations
     df['EXPLANATIONS'] = explanations
-    df.to_csv(input_file, index=False) # update 'input_file' with new values for "validity_confirmed"
+    df.to_csv(source_file, index=False) # update 'input_file' with new values for "validity_confirmed"
 
 if __name__ == "__main__":
-    check_URLs()
+    check_URLs(sys.argv[1], sys.argv[2])
