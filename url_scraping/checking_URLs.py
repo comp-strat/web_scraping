@@ -33,6 +33,8 @@ HEADERS = {
 
 ''' TODO: IF RUNNING AS AN INDEPENDENT SCRIPT, 
 REPLACE 'SOURCE-FILE.csv' and 'FILTERED-OUTPUT-FILE.csv' with the corresponding filenames you want. '''
+source_file = SOURCE-FILE.csv # TODO: Replace!
+filtered_output_file = FILTERED-OUTPUT-FILE.csv # TODO: Replace!
 
 # Set logging options
 log_file =  "./URL_checking_" + str(datetime.today()) + ".log"
@@ -66,7 +68,7 @@ def check_schoolstr_website(school_name, url):
     return school_name.lower() in soup.text.lower()
 
     ### Main Function
-def check_URLs(source_file, filtered_output_file):
+def check_URLs():
     df = pd.read_csv(source_file)
     output_file_cols = df.keys()
 
@@ -80,7 +82,6 @@ def check_URLs(source_file, filtered_output_file):
         reader = csv.DictReader(csvfile) # create a reader
         url_confirmations = []
         explanations = []
-        i = 1
         for row in tqdm(reader, desc="Checking URLs"): # loop through rows in input file
             if list(row.values()) == ["", "", "", "", ""]:
                 logging.info("End of file")
@@ -118,4 +119,4 @@ def check_URLs(source_file, filtered_output_file):
     df.to_csv(source_file, index=False) # update 'input_file' with new values for "validity_confirmed"
 
 if __name__ == "__main__":
-    check_URLs(sys.argv[1], sys.argv[2])
+    check_URLs()

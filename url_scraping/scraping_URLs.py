@@ -42,8 +42,8 @@ import time
 REPLACE 'SOURCE-FILE.csv' and 'OUTPUT-FILE.csv' with the corresponding filenames you want. '''
 
 # Set directories and file paths
-#source_file = SOURCE-FILE.csv # TODO: Replace!
-#output_file = OUTPUT-FILE.csv # TODO: Replace!
+source_file = SOURCE-FILE.csv # TODO: Replace!
+raw_output_file = OUTPUT-FILE.csv # TODO: Replace!
 
 # Set logging options
 log_file = "./URL_scraping_" + str(datetime.today()) + ".log"
@@ -196,7 +196,7 @@ def getURL(school_name, address, bad_sites_list): # manual_url
     
     return(k + 1, good_url)
 
-def scrape_URLs(source_file, raw_output_file):
+def scrape_URLs():
     # ### Reading in data
 
     sample = []  # make empty list in which to store the dictionaries
@@ -266,4 +266,4 @@ def scrape_URLs(source_file, raw_output_file):
     count_left(sample, 'URL') # Print and log remaining number of URLs to be found.
 
 if __name__ == "__main__":
-    scrape_URLs(sys.argv[1], sys.argv[2])
+    scrape_URLs()
