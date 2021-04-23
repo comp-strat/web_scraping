@@ -6,7 +6,7 @@ The main script 'searching_URLs' involves 2 scripts: 'scraping_URLs' and 'checki
 1. source_file AND raw_output_file (scraping_URLs.py) -- data/[SOME SOURCE FILE]
 2. raw_output_file AND filtered_output_file (checking_URLs.py) -- data/[SOME RAW OUTPUT FILE]
 
-To start the entire URL scraping process, run the following command `python3 searching_URLs.py` from the url_scraping directory.
+To start the entire URL scraping process, make sure that 'source_file' contains the columns: "SCH_NAME" (school name), "ADDRESSES", and "NCESSCH" (school ID). Then, run the following command `python3 searching_URLs.py` from the url_scraping directory.
 
 To run the scripts individually:
 scraping_URLs.py -- `python3 scraping_URLs.py`
@@ -17,14 +17,14 @@ OBJECTIVE: From the source file specified by the user, use the school name and a
 
 Running the scraper will create a log 'dataURL_scraping_{datetime}.log'. This will provide updates on progress during the processing of each school entry, in addition to the use of the 'tqdm' module in the main script for providing progress in the terminal. (More info on 'tqdm' here: https://tqdm.github.io)
 
-'source_file' should contain the columns: "SCH_NAME" (school name), "ADDRESSES", "NCESSCH" (school ID).
-
 After completion of the script, 'raw_output_file' contains the following columns: "SCH_NAME", "ADDRESSES", "NCESSCH", "URL", and "QUERY_RANKING". 
 
 ### Running the URL scraper
-1. Replace the filepath strings currently in the variables 'source_file' AND 'raw_output_file' -- i.e. data/[SOME SOURCE FILE].
+1. Make sure that 'source_file' contains the columns: "SCH_NAME" (school name), "ADDRESSES", and "NCESSCH" (school ID).
 
-2. Run the following command `python3 scraping_URLs.py` from the url_scraping directory. 
+2. Replace the filepath strings currently in the variables 'source_file' AND 'raw_output_file' -- i.e. data/[SOME SOURCE FILE].
+
+3. Run the following command `python3 scraping_URLs.py` from the url_scraping directory. 
 
 ### For each school in 'source_file':
 We create a search using the Google Search package and the string 'search_terms' ("SCH_NAME" + "ADDRESSES" for the school entry) as input. This search produces 20 potential URLs from Google to iterate through. The scraper will check if the current URL can be found in 'data/bad_sites.csv'; if so, the scraper skips to the next URL and we increase the value for the school entry's "QUERY_RANKING" by 1. 
@@ -40,15 +40,15 @@ OBJECTIVE: From the raw output file specififed by the user, check the URLs scrap
 
 Running the scraper will create a log 'dataURL_checking_{datetime}.log'. This will provide updates on progress during the processing of each school entry, in addition to the use of the 'tqdm' module in the main script for providing progress in the terminal. (More info on 'tqdm' here: https://tqdm.github.io)
 
-'raw_output_file' should contain the columns: "SCH_NAME", "ADDRESSES", "NCESSCH", "URL", and "QUERY_RANKING".
-
 After completion of the script, 'raw_output_file' contains the following columns: "SCH_NAME", "ADDRESSES", "NCESSCH", "URL", "QUERY_RANKING", "VALIDITY_CONFIRMED", and "EXPLANATIONS".
 'filtered_output_file' contains the following columns: "SCH_NAME", "ADDRESSES", "NCESSCH", "URL", and "QUERY_RANKING". 
 
 ### Running the URL checker
-1. Replace the filepath strings currently in the variables 'raw_output_file' AND 'filtered_output_file' -- i.e. data/[SOME SOURCE FILE].
+1. Make sure that 'raw_output_file' contains the columns: "SCH_NAME", "ADDRESSES", "NCESSCH", "URL", and "QUERY_RANKING".
 
-2. Run the following command `python3 checking_URLs.py` from the url_scraping directory.
+2. Replace the filepath strings currently in the variables 'raw_output_file' AND 'filtered_output_file' -- i.e. data/[SOME SOURCE FILE].
+
+3. Run the following command `python3 checking_URLs.py` from the url_scraping directory.
 
 ## Updates to come
 - Updating the scraping_URLs.ipynb for a more interactive and segmented approach to scraping
