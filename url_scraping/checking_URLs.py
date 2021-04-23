@@ -84,7 +84,7 @@ def check_URLs():
         url_confirmations = []
         explanations = []
         i = 1
-        for row in reader: # loop through rows in input file
+        for row in tqdm(reader, desc="Checking URLs"): # loop through rows in input file
             if list(row.values()) == ["", "", "", "", ""]:
                 logging.info("End of file")
                 break
