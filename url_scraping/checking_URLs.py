@@ -38,7 +38,7 @@ input_file = './data/SOURCE-FILE.csv'
 output_file = "./data/OUTPUT-FILE.csv"
 
 # Set logging options
-log_file =  "./URL_scraping_" + str(datetime.today()) + ".log"
+log_file =  "./URL_checking_" + str(datetime.today()) + ".log"
 logging.basicConfig(format='%(message)s', filename=log_file,level=logging.INFO)
 
 # ### Define helper functions
