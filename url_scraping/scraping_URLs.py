@@ -43,8 +43,8 @@ import time
 # Set directories and file paths
 dir_prefix = './' # Set working directory 
 temp_dir = dir_prefix + "data" # Directory in which to save logging and data files
-source_file = 'data/xaa' # Set source file path 
-output_file = dir_prefix + 'data/scraped_URLs_xaa.csv' # Set file path for final collection 
+source_file = 'data/SOURCE-FILE.csv' # Set source file path 
+output_file = dir_prefix + 'data/OUTPUT-FILE.csv' # Set file path for final collection 
 
 # Set logging options
 log_file = temp_dir + "URL_scraping_" + str(datetime.today()) + ".log"
