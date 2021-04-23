@@ -195,6 +195,7 @@ class CharterSchoolSpider(CrawlSpider):
                     first_row = False
                     continue
                 
+                print(raw_row)
                 school_id, url = raw_row
 
                 domain = self.get_domain(url)
