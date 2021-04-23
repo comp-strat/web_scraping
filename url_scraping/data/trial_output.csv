@@ -1,0 +1,6 @@
+SCH_NAME,ADDRESSES,NCESSCH,URL,QUERY_RANKING,VALIDITY_CONFIRMED,EXPLANATIONS
+Albertville Middle School,"600 E Alabama Ave, Albertville, AL 35950",10000500870,https://ams.albertk12.org/apps/contact/,1,True,Validity is confirmed according to current tests.
+Albertville High School,"402 E McCord Ave, Albertville, AL 35950",10000500871,https://ahs.albertk12.org/,4,True,Validity is confirmed according to current tests.
+Evans Elementary School,"901 W McKinney Ave, Albertville, AL 35950",10000500879,https://ees.albertk12.org/,1,False,School String not found in website.
+Albertville Elementary School,"1100 Horton Rd, Albertville, AL 35950",10000500889,https://aps.albertk12.org/,1,False,School String not found in website.
+Big Spring Lake Kindergarten School,"257 Country Club Rd, Albertville, AL 35951",10000501616,https://akpk.albertk12.org/,1,False,School String not found in website.
