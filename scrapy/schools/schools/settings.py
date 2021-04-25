@@ -111,9 +111,17 @@ MONGO_URI = 'mongodb://localhost:27017'
 # connect to MongoDB which is running in mongodb_container.
 #MONGO_URI = 'mongodb://mongodb_container:27017'
 #MONGO_URI = 'someBadURI'
+#MONGO_URI = '10.0.2.4'
+
+MONGO_REPLICATION = False
+
+MONGO_REPLICA_SET = 'mongoCluster' # replica set name if used
 
 MONGO_DATABASE = 'schoolSpider' # database (not collection) name
 
+MONGO_USERNAME = 'admin' # could probably make a "schoolCrawler" user to use here instead
+
+MONGO_PASSWORD = 'mdipass' # Replace with actual password
 
 IMAGES_STORE = 'images'
 FILES_STORE = 'files'

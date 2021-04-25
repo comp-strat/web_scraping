@@ -56,6 +56,8 @@ from bs4.element import Comment # helps with detecting inline/junk tags when par
 import html5lib # slower but more accurate bs4 parser for messy HTML # lxml faster
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
+from scrapy.exceptions import NotSupported
+from scrapy.http import Request
 
 from items import CharterItem
 
@@ -69,6 +71,8 @@ import re
 from urllib.parse import urlparse
 import requests
 import pandas as pd
+
+import chardet
 
 
 # Used for extracting text from PDFs
@@ -129,7 +133,7 @@ class CharterSchoolSpider(CrawlSpider):
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
         self.start_urls = []
         self.allowed_domains = []
-        self.rules = (Rule(CustomLinkExtractor(), follow=True, callback="parse_items"),)
+        self.rules = (Rule(CustomLinkExtractor(allow_domains = self.allowed_domains), follow=True, callback="parse_items"),)
         self.domain_to_id = {}
         self.init_from_school_list(school_list)
         
@@ -137,7 +141,7 @@ class CharterSchoolSpider(CrawlSpider):
     # note: make sure we ignore robot.txt
     # Method for parsing items
     def parse_items(self, response):
-
+        
         item = CharterItem()
         item['url'] = response.url
         item['text'] = self.get_text(response)
@@ -152,8 +156,12 @@ class CharterSchoolSpider(CrawlSpider):
         item['image_urls'] = self.collect_image_URLs(response)
         
         item['file_urls'], item['file_text'] = self.collect_file_URLs(domain, item, response)
-        
-        yield item    
+        print(item['file_urls'])
+        yield item
+        # Will this be recursive for all of eternity?
+        if 'text/html' in str(response.headers['Content-Type']):
+            for href in response.xpath('//a/@href').getall():
+                yield Request(response.urljoin(href), self.parse_items)
 
     def init_from_school_list(self, school_list):
         """
@@ -197,7 +205,7 @@ class CharterSchoolSpider(CrawlSpider):
                 print(raw_row)
                 school_id, url = raw_row
 
-                domain = self.get_domain(url)
+                domain = self.get_domain(url, True)
                 # set instance attributes
                 self.start_urls.append(url)
                 self.allowed_domains.append(domain)
@@ -205,20 +213,39 @@ class CharterSchoolSpider(CrawlSpider):
                 self.domain_to_id[domain] = float(school_id)
 
                 
-    def get_domain(self, url):
+    def get_domain(self, url, init = False):
         """
         Given the url, gets the top level domain using the
         tldextract library.
         
+        Args:
+            init (Boolean): True if this function is called while initializing the Spider, else False
         Ex:
         >>> get_domain('http://www.charlottesecondary.org/')
         charlottesecondary.org
         >>> get_domain('https://www.socratesacademy.us/our-school')
         socratesacademy.us
         """
-        #extracted = tldextract.extract(url)
-        #permissive_domain = f'{extracted.domain}.{extracted.suffix}' # gets top level domain: very permissive crawling
-        specific_domain = re.sub(r'https?\:\/\/', '', url) # full URL without http
+        extracted = tldextract.extract(url)
+        permissive_domain = f'{extracted.domain}.{extracted.suffix}' # gets top level domain: very permissive crawling
+        #specific_domain = re.sub(r'https?\:\/\/', '', url) # full URL without http
+        specific_domain = re.sub(r'https?\:\/\/w{0,3}\.?', '', url) # full URL without http and www. to compare w/ permissive
+        print("get_domain: Permissive:", permissive_domain)
+        print("get_domain: Specific:", specific_domain)
+        top_level = len(specific_domain.replace("/", "")) == len(permissive_domain) # compare specific and permissive domain
+        
+        if init: # Check if this is the initialization period for the Spider.
+            if top_level:
+                return permissive_domain
+            else:
+                return specific_domain
+        
+        # secondary round
+        if permissive_domain in self.allowed_domains:
+            return permissive_domain
+        
+        #implement dictionary for if specific domain is used in original allowed_domains; key is specific_domain?
+        
         
         return specific_domain # use `permissive_domain` to scrape much more broadly 
     
@@ -237,16 +264,26 @@ class CharterSchoolSpider(CrawlSpider):
         https://stackoverflow.com/questions/699468/remove-html-tags-not-on-an-allowed-list-from-a-python-string/812785#812785
         Especially consider: `from lxml.html.clean import clean_html`
         """
+        if 'text/html' not in str(response.headers['Content-Type']):
+            print("Response is not HTML text. Cannot extract text")
+            return ''
+
+        print("Pulling text with BeautifulSoup...")
+
         # Load HTML into BeautifulSoup, extract text
         soup = BeautifulSoup(response.body, 'html5lib') # slower but more accurate parser for messy HTML # lxml faster
         # Remove non-visible tags from soup
         [s.decompose() for s in soup(inline_tags)] # quick method for BS
         # Extract text, remove <p> tags
         visible_text = soup.get_text(strip = False) # get text from each chunk, leave unicode spacing (e.g., `\xa0`) for now to avoid globbing words
+
+        print("Text pulled from soup!")
         
         # Remove ascii (such as "\u00")
         filtered_text = visible_text.encode('ascii', 'ignore').decode('ascii')
         
+        print("Filtering ad junk from the soupy text")
+
         # Remove ad junk
         filtered_text = re.sub(r'\b\S*pic.twitter.com\/\S*', '', filtered_text) 
         filtered_text = re.sub(r'\b\S*cnxps\.cmd\.push\(.+\)\;', '', filtered_text) 
@@ -258,6 +295,7 @@ class CharterSchoolSpider(CrawlSpider):
         filtered_text = regex.sub(r"{(?:[^{}]*|(?R))*}", " ", filtered_text)
 
         # Remove white spaces at beginning and end of string; return
+        print("Text found and filtered successfully!")
         return filtered_text.strip()
 
     def collect_image_URLs(self, response):
@@ -266,9 +304,13 @@ class CharterSchoolSpider(CrawlSpider):
         to store in the Item for downloading.
         """
         image_urls = []
-        for image_url in response.xpath('//img/@src').extract():
+        if 'text/html' in str(response.headers['Content-Type']):
+            extracted_urls = response.xpath('//img/@src').extract()
+        else:
+            extracted_urls = []
+            print("No HTML to search for images here")
+        for image_url in extracted_urls:
             # make each image_url into a readable URL and add to image_urls
-           
             image_urls.append(response.urljoin(image_url))
         return image_urls
     
@@ -281,11 +323,41 @@ class CharterSchoolSpider(CrawlSpider):
         """
         file_urls = []
         selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
-        print("PDF FOUND", response.css(selector).extract())
+        if 'text/html' in str(response.headers['Content-Type']):
+            extracted_links = response.css(selector).extract()
+            print("Reading response HTML")
+        else:
+            print("No Response HTML. Domain is: " + str(domain) + " \nand URL is: " + str(response.url))
+            extracted_links = []
+            # If the url is not part of the domain being scraped ("something.com/this.pdf" vs "someother.org/"), don't include it
+            if not response.url.startswith('/') and domain not in response.url:
+                extracted_links = []
+            elif 'application/pdf' in str(response.headers['Content-Type']):
+                if response.url.endswith('/'):
+                    file_url = response.url[:-1] + '.pdf'
+                else:
+                    file_url = response.url + '.pdf'
+                extracted_links.append(file_url)
+            elif 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' in str(response.headers['Content-Type']):
+                if response.url.endswith('/'):
+                    file_url = response.url[:-1] + '.docx'
+                else:
+                    file_url = response.url + '.docx'
+                extracted_links.append(file_url)
+            elif 'application/msword' in str(response.headers['Content-Type']):
+                if response.url.endswith('/'):
+                    file_url = response.url[:-1] + '.doc'
+                else:
+                    file_url = response.url + '.doc'
+                extracted_links.append(file_url)
+#        print("Cannot extract file. Domain is: " + str(domain))
+        print("Content-Type Header: " + str(response.headers['Content-Type']))
+#        print("\n\n\n\nHeaders: " + str(response.headers.keys()) + "\n\n\n\n")
+        print("PDF FOUND", extracted_links)
         
         # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
         file_text = []
-        for href in response.css(selector).extract():
+        for href in extracted_links:
             # Check if href is complete.
             if "http" not in href:
                 href = "http://" + domain + href
@@ -293,7 +365,10 @@ class CharterSchoolSpider(CrawlSpider):
             file_urls += [href]
             
             # Parse file text and it to list of file texts
-            file_text += [self.parse_file(href, item['url'])]
+            try:
+                file_text += [self.parse_file(href, item['url'])]
+            except UnicodeDecodeError:
+                print("Error parsing file: " + str(href) + " -- Unsupported Unicode Character")
             
         return file_urls, file_text
     
@@ -315,22 +390,41 @@ class CharterSchoolSpider(CrawlSpider):
         
         """
 
+        # If the url is not part of the domain being scraped ("something.com/this.pdf" vs "someother.org/"), don't include it
+        # This logic is very basic and a starting point for further development of ensuring that we are still on the same page. TODO: improve domain splitting/comparing logic to avoid hitting external sites
+        if not str(href).startswith('/') and str(parent_url).split(".")[1] != str(href).split(".")[1]:
+            print("Danger! File source is from an external site. Source: " + str(href) + " \n\tand parent url: " + str(parent_url))
+            return ''
         # Parse text from file and add to .txt file AND item
+        print("Requesting the file data from its source: " + str(href) + " \n\tat the parent url: " + str(parent_url))
         response_href = requests.get(href)
+        print("Retrieved file data from response")
 
         extension = list(filter(lambda x: response_href.url.lower().endswith(x), TEXTRACT_EXTENSIONS))[0]
       
-
+        print("Extension found: " + str(extension))
+        print("Pulling file data into tempfile")
         tempfile = NamedTemporaryFile(suffix=extension)
         tempfile.write(response_href.content)
         tempfile.flush()
 
+        print("Processing file with Textract...")
         extracted_data = textract.process(tempfile.name)
-        extracted_data = extracted_data.decode('utf-8')
+        print("Data encoding = " + str(chardet.detect(extracted_data)['encoding']))
+        print("Decoding with utf-8")
+        # Should remove try/catch flow control!
+        try:
+            extracted_data = extracted_data.decode('utf-8')
+        except:
+            print("Error decoding extracted data")
+            tempfile.close()
+            return ''
         extracted_data = CONTROL_CHAR_RE.sub('', extracted_data)
         tempfile.close()
         base_url = self.get_domain(parent_url)
-        
+        print("Text extracted sucessfully!")
+        return extracted_data
+        '''
         # Create a filepath for the .txt file
         txt_file_name = "files" + "/" + base_url + "/" + os.path.basename(urlparse(href).path).replace(extension, ".txt")
         
@@ -351,4 +445,4 @@ class CharterSchoolSpider(CrawlSpider):
             f.write("\n\n")
             
         return extracted_data 
-    
+    '''
