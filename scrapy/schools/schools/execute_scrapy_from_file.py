@@ -7,4 +7,4 @@ def execute_scrapy_from_file(filename):
     run_cmd = SCRAPY_RUN_CMD + str(filename)
     print(run_cmd)
     subprocess.run(['cat',filename])
-    return subprocess.run(run_cmd.split())
+    return cmdline.execute(run_cmd.split())
