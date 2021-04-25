@@ -57,12 +57,11 @@ import html5lib # slower but more accurate bs4 parser for messy HTML # lxml fast
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
 
-from schools.items import CharterItem
+from items import CharterItem
 
 # The following are required for parsing File text
 
 import os
-from schools.items import CharterItem
 from tempfile import NamedTemporaryFile
 import textract
 from itertools import chain
