@@ -61,3 +61,4 @@ flask==1.1.2
 flask_restful==0.3.8
 scrapyscript==1.1.0
 rq==1.8.0
+pandas==1.2.4
