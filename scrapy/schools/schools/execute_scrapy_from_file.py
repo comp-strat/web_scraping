@@ -4,6 +4,7 @@ from scrapyscript import Job, Processor
 from spiders.scrapy_vanilla import CharterSchoolSpider
 from scrapy.utils.project import get_project_settings
 
+
 SCRAPY_RUN_CMD = "scrapy crawl schoolspider -a school_list="
 
 def execute_scrapy_from_file(filename):

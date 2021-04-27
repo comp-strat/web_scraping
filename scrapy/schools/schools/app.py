@@ -25,12 +25,14 @@ def crawl_csv_file():
     file_csv = request.files['file']
     school_list = pd.read_csv(file_csv)
     now = datetime.now()
-    school_list.to_csv(now.strftime('%d%m%Y_%H%M%S') + '.csv', index=False)
+    school_list.to_csv('./schools/spiders/' + now.strftime('%d%m%Y_%H%M%S') + '.csv', index=False)
     print("tmp file written")
     queue = rq.Queue('crawling-tasks', connection=Redis.from_url('redis://'))
-    job = queue.enqueue('run_schoolspider.execute_scrapy_from_flask', now.strftime('%d%m%Y_%H%M%S') + '.csv', now.strftime('%d%m%Y_%H%M%S'))
+    job = queue.enqueue('run_schoolspider.execute_scrapy_from_flask', './schools/spiders/' + now.strftime('%d%m%Y_%H%M%S') + '.csv', './schools/spiders/' + now.strftime('%d%m%Y_%H%M%S'))
     job_id = job.get_id()
     crawl_task = crawlTaskTracker.CrawlTask(job_id) # Future work: add user id too
+    print("Mongo URI: " + str(settings.MONGO_URI))
+    print("Mongo Username: " + str(settings.MONGO_USERNAME))
     task_mongo_id = task_repository.putTask(crawl_task)
     return {'status': 200, 'message': 'Crawl Started', 'job_id': str(task_mongo_id)}
 
