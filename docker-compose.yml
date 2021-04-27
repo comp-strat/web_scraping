@@ -3,23 +3,42 @@
 # For info on use, see the README.md.
 version: '3.7'
 services:
-  crawler:
+  crawler_api:
     build: scrapy/schools # Build the Scrapy Dockerfile.
     depends_on:
       - mongodb_container
-    links:
-      - "mongodb_container:mongodb_container" # Allow connection to mongodb via the container name
+      - redis
+    expose:
+      - 5000
+    ports:
+      - 5000:5000
+    network_mode: host
+    #links:
+      #  - "mongodb_container:mongodb_container" # Allow connection to mongodb via the container name
   # credit: https://dev.to/sonyarianto/how-to-spin-mongodb-server-with-docker-and-docker-compose-2lef
   # note there is no MongoDB authentication currently.
   mongodb_container:
     container_name: mongodb_container
     image: mongo:latest
+    network_mode: host
     ports:
       - 27017:27017
     expose:
       - 27017
-    volumes:
-      - mongodb_data_container:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: mdipass
+      #volumes:
+      #- mongodb_data_container:/data/db
+  redis:
+    image: redis:latest
+    network_mode: host
+    ports:
+      - 6379:6379
+    expose:
+      - 6379
+    command: rq worker crawling-tasks
 
-volumes:
-  mongodb_data_container:
+
+    #volumes:
+    #mongodb_data_container:
