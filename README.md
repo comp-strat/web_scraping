@@ -127,6 +127,37 @@ Note: if running on a Windows machine, you will need to prefix that command with
 
 From there, you can enter 'mongo' to start the Mongo CLI within the container, and it can be navigated the same as Mongo on your computer.
 
+### Running a "Swarm" of Spiders
+
+With Docker, we can easily run a group of spiders from a long input list.
+
+Start by instantiating a MongoDB on your local machine:
+```bash
+docker run -p 27017:27017 --name mongodb -e MONGO_INITDB_ROOT_USERNAME=username -e MONGO_INITDB_ROOT_PASSWORD=password mongo
+```
+
+Next, build the school spider container, from the same directory as "Dockerfile" (scrapy/schools):
+```bash
+docker build . -t schoolcrawler
+```
+
+Finally, run the crawler:
+```bash
+docker run --network='host' -d schoolcrawler
+```
+
+Progress can be checked in the logs:
+```bash
+docker logs [containerid] --follow
+```
+
+Or by checking Mongo:
+```bash
+docker exec -it mongodb bash
+mongo -u username -p password
+show dbs
+```
+
 
 ## Updates to come
 - Distributed crawling: Coordinating spiders vertically using instances of scrapyd and a big data platform with Spark, Hadoop, and HIVE
