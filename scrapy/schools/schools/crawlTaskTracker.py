@@ -56,4 +56,4 @@ class CrawlTaskRepository():
     def get_task_progress(self, task_rq_id):
         job = self.get_rq_task(task_rq_id)
         print(job)
-        return 0 if job.is_finished else 100
+        return 1 if job.is_finished else 0

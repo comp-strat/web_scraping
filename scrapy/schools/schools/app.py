@@ -35,18 +35,18 @@ def crawl_csv_file():
     print("Mongo Username: " + str(settings.MONGO_USERNAME))
     #task_mongo_id = task_repository.putTask(crawl_task)
     return {'status': 200, 'message': 'Crawl Started', 'job_id': str(job_id)}
-'''
+
 @app.route('/task', methods=['GET'])
 def get_task_by_id():
     task_id = request.args.get('task_id')
     if task_id == None:
         return {'status': 400, 'message': 'No Task ID provided'}
-    task = task_repository.getTaskById(ObjectId(task_id))
-    job_id = task['rq_id']
+    #task = task_repository.getTaskById(ObjectId(task_id))
+    job_id = task_id#task['rq_id']
     if task_repository.get_task_progress(job_id) == 100:
         task['is_complete'] = True
         task_repository.updateTask(task, ObjectId(task_id))
     return json.loads(json_util.dumps(task))
-'''
+
 if __name__ == '__main__':
     app.run(host='localhost', debug=True, port=5000)
