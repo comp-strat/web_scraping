@@ -31,8 +31,6 @@ def crawl_csv_file():
     job = queue.enqueue('run_schoolspider.execute_scrapy_from_flask', './schools/spiders/' + now.strftime('%d%m%Y_%H%M%S') + '.csv', './schools/spiders/' + now.strftime('%d%m%Y_%H%M%S'))
     job_id = job.get_id()
     crawl_task = crawlTaskTracker.CrawlTask(job_id) # Future work: add user id too
-    print("Mongo URI: " + str(settings.MONGO_URI))
-    print("Mongo Username: " + str(settings.MONGO_USERNAME))
     #task_mongo_id = task_repository.putTask(crawl_task)
     return {'status': 200, 'message': 'Crawl Started', 'job_id': str(job_id)}
 
@@ -43,10 +41,11 @@ def get_task_by_id():
         return {'status': 400, 'message': 'No Task ID provided'}
     #task = task_repository.getTaskById(ObjectId(task_id))
     job_id = task_id#task['rq_id']
-    if task_repository.get_task_progress(job_id) == 100:
-        task['is_complete'] = True
-        task_repository.updateTask(task, ObjectId(task_id))
-    return json.loads(json_util.dumps(task))
+    completion_status = task_repository.get_task_progress(task_id)
+    #if task_repository.get_task_progress(job_id) == 100:
+    #    task['is_complete'] = True
+    #    task_repository.updateTask(task, ObjectId(task_id))
+    return {'task_id': task_id, 'completion': completion_status}
 
 if __name__ == '__main__':
     app.run(host='localhost', debug=True, port=5000)
