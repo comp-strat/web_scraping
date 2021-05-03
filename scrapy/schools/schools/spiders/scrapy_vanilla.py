@@ -57,20 +57,23 @@ import html5lib # slower but more accurate bs4 parser for messy HTML # lxml fast
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
 from scrapy.exceptions import NotSupported
+from scrapy.http import Request
 
-from schools.items import CharterItem
+from items import CharterItem
 
 # The following are required for parsing File text
 
 import os
-from schools.items import CharterItem
 from tempfile import NamedTemporaryFile
 import textract
 from itertools import chain
 import re
 from urllib.parse import urlparse
 import requests
+import pandas as pd
+
 import chardet
+
 
 # Used for extracting text from PDFs
 control_chars = ''.join(map(chr, chain(range(0, 9), range(11, 32), range(127, 160))))
@@ -154,7 +157,11 @@ class CharterSchoolSpider(CrawlSpider):
         
         item['file_urls'], item['file_text'] = self.collect_file_URLs(domain, item, response)
         print(item['file_urls'])
-        yield item    
+        yield item
+        # Will this be recursive for all of eternity?
+        if 'text/html' in str(response.headers['Content-Type']):
+            for href in response.xpath('//a/@href').getall():
+                yield Request(response.urljoin(href), self.parse_items)
 
     def init_from_school_list(self, school_list):
         """
@@ -177,6 +184,15 @@ class CharterSchoolSpider(CrawlSpider):
         """
         if not school_list:
             return
+        if isinstance(school_list, pd.DataFrame):
+            for i, row in school_list.iterrows():
+                school_id = row['NCESSCH']
+                url = row['URL_2019']
+                domain = self.get_domain(url)
+                self.start_urls.append(url)
+                self.allowed_domains.append(domain)
+                self.domain_to_id[domain] = float(school_id)
+                return
         with open(school_list, 'r') as f:
             delim = "," if "csv" in school_list else "\t"
             reader = csv.reader(f, delimiter=delim,quoting=csv.QUOTE_NONE)
@@ -186,6 +202,7 @@ class CharterSchoolSpider(CrawlSpider):
                     first_row = False
                     continue
                 
+                print(raw_row)
                 school_id, url = raw_row
 
                 domain = self.get_domain(url, True)

@@ -148,6 +148,9 @@ class MongoDBPipeline(object):
         print("Processing item...")
         # Only store CharterItems.
         if not isinstance(item, CharterItem):
+            print("Not an instance of CharterItem")
+            print(item['url'])
+            self.db['otherItems'].replace_one({'url': item['url']}, ItemAdapter(item).asdict(), upsert=True)
             return item
         # Finds the document with the matching url.
         query = {'url': item['url']}

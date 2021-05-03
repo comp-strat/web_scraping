@@ -128,6 +128,40 @@ Note: if running on a Windows machine, you will need to prefix that command with
 From there, you can enter 'mongo' to start the Mongo CLI within the container, and it can be navigated the same as Mongo on your computer.
 
 
+### Method 3: Run with a Flask API wrapper
+
+NOTE that this implementation may have broken the other methods. This is still to be tested.
+
+This method requires a Redis server to handle tasks. You can install Redis with instructions here (Ubuntu 18.04): https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04
+
+You will need at least 2 screens/terminals for this, although there may be a way to run Redis and/or Flask headless to remove this need. "Screen R" will be your screen for Redis, and "Screen F" will refer to your screen for Flask. 
+
+1. In either screen, start your Mongo database. This can be done easily with Docker:
+```bash
+docker pull mongo && docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME=admin -r MONGO_INITDB_ROOT_PASSWORD=someSecretPassword -p 27017:27017 mongo
+```
+2. In both screens, start a virtual env and install your requirements (see Method 1)
+3. In Screen R, start your Redis worker
+```bash
+rq worker crawling-tasks
+```
+4. In Screen F, start your Flask server from the scrapy/schools/schools/ directory (you can also run this from another directory, just swap "app.py" for the path to "app.py". This will run on Flask's default port 5000
+```bash
+python app.py
+```
+5. Requests for crawling tasks can be sent to the Flask server with a POST command. Currently only .csv files are accepted, but .tsv files will be available soon.
+```bash
+curl -X POST -d 'file=@path/to/your/csv/file.csv' localhost:5000/crawl-csv
+```
+6. The returned object will have the status of the request (200 for ok, 400 for a bad input, such as a missing file), and the ID of the task being run. This ID can be queried from the Mongo database to check the status of the running task (TODO: status update when job is finished). These tasks are stored in the "task\_list" database in Mongo.
+7. Gathered data can be found in 2 places. First, parsed text data and file/image urls are stored as objects in Mongo in the schoolSpider database. Second, raw files and images are stored locally, in "files/" and "images/" directories. TODO: modify the file and image pipelines so that they get stored to Mongo (which can handle raw files like that)
+
+Next Steps for this Method:
+- Listen to see when tasks finish -- have a workaround when tasks are requested via API, but this is a hacked solution
+- Add user id/info to tasks put into Mongo (functionality exists in crawlTaskTracker.py, but needs that information to be drawn out/passed from the client). This also allows us to do things like "get all tasks by a user"
+- Put files and images into Mongo instead of local -- with the option for multiple users to start crawling, we want their crawled files to be accessible/stored!
+
+
 ## Updates to come
 - Distributed crawling: Coordinating spiders vertically using instances of scrapyd and a big data platform with Spark, Hadoop, and HIVE
 - Error checking: Middlewares to check crawling fidelity and backup crawling approach (wget)
