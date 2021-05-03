@@ -40,7 +40,6 @@ def get_task_by_id():
     if task_id == None:
         return {'status': 400, 'message': 'No Task ID provided'}
     #task = task_repository.getTaskById(ObjectId(task_id))
-    job_id = task_id#task['rq_id']
     completion_status = task_repository.get_task_progress(task_id)
     #if task_repository.get_task_progress(job_id) == 100:
     #    task['is_complete'] = True

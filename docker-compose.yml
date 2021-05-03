@@ -1,7 +1,7 @@
 # Allows Scrapy and MongoDB to work together in separate containers through
 # docker-compose: https://docs.docker.com/compose/.
 # For info on use, see the README.md.
-version: '3.7'
+version: '3.5'
 services:
   crawler_api:
     build: scrapy/schools # Build the Scrapy Dockerfile.
@@ -10,8 +10,6 @@ services:
       - redis
     expose:
       - 5000
-    ports:
-      - 5000:5000
     network_mode: host
     volumes:
       - crawler_api:/code/schools/spiders
@@ -23,20 +21,16 @@ services:
     container_name: mongodb_container
     image: mongo:latest
     network_mode: host
-    ports:
-      - 27017:27017
     expose:
       - 27017
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: mdipass
+      MONGO_INITDB_ROOT_USERNAME: schoolCrawler
+      MONGO_INITDB_ROOT_PASSWORD: Crawlfor1
     volumes:
       - mongodb_data_container:/data/db
   redis:
     image: redis:latest
     network_mode: host
-    ports:
-      - 6379:6379
     expose:
       - 6379
         #    command: rq worker crawling-tasks
