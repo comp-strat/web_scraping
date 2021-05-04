@@ -24,8 +24,8 @@ services:
     expose:
       - 27017
     environment:
-      MONGO_INITDB_ROOT_USERNAME: schoolCrawler
-      MONGO_INITDB_ROOT_PASSWORD: Crawlfor1
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: mdipass
     volumes:
       - mongodb_data_container:/data/db
   redis:

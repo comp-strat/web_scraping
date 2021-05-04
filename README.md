@@ -141,6 +141,7 @@ You will need at least 2 screens/terminals for this, although there may be a way
 docker pull mongo && docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME=admin -r MONGO_INITDB_ROOT_PASSWORD=someSecretPassword -p 27017:27017 mongo
 ```
 2. In both screens, start a virtual env and install your requirements (see Method 1)
+
 3. In Screen R, start your Redis worker
 ```bash
 rq worker crawling-tasks
@@ -154,7 +155,22 @@ python app.py
 curl -X POST -d 'file=@path/to/your/csv/file.csv' localhost:5000/crawl-csv
 ```
 6. The returned object will have the status of the request (200 for ok, 400 for a bad input, such as a missing file), and the ID of the task being run. This ID can be queried from the Mongo database to check the status of the running task (TODO: status update when job is finished). These tasks are stored in the "task\_list" database in Mongo.
+
 7. Gathered data can be found in 2 places. First, parsed text data and file/image urls are stored as objects in Mongo in the schoolSpider database. Second, raw files and images are stored locally, in "files/" and "images/" directories. TODO: modify the file and image pipelines so that they get stored to Mongo (which can handle raw files like that)
+
+#### Simpler instructions using `docker-compose`
+
+1. Make sure you have Docker and Docker-Compose installed
+
+2. Navigate to the directory with docker-compose.yml
+
+3. Run "docker-compose up --build" (optional flags: " --force-recreate --renew-anon-volumes" if you have old docker volumes -- this can cause "authentication errors" due to Mongo not updating your credentials for the db)
+
+4. Once it's running, run "curl -X POST -H 'Content-Type: multipart/form-data' -F 'file=@./scrapy/schools/schools/spiders/test_urls.csv' localhost:5000/crawl-csv"
+
+5. From there, you can check the status (work in progress -- it says it's done when it's still running): "curl localhost:5000/task?task_id=" + the "job_id" from the last CURL command
+
+6. Or check Mongo: "docker exec -it mongodb_container bash" "mongo -u admin -p mdipass" "show dbs" "use schoolSpider" "db.otherItems.count()" "db.otherItems.find_one()" etc...
 
 Next Steps for this Method:
 - Listen to see when tasks finish -- have a workaround when tasks are requested via API, but this is a hacked solution
