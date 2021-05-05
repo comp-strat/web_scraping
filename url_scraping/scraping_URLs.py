@@ -42,8 +42,8 @@ import time
 REPLACE 'SOURCE-FILE.csv' and 'OUTPUT-FILE.csv' with the corresponding filenames you want. '''
 
 # Set directories and file paths
-source_file = SOURCE-FILE.csv # TODO: Replace!
-raw_output_file = OUTPUT-FILE.csv # TODO: Replace!
+source_file = "data/trial.csv" # TODO: Replace!
+raw_output_file = "data/raw_trial.csv" # TODO: Replace!
 
 # Set logging options
 log_file = "./URL_scraping_" + str(datetime.today()) + ".log"

@@ -33,8 +33,8 @@ HEADERS = {
 
 ''' TODO: IF RUNNING AS AN INDEPENDENT SCRIPT, 
 REPLACE 'RAW-OUTPUT-FILE.csv' and 'FILTERED-OUTPUT-FILE.csv' with the corresponding filenames you want. '''
-raw_output_file = RAW-OUTPUT-FILE.csv # TODO: Replace!
-filtered_output_file = FILTERED-OUTPUT-FILE.csv # TODO: Replace!
+raw_output_file = "data/raw_trial.csv" # TODO: Replace!
+filtered_output_file = "data/filtered_trial.csv" # TODO: Replace!
 
 # Set logging options
 log_file =  "./URL_checking_" + str(datetime.today()) + ".log"
