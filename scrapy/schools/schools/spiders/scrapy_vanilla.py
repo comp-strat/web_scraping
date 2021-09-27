@@ -59,7 +59,7 @@ from scrapy.spiders import Rule, CrawlSpider
 from scrapy.exceptions import NotSupported
 from scrapy.http import Request
 
-from items import CharterItem
+from schools.items import CharterItem
 
 # The following are required for parsing File text
 
