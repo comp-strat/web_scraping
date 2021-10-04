@@ -1,0 +1,12 @@
+sudo: required
+language: nodejs
+
+services:
+  - docker
+  - mongodb
+
+before_install:
+  - ./.build.sh
+
+script:
+  - curl -X GET localhost:5000/
