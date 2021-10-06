@@ -11,7 +11,7 @@ NOTE: by default, data doesn’t persist when that container no longer exists.
 from scrapy import cmdline
 import multiprocessing
 import os
-import execute_scrapy_from_file
+import schools.execute_scrapy_from_file as execute_scrapy_from_file
 import subprocess
 
 # See scrapy_vanilla.py for the meaning of this command.
@@ -26,6 +26,7 @@ SPLIT_PREFIX = 'split_urls/'
 
 def execute_scrapy_from_flask(filename, file_prefix):
     print('Making new Directory for split files')
+    subprocess.run(['pwd'])
     subprocess.run(['mkdir',file_prefix + SPLIT_PREFIX])
     print("Splitting tmp file " + str(filename))
     split_cmd = SPLIT_FILE_CMD + '.csv ' + str(filename) + ' ' + str(file_prefix) + SPLIT_PREFIX

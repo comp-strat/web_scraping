@@ -1,7 +1,7 @@
 from scrapy import cmdline
 import subprocess
 from scrapyscript import Job, Processor
-from spiders.scrapy_vanilla import CharterSchoolSpider
+from schools.spiders.scrapy_vanilla import CharterSchoolSpider
 from scrapy.utils.project import get_project_settings
 
 

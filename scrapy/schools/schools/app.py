@@ -1,7 +1,7 @@
 from flask import Flask, request
 import pandas as pd
 from datetime import datetime
-import run_schoolspider
+
 from redis import Redis
 import rq
 import crawlTaskTracker
@@ -28,7 +28,7 @@ def crawl_csv_file():
     school_list.to_csv('./schools/spiders/' + now.strftime('%d%m%Y_%H%M%S') + '.csv', index=False)
     print("tmp file written")
     queue = rq.Queue('crawling-tasks', connection=Redis.from_url('redis://'))
-    job = queue.enqueue('schools.run_schoolspider.execute_scrapy_from_flask', './schools/spiders/' + now.strftime('%d%m%Y_%H%M%S') + '.csv', './schools/spiders/' + now.strftime('%d%m%Y_%H%M%S'))
+    job = queue.enqueue('schools.execute_scrapy_from_flask', './schools/spiders/' + now.strftime('%d%m%Y_%H%M%S') + '.csv', './schools/spiders/' + now.strftime('%d%m%Y_%H%M%S'))
     job_id = job.get_id()
     crawl_task = crawlTaskTracker.CrawlTask(job_id) # Future work: add user id too
     #task_mongo_id = task_repository.putTask(crawl_task)
