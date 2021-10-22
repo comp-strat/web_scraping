@@ -24,7 +24,7 @@ lxml==4.6.3
 olefile==0.46
 parsel==1.6.0
 pdfminer.six==20181108
-Pillow==8.3.2
+Pillow==8.2.0
 #pkg-resources==0.0.0
 Protego==0.1.16
 pyasn1==0.4.8

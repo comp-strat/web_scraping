@@ -20,6 +20,8 @@ services:
   mongodb_container:
     container_name: mongodb_container
     image: mongo:latest
+    command: mongod --port 27000
+    restart: always
     network_mode: host
     expose:
       - 27017
@@ -27,7 +29,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: mdipass
     volumes:
-      - mongodb_data_container:/data/db
+      - /vol_b/data/mongodata_test:/data/db/
   redis:
     image: redis:latest
     network_mode: host

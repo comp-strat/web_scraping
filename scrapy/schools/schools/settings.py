@@ -102,14 +102,21 @@ AUTOTHROTTLE_DEBUG = False
 # Item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'schools.pipelines.CustomImagesPipeline': 3,
-    'schools.pipelines.CustomFilesPipeline': 4,
-    'schools.pipelines.MongoDBPipeline': 300,
+    'schools.pipelines.MongoDBImagesPipeline': 3,
+    'schools.pipelines.MongoDBFilesPipeline': 4,
+    'schools.pipelines.MongoDBTextPipeline': 300,
 }
+
+MONGODB_DB = 'schoolSpider'
+
+MONGODB_COLLECTION_IMAGES = "images"
+MONGODB_COLLECTION_FILES = "files"
+MONGODB_COLLECTION_TEXT = "text"
+
 # running locally without containers
-MONGO_URI = 'mongodb://localhost:27017' 
+MONGO_URI = 'mongodb://localhost:27000' 
 # connect to MongoDB which is running in mongodb_container.
-#MONGO_URI = 'mongodb://mongodb_container:27017'
+#MONGO_URI = 'mongodb://mongodb_container:27000'
 #MONGO_URI = 'someBadURI'
 #MONGO_URI = '10.0.2.4'
 
@@ -123,8 +130,6 @@ MONGO_USERNAME = 'admin' # could probably make a "schoolCrawler" user to use her
 
 MONGO_PASSWORD = 'mdipass' # Replace with actual password
 
-IMAGES_STORE = 'images'
-FILES_STORE = 'files'
 
 #FILES_EXPIRES = 365
 IMAGES_EXPIRES = 365
