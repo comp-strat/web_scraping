@@ -55,5 +55,14 @@ class CrawlTaskRepository():
 
     def get_task_progress(self, task_rq_id):
         job = self.get_rq_task(task_rq_id)
+        if not job: return "Error"
         print(job)
-        return 1 if job.is_finished else 0
+        return "Finished" if job.is_finished else "Ongoing"
+    
+    def kill_task (self, task_rq_id):
+        job = self.get_rq_task(task_rq_id)
+        if not job: return True
+        job.cancel()
+        print(job.get_status())
+        return job.get_status() == "CANCELED"
+        

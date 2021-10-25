@@ -19,6 +19,6 @@ pip install schools --no-index --find-links .
 
 apt install redis-server
 
-docker pull mongo && docker run --name mongodb -p 27017:27017 mongo &
+docker pull mongo && docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=mdipass -p 27017:27017 mongo &
 python3 -m rq worker crawling-tasks --path . &
 python3 schools/app.py &

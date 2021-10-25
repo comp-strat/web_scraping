@@ -72,10 +72,14 @@ class MongoDBImagesPipeline(object):
             self.grid_fs = gridfs.GridFS(self.db, collection = self.MONGODB_COLLECTION_IMAGES)
             
             links = item['image_urls']
+
             for link in links:
                 mime_type = mimetypes.guess_type(link)[0]
                 request = requests.get(link, stream=True)
-                self.grid_fs.put(request.raw, contentType=mime_type, filename = os.path.basename(link), bucketName = "images")
+                self.grid_fs.put(request.raw, contentType=mime_type,
+                    user = spider.user if hasattr(spider,"user") else None, 
+                    rq_id = spider.rq_id if hasattr(spider,"user") else None, 
+                    filename = os.path.basename(link), bucketName = "images")
        
             logging.debug(f"MongoDB: Inserted {item['image_urls']}.")
         
@@ -126,7 +130,10 @@ class MongoDBFilesPipeline(object):
             for link in links:
                 mime_type = mimetypes.guess_type(link)[0]
                 request = requests.get(link, stream=True)
-                self.grid_fs.put(request.raw, contentType=mime_type, filename = os.path.basename(link), bucketName = "files")
+                self.grid_fs.put(request.raw, contentType=mime_type, 
+                    user = spider.user if hasattr(spider,"user") else None, 
+                    rq_id = spider.rq_id if hasattr(spider,"user") else None, 
+                    filename = os.path.basename(link), bucketName = "files")
        
             logging.debug(f"MongoDB: Inserted {item['file_urls']}.")
         
