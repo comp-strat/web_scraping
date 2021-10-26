@@ -19,9 +19,9 @@ def url_to_filename(s):
 def text_collection(db,foldername, collection, rq_id):
     records = db[collection]
     for f in records.find({"rq_id":rq_id}):
-        filename = url_to_filename(f.url)+".txt"
-        with open(join(foldername,filename),"wb") as localfile:
-            localfile.write(f.text)
+        filename = url_to_filename(f["url"])+".txt"
+        with open(join(foldername,filename),"w") as localfile:
+            localfile.write(f["text"])
 
 def getzip(rq_id):
     connection = pymongo.MongoClient(

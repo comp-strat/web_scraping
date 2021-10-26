@@ -171,20 +171,22 @@ class MongoDBTextPipeline(object):
         print("CONNECTED TO MONGO DB")
         self.collection = self.db[self.MONGODB_COLLECTION_TEXT]
         
+        adapted_item = ItemAdapter(item).asdict()
+        adapted_item.update({
+                "user": spider.user if hasattr(spider,"user") else None, 
+                "rq_id": spider.rq_id if hasattr(spider,"rq_id") else None
+            })
+
         # Only store CharterItems.
         if not isinstance(item, CharterItem):
             print("Not an instance of CharterItem")
             print(item['url'])
-            self.db['otherItems'].replace_one({'url': item['url']}, ItemAdapter(item).asdict(), upsert=True)
+            self.db['otherItems'].replace_one({'url': item['url']}, adapted_item, upsert=True)
             return item
         # Finds the document with the matching url.
         query = {'url': item['url']}
         # upsert=True means insert the document if the query doesn't find a match.
-        self.collection.replace_one(
-            query,
-            ItemAdapter(item).asdict(),
-            upsert=True
-        )
+        self.collection.replace_one(query, adapted_item, upsert=True)
 #        self.db[self.collection_name].insert(dict(item))
         logging.debug(f"MongoDB: Inserted {item['url']}.")
         return item
@@ -244,18 +246,23 @@ class MongoDBPipeline(object):
         """
         print("Processing item...")
         # Only store CharterItems.
+
+        adapted_item = ItemAdapter(item).asdict()
+        adapted_item.update({
+                "user": spider.user if hasattr(spider,"user") else None, 
+                "rq_id": spider.rq_id if hasattr(spider,"rq_id") else None
+            })
+
         if not isinstance(item, CharterItem):
             print("Not an instance of CharterItem")
             print(item['url'])
-            self.db['otherItems'].replace_one({'url': item['url']}, ItemAdapter(item).asdict(), upsert=True)
+            self.db['otherItems'].replace_one({'url': item['url']}, adapted_item, upsert=True)
             return item
         # Finds the document with the matching url.
         query = {'url': item['url']}
         # upsert=True means insert the document if the query doesn't find a match.
         self.db[self.collection_name].replace_one(
-            query,
-            ItemAdapter(item).asdict(),
-            upsert=True
+            query, adapted_item, upsert=True
         )
 #        self.db[self.collection_name].insert(dict(item))
         logging.debug(f"MongoDB: Inserted {item['url']}.")
