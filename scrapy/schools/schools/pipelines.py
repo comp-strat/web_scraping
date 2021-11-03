@@ -22,75 +22,174 @@ https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.col
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 from schools.items import CharterItem
+from scrapy.exceptions import DropItem
+import os
 
 import logging
 # third party
 import pymongo
-from urllib.parse import urlparse
+import mimetypes
+import requests
+import gridfs
 
-# This is a 3rd party library used for finding the base URL.
-import tldextract
+class MongoDBImagesPipeline(object):
 
-from scrapy.pipelines.files import FilesPipeline
-from scrapy.pipelines.images import ImagesPipeline
-
-import os
-
-class CustomFilesPipeline(FilesPipeline):
+    def __init__(self, MONGO_URI, MONGODB_DB, MONGODB_COLLECTION_IMAGES, MONGO_USERNAME='admin', MONGO_PASSWORD=''):
+        self.MONGO_URI = MONGO_URI
+        self.MONGODB_DB = MONGODB_DB
+        self.MONGODB_COLLECTION_IMAGES = MONGODB_COLLECTION_IMAGES
+        self.MONGO_USERNAME = MONGO_USERNAME
+        self.MONGO_PASSWORD = MONGO_PASSWORD
     
+    @classmethod
+    def from_crawler(cls, crawler):
+        # pull in information from settings.py
+        return cls(
+            MONGO_URI=crawler.settings.get('MONGO_URI'),
+            MONGODB_DB=crawler.settings.get('MONGODB_DB'),
+            MONGODB_COLLECTION_IMAGES=crawler.settings.get('MONGODB_COLLECTION_IMAGES'),
+            MONGO_USERNAME = crawler.settings.get('MONGO_USERNAME'),
+            MONGO_PASSWORD = crawler.settings.get('MONGO_PASSWORD')
+        )
+    
+        
+    def process_item(self, item, spider):
+        valid = True
+        for data in item:
+            if not data:
+                valid = False
+                raise DropItem("Missing {0}!".format(data))
+        if valid:
+            connection = pymongo.MongoClient(
+                self.MONGO_URI,
+                username=self.MONGO_USERNAME, 
+                password=self.MONGO_PASSWORD
+            )
+            self.db = connection[self.MONGODB_DB]
+            print("CONNECTED TO MONGO DB")
+
+            #self.collection = self.db[self.MONGODB_COLLECTION_IMAGES]
+            self.grid_fs = gridfs.GridFS(self.db, collection = self.MONGODB_COLLECTION_IMAGES)
+            
+            links = item['image_urls']
+
+            for link in links:
+                mime_type = mimetypes.guess_type(link)[0]
+                request = requests.get(link, stream=True)
+                self.grid_fs.put(request.raw, contentType=mime_type,
+                    user = spider.user if hasattr(spider,"user") else None, 
+                    rq_id = spider.rq_id if hasattr(spider,"rq_id") else None, 
+                    filename = os.path.basename(link), bucketName = "images")
        
-    def file_path(self, request, response=None, info=None, *, item=None):
-        # Set file path for saving files.
-        original_url = self.get_domain(item['url'])
-        print("file paths et")
-        print(original_url)
-        print(original_url + "/" + os.path.basename(urlparse(request.url).path))
-        return original_url + "/" + os.path.basename(urlparse(request.url).path)
+            logging.debug(f"MongoDB: Inserted {item['image_urls']}.")
+        
+        return item
     
-    def get_domain(self, url):
-        """
-        Given the url, gets the top level domain using the
-
-        library.
-
-        Ex:
-        >>> get_domain('http://www.charlottesecondary.org/')
-        charlottesecondary.org
-        >>> get_domain('https://www.socratesacademy.us/our-school')
-        socratesacademy.us
-
-        """
     
-        extracted = tldextract.extract(url)
-        return f'{extracted.domain}.{extracted.suffix}'
-
-class CustomImagesPipeline(ImagesPipeline):
     
+class MongoDBFilesPipeline(object):
+
+    def __init__(self, MONGO_URI, MONGODB_DB, MONGODB_COLLECTION_FILES, MONGO_USERNAME='admin', MONGO_PASSWORD=''):
+        self.MONGO_URI = MONGO_URI
+        self.MONGODB_DB = MONGODB_DB
+        self.MONGODB_COLLECTION_FILES = MONGODB_COLLECTION_FILES
+        self.MONGO_USERNAME = MONGO_USERNAME
+        self.MONGO_PASSWORD = MONGO_PASSWORD
+    
+    @classmethod
+    def from_crawler(cls, crawler):
+        # pull in information from settings.py
+        return cls(
+            MONGO_URI=crawler.settings.get('MONGO_URI'),
+            MONGODB_DB=crawler.settings.get('MONGODB_DB'),
+            MONGODB_COLLECTION_FILES=crawler.settings.get('MONGODB_COLLECTION_FILES'),
+            MONGO_USERNAME = crawler.settings.get('MONGO_USERNAME'),
+            MONGO_PASSWORD = crawler.settings.get('MONGO_PASSWORD')
+        )
+    
+        
+    def process_item(self, item, spider):
+        valid = True
+        for data in item:
+            if not data:
+                valid = False
+                raise DropItem("Missing {0}!".format(data))
+        if valid:
+            connection = pymongo.MongoClient(
+                self.MONGO_URI,
+                username=self.MONGO_USERNAME, 
+                password=self.MONGO_PASSWORD
+            )
+            self.db = connection[self.MONGODB_DB]
+            print("CONNECTED TO MONGO DB")
+            #self.collection = self.db[self.MONGODB_COLLECTION_FILES]
+
+            self.grid_fs = gridfs.GridFS(self.db, collection = self.MONGODB_COLLECTION_FILES)
+            
+            links = item['file_urls']
+            for link in links:
+                mime_type = mimetypes.guess_type(link)[0]
+                request = requests.get(link, stream=True)
+                self.grid_fs.put(request.raw, contentType=mime_type, 
+                    user = spider.user if hasattr(spider,"user") else None, 
+                    rq_id = spider.rq_id if hasattr(spider,"rq_id") else None, 
+                    filename = os.path.basename(link), bucketName = "files")
        
-    def file_path(self, request, response=None, info=None, *, item=None):  
-        # Set file path for saving images.
-        original_url = self.get_domain(item['url'])
-        print("Original Url (file_path): " + str(original_url)) 
-        #name taken from base url
-        return original_url + "/" + os.path.basename(urlparse(request.url).path)
+            logging.debug(f"MongoDB: Inserted {item['file_urls']}.")
+        
+        return item
     
-    def get_domain(self, url):
-        """
-        Given the url, gets the top level domain using the
 
-        library.
+class MongoDBTextPipeline(object):
 
-        Ex:
-        >>> get_domain('http://www.charlottesecondary.org/')
-        charlottesecondary.org
-        >>> get_domain('https://www.socratesacademy.us/our-school')
-        socratesacademy.us
-
-        """
+    def __init__(self, MONGO_URI, MONGODB_DB, MONGODB_COLLECTION_TEXT, MONGO_USERNAME='admin', MONGO_PASSWORD=''):
+        self.MONGO_URI = MONGO_URI
+        self.MONGODB_DB = MONGODB_DB
+        self.MONGODB_COLLECTION_TEXT = MONGODB_COLLECTION_TEXT
+        self.MONGO_USERNAME = MONGO_USERNAME
+        self.MONGO_PASSWORD = MONGO_PASSWORD
     
-        extracted = tldextract.extract(url)
-        return f'{extracted.domain}.{extracted.suffix}'
+    @classmethod
+    def from_crawler(cls, crawler):
+        # pull in information from settings.py
+        return cls(
+            MONGO_URI=crawler.settings.get('MONGO_URI'),
+            MONGODB_DB=crawler.settings.get('MONGODB_DB'),
+            MONGODB_COLLECTION_TEXT=crawler.settings.get('MONGODB_COLLECTION_TEXT'),
+            MONGO_USERNAME = crawler.settings.get('MONGO_USERNAME'),
+            MONGO_PASSWORD = crawler.settings.get('MONGO_PASSWORD')
+        )
+            
+    def process_item(self, item, spider):
+        print("Processing item...")
+        self.connection = pymongo.MongoClient(
+            self.MONGO_URI,
+            username=self.MONGO_USERNAME, 
+            password=self.MONGO_PASSWORD
+        )
+        self.db = self.connection[self.MONGODB_DB]
+        print("CONNECTED TO MONGO DB")
+        self.collection = self.db[self.MONGODB_COLLECTION_TEXT]
+        
+        adapted_item = ItemAdapter(item).asdict()
+        adapted_item.update({
+                "user": spider.user if hasattr(spider,"user") else None, 
+                "rq_id": spider.rq_id if hasattr(spider,"rq_id") else None
+            })
 
+        # Only store CharterItems.
+        if not isinstance(item, CharterItem):
+            print("Not an instance of CharterItem")
+            print(item['url'])
+            self.db['otherItems'].replace_one({'url': item['url']}, adapted_item, upsert=True)
+            return item
+        # Finds the document with the matching url.
+        query = {'url': item['url']}
+        # upsert=True means insert the document if the query doesn't find a match.
+        self.collection.replace_one(query, adapted_item, upsert=True)
+#        self.db[self.collection_name].insert(dict(item))
+        logging.debug(f"MongoDB: Inserted {item['url']}.")
+        return item
     
 # TODO: add error handling
 
@@ -147,18 +246,23 @@ class MongoDBPipeline(object):
         """
         print("Processing item...")
         # Only store CharterItems.
+
+        adapted_item = ItemAdapter(item).asdict()
+        adapted_item.update({
+                "user": spider.user if hasattr(spider,"user") else None, 
+                "rq_id": spider.rq_id if hasattr(spider,"rq_id") else None
+            })
+
         if not isinstance(item, CharterItem):
             print("Not an instance of CharterItem")
             print(item['url'])
-            self.db['otherItems'].replace_one({'url': item['url']}, ItemAdapter(item).asdict(), upsert=True)
+            self.db['otherItems'].replace_one({'url': item['url']}, adapted_item, upsert=True)
             return item
         # Finds the document with the matching url.
         query = {'url': item['url']}
         # upsert=True means insert the document if the query doesn't find a match.
         self.db[self.collection_name].replace_one(
-            query,
-            ItemAdapter(item).asdict(),
-            upsert=True
+            query, adapted_item, upsert=True
         )
 #        self.db[self.collection_name].insert(dict(item))
         logging.debug(f"MongoDB: Inserted {item['url']}.")
