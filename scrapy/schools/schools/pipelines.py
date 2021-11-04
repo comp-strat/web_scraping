@@ -72,14 +72,10 @@ class MongoDBImagesPipeline(object):
             self.grid_fs = gridfs.GridFS(self.db, collection = self.MONGODB_COLLECTION_IMAGES)
             
             links = item['image_urls']
-
             for link in links:
                 mime_type = mimetypes.guess_type(link)[0]
                 request = requests.get(link, stream=True)
-                self.grid_fs.put(request.raw, contentType=mime_type,
-                    user = spider.user if hasattr(spider,"user") else None, 
-                    rq_id = spider.rq_id if hasattr(spider,"rq_id") else None, 
-                    filename = os.path.basename(link), bucketName = "images")
+                self.grid_fs.put(request.raw, contentType=mime_type, filename = os.path.basename(link), bucketName = "images")
        
             logging.debug(f"MongoDB: Inserted {item['image_urls']}.")
         
@@ -130,10 +126,7 @@ class MongoDBFilesPipeline(object):
             for link in links:
                 mime_type = mimetypes.guess_type(link)[0]
                 request = requests.get(link, stream=True)
-                self.grid_fs.put(request.raw, contentType=mime_type, 
-                    user = spider.user if hasattr(spider,"user") else None, 
-                    rq_id = spider.rq_id if hasattr(spider,"rq_id") else None, 
-                    filename = os.path.basename(link), bucketName = "files")
+                self.grid_fs.put(request.raw, contentType=mime_type, filename = os.path.basename(link), bucketName = "files")
        
             logging.debug(f"MongoDB: Inserted {item['file_urls']}.")
         
@@ -171,22 +164,20 @@ class MongoDBTextPipeline(object):
         print("CONNECTED TO MONGO DB")
         self.collection = self.db[self.MONGODB_COLLECTION_TEXT]
         
-        adapted_item = ItemAdapter(item).asdict()
-        adapted_item.update({
-                "user": spider.user if hasattr(spider,"user") else None, 
-                "rq_id": spider.rq_id if hasattr(spider,"rq_id") else None
-            })
-
         # Only store CharterItems.
         if not isinstance(item, CharterItem):
             print("Not an instance of CharterItem")
             print(item['url'])
-            self.db['otherItems'].replace_one({'url': item['url']}, adapted_item, upsert=True)
+            self.db['otherItems'].replace_one({'url': item['url']}, ItemAdapter(item).asdict(), upsert=True)
             return item
         # Finds the document with the matching url.
         query = {'url': item['url']}
         # upsert=True means insert the document if the query doesn't find a match.
-        self.collection.replace_one(query, adapted_item, upsert=True)
+        self.collection.replace_one(
+            query,
+            ItemAdapter(item).asdict(),
+            upsert=True
+        )
 #        self.db[self.collection_name].insert(dict(item))
         logging.debug(f"MongoDB: Inserted {item['url']}.")
         return item
@@ -246,23 +237,18 @@ class MongoDBPipeline(object):
         """
         print("Processing item...")
         # Only store CharterItems.
-
-        adapted_item = ItemAdapter(item).asdict()
-        adapted_item.update({
-                "user": spider.user if hasattr(spider,"user") else None, 
-                "rq_id": spider.rq_id if hasattr(spider,"rq_id") else None
-            })
-
         if not isinstance(item, CharterItem):
             print("Not an instance of CharterItem")
             print(item['url'])
-            self.db['otherItems'].replace_one({'url': item['url']}, adapted_item, upsert=True)
+            self.db['otherItems'].replace_one({'url': item['url']}, ItemAdapter(item).asdict(), upsert=True)
             return item
         # Finds the document with the matching url.
         query = {'url': item['url']}
         # upsert=True means insert the document if the query doesn't find a match.
         self.db[self.collection_name].replace_one(
-            query, adapted_item, upsert=True
+            query,
+            ItemAdapter(item).asdict(),
+            upsert=True
         )
 #        self.db[self.collection_name].insert(dict(item))
         logging.debug(f"MongoDB: Inserted {item['url']}.")
