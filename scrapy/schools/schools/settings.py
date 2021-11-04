@@ -115,7 +115,7 @@ MONGODB_COLLECTION_FILES = "files"
 MONGODB_COLLECTION_TEXT = "text"
 
 # running locally without containers
-MONGO_URI = 'mongodb://localhost:27017' 
+MONGO_URI = 'mongodb://localhost:27000' 
 # connect to MongoDB which is running in mongodb_container.
 #MONGO_URI = 'mongodb://mongodb_container:27000'
 #MONGO_URI = 'someBadURI'

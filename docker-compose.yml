@@ -24,7 +24,7 @@ services:
     restart: always
     network_mode: host
     expose:
-      - 27017
+      - 27000
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: mdipass
