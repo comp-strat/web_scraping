@@ -8,23 +8,19 @@ services:
     depends_on:
       - mongodb_container
       - redis
-    expose:
+    ports:
       - 5000
     network_mode: host
     volumes:
       - crawler_api:/code/schools/spiders
-    #links:
-      #  - "mongodb_container:mongodb_container" # Allow connection to mongodb via the container name
   # credit: https://dev.to/sonyarianto/how-to-spin-mongodb-server-with-docker-and-docker-compose-2lef
   # note there is no MongoDB authentication currently.
   mongodb_container:
     container_name: mongodb_container
     image: mongo:latest
-    command: mongod --port 27000
     restart: always
-    network_mode: host
-    expose:
-      - 27000
+    ports:
+      - "27000:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: mdipass
@@ -33,15 +29,14 @@ services:
   redis:
     image: redis:latest
     network_mode: host
-    expose:
-      - 6379
+    ports:
+      - "6379"
         #    command: rq worker crawling-tasks
   redis_worker:
     build: scrapy/schools
     depends_on:
       - mongodb_container
       - redis
-    network_mode: host
     command: rq worker crawling-tasks --path /code/schools/
     volumes:
       - crawler_api:/code/schools/spiders
