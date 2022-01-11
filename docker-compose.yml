@@ -7,10 +7,11 @@ services:
     build: scrapy/schools # Build the Scrapy Dockerfile.
     depends_on:
       - mongodb_container
-      - redis
-    expose:
+    logging:
+      options:
+        max-size: 100m
+    ports:
       - 5000
-    network_mode: host
     volumes:
       - crawler_api:/code/schools/spiders
     #links:
@@ -20,11 +21,12 @@ services:
   mongodb_container:
     container_name: mongodb_container
     image: mongo:latest
-    command: mongod --port 27000
     restart: always
-    network_mode: host
-    expose:
-      - 27017
+    logging:
+      options:
+        max-size: 100m
+    ports:
+      - "27000:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: mdipass
@@ -32,21 +34,18 @@ services:
       - /vol_b/data/mongodata_test:/data/db/
   redis:
     image: redis:latest
-    network_mode: host
-    expose:
-      - 6379
+    ports:
+      - "7480:6379"
         #    command: rq worker crawling-tasks
   redis_worker:
     build: scrapy/schools
     depends_on:
       - mongodb_container
       - redis
-    network_mode: host
     command: rq worker crawling-tasks --path /code/schools/
     volumes:
       - crawler_api:/code/schools/spiders
 
-
 volumes:
-  mongodb_data_container:
+  mongo_data_container:
   crawler_api:

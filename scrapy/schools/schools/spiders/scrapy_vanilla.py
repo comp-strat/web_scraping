@@ -63,7 +63,7 @@ from scrapy.http import Request
 import sys
 sys.path.append(".")
 
-from schools.items import CharterItem
+from items import CharterItem
 
 # The following are required for parsing File text
 
