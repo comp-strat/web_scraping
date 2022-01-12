@@ -9,7 +9,7 @@ services:
       - mongodb_container
     logging:
       options:
-        max-size: 100m
+        max-size: 100m   
     ports:
       - 5000
     volumes:
@@ -24,14 +24,14 @@ services:
     restart: always
     logging:
       options:
-        max-size: 100m
+        max-size: 100m  ## limit the size of logging files during scraping
     ports:
-      - "27000:27017"
+      - "27000:27017"  ## map the port 27000 to mongodb's default port
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: mdipass
     volumes:
-      - /vol_b/data/mongodata_test:/data/db/
+      - /vol_b/data/mongodata:/data/db/
   redis:
     image: redis:latest
     ports:
@@ -45,7 +45,9 @@ services:
     command: rq worker crawling-tasks --path /code/schools/
     volumes:
       - crawler_api:/code/schools/spiders
-
+  
 volumes:
   mongo_data_container:
   crawler_api:
+  
+

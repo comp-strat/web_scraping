@@ -53,10 +53,10 @@ ROBOTSTXT_OBEY = False
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
     'scrapy.spidermiddlewares.depth.DepthMiddleware': 100, 'scrapy.spidermiddlewares.httperror.HttpErrorMiddleware': 200, 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware': 300
-
+  
 }
 
-# Configure depth
+# Configure depth 
 DEPTH_LIMIT = 5
 
 
@@ -102,9 +102,9 @@ AUTOTHROTTLE_DEBUG = False
 # Item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'schools.pipelines.MongoDBImagesPipeline': 3,
+    #'schools.pipelines.MongoDBImagesPipeline': 3,
     'schools.pipelines.MongoDBFilesPipeline': 4,
-    'schools.pipelines.MongoDBTextPipeline': 300
+    #'schools.pipelines.MongoDBTextPipeline': 300,
 }
 
 MONGODB_DB = 'schoolSpider'
@@ -114,7 +114,7 @@ MONGODB_COLLECTION_FILES = "files"
 MONGODB_COLLECTION_TEXT = "text"
 
 # running locally without containers
-MONGO_URI = 'mongodb://localhost:27000'
+MONGO_URI = 'mongodb://localhost:27000' 
 # connect to MongoDB which is running in mongodb_container.
 #MONGO_URI = 'mongodb://mongodb_container:27000'
 #MONGO_URI = 'someBadURI'
@@ -136,3 +136,4 @@ IMAGES_EXPIRES = 365
 MEDIA_ALLOW_REDIRECTS = True
 IMAGES_MIN_HEIGHT = 150
 IMAGES_MIN_WIDTH = 150
+
