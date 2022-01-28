@@ -138,7 +138,7 @@ You will need at least 2 screens/terminals for this, although there may be a way
 
 1. In either screen, start your Mongo database. This can be done easily with Docker:
 ```bash
-docker pull mongo && docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=someSecretPassword -p 27017:27017 mongo
+docker pull mongo && docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME=admin -r MONGO_INITDB_ROOT_PASSWORD=someSecretPassword -p 27017:27017 mongo
 ```
 2. In both screens, start a virtual env and install your requirements (see Method 1)
 
@@ -152,7 +152,7 @@ python app.py
 ```
 5. Requests for crawling tasks can be sent to the Flask server with a POST command. Currently only .csv files are accepted, but .tsv files will be available soon.
 ```bash
-curl -X POST -d 'file=@path/to/your/csv/file.csv' localhost:5000/job
+curl -X POST -d 'file=@path/to/your/csv/file.csv' localhost:5000/crawl-csv
 ```
 6. The returned object will have the status of the request (200 for ok, 400 for a bad input, such as a missing file), and the ID of the task being run. This ID can be queried from the Mongo database to check the status of the running task (TODO: status update when job is finished). These tasks are stored in the "task\_list" database in Mongo.
 
@@ -166,7 +166,7 @@ curl -X POST -d 'file=@path/to/your/csv/file.csv' localhost:5000/job
 
 3. Run "docker-compose up --build" (optional flags: " --force-recreate --renew-anon-volumes" if you have old docker volumes -- this can cause "authentication errors" due to Mongo not updating your credentials for the db)
 
-4. Once it's running, run "curl -X POST -H 'Content-Type: multipart/form-data' -F 'file=@./scrapy/schools/schools/spiders/test_urls.csv' localhost:5000/job"
+4. Once it's running, run "curl -X POST -H 'Content-Type: multipart/form-data' -F 'file=@./scrapy/schools/schools/spiders/test_urls.csv' localhost:5000/crawl-csv"
 
 5. From there, you can check the status (work in progress -- it says it's done when it's still running): "curl localhost:5000/task?task_id=" + the "job_id" from the last CURL command
 

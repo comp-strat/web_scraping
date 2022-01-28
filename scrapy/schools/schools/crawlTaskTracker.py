@@ -1,7 +1,6 @@
 import redis
 import rq
 import pymongo
-from rq.command import send_stop_job_command
 
 class CrawlTask():
     def __init__(self, rq_id, is_complete=False, user_id=None):
@@ -49,32 +48,12 @@ class CrawlTaskRepository():
 
     def get_rq_task(self, task_rq_id):
         try:
-            conn = redis.Redis.from_url('redis://')
-            rq_job = rq.job.Job.fetch(task_rq_id, connection = conn)
+            rq_job = rq.job.Job.fetch(task_rq_id, connection = redis.Redis.from_url('redis://'))
         except (redis.exceptions.RedisError, rq.exceptions.NoSuchJobError):
-            return (None, None)
-        return (rq_job,conn)
+            return None
+        return rq_job
 
     def get_task_progress(self, task_rq_id):
-        job, conn = self.get_rq_task(task_rq_id)
-        if not job: return "Error"
+        job = self.get_rq_task(task_rq_id)
         print(job)
-        if job.is_failed:
-            return "Failed"
-        if job.is_stopped or job.is_deferred:
-            return "Cancelled"
-        if job.is_finished:
-            return "Finished"
-        if job.is_started or job.is_queued:
-            return "Ongoing"
-        return "Error"
-    
-    def kill_task (self, task_rq_id):
-        job,conn = self.get_rq_task(task_rq_id)
-        if not job: return True
-        job.cancel()
-        print(job.get_status())
-        if not job.is_started: return True
-        send_stop_job_command(conn,task_rq_id)
-        return True
-        
+        return 1 if job.is_finished else 0

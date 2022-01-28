@@ -104,8 +104,7 @@ AUTOTHROTTLE_DEBUG = False
 ITEM_PIPELINES = {
     'schools.pipelines.MongoDBImagesPipeline': 3,
     'schools.pipelines.MongoDBFilesPipeline': 4,
-    'schools.pipelines.MongoDBTextPipeline': 300,
-    'schools.pipelines.MongoDBPipeline': 300
+    'schools.pipelines.MongoDBTextPipeline': 300
 }
 
 MONGODB_DB = 'schoolSpider'
