@@ -1,12 +1,12 @@
 # Web-Scraping with Scrapy and multiprocessing
-This repo provides a fast, scalable web-crawling pipeline that uses Python Scrapy spiders to collect and parse text, images, and files (with .pdf, .doc, and .docx extensions) into a MongoDB database. Our spiders use BeautifulSoup and textract (for file text extraction). They also use scrapy's LinkExtractor to recursively gather website links (to a given depth)--meaning that they crawl not just the a given input URL, but also those links it finds that start with that. For instance, if you feed it `site.com`, it will scrape `site.com/page`-- but not 'yelp.com' or other places outside the given root domain. 
-
-This repo uses Docker to split a list of input URLs into 100-line chunks, then runs each chunk in parallel using Python's multiprocessing package. It's a faster and more advanced application of the code in [these more beginner-friendly scraping applications](https://github.com/jhaber-zz/web_scraping). That repo also has lots of utilities, intro scripts, and other spider code to explore.
+This repo provides a fast, scalable web-crawling pipeline that uses Python Scrapy spiders to collect and parse text, images, and files (with .pdf, .doc, and .docx extensions) into a MongoDB database. It uses Docker to split a list of input URLs into 100-line chunks, then runs each chunk in parallel using Python's multiprocessing package. It's a faster and more advanced application of the code in [these more beginner-friendly scraping applications](https://github.com/jhaber-zz/web_scraping). That repo also has lots of utilities, intro scripts, and other spider code to explore.
 
 The core web scraping script is `schools/schools/spiders/scrapy_vanilla.py` and the main settings are in `schools/schools/settings.py`. See below for usage notes and running instructions.
 
 
 ## Usage notes
+Our spiders use scrapy's LinkExtractor to recursively gather website links (to a given depth)--meaning that they crawl not just the a given input URL, but also those links it finds that start with that. For instance, if you feed it `site.com`, it will scrape `site.com/page`-- but not 'yelp.com' or other places outside the given root domain. Our spiders also use BeautifulSoup and textract (for file text extraction).
+
 The default setup loads URLs to scrape from `schools/schools/spiders/test_urls.tsv`. The simplest way to feed the spider new URLs is by updating this file. However, it's simple to redirect the spider to a new file--like the full URL lists of 6K+ charter schools from 2019 (in `schools/schools/spiders/charter_schools_URLs_2019.tsv`) or 100K public schools from 2021 (in `schools/schools/spiders/public_schools_URLs_2021.tsv`). 
 
 You'll get best results if you deploy the spider from within a scrapy project, like in our `schools/` folder. We've fine-tuned the `items.py`, `middlewares.py`, `settings.py`, and `pipelines.py` configurations (all under `schools/schools/`), and `scrapy_vanilla.py` draws on these.
@@ -14,7 +14,7 @@ You'll get best results if you deploy the spider from within a scrapy project, l
 
 ## Installation and settings
 
-If you haven't already, install [Docker](https://docs.docker.com/get-docker/) and [MongoDB](https://docs.mongodb.com/manual/installation/).
+If you haven't already, install [Docker](https://docs.docker.com/get-docker/), [MongoDB](https://docs.mongodb.com/manual/installation/), and [Redis](https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-redis-on-ubuntu-18-04).
 
 We suggest working within a virtual environment to avoid version conflicts. To do so, run the following commands from the main floor of this repository:
 ```bash
