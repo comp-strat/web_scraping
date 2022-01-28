@@ -102,8 +102,8 @@ AUTOTHROTTLE_DEBUG = False
 # Item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    #'schools.pipelines.MongoDBImagesPipeline': 3,
-    #'schools.pipelines.MongoDBFilesPipeline': 4,
+    'schools.pipelines.MongoDBImagesPipeline': 3,
+    'schools.pipelines.MongoDBFilesPipeline': 4,
     'schools.pipelines.MongoDBTextPipeline': 300
 }
 
