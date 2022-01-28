@@ -47,7 +47,6 @@ TODO
 """
 
 # make sure the dependencies are installed
-import rq
 import tldextract
 import regex # 3rd party library supports recursion and unicode handling
 
@@ -60,10 +59,7 @@ from scrapy.spiders import Rule, CrawlSpider
 from scrapy.exceptions import NotSupported
 from scrapy.http import Request
 
-import sys
-sys.path.append(".")
-
-from schools.items import CharterItem
+from items import CharterItem
 
 # The following are required for parsing File text
 
@@ -109,7 +105,7 @@ class CharterSchoolSpider(CrawlSpider):
             callback="parse_items"
         )
     ]
-    def __init__(self, school_list=None, rq_id=None, user=None, *args, **kwargs):
+    def __init__(self, school_list=None, *args, **kwargs):
         """
         Overrides default constructor to set custom
         instance attributes.
@@ -136,8 +132,6 @@ class CharterSchoolSpider(CrawlSpider):
         """
         super(CharterSchoolSpider, self).__init__(*args, **kwargs)
         self.start_urls = []
-        self.rq_id = rq_id
-        self.user = user
         self.allowed_domains = []
         self.rules = (Rule(CustomLinkExtractor(allow_domains = self.allowed_domains), follow=True, callback="parse_items"),)
         self.domain_to_id = {}
