@@ -63,6 +63,6 @@ venv.bak/
 .ropeproject
 /site
 .mypy_cache/
-./scrapy/schools/schools/spiders/split-urls/
-./scrapy/schools/images/
-./scrapy/schools/files/
+./schools/schools/spiders/split-urls/
+./schools/images/
+./schools/files/
