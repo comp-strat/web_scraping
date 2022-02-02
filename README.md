@@ -90,9 +90,9 @@ use admin # authenticate as admin
 db.auth("admin", "mdipass") # replace these with your own username and PW
 
 # commands to query databases
-run show dbs # show databases to explore
+show dbs # show databases to explore
 use databaseName # select a database to check, e.g., schoolSpider
-db.outputItems.findOne() # query one doc from DB, shows _id (guide)
+db.outputItems.findOne() # query one doc from `outputItems` collection of DB (collection names may vary), shows _id (guide)
 db.outputItems.find() # show all docs in DB, shows _id
 db.outputItems.count() # count docs in DB
 
@@ -101,9 +101,9 @@ db.outputItems.findOneAndUpdate("_id":someid)
 db.outputItems.findById("_id":someid) # get all docs with id
 
 # Commands to dump and restore data
-mongodump --host=ourhostip --port=27017 --username=admin --password="ourPassword" --out=/path/to/target/dir # dump a DB backup to remote (docs)
+mongodump --host=ourhostip --port=27000 --username=admin --password="ourPassword" --out=/path/to/target/dir # dump a DB backup to remote (docs)
 docker cp mongodb:/vol_b/data/ /path/to/dir/ # copy data from mongodb container to disk
-mongorestore --port=27017 --username=admin --password="ourPassword" dump/ # restore from mongo dump to container (docs)
+mongorestore --port=27000 --username=admin --password="ourPassword" dump/ # restore from mongo dump to container (docs)
 ```
 
 CAUTION: We often find big crawl jobs quickly add a lot of data to container files in subfolders of `/var/lib/docker/overlay2/` and/or log files in subfolders of `/var/lib/docker/containers/`. We continue to resolve these kinds of storage obstacles. **Keep an eye on your disk storage** and delete things as necessary.
