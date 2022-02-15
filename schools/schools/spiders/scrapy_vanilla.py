@@ -162,6 +162,12 @@ class CharterSchoolSpider(CrawlSpider):
         if 'text/html' in str(response.headers['Content-Type']):
             for href in response.xpath('//a/@href').getall():
                 yield Request(response.urljoin(href), self.parse_items)
+            yield from response.follow_all(
+                css="a[href]" \
+                    + ":not([href^='javascript:'])" \
+                    + ":not([href^='tel:'])" \
+                    + ":not([href^='mailto:'])",
+                callback=self.parse_items)
 
     def init_from_school_list(self, school_list):
         """
