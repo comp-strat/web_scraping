@@ -38,7 +38,7 @@ services:
       - "7480:6379"
         #    command: rq worker crawling-tasks
   redis_worker:
-    build: scrapy/schools
+    build: schools
     depends_on:
       - mongodb_container
       - redis
