@@ -4,7 +4,7 @@
 version: '3.5'
 services:
   crawler_api:
-    build: scrapy/schools # Build the Scrapy Dockerfile.
+    build: schools # Build the Scrapy Dockerfile.
     depends_on:
       - mongodb_container
     logging:
