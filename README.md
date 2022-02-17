@@ -107,3 +107,63 @@ mongorestore --port=27000 --username=admin --password="ourPassword" dump/ # rest
 ```
 
 CAUTION: We often find big crawl jobs quickly add a lot of data to container files in subfolders of `/var/lib/docker/overlay2/` and/or log files in subfolders of `/var/lib/docker/containers/`. We continue to resolve these kinds of storage obstacles. **Keep an eye on your disk storage** and delete things as necessary.
+
+## Export data from MongoDB container to local virtual machine
+
+After the crawling prcoess, data will be saved in the MongoDB container of Docker. To export it to local virtual machine:
+
+```bash
+# use docker command with mongoexport
+docker exec -it mongodb_container mongoexport --authenticationDatabase admin --username admin --password mdipass --db schoolSpider --collection text --out ./text.json
+
+# go to container bash
+docker exec -it mongodb_container bash
+
+# move files from container to local virtual machine
+docker cp mongodb_container:text.json /vol_c/data/crawled_output_2022
+```
+
+## Save data from virtual machine to google drive 
+
+We can use rclone to transfer data from virtual machine to google drive with the command:
+
+```bash
+rclone copy text.json output_drive:
+```
+
+If you haven't installed rclone, please follow the whole process below.
+
+```bash
+# install rclone on the virtual machine
+curl https://rclone.org/install.sh | sudo bash
+```
+
+rclone works around the concept of remotes. A remote is … a logical name for a remote storage. In our case, we will be syncing with a google drive location called “output_drive”.
+
+```bash
+# configure the remote location
+rclone config
+```
+
+In the configuration page, 
+
+- choose `New Remote` and give it a name like `output_drive`
+- choose the number for `Google Drive`
+- skip `client_id` & `client_secret`
+- choose `1` Full Access
+- enter the root folder of that remote location: get the id from google drive and cut & paste the folder ID in the configuration screen
+- don’t enter a “service_account”, we’ll use the interactive login screen.
+- don’t enter Advanced Configuration
+- Use auto config? -No
+- There will be an url shown on the terminal. Pase the url in your browser and follow the usual Google Drive authorization flow 
+- paste the code from Google Drive authorization in the configurator
+- Team Drive? -No
+- Finally choose `Yes this is OK`
+
+After creating a rclone remote, use it to transfer data from virtual machine to google drive
+
+```bash
+rclone copy text.json output_drive:
+```
+
+For detailed reference: [rclone](https://medium.com/@houlahop/rclone-how-to-copy-files-from-a-servers-filesystem-to-google-drive-aaf21c615c5d)
