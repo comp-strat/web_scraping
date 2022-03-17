@@ -9,7 +9,7 @@ services:
       - mongodb_container
     logging:
       options:
-        max-size: 100m   
+        max-size: "100m"   
     ports:
       - 5000
     volumes:
@@ -24,7 +24,7 @@ services:
     restart: always
     logging:
       options:
-        max-size: 100m  ## limit the size of logging files during scraping
+        max-size: "100m"  ## limit the size of logging files during scraping
     ports:
       - "27000:27017"  ## map the port 27000 to mongodb's default port
     environment:
@@ -37,11 +37,17 @@ services:
     ports:
       - "7480:6379"
         #    command: rq worker crawling-tasks
+    logging:
+      options:
+        max-size: "100m"  
   redis_worker:
     build: scrapy/schools
     depends_on:
       - mongodb_container
       - redis
+    logging:
+      options:
+        max-size: "100m"  
     command: rq worker crawling-tasks --path /code/schools/
     volumes:
       - crawler_api:/code/schools/spiders

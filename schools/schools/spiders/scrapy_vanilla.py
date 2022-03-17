@@ -153,10 +153,10 @@ class CharterSchoolSpider(CrawlSpider):
         print("Domain Name: ", domain)
         print("Full URL: ", response.url)
         print("Depth: ", item['depth'])
-        item['image_urls'] = self.collect_image_URLs(response)
+#         item['image_urls'] = self.collect_image_URLs(response)
         
-        item['file_urls'], item['file_text'] = self.collect_file_URLs(domain, item, response)
-        print(item['file_urls'])
+#         item['file_urls'], item['file_text'] = self.collect_file_URLs(domain, item, response)
+#         print(item['file_urls'])
         yield item
         # Will this be recursive for all of eternity?
         if 'text/html' in str(response.headers['Content-Type']):
@@ -298,151 +298,151 @@ class CharterSchoolSpider(CrawlSpider):
         print("Text found and filtered successfully!")
         return filtered_text.strip()
 
-    def collect_image_URLs(self, response):
-        """
-        Collects and returns the image URLs found on a given webpage
-        to store in the Item for downloading.
-        """
-        image_urls = []
-        if 'text/html' in str(response.headers['Content-Type']):
-            extracted_urls = response.xpath('//img/@src').extract()
-        else:
-            extracted_urls = []
-            print("No HTML to search for images here")
-        for image_url in extracted_urls:
-            # make each image_url into a readable URL and add to image_urls
-            image_urls.append(response.urljoin(image_url))
-        return image_urls
+#     def collect_image_URLs(self, response):
+#         """
+#         Collects and returns the image URLs found on a given webpage
+#         to store in the Item for downloading.
+#         """
+#         image_urls = []
+#         if 'text/html' in str(response.headers['Content-Type']):
+#             extracted_urls = response.xpath('//img/@src').extract()
+#         else:
+#             extracted_urls = []
+#             print("No HTML to search for images here")
+#         for image_url in extracted_urls:
+#             # make each image_url into a readable URL and add to image_urls
+#             image_urls.append(response.urljoin(image_url))
+#         return image_urls
     
-    def collect_file_URLs(self, domain, item, response):
-        """
-        Collects and returns the file URLs found on a given webpage
-        to store in the Item for downloading. 
+#     def collect_file_URLs(self, domain, item, response):
+#         """
+#         Collects and returns the file URLs found on a given webpage
+#         to store in the Item for downloading. 
         
-        Additionally, parses the file for text and appends to a separate text file.
-        """
-        file_urls = []
-        selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
-        if 'text/html' in str(response.headers['Content-Type']):
-            extracted_links = response.css(selector).extract()
-            print("Reading response HTML")
-        else:
-            print("No Response HTML. Domain is: " + str(domain) + " \nand URL is: " + str(response.url))
-            extracted_links = []
-            # If the url is not part of the domain being scraped ("something.com/this.pdf" vs "someother.org/"), don't include it
-            if not response.url.startswith('/') and domain not in response.url:
-                extracted_links = []
-            elif 'application/pdf' in str(response.headers['Content-Type']):
-                if response.url.endswith('/'):
-                    file_url = response.url[:-1] + '.pdf'
-                else:
-                    file_url = response.url + '.pdf'
-                extracted_links.append(file_url)
-            elif 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' in str(response.headers['Content-Type']):
-                if response.url.endswith('/'):
-                    file_url = response.url[:-1] + '.docx'
-                else:
-                    file_url = response.url + '.docx'
-                extracted_links.append(file_url)
-            elif 'application/msword' in str(response.headers['Content-Type']):
-                if response.url.endswith('/'):
-                    file_url = response.url[:-1] + '.doc'
-                else:
-                    file_url = response.url + '.doc'
-                extracted_links.append(file_url)
-#        print("Cannot extract file. Domain is: " + str(domain))
-        print("Content-Type Header: " + str(response.headers['Content-Type']))
-#        print("\n\n\n\nHeaders: " + str(response.headers.keys()) + "\n\n\n\n")
-        print("PDF FOUND", extracted_links)
+#         Additionally, parses the file for text and appends to a separate text file.
+#         """
+#         file_urls = []
+#         selector = 'a[href$=".pdf"]::attr(href), a[href$=".doc"]::attr(href), a[href$=".docx"]::attr(href)'
+#         if 'text/html' in str(response.headers['Content-Type']):
+#             extracted_links = response.css(selector).extract()
+#             print("Reading response HTML")
+#         else:
+#             print("No Response HTML. Domain is: " + str(domain) + " \nand URL is: " + str(response.url))
+#             extracted_links = []
+#             # If the url is not part of the domain being scraped ("something.com/this.pdf" vs "someother.org/"), don't include it
+#             if not response.url.startswith('/') and domain not in response.url:
+#                 extracted_links = []
+#             elif 'application/pdf' in str(response.headers['Content-Type']):
+#                 if response.url.endswith('/'):
+#                     file_url = response.url[:-1] + '.pdf'
+#                 else:
+#                     file_url = response.url + '.pdf'
+#                 extracted_links.append(file_url)
+#             elif 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' in str(response.headers['Content-Type']):
+#                 if response.url.endswith('/'):
+#                     file_url = response.url[:-1] + '.docx'
+#                 else:
+#                     file_url = response.url + '.docx'
+#                 extracted_links.append(file_url)
+#             elif 'application/msword' in str(response.headers['Content-Type']):
+#                 if response.url.endswith('/'):
+#                     file_url = response.url[:-1] + '.doc'
+#                 else:
+#                     file_url = response.url + '.doc'
+#                 extracted_links.append(file_url)
+# #        print("Cannot extract file. Domain is: " + str(domain))
+#         print("Content-Type Header: " + str(response.headers['Content-Type']))
+# #        print("\n\n\n\nHeaders: " + str(response.headers.keys()) + "\n\n\n\n")
+#         print("PDF FOUND", extracted_links)
         
-        # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
-        file_text = []
-        for href in extracted_links:
-            # Check if href is complete.
-            if "http" not in href:
-                href = "http://" + domain + href
-            # Add file URL to pipeline
-            file_urls += [href]
+#         # iterate over list of links with .pdf/.doc/.docx in them and appends urls for downloading
+#         file_text = []
+#         for href in extracted_links:
+#             # Check if href is complete.
+#             if "http" not in href:
+#                 href = "http://" + domain + href
+#             # Add file URL to pipeline
+#             file_urls += [href]
             
-            # Parse file text and it to list of file texts
-            try:
-                file_text += [self.parse_file(href, item['url'])]
-            except UnicodeDecodeError:
-                print("Error parsing file: " + str(href) + " -- Unsupported Unicode Character")
+#             # Parse file text and it to list of file texts
+#             try:
+#                 file_text += [self.parse_file(href, item['url'])]
+#             except UnicodeDecodeError:
+#                 print("Error parsing file: " + str(href) + " -- Unsupported Unicode Character")
             
-        return file_urls, file_text
+#         return file_urls, file_text
     
-    def parse_file(self, href, parent_url):
-        """
-        Given the file's url and its parent url, 
-        scrape the text from the file and return it. 
-        This will also create a .txt file within the user's subdirectory.
-        At the top of this .txt file, you will also see the file's Base URL, Parent URL, and File URL. 
+#     def parse_file(self, href, parent_url):
+#         """
+#         Given the file's url and its parent url, 
+#         scrape the text from the file and return it. 
+#         This will also create a .txt file within the user's subdirectory.
+#         At the top of this .txt file, you will also see the file's Base URL, Parent URL, and File URL. 
         
-        Ex:
-        >>> parse_pdf('https://www.imagescape.com/media/uploads/zinnia/2018/08/20/sampletext.pdf',
-                'https://www.imagescape.com/media/uploads/zinnia/2018/08/20/scrape_me.html')
+#         Ex:
+#         >>> parse_pdf('https://www.imagescape.com/media/uploads/zinnia/2018/08/20/sampletext.pdf',
+#                 'https://www.imagescape.com/media/uploads/zinnia/2018/08/20/scrape_me.html')
             
-            Base URL: imagescape.com
-            Parent URL: https://www.imagescape.com/media/uploads/zinnia/2018/08/20/scrape_me.html
-            File URL: https://www.imagescape.com/media/uploads/zinnia/2018/08/20/sampletext.pdf
-            "This is a caterwauling test of a transcendental PDF."
+#             Base URL: imagescape.com
+#             Parent URL: https://www.imagescape.com/media/uploads/zinnia/2018/08/20/scrape_me.html
+#             File URL: https://www.imagescape.com/media/uploads/zinnia/2018/08/20/sampletext.pdf
+#             "This is a caterwauling test of a transcendental PDF."
         
-        """
+#         """
 
-        # If the url is not part of the domain being scraped ("something.com/this.pdf" vs "someother.org/"), don't include it
-        # This logic is very basic and a starting point for further development of ensuring that we are still on the same page. TODO: improve domain splitting/comparing logic to avoid hitting external sites
-        if not str(href).startswith('/') and str(parent_url).split(".")[1] != str(href).split(".")[1]:
-            print("Danger! File source is from an external site. Source: " + str(href) + " \n\tand parent url: " + str(parent_url))
-            return ''
-        # Parse text from file and add to .txt file AND item
-        print("Requesting the file data from its source: " + str(href) + " \n\tat the parent url: " + str(parent_url))
-        response_href = requests.get(href)
-        print("Retrieved file data from response")
+#         # If the url is not part of the domain being scraped ("something.com/this.pdf" vs "someother.org/"), don't include it
+#         # This logic is very basic and a starting point for further development of ensuring that we are still on the same page. TODO: improve domain splitting/comparing logic to avoid hitting external sites
+#         if not str(href).startswith('/') and str(parent_url).split(".")[1] != str(href).split(".")[1]:
+#             print("Danger! File source is from an external site. Source: " + str(href) + " \n\tand parent url: " + str(parent_url))
+#             return ''
+#         # Parse text from file and add to .txt file AND item
+#         print("Requesting the file data from its source: " + str(href) + " \n\tat the parent url: " + str(parent_url))
+#         response_href = requests.get(href)
+#         print("Retrieved file data from response")
 
-        extension = list(filter(lambda x: response_href.url.lower().endswith(x), TEXTRACT_EXTENSIONS))[0]
+#         extension = list(filter(lambda x: response_href.url.lower().endswith(x), TEXTRACT_EXTENSIONS))[0]
       
-        print("Extension found: " + str(extension))
-        print("Pulling file data into tempfile")
-        tempfile = NamedTemporaryFile(suffix=extension)
-        tempfile.write(response_href.content)
-        tempfile.flush()
+#         print("Extension found: " + str(extension))
+#         print("Pulling file data into tempfile")
+#         tempfile = NamedTemporaryFile(suffix=extension)
+#         tempfile.write(response_href.content)
+#         tempfile.flush()
 
-        print("Processing file with Textract...")
-        extracted_data = textract.process(tempfile.name)
-        print("Data encoding = " + str(chardet.detect(extracted_data)['encoding']))
-        print("Decoding with utf-8")
-        # Should remove try/catch flow control!
-        try:
-            extracted_data = extracted_data.decode('utf-8')
-        except:
-            print("Error decoding extracted data")
-            tempfile.close()
-            return ''
-        extracted_data = CONTROL_CHAR_RE.sub('', extracted_data)
-        tempfile.close()
-        base_url = self.get_domain(parent_url)
-        print("Text extracted sucessfully!")
-        return extracted_data
-        '''
-        # Create a filepath for the .txt file
-        txt_file_name = "files" + "/" + base_url + "/" + os.path.basename(urlparse(href).path).replace(extension, ".txt")
+#         print("Processing file with Textract...")
+#         extracted_data = textract.process(tempfile.name)
+#         print("Data encoding = " + str(chardet.detect(extracted_data)['encoding']))
+#         print("Decoding with utf-8")
+#         # Should remove try/catch flow control!
+#         try:
+#             extracted_data = extracted_data.decode('utf-8')
+#         except:
+#             print("Error decoding extracted data")
+#             tempfile.close()
+#             return ''
+#         extracted_data = CONTROL_CHAR_RE.sub('', extracted_data)
+#         tempfile.close()
+#         base_url = self.get_domain(parent_url)
+#         print("Text extracted sucessfully!")
+#         return extracted_data
+#         '''
+#         # Create a filepath for the .txt file
+#         txt_file_name = "files" + "/" + base_url + "/" + os.path.basename(urlparse(href).path).replace(extension, ".txt")
         
-        # If subdirectory does not exist yet, create it
-        if not os.path.isdir("files" + "/" + base_url):
-            os.mkdir("files" + "/" + base_url)
+#         # If subdirectory does not exist yet, create it
+#         if not os.path.isdir("files" + "/" + base_url):
+#             os.mkdir("files" + "/" + base_url)
             
-        with open(txt_file_name, "w") as f:
+#         with open(txt_file_name, "w") as f:
 
-            f.write("Base URL: " + base_url)
-            f.write("\n")
-            f.write("Parent URL: " + parent_url)
-            f.write("\n")
-            f.write("File URL: " + response_href.url.upper())
+#             f.write("Base URL: " + base_url)
+#             f.write("\n")
+#             f.write("Parent URL: " + parent_url)
+#             f.write("\n")
+#             f.write("File URL: " + response_href.url.upper())
 
-            f.write("\n")
-            f.write(extracted_data)
-            f.write("\n\n")
+#             f.write("\n")
+#             f.write(extracted_data)
+#             f.write("\n\n")
             
-        return extracted_data 
-    '''
+#         return extracted_data 
+#     '''
