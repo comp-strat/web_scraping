@@ -3,7 +3,7 @@
 python3 -m pip install --user virtualenv
 python3 -m venv .venv
 source .venv/bin/activate
-cd scrapy/schools
+cd schools
 pip install -r requirements.txt
 pip install schools --no-index --find-links .
 
