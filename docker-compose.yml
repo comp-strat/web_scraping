@@ -4,7 +4,7 @@
 version: '3.5'
 services:
   crawler_api:
-    build: scrapy/schools # Build the Scrapy Dockerfile.
+    build: schools # Build the Scrapy Dockerfile.
     depends_on:
       - mongodb_container
     logging:
@@ -38,7 +38,7 @@ services:
       - "7480:6379"
         #    command: rq worker crawling-tasks
   redis_worker:
-    build: scrapy/schools
+    build: schools
     depends_on:
       - mongodb_container
       - redis
