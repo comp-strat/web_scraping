@@ -188,3 +188,10 @@ Following is the evaluation output for charter school urls:
 * count unique scraped urls
 * calculate the differences between unique original urls and unique scraped urls
 
+### Notification
+Under following situations, we need to update the script:
+* port change
+* mongodb username change
+* mongodb password change
+* mongodb collection name change
+* the path for the scraped file change
