@@ -167,3 +167,31 @@ rclone copy text.json output_drive:
 ```
 
 For detailed reference: [rclone](https://medium.com/@houlahop/rclone-how-to-copy-files-from-a-servers-filesystem-to-google-drive-aaf21c615c5d)
+
+## Evaluate crawling output
+
+### Usage
+after crawling process finished, go to page `./schools` and use script: `python3 test_cnt2.py`
+
+it will show the number of unique original urls, the number of unique scraped urls, and the overlap between them.
+
+Following is the evaluation output for charter school urls:
+`Unique Original URLs #: 4986
+ Unique Scraped URLs #: 785
+ Difference in Original and Scraped URLs: 420`
+ 
+### Script description
+* read the original file
+* use tldextract to extract original domains
+* connect to mongodb database
+* extract scraped domain from text/otherItems collection
+* count unique scraped urls
+* calculate the differences between unique original urls and unique scraped urls
+
+### Notification
+Under following situations, we need to update the script:
+* port change
+* mongodb username change
+* mongodb password change
+* mongodb collection name change
+* the path for the scraped file change
