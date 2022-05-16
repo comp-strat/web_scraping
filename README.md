@@ -117,7 +117,7 @@ After the crawling prcoess, data will be saved in the MongoDB container of Docke
 docker exec -it mongodb_container mongoexport --authenticationDatabase admin --username admin --password mdipass --db schoolSpider --collection text --out ./text.json
 
 # if try to export the whole database instead of just one collection, we can use mongodump
-docker exec -it mongodb_container mongodump --authenticationDatabase admin --username admin --password mdipass --db sschoolSpider --out output
+docker exec -it mongodb_container mongodump --authenticationDatabase admin --username admin --password mdipass --db schoolSpider --out output
 
 # go to container bash
 docker exec -it mongodb_container bash
