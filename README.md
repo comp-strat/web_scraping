@@ -123,7 +123,7 @@ docker exec -it mongodb_container mongodump --authenticationDatabase admin --use
 docker exec -it mongodb_container bash
 
 # move files from container to local virtual machine
-docker cp mongodb_container:text.json /vol_c/data/crawled_output_2022
+sudo docker cp mongodb_container:text.json /vol_c/data/crawled_output_2022
 ```
 
 ## Save data from virtual machine to google drive 
@@ -131,7 +131,10 @@ docker cp mongodb_container:text.json /vol_c/data/crawled_output_2022
 We can use rclone to transfer data from virtual machine to google drive with the command:
 
 ```bash
-rclone copy text.json output_drive:
+sudo rclone copy text.json output_drive:
+
+# or we don't need to specify the file name
+sudo rclone copy . output_drive:
 ```
 
 If you haven't installed rclone, please follow the whole process below.
@@ -166,7 +169,15 @@ In the configuration page,
 After creating a rclone remote, use it to transfer data from virtual machine to google drive
 
 ```bash
-rclone copy text.json output_drive:
+sudo rclone copy text.json output_drive:
+```
+## Save data from google drive to virtual machine 
+
+```bash
+# sudo rclone copy output_drive:"the file/folder we want to copy" "the path we want to save the file/folder"
+sudo rclone copy output_drive:text.json text
+
+# in the example, we want to copy the file text.json in google drive and save it in the current path within the folder named test
 ```
 
 For detailed reference: [rclone](https://medium.com/@houlahop/rclone-how-to-copy-files-from-a-servers-filesystem-to-google-drive-aaf21c615c5d)
