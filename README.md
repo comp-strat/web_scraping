@@ -214,7 +214,6 @@ Under following situations, we need to update the script:
 
 After saving data into google drive, we can download and read them into python with the library `json` and `bson`. For example,
 
-- Json
 ```bash
 import json
   
@@ -232,7 +231,6 @@ for i in data['url']:
 f.close()
 ```
 
-- Bson
 ```bash
 import bson
 with open('files.chunks.bson','rb') as f:
