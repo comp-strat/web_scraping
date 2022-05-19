@@ -209,3 +209,40 @@ Under following situations, we need to update the script:
 * mongodb password change
 * mongodb collection name change
 * the path for the scraped file change
+
+## Read Json and Bson file in Python
+
+After saving data into google drive, we can download and read them into python with the library `json` and `bson`. For example,
+
+- Json
+```bash
+import json
+  
+# Opening JSON file
+f = open('text.json')
+  
+# returns JSON object as a dictionary
+data = json.load(f)
+  
+# Iterating through the json list
+for i in data['url']:
+    print(i)
+  
+# Closing file
+f.close()
+```
+
+- Bson
+```bash
+import bson
+with open('files.chunks.bson','rb') as f:
+    data = bson.decode_all(f.read())
+```
+
+If you meet the error `module 'bson' has no attribute 'BSON'`, it's possibly because you have both bson and pymongo installed. Importing bson will only import the pymongo version (e.g. bson.loads() is not accessible, thus the bson packages are not merged together). You would need to uninstall pymongo just to get the import bson from here again and not the pymongo import bson package. 
+
+```bash
+pip uninstall bson
+pip install pybson
+import pybson as bson
+```
