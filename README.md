@@ -123,7 +123,7 @@ docker exec -it mongodb_container mongodump --authenticationDatabase admin --use
 docker exec -it mongodb_container bash
 
 # move files from container to local virtual machine
-docker cp mongodb_container:text.json /vol_c/data/crawled_output_2022
+sudo docker cp mongodb_container:text.json /vol_c/data/crawled_output_2022
 ```
 
 ## Save data from virtual machine to google drive 
@@ -131,7 +131,10 @@ docker cp mongodb_container:text.json /vol_c/data/crawled_output_2022
 We can use rclone to transfer data from virtual machine to google drive with the command:
 
 ```bash
-rclone copy text.json output_drive:
+sudo rclone copy text.json output_drive:
+
+# or we don't need to specify the file name
+sudo rclone copy . output_drive:
 ```
 
 If you haven't installed rclone, please follow the whole process below.
@@ -166,7 +169,15 @@ In the configuration page,
 After creating a rclone remote, use it to transfer data from virtual machine to google drive
 
 ```bash
-rclone copy text.json output_drive:
+sudo rclone copy text.json output_drive:
+```
+## Save data from google drive to virtual machine 
+
+```bash
+# sudo rclone copy output_drive:"the file/folder we want to copy" "the path we want to save the file/folder"
+sudo rclone copy output_drive:text.json text
+
+# in the example, we want to copy the file text.json in google drive and save it in the current path within the folder named test
 ```
 
 For detailed reference: [rclone](https://medium.com/@houlahop/rclone-how-to-copy-files-from-a-servers-filesystem-to-google-drive-aaf21c615c5d)
@@ -198,3 +209,38 @@ Under following situations, we need to update the script:
 * mongodb password change
 * mongodb collection name change
 * the path for the scraped file change
+
+## Read Json and Bson file in Python
+
+After saving data into google drive, we can download and read them into python with the library `json` and `bson`. For example,
+
+```bash
+import json
+  
+# Opening JSON file
+f = open('text.json')
+  
+# returns JSON object as a dictionary
+data = json.load(f)
+  
+# Iterating through the json list
+for i in data['url']:
+    print(i)
+  
+# Closing file
+f.close()
+```
+
+```bash
+import bson
+with open('files.chunks.bson','rb') as f:
+    data = bson.decode_all(f.read())
+```
+
+If you meet the error `module 'bson' has no attribute 'BSON'`, it's possibly because you have both bson and pymongo installed. Importing bson will only import the pymongo version (e.g. bson.loads() is not accessible, thus the bson packages are not merged together). You would need to uninstall pymongo just to get the import bson from here again and not the pymongo import bson package. 
+
+```bash
+pip uninstall bson
+pip install pybson
+import pybson as bson
+```
