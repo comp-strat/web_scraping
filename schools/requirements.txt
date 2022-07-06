@@ -20,7 +20,7 @@ incremental==21.3.0
 itemadapter==0.2.0
 itemloaders==1.0.4
 jmespath==0.10.0
-lxml==4.6.5
+lxml==4.9.1
 olefile==0.46
 parsel==1.6.0
 pdfminer.six==20181108
